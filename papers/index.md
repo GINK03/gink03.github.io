@@ -7,6 +7,8 @@ comments: false
 ---
 
 ## The Soul of Truth
+- [Poincaré Embeddings for Learning Hierarchical Representations](https://arxiv.org/pdf/1705.08039.pdf)
+
 - [DON’T DECAY THE LEARNING RATE, INCREASE THE BATCH SIZE](https://arxiv.org/pdf/1711.00489.pdf)
 
 - [SWISH:A SELF-GATED ACTIVATIONFUNCTION](https://arxiv.org/pdf/1710.05941.pdf)
