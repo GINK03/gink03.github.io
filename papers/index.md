@@ -7,6 +7,8 @@ comments: false
 ---
 
 ## The Soul of Truth
+- [Hybrid Gradient Boosting Trees and Neural Networks for Forecasting Operating Room Data](https://arxiv.org/pdf/1801.07384.pdf)
+
 - [Poincaré Embeddings for Learning Hierarchical Representations](https://arxiv.org/pdf/1705.08039.pdf)
 
 - [DON’T DECAY THE LEARNING RATE, INCREASE THE BATCH SIZE](https://arxiv.org/pdf/1711.00489.pdf)
