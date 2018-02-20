@@ -1,4 +1,11 @@
-
+---
+layout: post
+title: "autohotkey"
+date: 2018-02-20
+excerpt: ""
+tags: [autohotkey]
+comments: false
+---
 
 # AutohotkeyでwindowsをMacように使う
 
