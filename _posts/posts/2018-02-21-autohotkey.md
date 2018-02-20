@@ -1,0 +1,5 @@
+
+
+# AutohotkeyでwindowsをMacように使う
+
+とにかくWindowsとMacの二刀流になってしまうのが不満であったので、Window側設定Macに寄せるものとしてautohotkeyというものがある
