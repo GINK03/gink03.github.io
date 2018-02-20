@@ -19,7 +19,7 @@ installerをインストールして進める必要がある
 
 仮想デスクトップの動作を似せる設定と、全角半角をctr+spaceに割り当てるだけでだいぶQoLが改善した
 
-```cosnole
+```console
 ^!s::Run calc.exe
 ^right::#^right
 ^left::#^left
