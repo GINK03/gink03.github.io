@@ -7,6 +7,8 @@ comments: false
 ---
 
 ## The Soul of Truth
+- [Image-to-Image Translation with Conditional Adversarial Networks](https://arxiv.org/abs/1611.07004)
+
 - [Hybrid Gradient Boosting Trees and Neural Networks for Forecasting Operating Room Data](https://arxiv.org/pdf/1801.07384.pdf)
 
 - [Poincaré Embeddings for Learning Hierarchical Representations](https://arxiv.org/pdf/1705.08039.pdf)
