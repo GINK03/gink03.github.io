@@ -13,6 +13,8 @@ There is very strong words.
 > It is an expression of the determination of Fellows to withstand the domination of authority and to verify all statements by an appeal to facts determined by experiment.
 > （"これは権力の支配に抵抗する、そして実験によって決定づけられた事実の訴えによるすべての陳述を確かめる、フェローたちの決心の言葉である。"）
 
+- [信用リスクモデルの評価方法に関する考察と比較](https://www.fsa.go.jp/frtc/seika/discussion/2003/20031031.pdf)
+
 - [Deep Neural Networks as Gaussian Processes](https://arxiv.org/abs/1711.00165)
 
 - [確率分布間の 距離推定 : 機械学習分野における最新動向](https://www.jstage.jst.go.jp/article/jsiamt/23/3/23_KJ00008829126/_pdf)
