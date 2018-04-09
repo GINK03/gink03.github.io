@@ -14,6 +14,7 @@ There is very strong words.
 > （"これは権力の支配に抵抗する、そして実験によって決定づけられた事実の訴えによるすべての陳述を確かめる、フェローたちの決心の言葉である。"）
 
 - [信用リスクモデルの評価方法に関する考察と比較](https://www.fsa.go.jp/frtc/seika/discussion/2003/20031031.pdf)
+CAP/ARの評価方法についてなど述べられている。
 
 - [Deep Neural Networks as Gaussian Processes](https://arxiv.org/abs/1711.00165)
 
