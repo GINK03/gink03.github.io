@@ -9,7 +9,7 @@ comments: false
 
 ## **私のKyash IDはtwovoltsです**
 <div align="center">
-  <img width="350px" src="https://user-images.githubusercontent.com/4949982/41201095-8a3a68d0-6cec-11e8-9788-10df4308f3b9.png">
+  <img width="250px" src="https://user-images.githubusercontent.com/4949982/41201095-8a3a68d0-6cec-11e8-9788-10df4308f3b9.png">
 </div>
 <div align="center"> アプリから読み取っていただいてもOK! </div>
 
