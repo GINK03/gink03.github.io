@@ -7,7 +7,9 @@ tags: [Kyash]
 comments: false
 ---
 
-# Kyashで少額の投銭や販売をする
+## **私のKyash IDはtwovoltsです**
+
+## Kyashで少額の投銭や販売をする
 Kyashのアプリの登場により、簡単に個人から個人に送金できるようになりました。 
 
 ここでは、私にKyashで送金する方法をお伝えします。  
