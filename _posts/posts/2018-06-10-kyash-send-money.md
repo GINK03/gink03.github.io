@@ -18,5 +18,5 @@ Kyashのアプリの登場により、簡単に個人から個人に送金でき
 
 ### step 1. 送金ボタンをクリックします
 <div align="center"> 
-  <img width="600px" src="https://user-images.githubusercontent.com/4949982/41200261-36432218-6cdc-11e8-9282-ee9456e5e04b.png">
+  <img width="350px" src="https://user-images.githubusercontent.com/4949982/41200261-36432218-6cdc-11e8-9282-ee9456e5e04b.png">
 </div>
