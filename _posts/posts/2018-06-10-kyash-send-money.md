@@ -16,7 +16,12 @@ Kyashのアプリの登場により、簡単に個人から個人に送金でき
 
 ## 私に送金する方法  
 
-### step 1. 送金ボタンをクリックします
+### Step 1. 送金ボタンをクリックします
 <div align="center"> 
   <img width="350px" src="https://user-images.githubusercontent.com/4949982/41200261-36432218-6cdc-11e8-9282-ee9456e5e04b.png">
+</div>
+
+### Step 2. ID・名前検索をクリック
+<div align="center"> 
+  <img width="400px" src="https://user-images.githubusercontent.com/4949982/41200307-38c381a8-6cdd-11e8-85e4-507cd02930e3.png">
 </div>
