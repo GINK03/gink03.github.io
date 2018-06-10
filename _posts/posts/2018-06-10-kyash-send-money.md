@@ -25,3 +25,8 @@ Kyashのアプリの登場により、簡単に個人から個人に送金でき
 <div align="center"> 
   <img width="400px" src="https://user-images.githubusercontent.com/4949982/41200307-38c381a8-6cdd-11e8-85e4-507cd02930e3.png">
 </div>
+
+### Step 3. 「twovolts」を検索
+<div align="center"> 
+  <img width="400px" src="https://user-images.githubusercontent.com/4949982/41200498-76491850-6ce0-11e8-92b6-6e469530ee3d.png">
+</div>
