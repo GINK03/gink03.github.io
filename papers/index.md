@@ -13,6 +13,8 @@ There is very strong words.
 > It is an expression of the determination of Fellows to withstand the domination of authority and to verify all statements by an appeal to facts determined by experiment.
 > （"これは権力の支配に抵抗する、そして実験によって決定づけられた事実の訴えによるすべての陳述を確かめる、フェローたちの決心の言葉である。"）
 
+- [Machine Learning: The High-Interest Credit Card of Technical Debt](https://storage.googleapis.com/pub-tools-public-publication-data/pdf/43146.pdf)
+
 - [信用リスクモデルの評価方法に関する考察と比較](https://www.fsa.go.jp/frtc/seika/discussion/2003/20031031.pdf)
 CAP/ARの評価方法についてなど述べられている。
 
