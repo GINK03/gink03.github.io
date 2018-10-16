@@ -13,6 +13,8 @@ There is very strong words.
 > It is an expression of the determination of Fellows to withstand the domination of authority and to verify all statements by an appeal to facts determined by experiment.
 > （"これは権力の支配に抵抗する、そして実験によって決定づけられた事実の訴えによるすべての陳述を確かめる、フェローたちの決心の言葉である。"）
 
+- [Customized Regression Model for Airbnb Dynamic Pricing](http://www.kdd.org/kdd2018/accepted-papers/view/customized-regression-model-for-airbnb-dynamic-pricing)
+
 - [プロ野球来場者の飲食物購買行動に関する考察](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=2ahUKEwii8a3C4-TdAhVLhbwKHYwIDSIQFjABegQICBAC&url=https%3A%2F%2Fsetsunan.repo.nii.ac.jp%2F%3Faction%3Drepository_action_common_download%26item_id%3D776%26item_no%3D1%26attribute_id%3D22%26file_no%3D1&usg=AOvVaw06eRYR3kRE0A1k6uWn8zk0)
 
 - [Machine Learning: The High-Interest Credit Card of Technical Debt](https://storage.googleapis.com/pub-tools-public-publication-data/pdf/43146.pdf)
