@@ -4,7 +4,7 @@ bio:                'Nullius in verba.'
 description:        "Nullius in verba."
 reading_time:       true
 words_per_minute:   200
-logo:               'assets/img/den_omen.jpg'
+logo:               'assets/img/rsz_11img_1334.jpg'
 background:         'assets/img/yukari.png'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             ja_JP
@@ -28,15 +28,6 @@ sass:
 # Comments
 disqus_shortname:   nardtree
 
-# Social
-# if you don't have any of social below, comment the line.
-google:
-  plus:            次世代ヒト行動特性記述ぽい
-  #analytics:
-  #verify:
-  #ad-client:
-  #ad-slot:
-#bing-verify:
 #email:
 twitter:            nardtree
 #facebook:           username
