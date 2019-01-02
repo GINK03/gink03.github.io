@@ -112,7 +112,18 @@ Excelで報告書をもとに分析してと言われることが多いのです
 例えば中学校のテストのデータをもとになにかの操作を行ったとすると、もとに戻せなくなることが自明であるかと思います  
 
 <div align="center">
-  <img width="400px" src="https://user-images.githubusercontent.com/4949982/50582941-7e231100-0ea9-11e9-95d1-3ee51dae11ca.png">
+  <img width="500px" src="https://user-images.githubusercontent.com/4949982/50582941-7e231100-0ea9-11e9-95d1-3ee51dae11ca.png">
 </div> 
 <div align="center"> 図5. meanの操作を行った結果だけから、もとのデータを戻すことができない </div>
+
+この操作はあらゆるアグリゲート関数について成り立ち、sum, min, max, mean, mode, mediun, etcなど、単射である処理について成り立ちます。　　　　
+
+シャノン情報量の観点から具体的に高校の進学率の例で導いていきます　　
+
+<div align="center">
+  <img width="500px" src="https://user-images.githubusercontent.com/4949982/50583114-c5f66800-0eaa-11e9-8e91-369444895139.png">
+</div> 
+<div align="center"> 図6.  </div>
+
+  
 
