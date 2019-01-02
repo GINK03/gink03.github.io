@@ -131,5 +131,15 @@ Excelで報告書をもとに分析してと言われることが多いのです
  <div> 確率分布Pが与えられとき、各事象A∈Ωのシャノン情報量（Ωは有限集合の確率空間） </div>
 </div> 
 
-  
+この結果から何らかのアグリゲートされた値からは、不可逆性があり、かつシャノン情報量が減少してしまうことを示せたかと思います。  
 
+# Excelのデータからなにかいう
+### (コスト高) 手動で整形取り出していく
+### (コスト安) 代替となるデータを利用する
+経営の報告書をやめてExcelをとりあえずやめて、WebのアクセスログやBigQueryにはいったKPIデータなどから分析する
+
+# 参考文献
+ - [1] [宇都宮市データバンク](http://www2.city.utsunomiya.tochigi.jp/DataBank/main_2.htm)
+ - [2] [OpenData那須](http://opendata-nasu.opendatastack.jp/)
+ - [3] [日光市のデータ](http://www.city.nikko.lg.jp/seisaku/profile/data/index.html)
+ - [4] [情報量](https://ja.wikipedia.org/wiki/%E6%83%85%E5%A0%B1%E9%87%8F)
