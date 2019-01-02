@@ -125,5 +125,11 @@ Excelで報告書をもとに分析してと言われることが多いのです
 </div> 
 <div align="center"> 図6.  </div>
 
+シャノン情報量の定義はWikipediaで詳しく説明されていますが、簡単に示すと以下の式で表されます  
+<div align="center">
+  <img width="250px" src="https://user-images.githubusercontent.com/4949982/50583231-4fa63580-0eab-11e9-9672-56b838004ba5.png">
+ <div> 確率分布Pが与えられとき、各事象A∈Ωのシャノン情報量（Ωは有限集合の確率空間） </div>
+</div> 
+
   
 
