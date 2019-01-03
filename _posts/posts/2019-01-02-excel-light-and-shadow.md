@@ -74,7 +74,7 @@ Excelは便利なソフトで、あらゆる企業で使われている表計算
  - **共通項3** : 何らかのビジネス的なKPIを報告する目的で、アグリゲートされた分析結果を再度利用するものはうまくいかない  
 
 整理して図示するとこの様になる。
-<div aling="center">
+<div align="center">
   <img width="500px" src="https://user-images.githubusercontent.com/4949982/50639646-8e201b00-0fa5-11e9-9d04-13d662372d3a.png">
 </div>
 
