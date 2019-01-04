@@ -148,8 +148,23 @@ Excelで報告書をもとに分析してと言われることが多いのです
 ### (コスト安) 代替となるデータを利用する
 経営の報告書をやめてExcelをとりあえずやめて、WebのアクセスログやBigQueryにはいったKPIデータなどから分析する
 
+# Excel分析で詰まったときに使える銀の弾丸
+ソフトウェア工学で、銀の弾丸は存在しないという表現[5]で、万能の解決策は存在しないというものがあります。　　
+
+個人の経験では、このアプローチが取れる場合、案件が失敗したことがありません（個人だけの経験に限れば100%の解決力である）  
+
+その方法は、構造化されているいないに拘わらず「できるだけ分析対象の元情報に近いデータを取得する」です。  
+
+どういうことかというと、何かしらデータが出来上がっている背景には、もとのデータが存在するはずで、そこを参照すればいいということが大いにあります。 
+
+<div align="center">
+  <img width="100%" src="https://user-images.githubusercontent.com/4949982/50683970-4e197080-1057-11e9-865f-4ba98e72a32d.png">
+ <div align="center"> 図7. 大体、最初は下の方のデータを渡されるので、データの源流をたどり、上に持っていく </div>
+</div>
+
 # 参考文献
  - [1] [宇都宮市データバンク](http://www2.city.utsunomiya.tochigi.jp/DataBank/main_2.htm)
  - [2] [OpenData那須](http://opendata-nasu.opendatastack.jp/)
  - [3] [日光市のデータ](http://www.city.nikko.lg.jp/seisaku/profile/data/index.html)
  - [4] [情報量](https://ja.wikipedia.org/wiki/%E6%83%85%E5%A0%B1%E9%87%8F)
+ - [5] [銀の弾丸]（https://ja.wikipedia.org/wiki/%E9%8A%80%E3%81%AE%E5%BC%BE%E4%B8%B8）
