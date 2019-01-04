@@ -80,7 +80,7 @@ Excelは便利なソフトで、あらゆる企業で使われている表計算
 
 整理して図示するとこの様になります。
 <div align="center">
-  <img width="500px" src="https://user-images.githubusercontent.com/4949982/50639646-8e201b00-0fa5-11e9-9d04-13d662372d3a.png">
+  <img width="500px" src="https://user-images.githubusercontent.com/4949982/50682142-3f2fbf80-1051-11e9-8175-10a2397edbbb.png">
 </div>
 
 ## Excelでカラム名が揺らいでしまう + パースが難しい一般例(共通項1の深掘り)
