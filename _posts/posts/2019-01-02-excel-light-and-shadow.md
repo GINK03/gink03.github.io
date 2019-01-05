@@ -167,4 +167,4 @@ Excelで報告書をもとに分析してと言われることが多いのです
  - [2] [OpenData那須](http://opendata-nasu.opendatastack.jp/)
  - [3] [日光市のデータ](http://www.city.nikko.lg.jp/seisaku/profile/data/index.html)
  - [4] [情報量](https://ja.wikipedia.org/wiki/%E6%83%85%E5%A0%B1%E9%87%8F)
- - [5] [銀の弾丸]（https://ja.wikipedia.org/wiki/%E9%8A%80%E3%81%AE%E5%BC%BE%E4%B8%B8）
+ - [5] [銀の弾丸](https://ja.wikipedia.org/wiki/%E9%8A%80%E3%81%AE%E5%BC%BE%E4%B8%B8)
