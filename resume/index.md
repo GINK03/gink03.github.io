@@ -86,6 +86,8 @@ Here is my resume.
  - DeepLearning
  - modeling 
  - systemize
+ - *now working*
+ 
  
 
 
