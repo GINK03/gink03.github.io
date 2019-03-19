@@ -72,10 +72,20 @@ Here is my resume.
 
 ### N
  - D社
- - *serect*
+ - *serect now*
 
 ### ブラウザゲームの利用の離脱予想
  - D社
  - RNN
  - Forecasting
+ - modeling 
+ - systemize
+ 
+### 販売店舗ごとの在庫管理の最適化
+ - D社
+ - DeepLearning
+ - modeling 
+ - systemize
+ 
+
 
