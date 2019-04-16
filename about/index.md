@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About 
-tags: [about, nardtree, catindog, programming, machine-learning]
+tags: [about, datascience, ai, programming, machine-learning]
 date: 2017-04-2
 comments: false
 ---
