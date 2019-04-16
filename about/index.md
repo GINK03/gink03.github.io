@@ -19,17 +19,13 @@ comments: false
 
 ## Getting Started
 
-Twitterやはてなブログをみていただけると、どんなひとかわかりやすいかもしれません
+ビジネス的なお話はLinkedIn, TwitterのDM or Mailでいただけると幸いです  
 
-[Twitter](https://twitter.com/nardtree)  
-[はてなブログ](http://catindog.hatenablog.com/)  
+ - [LinkedIn](https://www.linkedin.com/in/gimpei-kobayashi-208bba2a/)
+ - [Twitter](https://twitter.com/nardtree)
 
-## My Policy
+人柄は、Twitterやはてなブログをみていただけると、どんなひとかわかりやすいかもしれません
 
-世の中には様々な哲学や価値観の方がいます。そこで、なるべく多くの人に快適に過ごしていただくために、特に、以下のルールを守りたいと考えています。 　　
+- [Twitter](https://twitter.com/nardtree)  
+- [はてなブログ](http://catindog.hatenablog.com/)  
 
-公の発言は全て以下のルールを遵守しているつもりです。
-
-[Code For Contact(ja)](http://ja.confcodeofconduct.com/)  
-
-[Code For Contact(en)](http://confcodeofconduct.com/)
