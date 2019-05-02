@@ -29,3 +29,8 @@ comments: false
 - [Twitter](https://twitter.com/nardtree)  
 - [はてなブログ](http://catindog.hatenablog.com/)  
 
+## Pinned Tweets 
+流れてほしくないツイートです
+
+### 私の好きな本 
+ - https://twitter.com/nardtree/status/1084522355685093376
