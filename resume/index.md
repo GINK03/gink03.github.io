@@ -7,7 +7,9 @@ comments: false
 ---
 
 ## RESUME
-Here is my resume.
+Here is my resume. 
+
+Same contents exist in LinkedIn.(https://www.linkedin.com/in/gimpei-kobayashi-208bba2a/)
 
 ### 【PROFESSIONAL EXPERIENCE in DeNA】2018/04 ~
  - Developed a system that can predict ticket number of amount in Yokohama-DeNA Baysters.
