@@ -37,9 +37,9 @@ Here is my resume.
  - Developed Automatic periodical acquisition of data from Twitter API etc. using Python, MySQL, S3
 
 
-## 【PROFESSIONAL EXPERIENCE in Yahoo Japan】
+## 【PROFESSIONAL EXPERIENCE in Yahoo Japan】2011/4 ~ 2014/3
 
-- Developed recommendation system which serve correct ad-items for each users.
+- Developed recommendation engine which serve correct ad-items for each users.
 
 - Developed detection system, can know which user has high attention to his ad or not.
 
