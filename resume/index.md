@@ -9,85 +9,30 @@ comments: false
 ## RESUME
 Here is my resume.
 
-### CTRモジュール開発
- - A社  
- - Ad-tech  
- - NLP  
+### 【PROFESSIONAL EXPERIENCE in DeNA】2018/04 ~
+ - Developed a system that can predict ticket number of amount in Yokohama-DeNA Baysters.
 
-### R言語の外部オプティマイザの開発
- - A社  
- - Optimization  
- - C++  
- - Embedding  
+ - Developed a system that can predict amount of merchandise items in Yokohama-DeNA Baystars offline(or online) stores.
 
-### LanginPageのパフォーマンスの分析案件
- - A社  
- - Optimization  
- - NLP  
- - Machine-Learning  
+ - Developed a system that can recommend news items is suitable for mobage users.
 
-### リース計算ソフトの開発
- - B社  
- - Fintech  
- - Math  
+ - Analyzed main factors, which explain playing game users are active or not. 
 
-### PC保守ソフトウェアの開発、運用
- - B社  
- - Windows  
+ - Developed a system which predict game playing users have high motivation to our games or not.
 
-### 市町村の人工の減数の要因分析
- - B社  
- - ElasticNet  
- - Presentation  
-
-### 文章の校正をサポートするRNNネットワークの開発
- - C社  
- - RNN   
- - NLP  
-
-### 画像の自動タグ付けソフトウェアの開発
- - C社  
- - ディープランニング
- - CNN  
-
-### テキスト広告のパフォーマンス予想
- - C社  
- - NLP  
- - GBDT 
-
-### 広告運用社のサポートツールの開発
- - C社  
- - ディープラーニング  
- - 行動予想
-
-### WebSiteに出ているニュースコンテンツの自動ピックアップ  
- - D社  
- - GDBT    
- - 自動化  
-
-### チケット販売状況のPerformanceの可視化  
- - D社  
- - Jupyter    
- - 可視化  
-
-### N
- - D社
- - *serect now*
-
-### ブラウザゲームの利用の離脱予想
- - D社
- - RNN
- - Forecasting
- - modeling 
- - systemize
- 
-### 販売店舗ごとの在庫管理の最適化
- - D社
- - DeepLearning
- - modeling 
- - systemize
- - *now working*
+ - Researched and made a paper with NEDO, predicting amount of rain in japanese dam with deep learning.
  
  
+## 【PROFESSIONAL EXPERIENCE in IREP】2016/4 ~ 2018/3
+ - Developed Visualization and analysis of customer journal on Web site using big data processing by EMR (Hadoop)　for Advertisement.(refer to the link)
+
+ - Created URL similarity calculation and funnel analysis by word2vec for Advertisement.
+ 
+ - Created Analysis of sales factor by regression model and crosstab ・Assistant of Predictive model creation by XGBoost and LightGBM
+
+ - Designed Automatic categorization of Web sites by SVM and fasttext (Text classification)
+ 
+ - Developed Automatic periodical acquisition of data from Twitter API etc. using Python, MySQL, S3
+
 
 
