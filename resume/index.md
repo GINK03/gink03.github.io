@@ -28,11 +28,19 @@ Here is my resume.
 
  - Created URL similarity calculation and funnel analysis by word2vec for Advertisement.
  
- - Created Analysis of sales factor by regression model and crosstab ・Assistant of Predictive model creation by XGBoost and LightGBM
+ - Created Analysis of sales factor by regression model and crosstab
+ 
+ - Assistant of Predictive model creation by XGBoost and LightGBM
 
  - Designed Automatic categorization of Web sites by SVM and fasttext (Text classification)
  
  - Developed Automatic periodical acquisition of data from Twitter API etc. using Python, MySQL, S3
 
+
+## 【PROFESSIONAL EXPERIENCE in Yahoo Japan】
+
+- Developed recommendation system which serve correct ad-items for each users.
+
+- Developed detection system, can know which user has high attention to his ad or not.
 
 
