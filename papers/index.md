@@ -13,6 +13,8 @@ There is very strong words.
 > It is an expression of the determination of Fellows to withstand the domination of authority and to verify all statements by an appeal to facts determined by experiment.
 > （"これは権力の支配に抵抗する、そして実験によって決定づけられた事実の訴えによるすべての陳述を確かめる、フェローたちの決心の言葉である。"）
 
+- [Latent Factor Models and Aggregation Operators for Collaborative Filtering in Reciprocal Recommender Systems](https://dl.acm.org/citation.cfm?id=3347026)
+
 - [Deep Multi-View Spatial-Temporal Network for Taxi Demand Prediction](https://faculty.ist.psu.edu/jessieli/Publications/2018-AAAI-taxi-demand.pdf)
 
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)
