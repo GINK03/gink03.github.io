@@ -65,7 +65,7 @@ if __name__ == "__main__":
     manager.shutdown()
 ```
 
-***client** 
+**client** 
 
 ```python
 from multiprocessing.managers import BaseManager as Manager
