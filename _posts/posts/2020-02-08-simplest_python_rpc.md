@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Simplest Python RPC"
-date: 2020-02-0
+date: 2020-02-06
 excerpt: ""
 tags: [python, rpc]
 comments: false
