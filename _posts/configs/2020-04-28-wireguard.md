@@ -85,7 +85,7 @@ PersistentKeepalive = 1
 
 ## すべての通信をトンネリングする
 
-AllowdIPsのレンジを広げればいいだけ
+AllowdIPsのレンジを0.0.0.0/0などとして、広げればいいだけ
 
 ```
 [Interface]
@@ -99,3 +99,11 @@ AllowedIPs = 0.0.0.0/0
 Endpoint = 118.241.158.51:41194
 PersistentKeepalive = 1
 ```
+
+## systemdでサービス登録する
+
+```console
+# systemctl start wg-quick@wg0
+# systemctl enable wg-quick@wg0
+```
+
