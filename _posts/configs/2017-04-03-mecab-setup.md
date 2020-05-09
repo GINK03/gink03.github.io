@@ -32,6 +32,13 @@ dicdir = /usr/lib/mecab/dic/mecab-ipadic-neologd
 dicdir = /usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd/ # 17.04
 ```
 
+### 2020/05~, Python3で使うときに注意すること
+
+```python
+parser = MeCab.Tagger("-Owakati -d /usr/lib/x86_64-linux-gnu/mecab/dic/mecab-ipadic-neologd") # /etc/mecabrcに設定されているに関わらず、明示的にpython3の内部で辞書ファイルのpath指定をする必要がある
+assert parser.parse("COVID19").strip().split() == ["COVID19"], "辞書ファイルが古いです" # 辞書が反映されていないと落ちるはず
+```
+
 ### AnacondaDockerベースから構築する
 ポータビリティと再現性があるのでオススメ
 ```Dockerfile
