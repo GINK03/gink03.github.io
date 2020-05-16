@@ -32,10 +32,10 @@ Ubuntu 20.04程度からDNSの設定がこのサービス経由で設定され�
 # See resolved.conf(5) for details
 
 [Resolve]
-#DNSStubListener=no
+DNSStubListener=yes
 Cache=yes
 DNS=1.1.1.1
-#FallbackDNS=8.8.8.8
+FallbackDNS=8.8.8.8
 #Domains=
 #LLMNR=no
 #MulticastDNS=no
@@ -44,6 +44,18 @@ DNS=1.1.1.1
 #DNSStubListener=yes
 #ReadEtcHosts=yes
 ```
+
+## stub listennerの設定確認
+
+`/run/systemd/resolve/stub-resolv.conf` が以下のように設定されていれば、localhost(127.0.0.53)アクセス時にstub-listenner経由でのアクセスにできる
+
+```
+nameserver 127.0.0.53
+options edns0
+```
+
+NOTE: `/etc/resolv.conf` の参照順位で例えば `1.1.1.1` などが `127.0.0.53` より早かったら stub-listennerを利用していないので高速化の恩恵が得られなくなる可能性がある
+
 
 ## 反映と確認
 
