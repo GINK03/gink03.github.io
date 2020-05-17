@@ -21,7 +21,8 @@ comments: false
 ある関数が正か負かで探索回数を200回限定する（答えが小数点以下であるような値でも近似値を求めることができる） 
 
 ただし、範囲は `[0, 10**12]` であることに注意
-```python3
+
+```python
 import math
 p,q=map(int,input().split())
 
