@@ -61,6 +61,8 @@ gimpei@Kichijouji:configs$ python3 a.py
 
 ただし、範囲は `[0, 10**12]` であることに注意
 
+探索の性質上、いきなりその中央値を判定に満たすかどうかを聞くので、少なくともその２倍（計算オーダーでは100倍程度まで）見ておくと安全である
+
 ```python
 import math
 p,q=map(int,input().split())
