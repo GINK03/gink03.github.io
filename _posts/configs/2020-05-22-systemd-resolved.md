@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "systemd-resolved"
-date: 2020-05-14
-excerpt: "line"
+date: 2020-05-22
+excerpt: "systemd-resolved"
 tags: [systemd-resolved]
 config: true
 comments: false
@@ -15,7 +15,11 @@ Ubuntu 20.04程度からDNSの設定がこのサービス経由で設定され�
 
 例えば以下の設定は、DNSにリクエストを送りすぎて、通信が遅くなるのをCacheを有効化することで解消しようとした設定である  
 
-そして実際に早くなる
+そして実際に早くなる  
+
+注意点として `ReadEtcHosts=no` を設定しておく必要があり、これを設定しないと `/etc/resolv.conf` が優先されてしまう  
+
+また `DNSStubListener=yes` となっていると `port 53` を専有する `127.0.0.53` で受付するプロセスが起動するのでDNSサーバ等と共存できない  
 
 ```
 #  This file is part of systemd.
@@ -36,13 +40,13 @@ DNSStubListener=yes
 Cache=yes
 DNS=1.1.1.1
 FallbackDNS=8.8.8.8
+ReadEtcHosts=no
+MulticastDNS=yes
+DNSStubListener=yes
 #Domains=
 #LLMNR=no
-#MulticastDNS=no
 #DNSSEC=no
 #DNSOverTLS=no
-#DNSStubListener=yes
-#ReadEtcHosts=yes
 ```
 
 ## stub listennerの設定確認
