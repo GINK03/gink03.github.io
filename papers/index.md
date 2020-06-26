@@ -11,7 +11,8 @@ There is very strong words.
 
 *Nullius in verba*  
 > It is an expression of the determination of Fellows to withstand the domination of authority and to verify all statements by an appeal to facts determined by experiment.
-> （"これは権力の支配に抵抗する、そして実験によって決定づけられた事実の訴えによるすべての陳述を確かめる、フェローたちの決心の言葉である。"）
+
+- [認知症者䛾発言䛿圧縮すると小さなサイズになる](https://www.jstage.jst.go.jp/article/pjsai/JSAI2016/0/JSAI2016_4D11/_pdf)
 
 - [Session-based Recommendations with Recurrent Neural Networks](https://arxiv.org/abs/1511.06939)
 
