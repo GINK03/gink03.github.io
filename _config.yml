@@ -4,7 +4,7 @@ bio:                'Nullius in verba.'
 description:        "Nullius in verba."
 reading_time:       true
 words_per_minute:   200
-logo:               'assets/img/kizuna_akari.png'
+logo:               'assets/img/mikanchan_2020_07.jpg'
 background:         'assets/img/yukari.png'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             ja_JP
