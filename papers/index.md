@@ -8,8 +8,7 @@ comments: false
 
 ## Papers
 
-*Nullius in verba*  
-> It is an expression of the determination of Fellows to withstand the domination of authority and to verify all statements by an appeal to facts determined by experiment.
+- [USING BIG DATA TO ESTIMATE CONSUMER SURPLUS: THE CASE OF UBER](https://www.nber.org/papers/w22627.pdf)
 
 - [Supervised Machine Learning Bot Detection Techniques to Identify Social Twitter Bots](https://scholar.smu.edu/cgi/viewcontent.cgi?article=1019&context=datasciencereview)
 
