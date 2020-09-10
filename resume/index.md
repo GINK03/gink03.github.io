@@ -11,6 +11,7 @@ Here is my resume.
 
 Same contents exist in LinkedIn.(https://www.linkedin.com/in/gimpei-kobayashi-208bba2a/)
 
+
 ### 【PROFESSIONAL EXPERIENCE in DeNA】2018/04 ~
  - Developed a system that can predict ticket number of amount in Yokohama-DeNA Baysters.
 
@@ -25,7 +26,7 @@ Same contents exist in LinkedIn.(https://www.linkedin.com/in/gimpei-kobayashi-20
  - Researched and made a paper with NEDO, predicting amount of rain in japanese dam with deep learning.
  
  
-## 【PROFESSIONAL EXPERIENCE in IREP】2016/4 ~ 2018/3
+### 【PROFESSIONAL EXPERIENCE in IREP】2016/4 ~ 2018/3
  - Developed Visualization and analysis of customer journal on Web site using big data processing by EMR (Hadoop)　for Advertisement.(refer to the link)
 
  - Created URL similarity calculation and funnel analysis by word2vec for Advertisement.
@@ -39,10 +40,14 @@ Same contents exist in LinkedIn.(https://www.linkedin.com/in/gimpei-kobayashi-20
  - Developed Automatic periodical acquisition of data from Twitter API etc. using Python, MySQL, S3
 
 
-## 【PROFESSIONAL EXPERIENCE in Yahoo Japan】2011/4 ~ 2014/3
+### 【PROFESSIONAL EXPERIENCE in Yahoo Japan】2011/4 ~ 2014/3
 
-- Developed recommendation engine which serve correct ad-items for each users.
+ - Developed recommendation engine which serve correct ad-items for each users.
 
-- Developed detection system, can know which user has high attention to his ad or not.
+ - Developed detection system, can know which user has high attention to his ad or not.
 
+
+## Online certifications
+
+ - [Stanford Introduction to Food and Health](https://www.coursera.org/account/accomplishments/certificate/YGD3LXDMYEB6)
 
