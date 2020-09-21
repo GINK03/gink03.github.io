@@ -18,6 +18,8 @@ comments: false
 $ sudo snap install certbot
 ```
 
+NOTE: /snap/binがPATHに通ってないことが多い
+
 ## stand alone install 
 
 ```console
