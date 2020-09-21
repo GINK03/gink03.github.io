@@ -8,7 +8,6 @@ config: true
 tag: []
 comments: false
 ---
-
 # copying and pasting
 
 ## MacOSX
@@ -56,20 +55,22 @@ $ xclip -selection clipboard -o
 
 **copy**  
 ```console
-$ echo "a" | tmux load-buffer -
+$ echo "a" | tmux load-buffer -b a -
 ```
 or 
 ```console
-$ tmux set-buffer "a"
+$ tmux set-buffer -b a "a"
 ```
+NOTE: -bオプションでバッファネームを付けないと、paneをまたいで利用できない
 
 **show**  
 ```console
-$ tmux show-buffer
+$ tmux show-buffer -b a
 ```
 
 **paste**
 ```console
-$ tmux paste-buffer
+$ tmux paste-buffer -b a
 ```
+NOTE: prefixモードに入ったあとには `paste-buffer -b a` で利用できる(vim等に直接入力できる)
 
