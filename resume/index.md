@@ -56,3 +56,5 @@ Same contents exist in LinkedIn.(https://www.linkedin.com/in/gimpei-kobayashi-20
  - [Programming for Everybody (Getting Started with Python)](https://www.coursera.org/account/accomplishments/certificate/CUNWREBBDWUC)
 
  - [Python Data Structures](https://www.coursera.org/account/accomplishments/certificate/LGD6VPFJPTKL)
+
+ - [Using Python to Access Web Data](https://www.coursera.org/account/accomplishments/certificate/A86M4RX52NNH)
