@@ -48,6 +48,8 @@ Same contents exist in LinkedIn.(https://www.linkedin.com/in/gimpei-kobayashi-20
 
 
 ## Online certifications
+ - [Capstone: Retrieving, Processing, and Visualizing Data with Python](https://www.coursera.org/account/accomplishments/certificate/YPBT5C8TZMNZ)
+ 
  - [Using Databases with Python](https://www.coursera.org/account/accomplishments/certificate/3YWJ2ATLSY4J)
 
  - [Tools for Data Science](https://www.coursera.org/account/accomplishments/certificate/7Z9QFPPHYTE8)
