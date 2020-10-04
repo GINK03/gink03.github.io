@@ -48,6 +48,7 @@ Same contents exist in LinkedIn.(https://www.linkedin.com/in/gimpei-kobayashi-20
 
 
 ## Online certifications
+ - [Introduction to Psychology](https://www.coursera.org/account/accomplishments/certificate/QLKZP9AREDFE)
  
  - [Capstone: Retrieving, Processing, and Visualizing Data with Python](https://www.coursera.org/account/accomplishments/certificate/YPBT5C8TZMNZ)
  
