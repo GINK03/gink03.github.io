@@ -12,6 +12,10 @@ comments: false
 
 windowsで使う際のわりとまともに使える
 
+## 謎のクラッシュ時の対応
+
+windows terminalをMicrosoft Storeから最新版に更新する  
+
 ## github
 
 `https://github.com/microsoft/terminal` <- here is software repo.
@@ -20,6 +24,8 @@ windowsで使う際のわりとまともに使える
 ## config
 
 config path = `cd .\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\`  
+
+ハッシュの値のパスはおそらくユーザやWindowsのUUID的なもので変わるハズ  
 
 keybindを変更することがほぼ必須で、タブ間の切り替えやkeybindのオーバーライドを無視させるのに以下のような設定が必要。
 
