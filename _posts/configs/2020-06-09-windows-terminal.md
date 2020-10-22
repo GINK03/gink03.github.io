@@ -10,7 +10,13 @@ comments: false
 
 # windows-terminal
 
-windowsで使う際のわりとまともに使える
+windowsで使う際のわりとまともに使える.  
+
+[YouTubeに投稿してみたときのプレゼン資料](https://docs.google.com/presentation/d/1gipc9VgBmv98gunpZw16e0MQ_o7dfLkizO7zvFvbBE8/edit?usp=sharing)  
+
+## 謎のクラッシュ時の対応
+
+windows terminalをMicrosoft Storeから最新版に更新する  
 
 ## github
 
@@ -20,6 +26,8 @@ windowsで使う際のわりとまともに使える
 ## config
 
 config path = `cd .\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\`  
+
+ハッシュの値のパスはおそらくユーザやWindowsのUUID的なもので変わるハズ  
 
 keybindを変更することがほぼ必須で、タブ間の切り替えやkeybindのオーバーライドを無視させるのに以下のような設定が必要。
 
