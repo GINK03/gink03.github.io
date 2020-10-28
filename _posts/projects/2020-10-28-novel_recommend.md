@@ -113,7 +113,7 @@ total = [x for x in total if x.__len__() >= 1]
 また作家ランキングだと以下のようになります。 
 
 <div align="center">
-  <img width="200px" src="https://user-images.githubusercontent.com/4949982/97428026-c18d2000-1958-11eb-8230-c59833eac48e.png">
+  <img style="width: 200px !important;" src="https://user-images.githubusercontent.com/4949982/97428026-c18d2000-1958-11eb-8230-c59833eac48e.png">
 </div>
 
 
