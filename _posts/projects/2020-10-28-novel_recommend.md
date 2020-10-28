@@ -22,7 +22,7 @@ Twitterでは`#名刺代わりの小説10選`というタグが存在し、2018 
 ## 方法
 どんなレコメンドであっても基本は共起を用いたアプローチを取ることが多いです。これは行列分解を行うMatrix Factorizationなどや類似のアルゴリズムは共起を基本としたアルゴリズムほとんどに言うことができます。  
 
-一般には機械学習をベースとしたアプローチが主流ですが、次元圧縮等を伴わない場合、テーブル操作のみで同等のことが行えます。  
+一般には機械学習をベースとしたアプローチが主流ですが、次元圧縮等を伴わない場合(つまり、汎化を気にしない場合)、テーブル操作のみで同等のことが行えます。  
 
 `#名刺代わりの小説10選`のツイート構造が好きな10冊の本のタイトルを紹介するもので、ある一冊に着目し、周辺に共起となるタイトルが散らばっていると考えることができます。  
 
@@ -171,14 +171,14 @@ df = pd.concat(tmps)
 その上で、`夜は短し歩けよ乙女`を見てみると微妙に内容的に遠いのでは？と考えていた、`図書館戦争`や`人間失格`が有名だから共起していましたが、この改良版ではランクが下がりました。  
 
 <div align="center">
-  <img style="width: 200px !important;" src="https://user-images.githubusercontent.com/4949982/97430238-ee8f0200-195b-11eb-9747-f3a0637aa326.png">
+  <img style="width: 280px !important;" src="https://user-images.githubusercontent.com/4949982/97430238-ee8f0200-195b-11eb-9747-f3a0637aa326.png">
 </div>
 
 ## 結果
 
 作家の粒度でも簡単に実行でき、村上春樹だと以下のようになります。
 <div align="center">
-  <img style="width: 250px !important;" src="https://user-images.githubusercontent.com/4949982/97430689-9c021580-195c-11eb-9e4d-d44a95cecd62.png">
+  <img style="width: 280px !important;" src="https://user-images.githubusercontent.com/4949982/97430689-9c021580-195c-11eb-9e4d-d44a95cecd62.png">
 </div>
 
 [Google Spreadsheetで誰でも見れるようにおいてある](https://docs.google.com/spreadsheets/d/16tQKGsL64iOLTr8wR9Ilwwp6JyxS7JyzwC0U2XhYkKU/edit?usp=sharing)のでご自身の好きなタイトルや作家さんを探してみましょう(作者名フィルタで落としきれなかったノイズも多少あり、これは手動でフィルタを追加するしかなさそうです)   
