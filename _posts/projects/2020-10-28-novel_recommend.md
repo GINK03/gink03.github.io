@@ -12,7 +12,7 @@ comments: false
 
 ## 導入・目的
 
-Twitterでは`#名刺代わりの小説10選`というタグが存在し、2020/10/25までにおおよそ8000ツイートほどこのタグがつけられていることが分かりました。  
+Twitterでは`#名刺代わりの小説10選`というタグが存在し、2018 ~ 2020/10/25までにおおよそ[8000ツイート](https://github.com/GINK03/novel_recommend/blob/master/var/shosetsu_dataset.csv)をちまちまと集めることができました。    
 
 このタグから、レコメンドを行いたいと思います。データ数的に、[けんすうさんが制作したMNM](https://kensuu.com/n/n58dfb5fc02e7)ほどデータを集めることができなかったので、機械学習のアプローチを用いずにスモールデータでもワークするアプローチでレコメンドを行いたいと思います。
 
@@ -20,16 +20,17 @@ Twitterでは`#名刺代わりの小説10選`というタグが存在し、2020/
 
 
 ## 方法
-どんなレコメンドであっても基本は共起を用いたアプローチを取ることが多いです。これはアルゴリズムが行列分解を行うMatrix Factorizationなどや類似のアルゴリズムは共起を基本としたアルゴリズムになります。  
-一般には機械学習をベースとしたアプローチが主流ですが、テーブル操作のみで同等のことができます。  
+どんなレコメンドであっても基本は共起を用いたアプローチを取ることが多いです。これは行列分解を行うMatrix Factorizationなどや類似のアルゴリズムは共起を基本としたアルゴリズムほとんどに言うことができます。  
 
-`#名刺代わりの小説10選`のツイート構造が10冊の本のタイトルを紹介するもので、ある一冊に着目し共起しているタイトルが周辺に散らばっていると考えることができます。  
+一般には機械学習をベースとしたアプローチが主流ですが、次元圧縮等を伴わない場合、テーブル操作のみで同等のことが行えます。  
+
+`#名刺代わりの小説10選`のツイート構造が好きな10冊の本のタイトルを紹介するもので、ある一冊に着目し、周辺に共起となるタイトルが散らばっていると考えることができます。  
 
 <div align="center">
   <img width="400px" src="https://user-images.githubusercontent.com/4949982/97434326-31ec6f00-1962-11eb-923b-500306ec8722.png">
 </div>
 
-これらの周辺に散らばっている本をうまく集計していくことで、どのような本がある本の近くに現れやすいのかを定量化することができます。  
+あるタイトルの周辺に散らばっているタイトルをうまく集計していくことで、どのような本がある本の近くに現れやすいのかを定量化することができます。  
 
 #### 前処理
 
@@ -87,12 +88,12 @@ for tweet in df["tweet"]:
     total.append([x.strip() for x in block])
 ```
 
-#### 著者情報
 精度は64%で、64%のツイートでパースすることに成功しました。
 
+#### 著者情報
 また、[Wikipediaの小説家一覧](https://ja.wikipedia.org/wiki/%E6%97%A5%E6%9C%AC%E3%81%AE%E5%B0%8F%E8%AA%AC%E5%AE%B6%E4%B8%80%E8%A6%A7)より、小説家をすべて定義します。そうすることで、タイトルだけをユニークに取り出すことができ、著者とタイトルを分離できます。
 
-```python3
+```python
 # 著者の名前が記されたcsvを読み込み
 names = pd.read_csv("var/auths.csv")["name"].tolist()
 # titleの抽出
@@ -102,14 +103,17 @@ total = [x for x in total if x.__len__() >= 1]
 
 #### 人気の本、著者
 本筋からはずれますが、みなさんがよく上げる10冊の中にあるタイトルには、以下のようなタイトルがあることが分かりました。  
+
 <div align="center">
-  <img width="400px" src="https://user-images.githubusercontent.com/4949982/97427717-53485d80-1958-11eb-9544-bc413a12e8da.png">
+  <img width="200px" src="https://user-images.githubusercontent.com/4949982/97427717-53485d80-1958-11eb-9544-bc413a12e8da.png">
 </div>
+
 この中からだと、私は`星の王子さま`と`虐殺器官`が好きです。  
 
 また作家ランキングだと以下のようになります。 
+
 <div align="center">
-  <img width="400px" src="https://user-images.githubusercontent.com/4949982/97428026-c18d2000-1958-11eb-8230-c59833eac48e.png">
+  <img width="200px" src="https://user-images.githubusercontent.com/4949982/97428026-c18d2000-1958-11eb-8230-c59833eac48e.png">
 </div>
 
 
@@ -117,7 +121,7 @@ total = [x for x in total if x.__len__() >= 1]
 
 `total`というlistを共起するタイトルを`title_cos` 変数の中にどんどん追加していき、すべて追加し終わったあとに、最大値で割り込むことでnormalizeした各タイトル(title)ごとに共起しやすいタイトル(co)を一覧で表現することができます。  
 
-```python3
+```python
 title_cos = {}
 
 for block in total:
@@ -141,7 +145,7 @@ ret
 
 例えば、`夜は短し歩けよ乙女`を見てみるとそれらしく出ています。  
 <div align="center">
-  <img width="400px" src="https://user-images.githubusercontent.com/4949982/97429029-2d23bd00-195a-11eb-9e8b-0207f0e8c2b7.png">
+  <img width="200px" src="https://user-images.githubusercontent.com/4949982/97429029-2d23bd00-195a-11eb-9e8b-0207f0e8c2b7.png">
 </div>
 
 #### 頻出するものは重要でない仮説を導入する
@@ -151,7 +155,7 @@ ret
 
 具体的にはTOP 300以内によく登場する本はあまり重要でない仮説を導入します。
 
-```python3
+```python
 w = ret.groupby(by=["co"]).agg(val_sum=("val", "sum")).reset_index()
 df = pd.merge(ret, w, on=["co"], how="left")
 
@@ -167,14 +171,14 @@ df = pd.concat(tmps)
 その上で、`夜は短し歩けよ乙女`を見てみると微妙に内容的に遠いのでは？と考えていた、`図書館戦争`や`人間失格`が有名だから共起していましたが、この改良版ではランクが下がりました。  
 
 <div align="center">
-  <img width="400px" src="https://user-images.githubusercontent.com/4949982/97430238-ee8f0200-195b-11eb-9747-f3a0637aa326.png">
+  <img width="200px" src="https://user-images.githubusercontent.com/4949982/97430238-ee8f0200-195b-11eb-9747-f3a0637aa326.png">
 </div>
 
 ## 結果
 
 作家の粒度でも簡単に実行でき、村上春樹だと以下のようになります。
 <div align="center">
-  <img width="400px" src="https://user-images.githubusercontent.com/4949982/97430689-9c021580-195c-11eb-9e4d-d44a95cecd62.png">
+  <img width="200px" src="https://user-images.githubusercontent.com/4949982/97430689-9c021580-195c-11eb-9e4d-d44a95cecd62.png">
 </div>
 
 [Google Spreadsheetで誰でも見れるようにおいてある](https://docs.google.com/spreadsheets/d/16tQKGsL64iOLTr8wR9Ilwwp6JyxS7JyzwC0U2XhYkKU/edit?usp=sharing)のでご自身の好きなタイトルや作家さんを探してみましょう(作者名フィルタで落としきれなかったノイズも多少あり、これは手動でフィルタを追加するしかなさそうです)   
@@ -190,3 +194,5 @@ MatrixFactorizationなどをこのような課題設定で使うことも可能�
 個人でさっとバズったTwitterのハッシュタグを集めて分析して、自分のQoLを上げるのは良さそうです。　
 
 今回、集めた8000近くのツイートやjupyterのクソコード等はGitHubで公開していますので、ご自由にどうぞ。。。
+
+ - [GitHub](https://github.com/GINK03/novel_recommend)
