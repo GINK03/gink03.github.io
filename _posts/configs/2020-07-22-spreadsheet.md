@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "gspread"
+title:  "spreadsheet"
 date:   2020-07-22
-excerpt: "gspread"
+excerpt: "spreadsheet"
 project: false
 config: true
 tag:
@@ -25,27 +25,24 @@ comments: false
 [ファイル] -> [インポート] -> [アップロード]
 ```
 
+## pythonと連携する
 
-## colabをバックエンドに編集
+### colabで編集
 
-**boot up**  
+`pip install --upgrade gspread` moduleが無い際は適宜インストールする
+
+**認証を通す**  
 ```python
 import pandas as pd
 import numpy as np
-
-!pip install --upgrade gspread
-
 from google.colab import auth
 auth.authenticate_user()
-
 import gspread
 from oauth2client.client import GoogleCredentials
 
 gc = gspread.authorize(GoogleCredentials.get_application_default())
 ```
-
-**spreadsheetを読み出してpandas DataFrameへ**  
-
+**SpreadSheetのデータをpandas DataFrameへ**  
 ```python
 wb = gc.open_by_url('https://docs.google.com/spreadsheets/d/1Y4Gi7QBAiQESKL_qtV71u8ToiGqu8IDwhlT--gKeDuo/edit#gid=1578443245')
 
@@ -55,7 +52,7 @@ a = a[1:]
 ```
 headerもデータとして受け取ってしまうので再マッピングする
 
-**pandasの内容をspreadsheetへ**  
+**pandas DataFrameをSpreadSheetへ**  
 
 ```python
 wb.values_update("{SHEET_NAME}", 
@@ -63,15 +60,15 @@ wb.values_update("{SHEET_NAME}",
                 body={"values":  np.vstack([df.columns, df.values]).tolist()})
 ```
 
-vstackする必要があるのはarrayしかgspreadが受け取れないため
+vstackしてnumpyからlistに変換する必要があるのはlistのみgspreadが受け取れるため
 
-## terminalをバックエンドに編集
+### terminalで編集
 
-認証の方法がcolabと異なる。  
+**認証の方法がcolabと異なる**  
 
-GCPの登録が個人でも必要であり、登録の後、[APIとサービス] -> [認証情報] -> [認証情報を作成] -> [サービスアカウント] -> (わかりやすい名前を入力) して作成する。  
+GCPの登録が個人でも必要であり、登録の後、`[APIとサービス]` -> `[認証情報]` -> `[認証情報を作成]` -> `[サービスアカウント]` -> `(わかりやすい名前を入力)` して作成する。  
 
-作成後、サービスアカウント名をクリックして詳細画面を表示して、[鍵を追加]から鍵を追加する  
+作成後、サービスアカウント名をクリックして詳細画面を表示して、`[鍵を追加]` から鍵を追加する  
 
 その情報を `service_account.json` 等の名前で `~/.config/gspread/service_account.json` とパスを編集して保存する  
 
@@ -87,7 +84,7 @@ from pathlib import Path
 import pickle
 
 gc = gspread.service_account(filename=Path("~/.config/gspread/service_account.json").expanduser())
-df = pd.read_csv("./input/2020_07_29_02.csv.gz", compression="gzip")
+df = pd.read_csv("{SOMETHING_LOCAL_CSV}.csv")
 df = df.sample(n=10000)
 wb = gc.open_by_url("https://docs.google.com/spreadsheets/d/1v_mB6FVI8qr5V7mXLdlZpvjOyV-aakDHdyRjg_qieWw")
 wb.values_update("a", 
@@ -95,3 +92,34 @@ wb.values_update("a",
                 body={"values":  np.vstack([df.columns, df.values]).tolist()})
 
 ```
+
+
+## Google Apps Scriptの使用
+
+`Microsoft Excel`のマクロに該当する機能  
+
+SpreadSheetの`[ツール]` -> `[スクリプトエディタ]`からスクリプトエディタを開くことができる。  
+
+様々な具体例は[Google Developers](https://developers.google.com/apps-script/guides/sheets)に記されている。 
+
+## Queryを使う 
+
+SpreadSheet上のデータに対して、Queryを使うことができる。  
+
+```
+  A	B
+1	name	val
+2	a	10
+3	b	20
+4	c	30
+5	a	15
+6	b	40
+```
+
+のようなデータがあった際に、Bのカラムの平均や合計  
+`=QUERY(B2:B6, "SELECT AVG(B), SUM(B)", -1)`  
+
+Aに対してGROUP BY操作のようなこともできる  
+`=QUERY(A2:B6, "SELECT A, AVG(B), SUM(B) GROUP BY A", -1)`  
+
+[具体例のリンク](https://docs.google.com/spreadsheets/d/1-5ZqObw858VAQ-NuYMB2Et21EfMEPPrJjxpZR-rD5DI/edit?usp=sharing)
