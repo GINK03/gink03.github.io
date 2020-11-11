@@ -10,6 +10,9 @@ comments: false
 
 # healthcare
 
+## 炭水化物の適切な量
+ - [全体のカロリーの半分程度が最も長寿](https://www.thelancet.com/article/S2468-2667(18)30135-X/fulltext) 
+ - 生成された糖は危険である(血糖値スパイクと中毒のリスクが有るため)
 
 ## 邦題：なぜ朝は機嫌が悪いのか、怒るのか
  - [link](https://www.netdoctor.co.uk/healthy-living/wellbeing/advice/a26104/why-you-wake-up-grouchy/)
