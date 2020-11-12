@@ -39,3 +39,13 @@ comments: false
  2. 会社から就労証明になる書類・育休明けの書類を貰い保育園の申請を行う
 
 
+## イラストによる解説
+(著作権として保護されている可能性があり、claimがあった際には対応します)  
+
+<div>
+  <img style="width: 100px !important; align: center;" src="https://user-images.githubusercontent.com/4949982/98898483-19975b00-24f1-11eb-8aa9-838e5cc2d53f.jpeg">
+</div>
+
+<div>
+  <img style="width: 100px !important; align: center;" src="https://user-images.githubusercontent.com/4949982/98898488-1dc37880-24f1-11eb-878c-89768171d03d.jpeg">
+</div>
