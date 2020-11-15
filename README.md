@@ -5,6 +5,3 @@
 [https://gink03.github.io/](https://gink03.github.io/)
 
 
-## I am editing the README file.
-
-

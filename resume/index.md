@@ -48,6 +48,8 @@ Same contents exist in LinkedIn.(https://www.linkedin.com/in/gimpei-kobayashi-20
 
 
 ## Online certifications
+ - [Introduction to Git and GitHub](https://www.coursera.org/account/accomplishments/certificate/43JVYW2S75YN)
+
  - [Essential Cloud Infrastructure: Foundation 日本語版](https://www.coursera.org/account/accomplishments/certificate/LZA3SA2GW8R3)
 
  - [Google Cloud Platform Fundamentals: Core Infrastructure](https://www.coursera.org/account/accomplishments/certificate/3VGQF9GM624K)
