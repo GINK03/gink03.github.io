@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "選択理論"
+title:  "choicetheory"
 date:   2020-11-16
-excerpt: "選択理論"
+excerpt: "choicetheory"
 project: false
 config: true
 tag: ["選択理論心理学", "選択理論", "上質世界"]
