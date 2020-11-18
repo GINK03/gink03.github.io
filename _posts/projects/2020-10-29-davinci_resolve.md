@@ -1,42 +1,19 @@
 ---
 layout: post
-title:  "tax saving"
-date:   2020-10-28
-excerpt: "tax saving"
+title:  "davinci resolve"
+date:   2020-11-18
+excerpt: "davinci resolve"
 project: true
-tag: ["tax", "tax_saving"]
+tag: ["davinci resolve"]
 comments: false
 ---
 
-# tax saving
+# davinci resolve
 
+## platforms
+ - linux
+ - windows
+ - osx
 
-## 参考になった投稿
-
-### Q1. 
-> 税理士、行こう行こうと思って行けていないのですが、どう探せばいいのでしょうか？
-
-### A1.
-> やーちゃんとした人探すとなると良くわからないのですが、
-https://advisors-freee.jp/ とかあります
-> なお、聞きたいことをword1-2枚にまとめるくらいの準備はした方が効率的だと思いますね。
-
-
-### Q2. 
-> 将来、自分でサービスを持って固定的な収入を得たいと考えています。
-> 現状、設備投資、研究開発が続いており、しばらく赤字が続きそうな見込みです。
-> これらを赤字のように計上することで、現在の税金を下げることは可能でしょうか？
-
-### A2.
-> 基本的に、副業がある場合、給与所得と事業所得で所得が構成されるはず。
-> で、上のリンクによると青色申告してると3年間までOK
-> 良く読むともしかして同じ年の給与所得と相殺できるのか・・？だとすると結構強いな
-> 個々の経費が認められるかはあれなので、要相談
-
-### Q3. 
-> 1. 事業取得としての攻略条件を税理士に聞き、満たす
-> 2. PC関連、外注関連の費用を記録する
-> 3. 節税する
-
-### A3.
-> OK!
+## change language
+ - [Davinci Resolve] -> [Preferenses] -> [General] -> [User] -> [Select language]
