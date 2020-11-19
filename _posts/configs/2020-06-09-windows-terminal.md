@@ -31,7 +31,7 @@ windows-terminalをMicrosoft Storeから最新版に更新する
 
 ## config
 
-configファイルがあるpathはwindowsにランダムで作られるdigest値を持ったパスになり、以下のようなパスになる  
+configファイルがあるpathはwindowsにランダムで作られるdigest値を持ったパスになり、例えば以下のようなパスになる  
 
  - e.g. `cd .\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\`  
 
@@ -51,8 +51,8 @@ keybindを変更することが可能で、タブ間の切り替えやkeybindの
         "defaults":
         {
 			// ここは必須
-			"fontFace" : "SF Mono",
-			"fontSize" : 13, 
+			"fontFace" : "Myrica M" //"Noto Sans Mono CJK JP Regular",
+			"fontSize" : 15, 
 			"colorScheme": "One Half Dark"
         },
         "list":
