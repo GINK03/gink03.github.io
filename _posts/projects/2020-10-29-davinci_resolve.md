@@ -17,3 +17,4 @@ comments: false
 
 ## change language
  - [Davinci Resolve] -> [Preferenses] -> [General] -> [User] -> [Select language]
+
