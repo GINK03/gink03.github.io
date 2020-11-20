@@ -24,6 +24,8 @@ comments: false
 **macosx**  
 `app store` -> (microsoft remote desktopを検索) -> (onlineで設定したmicrosoft accountのメールアドレスとパスワードでログイン可能)  
 
+13inchのMacBookでは解像度が`2560x1600`であるので、これの半分の`1280x800`か、0.75倍の`1920x1200`などだときれいに映る  
+
 **ios**  
 `app store` -> (microsoft remote desktopを検索) -> (onlineで設定したmicrosoft accountのメールアドレスとパスワードでログイン可能)  
 
