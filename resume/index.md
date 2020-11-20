@@ -48,6 +48,8 @@ Same contents exist in LinkedIn.(https://www.linkedin.com/in/gimpei-kobayashi-20
 
 
 ## Online certifications
+ - [Positive Psychology: Martin E. P. Seligman’s Visionary Science](https://www.coursera.org/account/accomplishments/certificate/975WQ2R6BS9C)
+
  - [Introduction to Git and GitHub](https://www.coursera.org/account/accomplishments/certificate/43JVYW2S75YN)
 
  - [Essential Cloud Infrastructure: Foundation 日本語版](https://www.coursera.org/account/accomplishments/certificate/LZA3SA2GW8R3)
