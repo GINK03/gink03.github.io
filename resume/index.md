@@ -54,6 +54,8 @@ Same contents exist in LinkedIn.(https://www.linkedin.com/in/gimpei-kobayashi-20
 
  - [Essential Cloud Infrastructure: Foundation 日本語版](https://www.coursera.org/account/accomplishments/certificate/LZA3SA2GW8R3)
 
+ - [Essential Google Cloud Infrastructure: Foundation](https://www.coursera.org/account/accomplishments/certificate/Z4VFLDYTDLNY)
+
  - [Google Cloud Platform Fundamentals: Core Infrastructure](https://www.coursera.org/account/accomplishments/certificate/3VGQF9GM624K)
  
  - [Introduction to Psychology](https://www.coursera.org/account/accomplishments/certificate/QLKZP9AREDFE)
