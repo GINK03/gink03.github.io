@@ -31,5 +31,8 @@ comments: false
  - [地球外生物の世界](https://virtualgorillaplus.com/topic/alien-worlds/)
  - [アメリカン・マーダー](https://eiga.com/extra/sasaki/87/)
 
+# tv series
+ - [腐女子、うっかりゲイに告る。](https://filmarks.com/dramas/6098/8651)
+
 # manga
  - [カイジ](https://ja.wikipedia.org/wiki/%E8%B3%AD%E5%8D%9A%E9%BB%99%E7%A4%BA%E9%8C%B2%E3%82%AB%E3%82%A4%E3%82%B8)
