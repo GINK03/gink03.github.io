@@ -30,6 +30,7 @@ comments: false
 *メディアの使用を制限する*  
  - 子供がテレビを見るほど太り過ぎになるリスクが増加する  
 
+参考: [*How can I tell if my baby's weight is cause for concern?*](https://www.mayoclinic.org/healthy-lifestyle/infant-and-toddler-health/expert-answers/baby-fat/faq-20058296)
 参考: [*テレビ視聴と親の体重に関連する子供と青年の太りすぎ*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2746249/#:~:text=In%20a%20cross%2Dsectional%20study,0%E2%80%931%20hour%20per%20day.&text=Findings%20from%20longitudinal%20studies%20also,years%20of%20follow%2Dup%20assessment.)
 
 ## 子供の写真や動画を勝手に動画に投稿していいのか
