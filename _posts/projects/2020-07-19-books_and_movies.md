@@ -26,7 +26,8 @@ comments: false
  - [劇場](https://ja.wikipedia.org/wiki/%E5%8A%87%E5%A0%B4_(%E5%8F%88%E5%90%89%E7%9B%B4%E6%A8%B9))/又吉直樹
  - [犬猿](https://ja.wikipedia.org/wiki/%E7%8A%AC%E7%8C%BF)
  - [MOTHER マザー](https://ja.wikipedia.org/wiki/MOTHER_%E3%83%9E%E3%82%B6%E3%83%BC)/大森立嗣
- 
+ - [下妻物語](https://eiga.com/movie/41000/)
+
 # documentary
  - [地球外生物の世界](https://virtualgorillaplus.com/topic/alien-worlds/)
  - [アメリカン・マーダー](https://eiga.com/extra/sasaki/87/)
