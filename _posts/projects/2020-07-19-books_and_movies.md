@@ -34,6 +34,11 @@ comments: false
 
 # tv series
  - [腐女子、うっかりゲイに告る。](https://filmarks.com/dramas/6098/8651)
+<div align="center">
+  <img width="300px" src="https://user-images.githubusercontent.com/4949982/101290200-0f445480-3844-11eb-9c02-a8defb53514a.png">
+</div>
+
+ - [ビッグ・マウス](https://www.netflix.com/title/80117038)
 
 # manga
  - [カイジ](https://ja.wikipedia.org/wiki/%E8%B3%AD%E5%8D%9A%E9%BB%99%E7%A4%BA%E9%8C%B2%E3%82%AB%E3%82%A4%E3%82%B8)
