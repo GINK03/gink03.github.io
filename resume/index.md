@@ -7,12 +7,24 @@ comments: false
 ---
 
 ## RESUME
-Here is my resume. 
+私の業務経験のレジュメです。
+This is a resume of my work experience. 
 
-Same contents exist in LinkedIn.(https://www.linkedin.com/in/gimpei-kobayashi-208bba2a/)
+日本語による紹介と英語による紹介が混在しています。
+Introductory in Japanese and in English are mixed.
 
+
+### 【PROFESSIONAL EXPERIENXE in 個人事業主】2020/12 ~
+ - 機械学習を用いた適切な資産運用を行うモデルの開発と検証
+ 
+ - ライブ配信サービスにて、作成されたモデルのKPIの検証と、新規KPIの策定
 
 ### 【PROFESSIONAL EXPERIENCE in DeNA】2018/04 ~
+
+ - オートモーティブ事業にて、車の特定の運用に関わる時間を推定するモデルの構築とシステム化
+
+ - ライブ配信サービスにて、レコメンドモデルのEDA、構築、運用の経験
+ 
  - Developed a system that can predict ticket number of amount in Yokohama-DeNA Baysters.
 
  - Developed a system that can predict amount of merchandise items in Yokohama-DeNA Baystars offline(or online) stores.
