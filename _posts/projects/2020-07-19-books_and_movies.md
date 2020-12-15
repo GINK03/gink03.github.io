@@ -43,6 +43,7 @@ comments: false
 
  - [ビッグ・マウス](https://www.netflix.com/title/80117038): 👍
  - [今際の国のアリス](https://ja.wikipedia.org/wiki/%E4%BB%8A%E9%9A%9B%E3%81%AE%E5%9B%BD%E3%81%AE%E3%82%A2%E3%83%AA%E3%82%B9): 💩
+ - [アウトブレイク 感染拡大](http://www.transformer.co.jp/m/outbreak/): 👍
 
 # manga
  - [カイジ](https://ja.wikipedia.org/wiki/%E8%B3%AD%E5%8D%9A%E9%BB%99%E7%A4%BA%E9%8C%B2%E3%82%AB%E3%82%A4%E3%82%B8): 👍
