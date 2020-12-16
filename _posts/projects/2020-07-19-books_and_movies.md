@@ -30,6 +30,7 @@ comments: false
  - [ファイナルファンタジーXIV 光のお父さん](https://filmarks.com/movies/83576): 👎
  - [花とアリス殺人事件](https://hm-hm.net/anime/%e8%8a%b1%e3%81%a8%e3%82%a2%e3%83%aa%e3%82%b9%e6%ae%ba%e4%ba%ba%e4%ba%8b%e4%bb%b6/5): 😪
  - [サマー・オブ・84](https://ja.wikipedia.org/wiki/%E3%82%B5%E3%83%9E%E3%83%BC%E3%83%BB%E3%82%AA%E3%83%96%E3%83%BB84): 👎
+ - [半世界](https://eiga-watch.com/hansekai/): 👍
 
 # documentary
  - [地球外生物の世界](https://virtualgorillaplus.com/topic/alien-worlds/): 👍
