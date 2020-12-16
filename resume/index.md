@@ -59,7 +59,10 @@ Introductory in Japanese and in English are mixed.
  - Developed detection system, can know which user has high attention to his ad or not.
 
 
-## Online certifications
+
+## Qualification/Certifications
+ - [Pythonエンジニア認定試験/基礎試験](https://user-images.githubusercontent.com/4949982/102303112-d1f76980-3f9d-11eb-923b-cb90165f8ef7.png)
+ 
  - [Positive Psychology: Martin E. P. Seligman’s Visionary Science](https://www.coursera.org/account/accomplishments/certificate/975WQ2R6BS9C)
 
  - [Introduction to Git and GitHub](https://www.coursera.org/account/accomplishments/certificate/43JVYW2S75YN)
