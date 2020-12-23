@@ -65,7 +65,9 @@ Introductory in Japanese and in English are mixed.
 *Qualifications*
  - [統計検定2級](https://user-images.githubusercontent.com/4949982/102600946-d4ef8700-4162-11eb-8607-c3f31d475afc.png)
 
- - [Pythonエンジニア認定試験/基礎試験](https://user-images.githubusercontent.com/4949982/102303112-d1f76980-3f9d-11eb-923b-cb90165f8ef7.png)
+ - [Pythonエンジニア認定/データ分析試験](https://user-images.githubusercontent.com/4949982/102969927-edccb380-4539-11eb-80c4-ae1f92a84267.png)
+
+ - [Pythonエンジニア認定/基礎試験](https://user-images.githubusercontent.com/4949982/102303112-d1f76980-3f9d-11eb-923b-cb90165f8ef7.png)
  
 *Certifications*
  - [Positive Psychology: Martin E. P. Seligman’s Visionary Science](https://www.coursera.org/account/accomplishments/certificate/975WQ2R6BS9C)
