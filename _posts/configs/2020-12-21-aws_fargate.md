@@ -23,8 +23,11 @@ $ chmod +x ecs-cli-linux-amd64-latest
 $ mv ecs-cli-linux-amd64-latest ~/.bin/ecs-cli
 ```
 
-### build a cluster
+## Build a cluster
 
+<details>
+<summary>Build a cluster with CUI</summary>
+<div markdown="1">
 **1. naming a cluster and primitive settings**
 ```console
 $ ecs-cli configure --cluster ${CLUSTER_NAME} --default-launch-type FARGATE --config-name ${CONFIG_NAME} --region us-west-2
@@ -50,8 +53,14 @@ $ aws ec2 describe-security-groups --filters Name=vpc-id,Values=${VPC_ID} --regi
 ```console
 $ aws ec2 authorize-security-group-ingress --group-id ${SECURITY_GROUP_ID} --protocol tcp --port 80 --cidr 0.0.0.0/0 --region us-west-2
 ```
+</div>
+</details>
 
-**5. edit compose yamls**
+## Install containers to specified cluster
+<details>
+<summary>Install continers and lauch with CUI</summary>
+<div markdown="1">
+**1. edit compose yamls**
 `docker-compose`のように、`docker-compose.yml`と`ecs-params.yml`を作成する必要がある  
 
 *docker-compose.yml*
@@ -84,16 +93,16 @@ run_params:
 ```
 通常、`subnets`と`security_groups`は再編集することがないので、ハードコードを期待してるものと考えられる
 
-**6. compose**
+**2. compose**
 ```console
-$ ecs-cli compose --project-name tutorial service up --create-log-groups --cluster-config tutorial --ecs-profile tutorial-profile
+$ ecs-cli compose service up --create-log-groups
 ```
 より簡単には
 ```console
 $ ecs-cli compose service up
 ```
 
-**7. options**  
+**3. options**  
 *list*
 ```console
 $ aws ec2 list-compose
@@ -109,3 +118,28 @@ $ ecs-cli ps
 $ ecs-cli compose service stop # 一度止めて
 $ ecs-cli compose service up # 再度, upすると新しいコンテンを参照して起動する
 ```
+
+*`ecs-cli`のデフォルトのclusterを再設定する*
+```console
+$ ecs-cli configure --cluster test-cluster-01 --region us-west-2
+```
+</div>
+</details>
+
+## Launch service with load balancer
+
+<details>
+<summary>Laucn service with load balancer with WebUI</summary>
+<div markdown="1">
+NOTE: 現状、CUIで`load balancer`を有効化できていない  
+
+`load balancer`の設定
+ 1. `applicattion load balancer`である必要がある
+ 2. `vpc_id`と`security_group_id`は`cluster`と一致している必要がある
+ 3. `ターゲットの登録`は無視する
+
+`load balancer`が作成できたら  
+`Amazon ECS` -> `クラスター` -> `(すでにデプロイされたクラスターに)サービスを作成` -> `案内に従ってすすめる...`  
+</div>
+</details>
+
