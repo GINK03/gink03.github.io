@@ -127,11 +127,26 @@ $ ecs-cli configure --cluster test-cluster-01 --region us-west-2
 </details>
 
 ## Launch service with load balancer
+<details>
+<summary>Laucn service with load balancer with WebUI</summary>
+<div markdown="1">
+`docker-compose.yml`に記されたサービス名・ポートが`--container-name`と`--container-port`に対応するようである.  
+`--target-group-arn`は`load balancer`の`ターゲットグループ`から確認できる
+
+```console
+$ ecs-cli compose service up --cluster test-cluster-01 \
+  --target-group-arn arn:aws:elasticloadbalancing:us-west-2:596985414779:targetgroup/test-lb-03/fadc4fb63351c278 \
+  --container-name web \
+  --container-port 80
+```
+</div>
+</details>
 
 <details>
 <summary>Laucn service with load balancer with WebUI</summary>
 <div markdown="1">
-NOTE: 現状、CUIで`load balancer`を有効化できていない  
+~NOTE: 現状、CUIで`load balancer`を有効化できていない~  
+`load balancer`を有効化できた -> `arn`と`arnグループ`が異なっていたらしい
 
 `load balancer`の設定
  1. `applicattion load balancer`である必要がある
