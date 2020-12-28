@@ -128,7 +128,7 @@ $ ecs-cli configure --cluster test-cluster-01 --region us-west-2
 
 ## Launch service with load balancer
 <details>
-<summary>Laucn service with load balancer with WebUI</summary>
+<summary>Laucn service with load balancer with CUI</summary>
 <div markdown="1">
 `docker-compose.yml`に記されたサービス名・ポートが`--container-name`と`--container-port`に対応するようである.  
 `--target-group-arn`は`load balancer`の`ターゲットグループ`から確認できる
