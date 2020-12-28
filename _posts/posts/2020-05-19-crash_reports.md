@@ -3,13 +3,13 @@ layout: post
 title: "crash reports"
 date: 2020-05-19
 excerpt: ""
-tags: [crash reports]
+tags: ["crash reports"]
 comments: false
 ---
 
 # 2020-05-19 05:00:00
 
-原因
+ログ
 ```
 ERROR: apport (pid 3615845) Tue May 12 02:40:39 2020: Unhandled exception:
 Traceback (most recent call last):
@@ -23,8 +23,9 @@ ERROR: apport (pid 3615845) Tue May 12 02:40:39 2020: environment: environ({'LC_
 ```
 
 ### 考えられることと仮説
- - HDDが故障するなどしてFDの整合性が壊れた -> HDDを買い直すなど
- - メモリの故障 -> ECCメモリなので可能性は低い？
+ - HDDが故障するなどしてFDが壊れた -> HDDを買い直すなど
+ - メモリの故障 -> ECCメモリなので可能性は低い
 
-
+### 現状
+ - OSを再起動するなどした結果、現状発生していないので対応する必要なし
 

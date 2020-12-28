@@ -3,7 +3,7 @@ layout: post
 title: "rounding error"
 date: 2020-05-16
 excerpt: ""
-tags: [rounding error, 競プロ]
+tags: ["rounding error", "競プロ"]
 comments: false
 ---
 
@@ -12,8 +12,7 @@ comments: false
 気づかないとなんで `WA` したかわからない
 
 ## 例
- `https://yukicoder.me/problems/no/1041` にて、フォーミュラを構築し、解析的に解けるだろうと期待したが、以下のコメントの箇所にてエラーを起こしていた。
-
+ `https://yukicoder.me/problems/no/1041` にて、解析的に解けるだろうと期待したが、以下のコメントの箇所にてエラーを起こしていた。
 
 ```python
 n=int(input())
@@ -60,9 +59,10 @@ for special in special_y:
     cs.append(c)
 ```
 
-ココの箇所を `p[1] == p[0]*kamuki + takasa` としていたため、floatは厳密解でなくなるという特徴を持つのでエラーが発生することになった。
+`p[1] == p[0]*kamuki + takasa` としていたため、floatは厳密解でなくなるという特徴を持つのでエラーが発生することになった。
 
 ## 対処法
- floatを含む計算ではこのリスクを意識すること？（一個二個などの少数の失敗例から、気づくなど） 
+ - floatを含む計算ではこのリスクを意識すること  
+ - 整数でどうにか表現して整数として特など  
 
 
