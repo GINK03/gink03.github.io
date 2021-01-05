@@ -7,6 +7,7 @@ comments: false
 ---
 
 ## Papers
+- [A Self-Attentive model for Knowledge Tracing](https://arxiv.org/abs/1907.06837)
 
 - [USING BIG DATA TO ESTIMATE CONSUMER SURPLUS: THE CASE OF UBER](https://www.nber.org/papers/w22627.pdf)
 
