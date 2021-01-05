@@ -8,7 +8,7 @@ comments: false
 ---
 
 
-# deep learning tabular
+# pytorch tabular
  - deep learningでtabularデータを扱う
 
 ## 参考
