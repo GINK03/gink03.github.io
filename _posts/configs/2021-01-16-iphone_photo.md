@@ -2,14 +2,18 @@
 layout: post
 title:  "iphone photo"
 date:   2021-01-16
-excerpt: "iphone"
+excerpt: "iphoneの写真機能について"
 project: false
 config: true
 tag: ["iphone", "ios", "photo"]
 comments: false
 ---
 
-# iphone photo
+# iphoneの写真機能について
+
+## 撮影した`live photo`を動き付きで再生する
+ - iphone
+   - `写真`->`該当の写真を長押し`
 
 ## live photo 
  - 撮影した写真の前後1.5秒を動画で保存

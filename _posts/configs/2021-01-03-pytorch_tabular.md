@@ -2,13 +2,13 @@
 layout: post
 title: "deep learning tabular"
 date: 2021-01-03
-excerpt: ""
+excerpt: "pytorchでtabularデータを学習&推論する"
 tags: ["deep learning", "tabular", "pytorch"]
 comments: false
 ---
 
 
-# pytorch tabular
+# pytorchでtabularデータを学習&推論する
  - deep learningでtabularデータを扱う
 
 ## 参考

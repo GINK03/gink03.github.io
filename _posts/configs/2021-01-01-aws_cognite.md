@@ -2,14 +2,14 @@
 layout: post
 title:  "aws cognite"
 date:   2020-12-31
-excerpt: "aws cognite"
+excerpt: "aws cogniteの使い方"
 project: false
 config: true
 tag: ["aws", "cognite"]
 comments: false
 ---
 
-# aws cognite
+# aws cogniteの使い方
 
 ## 概要
  - 認証関連のクライドサービス

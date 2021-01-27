@@ -2,7 +2,7 @@
 layout: post
 title: "adblocking"
 date: 2021-01-26
-excerpt: "adblocking"
+excerpt: "ios, android, その他で使えるadblocking関連の設定とソフトウェア"
 project: false
 config: true
 tag: ["ios", "adblocking", "dns", "vpn"]
