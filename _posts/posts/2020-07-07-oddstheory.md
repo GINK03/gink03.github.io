@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "oddstheory"
-date: 2020-07-07 excerpt: ""
-tags: [oddstheory]
+title: "オッズ理論"
+date: 2020-07-07 
+excerpt: "オッズに関する理論とサンクトペテルブルクのパラドクス等"
+tags: ["オッズ", "サンクトペテルブルクのパラドクス", "賭け事"]
 comments: false
 ---
 
