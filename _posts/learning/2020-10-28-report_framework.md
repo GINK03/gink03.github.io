@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  "report framework"
-date:   2020-10-28
-excerpt: "report framework"
-project: true
+title: "report framework"
+date: 2020-10-28
+excerpt: "レポートのフレームワーク"
+learning: true
 tag: ["report", "reporting"]
 comments: false
 ---
 
-# report framwork
+# レポートのフレームワーク
 
 ## usable links
  - [adelaide.edu.au](https://www.adelaide.edu.au/writingcentre/sites/default/files/docs/learningguide-writingaresearchreport.pdf)

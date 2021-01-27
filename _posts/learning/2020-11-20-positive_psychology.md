@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  "positive psychology"
-date:   2020-11-20
-excerpt: "gcp"
-project: true
-tag: ["positive psychology", "coursera"]
+title: "ポジティブ心理学"
+date: 2020-11-20
+excerpt: "ポジティブ心理学について"
+learning: true
+tag: ["positive psychology", "ポジティブ心理学について", "coursera"]
 comments: false
 ---
 
-# positive psychology
+# ポジティブ心理学について
  - [coursera](https://www.coursera.org/learn/positive-psychology-visionary-science)
  - すごい良かった 
 
