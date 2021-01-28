@@ -25,7 +25,7 @@ layout: compress
 		  {% for post in site.posts %} 
 		  {% if post.learning %}
 		  <ul>
-			<li class="wow fadeInLeft" data-wow-duration="1.5s" style="padding: 0px;">
+			<li data-wow-duration="1.5s" style="padding: 0px;">
 			  <a class="zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
 			  <p style="font-size: 0.8rem;">更新日:{{ post.date | date: "%F" }}, 概要: {{ post.excerpt }}</p>
 			  <!-- <a href="{{ site.url }}{{ post.url }}" class="btn zoombtn">read more</a> -->

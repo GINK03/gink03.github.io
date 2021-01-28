@@ -62,7 +62,7 @@ Introductory in Japanese and in English are mixed.
 
 ## Qualifications/Certifications
 
-*Qualifications*
+*Qualifications(資格)*
  - [統計調査士](https://user-images.githubusercontent.com/4949982/103746695-d5ce5700-5044-11eb-95ae-a715b790a189.png)
 
  - [統計検定2級](https://user-images.githubusercontent.com/4949982/102600946-d4ef8700-4162-11eb-8607-c3f31d475afc.png)
@@ -72,6 +72,8 @@ Introductory in Japanese and in English are mixed.
  - [Pythonエンジニア認定/基礎試験](https://user-images.githubusercontent.com/4949982/102303112-d1f76980-3f9d-11eb-923b-cb90165f8ef7.png)
  
 *Certifications*
+ - [Introduction to Data Science in Python](https://www.coursera.org/account/accomplishments/certificate/5L7UVY6P68ZL)
+
  - [Social Psychology](https://www.coursera.org/account/accomplishments/certificate/NBRK6KZM4QNJ)
 
  - [Positive Psychology: Martin E. P. Seligman’s Visionary Science](https://www.coursera.org/account/accomplishments/certificate/975WQ2R6BS9C)

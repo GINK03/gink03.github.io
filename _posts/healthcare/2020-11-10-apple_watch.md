@@ -2,7 +2,7 @@
 layout: post
 title: "apple watch"
 date: 2020-11-10
-excerpt: "apple watch"
+excerpt: "apple watchの使い方"
 project: false
 config: true
 healthcare: true
