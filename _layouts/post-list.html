@@ -17,13 +17,14 @@ layout: compress
 	  <div class="content">
 		<div class="post-title">
 		  <h1>{{ page.title }}</h1>
+		  <h4>すべての投稿を表示しています。各カテゴリへのアクセスはトップページからアクセスできます</h4>
 		  <a class="btn zoombtn" href="{{site.url}}">
 			<i class="fa fa-home"></i>
 		  </a>
 		</div>
 		<div class="post-list">
 		  {% for post in site.posts %} 
-		  {% if post.project == null %}
+		  {% if post.hide_from_post == null %} <!-- このフラグがある場合、表示しない -->
 		  <ul>
 			<li data-wow-duration="1.5s" style="padding: 0px;">
 			  <a class="zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
