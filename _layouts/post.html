@@ -15,11 +15,11 @@ layout: compress
   <header class="header" role="banner">
 	<div class="wrapper">
 	  <div class="content">
-		<div class="post-title {% if page.feature %} feature {% endif %}">
+		<div class="post-title {% if page.feature %} feature {% endif %}" style="margin: 0px;">
 		  <h1>{{ page.title }}</h1>
 		  <p style="margin: 0px;">{{ page.excerpt }}</p>
 		  <p style="margin: 0px;">{{ page.date | date: "%F" }}</p>
-		  <p>tag:</p>{% for tag in page.tags %}<a style="margin: 2px;" href="{{ site.url }}/tags/#{{ tag }}" title="Pages tagged {{ tag }}" class="tag">{{ tag }}</a>{% unless forloop.last %}{% endunless %}{% endfor %}
+		  <p style="margin: 0px;">{% for tag in page.tags %}<a style="margin: 2px;" href="{{ site.url }}/tags/#{{ tag }}" title="Pages tagged {{ tag }}" class="tag">{{ tag }}</a>{% unless forloop.last %}{% endunless %}{% endfor %}</p>
 		</div>
 		<hr>
 
