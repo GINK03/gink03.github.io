@@ -5,7 +5,7 @@ description:        "コンピュータ、生活、統計と私に関するま�
 reading_time:       true
 words_per_minute:   200
 logo:               'assets/img/mikanchan_2020_07.jpg'
-background:         'assets/img/yukari.png'
+background:         'assets/img/wp5384373.jpg'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             ja_JP
 url:                https://gink03.github.io
@@ -27,31 +27,6 @@ sass:
 
 # Comments
 disqus_shortname:   nardtree
-
-#email:
-#twitter:            nardtree
-#facebook:           username
-#github-url:         GINK03
-#stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
-#linkedin:          username
-#xing:              username
-#instagram:          username
-#lastfm:            username
-#tumblr:             nardtree-catindog
-#medium:            '@username'
-#pinterest:         username
-#foursquare:        username
-#steam:              username
-#dribbble:          username
-youtube:            gimpei03
-#youtube-channel:   channel
-soundcloud:         sgemuj01eczp
-#weibo:             username
-#flickr:            username
-#codepen:           username
-#keybase:           username
-#xmpp:              username@server.com
-#hackernews:        username
 
 # Gems
 gems:
