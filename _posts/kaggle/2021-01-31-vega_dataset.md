@@ -3,7 +3,7 @@ layout: post
 title: "vega_dataset"
 date: 2021-01-31
 excerpt: "vegaと呼ばれるopen datasetについて"
-featuer: true
+kaggle: true
 hide_from_post: true
 tag: ["vega", "dataset", "python"]
 comments: false

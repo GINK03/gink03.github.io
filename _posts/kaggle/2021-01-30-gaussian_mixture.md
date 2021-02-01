@@ -3,7 +3,7 @@ layout: post
 title: "gausian mixture"
 date: 2021-01-30
 excerpt: "gaussian mixtureモデルの特性とその使い方"
-featuer: true
+kaggle: true
 hide_from_post: true
 tag: ["feature", "gaussian mixture", "python"]
 comments: false

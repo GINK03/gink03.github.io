@@ -3,7 +3,7 @@ layout: post
 title: "feature combining"
 date: 2021-01-30
 excerpt: "feature combiningとその方法"
-featuer: true
+kaggle: true
 hide_from_post: true
 tag: ["feature", "feature combining", "python"]
 comments: false

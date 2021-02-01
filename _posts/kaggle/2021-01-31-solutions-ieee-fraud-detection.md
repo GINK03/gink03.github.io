@@ -3,7 +3,7 @@ layout: post
 title: "ieee-fraud-detection"
 date: 2021-01-31
 excerpt: "ieee-fraud-detectionのsolution"
-featuer: true
+kaggle: true
 hide_from_post: true
 tag: ["ieee-fraud-detection", "kaggle", "solution", "python"]
 comments: false
