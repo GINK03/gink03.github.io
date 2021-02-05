@@ -102,8 +102,8 @@ $ GET http://localhost:9200/experiment/_doc/n7kMZ3cBe-XfFcbgxeJ6 | jq
 ```python
 headers = {'Content-Type': 'application/json'}
 data = {
-    "username": "unchi",
-    "tweet": 'uchin'
+    "username": "foo",
+    "tweet": "bar" 
 }
 url = 'http://localhost:9200/experiment/_doc/n7kMZ3cBe-XfFcbgxeJ6'
 response = requests.put(url, data=json.dumps(data), headers=headers)

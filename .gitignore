@@ -1,0 +1,4 @@
+# jekyll temp files
+.sass-cache/
+Gemfile.lock
+_site/
