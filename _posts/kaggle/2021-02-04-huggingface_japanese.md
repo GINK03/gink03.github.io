@@ -25,9 +25,16 @@ comments: false
 ```python
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from transformers import pipeline
+import torch
 
 tokenizer = AutoTokenizer.from_pretrained('daigo/bert-base-japanese-sentiment', use_fast=False)
-classifier = pipeline('sentiment-analysis', model="daigo/bert-base-japanese-sentiment", tokenizer=tokenizer)
+
+# cudaが利用できれば利用する
+if torch.cuda.is_available():
+  classifier = pipeline('sentiment-analysis', model="daigo/bert-base-japanese-sentiment", tokenizer=tokenizer, device=0)
+else:
+  classifier = pipeline('sentiment-analysis', model="daigo/bert-base-japanese-sentiment", tokenizer=tokenizer)
+  
 
 classifier("うほほーい、大好き♡")
 >>> [{'label': 'ポジティブ', 'score': 0.9749482870101929}]
