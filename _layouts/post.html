@@ -16,8 +16,9 @@ layout: compress
 	<div class="wrapper">
 	  <div class="content">
 		<div class="post-title {% if page.feature %} feature {% endif %}" style="margin: 0px;">
-		  <h1>{{ page.title }}</h1>
-		  <p style="margin: 0px;">date: {{ page.date | date: "%F" }} excerpt: {{ page.excerpt }} tag: {% for tag in page.tags %}<a style="margin: 2px;" href="{{ site.url }}/tags/#{{ tag }}" title="Pages tagged {{ tag }}" class="tag">{{ tag }}</a>{% unless forloop.last %}{% endunless %}{% endfor %} <a href="/">back to home</a></p>
+		  <h1 style="margin: 0px;">{{ page.title }}</h1>
+		  <p style="margin: 0px;">date: {{ page.date | date: "%F" }} excerpt: {{ page.excerpt }}</p>
+		  <p style="margin: 0px;">tag: {% for tag in page.tags %}<a style="margin: 2px;" href="{{ site.url }}/tags/#{{ tag }}" title="Pages tagged {{ tag }}" class="tag">{{ tag }}</a>{% unless forloop.last %}{% endunless %}{% endfor %}</p>
 		</div>
 		<hr>
 
