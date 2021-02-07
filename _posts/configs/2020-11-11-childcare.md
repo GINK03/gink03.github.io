@@ -1,16 +1,19 @@
 ---
 layout: post
-title:  "childcare"
-date:   2020-11-11
-excerpt: "childcare"
+title: "childcare"
+date: 2020-11-11
+excerpt: "子供の面倒とtips"
 project: false
 config: true
 tag: ["childcare"]
 comments: false
 ---
 
+# 子供の面倒とtip
 
-# childcare
+## 保育料に関して
+ - シミュレータにて計算できる
+   - [link](https://23kids.tokyo/calc.html)
 
 ## 赤ちゃんの肥満
  - 身長に対する体重の98%パーセンタイルを越えないようにする
