@@ -2,12 +2,12 @@
 layout: post
 title: "metacritic"
 date: 2021-01-10
-excerpt: ""
-tags: ["metacritic"]
+excerpt: "metacriticの妥当性の検討を行った論文のサーベイ"
+tags: ["metacritic", "サーベイランス", "statistics"]
 comments: false
 ---
 
-# metacriticとは
+# metacriticの妥当性の検討を行った論文のサーベイ
 
 ## メタスコア
  - `metacritic`が得時にレビュワーごとに割り当てた重みによる加重平均によって決定される[1]
@@ -47,7 +47,7 @@ comments: false
  - `統計的結論妥当性`
 
 ### 定性的妥当性
- - いくつかの血管が発見され、レビューの定量化のプロセスで有効性と正確性に対する脅威がある
+ - いくつかの欠陥が発見され、レビューの定量化のプロセスで有効性と正確性に対する脅威がある
 
 ## 参考
  - [1] [ja.wikipedia.org/wiki/Metacritic](https://ja.wikipedia.org/wiki/Metacritic)
