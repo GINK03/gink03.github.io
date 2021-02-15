@@ -5,7 +5,7 @@ date: 2021-02-11
 excerpt: "カーネル密度推定の概要"
 kaggle: true
 hide_from_post: true
-tag: ["kernel density estimation", "estimation"]
+tag: ["kernel density estimation", "statistics", "ノンパラメトリック"]
 comments: false
 ---
 
