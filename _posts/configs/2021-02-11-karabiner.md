@@ -45,4 +45,6 @@ macosxのシステムのキーボードの動きに対してフックを掛け�
    - `finder`を立ち上げ
 
 ## apple script(osascript)について
-MacOSXの挙動を制御しているのは`apple script`なので特定のアプリになにかメッセージを与えるときには、`apple script`を実行する`shell script`を記述すれば良iい
+MacOSXの挙動を制御しているのは`apple script`なので特定のアプリになにかメッセージを与えるときには、`apple script`を実行する`shell script`を記述すれば良い  
+
+作成した`apple script`は[gist](https://gist.github.com/GINK03/7d646e1da20af7e51b30759f1b46d441)でホストしている
