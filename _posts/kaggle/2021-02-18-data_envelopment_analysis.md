@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "包絡分析法(DEA)"
-date: 2021-02-11
+date: 2021-02-18
 excerpt: "包絡分析法(DEA, data envelopment analysis)"
 kaggle: true
 hide_from_post: true

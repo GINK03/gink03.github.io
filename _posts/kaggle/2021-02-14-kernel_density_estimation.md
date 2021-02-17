@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "kernel density estimation"
-date: 2021-02-11
+date: 2021-02-14
 excerpt: "カーネル密度推定の概要"
 kaggle: true
 hide_from_post: true
