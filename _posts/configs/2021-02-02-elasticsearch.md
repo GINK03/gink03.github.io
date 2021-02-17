@@ -15,7 +15,7 @@ comments: false
  - インストールバイナリをダウンロードしてインストールする
    - [link](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)
 
-*ubuntuの場合*
+*ubuntuの場合(バージョンは適宜変更)*
 ```console
 # elasticsearchをインストールする
 $ wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.10.2-amd64.deb
@@ -52,6 +52,7 @@ server.host: "0.0.0.0"
 ## elasticsearchの日本語解析の登録について
  - 参考
    - [link](https://www.elastic.co/guide/en/elasticsearch/plugins/current/analysis-kuromoji.html)
+
 ```console
 # /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-kuromoji
 # /usr/share/elasticsearch/bin/elasticsearch-plugin install analysis-icu
@@ -76,10 +77,27 @@ server.host: "0.0.0.0"
 ## REST構造について
 
 ```
-http://localhost:9200/experiment/_doc/n7kMZ3cBe-XfFcbgxeJ6
-					  ↑ index    ↑ type ↑ id
+/experiment/_doc/n7kMZ3cBe-XfFcbgxeJ6
+ ↑ index    ↑ type ↑ id
 ```
 
+*e.g. index=experimentに新しいレコードを追加する*
+```console
+data = {'tweet': r.tweet, "username": r.username }
+response = requests.post(url, data=json.dumps(data), headers=headers)
+response.text
+
+>>> {'_index': 'experiment',
+ '_type': '_doc',
+ '_id': 'HbqKqncBe-XfFcbgs1qd',
+ '_version': 1,
+ 'result': 'created',
+ '_shards': {'total': 2, 'successful': 1, 'failed': 0},
+ '_seq_no': 1628302,
+ '_primary_term': 1}
+```
+
+*e.g. あるid=n7kMZ3cBe-XfFcbgxeJ6の要素を取り出す*
 ```console
 $ GET http://localhost:9200/experiment/_doc/n7kMZ3cBe-XfFcbgxeJ6 | jq
 {
@@ -97,7 +115,7 @@ $ GET http://localhost:9200/experiment/_doc/n7kMZ3cBe-XfFcbgxeJ6 | jq
 }
 ```
 
-*更新*
+*e.g. あるid=n7kMZ3cBe-XfFcbgxeJ6の要素を更新*
 
 ```python
 headers = {'Content-Type': 'application/json'}
@@ -120,6 +138,33 @@ search_hits
    '_primary_term': 1}
 ```
 
+*e.g. あるindex=experimentで統計情報を表示*
+
+```console
+$ GET http://localhost:9200/experiment/_stats | jq
+...
+```
+
+## bulkで新規作成または更新
+bulk apiだけが少々変わった構造になっている
+ - headerが`{'Content-Type': 'application/x-ndjson'}`を期待する
+ - `index`の指定データ + `doc`のデータの交互で構築される
+ - 改行で終わる
+
+```python
+bulk = ""
+for i in tqdm_notebook(range(len(df[:30000]))):
+    r = df.iloc[i]
+    index = json.dumps({"index": {"_id": i}})
+    data = {'tweet': r.tweet, "username": r.username }
+    bulk += index + '\n' + json.dumps(data, ensure_ascii=True) + '\n'
+    
+url = 'http://localhost:9200/experiment/_bulk'
+
+response = requests.post(url, data=bulk, headers={'Content-Type': 'application/x-ndjson'})
+response.text
+```
+
 ## 件数を指定して取得
 
 ```python
@@ -137,3 +182,45 @@ search_hits = json.loads(response.text)['hits']['hits']
 for idx, hit in enumerate(search_hits):
     print(idx + 1, hit)
 ```
+
+## elastic searchでの自然言語の検索について
+
+*BM25というアルゴリズム*  
+アルゴリズムが複数存在し、[`BM25`](https://www.elastic.co/jp/blog/practical-bm25-part-2-the-bm25-algorithm-and-its-variables)がelastic searchのイチオシのようである。tf-idfのidfを長さ要素を考慮したもののように見える  
+
+事前に`index`にどのトークナイザを使用するか、どのアルゴリズムでマッチさせるかを指定しておく必要がある  
+
+こちらの[リンク](https://www.elastic.co/jp/blog/how-to-implement-japanese-full-text-search-in-elasticsearch)を精読しないとなかなか習熟することができない   
+
+*形態素結果等を確認する*  
+
+```python
+url = 'http://localhost:9200/experiment/_analyze'
+
+data = {'text': "大好き。プリキュア5大好き。", "tokenizer": "kuromoji_tokenizer" }
+response = requests.post(url, data=json.dumps(data), headers=headers)
+    
+json.loads(response.text)
+
+>>> {'tokens': [{'token': '大好き',
+   'start_offset': 0,
+   'end_offset': 3,
+   'type': 'word',
+   'position': 0},
+  {'token': 'プリキュア',
+   'start_offset': 4,
+   'end_offset': 9,
+   'type': 'word',
+   'position': 1},
+  {'token': '5',
+   'start_offset': 9,
+   'end_offset': 10,
+   'type': 'word',
+   'position': 2},
+  {'token': '大好き',
+   'start_offset': 10,
+   'end_offset': 13,
+   'type': 'word',
+   'position': 3}]}
+```
+
