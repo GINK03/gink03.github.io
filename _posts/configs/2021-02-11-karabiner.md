@@ -26,6 +26,7 @@ macosxのシステムのキーボードの動きに対してフックを掛け�
  - `~/.config/karabiner/karabiner.json`に設定ファイルが作成されるのでこれを編集して新規ショートカットの追加と編集を行う
  - `karabiner.json`の設定が読めない・間違っているなどとき、`karabiner-element`アプリのgui表示から設定が消える
  - バージョンの差があるのか、ネット上の設定をコピペしても動かないことがある
+ - `simultaneous`というキーのコンビネーションはかなり挙動がシビアであり、結構入力が難しい
 
 ## 使用している`karabiner.json`
 
@@ -43,6 +44,10 @@ macosxのシステムのキーボードの動きに対してフックを掛け�
    - `google chrome`を新規ウィンドウで立ち上げ
  - `ctrl+alt+f`
    - `finder`を立ち上げ
+ - `s+1(900ms以内)`
+   - AirPodsに音声を切り替え
+ - `s+2(900ms以内)`
+   - Displayに音声切り替え
 
 ## apple script(osascript)について
 MacOSXの挙動を制御しているのは`apple script`なので特定のアプリになにかメッセージを与えるときには、`apple script`を実行する`shell script`を記述すれば良い  
