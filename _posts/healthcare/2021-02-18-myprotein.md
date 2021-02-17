@@ -36,6 +36,7 @@ comments: false
  - ホールフューエルブレンド(whole fuel blend)
    - ソイレントのような完全栄養食
    - HUELよりだいぶ安いがHUELよりやはり美味しくはない
+     - オーツの粉末の粉の味が強く、この点がHUELよりかなり劣る点に感じる
    - ヴィーガン向けでもあるらしく、動物性タンパク質がないとのこと
    - [WFBとHUELの比較の記事](https://checkmeowt.co.uk/whole-fuel-vs-huel-review/#:~:text=Huel%20has%20higher%20levels%20of,%2C%20chloride%2C%20calcium%20and%20chromium.)が存在し、役割が似ている
 	  - HUELのほうが高級志向である　
