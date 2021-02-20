@@ -5,7 +5,7 @@ date: 2021-02-20
 excerpt: "ベルマン方程式について"
 computer_science: true
 hide_from_post: true
-tag: ["subprocess"]
+tag: ["bellman quation", "ベルマン方程式", "アルゴリズム"]
 comments: false
 ---
 
