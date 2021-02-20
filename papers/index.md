@@ -1,12 +1,14 @@
 ---
 layout: page
 title: Papers
-tags: [paper, truth]
-date: 2018-02-25
+tags: ["papers", "読んだ論文リンク集"]
+date: 2020-02-20
 comments: false
 ---
 
-## Papers
+## papers/読んだ論文リンク集
+- [Playing Atari with Deep Reinforcement Learning](https://arxiv.org/pdf/1312.5602.pdf)
+
 - [A Self-Attentive model for Knowledge Tracing](https://arxiv.org/abs/1907.06837)
 
 - [USING BIG DATA TO ESTIMATE CONSUMER SURPLUS: THE CASE OF UBER](https://www.nber.org/papers/w22627.pdf)
@@ -30,7 +32,7 @@ comments: false
 - [Machine Learning: The High-Interest Credit Card of Technical Debt](https://storage.googleapis.com/pub-tools-public-publication-data/pdf/43146.pdf)
 
 - [信用リスクモデルの評価方法に関する考察と比較](https://www.fsa.go.jp/frtc/seika/discussion/2003/20031031.pdf)
-CAP/ARの評価方法についてなど述べられている。
+	CAP/ARの評価方法についてなど述べられている。
 
 - [Deep Neural Networks as Gaussian Processes](https://arxiv.org/abs/1711.00165)
 
