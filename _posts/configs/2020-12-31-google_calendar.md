@@ -2,14 +2,24 @@
 layout: post
 title:  "google calendar"
 date:   2020-12-31
-excerpt: "google calendar"
+excerpt: "google calendarについて"
 project: false
 config: true
 tag: ["google calendar", "cloud", "software"]
 comments: false
 ---
 
-# google calendar
+# google calendarについて
+
+
+## 共有設定
+意図しない共有設定をしばらく有効にしていたことがあり、プライバシーを侵害されることになってしまったので気をつける  
+
+**共有の設定**   
+ 1. `google calendar`のwebを開く
+ 2. 左の`マイカレンダー`の`🍔`を開く
+ 3. `設定と共有`を選択
+ 4. `特定のユーザーとの共有`に適宜追加と削除を行う
 
 ## python api
  
