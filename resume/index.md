@@ -62,45 +62,33 @@ Introductory in Japanese and in English are mixed.
 
 ## Qualifications/Certifications
 
-*Qualifications(資格)*
+***Qualifications(資格)***
  - [統計調査士](https://user-images.githubusercontent.com/4949982/103746695-d5ce5700-5044-11eb-95ae-a715b790a189.png)
-
  - [統計検定2級](https://user-images.githubusercontent.com/4949982/102600946-d4ef8700-4162-11eb-8607-c3f31d475afc.png)
-
  - [Pythonエンジニア認定/データ分析試験](https://user-images.githubusercontent.com/4949982/102969927-edccb380-4539-11eb-80c4-ae1f92a84267.png)
-
  - [Pythonエンジニア認定/基礎試験](https://user-images.githubusercontent.com/4949982/102303112-d1f76980-3f9d-11eb-923b-cb90165f8ef7.png)
  
-*Certifications*
- - [Introduction to Data Science in Python](https://www.coursera.org/account/accomplishments/certificate/5L7UVY6P68ZL)
-
- - [Social Psychology](https://www.coursera.org/account/accomplishments/certificate/NBRK6KZM4QNJ)
-
- - [Positive Psychology: Martin E. P. Seligman’s Visionary Science](https://www.coursera.org/account/accomplishments/certificate/975WQ2R6BS9C)
-
- - [Introduction to Git and GitHub](https://www.coursera.org/account/accomplishments/certificate/43JVYW2S75YN)
-
- - [Essential Cloud Infrastructure: Foundation 日本語版](https://www.coursera.org/account/accomplishments/certificate/LZA3SA2GW8R3)
-
- - [Essential Google Cloud Infrastructure: Foundation](https://www.coursera.org/account/accomplishments/certificate/Z4VFLDYTDLNY)
-
- - [Google Cloud Platform Fundamentals: Core Infrastructure](https://www.coursera.org/account/accomplishments/certificate/3VGQF9GM624K)
- 
- - [Introduction to Psychology](https://www.coursera.org/account/accomplishments/certificate/QLKZP9AREDFE)
- 
- - [Capstone: Retrieving, Processing, and Visualizing Data with Python](https://www.coursera.org/account/accomplishments/certificate/YPBT5C8TZMNZ)
- 
- - [Using Databases with Python](https://www.coursera.org/account/accomplishments/certificate/3YWJ2ATLSY4J)
-
- - [Tools for Data Science](https://www.coursera.org/account/accomplishments/certificate/7Z9QFPPHYTE8)
-
- - [Stanford Introduction to Food and Health](https://www.coursera.org/account/accomplishments/certificate/YGD3LXDMYEB6)
-
- - [IBM: What is Data Science?](https://www.coursera.org/account/accomplishments/certificate/KRRWG539W8QD)
-
- - [Programming for Everybody (Getting Started with Python)](https://www.coursera.org/account/accomplishments/certificate/CUNWREBBDWUC)
-
- - [Python Data Structures](https://www.coursera.org/account/accomplishments/certificate/LGD6VPFJPTKL)
-
- - [Using Python to Access Web Data](https://www.coursera.org/account/accomplishments/certificate/A86M4RX52NNH)
+***Certifications***
+ - **データサイエンス関連**
+   - [Introduction to Data Science in Python](https://www.coursera.org/account/accomplishments/certificate/5L7UVY6P68ZL)
+   - [Capstone: Retrieving, Processing, and Visualizing Data with Python](https://www.coursera.org/account/accomplishments/certificate/YPBT5C8TZMNZ)
+   - [Tools for Data Science](https://www.coursera.org/account/accomplishments/certificate/7Z9QFPPHYTE8)
+   - [IBM: What is Data Science?](https://www.coursera.org/account/accomplishments/certificate/KRRWG539W8QD)
+   - [Programming for Everybody (Getting Started with Python)](https://www.coursera.org/account/accomplishments/certificate/CUNWREBBDWUC)
+ - **コンピュータサイエンス関連**
+   - [Introduction to Git and GitHub](https://www.coursera.org/account/accomplishments/certificate/43JVYW2S75YN)
+   - [Using Databases with Python](https://www.coursera.org/account/accomplishments/certificate/3YWJ2ATLSY4J)
+   - [Python Data Structures](https://www.coursera.org/account/accomplishments/certificate/LGD6VPFJPTKL)
+   - [Using Python to Access Web Data](https://www.coursera.org/account/accomplishments/certificate/A86M4RX52NNH)
+ - **社会科科学**
+   - [Social Psychology](https://www.coursera.org/account/accomplishments/certificate/NBRK6KZM4QNJ)
+   - [Positive Psychology: Martin E. P. Seligman’s Visionary Science](https://www.coursera.org/account/accomplishments/certificate/975WQ2R6BS9C)
+   - [Introduction to Psychology](https://www.coursera.org/account/accomplishments/certificate/QLKZP9AREDFE)
+  - [Stanford Introduction to Food and Health](https://www.coursera.org/account/accomplishments/certificate/YGD3LXDMYEB6)
+ - **Google Cloud Platform関連**
+   - [Essential Cloud Infrastructure: Foundation 日本語版](https://www.coursera.org/account/accomplishments/certificate/LZA3SA2GW8R3)
+   - [Essential Cloud Infrastructure: Core Services 日本語版](https://www.coursera.org/account/accomplishments/certificate/PG36BFDPGP5X)
+   - [Essential Google Cloud Infrastructure: Foundation](https://www.coursera.org/account/accomplishments/certificate/Z4VFLDYTDLNY)
+   - [Google Cloud Platform Fundamentals: Core Infrastructure](https://www.coursera.org/account/accomplishments/certificate/3VGQF9GM624K)
+ 	
 
