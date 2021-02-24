@@ -87,8 +87,9 @@ Introductory in Japanese and in English are mixed.
    - [Stanford Introduction to Food and Health](https://www.coursera.org/account/accomplishments/certificate/YGD3LXDMYEB6)
  - **Google Cloud Platform関連**
    - [Essential Cloud Infrastructure: Foundation 日本語版](https://www.coursera.org/account/accomplishments/certificate/LZA3SA2GW8R3)
-   - [Essential Cloud Infrastructure: Core Services 日本語版](https://www.coursera.org/account/accomplishments/certificate/PG36BFDPGP5X)
    - [Essential Google Cloud Infrastructure: Foundation](https://www.coursera.org/account/accomplishments/certificate/Z4VFLDYTDLNY)
+   - [Essential Cloud Infrastructure: Core Services 日本語版](https://www.coursera.org/account/accomplishments/certificate/PG36BFDPGP5X)
+   - [Elastic Cloud Infrastructure: Scaling and Automation 日本語版](https://www.coursera.org/account/accomplishments/certificate/Z5MQDZU4G4WA)
    - [Google Cloud Platform Fundamentals: Core Infrastructure](https://www.coursera.org/account/accomplishments/certificate/3VGQF9GM624K)
  	
 
