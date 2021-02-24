@@ -68,7 +68,7 @@ Introductory in Japanese and in English are mixed.
  - [Pythonエンジニア認定/データ分析試験](https://user-images.githubusercontent.com/4949982/102969927-edccb380-4539-11eb-80c4-ae1f92a84267.png)
  - [Pythonエンジニア認定/基礎試験](https://user-images.githubusercontent.com/4949982/102303112-d1f76980-3f9d-11eb-923b-cb90165f8ef7.png)
  
-***Certifications***
+***Certifications(認定)***
  - **データサイエンス関連**
    - [Introduction to Data Science in Python](https://www.coursera.org/account/accomplishments/certificate/5L7UVY6P68ZL)
    - [Capstone: Retrieving, Processing, and Visualizing Data with Python](https://www.coursera.org/account/accomplishments/certificate/YPBT5C8TZMNZ)
@@ -84,7 +84,7 @@ Introductory in Japanese and in English are mixed.
    - [Social Psychology](https://www.coursera.org/account/accomplishments/certificate/NBRK6KZM4QNJ)
    - [Positive Psychology: Martin E. P. Seligman’s Visionary Science](https://www.coursera.org/account/accomplishments/certificate/975WQ2R6BS9C)
    - [Introduction to Psychology](https://www.coursera.org/account/accomplishments/certificate/QLKZP9AREDFE)
-  - [Stanford Introduction to Food and Health](https://www.coursera.org/account/accomplishments/certificate/YGD3LXDMYEB6)
+   - [Stanford Introduction to Food and Health](https://www.coursera.org/account/accomplishments/certificate/YGD3LXDMYEB6)
  - **Google Cloud Platform関連**
    - [Essential Cloud Infrastructure: Foundation 日本語版](https://www.coursera.org/account/accomplishments/certificate/LZA3SA2GW8R3)
    - [Essential Cloud Infrastructure: Core Services 日本語版](https://www.coursera.org/account/accomplishments/certificate/PG36BFDPGP5X)
