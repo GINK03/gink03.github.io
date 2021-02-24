@@ -20,6 +20,12 @@ macosxのシステムのキーボードの動きに対してフックを掛け�
    - 本当に有効になっているかの確認
      - 適当なキーを別なキーに変換して変換できているか確認する
 
+## Simple modifications
+単にキーを置き換える
+ - e.g. 
+   - `caps lock` -> `left_control`
+   - `caps lock`の置き換えはシステム設定からも行えるが、Complex modificationsを利用する際は置き換えたキーとして認識されないので、Simple modificationsも設定する必要がある
+
 ## Complex modifications
 任意のキーボードショートカットを与える
 
