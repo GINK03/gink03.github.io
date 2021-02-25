@@ -22,8 +22,18 @@ comments: false
  - `50%`, `90%`, `100%`でアターとが来るようにするのがプラクティス
 
 **cloud sdk**  
+ 
  - 設定の確認
    - `gcloud config configurations list`
+ - 有効になっているアカウントの確認
+   - `gcloud auth list`
+   - 有効になっていない場合、これで認証できる　
+ - 有効になっているプロジェクトの確認
+   - `gcloud config list project`
+ - ゾーンの設定をする
+ 　- `gcloud config set compute/zone us-central1-a`
+ - リージョンの設定をする
+   - `gcloud config set compute/region us-central1`
  - 設定の有効化
    - `gcloud config configurations activate`
  - サービスアカウントでSDKを有効化する
@@ -36,6 +46,8 @@ comments: false
    - `組織` > `フォルダー` > `プロジェクト` > `リソース`
  - 最小限のリスクになるようにする
  - サービスアカウントで許可した機能は、一定の時間差があって反映される
+ - 本番と開発を分ける方法
+   - プロジェクトを分けるのが最もかんたん
 
 **deployment manager**  
  - **実際にさわってみる**
@@ -44,6 +56,7 @@ comments: false
  - teraformのようなもの
    - teraformよりわかりやすい
  - yml形式で記述する(拡張機能でjinja形式をimportできる)
+   - docker imageとスケールサイズと最大数等を指定する　
  - dry-runについて
    - `gcloud deployment-manager deployments update ${PRJ} --config ${CONFING_YAML}.yml --preview`
    - `preview`オプションになる
@@ -61,7 +74,7 @@ comments: false
  - 実際に実行
    - `terraform apply`
 
-**cloud strage**  
+**cloud storage**  
  - コスト順
    - `Standard` > `Nearline` > `Coldline` > `Archive`
  - パスワードの設定
@@ -77,6 +90,7 @@ comments: false
    - `gsutil defacl set public-read gs://~~`
  - セキュリティの関係
    - アクセスログがあるらしい
+   - デフォルトで暗号化は適応される
  - **alc**
    - `acl`の確認
      - `gsutil alc get gs://$BUCKET_NAME_1/$FILENAME`
@@ -102,8 +116,9 @@ comments: false
  - ACIDトランザクションをサポート
  - スキーマレスデータベース
  
-**memorystore**
+**cloud memorystrage**
  - redis, memcached的なもの
+ - ユースケースとして高速にアクセスしたい場合
 
 **dataproc**  
  - apache sparkのようなもの
@@ -118,8 +133,13 @@ comments: false
    - `cloud audit log`の`システムイベントログ`に情報が記される
  - スタートアップスクリプト
    - `gcloud compute instances create my-instance --metadata-from-file startup-script=${SCRIPT_PATH}`
+   - 起動時にインストールしておきたいスクリプトを入れる等
  - カスタムインスタンスの作成
    - `gcloud compute instances create my-instance --custom-cpu 4 --custom-memory 8`とか
+ - インスタンスグループの作成
+   - `gcloud compute target-pools create ${NAME}`
+ - インスタンステンプレートを使ったグループの作成
+   - `gcloud compute instance-groups managed create nginx-group --base-instance-name nginx --size 2 --template nginx-template --target-pool nginx-pool`
  - イメージ名の検索
    - `gcloud compute images list --filter=name:${QUERY}`
  - 証跡・フォレンジック
@@ -145,6 +165,7 @@ comments: false
 
 **cloud interconnect**  
  - オンプレとVPCをつなぐもの
+   - 大容量、専用契約が必要で、それに満たない場合cloud router + cloud vpnで代替できる
  - 速度と設備投資ごとに`Dedicated interconnect` > `Partner interconnect` > `cloud vpn`
  - ISPを経由して接続する`キャリアピアリング`というものもある
 
@@ -169,7 +190,9 @@ comments: false
  - 特性
    - マルチリージョンサポートのデータベース
    - リージョンをまたいで低レイテンシでアクセスできる
+     - この特徴があるので世界中に顧客がいる場合にユースケースが適合する
    - リレーショナル・データベース
+   - `99.999%`以上の極めて高い可用性がある
 
 **cloud bigtable**  
  - 特性
@@ -193,12 +216,36 @@ comments: false
 	 - `gcloud app deploy app.yaml`
    - アクセス用のURLを得る
      - `gcloud app browse`
+	 - web UIでも確認することができる
+ - どんな構成でデプロイ可能なのか
+   - dockerのプロジェクトのような構造で`app.yaml`があること
+   - [サンプルとなるサイト](https://github.com/GoogleCloudPlatform/training-data-analyst/tree/master/courses/design-process/deploying-apps-to-gcp)
+   - コンテナは利用できない
+ - versioning
+   - バージョンごとに異なるURLが与えられ、`versions`の機能から`split traffic`の機能でバージョンごとのトラフィックの分割、マイグレーションがコントロール可能
+   - カナリアテスト
+	 - 配信を限定して事故を防ぐ
+   - ローリングアップデート
+	 - ダウンタイムゼロでアップデートする
+ - profiling
+   - pythonで実行する際、`import googlecloudprofiler`して埋め込むことでprofilerを利用できる
+ - monitoring
+   - profilingされた内容の確認
 
 **loadbalancer**  
  - **具体的な利用法**
    - `cloud nat`を作成する
    - ゾーン、リージョンでまたいでも良いインスタンスグループを用意する
    - loadbalancerをセットアップする
+ - **cli**
+   - ネットワークロードバランサ
+	 - `gcloud compute forwarding-rules create ${LB_NAME} --region us-central1 --ports=80 --target-pool ${TARGET_POOL}`
+   - HTTPロードバランサ
+     - `gcloud compute http-health-checks create http-basic-check`
+	 - `gcloud compute backend-services create nginx-backend --protocol HTTP --http-health-checks http-basic-check --global`
+	 - `gcloud compute backend-services add-backend nginx-backend --instance-group nginx-group --instance-group-zone us-central1-a --global`
+	 - `gcloud compute url-maps create web-map --default-service nginx-backend`
+	 - `gcloud compute target-http-proxies create http-lb-proxy --url-map web-map`
  - ipv6も利用できる
  - HTTP(S), SSLプロキシ、TCPプロキシ、ネットワーク、内部負荷の分散が利用できる
 
@@ -206,6 +253,24 @@ comments: false
  - `FIPS 130-2 level 3`のハードウェア・セキュリティ・モジュールのこと
 
 **kubernetes engine**  
+ - 導入
+   - 種類
+     - オートパイロットとそうでないものがあるがオートパイロットが便利
+   - `app engine`と`docker`のプロジェクトをテンプレートとして使って作成可能
+   - `app engine`は`app.yaml`が必要であるが、`kubernetes engine`は`kubernetes-config.yaml`で設定する
+   - 設定完了したら`kubectl apply -f kubernetes-config.yaml`で適応できる
+   - podの確認
+	 - `kubectl get pods`
+	 - デプロイ状況の確認(120秒以上かかる)
+   - serviceの確認
+     - `kubectl get services`
+	 - コンテナの確認
+	 - IPの確認
+ - 監視
+   - livenessプローブ
+	 - ちゃんと起動しているか
+   - readinessプローブ
+	 - コンテナがトラフィックを受け付けているか
  - 最初にkubectlを使えるようにする
    - `gcloud container clusters get-credentials ${CLUSTER_NAME}`でkubeconfigエントリを作成する
  - ロギング
@@ -223,6 +288,12 @@ comments: false
    - `kubectl expose deployment ${MY_DEPLOY} --type LoadBalancer --port 80 --target-port 8080`
  - サードパーティのツールを入れたい
    - `DaemonSet`にpodを配置する
+
+
+**cloud run**  
+ - 概要
+   - 薄いdockerを走らせるためのサービス
+   - kubernetesより設定が少なくかんたん
 
 **stack driver**  
  - **モニタリング**
@@ -247,4 +318,28 @@ comments: false
    - `Cloud SQL`
    - `Cloud Database`
 
-	  
+**service levelの設計**  
+ - who, what, why, when, howに基づいて設計する
+ - ペルソナを用いる
+ - 各項目
+   - sla: service level agreement
+     - サービスの最低とするライン　
+   - slo: service level objective
+	 - サービスの定量的な目標値
+ - smart
+   - specific, measurable, achievable, related, time-bound
+   - UX等は含まれない
+
+**apiの設計**  
+ - restful
+   - json, xml, htmlなどを返して良い
+ - 無効なリクエストに対するハンドル
+   - 400番台のエラーコード
+ - the twelve-factor appに基づいて設計すると良い
+   - [参考](https://qiita.com/supreme0110/items/17c58c660137e23ef713)
+
+**cloud build**  
+ - レポジトリ内のbuild triggerを有効にして利用できる　
+ - レポジトリにあるdockerコンテナをビルドするもの
+ - masterブランチが更新されると自動的にhookされてビルドされる 
+ - ビルドされたイメージはcloud computeにデプロイできる
