@@ -80,7 +80,7 @@ Introductory in Japanese and in English are mixed.
    - [Using Databases with Python](https://www.coursera.org/account/accomplishments/certificate/3YWJ2ATLSY4J)
    - [Python Data Structures](https://www.coursera.org/account/accomplishments/certificate/LGD6VPFJPTKL)
    - [Using Python to Access Web Data](https://www.coursera.org/account/accomplishments/certificate/A86M4RX52NNH)
- - **社会科科学**
+ - **社会科学**
    - [Social Psychology](https://www.coursera.org/account/accomplishments/certificate/NBRK6KZM4QNJ)
    - [Positive Psychology: Martin E. P. Seligman’s Visionary Science](https://www.coursera.org/account/accomplishments/certificate/975WQ2R6BS9C)
    - [Introduction to Psychology](https://www.coursera.org/account/accomplishments/certificate/QLKZP9AREDFE)
@@ -90,6 +90,7 @@ Introductory in Japanese and in English are mixed.
    - [Essential Google Cloud Infrastructure: Foundation](https://www.coursera.org/account/accomplishments/certificate/Z4VFLDYTDLNY)
    - [Essential Cloud Infrastructure: Core Services 日本語版](https://www.coursera.org/account/accomplishments/certificate/PG36BFDPGP5X)
    - [Elastic Cloud Infrastructure: Scaling and Automation 日本語版](https://www.coursera.org/account/accomplishments/certificate/Z5MQDZU4G4WA)
+   - [Reliable Cloud Infrastructure: Design and Process 日本語版](https://www.coursera.org/account/accomplishments/certificate/Q8GBX9TY3Q8K)
    - [Google Cloud Platform Fundamentals: Core Infrastructure](https://www.coursera.org/account/accomplishments/certificate/3VGQF9GM624K)
  	
 
