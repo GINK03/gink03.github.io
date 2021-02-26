@@ -22,7 +22,6 @@ comments: false
  - `50%`, `90%`, `100%`でアターとが来るようにするのがプラクティス
 
 **cloud sdk**  
- 
  - 設定の確認
    - `gcloud config configurations list`
  - 有効になっているアカウントの確認
@@ -37,17 +36,33 @@ comments: false
  - 設定の有効化
    - `gcloud config configurations activate`
  - サービスアカウントでSDKを有効化する
-   - `gcloud auth activate-service-account my-service-account@my-project.gserviceaccount.com --key-file my-key.json --project my-project`
+   - *クレデンシャル情報でセットする*
+	 - `gcloud auth activate-service-account my-service-account@my-project.gserviceaccount.com --key-file my-key.json --project my-project`
+   - *ちゃんとセットされたか確認*
+	 - `gcloud config list`
  - 拡張機能の追加
    - `gcloud components install ${拡張機能}`
+ - 環境変数へproject_idを入れる
+   - `export PROJECT_ID=$(gcloud info --format='value(config.project)')`
 
 **cloud iam**  
  - 階層構造になっている
    - `組織` > `フォルダー` > `プロジェクト` > `リソース`
  - 最小限のリスクになるようにする
- - サービスアカウントで許可した機能は、一定の時間差があって反映される
+ - **サービスアカウント**
+   - サービスアカウントで許可した機能は、一定の時間差があって反映される
+   - 最小限のスコープで作る
+   - web uiからjsonのキーをダウンロードできる
+   - *作成*
+	 - `gcloud iam service-accounts create test-service-account2 --display-name "test-service-account2"`
+   - *ロールの指定*
+	 - `gcloud projects add-iam-policy-binding $GOOGLE_CLOUD_PROJECT --member serviceAccount:test-service-account2@${GOOGLE_CLOUD_PROJECT}.iam.gserviceaccount.com --role roles/viewer`
+   - *gcloudをサービスアカウント有効にする*
+	 - `gcloud auth activate-service-account --key-file credentials.json`
  - 本番と開発を分ける方法
    - プロジェクトを分けるのが最もかんたん
+ - 作成したgoogle groupにiamをバインディングする
+   - `gcloud projects add-iam-policy-binding`
 
 **deployment manager**  
  - **実際にさわってみる**
@@ -57,6 +72,8 @@ comments: false
    - teraformよりわかりやすい
  - yml形式で記述する(拡張機能でjinja形式をimportできる)
    - docker imageとスケールサイズと最大数等を指定する　
+ - `yaml`のデプロイについて
+   - `gcloud deployment-manager deployments create ${PRJ} --config nodejs.yaml`
  - dry-runについて
    - `gcloud deployment-manager deployments update ${PRJ} --config ${CONFING_YAML}.yml --preview`
    - `preview`オプションになる
@@ -91,6 +108,13 @@ comments: false
  - セキュリティの関係
    - アクセスログがあるらしい
    - デフォルトで暗号化は適応される
+ - **一般操作**
+   - *copy*
+	 - `gsutil cp gs://$MY_BUCKET_NAME_1/cat.jpg gs://$MY_BUCKET_NAME_2/cat.jpg`
+   - *aclの取得*
+	 - `gsutil acl get gs://$MY_BUCKET_NAME_1/cat.jpg  > acl.txt`
+   - *privateにセット*
+	 - `gsutil acl set private gs://$MY_BUCKET_NAME_1/cat.jpg`
  - **alc**
    - `acl`の確認
      - `gsutil alc get gs://$BUCKET_NAME_1/$FILENAME`
@@ -98,6 +122,8 @@ comments: false
 	 - `gsutil acl set private gs://$BUCKET_NAME_1/$FILENAME`
    - `ch`でユーザの変更
      - `gsutil acl ch -u AllUsers:R gs://$BUCKET_NAME_1/$FILENAME`
+   - `iam`で限定する
+	 - `gsutil iam ch allUsers:objectViewer gs://$MY_BUCKET_NAME_1`
  - **.boto**
    - `encryption_key`と`decription_key1~`で符号化と解読ができる
    - pythonのインラインコマンドでキーの作成ができる
@@ -266,12 +292,30 @@ comments: false
      - `kubectl get services`
 	 - コンテナの確認
 	 - IPの確認
+ - 低レイテンシにする
+   - 同じpodにコンテナを配置する
+ - `kubectl`コマンドについて
+   - `kube-apiserver`をラップしたもの
+ - namespace
+   - 開発とプロダクションを分けるときなど、namespaceできるのが良い
  - 監視
    - livenessプローブ
 	 - ちゃんと起動しているか
    - readinessプローブ
 	 - コンテナがトラフィックを受け付けているか
- - 最初にkubectlを使えるようにする
+ - クラスタを作成する
+   - `gcloud container clusters get-credentials ${CLUSTER_NAME}`
+   - web uiからクラスタを編集することができる
+ - デプロイする
+   - `kubectl create deployment hello-server --image=gcr.io/google-samples/hello-app:1.0`
+   - web uiからコンテナをデプロイすることもできる
+ - exposeする
+   - `kubectl expose deployment hello-server --type="LoadBalancer" --port 8080`
+ - クラスタを削除する
+   - `gcloud container clusters delete ${CLUSTER_NAME}`
+ - クラスタの一覧
+   - `gcloud container clusters list`
+ - 最初にkubectlコマンドを使えるようにする
    - `gcloud container clusters get-credentials ${CLUSTER_NAME}`でkubeconfigエントリを作成する
  - ロギング
    - クラスタ作成時にStackdriver Loggingをオンにする + Stackdriver Loggingのエクスポート機能を利用してBQに書き込む
@@ -339,7 +383,11 @@ comments: false
    - [参考](https://qiita.com/supreme0110/items/17c58c660137e23ef713)
 
 **cloud build**  
- - レポジトリ内のbuild triggerを有効にして利用できる　
- - レポジトリにあるdockerコンテナをビルドするもの
- - masterブランチが更新されると自動的にhookされてビルドされる 
- - ビルドされたイメージはcloud computeにデプロイできる
+ - *手動デプロイする*
+   - `yaml`を作成する
+   - `gcloud builds submit --config cloudbuild.yaml .`
+ - *レポジトリ連携*
+   - レポジトリ内のbuild triggerを有効にして利用できる　
+   - レポジトリにあるdockerコンテナをビルドするもの
+   - masterブランチが更新されると自動的にhookされてビルドされる 
+   - ビルドされたイメージはcloud computeにデプロイできる
