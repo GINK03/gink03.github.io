@@ -2,13 +2,13 @@
 layout: post
 title: "windows-terminal"
 date: 2020-06-09
-excerpt: "windows-terminal"
-tags: [windows-terminal]
+excerpt: "windows-terminalの使い方"
+tags: ["windows-terminal", "windows"]
 config: true
 comments: false
 ---
 
-# windows-terminal
+# windows-terminalの使い方
 
 windowsで使う際のわりとまともに使える.  
 
