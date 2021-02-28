@@ -141,14 +141,17 @@ comments: false
 **cloud datastore**  
  - ACIDトランザクションをサポート
  - スキーマレスデータベース
+ - NoSQL
  
 **cloud memorystrage**
  - redis, memcached的なもの
  - ユースケースとして高速にアクセスしたい場合
 
-**dataproc**  
+**cloud dataproc**  
  - apache sparkのようなもの
- - apache hadoopの代替にもなるらしい
+ - apache hadoopの代替にもなる
+ - レガシープロダクトが多い
+ - レコメンドエンジン等を作ることもできる
   
 **cloud security scanner**  
  - App Engineのセキュリティチェック
@@ -198,20 +201,38 @@ comments: false
 **transfer appliance**  
  - オフラインデータ転送サービス
 
-**big query**  
+**bigquery**  
  - bqのデフォルトプロジェクトの設定
    - `gcloud config set project ${PROJECT}`
  - 料金の見積もり
    - `bq query --dry_run`でバイト数を特定し、pricing calculatorで料金を特定する
  - csvでエクスポート
    - `bq extract ${TABLE} gs://${BUCKET}/${NAME}.csv`
+ - bucket.tableを作る
+   - `bq mk --time_partitioning_field timestamp --schema ride_id:string,point_idx:integer,latitude:float,longitude:float,timestamp:timestamp,meter_reading:float,meter_increment:float,ride_status:string,passenger_count:integer -t ${BUCKET}.${TABLE}`
+   - この例では`timestamp`を`time_partitioning_field`としている
+ - `webui`からできること
+   - csvのアップロード&取り込み
+   - schemaは手動で定義することもできる
+	 - `name:string,gender:string,count:integer`
   
 **cloud sql**  
  - **インスタンスの作成**
    - vmを作成する手順と一緒
  - **cloud sql proxy**
    - オンプレとcloud sqlをつなぐ機能
-
+ - *操作*
+   - *作成* 
+	 - `gcloud sql instances create ${CLOUD_SQL_NAME} --tier=db-n1-standard-1 --activation-policy=ALWAYS`
+   - *password set*
+	 - `gcloud sql users set-password root --host % --instance ${CLOUD_SQL_NAME} --password Passw0rd`
+   - *ipによる許可*
+	 - `gcloud sql instances patch taxi --authorized-networks $ADDRESS`
+   - *接続*
+	 - `gcloud sql connect ${CLOUD_SQL_NAME} --user=root --quiet`
+   - *mysqlimport*
+	 - column情報を制作する
+	 - `mysqlimport --local --host=$MYSQLIP --user=root --password --ignore-lines=1 --fields-terminated-by=',' bts trips.csv-*`
 **cloud spanner**  
  - 特性
    - マルチリージョンサポートのデータベース
@@ -253,6 +274,9 @@ comments: false
 	 - 配信を限定して事故を防ぐ
    - ローリングアップデート
 	 - ダウンタイムゼロでアップデートする
+   - `blue greenデプロイ`
+	 - blueがv1, greenがv2
+	 - トラフィックを割り振る
  - profiling
    - pythonで実行する際、`import googlecloudprofiler`して埋め込むことでprofilerを利用できる
  - monitoring
