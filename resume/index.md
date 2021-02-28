@@ -93,5 +93,6 @@ Introductory in Japanese and in English are mixed.
    - [Reliable Cloud Infrastructure: Design and Process 日本語版](https://www.coursera.org/account/accomplishments/certificate/Q8GBX9TY3Q8K)
    - [Google Cloud Platform Fundamentals: Core Infrastructure](https://www.coursera.org/account/accomplishments/certificate/3VGQF9GM624K)
    - [Architecting with Google Kubernetes Engine: Foundations](https://www.coursera.org/account/accomplishments/certificate/785V4KL63YX5)
+   - [Google Cloud Platform Big Data and Machine Learning Fundamentals](https://www.coursera.org/account/accomplishments/certificate/SZNHG7ZSTAEE)
  	
 
