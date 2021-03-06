@@ -166,7 +166,7 @@ comments: false
 	 - pythonのインラインコマンドでキーの作成ができる
 	   - `python3 -c 'import base64; import os; print(base64.encodebytes(os.urandom(32)))'`
 
-### cloud datastore
+### cloud firestore/cloud datastore
  - ***概要***
    - ACIDトランザクションをサポート
 	 - トランザクション処理の信頼性を担保するために作られた性質
