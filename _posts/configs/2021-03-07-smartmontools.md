@@ -49,3 +49,6 @@ total_lbas = 1353413225 # 具体的に観測できた値
 write_gb = total_lbas * 512 / (1024**3)
 print(write_gb) # 645gb書き込んだことがわかる
 ```
+
+## 余談: windowsでの確認
+ - [crystal disk info](https://crystalmark.info/en/software/crystaldiskinfo/)を使うとすぐわかる
