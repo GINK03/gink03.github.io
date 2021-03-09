@@ -452,7 +452,7 @@ comments: false
  - ***push***
    - `docker push gcr.io/${PROJECT_ID}/hello-app:v1`
 
-### stack driver
+### cloud logging/stack driver
  - ***モニタリング***
    - アプリのパフォーマンス、稼働時間等
    - `metrics explorer`でメトリクスを定義する
