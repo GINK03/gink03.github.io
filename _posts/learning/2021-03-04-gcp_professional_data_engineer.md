@@ -23,7 +23,7 @@ comments: false
      - gcsからcsvをインプットしたりしてその内容を特定のルールでパース
    - GUIから各プラグインをつなぎ、`input`, `join`, `output`を定義する
    - 各ソースにはbigqueryを用いることもできる
-<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--6xZH0ZBx--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/suo2glzw21i4fca5y5di.png">
+ - <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--6xZH0ZBx--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/suo2glzw21i4fca5y5di.png">
 
 ## cloud composer
  - ***特徴***
@@ -51,6 +51,7 @@ comments: false
  - ***概要***
    - apache beamをCLOUDでできるようにするもの
  - ***pythonでの実行***
+
 ```python
 import apache_beam as beam
 
