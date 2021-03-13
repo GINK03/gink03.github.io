@@ -19,8 +19,10 @@ comments: false
 ## 出題範囲
  - [link](https://cloud.google.com/certification/guides/cloud-engineer?hl=ja)
 
-## 知識体系
+## 結果
+ - [合格](https://user-images.githubusercontent.com/4949982/111018235-0a6ede00-83fb-11eb-9081-a8bb654f5e21.png)
 
+## 勉強したこと
 
 ### プロジェクト
    - ***プロジェクトの課金の管理について*** 
