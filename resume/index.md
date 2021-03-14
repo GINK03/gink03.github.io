@@ -80,5 +80,6 @@ Introductory in Japanese and in English are mixed.
    - [Architecting with Google Kubernetes Engine: Foundations](https://coursera.org/share/60bf792250f7870764417829ec13af05)
    - [Google Cloud Platform Big Data and Machine Learning Fundamentals](https://coursera.org/share/0c8c5e6b871101fefc3c9030786f3526)
    - [Modernizing Data Lakes and Data Warehouses with GCP](https://coursera.org/share/9671560dab2c4ee38e7aca2a1c9c9b4d)
+   - [Building Resilient Streaming Analytics Systems on GCP](https://coursera.org/share/338990e47e472edd925afb13b9980477)
  	
 

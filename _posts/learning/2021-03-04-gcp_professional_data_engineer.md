@@ -13,6 +13,11 @@ comments: false
 ## 出題範囲
  - [link](https://cloud.google.com/certification/guides/data-engineer)
 
+## 参考資料
+ - https://qiita.com/endw0901/items/5ebc530de3e9ffee4416
+ - https://qiita.com/ieiringoo/items/2c2a585e50f1cf831ca8
+
+
 ## cloud data fusion
  - ***概要***
    - GUIで扱えるデータパイプライン
@@ -25,7 +30,7 @@ comments: false
    - 各ソースにはbigqueryを用いることもできる
  - <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--6xZH0ZBx--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/suo2glzw21i4fca5y5di.png">
 
-## cloud composer
+## cloud composer/airflow
  - ***特徴***
    - AirFlowで挙動を定義する
    - 起動に30分以上かかる
@@ -34,6 +39,8 @@ comments: false
      - `gcloud composer environments create example-environment`
    2. AirFlowで定義したdagをstorageにupload
      - pythonスクリプト
+ - ***bigquery連携***
+   - パーティショニングやクラスタリングをサポートした書き込みはcloud storageからschema.jsonを作成し、`GoogleCloudStorageToBigQueryOperator`でbigqueryに書き込む
 
 ## cloud audit logs
  - ***概要***
@@ -47,9 +54,16 @@ comments: false
    - `organization`
      - `gcloud logging read "logName : organizations/ORGANIZATION_ID/logs/cloudaudit.googleapis.com" --organization=ORGANIZATION_ID`
 
+## cloud dataproc
+ - ***概要***
+   - hadoop/spark alternative
+
 ## cloud dataflow/apache beam
  - ***概要***
    - apache beamをCLOUDでできるようにするもの
+ - ***javaでの実行***
+   - window処理
+   - オンライン処理
  - ***pythonでの実行***
 
 ```python
@@ -85,7 +99,22 @@ def run():
 if __name__ == '__main__':
    run()
 ```
-  - `my_grep`を編集することで任意のデータの変換が可能
+    - `my_grep`を編集することで任意のデータの変換が可能
+ - ***ウィンドウ各種***
+   - TODO
+
+## cloud bigtable
+ - ***概要***
+   - iot用のDB
+   - hbaseを用いる
+   - `pub/sub` -> `dataflow` -> `bigtable`で書き込む
+   - [多数のノードからなる](https://qiita.com/kei0405/items/d420efebcc4b8fb1c008)
+ - ***クエリ***
+   - `scan 'current_conditions', {'LIMIT' => 2}`
+   - `scan 'current_conditions', {'LIMIT' => 10, STARTROW => '15#S#1', ENDROW => '15#S#999', COLUMN => 'lane:speed'}`
+   - startrow, endrowでクエリの範囲を決める
+   - `data skew`を最小化することで高速化する
+ 
 
 ## cloud kms
  - ***概要***
@@ -127,6 +156,39 @@ if __name__ == '__main__':
    - **メッセージの受信**
      - `gcloud pubsub subscriptions pull --auto-ack projects/${PROJECT_ID}/subscriptions/my-subscription`
 
+## cloud dataprep
+ - ***概要***
+   - 可視化をできるEDAサービス
+
+## cloud pub/sub
+ - ***概要***
+   - pub/subサービス
+   - 順序は保証されない
+ - ***ユースケース***
+   - `dataflow`で集約し、`bigquery`に入れる
+   - `dataflow`を`monitoring`に接続しmetricを作成、`monitoring/alert`でemailに通知するなど
+
+## ai platform prediction
+ - ***概要***
+   - TODO
+
+## cloud vision api
+ - ***概要***
+   - TODO
+   - 実際に使ってみる
+
+## cloud speech-to-text api
+ - ***概要***
+   - TODO
+ - ***同期モード***
+   - TODO
+ - ***非同期モード***
+   - TODO
+
+## cloud natural language api
+ - ***概要***
+   - TODO
+ 
 
 ## trasnfer appliance
  - ***概要***
@@ -137,3 +199,34 @@ if __name__ == '__main__':
  - ***概要***
    - 大容量(TB級)のデータ転送サービス
    - オンラインで転送する
+
+## olap
+ - ***概要***
+   - online analytical processing
+   - `bigquery`が該当する
+
+## oltp
+ - ***概要***
+   - online transaction processing
+   - `cloud sql`, `cloud spanner`が該当する
+
+## cloud spanner
+ - ***概要***
+   - 水平スケーリングできる
+
+## 秘密鍵をstorageやinstanceに入れるべきでない
+ - **概要**
+   - セキュリティのプラクティス上、ストレージに秘密鍵等を保存すべきでない
+   - Googleが考えるソリューションは実行サービスごとAPI経由で鍵を送る
+
+## bigqueryの詳細な知識
+ - ***セキュリティ***
+   - **概要**
+     - 雑なアクセス権限の管理を任されたとき、`cloud audit logs`から誰がどこにアクセスしたか確認できる
+ - ***容量***
+   - **概要**
+     - 容量がローカルとbigquery上で変わっているとき、原因は文字コードに起因することが多い
+ - ***スキーマが時々変更される状況***
+   - **概要**
+   - bigqueryは最初からこれらに対して`[Schema]`の`[Automatically detect]`を選択しているとハンドリングできる
+
