@@ -1,0 +1,29 @@
+---
+layout: post
+title: "master theorem"
+date: 2021-03-05
+excerpt: "マスター定理について"
+computer_science: true
+hide_from_post: true
+tag: ["algorithm", "master theorem", "マスター定理"]
+comments: false
+---
+
+# マスター定理について
+
+## 概要
+分割統治法の計算量を見積もる定理である  
+計算時間`T(n)`があるときに、部分問題`O(n)`が繰り出せるときに以下のように一般化できる  
+
+<div>
+  <img src="https://user-images.githubusercontent.com/4949982/111576336-ab8ed780-87f3-11eb-9af3-f8029d583866.png">
+</div>
+
+## 具体例
+ - `binery search`
+   - `T(n) = T(n/2) + O(1) = O(log n)`
+ - `merge sort`
+   - `T(n) = 2T(n/2) + O(n) = O(n log n)`
+
+## 参考
+ - [Master theorem (analysis of algorithms)](https://en.wikipedia.org/wiki/Master_theorem_(analysis_of_algorithms))

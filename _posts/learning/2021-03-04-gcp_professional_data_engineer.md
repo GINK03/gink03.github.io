@@ -187,7 +187,7 @@ if __name__ == '__main__':
 
 ## cloud natural language api
  - ***概要***
-   - TODO
+   - jsonをインプットとし、カテゴリ情報をアウトプットとする
  
 
 ## trasnfer appliance
