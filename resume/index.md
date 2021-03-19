@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Resume
-tags: [resume]
+title: "Resume"
+tags: ["resume", "履歴書"]
 date: 2018-03-19
 comments: false
 ---
