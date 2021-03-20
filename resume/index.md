@@ -49,7 +49,8 @@ Introductory in Japanese and in English are mixed.
 ***Qualifications(資格)***
  - [統計調査士](https://user-images.githubusercontent.com/4949982/103746695-d5ce5700-5044-11eb-95ae-a715b790a189.png)
  - [統計検定2級](https://user-images.githubusercontent.com/4949982/102600946-d4ef8700-4162-11eb-8607-c3f31d475afc.png)
- - [Google Associate Cloud Engineer](https://user-images.githubusercontent.com/4949982/111018235-0a6ede00-83fb-11eb-9081-a8bb654f5e21.png)
+ - [Google Cloud Associate Cloud Engineer](https://user-images.githubusercontent.com/4949982/111018235-0a6ede00-83fb-11eb-9081-a8bb654f5e21.png)
+ - [Google Cloud Professional Data Engineer](https://user-images.githubusercontent.com/4949982/111860752-0c9de300-898d-11eb-8bca-aa3f1713a1ab.png)
  - [Pythonエンジニア認定/データ分析試験](https://user-images.githubusercontent.com/4949982/102969927-edccb380-4539-11eb-80c4-ae1f92a84267.png)
  - [Pythonエンジニア認定/基礎試験](https://user-images.githubusercontent.com/4949982/102303112-d1f76980-3f9d-11eb-923b-cb90165f8ef7.png)
  
