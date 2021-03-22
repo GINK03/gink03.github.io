@@ -23,5 +23,11 @@ comments: false
    - [link](https://cloud.google.com/certification?hl=ja)
 
 ## 受験方法
- - KEYTERIONというテストサービスで受験できる
+ - KRYTERIONというテストサービスで受験できる
    - [link](https://www.webassessor.com/)
+ - 日本語のKRYTERIONでは英語版の試験が受験できない問題
+   - サポートに連絡したところ英語アカウントを作成すればよいとのこと
+
+<div>
+  <img src="https://user-images.githubusercontent.com/4949982/111935589-1ea39100-8b07-11eb-9e8d-1b323e8e561e.png">
+</div>
