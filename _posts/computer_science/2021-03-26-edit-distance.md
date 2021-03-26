@@ -19,12 +19,13 @@ comments: false
  3. 一致しない(i-1,k-1), 削除(i-1,k), 挿入(i,k-1)ときの値+1 or 一致時は(i-1,k-1)の値を入れる
  4. いずれかのケースの最小値を代入する
 
-**図の例**
+## 図による例
 <div>
   <img src="https://user-images.githubusercontent.com/4949982/112608691-f943b980-8e5d-11eb-928e-f16c0b89d588.png">
 </div>
 
-**pythonのコード**
+## pythonのコード
+
 ```python
 import numpy 
 
@@ -57,3 +58,5 @@ def EditDistance(s1, s2):
     return (int(Matrix[ln_s1][ln_s2]), Matrix)
 ```
 
+## 参考
+ - [Edit distance](https://en.wikipedia.org/wiki/Edit_distance)
