@@ -45,42 +45,41 @@ Introductory in Japanese and in English are mixed.
 
 
 ## Qualifications/Certifications
-
-***Qualifications(資格)***
- - [統計調査士](https://user-images.githubusercontent.com/4949982/103746695-d5ce5700-5044-11eb-95ae-a715b790a189.png)
- - [統計検定2級](https://user-images.githubusercontent.com/4949982/102600946-d4ef8700-4162-11eb-8607-c3f31d475afc.png)
- - [Google Cloud Associate Cloud Engineer](https://user-images.githubusercontent.com/4949982/111018235-0a6ede00-83fb-11eb-9081-a8bb654f5e21.png)
- - [Google Cloud Professional Data Engineer](https://user-images.githubusercontent.com/4949982/111860752-0c9de300-898d-11eb-8bca-aa3f1713a1ab.png)
- - [Pythonエンジニア認定/データ分析試験](https://user-images.githubusercontent.com/4949982/102969927-edccb380-4539-11eb-80c4-ae1f92a84267.png)
- - [Pythonエンジニア認定/基礎試験](https://user-images.githubusercontent.com/4949982/102303112-d1f76980-3f9d-11eb-923b-cb90165f8ef7.png)
- 
-***Certifications(認定)***
- - **データサイエンス関連**
-   - [Introduction to Data Science in Python](https://www.coursera.org/account/accomplishments/certificate/5L7UVY6P68ZL)
-   - [Capstone: Retrieving, Processing, and Visualizing Data with Python](https://www.coursera.org/account/accomplishments/certificate/YPBT5C8TZMNZ)
-   - [Tools for Data Science](https://www.coursera.org/account/accomplishments/certificate/7Z9QFPPHYTE8)
-   - [IBM: What is Data Science?](https://www.coursera.org/account/accomplishments/certificate/KRRWG539W8QD)
-   - [Programming for Everybody (Getting Started with Python)](https://www.coursera.org/account/accomplishments/certificate/CUNWREBBDWUC)
- - **コンピュータサイエンス関連**
-   - [Introduction to Git and GitHub](https://coursera.org/share/66680577ccfa2699e9399478009f5109)
-   - [Using Databases with Python](https://coursera.org/share/18c22b39a4f4c93e6ba1a291b4d8e692)
-   - [Python Data Structures](https://coursera.org/share/0ff202d0e263ca3a3065410d13e41416)
-   - [Using Python to Access Web Data](https://coursera.org/share/99a7e98f8398efbb97ab28d2467e3214)
- - **社会科学**
-   - [Social Psychology](https://coursera.org/share/258278334c9e41e3f572c74400e6a7ad)
-   - [Positive Psychology: Martin E. P. Seligman’s Visionary Science](https://coursera.org/share/c0d51e9485e6d03af8a2f8ea76c56aa4)
-   - [Introduction to Psychology](https://coursera.org/share/7a8806715150fba87f7b3f8b2769cdc8)
-   - [Stanford Introduction to Food and Health](https://coursera.org/share/cfa4cb7dd4ec085f58dae746e4b9c855)
- - **Google Cloud Platform関連**
-   - [Essential Cloud Infrastructure: Foundation 日本語版](https://coursera.org/share/bd9a57831323511d7e657e37f6f4f5de)
-   - [Essential Google Cloud Infrastructure: Foundation](https://coursera.org/share/1c16138ca5dbcc3834ac238919f70b3a)
-   - [Essential Cloud Infrastructure: Core Services 日本語版](https://coursera.org/share/c4c5594b6866c68b80dcf9baa1ae74b1)
-   - [Elastic Cloud Infrastructure: Scaling and Automation 日本語版](https://coursera.org/share/c30d73bf7acaa3cbae0c9a57db7eb075)
-   - [Reliable Cloud Infrastructure: Design and Process 日本語版](https://coursera.org/share/f1ba40b5fe9f0e9782cead8125417844)
-   - [Google Cloud Platform Fundamentals: Core Infrastructure](https://coursera.org/share/eff844a4994641d63812d1acbb2c52c1)
-   - [Architecting with Google Kubernetes Engine: Foundations](https://coursera.org/share/60bf792250f7870764417829ec13af05)
-   - [Google Cloud Platform Big Data and Machine Learning Fundamentals](https://coursera.org/share/0c8c5e6b871101fefc3c9030786f3526)
-   - [Modernizing Data Lakes and Data Warehouses with GCP](https://coursera.org/share/9671560dab2c4ee38e7aca2a1c9c9b4d)
-   - [Building Resilient Streaming Analytics Systems on GCP](https://coursera.org/share/338990e47e472edd925afb13b9980477)
- 	
+ - ***Qualifications(資格)***
+   - [統計調査士](https://user-images.githubusercontent.com/4949982/103746695-d5ce5700-5044-11eb-95ae-a715b790a189.png)
+   - [統計検定2級](https://user-images.githubusercontent.com/4949982/102600946-d4ef8700-4162-11eb-8607-c3f31d475afc.png)
+   - [Google Cloud Associate Cloud Engineer](https://user-images.githubusercontent.com/4949982/111018235-0a6ede00-83fb-11eb-9081-a8bb654f5e21.png)
+   - [Google Cloud Professional Data Engineer](https://user-images.githubusercontent.com/4949982/111860752-0c9de300-898d-11eb-8bca-aa3f1713a1ab.png)
+   - [Pythonエンジニア認定/データ分析試験](https://user-images.githubusercontent.com/4949982/102969927-edccb380-4539-11eb-80c4-ae1f92a84267.png)
+   - [Pythonエンジニア認定/基礎試験](https://user-images.githubusercontent.com/4949982/102303112-d1f76980-3f9d-11eb-923b-cb90165f8ef7.png)
+ - ***Certifications(認定)***
+   - **データサイエンス関連**
+	 - [Introduction to Data Science in Python](https://www.coursera.org/account/accomplishments/certificate/5L7UVY6P68ZL)
+	 - [Capstone: Retrieving, Processing, and Visualizing Data with Python](https://www.coursera.org/account/accomplishments/certificate/YPBT5C8TZMNZ)
+	 - [Tools for Data Science](https://www.coursera.org/account/accomplishments/certificate/7Z9QFPPHYTE8)
+	 - [IBM: What is Data Science?](https://www.coursera.org/account/accomplishments/certificate/KRRWG539W8QD)
+	 - [Programming for Everybody (Getting Started with Python)](https://www.coursera.org/account/accomplishments/certificate/CUNWREBBDWUC)
+   - **コンピュータサイエンス関連**
+	 - [Introduction to Git and GitHub](https://coursera.org/share/66680577ccfa2699e9399478009f5109)
+	 - [Using Databases with Python](https://coursera.org/share/18c22b39a4f4c93e6ba1a291b4d8e692)
+	 - [Python Data Structures](https://coursera.org/share/0ff202d0e263ca3a3065410d13e41416)
+	 - [Using Python to Access Web Data](https://coursera.org/share/99a7e98f8398efbb97ab28d2467e3214)
+	 - [Algorithmic Toolbox](https://coursera.org/share/d28462e41bfd56aa67644a9196403566)
+   - **社会科学**
+	 - [Social Psychology](https://coursera.org/share/258278334c9e41e3f572c74400e6a7ad)
+	 - [Positive Psychology: Martin E. P. Seligman’s Visionary Science](https://coursera.org/share/c0d51e9485e6d03af8a2f8ea76c56aa4)
+	 - [Introduction to Psychology](https://coursera.org/share/7a8806715150fba87f7b3f8b2769cdc8)
+	 - [Stanford Introduction to Food and Health](https://coursera.org/share/cfa4cb7dd4ec085f58dae746e4b9c855)
+   - **Google Cloud Platform関連**
+	 - [Essential Cloud Infrastructure: Foundation 日本語版](https://coursera.org/share/bd9a57831323511d7e657e37f6f4f5de)
+	 - [Essential Google Cloud Infrastructure: Foundation](https://coursera.org/share/1c16138ca5dbcc3834ac238919f70b3a)
+	 - [Essential Cloud Infrastructure: Core Services 日本語版](https://coursera.org/share/c4c5594b6866c68b80dcf9baa1ae74b1)
+	 - [Elastic Cloud Infrastructure: Scaling and Automation 日本語版](https://coursera.org/share/c30d73bf7acaa3cbae0c9a57db7eb075)
+	 - [Reliable Cloud Infrastructure: Design and Process 日本語版](https://coursera.org/share/f1ba40b5fe9f0e9782cead8125417844)
+	 - [Google Cloud Platform Fundamentals: Core Infrastructure](https://coursera.org/share/eff844a4994641d63812d1acbb2c52c1)
+	 - [Architecting with Google Kubernetes Engine: Foundations](https://coursera.org/share/60bf792250f7870764417829ec13af05)
+	 - [Google Cloud Platform Big Data and Machine Learning Fundamentals](https://coursera.org/share/0c8c5e6b871101fefc3c9030786f3526)
+	 - [Modernizing Data Lakes and Data Warehouses with GCP](https://coursera.org/share/9671560dab2c4ee38e7aca2a1c9c9b4d)
+	 - [Building Resilient Streaming Analytics Systems on GCP](https://coursera.org/share/338990e47e472edd925afb13b9980477)
+	  
 
