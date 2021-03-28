@@ -14,8 +14,10 @@ comments: false
 # binary search
  - linear searchに比べて計算量がlogで落ちる
    - 1024までの探索は2^10回で済む
+ - pure pythonでも実装することができ、シンプルでわかりやすい
+ - ランダウ表記では`O(n)`が`O(log n)`になる
 
-## 二分探索で`O(N)`を`O(log(N))`に変換する
+## ライブラリによる使用例
 
 **cpp**   
 上界   
@@ -75,3 +77,40 @@ if __name__ == '__main__':
     assert bisect.bisect_left(KeyifyList(L, lambda x: x[1]), 3) == 1
 ```
  - [参考](https://gist.github.com/ericremoreynolds/2d80300dabc70eebc790)
+
+## pure pythonによる実装例
+ - pure pythonによる実装例
+
+```python
+# Iterative Binary Search Function
+# It returns index of x in given array arr if present,
+# else returns -1
+
+def binary_search(arr, x):
+    low = 0
+    high = len(arr) - 1
+    mid = 0
+    while low <= high:
+        mid = (high + low) // 2
+        # If x is greater, ignore left half
+        if arr[mid] < x:
+            low = mid + 1
+        # If x is smaller, ignore right half
+        elif arr[mid] > x:
+            high = mid - 1
+        # means x is present at mid
+        else:
+            return mid
+    # If we reach here, then the element was not present
+    return -1
+
+# Test array
+arr = [ 2, 3, 4, 10, 40 ]
+x = 10
+result = binary_search(arr, x)
+if result != -1:
+    print("Element is present at index", str(result))
+else:
+    print("Element is not present in array")
+```
+ - [参考](https://www.geeksforgeeks.org/python-program-for-binary-search/)
