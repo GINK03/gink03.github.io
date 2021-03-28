@@ -65,6 +65,7 @@ Introductory in Japanese and in English are mixed.
 	 - [Python Data Structures](https://coursera.org/share/0ff202d0e263ca3a3065410d13e41416)
 	 - [Using Python to Access Web Data](https://coursera.org/share/99a7e98f8398efbb97ab28d2467e3214)
 	 - [Algorithmic Toolbox](https://coursera.org/share/d28462e41bfd56aa67644a9196403566)
+	 - [Data Structures](https://coursera.org/share/84c55390f39e963ec818e776723a28bc)
    - **社会科学**
 	 - [Social Psychology](https://coursera.org/share/258278334c9e41e3f572c74400e6a7ad)
 	 - [Positive Psychology: Martin E. P. Seligman’s Visionary Science](https://coursera.org/share/c0d51e9485e6d03af8a2f8ea76c56aa4)
