@@ -9,6 +9,9 @@ comments: false
 ---
 
 # cloud loggingについて
+ - gcpのloggingの仕組みの一つ
+ - `cloud monitoring`というサービスと連携させて用いる
+ - オンプレの連携も
 
 ## command経由で実行
 
