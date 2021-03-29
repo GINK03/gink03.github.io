@@ -26,6 +26,14 @@ $ gcloud logging write my-test-log "A simple entry."
 $ gcloud logging write --payload-type=json my-test-log '{ "message": "My second entry", "weather": "partly cloudy"}'
 ```
 
+## compute engineに対して実行
+ - vmインスタンスに`cloud monitoring`と`cloud logging`のソフトウェアを入れてservice startする
+ - `cloud monitoring`でメトリックス等を作成して反映する
+
+## monitoring query language
+ - `cloud monitoring`の画面で`mql`に変更する
+ - jq的なコマンドでクエリを作成する
+
 ## sinkとは
  - `cloud storage`や`bigquery`が最終アウトプット先ならばsinkは一歩手前のバッファ
  - [docs/export](https://cloud.google.com/logging/docs/export)
