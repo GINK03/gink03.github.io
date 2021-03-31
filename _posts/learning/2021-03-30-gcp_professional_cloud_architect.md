@@ -49,6 +49,17 @@ comments: false
    - 段階的リリース
  - VPC type
  - network tier
+ - PII
+   - Personally Identifiable Information
+ - resionを超えてアクセスできるのは 原則cloud storageだけ
+ - HIPAA -> アメリカの健康関連の個人情報の取扱
+ - BAA -> Business Associate Agreement 
+ - App Engine FlexはCompute Engineをベースとしている
+ - **英語**
+   - 読み間違いや意味がわからず飛ばしたところがやはり一番怖い
+ - リリースロールバック負荷が高いプロダクトはmicro serviceにしたほうがいい
+ - blue/greenテストはmission critical系のリリースに適する
+ 
   
 ## 出題範囲
  - ケーススタディ
