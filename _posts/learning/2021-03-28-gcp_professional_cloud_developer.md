@@ -100,7 +100,6 @@ comments: false
      - **ローカルアプリケーション開発向けのGoogleCloudサービスをエミュレートする**
 	   - コンテナ等で再現する
      - **GoogleCloudプロジェクトを作成する**
-	   - ?
      - **コマンドライン インターフェース（CLI）、Google Cloud Console、Cloud Shell ツールを使用する**
      - **デベロッパーツールを使用する（Cloud Code、Skaffold など）**
    - **2.2 効率的なコードを記述**
@@ -121,7 +120,6 @@ comments: false
      - **デプロイアーティファクトを構成するサービス（Cloud Build、Container Registryなど）を使用して、継続的インテグレーション パイプラインを開発する**
 	   - masterブランチの更新に対応させるなど
      - **継続的インテグレーション パイプラインの有効性を確認、改善**
-	   - ?
  - ***セクション 3: アプリケーションのデプロイ***
    - **3.1 対象のコンピューティング環境（Compute Engine、Google Kubernetes Engine など）に適したツール（Cloud Build、Spinnaker、Tekton、Anthos Configuration Manager など）を使用して適切なデプロイ戦略**
 	 - **Blue/Greenデプロイ**
@@ -137,63 +135,75 @@ comments: false
      - **アプリケーションのログと指標をエクスポートする**
      - **Compute EngineのVMイメージとバイナリを管理する**
    - **3.3 Google Kubernetes Engine（GKE）にアプリケーションとサービスをデプロイ**
-     - **コンテナ化したアプリケーションを GKE にデプロイする**
+     - **コンテナ化したアプリケーションをGKEにデプロイする**
      - **Kubernetes RBACとGoogle Cloud IAMの関係を管理**
      - **Kubernetes名前空間を構成**
      - **ワークロードの仕様（リソース要件など）**
      - **Cloud Buildを使用してコンテナイメージを作成**
      - **ユーザートラフィックとその他のサービスへのアプリケーションによるアクセス可否の構成**
      - **コンテナのライフサイクルを管理する**
-     - **Kubernetes のリソースと構成を定義する**
+     - **Kubernetesのリソースと構成を定義する**
    - **3.4 Cloud Functionsの関数をデプロイ**
      - **Google Cloud サービスからのイベントを介してトリガーされるCloud Functions（Pub/Sub、Cloud Storageオブジェクトなど）**
      - **HTTPによって呼び出されるCloud Functions**
      - **Cloud Functionsの保護**
 	   - IAMで制限できる
    - **3.5 サービス アカウントの使用**
-     - 最小権限の原則に従ってサービス アカウントを作成する
-     - サービス アカウントの秘密鍵ファイルをダウンロードして使用する
+     - 最小権限の原則に従ってサービスアカウントを作成する
+     - サービスアカウントの秘密鍵ファイルをダウンロードして使用する
  - ***セクション 4: Google Cloud ービスの統合***
    - **4.1 アプリケーションにデータサービスとストレージ サービスを統合**
-     - さまざまなデータベース（SQL など）のデータの読み込みおよび書き込み
+     - さまざまなデータベース（SQLなど）のデータの読み込みおよび書き込み
      - データストア（Cloud SQL、Cloud Spanner、Firestore、Cloud Bigtable など）に接続する
      - データを非同期で（Pub/Sub などから）公開または使用するアプリケーションを作成する
-     - Cloud Storage のオブジェクトを保存、取得する
-   - 4.2 アプリケーションにコンピューティングサービスを統合
-     - GKEとCompute Engineでのサービスディスカバリを実装する
-     - インスタンスメタデータを読み取ってアプリケーションの構成を取得する
-     - OAuth2.0 ウェブフローとIdentity-Aware Proxyを使用してユーザーを認証する
-     - Workload Identityを使用してCloud APIsに対する認証を行う
+     - Cloud Storageのオブジェクトを保存、取得する
+   - **4.2 アプリケーションにコンピューティングサービスを統合**
+     - **GKEとCompute Engineでのサービスディスカバリを実装する**
+	   - k8sはDNSを変更することでサービスディスカバリで機能しようとする
+     - **インスタンスメタデータを読み取ってアプリケーションの構成を取得する**
+	   - `http://metadata.google.internal/computeMetadata/v1/hogehoge`
+     - **OAuth2.0ウェブフローとIdentity-Aware Proxyを使用してユーザーを認証する**
+	   - googleの認証機能を利用してapp engine等にリーチさせる**
+     - **Workload Identityを使用してCloud APIsに対する認証を行う**
+	   - k8sの典型パターン
    - **4.3 アプリケーションにCloud API**
      - Cloud APIを有効化する
-     - 以下の点を考慮に入れて、サポートされているオプション（Cloud クライアント ライブラリ、REST API または gRPC、API Explorer など）を使用して API 呼び出しを行う
+     - 以下の点を考慮に入れて、サポートされているオプション（Cloudクライアントライブラリ、REST APIまたはgRPC、API Explorerなど）を使用してAPI呼び出しを行う
        - 一括処理リクエスト
        - 戻りデータの制限
        - 結果のページ分け
        - 結果のキャッシュ保存
        - **エラー処理（指数バックオフなど）**
+	     - 一般的なエラーハンドリング
        - サービスアカウントを使用してCloud API呼び出しを行う
  - セクション 5: アプリケーション パフォーマンス モニタリングの管理
    - **5.1 Compute Engine VMを管理**
-	 - シリアルポートを使用してカスタム VM イメージをデバッグする
+	 - シリアルポートを使用してカスタムVMイメージをデバッグする
      - 失敗したCompute Engine VMの起動を診断する
-     - VM から Cloud Logging にログを送信する
+     - VMからCloud Loggingにログを送信する
      - ログを表示して分析する
      - 利用リソースの推移を点検する
    - **5.2 Google Kubernetes Engine のワークロードを管理**。
-     - ロギングとモニタリングを構成する
-     - コンテナのライフサイクル イベント（CrashLoopBackOff、ImagePullErr など）を分析する
-     - ログを表示して分析する
-     - カスタム指標を作成してエクスポートする
+     - **ロギングとモニタリングを構成する**
+	   - gkeのcloud operationがデフォルトで対応可能(クラスタの管理画面)
+     - **コンテナのライフサイクル イベント（CrashLoopBackOff、ImagePullErr など）を分析する**
+	   - `kubectl get pods --namespace=...`してcrashloopbackoffしたpodを`kubectl describe pod ... --namespace nginx-crashloop`で確認できる
+     - **ログを表示して分析する**
+	   - cloud loggingから確認できる
+	   - メトリックス等はcloud monitoring
+     - **カスタム指標を作成してエクスポートする**
+	   - cloud monitoringでカスタムメトリクスを作成してそれをscalingするトリガーにできる
      - 外部指標とそれに対応するアラートを使用する
      - ワークロードの自動スケーリングを構成する
    - **5.3 アプリケーションの性能**
      - モニタリングダッシュボードを作成する
      - カスタム指標とログベースの指標を作成する
-     - Cloud Debuggerを使用する
-     - エラーを分析するためにスタック トレースを確認する
+     - **Cloud Debuggerを使用する**
+	   - pythonで本番環境でインポートしてデータを吐き出す
+     - エラーを分析するためにスタックトレースを確認する
      - Google Cloudからログをエクスポートする
      - Google Cloud Consoleにログを表示する
-     - アプリケーションのパフォーマンスを確認する（Cloud Trace、Prometheus、OpenTelemetry など）
+     - **アプリケーションのパフォーマンスを確認する（Cloud Trace、Prometheus、OpenTelemetry など）**
+	   - 確認
      - 実行中のアプリケーションのモニタリングとプロファイリングを行う
      - ドキュメント、フォーラム、Google Cloudサポートを利用する
