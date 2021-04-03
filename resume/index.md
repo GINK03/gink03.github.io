@@ -85,4 +85,5 @@ Introductory in Japanese and in English are mixed.
 	 - [Modernizing Data Lakes and Data Warehouses with GCP](https://coursera.org/share/9671560dab2c4ee38e7aca2a1c9c9b4d)
 	 - [Building Resilient Streaming Analytics Systems on GCP](https://coursera.org/share/338990e47e472edd925afb13b9980477)
 	 - [Developing a Google SRE Culture](https://coursera.org/share/cc33a23681f76a50aaa224fa9beb9b0a) 
+	 - [Reliable Google Cloud Infrastructure: Design and Process](https://coursera.org/share/001b5634dbc2ee6382e8c07df0c37505)
 
