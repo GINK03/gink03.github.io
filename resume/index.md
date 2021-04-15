@@ -60,6 +60,7 @@ Introductory in Japanese and in English are mixed.
    - *oracle*
 	 - [credly.com](https://www.credly.com/users/gimpei-kobayashi/badges)
 	 - [Java SE 11 Developer(2020年以降のJava SE 11 Gold)](https://user-images.githubusercontent.com/4949982/114673270-f80cfa80-9d40-11eb-89a3-bfae91c45ac6.png)
+	 - [Java SE 11 Gold](https://user-images.githubusercontent.com/4949982/114836790-f78e6580-9e0d-11eb-8074-f43612b494e6.png)
 	 - [Java SE 11 Silver](https://user-images.githubusercontent.com/4949982/114290626-f1ba1c80-9abb-11eb-92f7-930016f88476.png)
 
  - ***Certifications(認定)***
