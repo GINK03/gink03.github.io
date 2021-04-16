@@ -43,7 +43,6 @@ Introductory in Japanese and in English are mixed.
  - Developed detection system, can know which user has high attention to his ad or not.
 
 
-
 ## Qualifications/Certifications
  - ***Qualifications(資格)***
    - *統計検定*
@@ -81,7 +80,9 @@ Introductory in Japanese and in English are mixed.
 	 - [Social Psychology](https://coursera.org/share/258278334c9e41e3f572c74400e6a7ad)
 	 - [Positive Psychology: Martin E. P. Seligman’s Visionary Science](https://coursera.org/share/c0d51e9485e6d03af8a2f8ea76c56aa4)
 	 - [Introduction to Psychology](https://coursera.org/share/7a8806715150fba87f7b3f8b2769cdc8)
+   - **ヘルスケア関連**
 	 - [Stanford Introduction to Food and Health](https://coursera.org/share/cfa4cb7dd4ec085f58dae746e4b9c855)
+	 - [Chemicals and Health](https://coursera.org/share/222c6409ef5b8c511de204535417b26e)
    - **Google Cloud Platform関連**
 	 - [Essential Cloud Infrastructure: Foundation 日本語版](https://coursera.org/share/bd9a57831323511d7e657e37f6f4f5de)
 	 - [Essential Google Cloud Infrastructure: Foundation](https://coursera.org/share/1c16138ca5dbcc3834ac238919f70b3a)
