@@ -58,11 +58,8 @@ Introductory in Japanese and in English are mixed.
 	 - [Pythonエンジニア認定/基礎試験](https://user-images.githubusercontent.com/4949982/102303112-d1f76980-3f9d-11eb-923b-cb90165f8ef7.png) 
    - *oracle*
 	 - [Java SE 11 Gold](https://user-images.githubusercontent.com/4949982/115006787-38f14480-9ee4-11eb-89be-6b6153afe926.png)
-	   - [得点](https://user-images.githubusercontent.com/4949982/114836790-f78e6580-9e0d-11eb-8074-f43612b494e6.png)
 	 - [Java SE 11 Silver](https://user-images.githubusercontent.com/4949982/115006761-32fb6380-9ee4-11eb-958e-76be3f7bd040.png)
-	   - [得点](https://user-images.githubusercontent.com/4949982/114290626-f1ba1c80-9abb-11eb-92f7-930016f88476.png)
 	 - [Java SE 11 Developer(2020年以降のJava SE 11 Gold)](https://user-images.githubusercontent.com/4949982/115006773-368eea80-9ee4-11eb-8268-d08e12ac9278.png)
-	   - [得点](https://user-images.githubusercontent.com/4949982/114673270-f80cfa80-9d40-11eb-89a3-bfae91c45ac6.png)
 
  - ***Certifications(認定)***
    - **データサイエンス関連**
@@ -98,4 +95,7 @@ Introductory in Japanese and in English are mixed.
 	 - [Building Resilient Streaming Analytics Systems on GCP](https://coursera.org/share/338990e47e472edd925afb13b9980477)
 	 - [Developing a Google SRE Culture](https://coursera.org/share/cc33a23681f76a50aaa224fa9beb9b0a) 
 	 - [Reliable Google Cloud Infrastructure: Design and Process](https://coursera.org/share/001b5634dbc2ee6382e8c07df0c37505)
-
+	 - [Serverless Firebase Development](https://www.linkedin.com/posts/gimpei-kobayashi-208bba2a_serverless-firebase-development-activity-6788833955950010368-lnko)
+   - **Google Workspace関連**
+	 - [Gmail](https://coursera.org/share/968e8633be8156ef6a77ca8eb2ebdf04)
+	 - [Google Calendar](https://coursera.org/share/751dc1fcd51a69a1eb089150cd6c1692)
