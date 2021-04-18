@@ -5,6 +5,7 @@ date: 2021-04-18
 excerpt: "[specific]Adding Exits to a Maze"
 computer_science: true
 hide_from_post: true
+specific: true
 tag: ["algorithm", "graph", "data structure", "データ構造"]
 comments: false
 ---
