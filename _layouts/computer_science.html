@@ -23,7 +23,7 @@ layout: compress
 		</div>
 		<div class="post-list">
 		  {% for post in site.posts %} 
-		  {% if post.computer_science %}
+		  {% if post.computer_science == true and post.specific == nil %}
 		  <ul>
 			<li data-wow-duration="1.5s" style="padding: 0px;">
 			  <a class="zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
