@@ -99,3 +99,7 @@ Introductory in Japanese and in English are mixed.
    - **Google Workspace関連**
 	 - [Gmail](https://coursera.org/share/968e8633be8156ef6a77ca8eb2ebdf04)
 	 - [Google Calendar](https://coursera.org/share/751dc1fcd51a69a1eb089150cd6c1692)
+	 - [Google Drive](https://coursera.org/share/51eb8763d3f098793080429a7dee93a2)
+	 - [Google Docs](https://coursera.org/share/4fb728a62201429aec4931b51935a6d9)
+	 - [Google Sheets](https://coursera.org/share/96e906279d73e08bce758831ccc0f561)
+	 - [Google Slides](https://coursera.org/share/ccab992ebaf962c9b2106a8ea8d3a96d)
