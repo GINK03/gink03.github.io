@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "google calendar"
-date:   2020-12-31
+title: "google calendar"
+date: 2020-12-31
 excerpt: "google calendarについて"
 project: false
 config: true
@@ -10,6 +10,14 @@ comments: false
 ---
 
 # google calendarについて
+ - courseraにてgoogleが講義を公開している
+
+## 招待, 定期的なスケジュール
+ - 招待されたあとにbookingに気づいてしまった場合
+   - 応答に`いいえ`を選択して`[新しい時間を提案する]`を選択
+
+## 公開しない設定の予定
+ - 他者からは`busy`に見える
 
 
 ## 共有設定
@@ -20,6 +28,9 @@ comments: false
  2. 左の`マイカレンダー`の`🍔`を開く
  3. `設定と共有`を選択
  4. `特定のユーザーとの共有`に適宜追加と削除を行う
+
+## 委任設定
+ - 代わりに自身のcalendarを管理してもらうこと
 
 ## python api
  
