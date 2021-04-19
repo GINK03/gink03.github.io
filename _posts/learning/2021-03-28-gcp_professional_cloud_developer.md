@@ -65,7 +65,6 @@ comments: false
      - **ユーザー、グループ、サービスアカウントのIAMロール**
 	   - 最小スコープ
      - **サービス間の通信（サービスメッシュ、Kubernetesネットワークポリシー、Kubernetes名前空間など）を保護**
-	   - kubernetes? 
      - **最小限の特権アクセスでサービスを実行する（Workload Identityなど）**
 	   - workload identifyはkubernetesのpodに割り当てられるサービスアカウント
 	   - まとめてpodの権限を割り当てることができる
@@ -100,7 +99,7 @@ comments: false
      - **ローカルアプリケーション開発向けのGoogleCloudサービスをエミュレートする**
 	   - コンテナ等で再現する
      - **GoogleCloudプロジェクトを作成する**
-     - **コマンドライン インターフェース（CLI）、Google Cloud Console、Cloud Shell ツールを使用する**
+     - **コマンドラインインターフェース（CLI）、Google Cloud Console、Cloud Shellツールを使用する**
      - **デベロッパーツールを使用する（Cloud Code、Skaffold など）**
    - **2.2 効率的なコードを記述**
      - **アルゴリズムの設計**
@@ -117,7 +116,7 @@ comments: false
 	   - gcp内部のgit
      - **コードから安全なコンテナイメージを作成**
 	   - cloud build
-     - **デプロイアーティファクトを構成するサービス（Cloud Build、Container Registryなど）を使用して、継続的インテグレーション パイプラインを開発する**
+     - **デプロイアーティファクトを構成するサービス（Cloud Build、Container Registryなど）を使用して、継続的インテグレーションパイプラインを開発する**
 	   - masterブランチの更新に対応させるなど
      - **継続的インテグレーション パイプラインの有効性を確認、改善**
  - ***セクション 3: アプリケーションのデプロイ***
@@ -151,7 +150,7 @@ comments: false
    - **3.5 サービス アカウントの使用**
      - 最小権限の原則に従ってサービスアカウントを作成する
      - サービスアカウントの秘密鍵ファイルをダウンロードして使用する
- - ***セクション 4: Google Cloud ービスの統合***
+ - ***セクション 4: Google Cloudの統合***
    - **4.1 アプリケーションにデータサービスとストレージ サービスを統合**
      - さまざまなデータベース（SQLなど）のデータの読み込みおよび書き込み
      - データストア（Cloud SQL、Cloud Spanner、Firestore、Cloud Bigtable など）に接続する
