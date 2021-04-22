@@ -23,9 +23,14 @@ comments: false
  - **adclear**
    - vpnを使用しdnsを書き換えることで広告を取り除く
    - playストアからは入手できない
+ - **firefox + 拡張機能**
+   - firefoxの拡張機能で広告をブロックする
+ - **samsung browser + 拡張機能**
+   - 拡張機能で広告をブロックする
 
 ## その他
  - **adguard**
-   - [こちらに詳細に記した](/adguard/)
    - カスタムDNSサーバのソフト
    - 広告関連のURLを無効化するようなカスタマイズがされている
+ - **nextdns**
+   - clouddns(自分で設定できるので便利)
