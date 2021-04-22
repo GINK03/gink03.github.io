@@ -96,10 +96,17 @@ Introductory in Japanese and in English are mixed.
 	 - [Developing a Google SRE Culture](https://coursera.org/share/cc33a23681f76a50aaa224fa9beb9b0a) 
 	 - [Reliable Google Cloud Infrastructure: Design and Process](https://coursera.org/share/001b5634dbc2ee6382e8c07df0c37505)
 	 - [Serverless Firebase Development](https://www.linkedin.com/posts/gimpei-kobayashi-208bba2a_serverless-firebase-development-activity-6788833955950010368-lnko)
+   - **Google Data Analytics**
+	 - [Foundations: Data, Data, Everywhere](https://coursera.org/share/7b708b3aca16db14ac4177ee2e34d6ee)
    - **Google Workspace関連**
-	 - [Gmail](https://coursera.org/share/968e8633be8156ef6a77ca8eb2ebdf04)
-	 - [Google Calendar](https://coursera.org/share/751dc1fcd51a69a1eb089150cd6c1692)
-	 - [Google Drive](https://coursera.org/share/51eb8763d3f098793080429a7dee93a2)
-	 - [Google Docs](https://coursera.org/share/4fb728a62201429aec4931b51935a6d9)
-	 - [Google Sheets](https://coursera.org/share/96e906279d73e08bce758831ccc0f561)
-	 - [Google Slides](https://coursera.org/share/ccab992ebaf962c9b2106a8ea8d3a96d)
+	 - [Getting started with Google Workspace](https://coursera.org/share/602a4a6938465a740c20cc015a6b2dca)
+	   - [Gmail](https://coursera.org/share/968e8633be8156ef6a77ca8eb2ebdf04)
+	   - [Google Calendar](https://coursera.org/share/751dc1fcd51a69a1eb089150cd6c1692)
+	   - [Google Drive](https://coursera.org/share/51eb8763d3f098793080429a7dee93a2)
+	   - [Google Docs](https://coursera.org/share/4fb728a62201429aec4931b51935a6d9)
+	   - [Google Sheets](https://coursera.org/share/96e906279d73e08bce758831ccc0f561)
+	   - [Google Slides](https://coursera.org/share/ccab992ebaf962c9b2106a8ea8d3a96d)
+	   - [Google Meet and Google Chat](https://coursera.org/share/c2bcd6b322408dfcb5e217db0c74fa37)
+   - **Kubernetes**
+	 - [Google Cloud Platform Fundamentals: Core Infrastructure](https://coursera.org/share/0d0cc0fe6510a40f7552016546667c9b)
+	 - [Architecting with Google Kubernetes Engine: Foundations](https://coursera.org/share/2b4b13b27514415941a2db4f62b21531)
