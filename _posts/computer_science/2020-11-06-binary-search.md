@@ -15,6 +15,7 @@ comments: false
  - linear searchに比べて計算量がlogで落ちる
    - 1024までの探索は2^10回で済む
  - pure pythonでも実装することができ、シンプルでわかりやすい
+ - また、ギリギリ条件が成立する領域の探索にも使うことができ、単調性があれば適応することができる
  - ランダウ表記では`O(n)`が`O(log n)`になる
 
 ## ライブラリによる使用例
@@ -114,3 +115,39 @@ else:
     print("Element is not present in array")
 ```
  - [参考](https://www.geeksforgeeks.org/python-program-for-binary-search/)
+
+  
+## 例; 下界(from left)から評価式が成立しているか確認する二分探索
+
+[AtCoder Regular Contest 050; B - 花束](https://atcoder.jp/contests/arc050/tasks/arc050_b)
+
+この式は上限が成立する最大値(最大の下界)を求めるもの  
+
+`ok`, `ng`構文が使えるので楽に二分探索できる
+
+```python
+R,B = list(map(int, input().split()))
+x,y = list(map(int, input().split()))
+ 
+def check(n):
+  r = R - n
+  b = B - n
+  if r<0 or b<0:
+    return False
+  num = r // (x-1) + b // (y-1)
+  return num >= n
+ 
+ok = 0
+ng = 10 ** 20
+while(True):
+  mid = (ok+ng) // 2
+  if check(mid):
+    ok = mid
+  else:
+    ng = mid
+  if ng - ok == 1:
+    break
+print(ok)
+```
+
+
