@@ -150,4 +150,44 @@ while(True):
 print(ok)
 ```
 
+## 例; ある値より大きいかつ、ある値より小さいのindexを求める
 
+[AtCoder Beginner Contest 077; C - Snuke Festival](https://atcoder.jp/contests/abc077/tasks/arc084_a)  
+
+bisectのモジュールだけでは`x値`以上のものを検索する関係上、正しい答えが得られない  
+そのため二分探索をフルスクラッチする必要がある  
+
+```python
+N = int(input())
+A = sorted(list(map(int,input().split())))
+B = list(map(int,input().split()))
+C = sorted(list(map(int,input().split())))
+
+ans = 0
+for n in range(N):
+    b = B[n]
+
+    l = 0
+    r = len(A)
+    while l < r:
+        mid = (l+r) // 2
+        if A[mid] < b:
+            l = mid + 1
+        else:
+            r = mid
+    ai = l
+
+    l = 0
+    r = len(C)
+    while l < r:
+        mid = (l+r) // 2
+        if b < C[mid]:
+            r = mid
+        else:
+            l = mid + 1
+    ci = l
+
+
+    ans += ai*(N-ci)
+print(ans)
+```
