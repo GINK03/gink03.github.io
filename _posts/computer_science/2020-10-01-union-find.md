@@ -15,12 +15,13 @@ comments: false
 ## 概要
  - 与えられた列に対して、リンク関係から２つ以上に分けられるとき、効率的に分割するアルゴリズム
  - **具体的な挙動**
-   - `-1` や特定の数で初期化して根構造を再起でたどってpushしていくというもの
+   - `-1` や特定の数で初期化して根構造を再帰でたどってrootを計算していくというもの
    - クラス分けや、所属分けなどで効率的
    - カスタマイズ要素多いのでどこをどういじるか
 	 - 高さを求める等のオプションが付くことがある
 
 ## シンプルな実装例
+以下の例では、最大のノードへのリンクを求めるというものになる  
 
 **クラス定義**
 ```python
@@ -43,10 +44,7 @@ class DisjointSet:
 ```python
 def main():
     vertices = ['a', 'b', 'c', 'd', 'e', 'h', 'i']
-    parent = {}
-
-    for v in vertices:
-        parent[v] = v
+    parent = vertices
 
     ds = DisjointSet(vertices, parent)
     print("Print all vertices in genesis: ")
@@ -65,56 +63,44 @@ main()
 
 
 ## 競プロによる例
- - https://atcoder.jp/contests/abc177/tasks/abc177_d
+ - ルートノードの参照料を知りたい場合もサポートできるように拡張したもの
+ - `-1`で初期化することがより多い
+ - ***参考***
+   - [AtCoder Beginner Contest 120; D - Decayed Bridges](https://atcoder.jp/contests/abc120/tasks/abc120_d)
+   - https://atcoder.jp/contests/abc177/tasks/abc177_d
 
 ```python
-import sys
-sys.setrecursionlimit(1500)
-
 class UnionFind:
-    def __init__(self, N):
-        # 最初はすべて根で初期化
-        self.par = [-1 for i in range(N)]
+    def __init__(self, n):
+        self.n = n
+        self.parents = [-1] * n
 
-    def root(self, x):
-        # print(x, self.par)
-        if self.par[x] == x:
-            return x
-        elif self.par[x] < 0:
-            # par = self.root(self.par[x])
-            # self.par[x] = x
+    def find(self, x):
+        if self.parents[x] < 0:
             return x
         else:
-            par = self.root(self.par[x])
-            self.par[x] = par
-            return par
-        
-    def unite(self, x, y):
-        x = self.root(x)
-        y = self.root(y)
+            # 積極的aggregation
+            self.parents[x] = self.find(self.parents[x])
+            return self.parents[x]
+
+    def union(self, x, y):
+        x = self.find(x)
+        y = self.find(y)
+
+        # 同じノード同士ならばなにもしない
         if x == y:
             return
-        if self.par[x] > self.par[y]:
-            x, y = y, x
-        self.par[x] += self.par[y]
-        self.par[y] = x
-        return True
 
-    def same(self, x, y):
-        rx = self.root(x)
-        ry = self.root(y)
-        return rx == ry
+        # 既知の親子で小さいものが左に来るべき
+        if self.parents[x] > self.parents[y]:
+            x, y = y, x
+
+        # rootノードを負の値で参照量をカウントしたいため、このような+=が入っている
+        self.parents[x] += self.parents[y]
+        # rootノードでなければ、正のindex値を入れる
+        self.parents[y] = x
 
     def size(self, x):
-        return -self.par[self.root(x)]
-
-N,M=map(int,input().split())
-
-# union find構造を作る
-uf = UnionFind(N)
-for _ in range(M):
-    A,B=map(lambda x:int(x)-1, input().split())
-    uf.unite(A,B)
-
-print(-min(uf.par))
+        # rootノードの参照料を保存したものを取り出している
+        return -self.parents[self.find(x)]
 ```
