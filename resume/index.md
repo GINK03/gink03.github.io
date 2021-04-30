@@ -110,6 +110,9 @@ Introductory in Japanese and in English are mixed.
 	   - [Google Slides](https://coursera.org/share/ccab992ebaf962c9b2106a8ea8d3a96d)
 	   - [Google Meet and Google Chat](https://coursera.org/share/c2bcd6b322408dfcb5e217db0c74fa37)
    - **Kubernetes**
-	 - [Google Cloud Platform Fundamentals: Core Infrastructure](https://coursera.org/share/0d0cc0fe6510a40f7552016546667c9b)
-	 - [Architecting with Google Kubernetes Engine: Foundations](https://coursera.org/share/2b4b13b27514415941a2db4f62b21531)
+	 - [Architecting with Google Kubernetes Engine](https://coursera.org/share/99e52a5e457cab641963e6638145b62c)
+	   - [Google Cloud Platform Fundamentals: Core Infrastructure](https://coursera.org/share/0d0cc0fe6510a40f7552016546667c9b)
+	   - [Architecting with Google Kubernetes Engine: Foundations](https://coursera.org/share/2b4b13b27514415941a2db4f62b21531)
+	   - [Architecting with Google Kubernetes Engine: Workloads](https://coursera.org/share/0de2d2465482106d83c49f9e28c5a906)
+	   - [Architecting with Google Kubernetes Engine: Production](https://coursera.org/share/53d7c3ba01c2c9ceb2328916c8f57658)
   
