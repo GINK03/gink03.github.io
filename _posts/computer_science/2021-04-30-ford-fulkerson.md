@@ -19,6 +19,15 @@ comments: false
 
 ## pythonでの実装
 
+***例で用いるネットワーク***
+<div>
+  <img src="https://user-images.githubusercontent.com/4949982/116665592-ec723280-a9d4-11eb-8295-82431f90d9a3.png">
+</div>
+***例で用いたネットワークの最大の運送量***
+<div>
+  <img src="https://user-images.githubusercontent.com/4949982/116665580-ea0fd880-a9d4-11eb-8bfe-9e642e851222.png">
+</div>
+
 ```python
 from typing import Optional, Dict, List
 from typing import NewType
