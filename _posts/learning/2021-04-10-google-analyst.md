@@ -12,10 +12,12 @@ comments: false
  - `data`とは?
    - `words`
    - `事実のコレクション`
- - `Gap analysis`
-   - あるべき姿と現状の姿を分析すること
-   - 結論を導き出し、予測を行い、情報に基づいた意思決定を推進するためのデータの収集、変換、および編成
-   - A method for examining and evaluating the current state of a process in order to identify opportunities for improvement in the future
+
+## A
+ - `Action-oriented question`
+   - A question whose answers lead to change 
+ - `Algorithm`
+   - A process or set of rules followed for a specific task
  - `Analytics skills`
    - The qualities and characteristics associated with solving problems using facts
      - `curiosity`
@@ -33,12 +35,22 @@ comments: false
    - Analytical thinking involves identifying and defining a problem, then solving it by using data in an organized, step-by-step manner.
  - `Analyze phase of the data life cycle`
    - 最後のエンドポイントのこと、preprocessing等は含まない
+
+## B
+ - `Big data`
+   - Large, complex datasets typically involving long periods of time, which enable data analysts to address far-reaching business problems 
  - `Business task`
    - The question or problem data analysis answers for a business 
+
+## C
  - `Context`
    - The condition in which something exists or happens
  - `Correlation`
    - Correlation involves being able to identify a relationship between two or more pieces of data. A correlation is like a relationship. 
+
+## D
+ - `Dashboard`
+   - A tool that monitors live, incoming data
  - `Data design`
    - Analytical skills that involve how you organize information
  - `Data-driven decision-making`
@@ -54,16 +66,48 @@ comments: false
    - The graphical representation of data
  - `Data ecosystem`
    - The various elements that interact with one another in order to produce, manage, store, organize, analyze, and share data
+
+## F
  - `Fairness`
    - A quality of data analysis that does not create or reinforce bias 
+
+## G
+ - `Gap analysis`
+   - あるべき姿と現状の姿を分析すること
+   - 結論を導き出し、予測を行い、情報に基づいた意思決定を推進するためのデータの収集、変換、および編成
+   - A method for examining and evaluating the current state of a process in order to identify opportunities for improvement in the future
+
+## M
+ - `Metric`
+   - A single, quantifiable type of data that is used for measurement 
+ - `Metric goal`
+   - A measurable goal set by a company and evaluated using metrics
+
+## P
+ - `Problem domain`
+   - The area of analysis that encompasses every activity affecting or affected by a problem
+
+## Q
  - `Query language`
    - A computer programming language used to communicate with a database
+
+## R
  - `Root cause`
    - The reason why a problem occurs
+
+## S
  - `Stakeholders`
    - People who invest time and resources into a project and are interested in its outcome
+ - `Scope of work (SOW)`
+   - An agreed-upon outline of the tasks to be performed during a project
+ - `SMART methodology`
+   - A tool for determining a question’s effectiveness based on whether it is specific, measurable, action-oriented, relevant, and time-bound 
+
+## T
  - `Technical mindset`
    - The ability to break things down into smaller steps or pieces and work with them in an orderly and logical way
+
+## U
  - `Understanding context`
    - The analytical skill that has to do with how you group things into categories
 
@@ -148,4 +192,17 @@ comments: false
 
 <div>
   <img src="https://user-images.githubusercontent.com/4949982/115176398-fb6d0100-a107-11eb-9172-19ca7158317a.png">
+</div>
+
+
+## 魅力のあるダッシュボード
+
+<div>
+  <img src="https://user-images.githubusercontent.com/4949982/116779616-60ced380-aab2-11eb-9a7d-1dad7bc0c0a9.png">
+</div>
+
+## データの大小
+
+<div>
+  <img src="https://user-images.githubusercontent.com/4949982/116779810-7c86a980-aab3-11eb-95f1-29027b171b2d.png">
 </div>
