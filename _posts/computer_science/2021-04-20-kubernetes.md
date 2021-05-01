@@ -83,6 +83,12 @@ $ kubectl get hpa
 $ kubectl apply -f ./$new-nginx-pod.yaml
 ```
 
+**namespaceを指定してapply**
+```console
+$ kubectl apply -f ./my-pod.yaml --namespace=$production
+```
+ - yamlの`metadata`に`namespace: $production`を設定してもいい
+
 ## デプロイメントを作成する
 
 ```console
@@ -105,6 +111,13 @@ $ kubectl autoscale deployment $web --max 4 --min 1 --cpu-percent 1
 
 ```console
 $ kubectl rollout pause deployment 
+```
+
+## rollbindingする
+
+***admin権限をbinding***
+```console
+$ kubectl create clusterrolebinding cluster-admin-binding --clusterrole cluster-admin --user $USERNAME_EMAIL
 ```
 
 # yamlのパラメータの設定
@@ -188,4 +201,13 @@ spec:
         - containerPort: 8080
           protocol: TCP
 
+```
+
+## namespaceを作成
+
+```yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: production
 ```
