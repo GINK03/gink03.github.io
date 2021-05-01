@@ -150,6 +150,36 @@ while(True):
 print(ok)
 ```
 
+## 例; 最大値のリストの最小値の最大値を知りたい
+`min(max(e0, e1,...), max(f0, f1,...), ...)`を知りたいような場合、機械的な操作が入るので二分探索ができるような気がしないが、実際は各々の構成要素が`k`以上であることを求める二分探索にすることができる  
+感覚的には結びつかないので、何らか工夫する必要がある  
+[ZONeエナジー プログラミングコンテスト “HELLO SPACE”; C - MAD TEAM](https://atcoder.jp/contests/zone2021/editorial/1197)
+
+```python
+
+N = int(input())
+A = [tuple(map(int, input().split())) for i in range(N)]
+def check(x):
+    s = set()
+    for a in A:
+        s.add(sum(1 << i for i in range(5) if a[i] >= x))
+    for x in s:
+        for y in s:
+            for z in s:
+                if x | y | z == 31:
+                    return True
+    return False
+ok = 0
+ng = 10**9 + 1
+while ng - ok > 1:
+    cen = (ok + ng) // 2
+    if check(cen):
+        ok = cen
+    else:
+        ng = cen
+print(ok)
+```
+
 ## 例; ある値より大きいかつ、ある値より小さいのindexを求める
 
 [AtCoder Beginner Contest 077; C - Snuke Festival](https://atcoder.jp/contests/abc077/tasks/arc084_a)  
