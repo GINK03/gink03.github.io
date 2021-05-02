@@ -98,6 +98,7 @@ Introductory in Japanese and in English are mixed.
 	 - [Serverless Firebase Development](https://www.linkedin.com/posts/gimpei-kobayashi-208bba2a_serverless-firebase-development-activity-6788833955950010368-lnko)
    - **Google Data Analytics**
 	 - [Foundations: Data, Data, Everywhere](https://coursera.org/share/7b708b3aca16db14ac4177ee2e34d6ee)
+	 - [Ask Questions to Make Data-Driven Decisions](https://coursera.org/share/0958beba44fa9a845f51544efdb3cd97)
    - **競技プログラミング関連**
 	 - [アルゴリズム検定: Advanced Beginner](https://user-images.githubusercontent.com/4949982/115851756-42d5f300-a462-11eb-84a6-985baa4830be.png)
    - **Google Workspace関連**
