@@ -47,6 +47,9 @@ comments: false
    - The condition in which something exists or happens
  - `Correlation`
    - Correlation involves being able to identify a relationship between two or more pieces of data. A correlation is like a relationship. 
+ - `Continuous data`
+   - Data that is measured and can have almost any numeric value
+
 
 ## D
  - `Dashboard`
@@ -82,10 +85,23 @@ comments: false
    - A single, quantifiable type of data that is used for measurement 
  - `Metric goal`
    - A measurable goal set by a company and evaluated using metrics
+ - `Measurable question`
+   - A question whose answers can be quantified and assessed
+
+## O
+ - `Observation`
+   - The attributes that describe a piece of data contained in a row of a table
+ - `Ordinal data`
+   - Qualitative data with a set order or scale
+ - `Ownership`
+   - The aspect of data ethics that presumes individuals own the raw data they provide and have primary control over its usage, processing, and sharing 
+
 
 ## P
  - `Problem domain`
    - The area of analysis that encompasses every activity affecting or affected by a problem
+ - `Problem types`
+   - The various problems that data analysts encounter, including categorizing things, discovering connections, finding patterns, identifying themes, making predictions, and spotting something unusual
 
 ## Q
  - `Query language`
