@@ -53,3 +53,22 @@ def has_bit(n, i):
   return (n & (1<<i) > 0)
 ```
 
+## 10進数を2進数のリストに変換する
+
+```python
+>>> n = 10
+>>> b = [n >> i & 1 for i in range(n.bit_length()-1,-1,-1)]
+>>> b
+[1, 0, 1, 0]
+```
+
+## 2進数のリストを10進数に変換する
+
+```python
+>>> b
+[1, 0, 1, 0]
+>>> [(x * 1<<i) for i, x in enumerate(reversed(b))]
+[0, 2, 0, 8]
+>>> sum([(x * 1<<i) for i, x in enumerate(reversed(b))])
+10
+```
