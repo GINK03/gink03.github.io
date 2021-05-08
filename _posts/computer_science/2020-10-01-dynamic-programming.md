@@ -17,13 +17,17 @@ comments: false
  - 全組み合わせせの探索としても使え、その場合二次元マトリックスを作成する
 
 ## Money Change Again
- - **要点**
-   - `math.inf`を使用して初期化する
-   - 前の入力から最もコイン数が小さいものを選択する
+
+**問題**  
 <div>
   <img src="https://user-images.githubusercontent.com/4949982/112585301-e53b9000-8e3c-11eb-9cd1-017295283630.png">
 </div>
+ 
+**解説**  
+ - `math.inf`を使用して初期化する
+ - 前の入力から最もコイン数が小さいものを選択する
 
+**回答**  
 ```python
 import math
 
@@ -40,14 +44,18 @@ print(minCoins[money])
 ```
 
 ## Primitive Calculator
- - **要点**
-   - `math.inf`を使用して初期化する
-   - 前の状態が特定の数字で割り切れることで場合分けを行う
-   - `n`数分のリストを作成して初期化する
+
+**問題**  
 <div>
   <img src="https://user-images.githubusercontent.com/4949982/112586241-c3dba380-8e3e-11eb-9104-a5b767204c76.png">
 </div>
+ 
+**解説**  
+ - `math.inf`を使用して初期化する
+ - 前の状態が特定の数字で割り切れることで場合分けを行う
+ - `n`数分のリストを作成して初期化する
 
+**回答**  
 ```python
 import math
 n = int(input())
@@ -76,8 +84,15 @@ while n!=1:
 print(' '.join([str(i) for i in nums][::-1]))
 ```
 
-## e.g. https://atcoder.jp/contests/abc179/tasks/abc179_d
+## 例; 特定の移動方があるとき、目的地につくまで移動法は何通りあるか
 
+**問題**  
+[AtCoder Beginner Contest 179; D - Leaping Tak](https://atcoder.jp/contests/abc179/tasks/abc179_d)  
+
+**解説**  
+最初を`1`としたテーブルを作成し、そこから何通りあるかを考える  
+
+**回答**  
 ```python
 N,K = map(int,input().split())
 section = []
