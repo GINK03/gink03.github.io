@@ -14,9 +14,28 @@ comments: false
 ## 概要
  - 具体例を例示しつつ説明する
  - 多くの解決法として、listやvectorを作成し、inf等を入力し、前の入力から今の入力の最小や最大を取得する
- - 全組み合わせせの探索としても使え、その場合二次元マトリックスを作成する
+ - **適応例**
+   - 全組み合わせせの探索としても使る
+	 - その場合二次元マトリックスを作成する
+   - 手順を踏んで計算すると`O(n^3)`や`O(n^2)`の計算になってしまうような場合
+	 - [小さいサンプルから一般化すると動的計画法で得られるように導くことができる](#例; まともに計算するとO(n^3)になるのをO(n)に変換する)
 
-## Money Change Again
+## 例; まともに計算するとO(n^3)になるのをO(n)に変換する
+
+**問題**
+[京セラプログラミングコンテスト2021; E - Patisserie ABC 2](https://atcoder.jp/contests/abc200/tasks/abc200_e)
+
+**解説**
+小さいサンプルで試すと、インプットが大きいほうが長い配列になることが確認できる  
+配列の作成され方にも法則性がありそうである  
+法則性は動的計画法で作成可能である  
+
+**回答**
+[小さいサンプルでの試行と回答](https://colab.research.google.com/drive/1S1IJ7uUOhJtByHrQzlNjEziYbTEc3sMS?usp=sharing)  
+
+
+
+## 例; Money Change Again
 
 **問題**  
 <div>
@@ -43,7 +62,7 @@ for i in range(1, money+1):
 print(minCoins[money])
 ```
 
-## Primitive Calculator
+## 例; Primitive Calculator
 
 **問題**  
 <div>
