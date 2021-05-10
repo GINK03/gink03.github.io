@@ -58,3 +58,7 @@ for i in permute(a, 0, n-1):
     pass
 ```
 
+## 早いpermutaionの利用の仕方
+ 1. ライブラリを用いる
+ 2. permutationする対象はindexのリストを対象とする
+ 3. 実態を参照するときはpermutaionされたindexで参照する
