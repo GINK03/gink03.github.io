@@ -20,20 +20,36 @@ comments: false
    - 手順を踏んで計算すると`O(n^3)`や`O(n^2)`の計算になってしまうような場合
 	 - [小さいサンプルから一般化すると動的計画法で得られるように導くことができる](#例; まともに計算するとO(n^3)になるのをO(n)に変換する)
 
+---
+
 ## 例; まともに計算するとO(n^3)になるのをO(n)に変換する
 
-**問題**
+**問題**  
 [京セラプログラミングコンテスト2021; E - Patisserie ABC 2](https://atcoder.jp/contests/abc200/tasks/abc200_e)
 
-**解説**
+**解説**  
 小さいサンプルで試すと、インプットが大きいほうが長い配列になることが確認できる  
 配列の作成され方にも法則性がありそうである  
 法則性は動的計画法で作成可能である  
 
-**回答**
-[小さいサンプルでの試行と回答](https://colab.research.google.com/drive/1S1IJ7uUOhJtByHrQzlNjEziYbTEc3sMS?usp=sharing)  
+**回答**  
+ - [小さいサンプルでの試行と回答](https://colab.research.google.com/drive/1S1IJ7uUOhJtByHrQzlNjEziYbTEc3sMS?usp=sharing)  
 
+---
 
+## 例; 中間的な最適解を与えながら計算する
+
+**問題**  
+[AtCoder Beginner Contest 197; E - Traveler](https://atcoder.jp/contests/abc197/tasks/abc197_e)  
+
+**解説**  
+中間的な最適解が色を選ぶたびに得られる  
+この中間的な最適解を次のステップの最適解を構築する  
+
+**回答**  
+ - [colab](https://colab.research.google.com/drive/10qgyGooCuoGIgd6db2bn_AyKFy8fHyl1?usp=sharing)
+
+---
 
 ## 例; Money Change Again
 
@@ -61,6 +77,8 @@ for i in range(1, money+1):
                 minCoins[i] = coins
 print(minCoins[money])
 ```
+
+---
 
 ## 例; Primitive Calculator
 
@@ -103,6 +121,8 @@ while n!=1:
 print(' '.join([str(i) for i in nums][::-1]))
 ```
 
+---
+
 ## 例; 特定の移動方があるとき、目的地につくまで移動法は何通りあるか
 
 **問題**  
@@ -140,8 +160,9 @@ for i in range(2,N+1):
 print(dp[N] % MOD)
 ```
 
+---
 
-## e.g. AtCoder Typical DP A
+## 例;  AtCoder Typical DP A
  - [link](https://atcoder.jp/contests/tdpc/tasks/tdpc_contest)
 
 縦積みしたvectorをイメージして上から次の数を考慮するしない、次で考慮したらどの値(indexで表現している)になるかをdpで計算している  
