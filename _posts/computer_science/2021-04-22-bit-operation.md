@@ -51,11 +51,18 @@ bit列で考えると、右にシフトするのと同義
 
 ## 応用; bit列の共起
 
-`n`の整数で表されるbit列に要素`i`が含まれるかどうかを判定する
+`n`の整数で表されるbit列に整数`i`番の要素`n`の中に含まれるかどうかを判定する  
 
 ```python
 def has_bit(n, i):
   return (n & (1<<i) > 0)
+```
+
+または
+
+```python
+def has_j_index(n, i):
+  return (n>>i) & 1 == 1:
 ```
 
 ## 応用; bit全探索
@@ -79,6 +86,38 @@ for i in range(all_pattern):
     ans = max(ans, acc)
 print(ans) # 36, print(sum([a for a in A if a >= 0]))と等しくなる
 ```
+
+## 例; bit全探索
+
+brute-froceで仕切りのパターンを列挙するときにも用いることができる  
+
+`nCn + nCn-1 + ... + nC1`の列挙と等しい  
+
+**問題**  
+[AtCoder Beginner Contest 197; C - ORXOR](https://atcoder.jp/contests/abc197/tasks/abc197_c)  
+
+**回答**  
+
+```python
+N=int(input())
+A=list(map(int,input().split()))
+
+import math
+ans = math.inf
+
+patterns = 1<<N
+for i in range(1, patterns):
+    tmp, total = 0, 0
+    for j in range(N):
+        tmp |= A[j]
+        if i&(1<<j) > 0:
+            total ^= tmp
+            tmp = 0
+    total ^= tmp
+    ans = min(ans, total)
+print(ans)
+```
+
 
 ## 10進数を2進数のリストに変換する
 
