@@ -13,7 +13,8 @@ comments: false
 
 ## python
 
-**10進数を任意のN進数のリストに変換する**
+**10進数を任意のN進数のリストに変換する**  
+
 ```python
 def decimal_to_base(x: int, base: int) -> list:
     if x//base:
@@ -50,3 +51,18 @@ def decimal_to_base_str(x: int, base: int) -> list:
 x = decimal_to_base_str(111111, 16)
 assert x == ['1', 'B', '2', '0', '7']
 ```
+
+**数字列をn進数として解釈し直す**  
+
+```python
+def anybase_to_decimal(x: int, k: int):
+    '''
+    x: n進数数字
+    k: 変換元とする進数
+    '''
+    dec = 0
+    for idx, ch in enumerate(reversed(str(x))):
+        dec += int(ch) * (k**idx)
+    return dec
+```
+ - [colab](https://colab.research.google.com/drive/1TNH7bTL1HRAF9_lgfOe1N0nAwDx1PQBX?usp=sharing)

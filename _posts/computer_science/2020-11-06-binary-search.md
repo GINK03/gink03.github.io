@@ -119,11 +119,14 @@ else:
   
 ## 例; 下界(from left)から評価式が成立しているか確認する二分探索
 
-[AtCoder Regular Contest 050; B - 花束](https://atcoder.jp/contests/arc050/tasks/arc050_b)
+**問題**  
+[AtCoder Regular Contest 050; B - 花束](https://atcoder.jp/contests/arc050/tasks/arc050_b)  
+[AtCoder Beginner Contest 192; D - Base n](https://atcoder.jp/contests/abc192/tasks/abc192_d)  
+ - [colab](https://colab.research.google.com/drive/1Olg30PbHN4f7eY-LK3CpaVjrmBliiQmP?usp=sharing)
 
+**解説**  
 この式は上限が成立する最大値(最大の下界)を求めるもの  
-
-`ok`, `ng`構文が使えるので楽に二分探索できる
+`ok`, `ng`構文が使えるので楽に二分探索できる  
 
 ```python
 R,B = list(map(int, input().split()))
@@ -216,8 +219,8 @@ for n in range(N):
         else:
             l = mid + 1
     ci = l
-
-
     ans += ai*(N-ci)
 print(ans)
 ```
+
+
