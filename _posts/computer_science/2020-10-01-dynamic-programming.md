@@ -22,6 +22,31 @@ comments: false
 
 ---
 
+## 例; もっとも基礎的な部分和問題
+
+**問題**  
+[Typical DP Contest; A - コンテスト](https://atcoder.jp/contests/tdpc/tasks/tdpc_contest)  
+
+**回答**  
+```python
+N=int(input())
+A=list(map(int,input().split()))
+
+POINTS_MAX = 100*100 + 10
+dp = [[0]*POINTS_MAX for _ in range(len(A)+1)]
+dp[0][0] = 1
+for i in range(len(A)):
+    for j in range(POINTS_MAX):
+        dp[i+1][j] |= dp[i][j] # 上の状態と同じ
+        if j >= A[i]: # itemを選択できるならば
+            dp[i+1][j] |= dp[i][j-A[i]] # 前のアイテムが有るならばtrueになる(アイテムがtrueをフォワードできる)
+
+print(sum(dp[len(A)]))
+```
+
+
+---
+
 ## 例; まともに計算するとO(n^3)になるのをO(n)に変換する
 
 **問題**  
@@ -33,7 +58,7 @@ comments: false
 法則性は動的計画法で作成可能である  
 
 **回答**  
- - [小さいサンプルでの試行と回答](https://colab.research.google.com/drive/1S1IJ7uUOhJtByHrQzlNjEziYbTEc3sMS?usp=sharing)  
+ - [colab](https://colab.research.google.com/drive/1S1IJ7uUOhJtByHrQzlNjEziYbTEc3sMS?usp=sharing)  
 
 ---
 
