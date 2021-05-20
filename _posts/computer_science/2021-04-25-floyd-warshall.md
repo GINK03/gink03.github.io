@@ -27,7 +27,6 @@ import math
 N, M = map(int, input().split())
 
 mat = [[math.inf] * N for _ in range(N)]
-
 for _ in range(0, M):
     u, v, c = map(int, input().split())
     mat[u][v] = c
@@ -50,4 +49,44 @@ for i in range(0, N):
         ans += mat[i][j]
 
 print(ans)
+```
+
+## 例; 負の閉路を含むワーシャルフロイド  
+**問題**  
+[All Pairs Shortest Path](https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_C&lang=ja)  
+**解説**  
+ - 負の閉路を含む状態とは自分自身の参照がマイナスになる結果がワーシャルフロイドによって得られることである  
+
+**解答**  
+```python
+import math
+
+N, M = map(int, input().split())
+mat = [[math.inf] * N for _ in range(N)]
+
+for _ in range(0, M):
+    u, v, c = map(int, input().split())
+    mat[u][v] = c
+
+# 同じノード上の距離は0とする
+for i in range(0, N):
+    mat[i][i] = 0
+
+# ワーシャルフロイド法
+for k in range(0, N):
+    for x in range(0, N):
+        for y in range(0, N):
+            mat[x][y] = min(mat[x][y], mat[x][k] + mat[k][y])
+
+# 負の閉路(negative cycle)を検出
+flag = False
+for i in range(N):
+    if mat[i][i] < 0:
+        flag = True
+
+if flag:
+    print("NEGATIVE CYCLE")
+else:
+    for elms in mat:
+        print(*[elm if elm != math.inf else "INF" for elm in elms])
 ```
