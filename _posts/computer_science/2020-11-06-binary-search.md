@@ -15,7 +15,8 @@ comments: false
  - linear searchに比べて計算量がlogで落ちる
    - 1024までの探索は2^10回で済む
  - pure pythonでも実装することができ、シンプルでわかりやすい
- - また、ギリギリ条件が成立する領域の探索にも使うことができ、単調性があれば適応することができる
+ - また、ギリギリ条件が成立する領域の探索にも使うことができる
+   - かんたんにも止まらない最小値・最大値を求めるとき、微分することや条件を変えることが求められる
  - ランダウ表記では`O(n)`が`O(log n)`になる
 
 ## ライブラリによる使用例
@@ -181,6 +182,36 @@ while ng - ok > 1:
     else:
         ng = cen
 print(ok)
+```
+
+## 例; 整数ではない解を持つ最大値を求める -> 微分して初めて負になる点を求める
+**問題**  
+[AtCoder Regular Contest 054; B - ムーアの法則](https://atcoder.jp/contests/arc054/tasks/arc054_b)  
+**解説**  
+整数ではない二分探索の例  
+左から見ていって初めて単調増加でなくなる点 ＝ 微分して初めてマイナスになる点を探す  
+**解答**  
+
+```python
+P = float(input())
+def f(x):
+    return x + P*(2**(-x/1.5))
+
+def check(n):
+    d = (10**-9)
+    return f(n+d) - f(n) < 0
+
+ok = 0
+ng = P
+while True:
+    mid = (ok + ng) / 2
+    if check(mid):
+        ok = mid
+    else:
+        ng = mid
+    if ng - ok < 10**-8:
+        break
+print(f(ok))
 ```
 
 ## 例; ある値より大きいかつ、ある値より小さいのindexを求める
