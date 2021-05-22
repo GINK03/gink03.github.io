@@ -2,14 +2,14 @@
 layout: post
 title: "combination_with_replacement"
 date: 2020-05-27
-excerpt: ""
-tags: [アルゴリズム]
+excerpt: "重複許可のcombination"
+computer_science: true
+tags: ["アルゴリズム"]
 comments: false
 ---
 
 # Combination With Replacement
  重複許可のcombination
-
  - 排反的でない
  - 特に、動的なリスト等を作成して、フィルターにするなどはアルゴリズム的にも計算量的にも大変重いので、これを使わないと美しく解けないなどがある
 
