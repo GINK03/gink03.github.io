@@ -18,7 +18,7 @@ comments: false
    - `-1` や特定の数で初期化して根構造を再帰でたどってrootを計算していくというもの
    - クラス分けや、所属分けなどで効率的
    - カスタマイズ要素多いのでどこをどういじるか
-	 - 高さを求める等のオプションが付くことがある
+     - 高さを求める等のオプションが付くことがある
 
 ## シンプルな実装例
 以下の例では、最大のノードへのリンクを求めるというものになる  
@@ -74,7 +74,6 @@ class UnionFind:
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
-
     def find(self, x):
         if self.parents[x] < 0:
             return x
@@ -82,25 +81,42 @@ class UnionFind:
             # 積極的aggregation
             self.parents[x] = self.find(self.parents[x])
             return self.parents[x]
-
     def union(self, x, y):
         x = self.find(x)
         y = self.find(y)
-
         # 同じノード同士ならばなにもしない
         if x == y:
             return
-
         # 既知の親子で小さいものが左に来るべき
         if self.parents[x] > self.parents[y]:
             x, y = y, x
-
         # rootノードを負の値で参照量をカウントしたいため、このような+=が入っている
         self.parents[x] += self.parents[y]
         # rootノードでなければ、正のindex値を入れる
         self.parents[y] = x
-
     def size(self, x):
         # rootノードの参照料を保存したものを取り出している
         return -self.parents[self.find(x)]
+    def same(self, x, y):
+        # 同じルートを持つか
+        return self.find(x) == self.find(y)
+    def roots(self):
+        # どのノードがrootとなるか
+        return [i for i, x in enumerate(self.parents) if x < 0]
+    def group_count(self):
+        # グループの個数
+        return len(self.roots())
 ```
+
+
+### 例; グループ間の行き来の量がわかると平衡状態かどうかを判定できる例
+
+**問題**  
+[AtCoder Regular Contest 106; B - Values](https://atcoder.jp/contests/arc106/tasks/arc106_b)  
+
+**説明**  
+変化可能かは閉区間を求めることで判明する  
+閉区間はunion findで知ることができる  
+
+**解答**  
+[提出](https://atcoder.jp/contests/arc106/submissions/22967713)
