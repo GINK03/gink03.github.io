@@ -17,8 +17,13 @@ comments: false
  - メモ化の一種に見える
  - 2で割っていくので、計算量は`O(n log n)`
 
+
 ## 参考
-[Qiita; 非再帰型Segment TreeのPythonによる実装](https://qiita.com/dn6049949/items/afa12d5d079f518de368)  
+ - [ACL-for-python](https://github.com/shakayami/ACL-for-python/blob/master/segtree.py)
+   - [使い方](https://github.com/shakayami/ACL-for-python/wiki/segtree)
+ - [Qiita; 非再帰型Segment TreeのPythonによる実装](https://qiita.com/dn6049949/items/afa12d5d079f518de368)  
+
+
 
 ## 例; 特定の要素を外すと最大になる
 [AtCoder Beginner Contest 125; C - GCD on Blackboard](https://atcoder.jp/contests/abc125/tasks/abc125_c)
@@ -29,48 +34,141 @@ comments: false
 
 **回答**
 ```python
-class SegmentTree:
-    def __init__(self, size_n, func=lambda x,y : x+y, default=0):
-        self.size_n = 2**(size_n-1).bit_length() # 多次元のテーブルの大きさ
-        self.default = default
-        self.dat = [default]*(self.size_n*2-1) # 多次元のテーブル
-        self.func = func
+class segtree():
+    n=1
+    size=1
+    log=2
+    d=[0]
+    op=None
+    e=10**15
+    def __init__(self,V,OP,E):
+        self.n=len(V)
+        self.op=OP
+        self.e=E
+        self.log=(self.n-1).bit_length()
+        self.size=1<<self.log
+        self.d=[E for i in range(2*self.size)]
+        for i in range(self.n):
+            self.d[self.size+i]=V[i]
+        for i in range(self.size-1,0,-1):
+            self.update(i)
+    def set(self,p,x):
+        assert 0<=p and p<self.n
+        p+=self.size
+        self.d[p]=x
+        for i in range(1,self.log+1):
+            self.update(p>>i)
+    def get(self,p):
+        assert 0<=p and p<self.n
+        return self.d[p+self.size]
+    def prod(self,l,r):
+        assert 0<=l and l<=r and r<=self.n
+        sml=self.e
+        smr=self.e
+        l+=self.size
+        r+=self.size
+        while(l<r):
+            if (l&1):
+                sml=self.op(sml,self.d[l])
+                l+=1
+            if (r&1):
+                smr=self.op(self.d[r-1],smr)
+                r-=1
+            l>>=1
+            r>>=1
+        return self.op(sml,smr)
+    def all_prod(self):
+        return self.d[1]
+    def max_right(self,l,f):
+        assert 0<=l and l<=self.n
+        assert f(self.e)
+        if l==self.n:
+            return self.n
+        l+=self.size
+        sm=self.e
+        while(1):
+            while(l%2==0):
+                l>>=1
+            if not(f(self.op(sm,self.d[l]))):
+                while(l<self.size):
+                    l=2*l
+                    if f(self.op(sm,self.d[l])):
+                        sm=self.op(sm,self.d[l])
+                        l+=1
+                return l-self.size
+            sm=self.op(sm,self.d[l])
+            l+=1
+            if (l&-l)==l:
+                break
+        return self.n
+    def min_left(self,r,f):
+        assert 0<=r and r<self.n
+        assert f(self.e)
+        if r==0:
+            return 0
+        r+=self.size
+        sm=self.e
+        while(1):
+            r-=1
+            while(r>1 & (r%2)):
+                r>>=1
+            if not(f(self.op(self.d[r],sm))):
+                while(r<self.size):
+                    r=(2*r+1)
+                    if f(self.op(self.d[r],sm)):
+                        sm=self.op(self.d[r],sm)
+                        r-=1
+                return r+1-self.size
+            sm=self.op(self.d[r],sm)
+            if (r& -r)==r:
+                break
+        return 0
+    def update(self,k):
+        self.d[k]=self.op(self.d[2*k],self.d[2*k+1])
 
-    def update(self, i, x):
-        i += self.size_n-1 # iを一番右側の次元(ボトムのテーブル)に指定
-        self.dat[i] = x # 最初に指定された値を入れる
-        while i > 0:
-            i = (i-1) >> 1 # 左の次元に寄る
-            self.dat[i] = self.func(self.dat[i*2+1], self.dat[i*2+2]) # 右の次元から左の次元の内容を計算
-
-    def query(self, l, r, k=0, L=0, R=None):
-        if R is None:
-            R = self.size_n
-        if R <= l or r <= L:
-            return self.default
-        if l <= L and R <= r:
-            return self.dat[k]
-        else:
-            lres = self.query(l, r, k*2+1, L, (L+R) >> 1) # 探索範囲をシフト
-            rres = self.query(l, r, k*2+2, (L+R) >> 1, R) # 探索範囲をシフト
-            return self.func(lres, rres)
-
-def gcd(a, b):
-    if a == 0:
-        return b
-    else:
-        return gcd(b%a, a)
-
+import math
 N = int(input())
-A = list(map(int, input().split()))
-st = SegmentTree(size_n=N, func=gcd)
-for i in range(N):
-    st.update(i, A[i])
+*A, = map(int, input().split())
 
-ans = 1
-for i in range(N):
-    left = st.query(0, i)
-    right = st.query(i+1, N)
-    ans = max(ans, gcd(left, right))
-print(ans)
+st = segtree(A, math.gcd, 0)
+
+ans = []
+for i in range(0, N):
+    if i == 0:
+        res = st.prod(1, N)
+    elif i == N-1:
+        res = st.prod(0, N-1)
+    else:
+        res = math.gcd(st.prod(0, i), st.prod(i+1, N))
+        # print( st.prod(0, i), st.prod(i+1, N))
+    ans.append(res)
+
+print(max(ans))
 ```
+
+
+## 例; 毎回範囲を判定するような場合のカウント
+
+**問題**  
+[ACL Beginner Contest; D - Flat Subsequence](https://atcoder.jp/contests/abl/tasks/abl_d)  
+
+**解説**  
+題意を満たす最大の数をカウントすると読み替える  
+毎回、与えられた数字`A`の周辺`K`のカウントを行う  
+素直に考えると `O(n*m)`かかるが、`segtree`を用いることで計算量を圧縮できる  
+
+**解答**  
+[submission](https://atcoder.jp/contests/abl/submissions/22982130)  
+
+
+## 例; 範囲内の最小値を求める問題  
+
+**問題**  
+[No.875 Range Mindex Query](https://yukicoder.me/problems/no/875)  
+
+**解説**  
+セグメント木はインデックス情報を返せないので一工夫入れる必要がる  
+
+**解答**  
+[submission](https://yukicoder.me/submissions/661815)  
+
