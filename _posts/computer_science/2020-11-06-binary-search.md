@@ -19,28 +19,46 @@ comments: false
    - かんたんにも止まらない最小値・最大値を求めるとき、微分することや条件を変えることが求められる
  - ランダウ表記では`O(n)`が`O(log n)`になる
 
+## テンプレート
+
+```python
+def check(n):
+    return "boolean"
+
+
+ok = 0
+ng = 10 ** 20
+while True:
+    mid = (ok + ng) // 2
+    if check(mid):
+        ok = mid
+    else:
+        ng = mid
+    if ng - ok == 1:
+        break
+print(ok)
+```
+
 ## ライブラリによる使用例
 
 **cpp**   
-上界   
 ```cpp
 std:upper_bound(vec.begin(), vec.end(), something_value);
 ```
 
-下界  
 ```cpp
 std:lower_bound(vec.begin(), vec.end(), something_value);
 ```
 
 **python**  
-上界   
+value以下の最大の要素位置  
 ```python
-bisect.bisect_right(vec, something_value)
+bisect.bisect_right(vec, value)
 ```
 
-下界  
+valie以上の最小の要素位置  
 ```python
-bisect.bisect_left(vec, something_value)
+bisect.bisect_left(vec, value)
 ```
 
 **pythonでの例**  
