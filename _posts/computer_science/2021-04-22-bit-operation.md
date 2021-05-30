@@ -15,19 +15,26 @@ bit全探索等の広い応用先がある
 
 ## 演算
 
-### &
+### &(and)
 
 ```python
 2 & 6 
 => 2
 ```
 
-### | 
+### |(or)
 
 ```python
 2 | 6
 => 6
 ```
+
+### ^(xor)
+```python
+2^6 == (2|6)-(2&6)
+=> True
+```
+ - [理論記号とベン図が参考になる](http://www.eonet.ne.jp/~imagawa/denki_kiso/ronrikairo.html)
 
 ### <<
 
