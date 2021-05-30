@@ -38,6 +38,9 @@ class RollingHash():
         return (self.h[r] - self.h[l] * self.pw[r-l]) % self.mod
 ```
 
+## 実験例
+ - [colab](https://colab.research.google.com/drive/1Fxk10t8sKlcHi59duSeySuBDb81VYHnI?usp=sharing)
+
 ## 例; C++でrolling hashが期待される問題(pythonでは問題が生じにくい)
 
 **問題**  
