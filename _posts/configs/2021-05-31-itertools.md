@@ -38,6 +38,7 @@ arr = [1, 3, 5,]
 ptns = itertools.combinations_with_replacement(arr, 2)
 print(*ptns) # (1, 1) (1, 3) (1, 5) (3, 3) (3, 5) (5, 5)
 ```
+ - この実装は[dfsを用いた方法でも再現](https://atcoder.jp/contests/abc165/submissions/23133750)できる
 
 ## permutations
 
