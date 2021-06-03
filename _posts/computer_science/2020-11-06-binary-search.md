@@ -54,7 +54,7 @@ value以下の最大の要素位置
 bisect.bisect_right(vec, value)
 ```
 
-valie以上の最小の要素位置  
+value以上の最小の要素位置  
 ```python
 bisect.bisect_left(vec, value)
 ```
@@ -134,7 +134,7 @@ else:
  - [参考](https://www.geeksforgeeks.org/python-program-for-binary-search/)
 
   
-## 例; 下界(from left)から評価式が成立しているか確認する二分探索
+## 例; なんとかして評価式を作って評価式が成立しているか確認する二分探索
 
 **問題**  
 [AtCoder Regular Contest 050; B - 花束](https://atcoder.jp/contests/arc050/tasks/arc050_b)  
@@ -142,32 +142,33 @@ else:
  - [colab](https://colab.research.google.com/drive/1Olg30PbHN4f7eY-LK3CpaVjrmBliiQmP?usp=sharing)
 
 **解説**  
-この式は上限が成立する最大値(最大の下界)を求めるもの  
+この式は上限が成立する最大値を求めるもの  
 `ok`, `ng`構文が使えるので楽に二分探索できる  
 
 ```python
-R,B = list(map(int, input().split()))
-x,y = list(map(int, input().split()))
- 
+R,B=map(int,input().split())
+X,Y=map(int,input().split())
+
 def check(n):
-  r = R - n
-  b = B - n
-  if r<0 or b<0:
-    return False
-  num = r // (x-1) + b // (y-1)
-  return num >= n
- 
-ok = 0
-ng = 10 ** 20
-while(True):
-  mid = (ok+ng) // 2
-  if check(mid):
-    ok = mid
-  else:
-    ng = mid
-  if ng - ok == 1:
-    break
-print(ok)
+    r = R-n
+    b = B-n
+    if r < 0 or b < 0:
+        return False
+    if r//(X-1) + b//(Y-1) >= n:
+        return True
+    else:
+        return False
+
+
+def meguru_bisect(ng, ok):
+    while (abs(ok - ng) > 1):
+        mid = (ok + ng) // 2
+        if check(mid):
+            ok = mid
+        else:
+            ng = mid
+    return ok
+print(meguru_bisect(ng=10**20, ok=0))
 ```
 
 ## 例; 表題で説明されている指標ではなく、とりうる時間に着目して二分探索する例  
