@@ -19,6 +19,7 @@ comments: false
    - クラス分けや、所属分けなどで効率的
    - カスタマイズ要素多いのでどこをどういじるか
      - 高さを求める等のオプションが付くことがある
+   - 閉路の検出でも使うことができ、閉路が存在するとき、union時にparentの衝突が発生するのでそれを利用する
 
 ## シンプルな実装例
 以下の例では、最大のノードへのリンクを求めるというものになる  
@@ -70,10 +71,12 @@ main()
    - https://atcoder.jp/contests/abc177/tasks/abc177_d
 
 ```python
+import collections
 class UnionFind:
     def __init__(self, n):
         self.n = n
         self.parents = [-1] * n
+        self.has_cycles = [0] * n
     def find(self, x):
         if self.parents[x] < 0:
             return x
@@ -85,7 +88,9 @@ class UnionFind:
         x = self.find(x)
         y = self.find(y)
         # 同じノード同士ならばなにもしない
+        # ここに閉路情報を入れることができる
         if x == y:
+            self.has_cycles[x] = 1
             return
         # 既知の親子で小さいものが左に来るべき
         if self.parents[x] > self.parents[y]:
@@ -106,6 +111,15 @@ class UnionFind:
     def group_count(self):
         # グループの個数
         return len(self.roots())
+    def all_group_members(self) -> "Tuple[GroupMember, GroupCycle]":
+        # rootをkeyに子をvalueのlistに, 閉路情報も返す
+        group_members = collections.defaultdict(list)
+        for member in range(self.n):
+            group_members[self.find(member)].append(member)
+        group_cycle = collections.defaultdict(bool)
+        for group, members in group_members.items():
+            group_cycle[group] = True if any([self.has_cycles[member] for member in members]) else False
+        return group_members, group_cycle
 ```
 
 
@@ -120,3 +134,13 @@ class UnionFind:
 
 **解答**  
 [提出](https://atcoder.jp/contests/arc106/submissions/22967713)
+
+### 例; 閉路の検出
+**問題**  
+[AtCoder Regular Contest 037; B - バウムテスト](https://atcoder.jp/contests/arc037/tasks/arc037_b)  
+
+**解説**  
+dfsでも閉路チェックができるがコードをまとめたいときにはunion findが便利  
+
+**解答**  
+[提出](https://atcoder.jp/contests/arc037/submissions/23142427)
