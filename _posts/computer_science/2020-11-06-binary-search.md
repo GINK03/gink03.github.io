@@ -22,22 +22,20 @@ comments: false
 ## テンプレート
 
 ```python
-def check(n):
+def is_ok(n):
     return "boolean"
 
-
-ok = 0
-ng = 10 ** 20
-while True:
-    mid = (ok + ng) // 2
-    if check(mid):
-        ok = mid
-    else:
-        ng = mid
-    if ng - ok == 1:
-        break
-print(ok)
+def meguru_bisect(ng, ok):
+    while (abs(ok - ng) > 1):
+        mid = (ok + ng) // 2
+        if is_ok(mid):
+            ok = mid
+        else:
+            ng = mid
+    return ok
+print(meguru_bisect(0, 10**20))
 ```
+ - bisect_left, bisect_rightにしたいなどニーズに応じで`ng`, `ok`を反転したりする
 
 ## ライブラリによる使用例
 
@@ -171,6 +169,14 @@ while(True):
     break
 print(ok)
 ```
+
+## 例; 表題で説明されている指標ではなく、とりうる時間に着目して二分探索する例  
+
+**問題**  
+[No.1101 鼻水](https://yukicoder.me/problems/no/1101)
+
+**解答**  
+[提出](https://yukicoder.me/submissions/662725)
 
 ## 例; 最大値のリストの最小値の最大値を知りたい
 `min(max(e0, e1,...), max(f0, f1,...), ...)`を知りたいような場合、機械的な操作が入るので二分探索ができるような気がしないが、実際は各々の構成要素が`k`以上であることを求める二分探索にすることができる  
