@@ -23,6 +23,35 @@ comments: false
  - `max` -> `-inf`
  - `matrix` -> `単位行列`
 
+## 自分で基底を定義する
+加法などの条件を満たせそうなデータ構造として解釈できる時、自分で`__add__`を定義してセグ木に当てはめることができる  
+累積和や累積なんとかなどで解くときの代替手法としても使える  
+ - [参考](https://atcoder.jp/contests/abc098/tasks/arc098_a)
+
+```python
+N = int(input())
+S = input()
+
+class E:
+    def __init__(self, e, w):
+        self.E = e
+        self.W = w
+    def __add__(self, other):
+        return E(e=self.E + other.E, w=self.W+other.W)
+    def __repr__(self):
+        return f"E={self.E}, W={self.W}"
+e = E(0, 0)
+A = [E(e=0, w=1) if s == "W" else E(e=1, w=0) for s in S]
+OP = lambda x,y:x+y
+stree = Segtree(V=A, OP=OP, E=e )
+ans = float('inf')
+for i in range(N):
+    right = stree.prod(i+1, N)
+    left = stree.prod(0, i)
+    ans = min(ans, right.E + left.W)
+print(ans)
+```
+
 ## 参考
  - [ACL-for-python](https://github.com/shakayami/ACL-for-python/blob/master/segtree.py)
    - [使い方](https://github.com/shakayami/ACL-for-python/wiki/segtree)
