@@ -12,8 +12,9 @@ comments: false
 
 
 ## accumulate
+累積和を得る(numpyには累積積もある)  
 
-```python3
+```python
 import itertools
 arr = [1, 3, 5, 7, 9]
 cumsum = itertools.accumulate(arr)
@@ -67,6 +68,24 @@ for文のネストをflattenできるので便利
 import itertools
 ptns = itertools.product([1,2,3], ["a", "b"], [True, False])
 print(*ptns) # (1, 'a', True) (1, 'a', False) (1, 'b', True) (1, 'b', False) (2, 'a', True) (2, 'a', False) (2, 'b', True) (2, 'b', False) (3, 'a', True) (3, 'a', False) (3, 'b', True) (3, 'b', False)
+```
+
+## groupby
+pandasのgroupbyなどとは異なる挙動なので注意  
+連続するグループごとに集計することができる  
+
+```python
+bin_lst = [random.choice([0, 1]) for i in range(20)]
+print(bin_lst) # [0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1]
+
+for gk, viter in itertools.groupby(bin_lst):
+    print(gk, list(viter))
+# 0 [0, 0, 0]
+# 1 [1, 1]
+# 0 [0, 0]
+# 1 [1, 1, 1, 1, 1]
+# 0 [0, 0, 0, 0, 0, 0, 0]
+# 1 [1]
 ```
 
 ## count
