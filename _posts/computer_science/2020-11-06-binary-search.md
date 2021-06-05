@@ -61,17 +61,16 @@ bisect.bisect_left(vec, value)
 
 **pythonでの例**  
 ```python
->>> import bisect
->>> bisect.bisect_right([1,3,3,4,5], 2)
-1
->>> bisect.bisect_right([1,3,3,4,5], 1)
-1
->>> bisect.bisect_right([1,3,3,4,5], 3)
-3
->>> bisect.bisect_left([1,3,3,4,5], 3)
-1
->>> bisect.bisect_left([1,3,3,4,5], 4)
-3
+A = [1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5]
+print( bisect.bisect_left(A, 3), A[bisect.bisect_left(A, 3)] ) # 4 3 検索要素以下の値 (>=)
+
+print( bisect.bisect_right(A, 3), A[bisect.bisect_right(A, 3)] ) # 5 3.5 検索要素より最初に大きい値 (<)
+
+print( bisect.bisect(A, 3), A[bisect.bisect(A, 3)] ) # 5 3.5
+
+print( bisect.bisect_left(A, 0.5) ) # 0 1以下の要素であるから
+
+print( bisect.bisect_right(A, 6) ) # 9 満たす要素がないからインデックス以上
 ```
 
 **pythonでのキー(関数)を与えたレシピ**  
