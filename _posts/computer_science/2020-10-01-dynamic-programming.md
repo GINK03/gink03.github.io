@@ -22,6 +22,51 @@ comments: false
 
 ---
 
+## 例; 繰り返しのないナップサック問題
+**問題**  
+[DPL_1_B](https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_1_B)
+
+**解答**  
+```python
+N, W = map(int, input().split())
+
+VW = []
+for n in range(N):
+    v, w = map(int, input().split())
+    VW.append((v, w))
+
+dp = [[0]*(W+10) for _ in range(N+1)]
+for i, (v, w) in enumerate(VW):
+    for j in range(0, W+10):
+        if j >= w:
+            dp[i+1][j] = max(dp[i][j], dp[i][j-w] + v)
+        else:
+            dp[i+1][j] = dp[i][j]
+print(dp[-1][W])
+```
+
+---
+
+## 例; 繰り返しのあるナップサック問題
+**問題**  
+[DPL_1_A](https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_1_A)
+
+**解答**  
+```python
+N,M=map(int,input().split())
+A=list(map(int,input().split()))
+
+dp=[float('inf')]*(N+10)
+dp[0] = 0
+for a in A:
+    for j in range(len(dp)):
+        if j >= a:
+            dp[j] = min(dp[j], dp[j-a] + 1)
+print(dp[N])
+```
+
+---
+
 ## 例; もっとも基礎的な部分和問題
 
 **問題**  
