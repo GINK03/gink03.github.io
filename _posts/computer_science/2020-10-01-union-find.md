@@ -24,44 +24,6 @@ comments: false
 ## シンプルな実装例
 以下の例では、最大のノードへのリンクを求めるというものになる  
 
-**クラス定義**
-```python
-class DisjointSet:
-    def __init__(self, vertices, parent):
-        self.vertices = vertices
-        self.parent = parent
-
-    def find(self, item):
-        if self.parent[item] == item:
-            return item
-        else:
-            return self.find(self.parent[item])
-
-    def union(self, set1, set2):
-        self.parent[set1] = set2
-```
-
-**動作確認**
-```python
-def main():
-    vertices = ['a', 'b', 'c', 'd', 'e', 'h', 'i']
-    parent = vertices
-
-    ds = DisjointSet(vertices, parent)
-    print("Print all vertices in genesis: ")
-    ds.union('b', 'd')
-
-    ds.union('h', 'b')
-    print(ds.find('h')) # prints d (OK)
-    ds.union('h', 'i')
-    print(ds.find('i')) # prints i (expecting d)
-
-main()
-```
-
-**colabによる挙動の確認**
- - [colab](https://colab.research.google.com/drive/1FkGrNChetNH2w3ZjrItNTDSOZuwp9SbR?usp=sharing)
-
 
 ## 競プロによる例
  - ルートノードの参照料を知りたい場合もサポートできるように拡張したもの
@@ -122,6 +84,7 @@ class UnionFind:
         return group_members, group_cycle
 ```
 
+---
 
 ### 例; グループ間の行き来の量がわかると平衡状態かどうかを判定できる例
 
@@ -135,6 +98,8 @@ class UnionFind:
 **解答**  
 [提出](https://atcoder.jp/contests/arc106/submissions/22967713)
 
+---
+
 ### 例; 閉路の検出
 **問題**  
 [AtCoder Regular Contest 037; B - バウムテスト](https://atcoder.jp/contests/arc037/tasks/arc037_b)  
@@ -144,3 +109,14 @@ dfsでも閉路チェックができるがコードをまとめたいときに�
 
 **解答**  
 [提出](https://atcoder.jp/contests/arc037/submissions/23142427)
+
+---
+
+### 例; ドット状のグラフの結合判定  
+ドット上のものもunion findが適応可能なグラフであると気づけると早い  
+
+**問題**  
+[競プロ典型 90 問; 012 - Red Painting](https://atcoder.jp/contests/typical90/tasks/typical90_l)
+
+**解答**  
+[提出](https://atcoder.jp/contests/typical90/submissions/23199867)
