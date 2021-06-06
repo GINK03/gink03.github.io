@@ -1,0 +1,45 @@
+---
+layout: post
+title: "45 degree trick"
+date: 2021-06-06
+excerpt: "マンハッタン距離の45°回転について"
+computer_science: true
+hide_from_post: true
+tag: ["algorithm", "math"]
+comments: false
+---
+
+# マンハッタン距離の45°回転について
+ - マンハッタン距離の特徴として距離の比較を行うことが難しい
+ - 45°回転することで距離が遠いか近いかの計算ができるようになる
+
+## 具体的計算
+`(x,y)`の値があるときに、`(x+y, x-y)`が45°回転した値である  
+
+## イメージ
+
+```python
+xy = []
+for i in range(1000):
+    x = random.randint(0, 10)
+    y = random.randint(0, 10)
+    xy.append( (x, y) )
+
+df = pd.DataFrame(xy)
+df.columns = ["x", "y"]
+
+# 45度回転
+df["X"] = df["x"] + df["y"]
+df["Y"] = df["x"] - df["y"]
+
+plt.figure(figsize=(15, 15)) # ここを大きくする
+ax = sns.scatterplot(data=df, x="x", y="y")
+ax = sns.scatterplot(data=df, x="X", y="Y")
+ax
+```
+
+<div>
+  <img src="https://user-images.githubusercontent.com/4949982/120921761-2931f780-c700-11eb-9f31-ff354defd4a1.png">
+</div>
+
+ - [colab](https://colab.research.google.com/drive/1buBQ9hC9M45r-QKgKZSOebkYIGeakMEI?usp=sharing)
