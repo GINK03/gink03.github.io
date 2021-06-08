@@ -1,17 +1,48 @@
 ---
 layout: post
-title: "combination_with_replacement"
+title: "combination"
 date: 2020-05-27
-excerpt: "重複許可のcombination"
+excerpt: "combinationの様々な実装方法"
 computer_science: true
-tags: ["アルゴリズム"]
+tags: ["アルゴリズム", "combination"]
 comments: false
 ---
 
-# Combination With Replacement
- 重複許可のcombination
- - 排反的でない
- - 特に、動的なリスト等を作成して、フィルターにするなどはアルゴリズム的にも計算量的にも大変重いので、これを使わないと美しく解けないなどがある
+# combinationの計算の仕方
+
+## scipy, mathのcombination
+
+**scipy**  
+```python
+from scipy.special import comb
+print(comb(10, 7)) # 120.0
+```
+
+**math**  
+```python
+import math
+math.comb(10,7) # 120
+```
+
+## mod付きcombination
+最速である  
+```python
+mod = 10 ** 9 + 7
+def mod_cmb(n, a, mod):
+    nca = 1
+    for i in range(a):
+        nca *= (n - i) * pow(a - i, mod - 2, mod)
+        nca %= mod
+    return nca
+print(mod_cmb(10, 7, mod)) # 120
+```
+
+---
+
+# combination with replacement
+重複許可のcombination
+ - 選択される要素が排反的でない
+ - 特に、動的なリスト等を作成して、フィルターにするなどはアルゴリズム的にも計算量的にも大変重いので、これを使わないと解けないなどがある
 
 ## 具体例
 
