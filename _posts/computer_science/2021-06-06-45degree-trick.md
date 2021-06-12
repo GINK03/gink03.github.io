@@ -43,3 +43,34 @@ ax
 </div>
 
  - [colab](https://colab.research.google.com/drive/1buBQ9hC9M45r-QKgKZSOebkYIGeakMEI?usp=sharing)
+
+
+## 例; マンハッタン距離の最大値を求める
+
+**問題**  
+ - [競プロ典型 90 問; Max Manhattan Distance](https://atcoder.jp/contests/typical90/tasks/typical90_aj)
+
+**解説**  
+ - マンハッタン距離の差が、45°回転した距離の差に一致することを利用して最大最小を計算する
+
+**解答**  
+```python
+import collections
+N,Q=map(int,input().split())
+
+A = []
+E = collections.namedtuple("E", ["X", "Y", "x", "y"])
+
+for _ in range(N):
+    x,y=map(int,input().split())
+    A.append(E(X=x+y, Y=y-x, x=x, y=y))
+
+minX, minY = min(map(lambda x:x.X, A)), min(map(lambda x:x.Y, A))
+maxX, maxY = max(map(lambda x:x.X, A)), max(map(lambda x:x.Y, A))
+
+for q in range(Q):
+    qi = int(input())-1
+    qX, qY, qx, qy = A[qi]
+    cans = [abs(qX-minX), abs(qX-maxX), abs(qY-minY), abs(qY-maxY)]
+    print(max(cans))
+```
