@@ -173,37 +173,41 @@ print(minCoins[money])
 </div>
  
 **解説**  
- - 前の状態が特定の数字で割り切れることで場合分けを行う
- - `n`数分のリストを作成して初期化する
+ - 入力された値が最小何回の電卓の操作で達成できるか
+ - 前の状態で場合分けを行う(もらうdp)
+ - backtraceが難しい
 
 **解答**  
 
 ```python
-import math
-n = int(input())
-# number of operations required for getting 0, 1, 2,.. , n
-num_operations = [0, 0] + [math.inf]*(n-1)
-for i in range(2, n+1):
-    temp1, temp2, temp3 = [math.inf]*3
-    temp1 = num_operations[i-1] + 1 
-    if i%2 == 0: temp2 = num_operations[i//2] + 1
-    if i%3 == 0: temp3 = num_operations[i//3] + 1
-    min_ops = min(temp1, temp2, temp3)
-    num_operations[i] = min_ops
-print(num_operations[n])
-# Backtracking the numbers leading to n
-nums = [n]
-while n!=1:
-    if n%3 ==0 and num_operations[n]-1 == num_operations[n//3]:
-        nums += [n//3]
-        n = n//3
-    elif n%2 ==0 and num_operations[n]-1 == num_operations[n//2]:
-        nums += [n//2]
-        n = n//2
+N = int(input())
+
+"""最小の操作回数を求めるdp"""
+dp = [0, 0] + [float("inf")]*(N-1)
+for i in range(2, N+1):
+    tmp1, tmp2, tmp3 = [(float("inf"), "none")]*3
+    tmp1 = (dp[i-1] + 1, "add")
+    if i%2 == 0:
+        tmp2 = (dp[i//2] + 1, "mul2")
+    if i%3 == 0:
+        tmp3 = (dp[i//3] + 1, "mul3")
+    min_ops, op = min(tmp1, tmp2, tmp3)
+    dp[i] = min_ops
+print(dp[N])
+
+"""逆順から見ていき、操作を再現する"""
+nums = [N]
+while N!=1:
+    if N%3 ==0 and dp[N]-1 == dp[N//3]:
+        nums += [N//3]
+        N = N//3
+    elif N%2 ==0 and dp[N]-1 == dp[N//2]:
+        nums += [N//2]
+        N = N//2
     else:
-        nums +=[n-1]
-        n = n - 1
-print(' '.join([str(i) for i in nums][::-1]))
+        nums +=[N-1]
+        N = N - 1
+print(*nums[::-1])
 ```
 
 ---
