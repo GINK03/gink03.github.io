@@ -70,9 +70,9 @@ print(dp[N])
 ## 例; もっとも基礎的な部分和問題
 
 **問題**  
-[Typical DP Contest; A - コンテスト](https://atcoder.jp/contests/tdpc/tasks/tdpc_contest)  
+ - [Typical DP Contest; A - コンテスト](https://atcoder.jp/contests/tdpc/tasks/tdpc_contest)  
 
-**回答**  
+**解答1**  
 ```python
 N=int(input())
 A=list(map(int,input().split()))
@@ -85,8 +85,22 @@ for i in range(len(A)):
         dp[i+1][j] |= dp[i][j] # 上の状態と同じ
         if j >= A[i]: # itemを選択できるならば
             dp[i+1][j] |= dp[i][j-A[i]] # 前のアイテムが有るならばtrueになる(アイテムがtrueをフォワードできる)
-
 print(sum(dp[len(A)]))
+```
+
+**解答2**  
+```python
+N=int(input())
+*P,=map(int,input().split())
+
+dp = [[0]*(sum(P) + 10) for _ in range(N+1)]
+dp[0][0] = 1
+for i in range(N):
+    for j in range(sum(P)+10):
+        dp[i+1][j] = dp[i][j]
+        if j - P[i] >= 0:
+            dp[i+1][j] += dp[i][j-P[i]]
+print(len(list(filter(lambda x:x>0,dp[-1]))))
 ```
 
 
@@ -95,14 +109,16 @@ print(sum(dp[len(A)]))
 ## 例; まともに計算するとO(n^3)になるのをO(n)に変換する
 
 **問題**  
-[京セラプログラミングコンテスト2021; E - Patisserie ABC 2](https://atcoder.jp/contests/abc200/tasks/abc200_e)
+ - [京セラプログラミングコンテスト2021; E - Patisserie ABC 2](https://atcoder.jp/contests/abc200/tasks/abc200_e)
 
 **解説**  
 小さいサンプルで試すと、インプットが大きいほうが長い配列になることが確認できる  
 配列の作成され方にも法則性がありそうである  
-法則性は動的計画法で作成可能である  
+法則性は動的計画法で作成可能である(非常に定式化が難しい例)  
+ - [公式解説](https://atcoder.jp/contests/abc200/editorial/1247)
 
-**回答**  
+**解答**  
+ - [提出](https://atcoder.jp/contests/abc200/submissions/22454970)
  - [colab](https://colab.research.google.com/drive/1S1IJ7uUOhJtByHrQzlNjEziYbTEc3sMS?usp=sharing)  
 
 ---
@@ -110,13 +126,13 @@ print(sum(dp[len(A)]))
 ## 例; 中間的な最適解を与えながら計算する
 
 **問題**  
-[AtCoder Beginner Contest 197; E - Traveler](https://atcoder.jp/contests/abc197/tasks/abc197_e)  
+ - [AtCoder Beginner Contest 197; E - Traveler](https://atcoder.jp/contests/abc197/tasks/abc197_e)  
 
 **解説**  
 中間的な最適解が色を選ぶたびに得られる  
 この中間的な最適解を次のステップの最適解を構築する  
 
-**回答**  
+**解答**  
  - [colab](https://colab.research.google.com/drive/10qgyGooCuoGIgd6db2bn_AyKFy8fHyl1?usp=sharing)
 
 ---
@@ -132,7 +148,7 @@ print(sum(dp[len(A)]))
  - `math.inf`を使用して初期化する
  - 前の入力から最もコイン数が小さいものを選択する
 
-**回答**  
+**解答**  
 ```python
 import math
 
@@ -162,7 +178,8 @@ print(minCoins[money])
  - 前の状態が特定の数字で割り切れることで場合分けを行う
  - `n`数分のリストを作成して初期化する
 
-**回答**  
+**解答**  
+
 ```python
 import math
 n = int(input())
@@ -193,15 +210,16 @@ print(' '.join([str(i) for i in nums][::-1]))
 
 ---
 
-## 例; 特定の移動方があるとき、目的地につくまで移動法は何通りあるか
+## 例; 区間で定義された特定の移動方があるとき、目的地につくまで移動法は何通りあるか
 
 **問題**  
-[AtCoder Beginner Contest 179; D - Leaping Tak](https://atcoder.jp/contests/abc179/tasks/abc179_d)  
+ - [AtCoder Beginner Contest 179; D - Leaping Tak](https://atcoder.jp/contests/abc179/tasks/abc179_d)  
 
 **解説**  
 最初を`1`としたテーブルを作成し、そこから何通りあるかを考える  
 
 **回答**  
+
 ```python
 N,K = map(int,input().split())
 section = []
@@ -211,15 +229,14 @@ MOD = 998244353
 for _ in range(K):
     L,R = map(int,input().split())
     section.append((L,R))
- 
 section.sort()
 dp[1] = 1
 S[1] = 1
+
 for i in range(2,N+1):
     for j in range(K):
         li = i - section[j][1]
         ri = i - section[j][0]
-        
         if ri <= 0:
             continue
         li = max(li,1)
