@@ -145,7 +145,6 @@ print(len(list(filter(lambda x:x>0,dp[-1]))))
 </div>
  
 **解説**  
- - `math.inf`を使用して初期化する
  - 前の入力から最もコイン数が小さいものを選択する
 
 **解答**  
@@ -174,7 +173,6 @@ print(minCoins[money])
 </div>
  
 **解説**  
- - `math.inf`を使用して初期化する
  - 前の状態が特定の数字で割り切れることで場合分けを行う
  - `n`数分のリストを作成して初期化する
 
@@ -207,6 +205,54 @@ while n!=1:
         n = n - 1
 print(' '.join([str(i) for i in nums][::-1]))
 ```
+
+---
+
+## 例; "+", "-"の組み合わせで表現される数のパターンはいくつあるか
+**問題**  
+ - [AtCoder Regular Contest 122; A - Many Formulae](https://atcoder.jp/contests/arc122/tasks/arc122_a)
+**解説**  
+ - 少ないデータでは`permutation`や`dfs`で全探索できるが10^5オーダーなので全探索は無理
+ - dpで状態を作っていくことになるが、その利用が大変むずかしい
+   - ある点までの"+", "-"の組み合わせ数は最終的に得られる"+", "-"に一致しない  
+   - `dp[1][i - 1] * dp[1][N - 1 - i] + dp[0][i - 1] * dp[1][N - 1 - i] + dp[1][i - 1] * dp[0][N - 1 - i]`で得られる
+
+**解答**  
+
+```python
+""" MODINTを省略 """ 
+import sys; sys.setrecursionlimit(10**9)
+import collections
+N=int(input())
+*A,=map(int,input().split())
+MOD = 10**9 + 7
+dp[0][0] = 1
+dp[1][0] = 0
+for i in range(1, N):
+    # + -> +
+    dp[0][i] += dp[0][i - 1]
+    # - -> +
+    dp[0][i] += dp[1][i - 1]
+    dp[0][i] %= MOD
+    # + -> -
+    dp[1][i] += dp[0][i - 1]
+    dp[1][i] %= MOD
+
+# print(*dp, sep="\n")
+"""ここまでは簡単"""
+
+ans = Mint(A[0])
+ans *= (dp[0][N - 1] + dp[1][N - 1])
+for i in range(1, N):
+    t = Mint(0)
+    """ここが難しい"""
+    t += dp[1][i - 1] * dp[1][N - 1 - i]
+    t += dp[0][i - 1] * dp[1][N - 1 - i]
+    t += dp[1][i - 1] * dp[0][N - 1 - i]
+    ans += A[i] * t
+print(ans)
+```
+ - [提出](https://atcoder.jp/contests/arc122/submissions/23455445)
 
 ---
 
