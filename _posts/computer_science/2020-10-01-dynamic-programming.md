@@ -67,7 +67,7 @@ print(dp[N])
 
 ---
 
-## 例; もっとも基礎的な部分和問題
+## 例; 基礎的な部分和問題
 
 **問題**  
  - [Typical DP Contest; A - コンテスト](https://atcoder.jp/contests/tdpc/tasks/tdpc_contest)  
@@ -103,6 +103,103 @@ for i in range(N):
 print(len(list(filter(lambda x:x>0,dp[-1]))))
 ```
 
+
+---
+
+## 例; 最小個数部分和問題
+
+**問題**  
+
+```
+n個の正の整数 a[0],a[1],…,a[n−1]a[0],a[1],…,a[n−1] と正の整数 AA が与えられる。
+これらの整数から何個かの整数を選んで総和が AA にする方法をすべて考えた時、選ぶ整数の個数の最小値を求めよ。Aにすることができない場合は -1 と出力せよ。
+```
+
+**解答**  
+
+```python
+N=5
+I=[7,5,3,1,8]
+A=12
+dp = [[float("inf")] * (A+2) for _ in range(N+1)]
+dp[0][0] = 0
+for i in range(len(I)):
+    for j in range(A+1):
+        if j >= I[i]:
+            dp[i+1][j] = min(dp[i][j - I[i]] + 1, dp[i][j])
+        else:
+            dp[i+1][j] = dp[i][j]
+print(dp[-1][A])
+```
+
+---
+
+## 例; 階段の動きをdpを用いてシミュレーションする
+
+**問題**  
+ - [AtCoder Beginner Contest 129; C - Typical Stairs](https://atcoder.jp/contests/abc129/tasks/abc129_c)
+
+**解答**  
+
+```python
+N, M = map(int,input().split())
+MOD = 10**9 + 7
+A = [int(input()) for _ in range(M)]
+A = set(A)
+
+dp = [0]*(N+2)
+dp[0] = 1
+
+for i in range(len(dp)):
+    if i+2 not in A:
+        if i+2 <= N:
+            dp[i+2] += dp[i]
+            dp[i+2] %= MOD
+
+    if i+1 not in A:
+        if i+1 <= N:
+            dp[i+1] += dp[i]
+            dp[i+1] %= MOD
+
+print(dp[N]%MOD)
+```
+
+--- 
+
+## 例; dpの更新式の中に任意の操作を組み込む
+
+**問題**  
+ - [AtCoder Beginner Contest 099; C - Strange Bank](https://atcoder.jp/contests/abc099/tasks/abc099_c)
+
+**解答**  
+
+```python
+N=int(input())
+
+dp = [float("inf")] * (N+100)
+dp[0] = 0
+
+for i in range(N):
+    if i+1 < len(dp):
+        dp[i+1] = min(dp[i+1], dp[i]+1)
+
+    r = 6
+    while True:
+        if i+r < len(dp):
+            dp[i+r] = min(dp[i+r], dp[i]+1)
+        else:
+            break
+        r *= 6
+
+    r = 9
+    while True:
+        if i+r < len(dp):
+            dp[i+r] = min(dp[i+r], dp[i]+1)
+        else:
+            break
+        r *= 9
+print(dp[N])
+```
 
 ---
 
