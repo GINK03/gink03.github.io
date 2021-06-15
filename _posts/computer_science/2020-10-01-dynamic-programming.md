@@ -201,6 +201,36 @@ for i in range(N):
 print(dp[N])
 ```
 
+--- 
+
+## 例; 9の倍数の各桁の和を取るとKになる。Kになる通りは何通りか
+
+**問題**   
+ - [競プロ典型 90 問; 042 - Multiple of 9](https://atcoder.jp/contests/typical90/tasks/typical90_ap)
+**解説**  
+ - なかなかこのdpは発想ができないのでテンプレ化する必要がありそう
+**解答**  
+
+```python
+MOD = 10**9 + 7
+
+K = int(input())
+
+if K%9 != 0:
+    print(0)
+    exit()
+
+dp = [0] * (K+1)
+dp[0] = 1
+for i in range(len(dp)):
+    b = min(i, 9)
+    for j in range(1, b+1):
+        dp[i] += dp[i-j]
+        dp[i] %= MOD
+
+print(dp[K])
+```
+
 ---
 
 ## 例; まともに計算するとO(n^3)になるのをO(n)に変換する
@@ -392,6 +422,38 @@ for i in range(2,N+1):
     S[i] = (dp[i] + S[i-1]) % MOD
  
 print(dp[N] % MOD)
+```
+
+---
+
+## 例; 典型的な最小コストを求めるdp(厳密に求まらない例)
+
+**問題**  
+ - [AtCoder Beginner Contest 153; E - Crested Ibis vs Monster](https://atcoder.jp/contests/abc153/tasks/abc153_e)
+
+**解説**  
+ - 厳密にほしい大きさKがinfになり求まらない例  
+ - K以上に出現する初めてのinfより小さい値が解になる
+
+**解答**  
+
+```python
+H,N=map(int,input().split())
+
+dp = [float("inf")]*(2*(10**4))
+dp[0] = 0
+
+AB = []
+for _ in range(N):
+    a,b =map(int,input().split())
+    AB.append( (a,b) )
+
+for a, b in AB:
+    for i in range(len(dp)):
+        if i >= a:
+            dp[i] = min(dp[i-a]+b, dp[i])
+
+print(min(dp[H:]))
 ```
 
 ---
