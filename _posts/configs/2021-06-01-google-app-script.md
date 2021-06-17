@@ -62,7 +62,7 @@ sheet.insertImage(blob, 4, 3);
 **セルの情報を読み込み**  
 ```js
 var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-var values = sheet.getSheetValues(1,1,100, 3);
+var values = sheet.getSheetValues(1,1,100, 3); // レンジで読み取っているのでアクセスするにはvalues[x][y]のようにする
 Logger.log(JSON.stringify(values));
 ```
 
@@ -83,6 +83,13 @@ var response = UrlFetchApp.fetch("http://6c3a8d888880.ngrok.io", options);
 Logger.log(response.getContentText());
 ```
 
+**APIで取得したjson情報をパースしてシートに貼り付け**  
+```js
+var response = UrlFetchApp.fetch("http://6c3a8d888880.ngrok.io", options);
+var data = JSON.parse(response.getContentText());
+sheet.getRange(2, 1, data.length, data[0].length).setValues(data);
+```
+
 **localhostへのAPIへアクセスしたい**  
 ngrokを使う  
 ngrokでフォワードした上で  
@@ -91,5 +98,12 @@ var response = UrlFetchApp.fetch("http://*****.ngrok.io");
 Logger.log(response.getContentText());
 ```
 
+**トーストの表示**  
 
+```js
+// トーストの開始
+SpreadsheetApp.getActiveSpreadsheet().toast("なにか処理しています...",-1);
+// トーストの終了
+SpreadsheetApp.getActiveSpreadsheet().toast("完了.");
+```
 
