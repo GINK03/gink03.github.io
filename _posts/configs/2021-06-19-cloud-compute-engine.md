@@ -26,7 +26,7 @@ $ gcloud compute ssh $VM_NAME --key-file $KEY_FILE
 
 ```sh
 function gmosh() {
-  ip=`gcloud compute instances list --filter $1 --format=json | jq ".[0].networkInterfaces[0].accessConfigs[0].natIP"`
+  ip=`gcloud compute instances list --filter $1 --format=json --project=starry-lattice-256603 | jq ".[0].networkInterfaces[0].accessConfigs[0].natIP"`
   mosh $ip
 }
 ```
