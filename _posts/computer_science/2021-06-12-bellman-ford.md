@@ -16,6 +16,10 @@ comments: false
    - その代わり、接続されていない独立した木などを区別できないので矛盾を起こす
  - 負閉路を検出することができる
 
+ - 最短経路の判定問題にも用いることができ、線形計画問題において、解がある時、`f(s) = 0`となるはずであるが、`f(s) < 0`になる、つまり、負閉路があれば解はない
+   - 牛ゲーなどと呼ばれる
+   - [参考](https://ei1333.github.io/luzhiled/snippets/memo/ushi-game.html)
+
 ## 具体的なコード
 
 ```python
@@ -86,4 +90,65 @@ if ret[-1] != -float('inf'):
     print(max(0, -ret[-1]))
 else:
     print(-1)
+```
+
+--- 
+
+## 例; 牛ゲー
+
+**問題**  
+ - [東京大学プログラミングコンテスト2013; H - Asteroids2](https://atcoder.jp/contests/utpc2013/tasks/utpc2013_08)
+
+**解説**  
+ - 牛ゲーの典型
+ - 制約がある時、順方向を上界の値を使ったネットワーク、逆方向を下界の値を使ったネットワークを定義することで解くことができる
+ - この問題では単純に解があるかどうか ≡ 負閉路を含まないかどうかを問うている
+
+**解答**  
+
+```python
+N,M=map(int,input().split())
+ 
+*P,=map(int,input().split())
+*Q,=map(int,input().split())
+ 
+XYAB = []
+for _ in range(M):
+    xyab = list(map(int,input().split()))
+    XYAB.append(xyab)
+ 
+G = []
+for i, p in enumerate(P):
+    G.append( (2*N, i, p) )
+    G.append( (i, 2*N, 0) )
+ 
+for i, q in enumerate(Q):
+    G.append( (2*N, i+N, 0) )
+    G.append( (i+N, 2*N, q) )
+ 
+for x,y,a,b in XYAB:
+    x -= 1;
+    y += N-1
+    G.append( (x, y, -a) )
+    G.append( (y, x, b) )
+ 
+ 
+def bellman_ford(s: "start", N: "edge_num") -> "Optinal[List[int]]":
+    d = [float("inf")]*N # 各頂点への最小コスト
+    d[s] = 0 # 自身への距離は0
+    for cnt  in range(N):
+        update = False # 更新が行われたか
+        for i, j, c in G:
+            if d[j] > d[i] + c:
+                d[j] = d[i] + c
+                update = True
+        if not update:
+            break
+ 
+        if d[-1] != 0:
+            return "no"
+    return "yes"
+ 
+d = bellman_ford(2*N, N=2*N+1)
+print(d)
 ```
