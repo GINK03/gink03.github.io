@@ -136,9 +136,9 @@ else:
 ## 例; なんとかして評価式を作って評価式が成立しているか確認する二分探索
 
 **問題**  
-[AtCoder Regular Contest 050; B - 花束](https://atcoder.jp/contests/arc050/tasks/arc050_b)  
-[AtCoder Beginner Contest 192; D - Base n](https://atcoder.jp/contests/abc192/tasks/abc192_d)  
- - [colab](https://colab.research.google.com/drive/1Olg30PbHN4f7eY-LK3CpaVjrmBliiQmP?usp=sharing)
+ - [AtCoder Regular Contest 050; B - 花束](https://atcoder.jp/contests/arc050/tasks/arc050_b)  
+ - [AtCoder Beginner Contest 192; D - Base n](https://atcoder.jp/contests/abc192/tasks/abc192_d)  
+   - [colab](https://colab.research.google.com/drive/1Olg30PbHN4f7eY-LK3CpaVjrmBliiQmP?usp=sharing)
 
 **解説**  
 この式は上限が成立する最大値を求めるもの  
@@ -179,9 +179,13 @@ print(meguru_bisect(ng=10**20, ok=0))
 [提出](https://yukicoder.me/submissions/662725)
 
 ## 例; 最大値のリストの最小値の最大値を知りたい
+
+**問題**  
 `min(max(e0, e1,...), max(f0, f1,...), ...)`を知りたいような場合、機械的な操作が入るので二分探索ができるような気がしないが、実際は各々の構成要素が`k`以上であることを求める二分探索にすることができる  
 感覚的には結びつかないので、何らか工夫する必要がある  
-[ZONeエナジー プログラミングコンテスト “HELLO SPACE”; C - MAD TEAM](https://atcoder.jp/contests/zone2021/editorial/1197)
+ - [ZONeエナジー プログラミングコンテスト “HELLO SPACE”; C - MAD TEAM](https://atcoder.jp/contests/zone2021/editorial/1197)
+
+**解答**  
 
 ```python
 
@@ -208,13 +212,18 @@ while ng - ok > 1:
 print(ok)
 ```
 
+---
+
 ## 例; 整数ではない解を持つ最大値を求める -> 微分して初めて負になる点を求める
+
 **問題**  
-[AtCoder Regular Contest 054; B - ムーアの法則](https://atcoder.jp/contests/arc054/tasks/arc054_b)  
+ - [AtCoder Regular Contest 054; B - ムーアの法則](https://atcoder.jp/contests/arc054/tasks/arc054_b)  
+
 **解説**  
-整数ではない二分探索の例  
-左から見ていって初めて単調増加でなくなる点 ＝ 微分して初めてマイナスになる点を探す  
-**解答**  
+ - 整数ではない二分探索の例  
+ - 左から見ていって初めて単調増加でなくなる点 ＝ 微分して初めてマイナスになる点を探す  
+
+**解答1**  
 
 ```python
 P = float(input())
@@ -237,6 +246,37 @@ while True:
         break
 print(f(ok))
 ```
+
+**解答2**  
+ - 微分した式を直接評価する
+
+```python
+import math
+
+P = float(input())
+
+def f(x):
+    return x + P*(2**(-x/1.5))
+
+def is_ok(x):
+    # x + P*(2**(-x/1.5)) を微分すると
+    # 1 + P * 2**(-x/1.5) * log 2 * (-1/1.5)
+    if 1 + P * 2**(-x/1.5) * math.log(2) * (-1/1.5) > 0:
+        return True
+    return False
+
+def meguru_bisect(ng, ok):
+    while (abs(ok - ng) > 0.000000001):
+        mid = (ok + ng) / 2
+        if is_ok(mid):
+            ok = mid
+        else:
+            ng = mid
+    print(f(ok))
+meguru_bisect(0, 10**20)
+```
+
+---
 
 ## 例; ある値より大きいかつ、ある値より小さいのindexを求める
 
