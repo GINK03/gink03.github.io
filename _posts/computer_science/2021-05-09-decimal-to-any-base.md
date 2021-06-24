@@ -66,3 +66,28 @@ def anybase_to_decimal(x: int, k: int):
     return dec
 ```
  - [colab](https://colab.research.google.com/drive/1TNH7bTL1HRAF9_lgfOe1N0nAwDx1PQBX?usp=sharing)
+  
+
+--- 
+
+## 例; 負の基底の-2進数に変換する
+
+**問題**  
+ - [AtCoder Beginner Contest 105; C - Base -2 Numbe](https://atcoder.jp/contests/abc105/tasks/abc105_c)
+
+**解説**  
+ - 負の基底を使うときは入力を反転させる
+
+**解答**  
+
+```python
+N=int(input())
+ 
+def decimal_to_base(x: int, base: int) -> list:
+    if x//base:
+        return decimal_to_base(x//base, base) + [x%base]
+    return [x%base]
+ 
+arr = decimal_to_base(-1 * N, -2)
+print(*[abs(x) for x in arr], sep="")
+```
