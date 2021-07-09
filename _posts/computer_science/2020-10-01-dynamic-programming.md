@@ -23,10 +23,12 @@ comments: false
 ---
 
 ## 例; 繰り返しのないナップサック問題
+
 **問題**  
-[DPL_1_B](https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_1_B)
+ - [DPL_1_B](https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_1_B)
 
 **解答**  
+
 ```python
 N, W = map(int, input().split())
 
@@ -49,7 +51,7 @@ print(dp[-1][W])
 
 ## 例; 繰り返しのあるナップサック問題
 **問題**  
-[DPL_1_A](https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_1_A)
+ - [DPL_1_A](https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_1_A)
 
 **解答**  
 ```python
@@ -340,8 +342,10 @@ print(*nums[::-1])
 ---
 
 ## 例; "+", "-"の組み合わせで表現される数のパターンはいくつあるか
+
 **問題**  
  - [AtCoder Regular Contest 122; A - Many Formulae](https://atcoder.jp/contests/arc122/tasks/arc122_a)
+
 **解説**  
  - 少ないデータでは`permutation`や`dfs`で全探索できるが10^5オーダーなので全探索は無理
  - dpで状態を作っていくことになるが、その利用が大変むずかしい
@@ -393,35 +397,34 @@ print(ans)
  - [AtCoder Beginner Contest 179; D - Leaping Tak](https://atcoder.jp/contests/abc179/tasks/abc179_d)  
 
 **解説**  
-最初を`1`としたテーブルを作成し、そこから何通りあるかを考える  
+ - 最初を`1`としたテーブルを作成し、そこから何通りあるかを考える  
+ - 累積和の考え方を持ち込み、dpの累積和を計算しつつ、`r+1`以降を消していく
 
-**回答**  
+**解答**  
 
 ```python
 N,K = map(int,input().split())
-section = []
-dp = [0]*(N+1)
-S = [0]*(N+1)
-MOD = 998244353
-for _ in range(K):
-    L,R = map(int,input().split())
-    section.append((L,R))
-section.sort()
-dp[1] = 1
-S[1] = 1
 
-for i in range(2,N+1):
-    for j in range(K):
-        li = i - section[j][1]
-        ri = i - section[j][0]
-        if ri <= 0:
-            continue
-        li = max(li,1)
-        dp[i] += (S[ri] - S[li-1]) % MOD
-    
-    S[i] = (dp[i] + S[i-1]) % MOD
- 
-print(dp[N] % MOD)
+MOD = 998244353
+LR = []
+for k in range(K):
+    L,R = map(int,input().split())
+    LR.append((L,R+1))
+
+dp = [0]*(N+1)
+dp[0] = 1
+dp[1] = -1
+for i in range(N):
+    if i > 0:
+        dp[i] += dp[i-1]
+    for l, r in LR:
+        if i + l < N:
+            dp[i+l] += dp[i]
+            dp[i+l] %= MOD
+        if i + r < N:
+            dp[i+r] -= dp[i]
+
+print(dp[N-1] % MOD)
 ```
 
 ---
