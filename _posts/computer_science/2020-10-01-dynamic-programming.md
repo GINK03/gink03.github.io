@@ -391,7 +391,7 @@ print(ans)
 
 ---
 
-## 例; 区間で定義された特定の移動方があるとき、目的地につくまで移動法は何通りあるか
+## 例; 区間(範囲)を定義された特定の移動方があるとき、目的地につくまで移動法は何通りあるか
 
 **問題**  
  - [AtCoder Beginner Contest 179; D - Leaping Tak](https://atcoder.jp/contests/abc179/tasks/abc179_d)  
