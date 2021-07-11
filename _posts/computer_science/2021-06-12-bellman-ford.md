@@ -12,19 +12,18 @@ comments: false
 # ベルマンフォード法について
  - 最短経路を探索するアルゴリズム
  - dijkstraより計算コストは重いが、ワーシャルフロイドよりは軽い
+   - 重いのでCPPを検討しても良い
  - 負の値を辺が持っていても矛盾を起こさないためそこはいいかもしれない
    - その代わり、接続されていない独立した木などを区別できないので矛盾を起こす
  - 負閉路を検出することができる
-
  - 最短経路の判定問題にも用いることができ、線形計画問題において、解がある時、`f(s) = 0`となるはずであるが、`f(s) < 0`になる、つまり、負閉路があれば解はない
    - 牛ゲーなどと呼ばれる
    - [参考](https://ei1333.github.io/luzhiled/snippets/memo/ushi-game.html)
 
-## 具体的なコード
+## 具体的なコード(python)
 
 ```python
 V,E,R=map(int,input().split())
-
 G = []
 for _ in range(E):
     x, y, c = map(int,input().split())
@@ -56,7 +55,61 @@ else:
 ```
  - [Single Source Shortest Path (Negative Edges)](https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_1_B&lang=ja)
 
-## 例; 閉路を検出しつつラベル付けする
+--- 
+
+### 具体的なコード(CPP)
+
+```cpp
+int N, Q;
+vector<tuple<int,int,int>> G;
+
+vector<ll> bellman_ford(int s, int N) {
+  auto d = mk_vec<ll>(N, INF);
+  d[s] = 0;
+  rep(n, N) {
+        bool update = false;
+        rep(pos, G.size()){
+          int i, j, c; tie(i, j, c) = G[pos];
+          if(d[j] > d[i] + c) {
+                  d[j] = d[i] + c;
+                  update = true;
+          }
+        }
+        // 負閉路が存在する場合、空のベクターを返す
+        if(update == false) {
+          return vector<ll>();
+        }
+  }
+  return d;
+}
+
+int main() {
+  cin >> N >> Q;
+  rep(n, N-1) {
+        int i, j;
+        cin >> i >> j;
+        i -= 1; j -=1;
+        G.push_back(make_tuple(i, j, 1));
+        G.push_back(make_tuple(j, i, 1));
+  }
+  vector<ll> dv = bf(0, N);
+  rep(q, Q) {
+        int c,d; cin >> c >> d; c -= 1; d -=1;
+        int r = abs(dv[d] - dv[c]);
+        if(r%2 == 0) {
+          print("Town");
+        } else {
+          print("Road");
+        }
+  }
+  return 0;
+}
+```
+ - [AtCoder Beginner Contest 209; D - Collision](https://atcoder.jp/contests/abc209/tasks/abc209_d)
+ 
+---
+
+### 例; 閉路を検出しつつラベル付けする
 
 **問題**  
  - [AtCoder Beginner Contest 137; E - Coins Respawn](https://atcoder.jp/contests/abc137/tasks/abc137_e)
@@ -94,7 +147,7 @@ else:
 
 --- 
 
-## 例; 牛ゲー
+### 例; 牛ゲー
 
 **問題**  
  - [東京大学プログラミングコンテスト2013; H - Asteroids2](https://atcoder.jp/contests/utpc2013/tasks/utpc2013_08)
