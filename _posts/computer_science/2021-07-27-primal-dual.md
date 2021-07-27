@@ -21,6 +21,8 @@ comments: false
  - 計算量
    - O(F * E * log(V)) 
 
+---
+
 ## 例; もっとも一般的な例　
 
 **問題**  
@@ -85,3 +87,8 @@ for i in range(M):
     mcf.add_edge(u, v, c, d)
 print(mcf.flow(0, N-1, F))
 ```
+
+---
+
+## 参考
+ - [最小費用流問題 (Primal-Dual Algorithm)](https://tjkendev.github.io/procon-library/python/min_cost_flow/primal-dual.html)
