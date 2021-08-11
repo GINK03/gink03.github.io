@@ -12,7 +12,8 @@ comments: false
 
 ## 概要
  - awsのローカルモック環境
- - s3とかをローカルに再現することができる
+ - s3, secrets-managerとかをローカルに再現することができる
+ - dockerのプロセスを終了したらモック内のデータは消える
 
 ## インストールとセットアップ
 
@@ -47,3 +48,12 @@ df = pd.DataFrame({"a": [1,2,3,4]})
 df.to_csv(client.open("backet-name/a.csv", mode='wb'))
 ```
 
+## モックのsecrets managerを設定する
+ - `--secret-string "file://PATH"`で内容を設定することができる
+
+```console
+aws --endpoint-url=http://localhost:4566 secretsmanager create-secret --name $AWS_SECRET_NAME --region $AWS_REGION_NAME --description "local" --secret-string "init"
+aws --endpoint-url=http://localhost:4566 secretsmanager update-secret --secret-id $AWS_SECRET_NAME --region $AWS_REGION_NAME --description "local" --secret-string "file://~/.opt/secrets-manager.json"
+aws --endpoint-url=http://localhost:4566 secretsmanager describe-secret --secret-id $AWS_SECRET_NAME --region $AWS_REGION_NAME
+aws --endpoint-url=http://localhost:4566 secretsmanager get-secret-value --secret-id $AWS_SECRET_NAME --region $AWS_REGION_NAME
+```
