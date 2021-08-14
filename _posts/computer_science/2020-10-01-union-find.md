@@ -136,6 +136,20 @@ dfsでも閉路チェックができるがコードをまとめたいときに�
 
 --- 
 
+### 例; UnionFildを複雑な手続きで利用して解答を得る例
+**問題**  
+ - [AtCoder Beginner Contest 157; D - Friend Suggestions](https://atcoder.jp/contests/abc157/tasks/abc157_d)
+
+**解説**  
+ - 友達のグラフでufを初期化する
+ - ブロック関係にあるときは、`友達関係になりうる同じグループである` かつ `ブロック関係である` とき、候補から除外する
+ - ブロック処理のプロセスにてもufを用いるので複雑
+
+**解答**  
+ - [提出](https://atcoder.jp/contests/abc157/submissions/25014934)
+
+--- 
+
 ### 例; 重み付きunion find
 
 **問題**  
