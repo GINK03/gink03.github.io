@@ -43,3 +43,15 @@ project_id = "starry-lattice-256603"
 table_ida = "any_bucket.target_table01"
 df.to_gbq(table_id, project_id=project_id, if_exists="replace")
 ```
+
+## クレデンシャル(サービスアカウントの認証情報)を用いて初期化する
+ - AWSでbigqueryにアクセスするときなどに必要な措置
+
+```python
+import pandas_gbq
+from google.oauth2 import service_account
+
+pandas_gbq.context.credentials = (
+  service_account.Credentials.from_service_account_file("path_of_creds.json")
+)
+```
