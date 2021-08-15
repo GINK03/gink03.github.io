@@ -148,6 +148,21 @@ dfsでも閉路チェックができるがコードをまとめたいときに�
 **解答**  
  - [提出](https://atcoder.jp/contests/abc157/submissions/25014934)
 
+---
+
+### 例; すべての最短経路の最大のコストの和
+ - 何度も見返したがunionfindが適応例だとはなかなか発想が至らない
+
+**問題**  
+ - [AtCoder Beginner Contest 214; D - Sum of Maximum Weights](https://atcoder.jp/contests/abc214/tasks/abc214_d)
+
+**解説**  
+ - 最短パスに含まれるパスの最大のコストのすべての和
+ - コストが小さい順でソートして、`コスト * group_size(l) * group_size(r)`を累積していくと答えになる 
+
+**解答**  
+ - [提出](https://atcoder.jp/contests/abc214/submissions/25058676)
+
 --- 
 
 ### 例; 重み付きunion find
