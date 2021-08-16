@@ -10,6 +10,9 @@ comments: false
 
 # youtube-dlの使い方
 
+## 概要
+ - youtubeやpornhubや対応するサイトから動画をダウンロードできる
+
 ## 公式ドキュメント等
  - [github.com](https://github.com/ytdl-org/youtube-dl)
 
