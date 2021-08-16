@@ -13,12 +13,14 @@ comments: false
 ## scipy, mathのcombination
 
 **scipy**  
+
 ```python
 from scipy.special import comb
 print(comb(10, 7)) # 120.0
 ```
 
 **math**  
+
 ```python
 import math
 math.comb(10,7) # 120
@@ -38,7 +40,8 @@ def binomial(n, k):
 ```
 
 ## mod付きcombination
-最速である  
+ - 何度も計算しないであれば最速  
+
 ```python
 mod = 10 ** 9 + 7
 def mod_cmb(n, a, mod):
@@ -50,6 +53,34 @@ def mod_cmb(n, a, mod):
 print(mod_cmb(10, 7, mod)) # 120
 ```
 
+## メモ化機能付きcombination
+ - 何度もcombinationの計算結果を求められるとき
+
+```python
+def cmb(n, r, p):
+    if (r < 0) or (n < r):
+        return 0
+    r = min(r, n - r)
+    return fact[n] * factinv[r] * factinv[n-r] % p
+ 
+p = 10 ** 9 + 7
+N = 10 ** 6  # N は必要分だけ用意する
+fact = [1, 1]  # fact[n] = (n! mod p)
+factinv = [1, 1]  # factinv[n] = ((n!)^(-1) mod p)
+inv = [0, 1]  # factinv 計算用
+ 
+for i in range(2, N + 1):
+    fact.append((fact[-1] * i) % p)
+    inv.append((-inv[p % i] * (p // i)) % p)
+    factinv.append((factinv[-1] * inv[-1]) % p)
+```
+
+---
+
+## K個のお菓子をN人に最低1個以上分配する
+ - Kのお菓子を並べて、K-1個の隙間にN-1個のセパレータを入れるイメージ
+ - `(K-1)C(N-1)`が数式になる
+
 ---
 
 # combination with replacement
@@ -59,11 +90,11 @@ print(mod_cmb(10, 7, mod)) # 120
 
 ## 具体例
 
-以下の問題ではメモリの制約が薄ければ、問題なく解けるものであるが、このサイズのメモリを許容できないことによって、`combination_with_replacement` が実質的に必要になっている
-
+以下の問題ではメモリの制約がなければ問題なく解けるものであるが、このサイズのメモリを許容できないことによって、`combination_with_replacement` が必要になる
  - https://atcoder.jp/contests/abc165/tasks/abc165_c
 
 **NG** 
+
 ```python
 # このアプローチはメモリーエラー
 s=[[1]]
