@@ -132,7 +132,8 @@ else:
 ```
  - [参考](https://www.geeksforgeeks.org/python-program-for-binary-search/)
 
-  
+---
+
 ## 例; なんとかして評価式を作って評価式が成立しているか確認する二分探索
 
 **問題**  
@@ -141,8 +142,10 @@ else:
    - [colab](https://colab.research.google.com/drive/1Olg30PbHN4f7eY-LK3CpaVjrmBliiQmP?usp=sharing)
 
 **解説**  
-この式は上限が成立する最大値を求めるもの  
-`ok`, `ng`構文が使えるので楽に二分探索できる  
+ - この式は上限が成立する最大値を求めるもの  
+ - `ok`, `ng`構文が使えるので楽に二分探索できる  
+
+**解答**  
 
 ```python
 R,B=map(int,input().split())
@@ -170,13 +173,17 @@ def meguru_bisect(ng, ok):
 print(meguru_bisect(ng=10**20, ok=0))
 ```
 
+---
+
 ## 例; 表題で説明されている指標ではなく、とりうる時間に着目して二分探索する例  
 
 **問題**  
-[No.1101 鼻水](https://yukicoder.me/problems/no/1101)
+ - [No.1101 鼻水](https://yukicoder.me/problems/no/1101)
 
 **解答**  
-[提出](https://yukicoder.me/submissions/662725)
+ - [提出](https://yukicoder.me/submissions/662725)
+
+---
 
 ## 例; 最大値のリストの最小値の最大値を知りたい
 
@@ -188,7 +195,6 @@ print(meguru_bisect(ng=10**20, ok=0))
 **解答**  
 
 ```python
-
 N = int(input())
 A = [tuple(map(int, input().split())) for i in range(N)]
 def check(x):
@@ -280,11 +286,14 @@ meguru_bisect(0, 10**20)
 
 ## 例; ある値より大きいかつ、ある値より小さいのindexを求める
 
-[AtCoder Beginner Contest 077; C - Snuke Festival](https://atcoder.jp/contests/abc077/tasks/arc084_a)  
+**問題**  
+ - [AtCoder Beginner Contest 077; C - Snuke Festival](https://atcoder.jp/contests/abc077/tasks/arc084_a)  
 
-bisectのモジュールだけでは`x値`以上のものを検索する関係上、正しい答えが得られない  
-そのため二分探索をフルスクラッチする必要がある  
+**解説**  
+ - bisectのモジュールだけでは`x値`以上のものを検索する関係上、正しい答えが得られない  
+ - そのため二分探索をフルスクラッチする必要がある  
 
+**解答**  
 ```python
 N = int(input())
 A = sorted(list(map(int,input().split())))
@@ -318,4 +327,45 @@ for n in range(N):
 print(ans)
 ```
 
+---
+
+## インタラクティブに二分探索をする問題
+
+**問題**  
+ - [AtCoder Petrozavodsk Contest 001; C - Vacant Seat](https://atcoder.jp/contests/apc001/tasks/apc001_c)
+
+**解説**  
+ - 解が含まれる範囲は、偶数範囲で端同士が同性、奇数範囲では端同士が異性
+ - 解が含まれる範囲をTrueとして二分探索することで解が得られる
+
+**解答**  
+
+```python
+N = int(input())
+print(0, flush=True)
+r = input()
+if r == "Vacant":
+    exit()
+init = r
+
+def query(mid):
+    print(mid, flush=True)
+    r = input()
+    if r == "Vacant":
+        exit()
+    return int(r != init) # 相違していたら1
+
+def meguru_bisect(ng, ok):
+    while (abs(ok - ng) > 1):
+        mid = (ok + ng) // 2
+        # ng条件: mid%2 == 0のときqueryが相違(vacantが含まれない)
+        #       : mid%2 == 1のときqueryが一致
+        if query(mid) == mid%2:
+            ng = mid
+        else:
+            ok = mid
+
+    return ok
+meguru_bisect(0, N)
+```
 
