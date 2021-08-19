@@ -17,6 +17,17 @@ comments: false
  - AMD Ryzen 3000の乱数発生が正しく動作しないという問題の影響を受ける
    - mainboardのUEFIの最新化で正常化することができる
  - 殆どの操作が`root`を期待しているので、`sudo su`する必要がある
+ - `PostUp`で記すscriptは正常に動作しないことがある。その場合、別途、そのスクリプトは実行する必要がある
+
+## install
+
+**debian**
+
+```console
+$ echo "deb http://deb.debian.org/debian buster-backports main" | sudo tee /etc/apt/sources.list.d/buster-backports.list
+$ sudo apt install update
+$ sudo apt install wireguard
+```
 
 ## key generate
  - 秘密鍵、公開鍵を作る
@@ -61,10 +72,19 @@ Endpoint = 126.133.200.64:1395
 
  - この設定は`wg-quick down wg0`するたびに、プログラムによって上書きされるので、`wg-quick down wg0`してから編集する
  - `PostUp`はIFのアップ時に走るスクリプト。この例ではIP 4, IP 6を`mellanox0`デバイス側に向けてnatで転送する　
+   - 一部の環境ではこの転送ルールは動かないので、別途スクリプトを分けて実行する必要がある
  - `PostDown`で`iptables`コマンドで解除しているスクリプトもあるが、適応すると何度もコマンドが打たれることになり、serverサイドが不安定になった
  - `[Peer]のPublicKey`はクライアントのMacOSXやiPhoneから発行される公開鍵。いちいちコピペするのが大変
  - `[Peer]のAllowdIPs`はクライアントが接続してきたらどのIPアドレスならば許可するかを示すもの。クライアント側の設定と食い違うと通信できない
  - `Endpoint`は設定しなくても自動で生成される。また、これでアクセス元を制限できる等のものでもない
+
+## enable server side ip forwarding
+ - debian, ubuntu系では以下の設定を入れないとIPのフォワードをしない
+
+```console
+# sysctl -w net.ipv4.ip_forward=1
+# sysctl -w net.ipv6.conf.all.forwarding=1
+```
 
 ## example up/donw wg0
 
