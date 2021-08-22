@@ -60,6 +60,7 @@ bisect.bisect_left(vec, value)
 ```
 
 **pythonでの例**  
+
 ```python
 A = [1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5]
 print( bisect.bisect_left(A, 3), A[bisect.bisect_left(A, 3)] ) # 4 3 検索要素以下の値 (>=)
@@ -72,6 +73,7 @@ print( bisect.bisect_left(A, 0.5) ) # 0 1以下の要素であるから
 
 print( bisect.bisect_right(A, 6) ) # 9 満たす要素がないからインデックス以上
 ```
+ - ある値に最も近い値を求めたい場合、`bisect_left`で得られたindexとその前のindexの最小値を採用すれば良い
 
 **pythonでのキー(関数)を与えたレシピ**  
 ```python
