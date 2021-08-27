@@ -1,0 +1,31 @@
+---
+layout: post
+title: "dendrogram"
+date: 2021-08-27
+excerpt: "dendrogramと距離関数について"
+kaggle: true
+hide_from_post: true
+tag: ["statistics", "dendrogram"]
+comments: false
+---
+
+# dendrogramと距離関数について
+
+## 距離の種類
+ - 単リンク法; 2つのグループ間の最短距離
+ - 完全リンク法; 2つのグループ間の最大距離
+ - 平均法; すべての点の平均
+ - ウォード法; クラスタ内の差の二乗の合計を最小化した点
+
+## デンドログラムの書き方
+ 1. 距離関数を決める
+ 2. 距離関数に基づき、最も近い2点を抽出する
+ 3. 2点を結ぶ
+ 4. 結んだ2点を新たな1点として定義し直す
+ 5. 1に戻る
+
+## google colab
+ - [colab](https://colab.research.google.com/drive/1rziYWQV6WX8PP9LHX4TNltoDZeINDeBw?usp=sharing)
+
+## 参考
+ - [Scikit-learnを用いた階層的クラスタリング (Hierarchical clustering)の解説](https://data-analysis-stats.jp/%E6%A9%9F%E6%A2%B0%E5%AD%A6%E7%BF%92/scikit-learn%E3%82%92%E7%94%A8%E3%81%84%E3%81%9F%E9%9A%8E%E5%B1%A4%E7%9A%84%E3%82%AF%E3%83%A9%E3%82%B9%E3%82%BF%E3%83%AA%E3%83%B3%E3%82%B0-hierarchical-clustering%E3%81%AE%E8%A7%A3%E8%AA%AC/)
