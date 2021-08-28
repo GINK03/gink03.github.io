@@ -1,36 +1,53 @@
 ---
 layout: post
-title:  "choco"
-date:   2020-10-31
-excerpt: "choco"
+title: "chocolatey"
+date: 2020-10-31
+excerpt: "chocolatey"
 project: false
 config: true
-tag: []
+tag: ["windows", "choco", "chocolatey"]
 comments: false
 ---
 
-# choco(chocolatey)
-Windows版パッケージマネージャ。
+# chocolatey
+ - Windows版パッケージマネージャ。
+ - Macのbrewに相当する
 
-## install hoge
+## chocolateyの導入
+ - [install](https://chocolatey.org/install)のサイトのpowershellコマンドで導入する
+
+```console
+# Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+```
+
+## install 
 
 admin powershellにて、
+
 ```console
-# choco install hoge -Y
+# choco install <pkg> -Y
+```
+
+## search
+
+```console
+# choco search <keyword>
 ```
 
 ## upgrade all
+
 ```console
 # choco upgrade all -Y
 ```
 
 ## 定義したlocal_packages.configからインストールする  
+ - `.config`の拡張子のxmlからまとめてソフトウェアをインストールすることができる
 
 ```console
 > choco install .\local_packages.config
 ```
 
-`local_packages.config`の内容は以下のような構造である  
+ - `local_packages.config`の内容は以下のような構造である  
 
 ```xml
 <?xml version="1.0" ?>
@@ -50,10 +67,7 @@ admin powershellにて、
   <package id="curl"/>
   <package id="docker-cli"/>
   <package id="docker-desktop"/>
-  <package id="DotNet3.5"/>
-  <package id="DotNet4.5.2"/>
   <package id="dotnetcore3-desktop-runtime"/>
-  <package id="dropbox"/>
   <package id="Firefox"/>
   <package id="git.install"/>
   <package id="GoogleChrome"/>
