@@ -18,8 +18,7 @@ comments: false
    - 割り算
 
 ### ライブラリ`featuretools`の例
-
-`Deep Feature Synthesis`、略して`dfs`と呼ばれる
+ - `Deep Feature Synthesis`、略して`dfs`と呼ばれる
 
 例えば、irisのデータセットを読み込み
 ```python
