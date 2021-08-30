@@ -48,9 +48,9 @@ $$
 H = \frac{12}{N(N+1)} \left( n_a(\bar{R_a} - \bar{N}) + n_b(\bar{R_b} - \bar{N}) + n_c(\bar{R_c} - \bar{N})\right)
 $$	
  - n; サンプルサイズ
- - $\hat{N}$; 中央値
- - $R$; 順位和
- - $\hat{R}$; 順位平均
+ - $$\hat{N}$$; 中央値
+ - $$R$$; 順位和
+ - $$\hat{R}$$; 順位平均
 
 **式2**
 $$
