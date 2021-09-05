@@ -41,11 +41,13 @@ print(meguru_bisect(0, 10**20))
 
 **cpp**   
 ```cpp
-std:upper_bound(vec.begin(), vec.end(), something_value);
+std:upper_bound(vec.begin(), vec.end(), something_value); // vecのiteratorを返す
+std:upper_bound(vec.begin(), vec.end(), something_value) - vec.begin();  // vecのindexを返す
 ```
 
 ```cpp
-std:lower_bound(vec.begin(), vec.end(), something_value);
+std:lower_bound(vec.begin(), vec.end(), something_value); // vecのiteratorを返す
+std:lower_bound(vec.begin(), vec.end(), something_value) - vec.begin(); // vecのindexを返す
 ```
 
 **python**  
