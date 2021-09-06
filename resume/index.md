@@ -48,6 +48,7 @@ Introductory in Japanese and in English are mixed.
    - *統計検定*
 	 - [統計調査士](https://user-images.githubusercontent.com/4949982/103746695-d5ce5700-5044-11eb-95ae-a715b790a189.png)
 	 - [統計検定2級](https://user-images.githubusercontent.com/4949982/102600946-d4ef8700-4162-11eb-8607-c3f31d475afc.png)
+	 - [データサイエンス基礎](https://user-images.githubusercontent.com/4949982/132152238-77caa0c4-22a8-41de-8de0-b39d146436d0.png)
    - *google*
 	 - [Google Cloud Associate Cloud Engineer](https://user-images.githubusercontent.com/4949982/111018235-0a6ede00-83fb-11eb-9081-a8bb654f5e21.png)
 	 - [Google Cloud Professional Cloud Architect](https://user-images.githubusercontent.com/4949982/113481264-7bbe2000-94d3-11eb-8d9d-5d2c9d403f2f.png)
