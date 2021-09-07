@@ -61,3 +61,10 @@ System Benchmarks Index Score                                        1545.4
 # マルチコア
 System Benchmarks Index Score                                        2485.2
 ```
+
+**vmware, debian, ryzen 3800x**  
+
+```console
+System Benchmarks Index Score                                         816.6
+System Benchmarks Index Score                                        4249.2
+```
