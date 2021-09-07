@@ -3,7 +3,7 @@ layout: post
 title: "karabiner element"
 date: 2021-02-11
 excerpt: "karabiner elementの概要と使い方"
-tags: ["karabiner", "macosx"]
+tags: ["karabiner", "osx"]
 config: true
 comments: false
 ---
@@ -33,6 +33,10 @@ macosxのシステムのキーボードの動きに対してフックを掛け�
  - `karabiner.json`の設定が読めない・間違っているなどとき、`karabiner-element`アプリのgui表示から設定が消える
  - バージョンの差があるのか、ネット上の設定をコピペしても動かないことがある
  - `simultaneous`というキーのコンビネーションはかなり挙動がシビアであり、結構入力が難しい
+
+## インターネットのユーザが作成したmodifications
+ - [link](https://ke-complex-modifications.pqrs.org/)
+ - Microsoft RDPでコマンドをctrlにアプリが起動中のときのみ置き換える設定などがあり、便利である
 
 ## 使用している`karabiner.json`
 

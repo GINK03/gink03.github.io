@@ -10,7 +10,7 @@ comments: false
 ---
 
 # chocolatey
- - Windows版パッケージマネージャ。
+ - Windows版パッケージマネージャ
  - Macのbrewに相当する
 
 ## chocolateyの導入
@@ -26,6 +26,12 @@ admin powershellにて、
 
 ```console
 # choco install <pkg> -Y
+```
+
+## uninstall
+
+```console
+# choco uninstall <pkg>
 ```
 
 ## search
