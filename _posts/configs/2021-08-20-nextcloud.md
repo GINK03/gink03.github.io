@@ -13,6 +13,9 @@ comments: false
 ## 概要
  - dropbox + google docのオンプレミス版
  - 簡単に構築できるので少人数、スモールオフィス的な用途では便利に使える
+ - podmanのようなdocker代替でも動くが、dockerで作成したファイルと互換性がないので作り直しになる
+
+---
 
 ## セットアップ
 
@@ -25,6 +28,7 @@ $ docker run -d \
     -v $PWD/data:/var/www/html/data \
     -p 8080:80 nextcloud
 ```
+ - `docker`を`podman`に変える際には`nextcloud`のフルパスである`docker.io/library/nextcloud`を起動する必要がある
 
 **管理者を作成**  
  - `http://hostname:8080`にアクセスする
@@ -42,10 +46,24 @@ $ docker run -d \
  - リスト表記する
  - [参考](https://help.nextcloud.com/t/howto-add-a-new-trusted-domain/26)
 
+---
+
+## 手動でファイルシステムからファイルを追加する
+
+ - `data/<username>/files/Documents`にファイルを追加する
+ - permissionを適切に設定する(`chown www-data:www-data <filenames>`) 
+ - docker, podmanの中のOCCコマンドを実行してファイルを再スキャンする
+
+```console
+$ podman exec -ti --user www-data <container id> /var/www/html/occ files:scan --all
+```
+
+---
 
 ## dockerをサービス化する
 `/etc/systemd/system/docker.nextcloud.service`を作成する  
 ファイルを以下のように埋める  
+
 ```config
 [Unit]
 Description=Nextcloud Service
