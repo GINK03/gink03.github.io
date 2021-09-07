@@ -137,3 +137,4 @@ PersistentKeepalive = 1
 **iPhoneでの設定**
  - `AppStore`にWireGuardのクライアントソフトがある
  - コピペしづらいので設定が大変である
+
