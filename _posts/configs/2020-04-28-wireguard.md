@@ -12,11 +12,12 @@ comments: false
 
 ## 概要
  - Linux Kernel 5.6から導入されたVPN
+ - Endpointとしてipv6を用いることもでき、このとき実質的にipv4 over ipv6(IPoE)接続になり、高速化が期待できることもある
 
 ## 注意
- - AMD Ryzen 3000の乱数発生が正しく動作しないという問題の影響を受ける
+ - AMD Ryzenの乱数発生が正しく動作しないという問題の影響を受ける
    - mainboardのUEFIの最新化で正常化することができる
- - 殆どの操作が`root`を期待しているので、`sudo su`する必要がある
+ - 殆どの操作が`root`を期待している
  - `PostUp`で記すscriptは正常に動作しないことがある。その場合、別途、そのスクリプトは実行する必要がある
 
 ## install
@@ -66,7 +67,7 @@ Endpoint = 126.133.200.64:1900
 
 [Peer]
 PublicKey = H/mcwTJnYM5VgR2J+DqTnLOq7Wj/fl4v1nt2XQidXm8=
-AllowedIPs = 192.168.0.3/32
+AllowedIPs = 192.168.0.5/32, 2a03:b0c0:2:f0::2c:2005/128
 Endpoint = 126.133.200.64:1395
 ```
 
@@ -80,6 +81,7 @@ Endpoint = 126.133.200.64:1395
 
 ## enable server side ip forwarding
  - debian, ubuntu系では以下の設定を入れないとIPのフォワードをしない
+ - この設定は再起動すると消えてしまうので、起動スクリプトに入れるなどの工夫が必要
 
 ```console
 # sysctl -w net.ipv4.ip_forward=1
@@ -116,18 +118,20 @@ transferで通信量が見えるので、疎通は行われていることがわ
 ```
 [Interface]
 PrivateKey = 2CYUPIwWR*******4vrUVOxDeyxm7EDq7m+l38=
-Address = 192.168.0.5/32
+Address = 192.168.0.5/32, 2a03:b0c0:2:f0::2c:2005/64
 DNS = 1.1.1.1
 
 [Peer]
 PublicKey = a0nUQiZOtAbpsX7l1VLpA5TOQlKcL9yPCA47QXo5hDw=
-AllowedIPs = 0.0.0.0/0
-Endpoint = 192.168.40.23:41194
+AllowedIPs = 0.0.0.0/0, ::0/0
+Endpoint = 192.168.40.23:41194 # IPv4で接続するとき
+Endpoint = [2001:19f0:7002:dcd:5400:3ff:fe86:a14f]:41194 # IPv6で接続するとき
 PersistentKeepalive = 1
 ```
  - `[Interface]のAddress`のネットマスクは32のプレフィックスで与えないと他のノードが繋げなくなる
  - `[Peer]のPublicKey`はサーバの公開鍵を設定する
- - `[Peer]のAllowdIPs`は`0.0.0.0/0`とすると全ての通信をwireguard経由で通信するといことになる
+ - `[Peer]のAllowdIPs`は`0.0.0.0/0`とすると全ての通信をwireguard経由で通信することになる
+   - `::0/0`はすべてのIPv6パケットもトンネリングする、ということ 
 
 
 **MacOSXでの設定**  
