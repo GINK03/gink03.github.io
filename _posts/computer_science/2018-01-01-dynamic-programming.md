@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "dynamic programming"
-date: 2021-03-26
+date: 2018-01-01
 excerpt: "動的計画法について"
 project: false
 config: true
