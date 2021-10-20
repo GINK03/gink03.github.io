@@ -55,3 +55,15 @@ pandas_gbq.context.credentials = (
   service_account.Credentials.from_service_account_file("path_of_creds.json")
 )
 ```
+
+## 対話式のUIでクレデンシャルを初期化する
+ - キャッシュに保存されたクレデンシャルを再設定したい時など
+
+```python
+import pydata_google_auth
+credentials = pydata_google_auth.get_user_credentials(
+    SCOPES,
+    auth_local_webserver=False,
+)
+pd.read_gbq(query, projectid, dialect='standard', use_bqstorage_api=True, credentials=credentials)
+```
