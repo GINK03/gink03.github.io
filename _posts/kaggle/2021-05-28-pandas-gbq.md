@@ -61,6 +61,10 @@ pandas_gbq.context.credentials = (
 
 ```python
 import pydata_google_auth
+SCOPES = [
+    'https://www.googleapis.com/auth/cloud-platform',
+    'https://www.googleapis.com/auth/drive',
+]
 credentials = pydata_google_auth.get_user_credentials(
     SCOPES,
     auth_local_webserver=False,
