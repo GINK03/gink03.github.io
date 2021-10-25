@@ -68,3 +68,10 @@ System Benchmarks Index Score                                        2485.2
 System Benchmarks Index Score                                         816.6
 System Benchmarks Index Score                                        4249.2
 ```
+
+**windows 11, wsl2, ubuntu, ryzen 3800x**
+
+```console
+System Benchmarks Index Score                                        1221.6
+System Benchmarks Index Score                                        5989.3
+```
