@@ -84,6 +84,11 @@ comments: false
  - シミュレータにて計算できる
    - [link](https://23kids.tokyo/calc.html)
 
+## ジャパンベビーシッターサービス
+ - [ジャパンベビーシッターサービス](https://jbs-mom.co.jp/)
+   - 病児保育であっても通常の育児であっても保育してくれるサービス
+   - [企業主導型ベビーシッター利用者支援事業](https://www8.cao.go.jp/shoushi/shinseido/outline/sitter_atsukai.html)の対象であり、親の企業によっては補助が出る可能性がある
+
 ## kidsline
  - [kidsline](https://kidsline.me/login_parent)
    - ベビーシッターのマッチングサービス
@@ -93,10 +98,6 @@ comments: false
  - [doula](https://finddoula.net/)
    - 産後の女性に必要なことをトータルでやるというサービス
 
-## フローレンスの病児保育
- - [フローレンスの病児保育](https://byojihoiku.florence.or.jp/service/basic/)
-   - 子供が風邪を引いたりしたときは保育園や通常のベビーシッターは預かってくれないことがある
-   - 病気の子供を預かってくれるサービス
 
 ---
 
