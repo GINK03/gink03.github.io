@@ -40,11 +40,20 @@ admin powershellにて、
 # choco search <keyword>
 ```
 
+## upgrade
+
+```console
+# choco upgrade <pkg> -Y
+```
+ - すでに最新版のパッケージを利用している場合はアップグレードされることはない
+
 ## upgrade all
 
 ```console
 # choco upgrade all -Y
 ```
+ - アップデートあるパッケージをインストールする
+ - インストールに成功、失敗したなどのログはすべてのプロセスが完了後に表示される
 
 ## 定義したlocal_packages.configからインストールする  
  - `.config`の拡張子のxmlからまとめてソフトウェアをインストールすることができる
