@@ -5,48 +5,134 @@ date: 2021-04-20
 excerpt: "kubernetesについて"
 computer_science: true
 hide_from_post: true
-tag: ["runtime", "cloud"]
+tag: ["runtime", "cloud", "kubernetes", "k8s", "kubectl"]
 comments: false
 ---
 
 # kubernetesについて
 
-## クラスタの作成
+## GCP上のクラスタ
+
+### クラスタの作成
 
 ```console
 $ gcloud container clusters create $cluster-name --num-nodes=1
 ```
- - 10分じゃく操作に時間がかかる
+ - 10分弱操作に時間がかかる
 
-## ノードサイズの変更
+### ノードサイズの変更
 
 ```console
 $ gcloud container clusters resize $cluster-name --num-nodes $num-node
 ```
 
-## GKEクラスタに接続する
+### GKEクラスタに接続する
 
 ```console
 $ gcloud container clusters get-credentials $cluster-name
 ```
  - 実行すると`.kube/config`が作成される
 
-## コンテナのデプロイ
+## ローカルでのクラスタ
+ - [minikube](/minikube/)
+ - microk8s
+
+## kubectl概要
+ - kubernetesクラスタを操作するツール
+
+## kubectlインストール
+
+**linux**
+```console
+$ curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+$ chmod +x kubectl
+```
+
+## クラスタへコンテナのデプロイ
 
 ```console
-$ kubectl create deployment $cluster-name --image=gcr.io/${PROJECT_ID}/$container-name
+$ kubectl create deployment <deployment-name> --image=<container-name or path>
+```
+
+## デプロイしたIPやポートなどの状態を確認する
+
+```console
+$ kubectl get services <deployment-name>
+```
+
+## クラスタのポートとローカルをポートフォワーディング
+
+```console
+$ kubectl port-forward service/<deployment-name> <local-port>:<remote-port>
+```
+
+## podのリストを表示
+
+```console
+$ kubectl get pods
+```
+
+## podの標準出力を確認する
+
+```console
+$ kubectl logs <pod-name>
 ```
 
 ## podのポート公開
 
 ```console
-$ kubectl expose pod $my-pod --port 80 --type LoadBalancer
+$ kubectl expose pod <pod-name> --port 80 --type LoadBalancer
 ```
 
-## deploymentのnodeportの公開
+## nodeportの公開
 
 ```console
-$ kubectl expose deployment $web --target-port=8080 --type=NodePort
+$ kubectl expose deployment <deployment-name> --target-port=8080 --type=NodePort
+```
+
+## GKEをイントロスペクトする
+
+**設定を記述したyamlを用意し、適応**
+```console
+$ kubectl apply -f ./<yaml file>
+```
+
+**namespaceを指定してapply**
+```console
+$ kubectl apply -f ./<yaml file>.yaml --namespace=<namespace>
+```
+ - yamlの`metadata`に`namespace: $production`を設定してもいい
+
+## デプロイメントを作成する
+
+```console
+$ kubectl create -f ./<yaml file> --save-config
+```
+ - applyとcreateの違いはすでにあるデプロイメントを利用するか作成するか
+
+## Podのレプリカをスケール
+
+```console
+$ kubectl scale --replicas=3 deployment <deployment>
+```
+
+## デプロイメントのオートスケール
+
+```console
+$ kubectl autoscale deployment <deployment> --max 4 --min 1 --cpu-percent 1
+```
+
+## デプロイメントをpushすることなく適応する場合
+
+```console
+$ kubectl rollout pause deployment 
+```
+
+## rollbindingする
+
+***admin権限をbinding***
+```console
+$ kubectl create clusterrolebinding cluster-admin-binding --clusterrole cluster-admin --user $USERNAME_EMAIL
 ```
 
 ## GKEクラスタの検査
@@ -74,50 +160,6 @@ $ kubectl top nodes
 **horizontal pod autoscalerを調べる**
 ```console
 $ kubectl get hpa
-```
-
-## GKEをイントロスペクトする
-
-**設定を記述したyamlを用意する**
-```console
-$ kubectl apply -f ./$new-nginx-pod.yaml
-```
-
-**namespaceを指定してapply**
-```console
-$ kubectl apply -f ./my-pod.yaml --namespace=$production
-```
- - yamlの`metadata`に`namespace: $production`を設定してもいい
-
-## デプロイメントを作成する
-
-```console
-$ kubectl create -f $web.yaml --save-config
-```
-
-## Podのレプリカをスケール
-
-```console
-$ kubectl scale --replicas=3 deployment $deployment
-```
-
-## デプロイメントのオートスケール
-
-```console
-$ kubectl autoscale deployment $web --max 4 --min 1 --cpu-percent 1
-```
-
-## デプロイメントをpushすることなく適応する場合
-
-```console
-$ kubectl rollout pause deployment 
-```
-
-## rollbindingする
-
-***admin権限をbinding***
-```console
-$ kubectl create clusterrolebinding cluster-admin-binding --clusterrole cluster-admin --user $USERNAME_EMAIL
 ```
 
 # yamlのパラメータの設定
@@ -155,7 +197,7 @@ spec:
 ## cron job
 
 ```yaml
-apiVersion: batch/v1beta1
+apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: hello
@@ -175,6 +217,7 @@ spec:
           restartPolicy: OnFailure
 ```
  - 毎分`echo`する
+ - `kubectl get pods`して`kubectl logs <pod-name>`で結果を確認できる
 	
 
 ## hello-app
