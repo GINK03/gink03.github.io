@@ -45,6 +45,9 @@ let mapleader = "\<Space>"
 " /usr/bin/python3
 ```
 
+### scriptnames
+ - ロードされているscriptを読み込み順で表示する
+ - なにかのscriptが設定を上書きしてしまうなどがあれば順序を確認して整理することができる
 
 ## pythonバインディング
 
@@ -68,3 +71,22 @@ endfunction
 " :call RndColo() 
 ```
 
+## concealing
+ - 表示したくない文字列を隠す機能
+ - visualモードでは表示されないがinsertモードでは表示される
+
+```vimscript
+function! Concealing()
+    " markdownの長いurlをshortenする
+    set conceallevel=3
+    set concealcursor=n
+    " syn cluster SClusters contains=STest
+    syntax region STest start='\[.\+\](' end=')' contains=myStartTest,myEndTest oneline concealends
+    syntax match myStartTest '(\ze.\+' contained conceal cchar=(
+    syntax match myEndTest '(.\+)' contained conceal cchar=*
+endfunction
+
+:call Concealing()
+```
+
+ - 上記の例ではmarkdownのURL文字列を隠す
