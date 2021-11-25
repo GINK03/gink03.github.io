@@ -49,7 +49,6 @@ DNS=1.1.1.1
 FallbackDNS=8.8.8.8
 ReadEtcHosts=no
 MulticastDNS=yes
-DNSStubListener=yes
 #Domains=
 #LLMNR=no
 #DNSSEC=no
@@ -76,6 +75,9 @@ $ sudo lsof -i -P -n | grep LISTEN | grep :53
 systemd-r  1055 systemd-resolve   13u  IPv4  47149      0t0  TCP 127.0.0.53:53 (LISTEN)
 ```
 
+### stub listennerの使用上の注意
+ - stub listennerは`127.0.0.53`からのアクセスで`port 53`で待ち受ける
+ - `port 53`を使用するので`unbound`等のDNSサーバと共存することはできない
 
 ### 反映と確認
 
