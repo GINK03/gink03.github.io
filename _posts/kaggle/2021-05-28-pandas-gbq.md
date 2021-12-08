@@ -71,3 +71,10 @@ credentials = pydata_google_auth.get_user_credentials(
 )
 pd.read_gbq(query, projectid, dialect='standard', use_bqstorage_api=True, credentials=credentials)
 ```
+
+## トラブルシューティング
+
+### クレデンシャルを適切に設定しているのpermission errorが発生する
+ - `GOOGLE_APPLICATION_CREDENTIALS`の環境変数が設定されているとキャッシュよりそちらを優先してしまう
+ - jupyter等を起動する前に`$ unset GOOGLE_APPLICATION_CREDENTIALS`して環境変数を削除している必要がある
+   - jupyter内で`!echo $GOOGLE_APPLICATION_CREDENTIALS`することで設定状況を確認することができる
