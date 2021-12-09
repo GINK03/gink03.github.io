@@ -100,6 +100,14 @@ comments: false
  - シミュレータにて計算できる
    - [link](https://23kids.tokyo/calc.html)
 
+## ファミリー・サポート・センター
+ - 厚生労働省が企画した保育サービスで、区市町村が担当窓口になっていることが多い保育サービス
+ - 保育を依頼したい場合の二日前に預けたい先のファミリー・サポート・センターに電話して予約して、マッチングが成立するか確認する
+   - 誰か人材を確保しているわけではなく、偶然その時暇な人に保育をアサインするイメージ
+ - [ファミリー・サポート・センター; 日光市](https://www.city.nikko.lg.jp/kosodate/guide/fukushi/jidou/family-support-center/index.html)
+ - [ファミリーサポートセンターでは地域の子育てと、仕事と介護の両立を応援します。](http://www.jaaww.or.jp/service/family_support/index.html)
+
+
 ## ジャパンベビーシッターサービス
  - [ジャパンベビーシッターサービス](https://jbs-mom.co.jp/)
    - 病児保育であっても通常の育児であっても保育してくれるサービス
