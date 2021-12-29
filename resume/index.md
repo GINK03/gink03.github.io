@@ -62,8 +62,9 @@ Introductory in Japanese and in English are mixed.
      - [Java SE 11 Gold](https://user-images.githubusercontent.com/4949982/115006787-38f14480-9ee4-11eb-89be-6b6153afe926.png)
      - [Java SE 11 Silver](https://user-images.githubusercontent.com/4949982/115006761-32fb6380-9ee4-11eb-958e-76be3f7bd040.png)
      - [Java SE 11 Developer(2020年以降のJava SE 11 Gold)](https://user-images.githubusercontent.com/4949982/115006773-368eea80-9ee4-11eb-8268-d08e12ac9278.png)
-   - **LinuC**
-	 - [Linuc 1](https://user-images.githubusercontent.com/4949982/145949183-07201d17-a3be-4b6f-8c83-9804a35f877d.png)
+   - **LinuC/LPIC**
+     - [Linuc Level-2](https://user-images.githubusercontent.com/4949982/147626160-1ce99516-1684-4857-af59-77716606fc01.png)
+     - [Linuc Level-1](https://user-images.githubusercontent.com/4949982/145949183-07201d17-a3be-4b6f-8c83-9804a35f877d.png)
    - **数学検定**
      - [データサイエンス数学ストラテジスト 中級](https://user-images.githubusercontent.com/4949982/139525493-37cf4708-3eea-4cc5-9e17-4db90870891d.png)
 
