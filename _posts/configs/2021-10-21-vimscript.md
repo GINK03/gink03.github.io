@@ -90,3 +90,40 @@ endfunction
 ```
 
  - 上記の例ではmarkdownのURL文字列を隠す
+
+## テーマを作成
+ - 前提
+   - treesitterや他の特殊なテーマが有効になっていないこと
+   - 作成した設定が最後に描画されないと反映されないので、他のテーマを読み込んだりしておらず`:set syntax=off`されていること
+
+**pythonの色設定の例**  
+```vimscript
+" for, inをカラーリング
+syn match pythonFor /\vfor\s/
+hi def link pythonFor Macro
+syn match pythonIn /\sin\s/
+hi def link pythonIn Macro
+hi Macro ctermfg=182 ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+
+" import, asをカラーリング
+syn match pythonImport /\vimport\ze\s/
+syn match pythonAs /\sas\ze\s/
+hi def link pythonImport Include
+hi def link pythonAs Include
+hi Include ctermfg=192 ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+
+" defをカラーリング
+syn match pythonDefine /\vdef\s/
+hi def link pythonDefine Define
+hi Define ctermfg=202 ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
+```
+ - [HEADファイル](https://bitbucket.org/nardtree/gimpei-dot-files/src/master/files/nvim/colors/monokai-high.vim)
+ - 正規表現でハイライトルールを作成する
+   - `\v`はindentの始まりにマッチする
+   - `\ze`は色を塗る末尾
+
+**例**  
+
+<div>
+  <img src="https://user-images.githubusercontent.com/4949982/148197983-085bef50-8669-467d-b2dd-d5c6ade89ff7.png">
+</div>
