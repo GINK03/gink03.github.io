@@ -17,11 +17,30 @@ comments: false
 ## オフィシャルドキュメント
  - [vimhelp.org](https://vimhelp.org/)
 
+
+## 正規表現の変数マッチ
+ - `=~`
+ - `=~#`
+ - `=~?`
+
 ## 定義した関数の呼び出し
 
 ```vimscript
 :call <defined-function>()
 ```
+
+## ハイライト一覧
+
+```vimscript
+:highlight
+```
+
+## マップされているショートカットの確認
+
+```vimscript
+:map
+```
+ - 先頭の文字が共通するショートカットがあるとどちらかを判定するために遅延が入る
 
 ## リーダーキーボードの定義
 
@@ -29,7 +48,25 @@ comments: false
 let mapleader = "\<Space>"
 ```
 
+## インクリメンタルサーチの結果、色をもとに戻す
+
+```vimscript
+:nohl
+```
+
 ## 各種関数
+
+### echo関数
+ - `echo "string"`
+   - stringを出力
+
+### getline関数
+ - `getline(.)`
+   - いまの関数の文字
+ - `getline(1)`
+   - 先頭の文字
+ - `getline(1, 5)`
+   - 1 ~ 5
 
 ### system
  - systemコールを行える関数
