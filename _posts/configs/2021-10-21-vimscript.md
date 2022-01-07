@@ -1,21 +1,29 @@
 ---
 layout: post
-title: "vim script"
+title: "vimscript"
 date: "2021-10-21"
-excerpt: "vim scriptの使い方"
+excerpt: "vimscriptの使い方"
 project: false
 config: true
-tag: ["vim script", "neovim", "vim"]
+tag: ["vimscript", "neovim", "vim"]
 comments: false
 ---
 
-# vim scriptの使い方
+# vimscriptの使い方
 
 ## 概要
- - `.vimrc`で動作するスクリプト
+ - `init.vim`, `.vimrc`で動作するスクリプト
 
-## オフィシャルドキュメント
+## ドキュメント
  - [vimhelp.org](https://vimhelp.org/)
+ - [有志による日本語訳](https://vim-jp.org/vimdoc-ja/)
+
+## vimscriptのロード順序
+読み込まれる順序があり、プラグインによってキーマップやグローバル変数が書き換えられてしまうことがある   
+そのため、ハイライト情報やキーマップの設定は`after/plugin/*.vim`に記したほうが安全である  
+ 1. `init.vim`
+ 2. ユーザが追加したプラグイン
+ 3. `after/plugin/*.vim`
 
 
 ## 正規表現の変数マッチ
@@ -53,6 +61,12 @@ let mapleader = "\<Space>"
 ```vimscript
 :nohl
 ```
+
+## 特殊変数
+ - `expand('%:p')`
+   - 編集中のフルパス
+ - `@%`
+   - 編集中のファイル名
 
 ## 各種関数
 
