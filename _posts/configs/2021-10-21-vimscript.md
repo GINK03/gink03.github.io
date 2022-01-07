@@ -70,9 +70,31 @@ let mapleader = "\<Space>"
 
 ## 各種関数
 
+### char2nr関数
+ - 文字を数字のコードに変換
+
+### nr2char関数
+ - 数字をコードとみなし対応する文字に変換
+
+### matchaddpos関数
+ - 特定の範囲をハイライトする関数
+ - `matchaddpos("HighlightRule",[[h, w, length], 0])`
+
 ### echo関数
  - `echo "string"`
    - stringを出力
+
+### getpos関数
+ - マークや今いる箇所のポジションを返す
+ - `getpos(".")`
+   - 現在のポジションを返す
+ - `getpos("'a")`
+   - マーク`a`の場所を返す
+
+### setpos関数
+ - マークの設定やポジションのジャンプ
+ - `setpos("'a", [h, w])`
+   - `[h, w]`にマーク`a`を設定
 
 ### getline関数
  - `getline(.)`
@@ -82,7 +104,7 @@ let mapleader = "\<Space>"
  - `getline(1, 5)`
    - 1 ~ 5
 
-### system
+### system関数
  - systemコールを行える関数
  - 引数を文字列で取得できる
  - 結果には末端処理がされていないのでtrim関数を掛ける必要がある
@@ -96,9 +118,21 @@ let mapleader = "\<Space>"
 " /usr/bin/python3
 ```
 
-### scriptnames
+### timer_start関数
+ - 指定のmillisec後に指定のコマンドを実行する
+ - 疑似マルチスレッドのようなことができ、特定の関数を明示的にあとにロードさせたい時に使える
+
+```vimscript
+:let timer = timer_start(500,
+                        \ {-> execute("echo 'Handler called'", "")},
+                        \ {'repeat': 3})
+" 3回, Hander calledと表示される
+```
+
+### :scriptnames
  - ロードされているscriptを読み込み順で表示する
  - なにかのscriptが設定を上書きしてしまうなどがあれば順序を確認して整理することができる
+
 
 ## pythonバインディング
 
