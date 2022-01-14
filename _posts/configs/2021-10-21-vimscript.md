@@ -70,6 +70,9 @@ let mapleader = "\<Space>"
 
 ## 各種関数
 
+### line('$')
+ - 現在開いているファイルの行数
+
 ### char2nr関数
  - 文字を数字のコードに変換
 
@@ -116,6 +119,19 @@ let mapleader = "\<Space>"
 :echo trim(system('which python3'))
 
 " /usr/bin/python3
+```
+
+### command関数
+ - コマンドを定義する関数
+
+**executeで実行する方法**  
+```vimscript
+command <Command-name> execute "call <Function-name>()"
+```
+
+**関数を引数付きで呼び出す方法**  
+```vimscript
+command -nargs=* <Command-name> call <Function-name>(<f-args>)
 ```
 
 ### timer_start関数
