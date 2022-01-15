@@ -10,11 +10,12 @@ comments: false
 
 # windows-terminalの使い方
 
-windowsで使う際のわりとまともに使える.  
-
-[YouTubeに投稿してみたときのプレゼン資料](https://docs.google.com/presentation/d/1gipc9VgBmv98gunpZw16e0MQ_o7dfLkizO7zvFvbBE8/edit?usp=sharing)  
+## 概要
+ - windowsで使う際のわりとまともに使えるterminal  
+   - [プレゼン資料](https://docs.google.com/presentation/d/1gipc9VgBmv98gunpZw16e0MQ_o7dfLkizO7zvFvbBE8/edit?usp=sharing)  
 
 ## install
+
 ```console
 > choco install windows-terminal
 ```
@@ -24,58 +25,19 @@ or
 `Official github release`  
 
 ## 謎のクラッシュ時の対応
-windows-terminalをMicrosoft Storeから最新版に更新する  
+ - windows-terminalをMicrosoft Storeから最新版に更新する  
 
 ## github
-`https://github.com/microsoft/terminal`
+ - `https://github.com/microsoft/terminal`
 
-## config
+## おすすめショートカット
+ - `次のタブ` -> `ctrl + ]`
+ - `前のタブ` -> `ctrl + [`
 
-configファイルがあるpathはwindowsにランダムで作られるdigest値を持ったパスになり、例えば以下のようなパスになる  
-
- - e.g. `cd .\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\`  
-
-digest値のパスはユーザやWindowsのUUID的なもので変わるため、環境により適切に再設定する必要がある  
-
-keybindを変更することが可能で、タブ間の切り替えやkeybindのオーバーライドを無視させるのに以下のような設定で行える  
-
-[theme](https://docs.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes)も自由に設定することができ、以下のjsonの例では、"One Half Dark"というテーマを適応している  
-
-```json
-{
-    "$schema": "https://aka.ms/terminal-profiles-schema",
-    "copyOnSelect": false,
-    "copyFormatting": false,
-    "profiles":
-    {
-        "defaults":
-        {
-			// ここは必須
-			"fontFace" : "Myrica M" //"Noto Sans Mono CJK JP Regular",
-			"fontSize" : 15, 
-			"colorScheme": "One Half Dark"
-        },
-        "list":
-        [
-		  ...
-        ]
-    },
-
-    "schemes": [],
-    "keybindings":
-    [
-	  // ここは必須
-      { "command": {"action": "copy", "singleLine": false }, "keys": "ctrl+c" },
-      { "command": "paste", "keys": "ctrl+v" },
-      { "command": "find", "keys": "ctrl+shift+f" },
-      { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" },
-	  { "command": "unbound", "keys": [ "ctrl+shift+down" ] },
-	  { "command": "unbound", "keys": [ "ctrl+shift+left" ] },
-	  { "command": "unbound", "keys": [ "ctrlshift+right" ] },
-	  { "command": "unbound", "keys": [ "ctrl+shift+up" ] }, 
-	  { "command": "newTab", "keys": [ "ctrl+t" ] },
-	  { "command": "nextTab", "keys": [ "ctrl+]" ] }, 
-	  { "command": "prevTab", "keys": [ "ctrl+[" ] } 
-    ]
-}
-```
+## おすすめフォント設定
+ - フォント
+   - [sfmono-square](https://github.com/delphinus/homebrew-sfmono-square)
+ - フォント設定
+   - `テキストのアンチエイリアシング` -> `ClearType`
+ - 配色
+   - `Campbell`

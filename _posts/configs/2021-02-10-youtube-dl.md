@@ -10,6 +10,9 @@ comments: false
 
 # youtube-dlの使い方
 
+## 概要
+ - youtubeやpornhubや対応するサイトから動画をダウンロードできる
+
 ## 公式ドキュメント等
  - [github.com](https://github.com/ytdl-org/youtube-dl)
 
@@ -36,6 +39,14 @@ $ youtube-dl -F "${YOUTUBE_LINK}"
 ```console
 $ youtube-dl -f ${FORMAT_NUM} "${YOUTUBE_LINK}"
 ```
+ - 超高画質の動画は音声と動画のフォーマットが別々になる
+ 
+**動画と音声のフォーマットをそれぞれ指定してダウンロードしてマージ**  
+
+```console
+$ youtube-dl -f ${FORMAT1}+${FORMAT2} --merge-output-format mp4 "${YOUTUBE_LINK}"
+```
+ - マージ機能を利用するにはffmpegがインストールされている必要がある
 
 **ベストフォーマットをダウンロード**
 ```console

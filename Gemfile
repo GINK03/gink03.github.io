@@ -5,3 +5,5 @@ gem "jekyll-sitemap"
 gem "jekyll-gist"
 gem 'jekyll-mentions'
 gem 'jekyll-feed'
+gem "jekyll-theme-cayman"
+gem "kramdown-parser-gfm"
