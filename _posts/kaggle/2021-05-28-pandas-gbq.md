@@ -12,6 +12,7 @@ comments: false
 # pandas-gbqの使い方について
  - 簡単にpandasとbigqueryを結合できる
  - 最初に認証を通す必要がある
+   - 使えるクレデンシャルがない場合、`~/.config/pandas_gbq/bigquery_credentials.dat`にユーザ認証で通した一時的なクレデンシャルが作成される
  - データのアップロード時には予め`bq mk ~`でバケットを作成する必要がある
  - あまり大きなデータをダウンロードできない
  - `use_bqstorage_api=True`でダウンロードを高速化できる
@@ -71,6 +72,23 @@ credentials = pydata_google_auth.get_user_credentials(
 )
 pd.read_gbq(query, projectid, dialect='standard', use_bqstorage_api=True, credentials=credentials)
 ```
+
+## キャッシュされたユーザ認証のクレデンシャルを明示的に使う
+
+```python
+from pathlib import Path
+import pandas as pd
+import pydata_google_auth
+
+
+credentials = pydata_google_auth.load_user_credentials(
+    Path("~/.config/pandas_gbq/bigquery_credentials.dat").expanduser()
+)
+
+
+df = pd.read_gbq(query, projectid, dialect="standard", credentials=credentials, use_bqstorage_api=True)
+```
+ - 自動で優先される`GOOGLE_APPLICATION_CREDENTIALS`が設定されてしまっているときなどに有効
 
 ## トラブルシューティング
 
