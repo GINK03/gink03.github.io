@@ -228,3 +228,17 @@ hi Define ctermfg=202 ctermbg=NONE cterm=NONE guifg=NONE guibg=NONE gui=NONE
 <div>
   <img src="https://user-images.githubusercontent.com/4949982/148197983-085bef50-8669-467d-b2dd-d5c6ade89ff7.png">
 </div>
+
+### テーマ作成時の留意点
+
+#### 正規表現マッチはかなり重くなる
+ - なにかルールを追加するときは試してみて速度を確認する
+
+#### カラーリングが反映されない
+ - 別のルールでオーバーライドされている可能背があるので、何がその箇所を描画しているのを調べてから`syn clear`する
+
+```vimscript
+" 以下のコマンドで対象のルール名を調べる
+:echo synIDattr(synID(line("."), col("."), 1), "name")<CR>
+syn clear <clear-rule-name>
+```

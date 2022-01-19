@@ -62,6 +62,12 @@ System Benchmarks Index Score                                        1545.4
 System Benchmarks Index Score                                        2485.2
 ```
 
+**debian, qemu vm on m1**
+
+```console
+System Benchmarks Index Score                                        2584.1
+```
+
 **vmware, debian, ryzen 3800x**  
 
 ```console

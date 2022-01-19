@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "karabiner element"
+title: "karabiner elements"
 date: 2021-02-11
-excerpt: "karabiner elementの概要と使い方"
-tags: ["karabiner", "osx"]
+excerpt: "karabiner elementsの概要と使い方"
+tags: ["karabiner", "osx", "karabiner-elements"]
 config: true
 comments: false
 ---
@@ -15,10 +15,27 @@ macosxのシステムのキーボードの動きに対してフックを掛け�
 
 
 ## インストール
+
+**ダウンロード**  
  - [github releases](https://github.com/pqrs-org/Karabiner-Elements/releases)
  - インストール後は権限の許可と再起動が必要
    - 本当に有効になっているかの確認
      - 適当なキーを別なキーに変換して変換できているか確認する
+
+**brew**  
+```console
+$ brew install karabiner-elements
+```
+
+## アンインストール
+
+**command**  
+```console
+$ bash '/Library/Application Support/org.pqrs/Karabiner-DriverKit-VirtualHIDDevice/scripts/uninstall/deactivate_driver.sh'
+$ sudo '/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall.sh'
+```
+
+ - [参考](https://karabiner-elements.pqrs.org/docs/manual/operation/uninstall/)
 
 ## Simple modifications
 単にキーを置き換える

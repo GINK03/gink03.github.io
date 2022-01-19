@@ -100,9 +100,6 @@ admin powershellにて、
   <package id="python3"/>
   <package id="safari"/>
   <package id="steam"/>
-  <package id="vcredist140"/>
-  <package id="vcredist2010"/>
-  <package id="vcredist2015"/>
   <package id="vim"/>
   <package id="vivaldi"/>
   <package id="vivaldi.portable"/>
@@ -127,4 +124,9 @@ admin powershellにて、
 > python3 export.py
 ```
 
+## トラブルシューティング
 
+### chocolateyがハングアップして正常に機能しない
+ - 原因は不明であるが、一度、chocolateyを削除して再インストールすることで回復する
+ - chocolateyを削除すると何をインストールしたかなどのデータが消える
+ - 再度、インストールしようと試みることで再び登録することができる

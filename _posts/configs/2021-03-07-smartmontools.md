@@ -22,7 +22,15 @@ $ sudo apt install smartmontools
 $ brew install smartmontools
 ```
 
-## 使い方
+## 引数
+ - `--scan`
+   - すべてのディスクを表示
+ - `-H /dev/<sdx>`
+   - `sdx`のヘルスチェック
+
+## 具体例
+
+### すべての情報を表示する
 
 ***ubuntu***
 ```console
