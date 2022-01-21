@@ -17,13 +17,14 @@ layout: compress
 	  <div class="content">
 		<div class="post-title">
 		  <h1>{{ page.title }}</h1>
+		  <a>{{ page.excerpt }}</a>
 		  <a class="btn zoombtn" href="{{site.url}}">
 			<i class="fa fa-home"></i>
 		  </a>
 		</div>
 		<div class="post-list">
 		  {% for post in site.posts %} 
-			{% if post.kaggle %}
+			{% if post.adhoc_analytics %}
 			<ul>
 			  <li data-wow-duration="1.5s" style="padding: 0px;">
 				<a class="zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>

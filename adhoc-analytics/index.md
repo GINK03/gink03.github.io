@@ -1,6 +1,6 @@
 ---
 layout: adhoc-analytics
 title: アドホック分析関連
-excerpt: "adhoc analytics"
+excerpt: "ad hocとはルーチンの逆。ショットでの分析"
 comments: false
 ---
