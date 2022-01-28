@@ -37,10 +37,13 @@ pydata_google_auth.save_user_credentials(
             use_local_webserver=False
         )
 ```
- - `scopes`; 権限を許可するスコープをリストで入力
+ - `scopes`
+   - 権限を許可するスコープをリストで入力
    - [scope一覧](https://developers.google.com/identity/protocols/oauth2/scopes)
- - `path`; 取得した認証情報を保存するパス
- - `use_local_webserver`; ローカルでブラウザを立ち上げるかどうか(リモートのterminal時はFalse)
+ - `path`
+   - 取得した認証情報を保存するパス
+ - `use_local_webserver`
+   - ローカルでブラウザを立ち上げるかどうか(リモートのterminal時はFalse)
 
 ### 保存した認証情報をロードしてcredentialを得る
 
@@ -52,6 +55,7 @@ credentials = pydata_google_auth.load_user_credentials(
     Path("~/.var/GOOGLE-USER-CRED.json").expanduser()
 )
 ```
+ - 認証情報が読み込めないとエラーが出る場合は有効期限期間が切れて再ログインを求められるような場合なので削除する
 
 ### もらった or 発行したサービスアカウント情報をロードしてcredential情報を得る
 
