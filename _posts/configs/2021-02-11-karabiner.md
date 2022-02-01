@@ -11,7 +11,8 @@ comments: false
 # karabiner elementの概要と使い方
 
 ## 概要
-macosxのシステムのキーボードの動きに対してフックを掛けて任意のキーを別の任意のキーに変換する、任意のキーショートカットを任意のシェルスクリプトに割り当てることができるソフトウェア
+ - macosxのシステムのキーボードの動きに対してフックを掛けて任意のキーを別の任意のキーに変換する、任意のキーショートカットを任意のシェルスクリプトに割り当てることができるソフトウェア
+   - ショートカットにshell script、apple scriptを割り当てる方法として他には[/raycast/](/raycast/)を使用する方法がある
 
 
 ## インストール
@@ -38,10 +39,15 @@ $ sudo '/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall.sh'
  - [参考](https://karabiner-elements.pqrs.org/docs/manual/operation/uninstall/)
 
 ## Simple modifications
-単にキーを置き換える
- - e.g. 
-   - `caps lock` -> `left_control`
-   - `caps lock`の置き換えはシステム設定からも行えるが、Complex modificationsを利用する際は置き換えたキーとして認識されないので、Simple modificationsも設定する必要がある
+ - 単にキーを置き換える
+   - e.g. 
+	 - `caps lock` -> `left_control`
+	 - `caps lock`の置き換えはシステム設定からも行えるが、Complex modificationsを利用する際は置き換えたキーとして認識されないので、Simple modificationsも設定する必要がある
+
+### おすすめのSimple modifications
+ - 右のコマンドを`F20`に置き換える
+   - `F20`で起動するランチャーなどを割り当てる
+
 
 ## Complex modifications
 任意のキーボードショートカットを与える
