@@ -50,39 +50,61 @@ $ sudo '/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall.sh'
 
 
 ## Complex modifications
-任意のキーボードショートカットを与える
+ - 任意のキーボードショートカットを与える
+   - `~/.config/karabiner/karabiner.json`に設定ファイルが作成されるのでこれを編集して新規ショートカットの追加と編集を行う
+   - `karabiner.json`の設定が読めない・間違っているなどとき、`karabiner-element`アプリのgui表示から設定が消える
+   - バージョンの差があるのか、ネット上の設定をコピペしても動かないことがある
+   - `simultaneous`というキーのコンビネーションはかなり挙動がシビアであり、結構入力が難しい
+ - 現実的にjsonファイルを直接編集するのは難しいので[GokuRakuJoudo](https://github.com/yqrashawn/GokuRakuJoudo)という設定ジェネレータが便利
+   - karabiner-elementsの設定プロファイルが`Default`という名前になっている必要がある
+   - gokuの設定ファイルは`~/.config/karabiner.edn`にある必要がある
+   - 様々なショートカットの作成例が乗っており参考にして作成する
+   - `goku`コマンドでednファイルを解析して`karabiner.json`へ書き込む
+  
+### GokuRakuJoudoの設定例
 
- - `~/.config/karabiner/karabiner.json`に設定ファイルが作成されるのでこれを編集して新規ショートカットの追加と編集を行う
- - `karabiner.json`の設定が読めない・間違っているなどとき、`karabiner-element`アプリのgui表示から設定が消える
- - バージョンの差があるのか、ネット上の設定をコピペしても動かないことがある
- - `simultaneous`というキーのコンビネーションはかなり挙動がシビアであり、結構入力が難しい
+```edn
+{:devices       {;; define devices
+                 ;; vendor_id and product_id can be found in Karabiner EventViewer gui
+                 :hhkb [{:vendor_id 1452 :product_id 638}]}
+ :templates     {:open "open \"%s\""}
+ :layers        {}
+ :simlayers     {;; make w key a simlayer key
+                 ;; layers works too, but only recommended for none typing keys
+                 ;; like . , tab
+                 ;; or keys like z, which used less often
+                 :launch-mode {:key :right_option}}
+ :main          [{:des   "change caps_lock to left_control"
+                  :rules [[:caps_lock :left_control]]}
+                 ;; ##で装飾すると単体で押した時の動作を定義できる
+                 {:des   "change right_command to f20"
+                  :rules [[:##right_command :right_command nil {:alone  :f20}]]}
+                 {:des   "change right_shift to f19"
+                  :rules [[:##right_shift :right_shift nil {:alone  :f19}]]}
+                 {:des   "right_option + .(period) to 日本語英数"
+                  :rules [[[:right_option :period] :japanese_eisuu]]}
+                 {:des   "right_option + ,(comma) to 日本語かな"
+                  :rules [[[:right_option :comma] :japanese_kana]]}
+                 {:des   "right_option + '(quote) to google chrome"
+                  :rules [[[:right_option :quote] [:open "/Applications/Google Chrome.app"]]]}
+                 {:des   "right_option + ;(semicolon) to iterm"
+                  :rules [[[:right_option :semicolon] [:open "/Applications/iTerm.app"]]]}
+                 {:des   "launch mode"
+                  :rules [:launch-mode
+                            ;; launch-mode + commaでかな入力に
+                            [:comma [:japanese_kana]]
+                            ;; launch-mode + peridで英数入力に
+                            [:period [:japanese_eisuu]]
+                            [:semicolon [:open "/Applications/iTerm.app"]]
+                            [:quote [:open "/Applications/Google Chrome.app"]]]
+                 }]
+}
+```
 
 ## インターネットのユーザが作成したmodifications
  - [link](https://ke-complex-modifications.pqrs.org/)
  - Microsoft RDPでコマンドをctrlにアプリが起動中のときのみ置き換える設定などがあり、便利である
 
-## 使用している`karabiner.json`
-
-[gistでホストしている`karabiner.json`ファイル](https://gist.github.com/GINK03/7d646e1da20af7e51b30759f1b46d441)
-
-
-**概要**
- - `alt+hjkl`
-   - マウスをキーボードで動かす
- - `alt+i`
-   - マウスの右クリック
- - `ctrl+alt+t`
-   - `iterm2`を新規ウィンドウで立ち上げ
- - `ctrl+alt+c`
-   - `google chrome`を新規ウィンドウで立ち上げ
- - `ctrl+alt+f`
-   - `finder`を立ち上げ
- - `s+1(900ms以内)`
-   - AirPodsに音声を切り替え
- - `s+2(900ms以内)`
-   - Displayに音声切り替え
-
 ## apple script(osascript)について
-MacOSXの挙動を制御しているのは`apple script`なので特定のアプリになにかメッセージを与えるときには、`apple script`を実行する`shell script`を記述すれば良い  
-
-作成した`apple script`は[gist](https://gist.github.com/GINK03/7d646e1da20af7e51b30759f1b46d441)でホストしている
+ - MacOSXの挙動を制御しているのは`apple script`なので特定のアプリになにかメッセージを与えるときには、`apple script`を実行する`shell script`を記述すれば良い  
+ - 作成した`apple script`は[gist](https://gist.github.com/GINK03/7d646e1da20af7e51b30759f1b46d441)でホストしている
