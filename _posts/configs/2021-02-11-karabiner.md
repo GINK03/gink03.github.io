@@ -63,7 +63,8 @@ $ sudo '/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall.sh'
   
 ### GokuRakuJoudoの設定例
 
-```edn
+
+```
 {:devices       {;; define devices
                  ;; vendor_id and product_id can be found in Karabiner EventViewer gui
                  :hhkb [{:vendor_id 1452 :product_id 638}]}
@@ -94,6 +95,12 @@ $ sudo '/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall.sh'
                             ;; launch-mode + commaでかな入力に
                             [:comma [:japanese_kana]]
                             ;; launch-mode + peridで英数入力に
+                            [:period [:japanese_eisuu]]
+                            ;; 左側にfnが無いキーがあることがあるのでpage_up, page_downをoption + arrowで代替する
+                            ;; launch-mode + up_arrowで page_upに
+                            [:up_arrow [:page_up]]
+                            ;; launch-mode + down_arrowで page_downに
+                            [:down_arrow [:page_down]]
                             [:period [:japanese_eisuu]]
                             [:semicolon [:open "/Applications/iTerm.app"]]
                             [:quote [:open "/Applications/Google Chrome.app"]]]
