@@ -22,6 +22,9 @@ comments: false
 > choco install docker-desktop
 ```
 
+**osx**  
+GUIにて、公式サイトよりインストーラーをダウンロードしてインストールする
+
 ## 具体的な使い方
 
 ### windows環境でwslと統合する
