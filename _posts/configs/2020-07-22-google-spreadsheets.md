@@ -5,7 +5,7 @@ date: 2020-07-22
 excerpt: "spreadsheet"
 project: false
 config: true
-tag: ["gspread", "gss", "spreadsheet"]
+tag: ["gspread", "gss", "spreadsheets", "google spreadsheets"]
 comments: false
 ---
 
@@ -13,25 +13,33 @@ comments: false
  - google spread sheetのこと
  - bigqueryと繋げられたり便利
 
-## 日付の表示を %Y-%m-%d に
+## Google Apps Script
+
+### 概要
+ - `Microsoft Excel`のマクロに該当する機能  
+ - 様々な具体例は[Google Developers](https://developers.google.com/apps-script/guides/sheets)に記されている。 
+
+## Google Apps Scriptを開く
+ - SpreadSheetの`[拡張機能]` -> `[Apps Script]`からスクリプトエディタを開くことができる。  
+
+## ssidについて
+ - URLに含まれるハッシュ値のようなものがssidでありスプレッドシート毎の固有値になっている
+
+## 基本的な操作
+
+### 日付の表示を %Y-%m-%d に
 
 ```
 [表示形式] -> [数字] -> [表示形式の詳細設定] -> [その他の日付や時刻の設定]
 ```
 
-## csv fileのインポート
+### csv fileのインポート
 
 ```
 [ファイル] -> [インポート] -> [アップロード]
 ```
 
-## Google Apps Scriptの使用
-
-`Microsoft Excel`のマクロに該当する機能  
-SpreadSheetの`[ツール]` -> `[スクリプトエディタ]`からスクリプトエディタを開くことができる。  
-様々な具体例は[Google Developers](https://developers.google.com/apps-script/guides/sheets)に記されている。 
-
-## Queryを使う 
+### Queryを使う 
 
 SpreadSheet上のデータに対して、Queryを使うことができる。  
 
