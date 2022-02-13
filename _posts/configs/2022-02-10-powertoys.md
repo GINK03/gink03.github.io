@@ -1,0 +1,52 @@
+---
+layout: post
+title: "powertoys"
+date: 2022-02-10
+excerpt: "powertoysの使い方"
+tags: ["powertoys", "karabiner", "windows"]
+config: true
+comments: false
+---
+
+# powertoysの使い方
+
+## 概要
+ - microsoftが提供するmac osで便利であるけれどwindowsにないソフトウェアを提供している
+   - powertoysが提供する機能と同等のmac osのソフトウェア
+     - raycast
+     - karabiner
+     - keepyouawake
+
+## 各機能
+
+### 常に手前に表示
+#### 概要
+ - 特定のウィンドウを常に最前面に表示する
+
+#### 使い方
+ - `Ctrl + Win + T`
+
+### Awake
+#### 概要
+ - 常にスリープしない
+
+### FancyZone
+#### 概要
+ - 右左のウィンドウの2分割だけではなく、任意のテンプレートに分割する
+ - mac osではraycastやmagnetが該当しそう
+ 
+#### 使い方
+ - 分割したいウィンドウを`Shift押しながらドラッグ`移動できる
+ - `Win+backquote`でFancyZoneの編集
+ - Windowスナップのオーバーライドを有効にすると、tmuxのpaneの移動のイメージで移動、分割、配置ができる
+
+### Keyboard Manager
+#### 概要
+ - mac osのkarabinerと同様にキーの置き換えだったり、キーコンビネーションの定義ができる
+
+### PowerToys Run
+#### 概要
+ - mac osのraycastとほぼ同様（いくつかの機能は足らない）を提供する
+
+#### 使い方
+ - `Alt + Space`で起動
