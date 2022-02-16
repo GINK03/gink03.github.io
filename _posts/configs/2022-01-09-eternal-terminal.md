@@ -42,6 +42,8 @@ $ brew install MisterTea/et/et
 $ et <hostname>
 ```
 
+## 具体例
+
 ### 踏み台サーバを経由して接続
 
 ```console
@@ -53,6 +55,12 @@ $ et <hostname> --jumphost <step-server>
 
 ```console
 $ et <hostname> -t 8888-9000:8888-9000
+```
+
+### 家のPCにステップサーバを利用してアクセスしjupyterをポートフォーワードする
+
+```console
+$ et 192.168.40.24 --jumphost gimpeik.duckdns.org -t 8888-9000:8888-9000
 ```
 
 ## 参考
