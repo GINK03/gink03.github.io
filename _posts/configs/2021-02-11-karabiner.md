@@ -67,7 +67,9 @@ $ sudo '/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall.sh'
 ```
 {:devices       {;; define devices
                  ;; vendor_id and product_id can be found in Karabiner EventViewer gui
-                 :hhkb [{:vendor_id 1452 :product_id 638}]}
+                 :hhkb [{:vendor_id 1452 :product_id 638}]
+                 :keychron [{:vendor_id 1452 :product_id 591}]}
+
  :templates     {:open "open \"%s\""}
  :layers        {}
  :simlayers     {;; make w key a simlayer key
@@ -77,6 +79,17 @@ $ sudo '/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall.sh'
                  :launch-mode {:key :right_option}}
  :main          [{:des   "change caps_lock to left_control"
                   :rules [[:caps_lock :left_control]]}
+                 ;; keychronなどは右ctrlがあり右optionがないので割り当てる
+                 {:des   "keychron/change right_control to right_option"
+                  :rules [:keychron
+                              [:fn :right_option]
+                              [:escape :grave_accent_and_tilde]
+                              [:right_control :right_option]]}
+                 ;; f11で日本語かな, f12で日本語英数
+                 {:des   "f11 to 日本語かな"
+                  :rules [[:f11 :japanese_kana]]}
+                 {:des   "f12 to 日本語英数"
+                  :rules [[:f12 :japanese_eisuu]]}
                  ;; ##で装飾すると単体で押した時の動作を定義できる
                  {:des   "change right_command to f20"
                   :rules [[:##right_command :right_command nil {:alone  :f20}]]}
@@ -115,3 +128,12 @@ $ sudo '/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall.sh'
 ## apple script(osascript)について
  - MacOSXの挙動を制御しているのは`apple script`なので特定のアプリになにかメッセージを与えるときには、`apple script`を実行する`shell script`を記述すれば良い  
  - 作成した`apple script`は[gist](https://gist.github.com/GINK03/7d646e1da20af7e51b30759f1b46d441)でホストしている
+
+## トラブルシューティング
+
+### karabiner event viewerが正常にキーを認識しない
+ - 正常に動作した例
+   1. `karabiner-elements`をアンイストール
+   2. 再起動
+   3. `karabiner-elements`を再インストール
+   4. 再起動
