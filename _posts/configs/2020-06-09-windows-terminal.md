@@ -14,6 +14,12 @@ comments: false
  - windowsでターミナルを使う際のデファクトスタンダード
    - [プレゼン資料](https://docs.google.com/presentation/d/1gipc9VgBmv98gunpZw16e0MQ_o7dfLkizO7zvFvbBE8/edit?usp=sharing)  
 
+### 動作イメージ
+
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/4949982/154488018-ff22b29e-e327-456d-8a2f-3bee30adf5c3.png">
+</div>
+
 ---
 
 ## インストール
