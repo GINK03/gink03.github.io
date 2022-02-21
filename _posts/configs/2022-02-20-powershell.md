@@ -51,6 +51,21 @@ Alias           clear -> Clear-Host
 > cat *.csv | Out-Host –Paging
 ```
 
+### NetIPConfiguration
+ - ipアドレスの操作関連
+
+**IPアドレスとインターフェースインデックスの確認**  
+```console
+> Get-NetIPConfiguration
+```
+
+**IPアドレスをセットする**  
+ - `192.168.40.16/24`をインターフェースインデックス`23`に追加する例
+
+```console
+> New-NetIPAddress -InterfaceIndex 23 -IPAddress 192.168.40.16 -PrefixLength 24
+```
+
 ## 発展
 
 ### starshipをインストール
