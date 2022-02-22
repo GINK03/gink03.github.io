@@ -13,6 +13,7 @@ comments: false
 
 ## 概要
  - remote desktopの一つ
+   - rdpとは異なるfluidプロトコルというもので接続するので、rdpがバグったときなどの代替としても役に立つ
  - ipadからwindows, macなどのデスクトップに接続するソフトウェアとしてredditで評価が高い
  - SSOに対応しており、applt id, google accountで認証できる
 
