@@ -3,7 +3,7 @@ layout: post
 title: "gcp natural language api"
 date: 2021-09-08
 excerpt: "gcp natural language apiについて"
-tags: ["cloud build", "gcp", "api"]
+tags: ["nlp", "google cloud platform", "gcp", "api"]
 config: true
 comments: false
 ---
@@ -19,6 +19,12 @@ comments: false
  - クエリラベル（最も最適なクエリを提案）
 
  - [公式サンプル](https://cloud.google.com/natural-language/docs/samples)
+
+## インストール
+
+```console
+$ python3 -m pip install google-cloud-language
+```
 
 ## 日本語のセンチメント分析の例
 
