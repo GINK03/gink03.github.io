@@ -26,6 +26,20 @@ comments: false
  - `DELETE`
    - データの削除 
 
+---
+
+## アクセス可能IPとポートの設定の例
+
+```python
+app.run(host="0.0.0.0", port=5000)
+```
+ - `host`
+   - アクセス可能なIP
+ - `port`
+   - 起動時のポート 
+
+---
+
 ## flaskによるrestに対応した最小限のサーバの実装例
 
 ```python
