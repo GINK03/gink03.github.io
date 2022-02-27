@@ -33,18 +33,26 @@ comments: false
 #### タイマーを用いて処理をバッチ化する
  - `App Scriptの画面から[トリガー]を選択` -> `[トリガーを追加]を選択` -> `[時間主導型]を選択` -> `好きな時間粒度で選択`
 
-#### sheetのIDを取得
+#### アクティブなsheetのIDを取得
 
 ```js
 var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
 sheet.getSheetId();
 ```
 
-#### sheetの名前を取得
+#### アクティブなsheetの名前を取得
 
 ```js
 var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
 sheet.getName();
+```
+
+#### ssのIDを指定してss, sheetのインスタンスを取得
+
+```js
+var ssid_target = "16V6Xzup9zp******************";
+var ss_target = SpreadsheetApp.openById(ssid_target);
+var sheet = ss_target.getSheetByName("シート1");
 ```
 
 #### 操作しているユーザの取得
@@ -103,8 +111,12 @@ var data = {
   'age': 35,
   'pets': ['fido', 'fluffy']
 };
+var headers = {
+  "x-api-key": "jFyeYNPaTn8jG3WLnfn*******************"
+};
 var options = {
   'method' : 'post',
+  'headers': headers,
   'contentType': 'application/json',
   // Convert the JavaScript object to a JSON string.
   'payload' : JSON.stringify(data)
@@ -112,6 +124,7 @@ var options = {
 var response = UrlFetchApp.fetch("http://6c3a8d888880.ngrok.io", options);
 Logger.log(response.getContentText());
 ```
+ - `x-api-key`はAPIのキーとなる
  - `UrlFetchApp.fetch(...)`はpostメソッドでのアクセスのみサポートであり、サーバサイドではgetのような用途であっても`post`で受け取る必要がある
 
 #### APIで取得したjson情報をパースしてシートに貼り付け
