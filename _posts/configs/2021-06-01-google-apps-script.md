@@ -112,6 +112,7 @@ var options = {
 var response = UrlFetchApp.fetch("http://6c3a8d888880.ngrok.io", options);
 Logger.log(response.getContentText());
 ```
+ - `UrlFetchApp.fetch(...)`はpostメソッドでのアクセスのみサポートであり、サーバサイドではgetのような用途であっても`post`で受け取る必要がある
 
 #### APIで取得したjson情報をパースしてシートに貼り付け
 
