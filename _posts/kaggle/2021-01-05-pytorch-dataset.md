@@ -10,10 +10,63 @@ comments: false
 ---
 
 # pytorchのdataset classの使い方
- - 継承して使う
- - index要素アクセスでデータを引き出せる
 
-## e.g. 画像をロードするdataset class
+## 概要
+ - `Dataset Class`を継承して使う
+ - index要素アクセスでデータを引き出せる
+   - `__getitem__`にindexで要素アクセスする 
+ - `Dataset Class`を継承して作成したインスタンスを`DataLoader`クラスで読み出す
+
+---
+
+## 最小構成テンプレート(minimal template)
+
+**ダミー情報の作成**  
+```python
+import pandas as pd
+import numpy as np
+df = pd.DataFrame()
+df["param"] = np.random.random((100,))
+```
+
+**Datasetクラスの作成**  
+```python
+from pandas.core.frame import DataFrame
+from torch.utils.data import Dataset, DataLoader
+
+class UserDataset(Dataset):
+    def __init__(self, df):
+        self.df = df
+    def __len__(self):
+        return self.df.shape[0]
+    def __getitem__(self, index):
+        row = self.df.iloc[index]
+        return row["param"]
+
+udataset = UserDataset(df)
+display(udataset[1]) # 0.8289795102510317
+```
+
+**DataLoaderクラスで読み出す**  
+```python
+train_loader = DataLoader(udataset, 
+                          batch_size=32, 
+                          shuffle=True, 
+                          num_workers=4,
+                          pin_memory=False, 
+                          drop_last=True)
+for data in train_loader:
+    print(data) # tensor([0.9034, 0.5378, 0.9615, 0.2905, 0.5310, 0.3499, 0.3936, 0.3074, 0.6413,
+```
+
+### Google Colab
+ - [pytorch-dataset-example](https://colab.research.google.com/drive/1trvfkEPnUUeRP9yje6iEMnWfeq_aYXyT?usp=sharing)
+
+---
+
+## 具体例
+
+### e.g. 画像をロードするdataset class
 
 ```python
 class FaceLandmarksDataset(Dataset):
