@@ -36,6 +36,8 @@ comments: false
  - iPadへカーソルが行ったまま帰ってこない
    - 通信が不安定になっていることが原因
    - 一度MacBookを閉じて再度開くと直る
+ - WiFi経由でユニバーサルコントロールを行った時マウスが遅延する
+   - USBで接続し直すと改善する
 
 ## 参考
  - [「ユニバーサルコントロール」を利用する方法](https://applech2.com/archives/20220315-how-to-use-universal-control-macos-123-monterey.html)
