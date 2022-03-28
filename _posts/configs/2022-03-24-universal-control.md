@@ -38,6 +38,8 @@ comments: false
    - 一度MacBookを閉じて再度開くと直る
  - WiFi経由でユニバーサルコントロールを行った時マウスが遅延する
    - USBで接続し直すと改善する
+ - USB接続でテザリング時にユニバーサルコントロールが開始されない
+   - WiFiのイベントと紐付いているらしく、WiFiがONになっている必要がある
 
 ## 参考
  - [「ユニバーサルコントロール」を利用する方法](https://applech2.com/archives/20220315-how-to-use-universal-control-macos-123-monterey.html)
