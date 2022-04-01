@@ -131,6 +131,21 @@ Logger.log(response.getContentText());
  - `x-api-key`はAPIのキーとなる
  - `UrlFetchApp.fetch(...)`はpostメソッドでのアクセスのみサポートであり、サーバサイドではgetのような用途であっても`post`で受け取る必要がある
 
+#### sheet.getRange関数
+ - 範囲の操作オブジェクトインスタンスを返す関数
+
+```js
+sheet.getRange(row_start_index, col_start_index, row_size, col_size)
+```
+ - `row_start_index`
+   - ROWの始点
+ - `col_start_index`
+   - COLの始点
+ - `row_size`
+   - 選択するROWのサイズ
+ - `col_size`
+   - 選択するCOLのサイズ
+
 #### APIで取得したjson情報をパースしてシートに貼り付け
 
 ```js
@@ -138,6 +153,8 @@ var response = UrlFetchApp.fetch("http://6c3a8d888880.ngrok.io", options);
 var data = JSON.parse(response.getContentText());
 sheet.getRange(2, 1, data.length, data[0].length).setValues(data);
 ```
+ - `data`は`[[col1, col2, ..., colN], [val1, val2, ..., valN], ...]`というデータ形式 
+   - dataの最初の要素がcolumn情報になっている
 
 #### セルを指定して最後のセルにデータを貼り付け
 
@@ -153,6 +170,24 @@ for (const [index, append_col] of append_cols.entries()) {
 }
 ```
  - 範囲指定しない挿入は遅い
+
+#### 選択したrangeオブジェクトの書式を一括設定
+
+```js
+var range = sheet.getRange(row_start_index, col_start_index, row_size, col_size)
+range.setNumberFormat("#,##0.00")
+```
+ - 参考
+   - [【GAS】スプレッドシートの表示形式で数字フォーマットを変更する方法(setNumberFormat)](https://auto-worker.com/blog/?p=3814)
+
+#### カラムの移動
+
+```js
+const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Sheet1");
+sheet.moveColumns(sheet.getRange("A1"), 3);
+```
+ - 参考
+   - [how to swap columns in google sheets/StackOverflow](https://stackoverflow.com/questions/62252784/how-to-swap-columns-in-google-sheets)
 
 #### localhostへのAPIへアクセスしたい
  - ngrokを使う  
