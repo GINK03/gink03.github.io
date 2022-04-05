@@ -17,7 +17,16 @@ comments: false
  - シンタックス
  - 分類
  - クエリラベル（最も最適なクエリを提案）
+ - 構文解析（係り受けを考慮した形態素解析）
 
+## 料金
+ - ドキュメント
+   - [Cloud Natural Language の料金](https://cloud.google.com/natural-language/pricing?hl=ja)
+ - ユニットという単位で課金される
+   - 1ユニット1000文字
+   - 1000ユニットで数ドル
+
+## サンプル
  - [公式サンプル](https://cloud.google.com/natural-language/docs/samples)
 
 ## インストール
@@ -25,6 +34,8 @@ comments: false
 ```console
 $ python3 -m pip install google-cloud-language
 ```
+
+---
 
 ## 日本語のセンチメント分析の例
 
@@ -57,6 +68,8 @@ Sentence sentiment magnitude: 0.8999999761581421
 Language of the text: ja
 ```
 
+---
+
 ## 日本語のエンティティ分析
 
 ### 概要
@@ -87,5 +100,58 @@ Mention type: COMMON
 Representative name for the entity: ウクライナ
 Entity type: LOCATION
 Salience score: 0.13067138195037842
+...
+```
+
+---
+
+## 日本語の構文解析
+
+### 概要
+ - 係り受けを考慮した形態素解析
+ - 係り受けの関係がわかりやすい
+
+### コード
+ - [gist](https://gist.github.com/GINK03/2a22e4432ac8d489997f86a0970e603e#file-gcp-nlp-api-jp-koubun-py)
+
+### 出力
+
+```console
+Language of the text: ja
+Token text: ウクライナ
+Location of this token in overall document: 0
+Part of Speech tag: NOUN
+Head token index: 4
+Label: NN
+
+Token text: の
+Location of this token in overall document: 15
+Part of Speech tag: PRT
+Head token index: 0
+Label: PRT
+
+Token text: ゼレン
+Location of this token in overall document: 18
+Part of Speech tag: NOUN
+Head token index: 3
+Label: NN
+
+Token text: スキー
+Location of this token in overall document: 27
+Part of Speech tag: NOUN
+Head token index: 4
+Label: NN
+
+Token text: 大統領
+Location of this token in overall document: 36
+Part of Speech tag: NOUN
+Head token index: 19
+Label: NSUBJ
+
+Token text: は
+Location of this token in overall document: 45
+Part of Speech tag: PRT
+Head token index: 4
+Label: PRT
 ...
 ```
