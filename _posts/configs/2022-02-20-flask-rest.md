@@ -83,7 +83,21 @@ if __name__ == '__main__':
     app.run(debug=True)
 ```
 
+## flaskでステータスコードとメッセージを返すとき
+
+```python
+@app.route('/', methods=['GET', 'POST'])
+def home():
+    # キーによる認証
+    if request.headers.get('x-api-key') != "xxxxxxxxxxxxx":
+        return "invalid access.", 400
+    ...
+```
+
 ## restに対応したAPIにアクセスする最小限のクライアントの実装例
+
+
+### GETでデータを送るとき
 
 ```python
 import requests
@@ -100,3 +114,17 @@ with requests.post(URL, params={"user": "c", "values": 1}) as r:
 with requests.delete(URL, params={"user": "a", "values": 1}) as r:
     print(r.text)
 ```
+
+### POSTとjsonでデータを送るとき
+
+```python
+import requests
+import json
+URL = "http://localhost:8080/"
+
+params = {"mode": "m1", "p1": ["https"]}
+headers = {"x-api-key": "660df3bae494e5bc8d76d"}
+with requests.post(URL, json=params, headers=headers) as r:
+    print(r.text)
+```
+
