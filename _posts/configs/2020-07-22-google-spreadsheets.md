@@ -13,7 +13,9 @@ comments: false
  - excelのオンラインバージョン
  - bigqueryと繋げられたり便利
 
-## Google Apps Script/gas
+---
+
+## Google Apps Script/GAS
 
 ### 概要
  - `Microsoft Excel`のマクロに該当する機能  
@@ -25,6 +27,8 @@ comments: false
 ### ssidについて
  - URLに含まれるハッシュ値のようなものがssidでありスプレッドシート毎の固有値
  - ssidを指定してgasで操作可能
+
+---
 
 ## 基本的な操作
 
@@ -58,6 +62,20 @@ Aに対してGROUP BY操作のようなこともできる
 
 ### セレクトボックを作る
  1. `[Data]` -> `[Data Validation]` -> `クライテリアを入力して、"Show dropdown list in cell"を選ぶ`
+
+### column, rowの幅や高さを変える
+ 1. 幅や高さを変えたいcolumn, rowを選択
+ 2. 右クリックし`Resize columns...`または`Resize rows...`を選択
+ 3. 設定したい幅か高さのpixel数を入力する
+
+### セルの中身を折り返して標示する
+ 1. テキスト位置のメニューの`|→|`のようなアイコンを選択
+ 2. `|⏎|`のようなアイコンにすると折返しになる
+   - `|→|`; デフォルト。溢れた状態にするoverflow
+   - `|⏎|`; 折返し。text wrapping
+   - `|-|`; 溢れた文を消す。clip
+
+---
 
 ## アドオン関連
  - アドオンの追加
