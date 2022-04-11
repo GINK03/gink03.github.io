@@ -46,6 +46,20 @@ import google.auth
 credentials, project_id = google.auth.default()
 ```
  - 環境変数の`GOOGLE_APPLICATION_CREDENTIALS`がセットされていると最初にそちらから読み取られる
+ 
+### GOOGLE_APPLICATION_CREDENTIALSを優先しないようにする
+
+```console
+$ unset GOOGLE_APPLICATION_CREDENTIALS
+```
+
+## dockerコンテナの内部で認証を通す
+ - ローカル開発などに限定したとき
+ - root部分は適宜変更
+
+```console
+$ docker run -v ~/.config/gcloud/:/root/.config/gcloud -p 8080:8080 -it <image-name>
+```
 
 ## 参考
  - [google.auth package](https://google-auth.readthedocs.io/en/master/reference/google.auth.html)
