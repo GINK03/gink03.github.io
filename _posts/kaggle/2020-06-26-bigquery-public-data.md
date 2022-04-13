@@ -29,19 +29,18 @@ comments: false
 
 **最新のトレンドを確認**  
 ```sql
-WITH max_refresh_date AS (
+WITH tmp AS (
     SELECT
-        max(refresh_date) as max_refresh_date
+        *,
+        ROW_NUMBER() OVER (PARTITION BY term, refresh_date ORDER BY week DESC) as row_number
     FROM `bigquery-public-data.google_trends.international_top_terms`
-    WHERE country_code = "JP"
+    WHERE country_code = "JP" AND region_name LIKE "%Tokyo%"
 )
 SELECT 
     *
-FROM `bigquery-public-data.google_trends.international_top_terms`
-INNER JOIN max_refresh_date
-ON refresh_date = max_refresh_date.max_refresh_date
-WHERE country_code = "JP" AND region_name LIKE "%Tokyo%"
-ORDER BY refresh_date, region_name, rank
+FROM tmp
+WHERE row_number = 1
+ORDER BY refresh_date, rank
 ```
 
 #### サンプル集計(Google Colab)
