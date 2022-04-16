@@ -19,7 +19,7 @@ comments: false
 
 ## 仕組み
  - ファイルとディレクトリには名前とは別に`fileId`と呼ばれる固有のハッシュ値のようなものが存在する
- - `fileId`がつながることでディレクトリ構造を提供している
+ - `fileId`がつながることで木構造になりディレクトリ構造を提供している
 
  - `fileId1`(ディレクトリ)
    - `fileId2`(ファイル)
@@ -29,5 +29,11 @@ comments: false
 
 ## 使用できるクライアント
 
-### [gdrive](/gdrive/)
+### [(osx)Google Drive for Desktop](https://support.google.com/a/users/answer/9965580?hl=en)
+ - 公式クライント
+ - osxで実行すると、smbプロトコルで`/Volumes/GoogleDrive/`にマウントされる模様
+ - 公式で実装されているのでCLIでアクセスしても安定している
+
+### [/gdrive/](/gdrive/)
  - linux, osxで使用できるCUIクライアント
+
