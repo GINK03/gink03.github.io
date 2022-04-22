@@ -14,6 +14,9 @@ comments: false
  - dockerのコンテナをデプロイして最小限の構成で動作させられるもの
  - cloud functionより高級でkubernetesより低級
  - 一回あたりの実行コストがとても安い
+ - 分散性能が高く、大量に並列に実行することに向いている
+ - コンテナの実行ユーザが`root`ではない別の権限で動くことになる
+   - PosixPathの`~`や環境変数の`$HOME`, `$USER`などは正常に動作しなくなるので、非依存にする必要がある
 
 ## 公式ドキュメント
  - [docs](https://cloud.google.com/run/docs)
