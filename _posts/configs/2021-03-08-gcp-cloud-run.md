@@ -70,3 +70,23 @@ $ gcloud run deploy <my-api> --image=gcr.io/<my-project>/name \
  - よくあるヒューリスティック
    - アクセス制限のセキュリティをなくして`X-Api-Key`で認証する
 
+### IAMでのアクセス制限の具体例
+
+**curlでアクセスする場合**  
+```console
+$ curl -H "Authorization: Bearer $(gcloud auth print-identity-token)" https://*****.run.app
+```
+
+**requestsを用いる場合**  
+```python
+TOKEN = os.popen("gcloud auth print-identity-token").read().strip()
+headers = {"x-api-key": "this is for ds-ws.", "Authorization": f"Bearer {TOKEN}"}
+params = {"hoo": "bar"}
+
+with requests.post(URL, json=params, headers=headers) as r:
+    print(r.text) # 結果を得る
+```
+
+ - 参考
+   - [デベロッパーの認証/GoogleCloud](https://cloud.google.com/run/docs/authenticating/developers)
+
