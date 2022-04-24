@@ -27,6 +27,9 @@ comments: false
      - `fileId4`(ファイル)
      - `fileId5`(ファイル)
 
+## URLからWebUIにアクセス
+ - [google.com/drive/](https://google.com/drive/)
+
 ## 使用できるクライアント
 
 ### [(osx)Google Drive for Desktop](https://support.google.com/a/users/answer/9965580?hl=en)
@@ -34,6 +37,19 @@ comments: false
  - osxで実行すると、smbプロトコルで`/Volumes/GoogleDrive/`にマウントされる模様
  - 公式で実装されているのでCLIでアクセスしても安定している
 
+### [(Windows)Google Drive for Windows](https://www.google.com/drive/download/)
+ - 特徴
+   - mac版は`/Volumes`以下に配置されるが、windows版はGoogle Driveという名前のハードディスクが作成される
+   - データの管理方式はストリーミングとミラーリングがある
+     - ストリーミング -> アクセス時にデータを取得
+     - ミラーリング -> すべてのデータをミラーリング(HDDの消費が激しい)
+   - パスの実態
+      - `C:\Users\<username>\AppData\Local\Google\DriveFS`であり張り替えることは可能
+
 ### [/gdrive/](/gdrive/)
  - linux, osxで使用できるCUIクライアント
 
+## トラブルシューティング
+
+### たくさんのファイルの移動・削除ができない
+ - mac, windowsのクライアントで操作すると極端に遅くなるので、WebUIから行う
