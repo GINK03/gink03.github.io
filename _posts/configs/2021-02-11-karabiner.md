@@ -137,3 +137,9 @@ $ sudo '/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall.sh'
    2. 再起動
    3. `karabiner-elements`を再インストール
    4. 再起動
+
+### アプリの実行権限のパーミッションが消える
+ - 原因
+   - osxがクラッシュして強制再起動したときにkarabinerの実行権限が消失し再設定もできなくなる
+ - 対応
+   - karabinerのドライバーをアンインストールし、macを再起動、再インストールで解決した
