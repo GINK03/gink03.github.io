@@ -42,7 +42,7 @@ comments: false
        - ネットワークオプションから、すべてのトラフィックをVPN経由で送信、とするとネットワークを暗号化できる
    - 参考
      - [MacBook Pro から SoftEther VPN サーバーに VPN 接続する方法](https://www.gadgets-today.net/?p=6072)
-     - [Softether VPN serverをGUIで初期設定する][https://qiita.com/honahuku/items/5a29355faaf363f87654]
+     - [Softether VPN serverをGUIで初期設定する](https://qiita.com/honahuku/items/5a29355faaf363f87654)
      - [VPNサーバ構築(7) SoftEther VPNのインストール](https://zenn.dev/kumatani/articles/vpn-7-installingsoftethervpn)
 
 ---
@@ -55,8 +55,8 @@ comments: false
  3. localhostだけ選択し、何も入力しないまま進める
  4. 接続するとパスワード設定を求められることがあり、その場合設定
  5. 仮想HUBを管理
-   1. ユーザを追加削除
-   2. L2TP/IPsecの設定をしないとios, osxからは利用できないのでする
+   - ユーザを追加削除
+   - L2TP/IPsecの設定をしないとios, osxからは利用できないのでする
      - L2TP/IPsecを有効にする
      - IPsec preshared keyはここで設定する
 
