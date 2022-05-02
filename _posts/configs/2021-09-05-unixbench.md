@@ -81,3 +81,9 @@ System Benchmarks Index Score                                        4249.2
 System Benchmarks Index Score                                        1221.6
 System Benchmarks Index Score                                        5989.3
 ```
+
+**ubuntu, Oracle Cloud Always Free(Arm 4CPU, 24GB)**  
+```console
+System Benchmarks Index Score                                        1539.9
+```
+
