@@ -66,6 +66,23 @@ Alias           clear -> Clear-Host
 > New-NetIPAddress -InterfaceIndex 23 -IPAddress 192.168.40.16 -PrefixLength 24
 ```
 
+### パッケージをpowershell経由でアンインストールする
+
+**アプリケーション一覧を得る**  
+```console
+> Get-WmiObject -Class Win32_Product | Select-Object -Property Name
+```
+ - powershell経由で操作可能なパッケージ一覧が得られる
+
+**アプリケーション名を指定してアンインストール**  
+```console
+> Get-Package  -Name "VNC Server 6.8.0" | Uninstall-Package
+```
+
+ - 参考
+   - [How to Uninstall Software Using PowerShell](https://techgenix.com/how-to-uninstall-software-using-powershell/)
+
+
 ## 発展
 
 ### starshipをインストール
