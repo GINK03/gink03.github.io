@@ -36,7 +36,7 @@ comments: false
        - VPNを新規作成
        - L2TP over IPsecを選択
        - サーバアドレスはIPアドレスやホスト名を利用
-       - アカウント名は {VirtualHUB-name}/{ユーザ名}
+       - アカウント名は `{VirtualHUB-name}/{ユーザ名}`
        - パスワードはユーザパスワード
        - 共有シークレットはIPsec preshared keyを入力する
        - ネットワークオプションから、すべてのトラフィックをVPN経由で送信、とするとネットワークを暗号化できる
@@ -44,6 +44,14 @@ comments: false
      - [MacBook Pro から SoftEther VPN サーバーに VPN 接続する方法](https://www.gadgets-today.net/?p=6072)
      - [Softether VPN serverをGUIで初期設定する](https://qiita.com/honahuku/items/5a29355faaf363f87654)
      - [VPNサーバ構築(7) SoftEther VPNのインストール](https://zenn.dev/kumatani/articles/vpn-7-installingsoftethervpn)
+
+### iOSでの接続方法
+ - 設定方法
+   - `[設定]` -> `[VPN]` -> `[VPN構成を追加...]`
+   - `L2TP`タイプを選択
+     - `アカウント名`; `<hub-name>\<username>`
+     - `パスワード`; ユーザのパスワード
+     - `シークレット`; Pre-Shared Key
 
 ---
 
