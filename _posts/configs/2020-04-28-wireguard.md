@@ -82,6 +82,7 @@ Endpoint = 126.133.200.64:1395
 ## enable server side ip forwarding
  - debian, ubuntu系では以下の設定を入れないとIPのフォワードをしない
  - この設定は再起動すると消えてしまうので、起動スクリプトに入れるなどの工夫が必要
+   - より詳細な設定については[/sysctl/](/sysctl/)を参照
 
 ```console
 # sysctl -w net.ipv4.ip_forward=1
