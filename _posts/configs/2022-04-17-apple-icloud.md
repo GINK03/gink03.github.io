@@ -8,7 +8,6 @@ config: true
 comments: false
 ---
 
-
 # apple icloudについて
 
 ## 概要
@@ -19,11 +18,17 @@ comments: false
  - 概要
    - クラウドドライブ
    - クライアントがosx, ios, windowsで用意されているが、Linuxはない
- - osxでのパス
-   - `~/Library/Mobile Documents`
-   - このパス以下にアプリごとの固有名が作成される
- - osxのデスクトップやドキュメントで同期されるファイルのパス　
-   - `~/Library/Mobile\ Documents/com~apple~CloudDocs/`
+ - osxでの利用
+   - osxでのパス
+     - `~/Library/Mobile Documents`
+     - このパス以下にアプリごとの固有名が作成される
+   - osxのデスクトップやドキュメントで同期されるファイルのパス　
+     - `~/Library/Mobile\ Documents/com~apple~CloudDocs/`
+ - Windowsでの利用
+   - Windowsでのパス
+     - `C:/Users/<username>/iCloudDrive`
+     - パスの変更はできない(windowsのシンボリックリンクを利用してソフトウェアを騙すことは可能)
+   - インストール直後は大量のダウンロードが発生するため、数時間経たないと新規ファイル等のアップロード等の操作は行えない
  - webクライアント
    - [www.icloud.com/iclouddrive/](https://www.icloud.com/iclouddrive/)
 
