@@ -2,17 +2,26 @@
 layout: post
 title: "excel"
 date: 2021-08-11
-excerpt: "excelチートシート"
+excerpt: "Excelの使い方とチートシート"
 config: true
-tag: ["excel"]
+tag: ["microsoft", "excel"]
 comments: false
 ---
 
-# excelチートシート
+# Excelの使い方とチートシート
 
-## 多くの分析関数は無料のオンライン版エクセルで動く
+## オンライン版Excel
+
+### 多くの分析関数は無料のオンライン版エクセルで動く
  - 分析関数も動くが、アドインの分析ツールが使えない(重回帰分析でP値を見ることなど)
  - [excel webで作成したファイル](https://1drv.ms/x/s!AgJYD-uOVOXsh8dj-hwmsPMIWWjddw?e=LMb8QM)
+
+## ライセンス認証しないExcel
+ - 基本的に開いて見るだけであるが、osxでpagesを使って開くより、素早く開けるなどの特徴があり、ライセンスを持っていなくてもインストールしておく価値がある
+
+---
+
+# それぞれの関数と機能
 
 ## 先頭行の固定
  1. `[表示]`
