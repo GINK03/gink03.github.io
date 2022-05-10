@@ -2,14 +2,14 @@
 layout: post 
 title: "chrome"
 date: 2020-11-16
-excerpt: "google chromeの設定とカスタマイズ"
+excerpt: "google chromeの便利な設定と機能とカスタマイズ"
 project: false
 config: true
 tag: ["chrome", "google chrome"]
 comments: false
 ---
 
-# google chromeの設定とカスタマイズ 
+# google chromeの便利な設定と機能とカスタマイズ 
 
 # 便利な設定
 
@@ -32,6 +32,17 @@ e.g.
  - `todo` -> `https://paper.dropbox.com/doc/TODOS--BAodfU5iJHWF6rSpOskQYOLrAg-7EjfRwhxsg2dSa3AgPz3b`
  - `ne` -> `https://www.netflix.com/browse`
  - `yo` -> `https://www.youtube.com/`
+
+---
+
+# 便利な機能
+
+## タブの固定
+ - 概要
+   - 固定するとchromeの起動時に表示されるようになる
+   - タブを閉じるショートカットを行うと消えてしまう
+ - 操作
+   - `タブの上で右クリック` -> `[固定]`を選択
 
 ---
 
@@ -120,3 +131,11 @@ e.g.
  - `ge`: URLをエディットするモード
  - `gi`: inputできるボックスまでジャンプ(e.g. yuotune, google, amazonの検索ボックスなど)
  - `/`: 文章検索(文章検索してヒットした単語をenterするとlinkがクリック候補になる、更にenterするとlinkが開く)
+
+## CoCoCut
+ - ストリーミングをダウンロードできるサービス
+ - 仕組み的にはバッファリングを保存して単一のmp4に変換するというもののようである
+ - (CoCoCutでの)ダウンロードが完了したあとに、保存のボタンを押して、そこから(webブラウザの)ダウンロードを完了させる必要がある
+
+## Video Speed Controller
+ - [/video-speed-controller/](/video-speed-controller/)
