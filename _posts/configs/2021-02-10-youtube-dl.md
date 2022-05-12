@@ -34,6 +34,7 @@ $ pip install youtube-dl
 ```console
 $ youtube-dl -F "${YOUTUBE_LINK}"
 ```
+ - 番号とその品質の詳細が記さた出力が得られる
 
 **フォーマットを指定してダウンロード**  
 ```console
@@ -44,9 +45,10 @@ $ youtube-dl -f ${FORMAT_NUM} "${YOUTUBE_LINK}"
 **動画と音声のフォーマットをそれぞれ指定してダウンロードしてマージ**  
 
 ```console
-$ youtube-dl -f ${FORMAT1}+${FORMAT2} --merge-output-format mp4 "${YOUTUBE_LINK}"
+$ youtube-dl -f ${FORMAT_NUM1}+${FORMAT_NUM2} --merge-output-format mp4 "${YOUTUBE_LINK}"
 ```
  - マージ機能を利用するにはffmpegがインストールされている必要がある
+ - webm形式の4kの動画番号を指定し、webm形式の音声番号を指定し、合成することで任意の品質の動画にできる
 
 **ベストフォーマットをダウンロード**
 ```console
