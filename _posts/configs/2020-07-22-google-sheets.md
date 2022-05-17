@@ -1,17 +1,18 @@
 ---
 layout: post
-title: "spreadsheet"
+title: "Google Sheets"
 date: 2020-07-22
-excerpt: "spreadsheet"
+excerpt: "Google Sheetsの使い方"
 project: false
 config: true
-tag: ["gspread", "gss", "spreadsheets", "google spreadsheets"]
+tag: ["google sheets", "gss", "spreadsheets", "google spreadsheets"]
 comments: false
 ---
 
-# google spreadsheets
- - excelのオンラインバージョン
+# Google Sheets
+ - excelのオンラインバージョンのアプリ
  - bigqueryと繋げられたり便利
+ - 呼称のエイリアスが多くあり、`スプレッドシート`, `スプシ`, `GSS`などとも呼ばれる
 
 ---
 
@@ -74,6 +75,16 @@ Aに対してGROUP BY操作のようなこともできる
    - `|→|`; デフォルト。溢れた状態にするoverflow
    - `|⏎|`; 折返し。text wrapping
    - `|-|`; 溢れた文を消す。clip
+
+---
+
+## 大量のシートを含むデータをGoogle Sheetsにアップロードする場合
+ - ユースケース
+   - 機械学習による大量の推論結果をGoogle Sheets経由でシェアする場合
+ - 手順
+   - pandasから一時的にExcelに出力
+   - Excelファイルを`スプレッドシートの置換`でインポート
+     - 大量のデータをインポートすると、`Google ドキュメント内でエラーが発生しました~`と出るが、リロードを行うと、正常に反映される 
 
 ---
 
