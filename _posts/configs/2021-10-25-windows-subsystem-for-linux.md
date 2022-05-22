@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "WSL"
+title: "WSL(Windows Subsystem for Linux)"
 date: "2021-10-25"
 excerpt: "WSL(Windows Subsystem for Linux)の使い方"
 project: false
@@ -13,6 +13,7 @@ comments: false
 
 ## 概要
  - WindowsでLinuxのコマンドをOSと密に連携して操作するシステム
+   - WSL1ではnativeで動作していたが、WSL2では仮想マシンベースになった
  - Linux側のVMのターミナルからWindowsのバイナリを実行できたり、Windows側からLinuxのバイナリを実行できる
 
 ## ユースケース毎の使い方
