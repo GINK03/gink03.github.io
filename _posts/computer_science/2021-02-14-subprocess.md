@@ -7,6 +7,8 @@ computer_science: true
 hide_from_post: true
 tag: ["subprocess"]
 comments: false
+sort_key: "2021-02-14"
+update_dates: ["2021-02-14"]
 ---
 
 # subprocessについて

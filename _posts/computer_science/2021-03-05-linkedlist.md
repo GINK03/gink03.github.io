@@ -7,6 +7,8 @@ computer_science: true
 hide_from_post: true
 tag: ["algorithm", "data structure", "データ構造", "LinkedList"]
 comments: false
+sort_key: "2021-12-29"
+update_dates: ["2021-12-29"]
 ---
 
 # LinkedListについて

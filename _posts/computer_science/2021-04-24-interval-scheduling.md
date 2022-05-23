@@ -7,6 +7,8 @@ computer_science: true
 hide_from_post: true
 tag: ["algorithm", "greedy", "interval scheduling", "区間スケジューリング"]
 comments: false
+sort_key: "2021-04-24"
+update_dates: ["2021-04-24"]
 ---
 
 # 区間スケジューリング(interval scheduling)について

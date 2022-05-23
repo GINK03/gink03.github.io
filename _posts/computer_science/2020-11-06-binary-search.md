@@ -4,11 +4,12 @@ title: "binary search"
 date: 2020-11-06
 excerpt: "binary searchについて"
 project: false
-config: true
 computer_science: true
 hide_from_post: true
 tag: ["binary search", "algorithm"]
 comments: false
+sort_key: "2021-09-05"
+update_dates: ["2021-09-05","2021-08-22","2021-08-17","2021-06-24","2021-06-06","2021-06-03","2021-06-03","2021-05-31","2021-05-20","2021-05-14","2021-05-01","2021-04-28","2021-04-25","2021-03-28"]
 ---
 
 # binary search

@@ -7,6 +7,8 @@ computer_science: true
 hide_from_post: true
 tag: ["runtime", "cloud", "kubernetes", "k8s", "kubectl"]
 comments: false
+sort_key: "2021-12-30"
+update_dates: ["2021-12-30"]
 ---
 
 # kubernetesについて

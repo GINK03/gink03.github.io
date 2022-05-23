@@ -7,6 +7,8 @@ computer_science: true
 hide_from_post: true
 tag: ["algorithm", "binary-search"]
 comments: false
+sort_key: "2021-04-28"
+update_dates: ["2021-04-28"]
 ---
 
 # 座標圧縮(coordinate compression)について

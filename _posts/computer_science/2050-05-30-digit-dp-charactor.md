@@ -7,6 +7,8 @@ computer_science: true
 hide_from_post: true
 tag: ["algorithm", "math", "dp", "digit-dp", "binary", "charactor"]
 comments: false
+sort_key: "2021-12-30"
+update_dates: ["2021-12-30"]
 ---
 
 # 桁DP(binary or 文字列)について

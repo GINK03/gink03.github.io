@@ -7,6 +7,8 @@ computer_science: true
 hide_from_post: true
 tag: ["algorithm", "math", "integer", "bipartile matching"]
 comments: false
+sort_key: "2021-05-30"
+update_dates: ["2021-05-30"]
 ---
 
 # bipartile matching問題について

@@ -7,6 +7,8 @@ computer_science: true
 hide_from_post: true
 tag: ["algorithm", "psuedopolynomial"]
 comments: false
+sort_key: "2021-03-27"
+update_dates: ["2021-03-27"]
 ---
 
 # Psuedopolynomial(疑多項式)について

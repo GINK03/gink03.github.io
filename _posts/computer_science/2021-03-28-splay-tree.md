@@ -7,6 +7,8 @@ computer_science: true
 hide_from_post: true
 tag: ["algorithm", "data structure", "データ構造", "splay tree"]
 comments: false
+sort_key: "2021-03-28"
+update_dates: ["2021-03-28"]
 ---
 
 # splay treeについて

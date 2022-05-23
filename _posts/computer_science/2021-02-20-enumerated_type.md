@@ -7,6 +7,8 @@ computer_science: true
 hide_from_post: true
 tag: ["enum", "列挙型"]
 comments: false
+sort_key: "2021-02-20"
+update_dates: ["2021-02-20"]
 ---
 
 # 列挙型について

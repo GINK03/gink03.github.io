@@ -7,6 +7,8 @@ computer_science: true
 hide_from_post: true
 tag: ["algorithm", "math"]
 comments: false
+sort_key: "2021-06-12"
+update_dates: ["2021-06-12","2021-06-06"]
 ---
 
 # マンハッタン距離の45°回転について

@@ -7,6 +7,8 @@ computer_science: true
 hide_from_post: true
 tag: ["algorithm", "dynamic programming", "brute force", "meet in the middle"]
 comments: false
+sort_key: "2021-04-24"
+update_dates: ["2021-04-24"]
 ---
 
 # 半分全列挙(meet in the middle)について

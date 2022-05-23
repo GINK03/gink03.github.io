@@ -4,10 +4,11 @@ title: "union find(disjoint set)"
 date: 2020-10-01
 excerpt: "union find(disjoint set)"
 project: false
-config: true
 comuter_science: true
 tag: ["computer science", "data structure", "union find", "disjoint set"]
 comments: false
+sort_key: "2021-08-15"
+update_dates: ["2021-08-15","2021-08-14","2021-06-16","2021-06-06","2021-06-03","2021-05-29","2021-04-29","2021-03-28","2021-03-28"]
 ---
 
 # union find(disjoint set)

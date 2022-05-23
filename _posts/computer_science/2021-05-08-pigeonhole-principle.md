@@ -7,6 +7,8 @@ computer_science: true
 hide_from_post: true
 tag: ["algorithm", "math", "鳩の巣原理", "pigeonhole principle"]
 comments: false
+sort_key: "2021-05-08"
+update_dates: ["2021-05-08"]
 ---
 
 # pigeonhole principle(鳩の巣原理)について

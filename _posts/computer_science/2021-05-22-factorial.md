@@ -7,6 +7,8 @@ computer_science: true
 hide_from_post: true
 tag: ["algorithm", "math", "integer", "combination", "permutaion", "factorial"]
 comments: false
+sort_key: "2021-05-24"
+update_dates: ["2021-05-24","2021-05-22"]
 ---
 
 # factorial, permutaion, combinationについて

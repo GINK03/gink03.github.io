@@ -7,6 +7,8 @@ computer_science: true
 hide_from_post: true
 tag: ["algorithm", "data structure", "segment tree"]
 comments: false
+sort_key: "2021-06-05"
+update_dates: ["2021-06-05","2021-06-04","2021-05-29","2021-05-07"]
 ---
 
 # segment tree(セグメント木)について

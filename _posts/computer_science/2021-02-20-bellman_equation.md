@@ -7,6 +7,8 @@ computer_science: true
 hide_from_post: true
 tag: ["bellman quation", "ベルマン方程式", "アルゴリズム"]
 comments: false
+sort_key: "2021-02-20"
+update_dates: ["2021-02-20","2021-02-20"]
 ---
 
 # ベルマン方程式について

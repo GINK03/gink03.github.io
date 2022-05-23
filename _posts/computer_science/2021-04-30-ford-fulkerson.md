@@ -7,6 +7,8 @@ computer_science: true
 hide_from_post: true
 tag: ["algorithm", "graph", "ford-fulkerson"]
 comments: false
+sort_key: "2021-04-30"
+update_dates: ["2021-04-30","2021-04-30"]
 ---
 
 # フォードファルカーソンアルゴリズムについて
