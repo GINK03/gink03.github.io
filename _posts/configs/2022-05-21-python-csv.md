@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["python", "csv"]
 comments: false
+sort_key: "2022-05-21"
+update_dates: ["2022-05-21"]
 ---
 
 # python csvの使い方

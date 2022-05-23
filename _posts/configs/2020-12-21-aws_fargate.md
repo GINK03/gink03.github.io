@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["fargate", "aws"]
 comments: false
+sort_key: "2020-12-28"
+update_dates: ["2020-12-28","2020-12-25","2020-12-25","2020-12-24"]
 ---
 
 # fargate

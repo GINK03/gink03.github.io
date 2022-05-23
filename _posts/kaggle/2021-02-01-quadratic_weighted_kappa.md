@@ -7,6 +7,8 @@ kaggle: true
 hide_from_post: true
 tag: ["qwk", "metrics", "quadratic weighted kappa", "python"]
 comments: false
+sort_key: "2021-02-01"
+update_dates: ["2021-02-01"]
 ---
 
 # quadratic weighted kappa(qwk)というメトリクスについて

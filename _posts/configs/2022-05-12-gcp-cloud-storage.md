@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["gcp", "cloud storage", "object storage"]
 comments: false
+sort_key: "2022-05-13"
+update_dates: ["2022-05-13"]
 ---
 
 # gcp cloud storageの使い方

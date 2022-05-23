@@ -6,6 +6,8 @@ excerpt: "unixbenchの使い方"
 tags: ["unixbench"]
 config: true
 comments: false
+sort_key: "2022-05-03"
+update_dates: ["2022-05-03","2022-01-19","2021-10-25","2021-09-07","2021-09-05"]
 ---
 
 # unixbenchの使い方

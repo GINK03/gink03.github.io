@@ -6,6 +6,8 @@ excerpt: "gcp client libraryチートシート"
 tags: ["python", "gcp"]
 config: true
 comments: false
+sort_key: "2021-04-28"
+update_dates: ["2021-04-28"]
 ---
 
 # gcp client libraryチートシート

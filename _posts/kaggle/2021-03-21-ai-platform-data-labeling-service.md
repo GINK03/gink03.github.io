@@ -7,6 +7,8 @@ kaggle: true
 hide_from_post: true
 tag: ["deep-learning", "annotation", "gcp"]
 comments: false
+sort_key: "2021-03-21"
+update_dates: ["2021-03-21"]
 ---
 
 # ai platform data labeling serviceについて

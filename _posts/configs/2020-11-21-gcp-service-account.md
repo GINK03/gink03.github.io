@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["GOOGLE_APPLICATION_CREDENTIALS", "gcp"]
 comments: false
+sort_key: "2021-09-08"
+update_dates: ["2021-09-08"]
 ---
 
 # gcp service accountについて

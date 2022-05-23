@@ -4,9 +4,10 @@ title: "bigquery public data"
 date: 2020-06-26
 excerpt: "bigquery public dataについて"
 tags: ["bq", "bigquery", "gcp", "dataset", "データセット"]
-config: true
 kaggle: true
 comments: false
+sort_key: "2022-04-13"
+update_dates: ["2022-04-13","2022-04-05","2022-04-04"]
 ---
 
 # bigquery public dataについて

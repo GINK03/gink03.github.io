@@ -6,6 +6,8 @@ excerpt: "apple airpodsについて"
 tags: ["apple", "ios", "osx", "support", "air pods", "air pods max"]
 config: true
 comments: false
+sort_key: "2022-05-09"
+update_dates: ["2022-05-09"]
 ---
 
 

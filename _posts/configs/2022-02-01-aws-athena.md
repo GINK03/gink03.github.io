@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["olap", "aws", "aws athena", "athena"]
 comments: false
+sort_key: "2022-02-01"
+update_dates: ["2022-02-01"]
 ---
 
 # aws athenaの使い方

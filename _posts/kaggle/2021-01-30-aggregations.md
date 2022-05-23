@@ -7,6 +7,8 @@ kaggle: true
 hide_from_post: true
 tag: ["feature", "aggregation", "python"]
 comments: false
+sort_key: "2021-02-01"
+update_dates: ["2021-02-01"]
 ---
 
 # 分析&モデリングで利用できるaggregationと種類

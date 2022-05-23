@@ -6,6 +6,8 @@ excerpt: "ArchLinux setup"
 tags: [archlinux]
 config: true
 comments: false
+sort_key: "2018-01-19"
+update_dates: ["2018-01-19"]
 ---
 
 # なんだかんだでもっとも軽いArchLinux

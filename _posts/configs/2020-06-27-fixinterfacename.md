@@ -6,6 +6,8 @@ excerpt: "fixinterfacename"
 tags: [fix interface name]
 config: true
 comments: false
+sort_key: "2021-07-09"
+update_dates: ["2021-07-09","2020-06-27"]
 ---
 
 # fix interface name

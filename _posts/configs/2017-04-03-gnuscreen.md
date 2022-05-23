@@ -8,6 +8,8 @@ config: true
 tag:
 - gnu screen
 comments: false
+sort_key: "2018-01-19"
+update_dates: ["2018-01-19"]
 ---
 
 # gnu screen

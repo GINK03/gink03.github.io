@@ -6,6 +6,8 @@ excerpt: "goodnotesの使い方"
 tags: ["osx", "ios", "goodnotes"]
 config: true
 comments: false
+sort_key: "2021-10-18"
+update_dates: ["2021-10-18","2021-10-16","2021-10-16"]
 ---
 
 # goodnotesの使い方

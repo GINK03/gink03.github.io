@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["google", "google apps", "ネットワークドライブ"]
 comments: false
+sort_key: "2022-04-25"
+update_dates: ["2022-04-25","2022-04-24","2022-04-16","2022-01-14"]
 ---
 
 # google driveの仕組みと概要

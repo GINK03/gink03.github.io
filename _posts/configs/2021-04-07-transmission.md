@@ -6,6 +6,8 @@ excerpt: "transmission(torrent client)について"
 tags: ["transmission", "torrent"]
 config: true
 comments: false
+sort_key: "2021-04-07"
+update_dates: ["2021-04-07"]
 ---
 
 # transmission(torrent client)について

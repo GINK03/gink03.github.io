@@ -4,9 +4,10 @@ title: "pytorch basic"
 date: 2021-01-05
 excerpt: "pytorchの基本的な使い方"
 project: false
-config: true
 tag: ["python", "pytorch"]
 comments: false
+sort_key: "2022-03-22"
+update_dates: ["2022-03-22"]
 ---
 
 # pytorchの基本的な使い方"
@@ -107,3 +108,24 @@ tensor([[2, 1],
 """
 ```
 
+## tensorのデバイスを表示
+ - 対象のtensorがどのデバイスにいるか
+
+```python
+x = torch.tensor([1.0,2.0,3.0,4.0])
+display(f"Tensor device: {x.device}") # Tensor device: cpu
+```
+
+## tensorをデバイス間移動
+ - GPUに移動
+
+```python
+print("CUDA GPU:", torch.cuda.is_available())
+if torch.cuda.is_available():
+   x = x.to("cuda:0")
+```
+
+---
+
+## Google Colab
+ - [pytorch-basics-example](https://colab.research.google.com/drive/14lZejQbYRD2UicXE8bRDXWBAcSfiNgaQ?usp=sharing)

@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["everything", "windows", "フリーソフト"]
 comments: false
+sort_key: "2022-05-02"
+update_dates: ["2022-05-02"]
 ---
 
 # Windowsでのeverythingの使い方

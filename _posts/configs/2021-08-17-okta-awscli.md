@@ -6,6 +6,8 @@ excerpt: "okta-awscliの概要と使い方"
 tags: ["aws", "okta"]
 config: true
 comments: false
+sort_key: "2022-04-16"
+update_dates: ["2022-04-16"]
 ---
 
 # okta-awscliの概要と使い方

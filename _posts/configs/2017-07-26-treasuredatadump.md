@@ -6,6 +6,8 @@ excerpt: "TreasureData dump to S3."
 tags: [treasuredata]
 config: true
 comments: false
+sort_key: "2018-01-19"
+update_dates: ["2018-01-19"]
 ---
 
 # TreasureDataの内容をダンプする

@@ -6,6 +6,8 @@ excerpt: "powertoysの使い方"
 tags: ["powertoys", "karabiner", "windows"]
 config: true
 comments: false
+sort_key: "2022-02-11"
+update_dates: ["2022-02-11"]
 ---
 
 # powertoysの使い方
@@ -43,6 +45,7 @@ comments: false
 ### Keyboard Manager
 #### 概要
  - mac osのkarabinerと同様にキーの置き換えだったり、キーコンビネーションの定義ができる
+ - [/rdp/](/rdp/)経由で用いるときに複雑なキーバンドをシングルキーで定義可能なのでホストマシンと干渉しなく、便利
 
 ### PowerToys Run
 #### 概要

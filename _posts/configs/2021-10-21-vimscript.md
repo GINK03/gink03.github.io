@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["vimscript", "neovim", "vim"]
 comments: false
+sort_key: "2022-01-19"
+update_dates: ["2022-01-19","2022-01-14","2022-01-08","2022-01-07","2022-01-06","2022-01-05","2021-11-12","2021-10-27","2021-10-21"]
 ---
 
 # vimscriptの使い方

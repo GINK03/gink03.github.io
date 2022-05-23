@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["apple", "ios", "shortcuts", "ショートカット"]
 comments: false
+sort_key: "2022-03-23"
+update_dates: ["2022-03-23"]
 ---
 
 # iosのshortcutsの使い方

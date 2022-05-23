@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["可視化", "matplot", "seaborn", "rain cloud plot"]
 comments: false
+sort_key: "2021-01-02"
+update_dates: ["2021-01-02"]
 ---
 
 # rain cloud plot

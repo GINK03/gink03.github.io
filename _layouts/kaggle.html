@@ -22,17 +22,20 @@ layout: compress
 		  </a>
 		</div>
 		<div class="post-list">
-		  {% for post in site.posts %} 
-		  {% if post.kaggle %}
-		  <ul>
-			<li data-wow-duration="1.5s" style="padding: 0px;">
-			  <a class="zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-			  <p style="font-size: 0.8rem;">投稿日:{{ post.date | date: "%F" }}, 更新日: {{ post.update_dates[0] }}, 概要: {{ post.excerpt }}</p>
-			</li>
-		  </ul>
-		  <hr>
-		  {% endif %}
-		  {% endfor %}
+		  {% assign posts = site.posts | sort: "sort_key" | reverse %}
+          {% for post in posts %}
+            {% if post.kaggle %}
+              <ul>
+                <li data-wow-duration="1.5s" style="padding: 0px;">
+                  <a class="zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                  <p style="font-size: 0.8rem; margin: 0px;">投稿日:{{ post.date | date: "%F" }}, 更新日: {{ post.update_dates[0] }}, 更新数: {{ post.update_dates.size }}</p>
+                  <p style="font-size: 0.8rem; margin: 0px;">タグ: {{ post.tags | join: ", " }}</p>
+                  <p style="font-size: 0.8rem; margin: 0px;">概要: {{ post.excerpt }}</p>
+                </li>
+              </ul>
+              <hr>
+            {% endif %}
+          {% endfor %}
 		</div>
 	  </div>
 	</div>

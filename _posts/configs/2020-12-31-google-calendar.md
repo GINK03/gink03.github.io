@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["google calendar", "cloud", "software"]
 comments: false
+sort_key: "2021-09-05"
+update_dates: ["2021-09-05","2021-08-13","2021-04-18"]
 ---
 
 # google calendarについて

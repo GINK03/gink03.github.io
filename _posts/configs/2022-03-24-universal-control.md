@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["apple", "ios", "osx", "universal control"]
 comments: false
+sort_key: "2022-05-02"
+update_dates: ["2022-05-02","2022-03-28","2022-03-26","2022-03-25","2022-03-24"]
 ---
 
 # appleのuniversal control(ユニバーサルコントロール)の使い方

@@ -7,6 +7,8 @@ kaggle: true
 hide_from_post: true
 tag: ["statistics", "meta-analysis"]
 comments: false
+sort_key: "2021-02-11"
+update_dates: ["2021-02-11"]
 ---
 
 # meta analysisについて

@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["flask", "celery", "api"]
 comments: false
+sort_key: "2022-05-13"
+update_dates: ["2022-05-13"]
 ---
 
 # flaskでasyncのやり方

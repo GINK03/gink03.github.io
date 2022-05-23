@@ -8,6 +8,8 @@ kaggle: true
 hide_from_post: true
 tag: ["python", "pandas"]
 comments: false
+sort_key: "2022-03-22"
+update_dates: ["2022-03-22"]
 ---
 
 # pandasの様々なトリック

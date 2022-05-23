@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["terminal emulator", "rust"]
 comments: false
+sort_key: "2021-11-15"
+update_dates: ["2021-11-15"]
 ---
 
 # alacrittyの使い方

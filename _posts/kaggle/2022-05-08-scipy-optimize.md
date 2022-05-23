@@ -4,10 +4,11 @@ title: "scipy-optimize"
 date: 2022-05-08
 excerpt: "scipy-optimizeの使い方"
 project: false
-config: true
 kaggle: true
 tag: ["最適化", "optimize", "scipy"]
 comments: false
+sort_key: "2022-05-08"
+update_dates: ["2022-05-08"]
 ---
 
 # scipy-optimizeについて

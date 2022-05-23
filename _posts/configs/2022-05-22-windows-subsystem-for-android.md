@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["windows", "android", "wsa", "Windows Subsystem for Android"]
 comments: false
+sort_key: "2022-05-22"
+update_dates: ["2022-05-22"]
 ---
 
 # WSA(Windows Subsystem for Android)の使い方

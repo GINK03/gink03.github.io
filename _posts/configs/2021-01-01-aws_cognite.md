@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["aws", "cognite"]
 comments: false
+sort_key: "2021-01-27"
+update_dates: ["2021-01-27","2021-01-01","2021-01-01"]
 ---
 
 # aws cogniteの使い方

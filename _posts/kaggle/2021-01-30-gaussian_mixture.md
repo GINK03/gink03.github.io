@@ -7,6 +7,8 @@ kaggle: true
 hide_from_post: true
 tag: ["feature", "gaussian mixture", "python"]
 comments: false
+sort_key: "2021-02-01"
+update_dates: ["2021-02-01"]
 ---
 
 # gaussian mixtureモデルの特性とその使い方

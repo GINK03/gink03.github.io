@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["apple", "ipad", "ipad os"]
 comments: false
+sort_key: "2022-04-09"
+update_dates: ["2022-04-09"]
 ---
 
 # Apple iPadについて

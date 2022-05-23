@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["flask", "rest", "api"]
 comments: false
+sort_key: "2022-04-07"
+update_dates: ["2022-04-07","2022-02-26","2022-02-20"]
 ---
 
 # flaskでrestの使い方"
@@ -93,6 +95,8 @@ def home():
         return "invalid access.", 400
     ...
 ```
+
+---
 
 ## restに対応したAPIにアクセスする最小限のクライアントの実装例
 

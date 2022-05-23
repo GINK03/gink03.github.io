@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["linux", "ip address"]
 comments: false
+sort_key: "2021-12-08"
+update_dates: ["2021-12-08"]
 ---
 
 # ip addressについて

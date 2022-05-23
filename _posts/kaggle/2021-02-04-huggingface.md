@@ -7,6 +7,8 @@ kaggle: true
 hide_from_post: true
 tag: ["huggingface", "nlp", "python"]
 comments: false
+sort_key: "2022-04-05"
+update_dates: ["2022-04-05","2022-03-24"]
 ---
 
 # huggingfaceの使い方

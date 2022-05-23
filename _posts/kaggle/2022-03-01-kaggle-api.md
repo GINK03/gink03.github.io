@@ -7,6 +7,8 @@ kaggle: true
 hide_from_post: true
 tag: ["statistics", "機械学習", "kaggle", "kaggle api"]
 comments: false
+sort_key: "2022-03-08"
+update_dates: ["2022-03-08"]
 ---
 
 # kaggle apiの使い方

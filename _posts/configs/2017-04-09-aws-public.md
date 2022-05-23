@@ -1,22 +1,27 @@
 ---
 layout: post
-title:  "AWS public"
-date:   2017-04-07
+title: "AWS publicアクセス"
+date: 2017-04-07
 excerpt: "自分向け資料"
 project: false
 config: true
-tag:
-- aws
+tag: ["aws"]
 comments: false
+sort_key: "2018-01-19"
+update_dates: ["2018-01-19"]
 ---
 
-# AWSの社外アクセス
-　原則として、社外からのAWSのアクセスはできない。    
-　IPに穴を開けて利用を可能にする。   
-　一度、Private Networkで作成したインスタンスを再び外部から開放するのはできないので、必ずインスタンス作成時に対応する必要がある。   
+# AWSの基本的なセキュリティ
+
+## AWSの社外からのアクセス
+ - インスタンスにアクセスする場合は会社として許可や特別なルールがある場合は確認と認証を得ておくこと
+ - 原則として、社外からのAWSのアクセスはできない。    
+ - IPに穴を開けて利用を可能にする。   
+   - 一度、Private Networkで作成したインスタンスを再び外部から開放するのはできないので、必ずインスタンス作成時に対応する必要がある。   
 
 ## プライベート->パブリック
-　プライベートのインスタンスを選択して、[アクション]->[同様のものを作成]を選択。  
+ - プライベートのインスタンスを選択して、[アクション]->[同様のものを作成]を選択。  
+
 ![](https://cloud.githubusercontent.com/assets/4949982/24785772/77037b50-1b97-11e7-9b22-5726d4f292bb.png)
 
 ![](https://cloud.githubusercontent.com/assets/4949982/24785776/7f6e5d64-1b97-11e7-90d2-b1eaae169589.png)

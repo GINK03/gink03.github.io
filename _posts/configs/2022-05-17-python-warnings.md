@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["python", "warnings"]
 comments: false
+sort_key: "2022-05-17"
+update_dates: ["2022-05-17"]
 ---
 
 # pythonでのwarningsの扱い方

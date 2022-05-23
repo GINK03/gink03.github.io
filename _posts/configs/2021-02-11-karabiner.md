@@ -6,6 +6,8 @@ excerpt: "karabiner elementsの概要と使い方"
 tags: ["karabiner", "osx", "karabiner-elements"]
 config: true
 comments: false
+sort_key: "2022-04-24"
+update_dates: ["2022-04-24","2022-02-16","2022-02-06","2022-02-04","2022-02-01","2022-01-19","2021-09-07","2021-02-24","2021-02-17","2021-02-16","2021-02-11"]
 ---
 
 # karabiner elementの概要と使い方

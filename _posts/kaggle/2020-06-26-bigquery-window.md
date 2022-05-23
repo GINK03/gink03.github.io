@@ -4,9 +4,10 @@ title: "bigquery window関数"
 date: 2020-06-26
 excerpt: "bigquery window関数について"
 tags: ["bq", "bigquery", "gcp"]
-config: true
 kaggle: true
 comments: false
+sort_key: "2022-03-29"
+update_dates: ["2022-03-29"]
 ---
 
 # bigquery window関数について

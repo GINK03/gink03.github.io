@@ -5,9 +5,10 @@ date: 2021-01-04
 excerpt: "lightgbm regressionのチートシート"
 kaggle: true
 project: false
-config: true
 tag: ["python", "lightgbm", "regression"]
 comments: false
+sort_key: "2022-04-20"
+update_dates: ["2022-04-20"]
 ---
 
 

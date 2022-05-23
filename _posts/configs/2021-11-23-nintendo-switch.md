@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["nintendo switch", "任天堂スイッチ"]
 comments: false
+sort_key: "2021-11-28"
+update_dates: ["2021-11-28","2021-11-23"]
 ---
 
 # 任天堂スイッチの使い方

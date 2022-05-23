@@ -6,6 +6,8 @@ excerpt: "cloud buildについて"
 tags: ["cloud build", "gcp"]
 config: true
 comments: false
+sort_key: "2021-06-19"
+update_dates: ["2021-06-19"]
 ---
 
 # cloud buildについて

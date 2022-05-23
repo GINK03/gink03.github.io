@@ -8,6 +8,8 @@ config: true
 tag:
 - cuda
 comments: false
+sort_key: "2018-01-19"
+update_dates: ["2018-01-19"]
 ---
 
 # cuda 8.0をubuntu 16.04にインストール

@@ -6,6 +6,8 @@ excerpt: "KeepingYouAwakeの使い方"
 tags: ["KeepingYouAwake"]
 config: true
 comments: false
+sort_key: "2021-08-25"
+update_dates: ["2021-08-25"]
 ---
 
 # KeepingYouAwakeの使い方

@@ -4,9 +4,10 @@ title: "pytorch optimizer"
 date: 2021-01-05
 excerpt: "pytorchのoptimizerの使い方"
 project: false
-config: true
 tag: ["python", "pytorch", "optimizer"]
 comments: false
+sort_key: "2022-03-22"
+update_dates: ["2022-03-22"]
 ---
 
 # pytorchのoptimizerの使い方

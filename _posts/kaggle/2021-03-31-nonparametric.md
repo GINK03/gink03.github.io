@@ -7,6 +7,8 @@ kaggle: true
 hide_from_post: true
 tag: ["nonparametric", "statistics"]
 comments: false
+sort_key: "2021-09-03"
+update_dates: ["2021-09-03","2021-09-03","2021-08-30","2021-08-29","2021-08-29","2021-03-31"]
 ---
 
 # ノンパラメトリック法について

@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["kindle", "amazon"]
 comments: false
+sort_key: "2022-05-10"
+update_dates: ["2022-05-10"]
 ---
 
 # Amazon Kindleの使い方

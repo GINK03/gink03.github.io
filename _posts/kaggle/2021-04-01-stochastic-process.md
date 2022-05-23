@@ -7,6 +7,8 @@ kaggle: true
 hide_from_post: true
 tag: ["stochastic process", "statistics"]
 comments: false
+sort_key: "2021-04-01"
+update_dates: ["2021-04-01"]
 ---
 
 # 確率過程(stochastic process)について

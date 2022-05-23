@@ -6,6 +6,8 @@ excerpt: "gcr, container registryについて"
 tags: ["gcp", "gcr", "container registry"]
 config: true
 comments: false
+sort_key: "2021-06-19"
+update_dates: ["2021-06-19"]
 ---
 
 # gcr, container registryについて

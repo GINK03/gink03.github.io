@@ -6,6 +6,8 @@ excerpt: "gcp translation apiについて"
 tags: ["nlp", "google cloud platform", "gcp", "translation", "api"]
 config: true
 comments: false
+sort_key: "2022-04-08"
+update_dates: ["2022-04-08"]
 ---
 
 # gcp translation apiについて

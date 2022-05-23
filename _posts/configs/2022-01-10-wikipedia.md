@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["wikipedia", "open data"]
 comments: false
+sort_key: "2022-05-17"
+update_dates: ["2022-05-17","2022-01-10"]
 ---
 
 # wikipediaの(データの)使い方

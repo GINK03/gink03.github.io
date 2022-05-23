@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["aws", "nlp", "translate"]
 comments: false
+sort_key: "2022-04-16"
+update_dates: ["2022-04-16"]
 ---
 
 # aws amazon translate APIの使い方

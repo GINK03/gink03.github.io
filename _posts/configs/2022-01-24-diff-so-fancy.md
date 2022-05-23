@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["diff", "npm", "diff-so-fancy"]
 comments: false
+sort_key: "2022-01-24"
+update_dates: ["2022-01-24"]
 ---
 
 # diff-so-fancyの使い方

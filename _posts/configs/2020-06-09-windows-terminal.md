@@ -6,6 +6,8 @@ excerpt: "windows-terminalの使い方"
 tags: ["windows-terminal", "windows"]
 config: true
 comments: false
+sort_key: "2022-02-20"
+update_dates: ["2022-02-20","2022-02-17","2021-08-22","2021-02-25","2020-11-19","2020-11-18","2020-10-22","2020-10-21","2020-06-09"]
 ---
 
 # windows-terminalの使い方

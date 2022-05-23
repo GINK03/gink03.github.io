@@ -6,6 +6,8 @@ excerpt: "cloud dataflowについて"
 tags: ["cloud dataflow", "apache beam", "gcp"]
 config: true
 comments: false
+sort_key: "2021-06-19"
+update_dates: ["2021-06-19"]
 ---
 
 # cloud dataflowについて

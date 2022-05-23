@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["windows", "linux", "wsl", "Windows Subsystem for Linux"]
 comments: false
+sort_key: "2022-05-22"
+update_dates: ["2022-05-22"]
 ---
 
 # WSL(Windows Subsystem for Linux)の使い方

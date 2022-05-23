@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["shell", "windows", "powershell"]
 comments: false
+sort_key: "2022-05-02"
+update_dates: ["2022-05-02","2022-02-21","2022-02-20"]
 ---
 
 # powershellの使い方

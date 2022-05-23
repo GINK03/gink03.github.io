@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["snap camera", "google meet", "zoom"]
 comments: false
+sort_key: "2022-01-18"
+update_dates: ["2022-01-18"]
 ---
 
 # snap cameraの使い方

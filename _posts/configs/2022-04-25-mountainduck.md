@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["s3", "mountainduck", "windows", "osx"]
 comments: false
+sort_key: "2022-04-25"
+update_dates: ["2022-04-25"]
 ---
 
 # Mountain Duckの使い方

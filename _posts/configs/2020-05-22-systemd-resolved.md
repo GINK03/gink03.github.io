@@ -6,6 +6,8 @@ excerpt: "systemd-resolved"
 tags: ["systemd-resolved", "linux", "ubuntu"]
 config: true
 comments: false
+sort_key: "2021-11-25"
+update_dates: ["2021-11-25","2021-11-23","2020-05-22"]
 ---
 
 # systemd-resolved

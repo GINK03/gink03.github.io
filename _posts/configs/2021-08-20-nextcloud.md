@@ -6,6 +6,8 @@ excerpt: "nextcloudの使い方"
 tags: ["nextcloud"]
 config: true
 comments: false
+sort_key: "2021-09-07"
+update_dates: ["2021-09-07","2021-08-20"]
 ---
 
 # nextcloudの使い方

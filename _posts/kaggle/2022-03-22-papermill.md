@@ -4,10 +4,11 @@ title: "papermill"
 date: 2022-03-22
 excerpt: "papermillの使い方"
 project: false
-config: true
 kaggle: true
 tag: ["papermill", "jupyter"]
 comments: false
+sort_key: "2022-03-22"
+update_dates: ["2022-03-22"]
 ---
 
 # papermillの使い方

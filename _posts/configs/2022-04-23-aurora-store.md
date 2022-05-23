@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["android", "aurora store", "google playstore"]
 comments: false
+sort_key: "2022-04-23"
+update_dates: ["2022-04-23"]
 ---
 
 # Aurora Storeの使い方

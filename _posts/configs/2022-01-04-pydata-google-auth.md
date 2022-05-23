@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["python3", "authentication", "pydata-google-auth"]
 comments: false
+sort_key: "2022-01-28"
+update_dates: ["2022-01-28","2022-01-04"]
 ---
 
 # pydata-google-authのセットアップと使い方

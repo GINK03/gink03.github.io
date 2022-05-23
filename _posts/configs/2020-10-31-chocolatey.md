@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["windows", "choco", "chocolatey"]
 comments: false
+sort_key: "2022-01-19"
+update_dates: ["2022-01-19","2021-11-01","2021-09-07","2021-08-28"]
 ---
 
 # chocolatey

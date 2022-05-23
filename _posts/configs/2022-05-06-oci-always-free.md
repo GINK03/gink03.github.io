@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["oci", "oracle", "oracle cloud infrastructure", "cloud"]
 comments: false
+sort_key: "2022-05-07"
+update_dates: ["2022-05-07"]
 ---
 
 # OCI Always Freeについて

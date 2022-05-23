@@ -7,6 +7,8 @@ kaggle: true
 hide_from_post: true
 tag: ["pandas", "pandas-gbq"]
 comments: false
+sort_key: "2022-01-17"
+update_dates: ["2022-01-17","2021-12-08","2021-10-21","2021-10-20","2021-08-14","2021-05-28"]
 ---
 
 # pandas-gbqの使い方について

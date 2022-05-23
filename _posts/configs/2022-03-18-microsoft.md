@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["microsoft", "マイクロソフト", "office"]
 comments: false
+sort_key: "2022-03-18"
+update_dates: ["2022-03-18"]
 ---
 
 # microsoft関連

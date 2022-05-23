@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["osx", "text editor", "coteditor"]
 comments: false
+sort_key: "2022-04-21"
+update_dates: ["2022-04-21","2022-04-17"]
 ---
 
 # coteditorの使い方

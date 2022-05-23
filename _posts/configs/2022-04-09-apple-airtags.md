@@ -6,6 +6,8 @@ excerpt: "Apple AirTagsについて"
 tags: ["apple", "airtags"]
 config: true
 comments: false
+sort_key: "2022-04-09"
+update_dates: ["2022-04-09"]
 ---
 
 

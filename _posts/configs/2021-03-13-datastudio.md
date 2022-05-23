@@ -6,6 +6,8 @@ excerpt: "data studio/data portalについて"
 tags: ["data studio", "data portal", "gcp"]
 config: true
 comments: false
+sort_key: "2021-03-13"
+update_dates: ["2021-03-13"]
 ---
 
 # data studio/data portalについて

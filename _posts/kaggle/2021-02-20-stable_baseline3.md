@@ -7,6 +7,8 @@ kaggle: true
 hide_from_post: true
 tag: ["reinforcement learing", "lib", "stable baseline3"]
 comments: false
+sort_key: "2021-02-20"
+update_dates: ["2021-02-20"]
 ---
 
 # stable baseline3について

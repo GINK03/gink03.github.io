@@ -6,6 +6,8 @@ excerpt: "youtube-dlの使い方"
 tags: ["youtube", "python"]
 config: true
 comments: false
+sort_key: "2022-05-12"
+update_dates: ["2022-05-12","2022-04-25","2021-09-08","2021-08-16","2021-02-11","2021-02-10"]
 ---
 
 # youtube-dlの使い方
@@ -15,6 +17,7 @@ comments: false
  - GitHubでホストされおり、GitHubの理念により、著作権関連でteardownされることはない
    - 参考
 	 - [Standing up for developers: youtube-dl is back](https://github.blog/2020-11-16-standing-up-for-developers-youtube-dl-is-back/)  
+ - ffmpegがインストールされていないと、音声と動画を分離している際に合成できない
 
 ## 公式ドキュメント等
  - [github.com](https://github.com/ytdl-org/youtube-dl)
@@ -62,7 +65,7 @@ $ youtube-dl -o ${OUTPUT_NAME} "${YOUTUBE_LINK}"
 
 **チャンネルの動画をすべてダウンロードする**  
 ```console
-$ youtube-dl  -f best -ciw -o "%(title)s.%(ext)s" -v https://www.youtube.com/channel/${CHANNEL_ID}
+$ youtube-dl -f best -ciw -o "%(title)s.%(ext)s" -v https://www.youtube.com/channel/${CHANNEL_ID}
 ```
 
 ## youtube-dlのforkのyt-dlpについて

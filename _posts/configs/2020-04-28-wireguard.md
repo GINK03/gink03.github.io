@@ -6,6 +6,8 @@ excerpt: "wireguardの使い方"
 tags: ["vpn", "network", "wireguard"]
 config: true
 comments: false
+sort_key: "2022-05-09"
+update_dates: ["2022-05-09","2021-09-07","2021-09-07","2021-08-19","2021-02-10","2020-04-29","2020-04-28"]
 ---
 
 # wireguardの使い方

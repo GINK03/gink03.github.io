@@ -7,6 +7,8 @@ kaggle: true
 hide_from_post: true
 tag: ["bigquery", "ml"]
 comments: false
+sort_key: "2021-02-28"
+update_dates: ["2021-02-28"]
 ---
 
 # bigquery mlについて

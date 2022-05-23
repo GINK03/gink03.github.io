@@ -5,6 +5,8 @@ date: 2021-01-03
 excerpt: "pytorchでtabularデータを学習&推論する"
 tags: ["deep learning", "tabular", "pytorch"]
 comments: false
+sort_key: "2021-01-27"
+update_dates: ["2021-01-27","2021-01-06"]
 ---
 
 

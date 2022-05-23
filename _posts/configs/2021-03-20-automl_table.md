@@ -6,6 +6,8 @@ excerpt: "automl tableついて"
 tags: ["gcp", "automl", "tablur"]
 config: true
 comments: false
+sort_key: "2021-03-20"
+update_dates: ["2021-03-20"]
 ---
 
 # automel-tablesについて 

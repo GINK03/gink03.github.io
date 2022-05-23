@@ -7,6 +7,8 @@ kaggle: true
 hide_from_post: true
 tag: ["optimization"]
 comments: false
+sort_key: "2021-02-18"
+update_dates: ["2021-02-18","2021-02-18"]
 ---
 
 # 包絡分析法(DEA, data envelopment analysis)について

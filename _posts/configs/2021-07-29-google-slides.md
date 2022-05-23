@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["google slides"]
 comments: false
+sort_key: "2021-07-29"
+update_dates: ["2021-07-29"]
 ---
 
 # google slidesの使い方

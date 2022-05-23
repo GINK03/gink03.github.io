@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["docker", "windows", "osx", "docker-desktop"]
 comments: false
+sort_key: "2022-02-08"
+update_dates: ["2022-02-08","2021-10-31"]
 ---
 
 # docker-desktopの使い方

@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["gcp", "google auth", "ADC"]
 comments: false
+sort_key: "2022-04-11"
+update_dates: ["2022-04-11","2022-04-07"]
 ---
 
 # GCP Google Authのプラクティス

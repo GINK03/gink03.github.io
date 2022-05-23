@@ -6,6 +6,8 @@ excerpt: "gcloudについて"
 tags: ["gcp", "gcloud"]
 config: true
 comments: false
+sort_key: "2022-05-17"
+update_dates: ["2022-05-17"]
 ---
 
 # gcloudについて

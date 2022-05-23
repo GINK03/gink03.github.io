@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["google search suggestions", "google"]
 comments: false
+sort_key: "2022-02-21"
+update_dates: ["2022-02-21"]
 ---
 
 # google search suggestionsの取得

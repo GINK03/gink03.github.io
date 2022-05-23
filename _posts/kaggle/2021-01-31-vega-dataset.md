@@ -7,6 +7,8 @@ kaggle: true
 hide_from_post: true
 tag: ["vega", "dataset", "python"]
 comments: false
+sort_key: "2021-08-29"
+update_dates: ["2021-08-29"]
 ---
 
 # vegaと呼ばれるopen datasetについて

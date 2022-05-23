@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["ssh", "terminal", "eternal-terminal"]
 comments: false
+sort_key: "2022-02-16"
+update_dates: ["2022-02-16","2022-01-09"]
 ---
 
 # eternal-terminalの使い方

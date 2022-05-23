@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["urllib", "python"]
 comments: false
+sort_key: "2022-05-20"
+update_dates: ["2022-05-20"]
 ---
 
 # urllibモジュールの使い方

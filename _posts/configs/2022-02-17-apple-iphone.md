@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["apple", "iphone", "ios", "photo"]
 comments: false
+sort_key: "2022-04-25"
+update_dates: ["2022-04-25","2022-04-16","2022-04-09","2022-03-21","2022-02-17"]
 ---
 
 # apple iphoneについて

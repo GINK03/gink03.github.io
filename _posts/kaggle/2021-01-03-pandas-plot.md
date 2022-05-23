@@ -8,6 +8,8 @@ kaggle: true
 hide_from_post: true
 tag: ["python", "pandas", "チートシート"]
 comments: false
+sort_key: "2022-04-14"
+update_dates: ["2022-04-14"]
 ---
 
 # pandas plotのチートシート

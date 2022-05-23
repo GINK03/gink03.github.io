@@ -6,6 +6,8 @@ excerpt: "benchmarksについて"
 tags: ["benchmarks"]
 config: true
 comments: false
+sort_key: "2021-07-18"
+update_dates: ["2021-07-18"]
 ---
 
 # benchmarks

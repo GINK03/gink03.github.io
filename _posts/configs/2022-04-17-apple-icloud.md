@@ -6,6 +6,8 @@ excerpt: "apple icloudについて"
 tags: ["apple", "ios", "osx", "support", "icloud"]
 config: true
 comments: false
+sort_key: "2022-05-10"
+update_dates: ["2022-05-10","2022-04-17"]
 ---
 
 # apple icloudについて

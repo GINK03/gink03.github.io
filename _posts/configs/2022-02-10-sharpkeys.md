@@ -6,6 +6,8 @@ excerpt: "sharpkeysの使い方"
 tags: ["sharpkeys", "karabiner", "windows"]
 config: true
 comments: false
+sort_key: "2022-02-11"
+update_dates: ["2022-02-11"]
 ---
 
 # sharpkeysの使い方

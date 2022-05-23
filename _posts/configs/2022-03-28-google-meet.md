@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["google apps", "google meet"]
 comments: false
+sort_key: "2022-03-28"
+update_dates: ["2022-03-28"]
 ---
 
 # Goole Meetの使い方

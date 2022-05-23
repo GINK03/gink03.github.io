@@ -6,6 +6,8 @@ excerpt: "Excelの使い方とチートシート"
 config: true
 tag: ["microsoft", "excel"]
 comments: false
+sort_key: "2022-05-10"
+update_dates: ["2022-05-10"]
 ---
 
 # Excelの使い方とチートシート

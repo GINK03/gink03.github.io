@@ -8,6 +8,8 @@ config: true
 tag:
 - tresuredata
 comments: false
+sort_key: "2018-01-19"
+update_dates: ["2018-01-19"]
 ---
 
 # TresureData for New commers.

@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["python", "vim", "neovim"]
 comments: false
+sort_key: "2022-01-23"
+update_dates: ["2022-01-23"]
 ---
 
 # vimのpythonバインディングについて

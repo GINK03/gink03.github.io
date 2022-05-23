@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["google", "google docs", "google jamboard"]
 comments: false
+sort_key: "2022-04-26"
+update_dates: ["2022-04-26"]
 ---
 
 # Google Jamboardの使い方

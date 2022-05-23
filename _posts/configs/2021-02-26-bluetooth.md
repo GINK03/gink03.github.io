@@ -6,6 +6,8 @@ excerpt: "bluetoothの規格"
 tags: ["bluetooth"]
 config: true
 comments: false
+sort_key: "2021-02-26"
+update_dates: ["2021-02-26"]
 ---
 
 # bluetoothの規格

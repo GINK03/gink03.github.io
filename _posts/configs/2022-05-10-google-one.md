@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["google", "google one"]
 comments: false
+sort_key: "2022-05-10"
+update_dates: ["2022-05-10"]
 ---
 
 # Google Oneについて

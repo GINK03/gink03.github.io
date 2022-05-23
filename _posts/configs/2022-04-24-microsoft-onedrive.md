@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["microsoft", "onedrive", "office"]
 comments: false
+sort_key: "2022-04-24"
+update_dates: ["2022-04-24"]
 ---
 
 # Microsoft OneDriveの使い方

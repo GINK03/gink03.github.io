@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["google chrome", "video speed controller", "拡張機能"]
 comments: false
+sort_key: "2021-11-08"
+update_dates: ["2021-11-08"]
 ---
 
 # video speed controllerの使い方

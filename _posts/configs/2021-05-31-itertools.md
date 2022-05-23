@@ -6,6 +6,8 @@ excerpt: "itertools(python3)チートシート"
 tags: ["python", "itertools", "チートシート"]
 config: true
 comments: false
+sort_key: "2021-06-05"
+update_dates: ["2021-06-05","2021-06-03","2021-05-31"]
 ---
 
 # itertools(python3)チートシート

@@ -6,6 +6,8 @@ excerpt: "gcp natural language apiについて"
 tags: ["nlp", "google cloud platform", "gcp", "api"]
 config: true
 comments: false
+sort_key: "2022-04-05"
+update_dates: ["2022-04-05","2022-02-24","2022-02-24"]
 ---
 
 # gcp natural language apiについて

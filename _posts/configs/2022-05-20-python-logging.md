@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["python", "logging"]
 comments: false
+sort_key: "2022-05-20"
+update_dates: ["2022-05-20"]
 ---
 
 # python loggingの使い方

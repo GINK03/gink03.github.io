@@ -4,9 +4,10 @@ title: "bigqueryのメタデータ"
 date: 2020-06-26
 excerpt: "BigQueryのメタデータについて"
 tags: ["bq", "bigquery", "gcp"]
-config: true
 kaggle: true
 comments: false
+sort_key: "2022-05-11"
+update_dates: ["2022-05-11"]
 ---
 
 # BigQueryのメタデータについて

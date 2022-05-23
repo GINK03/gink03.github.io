@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["選択理論心理学", "選択理論", "上質世界"]
 comments: false
+sort_key: "2020-11-16"
+update_dates: ["2020-11-16","2020-11-16"]
 ---
 
 

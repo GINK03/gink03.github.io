@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["chrome", "google chrome"]
 comments: false
+sort_key: "2022-05-10"
+update_dates: ["2022-05-10"]
 ---
 
 # google chromeの便利な設定と機能とカスタマイズ 

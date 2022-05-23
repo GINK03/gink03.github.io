@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["blink shell", "ios", "ターミナルエミュレータ"]
 comments: false
+sort_key: "2022-02-23"
+update_dates: ["2022-02-23"]
 ---
 
 # blink shellの使い方

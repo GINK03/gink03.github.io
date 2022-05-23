@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["gcp", "cloud identity"]
 comments: false
+sort_key: "2022-04-17"
+update_dates: ["2022-04-17"]
 ---
 
 # gcp cloud identityの使い方
