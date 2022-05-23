@@ -6,6 +6,8 @@ excerpt: "google cloudの認定試験"
 learning: true
 tag: ["cloud"]
 comments: false
+sort_key: "2021-03-22"
+update_dates: ["2021-03-22","2021-03-04"]
 ---
 
 # google cloudの認定試験

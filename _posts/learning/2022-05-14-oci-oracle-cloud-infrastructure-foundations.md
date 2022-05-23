@@ -6,6 +6,8 @@ excerpt: "oci oracle cloud infrastructure foundations認定"
 learning: true
 tag: ["cloud", "oci", "certification"]
 comments: false
+sort_key: "2022-05-14"
+update_dates: ["2022-05-14"]
 ---
 
 # oci oracle cloud infrastructure foundations認定

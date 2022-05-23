@@ -6,6 +6,8 @@ excerpt: "ポジティブ心理学について"
 learning: true
 tag: ["positive psychology", "ポジティブ心理学について", "coursera"]
 comments: false
+sort_key: "2021-01-27"
+update_dates: ["2021-01-27"]
 ---
 
 # ポジティブ心理学について

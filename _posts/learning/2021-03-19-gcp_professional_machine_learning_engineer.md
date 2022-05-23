@@ -6,6 +6,8 @@ excerpt: "google cloud professional machine learning engineer認定"
 learning: true
 tag: ["cloud"]
 comments: false
+sort_key: "2021-03-22"
+update_dates: ["2021-03-22","2021-03-20"]
 ---
 
 # google cloud professional machine learning engineer認定

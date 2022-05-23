@@ -6,6 +6,8 @@ excerpt: "google cloud professional cloud architect認定"
 learning: true
 tag: ["cloud", "gcp", "certification"]
 comments: false
+sort_key: "2021-03-31"
+update_dates: ["2021-03-31","2021-03-31"]
 ---
 
 # google cloud professional cloud architect認定

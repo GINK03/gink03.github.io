@@ -7,6 +7,8 @@ project: true
 learning: true
 tag: ["javascript"]
 comments: false
+sort_key: "2022-04-01"
+update_dates: ["2022-04-01","2022-02-27"]
 ---
 
 # javascript関連

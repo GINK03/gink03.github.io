@@ -6,6 +6,8 @@ excerpt: "化学物質と健康について"
 learning: true
 tag: ["google", "analyst", "analytics", "certification"]
 comments: false
+sort_key: "2021-04-16"
+update_dates: ["2021-04-16"]
 ---
 
 # 化学物質と健康について

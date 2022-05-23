@@ -6,6 +6,8 @@ excerpt: "レポートのフレームワーク"
 learning: true
 tag: ["report", "reporting"]
 comments: false
+sort_key: "2021-01-27"
+update_dates: ["2021-01-27"]
 ---
 
 # レポートのフレームワーク

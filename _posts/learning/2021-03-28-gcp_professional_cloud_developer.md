@@ -6,6 +6,8 @@ excerpt: "google cloud professional cloud developer認定"
 learning: true
 tag: ["cloud"]
 comments: false
+sort_key: "2021-04-19"
+update_dates: ["2021-04-19","2021-03-31","2021-03-29"]
 ---
 
 # google cloud professional cloud developer認定

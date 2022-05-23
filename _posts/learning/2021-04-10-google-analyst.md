@@ -6,6 +6,8 @@ excerpt: "googleが定義するところのアナリストについて"
 learning: true
 tag: ["google", "analyst", "analytics", "certification"]
 comments: false
+sort_key: "2021-05-06"
+update_dates: ["2021-05-06","2021-05-01","2021-04-19"]
 ---
 
 # googleが定義するところのアナリストについて
