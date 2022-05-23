@@ -27,11 +27,7 @@ layout: compress
 			  <ul>
 				<li data-wow-duration="1.5s" style="padding: 0px;">
 				  <a class="zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-				  {% if post.update_dates $}
-					<p style="font-size: 0.8rem;">投稿日:{{ post.date | date: "%F" }}, 更新日: {{ post.update_dates[0] }}, 概要: {{ post.excerpt }}</p>
-				  {% else %}
-					<p style="font-size: 0.8rem;">投稿日:{{ post.date | date: "%F" }}, 概要: {{ post.excerpt }}</p>
-				  {% endif %}
+                  <p style="font-size: 0.8rem;">投稿日:{{ post.date | date: "%F" }}, 更新日: {{ post.update_dates[0] }}, 概要: {{ post.excerpt }}</p>
 				</li>
 			  </ul>
 			  <hr>
