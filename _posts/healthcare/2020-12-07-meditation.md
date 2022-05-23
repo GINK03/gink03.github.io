@@ -6,6 +6,8 @@ excerpt: "瞑想と科学的な根拠と効用"
 healthcare: true
 tag: ["meditaion"]
 comments: false
+sort_key: "2021-01-27"
+update_dates: ["2021-01-27"]
 ---
 
 # 瞑想と科学的な根拠と効用
