@@ -6,14 +6,15 @@ excerpt: "gcloudについて"
 tags: ["gcp", "gcloud"]
 config: true
 comments: false
-sort_key: "2022-05-17"
-update_dates: ["2022-05-17"]
+sort_key: "2022-05-25"
+update_dates: ["2022-05-25", "2022-05-17"]
 ---
 
 # gcloudについて
 
 ## 概要
  - GCPのインフラストラクチャを設定するためのツール
+ - コンポーネントと言われる粒度で機能を拡張することができる
 
 ## インストール
 
@@ -26,6 +27,7 @@ $ sudo snap install google-cloud-sdk --classic
 ```console
 $ curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 $ echo "deb https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list # apt-listに追加
+$ sudo apt update
 $ sudo apt install google-cloud-sdk
 ```
 
@@ -101,9 +103,19 @@ bindings:
   ...
 ```
 
+### コンポーネントのアップデート
+
+```console
+$ gcloud components update
+```
+
+---
+
 ## apiとの関係
  - `gcloud`コマンドは`API`をコマンドでラップしたものであるが、python等のスクリプトから呼び出す際は`google-api-python-client`を用いる  
  - 仕様が複雑で[ドキュメント](https://googleapis.github.io/google-api-python-client/docs/)を精読しないと使うことが難しい  
+
+---
 
 ## トラブルシューティング
 
@@ -113,5 +125,4 @@ bindings:
  - 対応
    - 所属しているGCPによっては短時間でクレデンシャルexpireすることがあり、その度に再認証が必要
    - `gcloud auth login`を実行して再認証を行う
-
-
+   - web browserがないマシンでは、web browserがあるマシンで実行してくれとのメッセージとともにURLとtokenが出力される
