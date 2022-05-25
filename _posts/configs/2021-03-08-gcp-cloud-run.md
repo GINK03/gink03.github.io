@@ -85,7 +85,7 @@ $ curl -H "Authorization: Bearer $(gcloud auth print-identity-token)" https://**
 **requestsを用いる場合**  
 ```python
 TOKEN = os.popen("gcloud auth print-identity-token").read().strip()
-headers = {"x-api-key": "this is for ds-ws.", "Authorization": f"Bearer {TOKEN}"}
+headers = {"x-api-key": "<any plane secret key.>", "Authorization": f"Bearer {TOKEN}"}
 params = {"hoo": "bar"}
 
 with requests.post(URL, json=params, headers=headers) as r:
@@ -95,3 +95,15 @@ with requests.post(URL, json=params, headers=headers) as r:
  - 参考
    - [デベロッパーの認証/GoogleCloud](https://cloud.google.com/run/docs/authenticating/developers)
 
+---
+
+## コーナーケースの挙動
+
+### メモリーのオーバーフローが発生するとき
+ - コンテナがシャットダウンされる
+ - cloud loggingにはログが出力されるので、原因不明にはならない
+ - ステータスコードが`503`になる
+
+### 非同期APIのとき
+ - APIサーバが値を戻した時点でコンテナがシャットダウンされる
+ - なにかコンテナがシャットダウンされないようにする仕組みもあるようである
