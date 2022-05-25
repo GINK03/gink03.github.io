@@ -15,7 +15,8 @@ update_dates: ["2022-05-24", "2022-04-14"]
 # pandas locのチートシート
 
 ## 概要
- - dataframeにはindexとカラム名を指定して操作する方法がある
+ - dataframeにはindexとカラム名を指定して操作する`loc`というメソッドが存在する
+ - `loc`では指定したindexのアクセス以外にも、代入や`apply`もサポートしている
 
 ## 具体例
 
@@ -41,6 +42,12 @@ df.loc[index, "p"].apply(lambda x: "nanです" if np.isnan(x) else x + 0.1))
 # 代入も可能である
 df.loc[index, "p"] = df.loc[index, "p"].apply(lambda x: "nanです" if np.isnan(x) else x + 0.1)
 ```
+
+## テンプレート
+
+### index同士の結合
+ - `pd.concat`では結合できない
+ - `np.hstack([index1, index2, ...])`で結合する
 
 ## Google Colab
  - [pandas-loc](https://colab.research.google.com/drive/1pvu6a0kwYhupJc9OFPk1PSUcXrdS-mNz?usp=sharing)
