@@ -67,3 +67,9 @@ df.query('column.notnull()')
 ```python
 df.query('column.isnull()')
 ```
+
+### 文字列の正規表現でフィルタ
+
+```python
+df.query('column.str.contains("something", regex=True)')
+```
