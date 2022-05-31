@@ -56,3 +56,5 @@ return
  - `<youtr-script>.ahk`をダブルクリックすることで設定が反映される
 
 
+## 参考
+ - [Hotkeys/www.autohotkey.com](https://www.autohotkey.com/docs/Hotkeys.htm)
