@@ -2,19 +2,19 @@
 layout: post
 title: "snowflake"
 date: 2020-06-04
-excerpt: ""
-tags: [アルゴリズム]
+excerpt: "snowflake構造について"
+tags: ["twitter", "アルゴリズムとデータ構造"]
+computer_science: true
 comments: false
 ---
 
 # snowflake
  - twitterIDのユニーク化をするアルゴリズム
  - 時間に対して昇順になっていることが保証される点がただのハッシュと異なる
- - snowflake自体はリタイアしている模様
 
 ## 構造
 
-```
+```config
   1  sign bit -- not used, always 0?
  41 bits (milliseconds since epoch) - 1288834974657L
   5  bits datacenter id
