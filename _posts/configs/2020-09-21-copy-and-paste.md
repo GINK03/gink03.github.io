@@ -1,59 +1,57 @@
 ---
 layout: post
-title:  "copying_and_pasting"
-date:   2020-09-21
-excerpt: "copying_and_pasting"
-project: false
+title: "コピーとペースト"
+date: 2020-09-21
+excerpt: "各OSでコピーとペーストを便利に行う"
 config: true
-tag: []
-comments: false
+tag: ["osx", "linux", "tmux"]
 sort_key: "2020-09-21"
-update_dates: ["2020-09-21","2020-09-21"]
+update_dates: ["2022-05-31", "2020-09-21","2020-09-21"]
+comments: false
 ---
-# copying and pasting
+
+# 各OSでコピーとペーストを便利に行う
 
 ## MacOSX
 
-### install
+### pbpasteを使う場合
+ - osxにはデフォルトでpbcopy, pbpasteが公開されている
 
-```console
-$ brew install pbpaste
-```
-
-### examples
+#### 具体例
 
 **copy**  
 ```console
-$ echo "foobar" | bpcopy
+$ echo "foobar" | pbcopy
 ```
+ - `pbcopy`された内容はosxのクリップボードにも反映される
 
 **paste**  
 ```console
-$ bppaste
+$ pbpaste
 foobar
 ```
 
 ## Linux
-
-### install
+### xclipを使用する場合
+#### install
 
 ```console
 $ sudo apt-get install xclip
 ```
 
-### examples
-
+#### 具体例
 **copy**  
 ```console
 $ echo "a" | xclip -selection clipboard
 ```
-
 **paste**  
 ```console
 $ xclip -selection clipboard -o
 ```
 
-## tmux
+---
+
+## tmuxを使用する場合
 
 **copy**  
 ```console
@@ -75,4 +73,3 @@ $ tmux show-buffer -b a
 $ tmux paste-buffer -b a
 ```
 NOTE: prefixモードに入ったあとには `paste-buffer -b a` で利用できる(vim等に直接入力できる)
-
