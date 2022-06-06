@@ -24,6 +24,7 @@ update_dates: ["2022-05-07"]
      - 1/8OCPUと1GBのメモリーまで
    - ブロックボリューム
      - 2つで合計200GBまで
+     - 初期選択時点のADに限定される
 
 ## VCNのfirewallの設定
  - `仮想クラウド・ネットワーク`を選択
@@ -44,12 +45,23 @@ update_dates: ["2022-05-07"]
      - `sudo dhclient -6`
    - 例えば、ubuntuだと、iptablesでfirewallが構成されているので無効化する
 
+
 ## 無料枠で使用する際に参考になるサイト
  - [Oracle CloudのAlways FreeのArmは空いていないからAMDにしよう。](https://blog.usuyuki.net/oracle_cloud_always_free/)
  - [Oracle Cloud で Compute にWebサーバーを立てたメモ](https://zenn.dev/yakumo/articles/883fb3017c18417d9668c0aced5dd82c)
  - [Oracle Cloud Infrastructure（OCI）とは？メリットや成功事例を紹介！](https://products.sint.co.jp/siob/blog/oracle-cloud-infrastructure)
  - [Oracle Linux 8でWordPressサーバを立てる](https://blog.osakana.net/archives/11232)
 
+---
+
+## トラブルシューティング
+
+### ブロックボリュームで課金が発生する
+ - 原因
+   - 初期のAD以外でブロックボリュームを作成すると、チャージされる
+   - カナダのモントリオールを初期ADにしてしまうと、東京でインスタンスを作成するとブートボリュームに対してどうしても課金が発生する
+ - 参考
+   - [Being charged for free Block Volumes/Reddit](https://www.reddit.com/r/oraclecloud/comments/og0dsb/being_charged_for_free_block_volumes/)
 
 ## 参考
  - [ずっと無料で使えるクラウドの「Free Tier」主要サービスまとめ　2021年版](https://www.itmedia.co.jp/news/articles/2106/21/news143_2.html)
