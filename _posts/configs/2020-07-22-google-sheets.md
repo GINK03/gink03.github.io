@@ -3,12 +3,11 @@ layout: post
 title: "Google Sheets"
 date: 2020-07-22
 excerpt: "Google Sheetsの使い方"
-project: false
 config: true
 tag: ["google sheets", "gss", "spreadsheets", "google spreadsheets"]
 comments: false
 sort_key: "2022-05-17"
-update_dates: ["2022-05-17"]
+update_dates: ["2022-06-21", "2022-05-17"]
 ---
 
 # Google Sheets
@@ -77,6 +76,14 @@ Aに対してGROUP BY操作のようなこともできる
    - `|→|`; デフォルト。溢れた状態にするoverflow
    - `|⏎|`; 折返し。text wrapping
    - `|-|`; 溢れた文を消す。clip
+
+---
+
+## Google Sheetsからテキストエディタにデータをコピーする場合
+ 1. Google Sheetsにてコピーしたい範囲を選択
+ 2. テキストエディタにコピーする
+ 3. コピーしたデータはセルの区切りが`\t(タブ)`になっているので、必要なパーサーでパースする
+   - pandasであれあば、`pd.read_csv(io.StringIO("""..."""), sep="\t")`となる
 
 ---
 
