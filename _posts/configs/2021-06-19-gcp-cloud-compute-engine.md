@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "cloud compute engine"
+title: "gcp cloud compute engine"
 date: 2021-06-19
-excerpt: "cloud compute engineについて"
+excerpt: "gcp cloud compute engineについて"
 tags: ["cloud compute engine", "gcp"]
 config: true
 comments: false
