@@ -24,11 +24,15 @@ update_dates: ["2022-05-09","2021-09-07","2021-09-07","2021-08-19","2021-02-10",
 
 ## install
 
-**debian**
-
+**debian**  
 ```console
 $ echo "deb http://deb.debian.org/debian buster-backports main" | sudo tee /etc/apt/sources.list.d/buster-backports.list
 $ sudo apt install update
+$ sudo apt install wireguard
+```
+
+**ubuntu**  
+```console
 $ sudo apt install wireguard
 ```
 
@@ -45,16 +49,20 @@ $ sudo apt install wireguard
 # wg pubkey < privatekey > publickey
 ```
 
-## server setup
+## 設定ファイルを作成する
 
 ```console
 # cd /etc/wireguard
 # touch wg0.conf
 ```
 
-## example server wg0.conf
+---
 
-```
+## すべてのIPをトンネリングするVPNの設定例
+
+### example server wg0.conf
+
+```config
 [Interface]
 Address = 192.168.0.1/24
 SaveConfig = true
@@ -81,7 +89,7 @@ Endpoint = 126.133.200.64:1395
  - `[Peer]のAllowdIPs`はクライアントが接続してきたらどのIPアドレスならば許可するかを示すもの。クライアント側の設定と食い違うと通信できない
  - `Endpoint`は設定しなくても自動で生成される。また、これでアクセス元を制限できる等のものでもない
 
-## enable server side ip forwarding
+### enable server side ip forwarding
  - debian, ubuntu系では以下の設定を入れないとIPのフォワードをしない
  - この設定は再起動すると消えてしまうので、起動スクリプトに入れるなどの工夫が必要
    - より詳細な設定については[/sysctl/](/sysctl/)を参照
@@ -91,7 +99,7 @@ Endpoint = 126.133.200.64:1395
 # sysctl -w net.ipv6.conf.all.forwarding=1
 ```
 
-## example up/donw wg0
+### example up/donw wg0
 
 ```console
 # wg-quick up wg0 # 起動
@@ -109,16 +117,17 @@ Endpoint = 126.133.200.64:1395
 
 transferで通信量が見えるので、疎通は行われていることがわかる
 
-## systemdでサービス登録する
+### systemdでサービス登録する
 
 ```console
+# wg-quick down wg0
 # systemctl start wg-quick@wg0
 # systemctl enable wg-quick@wg0
 ```
 
-## example client conf
+### example client conf
 
-```
+```config
 [Interface]
 PrivateKey = 2CYUPIwWR*******4vrUVOxDeyxm7EDq7m+l38=
 Address = 192.168.0.5/32, 2a03:b0c0:2:f0::2c:2005/64
@@ -145,3 +154,42 @@ PersistentKeepalive = 1
  - `AppStore`にWireGuardのクライアントソフトがある
  - コピペしづらいので設定が大変である
 
+---
+
+## グローバルIPを持たないクライアントをVPNサーバ兼踏み台サーバ(bastion)に接続する例
+ - UDPの仕組みから片方のpeerがポートがNATの内側の場合でもネットワークの構築が可能
+
+### サーバの設定例
+
+```config
+[Interface]
+Address = 192.168.200.1/24
+SaveConfig = false
+ListenPort = 41194
+PrivateKey = 0**********ya9o1d1FZiw/tnTeSavmuG3JmjdQtpNUE=
+
+[Peer]
+PublicKey = a0nUQiZOtAbpsX7l1VLpA5TOQlKcL9yPCA47QXo5hDw=
+AllowedIPs = 192.168.200.23/32
+Endpoint = 126.133.200.64:1900
+```
+
+### クライアントの設定例
+
+```config
+[Interface]
+Address = 192.168.200.23/32 # アサインされるIPに設定する
+SaveConfig = false
+ListenPort = 41194
+PrivateKey = 6**********U3PY0X3Zs8e5rlQRELO8dLufUaGg=
+DNS = 1.1.1.1
+
+[Peer]
+PublicKey = 1DP3DtZd8jLo9PvSiLTY2KZlaYbTdvsQI5jdbfHlh0g=
+# AllowedIPs = 0.0.0.0/0, ::0/0
+AllowedIPs = 192.168.200.23/24 # ここが正しく設定されていないと疎通できない
+Endpoint = 138.2.4.109:41194 # IPv4で接続するとき
+# Endpoint = [2001:19f0:7002:dcd:5400:3ff:fe86:a14f]:41194 # IPv6で接続するとき
+PersistentKeepalive = 1
+```
+ - `AllowdIPs`でip routeで優先されるサブネットを適切に設定する必要がある
