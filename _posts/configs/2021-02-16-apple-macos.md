@@ -1,17 +1,19 @@
 ---
 layout: post
-title: "osx"
+title: "macOS"
 date: 2021-02-16
-excerpt: "mac osxで設定しておくべき項目とインストールするべきソフトウェアとトラブルシューティング"
-tags: ["apple", "osx", "settings"]
+excerpt: "macOSで設定しておくべき項目とインストールするべきソフトウェアとトラブルシューティング"
+tags: ["apple", "macos", "osx", "settings"]
 config: true
 comments: false
 sort_key: "2022-05-23"
 update_dates: ["2022-05-23","2022-05-02","2022-04-29","2022-04-28","2022-04-28"]
 ---
 
-# mac osxで設定しておくべき項目とインストールするべきソフトウェアとトラブルシューティング
+# macOSで設定しておくべき項目とインストールするべきソフトウェアとトラブルシューティング
 
+## 名称の変更
+ - 2016年に`iOS`, `tvOS`, `watchOS`などとの統合性を図るために、`osx`から`macOS`に変更された
 
 ## 設定しておくべき項目
  - Dockを自動的に隠す + Dockを右に寄せる
