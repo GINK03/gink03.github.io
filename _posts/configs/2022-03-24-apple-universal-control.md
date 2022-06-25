@@ -1,11 +1,10 @@
 ---
 layout: post
-title: "universal control"
+title: "apple universal control"
 date: 2022-03-24
 excerpt: "appleのuniversal control(ユニバーサルコントロール)の使い方"
-project: false
 config: true
-tag: ["apple", "ios", "osx", "universal control"]
+tag: ["apple", "ios", "macos", "osx", "universal control"]
 comments: false
 sort_key: "2022-05-02"
 update_dates: ["2022-05-02","2022-03-28","2022-03-26","2022-03-25","2022-03-24"]
@@ -46,6 +45,8 @@ update_dates: ["2022-05-02","2022-03-28","2022-03-26","2022-03-25","2022-03-24"]
    - USBで接続し直すと改善する
  - USB接続でテザリング時にユニバーサルコントロールが開始されない
    - WiFiのイベントと紐付いているらしく、WiFiがONになっている必要がある
+ - Bluetooth接続しているときにマウスやキーボードが遅延する
+   - iPadを再起動すると改善する
 
 ## 参考
  - [「ユニバーサルコントロール」を利用する方法](https://applech2.com/archives/20220315-how-to-use-universal-control-macos-123-monterey.html)
