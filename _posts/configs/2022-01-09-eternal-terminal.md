@@ -33,8 +33,9 @@ $ sudo apt-get install et
 
 ```console
 $ brew install MisterTea/et/et
+$ sudo brew services start mistertea/et/et
 ``` 
- - インストールに失敗する場合`protocolbuffer`を手動でインストーするする必要がある
+ - インストールに失敗する場合`protocolbuffer`を手動でインストールする必要がある
 
 ## 接続
 
