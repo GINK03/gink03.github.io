@@ -36,6 +36,13 @@ update_dates: ["2022-06-15"]
      - アプリのバグ
    - 対応
      - アプリの再起動
+ - AirPlayでYouTubeの動画をストリーミングするとボリュームの調整ができない
+   - 原因
+     - 昔からある仕様・バグ
+   - 対応
+     - アプリのアップデートを期待するしかなく、何もできない
+   - 対応
+     - [Volume control with AirPlay/Reddit](https://www.reddit.com/r/appletv/comments/gwfjgg/volume_control_with_airplay/)
 
 ## 参考
  - [AirPlay icons](https://developer.apple.com/design/human-interface-guidelines/technologies/airplay/icons/)
