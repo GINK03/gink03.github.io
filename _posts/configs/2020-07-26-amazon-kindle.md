@@ -3,7 +3,6 @@ layout: post
 title: "Amazon Kindle"
 date: 2020-07-26
 excerpt: "Amazon Kindleの使い方"
-project: false
 config: true
 tag: ["kindle", "amazon"]
 comments: false
@@ -23,6 +22,19 @@ update_dates: ["2022-05-10"]
    - 色んな人がkindle unlimited検索ツールを作っている
  - 参考
    - [アンリミで本を探すときのこつ](https://scrapbox.io/KindleUnlimited/%E3%82%A2%E3%83%B3%E3%83%AA%E3%83%9F%E3%81%A7%E6%9C%AC%E3%82%92%E6%8E%A2%E3%81%99%E3%81%A8%E3%81%8D%E3%81%AE%E3%81%93%E3%81%A4)
+
+---
+
+# Android版のKindleアプリはPlay Storeからダウンロードすると購入できない
+ - 原因
+   - Googleのポリシーの変更による影響
+ - 対応
+   - [Amazon Appstore App](https://www.amazon.com/gp/mas/get/amazonapp)をダウンロード
+   - Play Storeからのインストールしたアプリを削除
+   - Amazon AppstoreからKindleをインストール
+   - Play Storeから個別のアプリを表示して、自動更新の有効化を無効化
+ - 参考
+   - [Android版でもKindle書籍購入が不可能に　Googleのポリシー変更で](https://www.itmedia.co.jp/mobile/articles/2206/01/news071.html)
 
 ---
 
@@ -57,3 +69,9 @@ update_dates: ["2022-05-10"]
  - talkbackを有効にする
  - 本を選択
  - 右に一本指でスワイプしてダブルタップで通し読みが開始される
+
+## トラブルシューティング
+
+### PIPに読み上げが移ってしまう
+ - 対応
+   - PIPのアプリを終了
