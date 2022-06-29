@@ -125,6 +125,22 @@ $ route add default 192.168.3.1
 $ route add -host <ip-addr> 192.168.3.1
 ```
 
+### ネットワークのパフォーマンスを調査する
+ - macOSに`networkQuality`コマンドが含まれる
+ - [oss](https://github.com/network-quality/server)で開発されている
+ - [/netperf/](/netperf/)に替わるパフォーマンス測定ツール
+
+**使用例**  
+```console
+$ networkQuality
+==== SUMMARY ====
+Upload capacity: 27.709 Mbps
+Download capacity: 33.040 Mbps
+Upload flows: 20
+Download flows: 12
+Responsiveness: Medium (357 RPM) # 一分間でのラウンドトリップ回数
+```
+
 ---
 
 ## sshdでパスワード認証を無効化する
