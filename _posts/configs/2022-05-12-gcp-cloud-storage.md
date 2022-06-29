@@ -3,7 +3,6 @@ layout: post
 title: "gcp cloud storage"
 date: 2022-05-12
 excerpt: "gcp cloud storageの使い方"
-project: false
 config: true
 tag: ["gcp", "cloud storage", "object storage"]
 comments: false
@@ -16,6 +15,10 @@ update_dates: ["2022-05-13"]
 ## 概要
  - GCPのオブジェクトストレージ
  - 様々なプログラミング言語のラッパーが用意されている
+ - S3のように静的なコンテンツをhttpでホストすることができる
+   - httpsを使用したい場合はload-balancingを併用することで達成できる
+
+---
 
 ## gcsfsによるファイルの読み書き
 
@@ -46,3 +49,8 @@ print(fs.ls("gs://<bucket-name>"))
 
 ### 参考
  - [/gcsfs.readthedocs.io/](https://gcsfs.readthedocs.io/en/latest/index.html)
+
+---
+
+## 参考
+ - [静的ウェブサイトをホストする/docs](https://cloud.google.com/storage/docs/hosting-static-website)
