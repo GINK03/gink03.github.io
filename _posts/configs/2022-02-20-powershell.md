@@ -3,9 +3,8 @@ layout: post
 title: "powershell"
 date: 2022-02-20
 excerpt: "powershellの使い方"
-project: false
 config: true
-tag: ["shell", "windows", "powershell"]
+tag: ["shell", "windows", "powershell", "coreutils"]
 comments: false
 sort_key: "2022-05-02"
 update_dates: ["2022-05-02","2022-02-21","2022-02-20"]
@@ -24,8 +23,13 @@ update_dates: ["2022-05-02","2022-02-21","2022-02-20"]
 ### GNU Linuxと似たコマンドをインストール
 
 ```console
-> scoop install 7zip curl sudo git openssh coreutils grep sed less
+> scoop install 7zip curl sudo git openssh
 ```
+
+```console
+> cargo install coreutils
+```
+ - rustで記述されたジェネリックなcoreutils
 
 ### aliasの確認
 
@@ -84,21 +88,68 @@ Alias           clear -> Clear-Host
  - 参考
    - [How to Uninstall Software Using PowerShell](https://techgenix.com/how-to-uninstall-software-using-powershell/)
 
+### powershellのバージョンの確認
+
+```console
+> echo $PSversionTable
+Name                           Value
+----                           -----
+PSVersion                      7.2.5
+PSEdition                      Core
+GitCommitId                    7.2.5
+OS                             Microsoft Windows 10.0.22610
+Platform                       Win32NT
+PSCompatibleVersions           {1.0, 2.0, 3.0, 4.0…}
+PSRemotingProtocolVersion      2.3
+SerializationVersion           1.1.0.1
+WSManStackVersion              3.0
+```
+
+### powershellのアップグレード
+ - chocolateyなどを利用
+   - `> choco install pwsh`
+ - sshした際に起動するシェルはレジストリで定義されている
+   - 単純に最新のpowershellを入れただけでは反映されない
+ - 参考
+   - [OpenSSH : デフォルトシェルを変更する](https://www.server-world.info/query?os=Windows_Server_2019&p=ssh&f=5)
+
+
+### ホストの再起動
+
+```console
+> Restart-Computer
+```
+
+### プロファイルをリロード
+
+```console
+> . $PROFILE
+```
 
 ## 発展
 
-### starshipをインストール
+### starshipをインストールしてprofileを設定
 
 ```console
-> scoop install starship vim
+> scoop install starship neovim
 > echo $PROFILE # .bashrc, .zshrcに相当するパスを確認
-> vim $PROFILE
+> nvim $PROFILE
 ```
 以下の内容を書き込む
 
 ```shell
 Invoke-Expression (&starship init powershell)
+
+# Remove-Alias ls
+Set-Alias ls lsd
+Set-Alias b bat
+Remove-Alias cp
+function cp { coreutils cp $args }
+function ll { coreutils ls $args }
+function df { coreutils df $args }
+function date { coreutils date $args }
 ```
 
 ## 参考
  - [PowerShell入門](https://life-is-command.com/powershell-beginner/)
+ - [WindowsのTerminal環境を整えたい](https://www.natsuneko.blog/entry/2020/08/01/windows-terminal-environment)
