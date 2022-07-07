@@ -220,6 +220,30 @@ $ open -a "PackageName"
 $ open -a "Microsoft Edge" "https://duckduckgo.com"
 ```
 
+### ゴミ箱を空にする
+ - finderでゴミ箱の隠しフォルダを開く
+ - finder上からゴミ箱を空にする(terminalからは消去が禁止されている)
+
+```console
+$ cd ~/.Trash
+$ open .
+```
+
+
+---
+
+## Dock
+
+### Dockの無効化
+ - 概要
+   - dockはシステムのサービスと統合されているので、削除やアンインストールはできない
+   - dockが自動的に隠れてから再度表示するまでの時間を指定できるので大きな値を設定することで、実質的な無効化が行える
+
+```console
+$ alias hideDock="defaults write com.apple.dock autohide-delay -float 3600; killall Dock"
+$ hideDock
+```
+
 ---
 
 ## シェルスクリプトなどをosxの`app`にする
