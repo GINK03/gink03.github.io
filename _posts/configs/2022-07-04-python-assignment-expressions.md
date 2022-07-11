@@ -32,6 +32,18 @@ while line := getstream():
 ```
  - 内部がyieldなどで実装されているiteratorなどの時
 
+```python
+def test(s):
+    if (c := s[0]) != "あ":
+        assert c != "あ"
+    else:
+        assert c == "あ"
+
+test("あいうえお")
+test("かきくけこ")
+```
+ - 変数を束縛した上でその内容を具体的に評価する場合
+
 ## 参考
  - [:= （ウォルラス演算子）の使い方](https://www.lifewithpython.com/2019/10/python-walrus-operator-assignment-expression.html)
  - [What's New In Python 3.8](https://docs.python.org/ja/3/whatsnew/3.8.html)
