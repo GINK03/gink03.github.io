@@ -116,13 +116,13 @@ $ netstat -rn | less
 
 **defaultの変更**  
 ```console
-$ route delete default
-$ route add default 192.168.3.1
+$ sudo route delete default
+$ sudo route add default 192.168.3.1
 ```
 
 **特定のIPを違うgwへ**  
 ```console
-$ route add -host <ip-addr> 192.168.3.1
+$ sudo route add -host <ip-addr> 192.168.3.1
 ```
 
 ### ネットワークのパフォーマンスを調査する
@@ -139,6 +139,35 @@ Download capacity: 33.040 Mbps
 Upload flows: 20
 Download flows: 12
 Responsiveness: Medium (357 RPM) # 一分間でのラウンドトリップ回数
+```
+
+### terminalからwifiの情報を表示する
+
+```console
+$ ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Resources/airport /usr/local/bin/airport
+$ airport -I
+```
+
+**使用例**
+```console
+$ airport -I
+     agrCtlRSSI: -56
+     agrExtRSSI: 0
+    agrCtlNoise: -92
+    agrExtNoise: 0
+          state: running
+        op mode: station
+     lastTxRate: 867
+        maxRate: 867
+lastAssocStatus: 0
+    802.11 auth: open
+      link auth: wpa2-psk
+          BSSID:
+           SSID: おもちネットワーク1F
+            MCS: 9
+  guardInterval: 800
+            NSS: 2
+        channel: 100,80
 ```
 
 ---
@@ -228,7 +257,6 @@ $ open -a "Microsoft Edge" "https://duckduckgo.com"
 $ cd ~/.Trash
 $ open .
 ```
-
 
 ---
 
