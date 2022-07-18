@@ -40,3 +40,12 @@ update_dates: ["2022-05-09"]
        - Apple製品のbluetooth画面からAirPods Maxを選択
    - 参考
      - [Macやその他のBluetoothデバイスにAirPods Maxを設定する](https://support.apple.com/ja-jp/HT211887)
+ - **Ear Cushion(イヤーパッド)の手入れ**
+   - 手順
+     - ヘビーにAirPods Maxを使用していると日焼け止めや皮脂が付着してすごい汚れる
+     - 純正品はナイロンでできているらしく、強い洗剤が使える
+     - 高い温度のお湯に、ハイター(次亜塩素酸ナトリウムと水酸化ナトリウム)にしばらく浸して揉むとすごい汚れが取れる
+     - 乾きにくいので、よく水切りしたあと、日当たりの良い場所で日干しする 
+   - 参考
+     - [AirPods、AirPods Pro、AirPods Max、EarPods のお手入れ方法/Apple](https://support.apple.com/ja-jp/HT208729)
+     - [AirPods Maxの汚れたイヤーパッド(イヤークッション)は水洗いで綺麗になる?](https://iyusuke.net/airpodsmax-earpad/)
