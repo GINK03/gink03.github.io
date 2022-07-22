@@ -1,22 +1,23 @@
 ---
 layout: post
-title: "causual impact"
+title: "causal impact"
 date: 2022-07-13
-excerpt: "causual impact(因果推論)について"
+excerpt: "causal impact(因果推論)について"
 kaggle: true
-tag: ["機械学習", "因果推論", "causual impact"]
+tag: ["機械学習", "因果推論", "causal impact"]
 sort_key: "2022-07-13"
 update_dates: ["2022-07-13"]
 comments: false
 ---
 
-# causual impact(因果推論)について
+# causal impact(因果推論)について
 
 ## 概要
  - `因果推論の根本問題`について
    - 推論対象(反実仮想)をどう求めるか
  - DIDのような簡単な関係ではなく、MLを用いて推論する
    - 目的変数に対してfitすれば良いので、kagglerが力を発揮する
+ - causal impactはコーザルインパクトという読み方になる
 
 ## `因果推論の根本問題`について
  - 介入した効果の逆を求めるのは難しい
