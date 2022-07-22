@@ -1,10 +1,9 @@
 ---
 layout: post
-title: "rolling hash"
+title: "ローリングハッシュ"
 date: 2021-05-31
 excerpt: "ローリングハッシュについて"
 computer_science: true
-hide_from_post: true
 tag: ["algorithm", "math", "rolling hash"]
 comments: false
 sort_key: "2021-05-31"
@@ -12,9 +11,25 @@ update_dates: ["2021-05-31","2021-05-31"]
 ---
 
 # rolling hashについて
+
+## 概要
  - C++等において高速に文字列の比較等をやりやすくする等のモチベーションで用いられる
  - 言うなれば、文字列のhash化をしているだけなのでpythonで同じものを実装する意味や意義はあまり大きくない 
    - `python 3.X`の文字列操作は非常に高速であり、rolling hashを用いなくても通る
+
+## 定式化
+
+$$
+hash(S) = \sum S_i r^i (\mod m) 
+$$
+ - \\(S\\); 文字列
+ - \\(r\\); 基数
+ - \\(m\\); 法
+
+## 数学的な証明とロバスト性
+ - 参考
+   - [Rolling Hashについて（survey + 研究）/maspyのHP](https://maspypy.com/rolling-hash%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%EF%BC%88survey-%E7%A0%94%E7%A9%B6%EF%BC%89)
+
 
 ## 実装例
 
