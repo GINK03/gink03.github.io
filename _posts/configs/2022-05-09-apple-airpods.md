@@ -49,3 +49,12 @@ update_dates: ["2022-05-09"]
    - 参考
      - [AirPods、AirPods Pro、AirPods Max、EarPods のお手入れ方法/Apple](https://support.apple.com/ja-jp/HT208729)
      - [AirPods Maxの汚れたイヤーパッド(イヤークッション)は水洗いで綺麗になる?](https://iyusuke.net/airpodsmax-earpad/)
+
+## トラブルシューティング
+
+### ペアリングが安定しない、ノイズが混じる、ボタンが反応しない
+ - 原因
+   - 結露などのハードウェア的な不調により発生する
+ - 対応
+   - 乾燥剤とともにしばらく密閉する
+   - 乾燥させても直らない際は、Appleに修理を依頼するか、Apple Careで交換する
