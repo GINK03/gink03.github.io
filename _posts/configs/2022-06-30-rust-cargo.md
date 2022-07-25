@@ -45,3 +45,15 @@ $ cargo run
 $ cargo install <project-name>
 ```
  - デフォルトでは`$HOME/.cargo/bin`にインストールされる
+
+---
+
+## 依存を追加する
+
+```toml
+[dependencies]
+structopt = "*"
+```
+ - バージョンを指定しないときは`"*"`
+ - 厳密なバージョンを指定するときは`"=xx.yy.zz"`
+
