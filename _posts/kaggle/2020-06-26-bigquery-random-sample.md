@@ -63,3 +63,5 @@ WHERE
 ## bigqueryのプレビュー機能を用いたサンプリング
  - [テーブルのサンプリング](https://cloud.google.com/bigquery/docs/table-sampling)
 
+## 参考
+ - [TOP N PER GROUP IN BIGQUERY](https://dankleiman.com/2017/10/30/top-n-per-group-in-bigquery/)
