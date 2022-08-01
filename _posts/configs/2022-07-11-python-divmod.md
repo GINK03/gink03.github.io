@@ -32,3 +32,4 @@ for i in range(10**5):
 
 ## 参考
  - [Python divmod()](https://www.programiz.com/python-programming/methods/built-in/divmod)
+ - [Modulus in Python](https://www.scaler.com/topics/modulus-in-python/)
