@@ -16,11 +16,14 @@ update_dates: ["2022-07-26"]
  - google adwardsの次のサービス
  - `Dispaly`, `Video`, `App`, `Smart`キャンペーンなど
 
+
 ## App Campaigns(アプリ キャンペーン)について
  - 概要
    - Google検索、Google Play、YouTube、Googleディスプレイネットワークの全てにリーチできる
    - アプリの有料会員を増やすためのキャンペーン
    - 広告文、画像や動画などのアセット、入札単価を設定
+ - 粒度
+   - `キャンペーン` -> `広告グループ(AdGroup)` -> `アセット(Asset)`
  - アセット同士の最適化について
    - 自動で組み合わせの試行錯誤が行われ、最適なパフォーマンスになる
  - アセットのパフォーマンスについて
@@ -34,7 +37,17 @@ update_dates: ["2022-07-26"]
      - 会社で一つのみ発行可能
    - (GoogleCloudプロジェクトの)クライアントID
      - クライアントIDを開発者トークンにバインドして利用する
+ - APIの利用開始
+   - Google Adsでの手続き
+     - MMCアカウントで、Google Ads APIの利用依頼
+     - MMCアカウントで、`開発者トークン`の発行
+   - GCPでの手続き
+     - GCPでOAuthを発行
+     - 自分のアカウントでログインし、許可し、`refresh_token`を取得
+ - 実際のプログラムでGoogle Adsにアクセス
+   - OAuthの`client_id`, `client_secret`, `refresh_token`と、Google Adsの`開発者トークン`が必要
  - 参考
    - [クイックスタート/Google Ads API](https://developers.google.com/google-ads/api/docs/first-call/overview)
    - [クライアント ライブラリ/Google Ads API](https://developers.google.com/google-ads/api/docs/client-libs)
+   - [Getting started with the Google Ads API using Python](https://www.cahoover.com/blog/marketing-analytics/getting-started-with-the-google-ads-api-using-python/)
 
