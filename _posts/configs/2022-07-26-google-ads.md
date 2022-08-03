@@ -44,6 +44,9 @@ update_dates: ["2022-07-26"]
    - GCPでの手続き
      - GCPでOAuthを発行
      - 自分のアカウントでログインし、許可し、`refresh_token`を取得
+   - 申請時に必要な書類
+     - APIを申請した場合のアプリの仕様書
+       - 誰が利用し、どんな頻度でAPIにアクセスするのかを明示した資料が必要
  - 実際のプログラムでGoogle Adsにアクセス
    - OAuthの`client_id`, `client_secret`, `refresh_token`と、Google Adsの`開発者トークン`が必要
  - 参考
