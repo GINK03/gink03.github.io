@@ -33,6 +33,8 @@ $ python3 -m pip install tqdm
    - 下から何行目に標示するか
  - `disable`
    - `True`を入れると表示されなくなる
+   - 環境変数と紐付けて管理すると便利
+     - `for x in tqdm(..., disable=os.environ.get("DISABLE_TQDM", False)):`
 
 ## nextを利用してtqdmのカウンターを回す
  - `tqdm`インスタンスを`iter`でラップすることで、`next`関数を利用してカウンターを回すことができる
