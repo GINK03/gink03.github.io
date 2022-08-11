@@ -12,11 +12,23 @@ update_dates: ["2021-06-19","2021-06-19"]
 
 # cloud compute engineについて
 
-### 一覧を表示
+### computeインスタンスの一覧を表示
 
 ```console
 $ gcloud compute instances list
 ```
+
+### computeインスタンスを作成
+
+```console
+$ gcloud compute instances create <instance-name> --machine-type=<type-name>
+```
+
+**具体例**
+```console
+$ gcloud compute instances create test-instance --machine-type=f1-micro
+```
+ - 一時的に同じネットワークにインスタンスを用意したいときなど
 
 ### VMにsshアクセス
 
