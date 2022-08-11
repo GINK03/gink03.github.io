@@ -71,6 +71,13 @@ $ gcloud info
 $ gcloud config configurations create <config-name>
 ```
 
+#### 設定の一覧の確認
+
+```console
+$ gcloud config configurations list
+```
+ - すでに登録済みの設定の一覧を確認できる
+
 #### 設定を有効化する
 
 ```console
