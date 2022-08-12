@@ -57,5 +57,17 @@ Hello うんち!
 
 ---
 
+## ローカルでの開発について
+`functions-framework`というソフトウェアを使い、ローカルにサーバを立ててテストする 
+ 
+```console
+$ functions_framework --target=<function-name>
+```
+  
+ - 参考
+   - [Function Frameworks を使用した関数の実行](https://cloud.google.com/functions/docs/running/function-frameworks)
+
+---
+
 ## 参考
  - [PythonでHTTP Cloud Functionsの関数を作成してデプロイする](https://cloud.google.com/functions/docs/create-deploy-http-python)
