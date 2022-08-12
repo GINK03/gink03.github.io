@@ -1,16 +1,16 @@
 ---
 layout: post
-title: "gcloud"
+title: "gcloud cli(cloud sdk)"
 date: 2021-03-06
-excerpt: "gcloudについて"
-tags: ["gcp", "gcloud"]
+excerpt: "gcloud cli(cloud sdk)について"
+tags: ["gcp", "gcloud", "cli", "gcloud cli", "cloud sdk"]
 config: true
 comments: false
 sort_key: "2022-05-25"
 update_dates: ["2022-05-25", "2022-05-17"]
 ---
 
-# gcloudについて
+# gcloud cli(cloud sdk)について
 
 ## 概要
  - GCPのインフラストラクチャを設定するためのツール
@@ -121,6 +121,11 @@ $ gcloud components update
 ## apiとの関係
  - `gcloud`コマンドは`API`をコマンドでラップしたものであるが、python等のスクリプトから呼び出す際は`google-api-python-client`を用いる  
  - 仕様が複雑で[ドキュメント](https://googleapis.github.io/google-api-python-client/docs/)を精読しないと使うことが難しい  
+
+---
+
+## 参考
+ - [Cloud SDK のインストール/Google Cloud](https://cloud.google.com/sdk/docs/install?hl=ja)
 
 ---
 
