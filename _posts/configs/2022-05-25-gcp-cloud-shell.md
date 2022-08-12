@@ -18,11 +18,12 @@ update_dates: ["2022-05-25"]
  - `/home`以下に永続ディスクが割り当てられている
    - 5GBの永続ディスクが割り当てられる
  - debian linuxベースのものがインストールされている
+ - cloud memorystoreなど同じネットワーク内で動作することを期待するサービスへのアクセスは、gloud shellからだとできない
 
 ## 手元のterminalからログイン
 
 ```console
-$ gcloud cloud-sheel ssh
+$ gcloud cloud-shell ssh
 ```
 
 ## 参考
