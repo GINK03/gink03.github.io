@@ -24,8 +24,10 @@ update_dates: ["2022-02-08","2021-10-31"]
 > choco install docker-desktop
 ```
 
-**osx**  
-GUIにて、公式サイトよりインストーラーをダウンロードしてインストールする
+**macos**  
+```console
+$ brew install docker # `docker`の指定でdocker-desktopが導入される
+```
 
 ## 具体的な使い方
 
