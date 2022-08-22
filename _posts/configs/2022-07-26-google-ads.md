@@ -49,8 +49,21 @@ update_dates: ["2022-07-26"]
        - 誰が利用し、どんな頻度でAPIにアクセスするのかを明示した資料が必要
  - 実際のプログラムでGoogle Adsにアクセス
    - OAuthの`client_id`, `client_secret`, `refresh_token`と、Google Adsの`開発者トークン`が必要
+ - APIの申請でよくある問題
+   - すでに他のGoogle Adsのアカウントに紐付いており、ポリシー的にできなくなっている
+     - 多くの場合、管理者が退職していたりなどで不在になり、Googleにアドホックな対応をして貰う必要がある
+ - APIでアクセスできない場合の代替手段
+   - パフォーマンスレポートをgoogle sheetに書き出すことができる
  - 参考
    - [クイックスタート/Google Ads API](https://developers.google.com/google-ads/api/docs/first-call/overview)
    - [クライアント ライブラリ/Google Ads API](https://developers.google.com/google-ads/api/docs/client-libs)
    - [Getting started with the Google Ads API using Python](https://www.cahoover.com/blog/marketing-analytics/getting-started-with-the-google-ads-api-using-python/)
 
+## パフォーマンスレポート
+ - CTRやCVRやImpressionなど一般的な指標
+   - 特徴
+     - Google Sheetにパフォーマンスを定期的に書き出すことができる
+ - 投稿掲載日や変更など特殊なデータ
+   - 特徴
+     - `Change History`から参照できる
+     - 定期実行ができない
