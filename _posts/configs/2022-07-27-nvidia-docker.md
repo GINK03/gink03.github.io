@@ -42,13 +42,16 @@ $ sudo systemctl restart docker
  - `cudf`が入っている環境に、`pandas-gbq`を入れると壊れたりする
 
 ```dockerfile
-FROM rapidsai/rapidsai:22.06-cuda11.0-runtime-ubuntu18.04-py3.8
+# rapidsaiのbaseを利用するとき
+# FROM rapidsai/rapidsai:22.06-cuda11.0-runtime-ubuntu18.04-py3.8
+# 必要最低限のnvidia/cudaを利用するとき
+FROM nvidia/cuda:11.7.1-cudnn8-runtime-ubuntu22.04
 
 # install base softwares
 RUN apt update
 RUN apt install build-essential mecab libmecab-dev mecab-ipadic -y
 RUN pip install mecab-python3
-RUN apt install git make sudo less file tmux htop -y
+RUN apt install curl python3-pip git make sudo less file tmux htop -y
 # RUN cd tmp; git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git;
 RUN git clone --depth 1 https://github.com/neologd/mecab-ipadic-neologd.git /tmp/mecab-ipadic-neologd
 RUN /tmp/mecab-ipadic-neologd/bin/install-mecab-ipadic-neologd -n -y
@@ -74,6 +77,16 @@ CMD bash /rapids/utils/start-jupyter.sh; bash
 ```console
 $ docker run -it -v $PWD/host:/rapids/notebooks/host --gpus all -p 8888:8888 nvidia-docker
 ```
+
+---
+
+## トラブルシューティング
+
+### `-it`, `--intractive, --tty`オプションを付けないと動作しないとき
+ - 原因
+   - `rapidsai`のコンテナのスクリプトが`-it`を期待しているため、GCPのスタートアップスクリプトのように`tty`が存在できない場合、起動できない
+ - 対応
+   - `nvidia/cuda:~`のbaseを利用すると`tty`を期待しないため、動作することがある
 
 ---
 
