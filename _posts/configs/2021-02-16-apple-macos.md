@@ -354,6 +354,17 @@ $ open 'smb://gimpeik%40icloud.com@192.168.40.16/share'
 
 ---
 
+## macOSのファイルシステム
+ - `APFS`
+   - SSDに対応したファイルシステム
+   - 2016年から
+ - `HFS+(Mac OS拡張)`
+   - HDDを前提としたファイルシステム
+ - 参考
+   - [APFS vs MacOS拡張(HFS+)：違いとMacでフォーマットする方法 [MiniTool]](https://jp.minitool.com/data-recovery/apfs-vs-mac-os-extended-difference-and-format.html)
+
+---
+
 ## linuxのnfsをマウントする
  - CUI
    - マウント
