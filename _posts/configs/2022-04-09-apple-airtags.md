@@ -52,3 +52,9 @@ update_dates: ["2022-04-09"]
    - youtube上で様々な人が無音化した例を公開している
  - 参考
    - [How to Remove AirTag Speaker to Mute Apple AirTag](https://www.youtube.com/watch?v=2bozWzHQdVs&ab_channel=MashTips)
+
+## AirTagsがあったことによる実績
+ - 物をなくしやすい性格を矯正しなくてよいという安心感(priceless)
+ - 子供を人混みに連れて行くときに、服のタグにカラビナでAirTagsをつけていくと、迷子になったときに最悪どうにかできるという安心感(priceless)
+ - 家の鍵をマクドナルドに忘れたときにすぐ気づいて回収できた
+ - 自転車の鍵をドトールに忘れたときに、入居している管理事務所に転送されて遠くまで行ってしまったが回収できた(店員は鍵の転送を把握していなかったので詰んでいた可能性が高い)
