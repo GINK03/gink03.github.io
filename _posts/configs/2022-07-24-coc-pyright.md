@@ -29,6 +29,18 @@ update_dates: ["2022-05-19","2022-02-02","2022-01-25","2022-01-20"]
 }
 ```
 
+---
+
+## トラブルシューティング
+
+### `:CocInfo`など確認しても問題がないが、動作していないように見える
+ - 原因
+   - `coc-config.json`などが原因で動作しなくなっている
+ - 対応
+   - `coc-config.json`を修正するか、無効化する
+
+---
+
 ## 参考
  - [fannheyward/coc-pyright](https://github.com/fannheyward/coc-pyright)
    - 詳細な仕様はissueを掘る
