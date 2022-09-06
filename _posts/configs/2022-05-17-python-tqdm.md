@@ -15,6 +15,7 @@ update_dates: ["2022-05-17"]
 
 ## 概要
  - プログレスバーの表示を行うツール
+ - pandasとの連携もできる
 
 ## インストール
 
@@ -36,6 +37,8 @@ $ python3 -m pip install tqdm
    - 環境変数と紐付けて管理すると便利
      - `for x in tqdm(..., disable=os.environ.get("DISABLE_TQDM", False)):`
 
+---
+
 ## nextを利用してtqdmのカウンターを回す
  - `tqdm`インスタンスを`iter`でラップすることで、`next`関数を利用してカウンターを回すことができる
 
@@ -44,7 +47,7 @@ counter = iter(tqdm(...))
 next(counter) # tqdmがインクリメントされる
 ```
 
-## 具体例
+### 具体例
  - `tqdm.auto`経由でimportすることでjupyterでもterminalでも表示できる
 
 ```python
@@ -63,6 +66,21 @@ for i in tqdm(range(1000), desc="working...", position=0, ncols=100):
 <div>
   <img src="https://user-images.githubusercontent.com/4949982/168730212-5e10dcd2-59af-48aa-9732-856cc4a7942e.png">
 </div>
+
+---
+
+## pandasと連携
+ - `tqdm.pandas()`を最初に実行する必要がある
+
+### 具体例
+```python
+from tqdm.auto import tqdm
+tqdm.pandas()
+
+df["any"].progress_apply(func)
+```
+
+---
 
 ## 参考
  - [github.com/tqdm/tqdm](https://github.com/tqdm/tqdm)
