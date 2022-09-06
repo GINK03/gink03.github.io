@@ -49,6 +49,8 @@ df.to_gbq(table_id, project_id=project_id, if_exists="replace")
 
 ## クレデンシャル(サービスアカウントの認証情報)を用いて初期化する
  - AWSでbigqueryにアクセスするときなどに必要な措置
+ - `google.oauth2`には以下のライブラリが必要
+   - `google-api-python-client google-auth-httplib2 google-auth-oauthlib`
 
 ```python
 import pandas_gbq
