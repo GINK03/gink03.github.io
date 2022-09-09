@@ -14,7 +14,8 @@ update_dates: ["2022-02-20","2022-02-17","2021-08-22","2021-02-25","2020-11-19",
 
 ## 概要
  - windowsでターミナルを使う際のデファクトスタンダード
-   - [プレゼン資料](https://docs.google.com/presentation/d/1gipc9VgBmv98gunpZw16e0MQ_o7dfLkizO7zvFvbBE8/edit?usp=sharing)  
+ - linuxにsshしてまともに操作しようとすると、一度wslに入ってからsshする方が環境構築が楽
+ - [プレゼン資料](https://docs.google.com/presentation/d/1gipc9VgBmv98gunpZw16e0MQ_o7dfLkizO7zvFvbBE8/edit?usp=sharing)  
 
 ### 動作イメージ
 
@@ -135,10 +136,21 @@ Invoke-Expression (&starship init powershell)
 
 ## トラブルシューティング
 
-### 謎のクラッシュ時の対応
- - windows-terminalをMicrosoft Storeから最新版に更新する  
+### IMEが入力確定時に英字にリセットされてしまう
+ - 原因
+   - MicrosoftIMEの2022年の仕様
+ - 対応
+   - GoogleIME等に切り替える
 
-### おすすめフォント設定
+### 謎のクラッシュ
+ - 原因
+   - バージョンが古いことによる問題
+ - 対応
+   - windows-terminalをMicrosoft Storeから最新版に更新する  
+
+---
+
+## おすすめフォント設定
  - フォント
    - [sfmono-square](https://github.com/delphinus/homebrew-sfmono-square)
      - macでビルドして持ってくる必要がある
