@@ -74,9 +74,10 @@ for i in tqdm(range(1000), desc="working...", position=0, ncols=100):
 
 ### 具体例
 ```python
+import os
 from tqdm.auto import tqdm
-tqdm.pandas()
 
+tqdm.pandas(desc="なにかメッセージ", disable=bool(os.environ.get("DISABLE_TQDM")))
 df["any"].progress_apply(func)
 ```
 
