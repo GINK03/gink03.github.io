@@ -19,6 +19,7 @@ update_dates: ["2022-09-19"]
    - Siriを含めると動作が遅くなる
  - iosでは検索対象がiCloud全体になる
    - notesのファイルや、写真や、作成した資料などが出てくる
+   - イメージとしてはiCloud全体の[/ripgrep/](/ripgrep/)
  
 ## 起動
  - macOS
