@@ -18,6 +18,15 @@ update_dates: ["2022-09-20"]
  - アクセスするときは、FROM句のあとに特定の記法で記す必要がある
    - `UNNEST(table, col_name)`とする
 
+## ネストされるデータ構造
+### struct
+ - bigqueryはレコードの中にレコードが入っている状態
+ - structをunnestするには`struct名.*`でアクセスする
+
+### array
+ - arrayをunnestするにはselect句外で`UNNEST`する
+
+
 ## 具体例
 
 ```sql

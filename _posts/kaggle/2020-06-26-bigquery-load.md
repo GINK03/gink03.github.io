@@ -79,6 +79,7 @@ for filename in tqdm(glob.glob("./twitter-random-sample/_agg_tweets/*.pkl")):
 ---
 
 ## 参考
+ - [列ベースの時間パーティション分割テーブルにデータを読み込む/GoogleCloud](https://cloud.google.com/bigquery/docs/samples/bigquery-load-table-partitioned?hl=ja#bigquery_load_table_partitioned-python)
  - [BigQuery - Where can I find the error stream?](https://stackoverflow.com/questions/52100812/bigquery-where-can-i-find-the-error-stream)
  - [Can you load JSON formatted data to a BigQuery table using Python and load_table_from_json()?](https://stackoverflow.com/questions/59681072/can-you-load-json-formatted-data-to-a-bigquery-table-using-python-and-load-table)
  - [pandas.io.json.build_table_schema/pandas](https://pandas.pydata.org/docs/reference/api/pandas.io.json.build_table_schema.html)
