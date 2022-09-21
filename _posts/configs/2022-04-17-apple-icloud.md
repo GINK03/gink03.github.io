@@ -3,7 +3,7 @@ layout: post
 title: "apple icloud"
 date: 2021-04-17
 excerpt: "apple icloudについて"
-tags: ["apple", "ios", "osx", "support", "icloud"]
+tags: ["apple", "ios", "macOS", "support", "icloud"]
 config: true
 comments: false
 sort_key: "2022-05-10"
@@ -15,16 +15,24 @@ update_dates: ["2022-05-10","2022-04-17"]
 ## 概要
  - Apple社が提供するクラウドサービス
  - GoogleやMSのものに比べてバグが多い印象
+ - macOSでは深い箇所にpathが設定されているのでシンボリックリンクを貼っておいたほうが利便性が高い
 
-## iCloud Drive
+## iCloud Driveのシンボリックリンクを作成する
+
+```console
+$ ln -s "$HOME/Library/Mobile Documents/com~apple~CloudDocs/" ~/iCloudDrive
+```
+
+## iCloud Drive(ソフトウェア)
  - 概要
-   - クラウドドライブ
-   - クライアントがosx, ios, windowsで用意されているが、Linuxはない
- - osxでの利用
-   - osxでのパス
+   - クラウドドライブソフトウェア
+   - appleのデバイスではデフォルトで入っている
+   - クライアントがmacOS, ios, windowsで用意されているが、Linuxはない
+ - macOSでの利用
+   - macOSでのパス
      - `~/Library/Mobile Documents`
      - このパス以下にアプリごとの固有名が作成される
-   - osxのデスクトップやドキュメントで同期されるファイルのパス　
+   - macOSのデスクトップやドキュメントで同期されるファイルのパス　
      - `~/Library/Mobile\ Documents/com~apple~CloudDocs/`
  - Windowsでの利用
    - Windowsでのパス
