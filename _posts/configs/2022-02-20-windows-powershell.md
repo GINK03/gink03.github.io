@@ -63,6 +63,16 @@ Alias           clear -> Clear-Host
 > cat *.csv | Out-Host –Paging
 ```
 
+### シンボリックリンクの作成
+ - シンボリックリンクはフルパスで記述されておく必要がある
+ - `-Target <実態があるパス>`
+ - `-Path <作成するシンボリックリンクのパス>`
+
+**具体例(OneDriveの中にあるデスクトップフォルダを, 英語の名前でシンボリックリンクを作成する)**
+```console
+> New-Item -ItemType Junction -Target "$PWD\OneDrive\デスクトップ" -Path "$PWD\Desktop"
+```
+
 ### NetIPConfiguration
  - ipアドレスの操作関連
 
