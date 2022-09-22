@@ -17,6 +17,7 @@ update_dates: ["2022-05-22"]
  - WindowsでLinuxのコマンドをOSと密に連携して操作するシステム
    - WSL1ではnativeで動作していたが、WSL2では仮想マシンベースになった
  - Linux側のVMのターミナルからWindowsのバイナリを実行できたり、Windows側からLinuxのバイナリを実行できる
+ - WSL2からはLinux部分とWindows部分でIPを共有していない
 
 ## ユースケース毎の使い方
 
@@ -99,6 +100,14 @@ update_dates: ["2022-05-22"]
 ### wslの中でdockerを利用する
  - `Docker Desktop for Windows`がインストールされてwsl2 integrationが設定されていれば、wslの内部でもdockerコマンドが利用可能になる
 
+### powershellからLinuxのコマンドを実行する
+ - wslコマンドの後のテキストがデフォルトで実行するコマンドの引数となる
+
+**具体例(zshを実行)**
+```console
+> wsl zsh
+```
+
 ---
 
 ## 参考
@@ -108,7 +117,11 @@ update_dates: ["2022-05-22"]
 
 ## トラブルシューティング
 
-### ubuntuが日本語化されない
+### zsh+ubuntuで日本語化されない
+ - 原因
+   - 日本語の言語パックが入っていない
+ - 対応
+   - 必要なパッケージのインストール
 
 ```console
 $ sudo apt install language-pack-ja
