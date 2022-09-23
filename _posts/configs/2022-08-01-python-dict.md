@@ -3,7 +3,7 @@ layout: post
 title: "python dict"
 date: 2022-08-01
 excerpt: "python dictの使い方"
-tags: ["python", "dict"]
+tags: ["python", "dict", "defaultdict"]
 config: true
 comments: false
 sort_key: "2022-08-01"
@@ -21,6 +21,9 @@ update_dates: ["2022-08-01"]
  - `get`は第2引数に、キーが存在しない場合、返す値を設定できる
    - 環境変数が存在しない場合にデフォルト値を返したい時に便利
      - e.g. `os.environ.get("DISABLE_TQDM", False)`
+ - dictにデフォルト値をもたせたいときは、`collections.defaultdict`を用いる
+   - `collections.defaultdict`は名前空間の関係で`pickle`でシリアライズできない
+   - `collections.defaultdict`は`dict`の初期化引数に入れることで、`Dict[Any, Any]`に変換できる
 
 ## 具体例
 
