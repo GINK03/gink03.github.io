@@ -104,6 +104,14 @@ $ chsh -s /bin/zsh
  - Windows側のホームディレクトリは`/mnt/c/Users/<username>`となる
  - OneDriveを利用している場合、Windowsのデスクトップパスは`/mnt/c/Users/<username>/OneDrive/デスクトップ`となる
 
+### Windowsのネットワークドライブ・フラッシュドライブへのアクセス
+ - `/mnt/<drive-letter>`には出現しない
+ - `sudo mount -t drvfs <drive-letter> <mount-point>`でマウントする
+
+**Z:のネットワークドライブをマウントする例**
+```console
+$ sudo mount -t drvfs Z: network-drive
+```
 
 ### wslの中でdockerを利用する
  - `Docker Desktop for Windows`がインストールされてwsl2 integrationが設定されていれば、wslの内部でもdockerコマンドが利用可能になる
