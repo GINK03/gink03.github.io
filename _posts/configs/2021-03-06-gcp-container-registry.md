@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "gcr, container registry"
+title: "gcp, container registry(gcr)"
 date: 2021-03-06
-excerpt: "gcr, container registryについて"
+excerpt: "gcp, container registry(gcr)について"
 tags: ["gcp", "gcr", "container registry"]
 config: true
 comments: false
@@ -10,11 +10,12 @@ sort_key: "2021-06-19"
 update_dates: ["2021-06-19"]
 ---
 
-# gcr, container registryについて
+# gcp, container registry(gcr)について
 
 ## 概要
  - gcp版dockerhub  
  - あまりパブリックに運用することを想定していない
+ - 外部に公開したくないようなクローズドなコンテナを管理したい場合
 
 ## dockerコマンドの認証を通す
 
