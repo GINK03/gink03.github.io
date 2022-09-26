@@ -84,7 +84,6 @@ from pathlib import Path
 import pandas as pd
 import pydata_google_auth
 
-
 credentials = pydata_google_auth.load_user_credentials(
     Path("~/.config/pandas_gbq/bigquery_credentials.dat").expanduser()
 )
@@ -93,6 +92,13 @@ credentials = pydata_google_auth.load_user_credentials(
 df = pd.read_gbq(query, projectid, dialect="standard", credentials=credentials, use_bqstorage_api=True)
 ```
  - 自動で優先される`GOOGLE_APPLICATION_CREDENTIALS`が設定されてしまっているときなどに有効
+
+## dockerのコンテナと認証情報を共有する
+ - dockerでpandas_gbqを使用している際に、クレデンシャルをローカルと共有し、テストを通すために必要
+
+```console
+$ docker run -v ~/.config/pandas_gbq/:/root/.config/pandas_gbq -it <container-name>
+```
 
 ## トラブルシューティング
 
