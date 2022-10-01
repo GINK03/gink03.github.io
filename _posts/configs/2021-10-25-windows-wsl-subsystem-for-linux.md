@@ -22,11 +22,24 @@ update_dates: ["2022-05-22"]
 ## ユースケース毎の使い方
 
 ### インストール
-
-管理者権限にて
+ - 管理者権限にて実行する
 
 ```console
 > wsl --install
+```
+
+### wslのアップデート
+
+```console
+> wsl --update
+```
+
+### wslの再起動
+ - 一度、シャットダウンして、再起動する
+
+```console
+> wsl --shutdown
+> wsl
 ```
 
 ### インストール可能なディストリビューション一覧
@@ -76,6 +89,8 @@ update_dates: ["2022-05-22"]
 > wsl --unregister <distribution-name>
 ```
 
+---
+
 ### デフォルトのshellを変更する
  - `zsh`に変更する例
 
@@ -84,20 +99,25 @@ update_dates: ["2022-05-22"]
 $ chsh -s /bin/zsh
 ```
 
-### ディストリビューションの仮想マシンを初期状態に戻す
+---
+
+## ディストリビューションの仮想マシンを初期状態に戻す
  - 手順
    1. `設定` -> `アプリ` -> `インストールされているアプリ` -> Linuxのパッケージ名で検索 -> `詳細オプション` -> `リセット`
    2. リセット後にLinuxのパッケージ名のアプリを実行することで作り直すことが可能 
  - 参考
    - [グチャグチャになった「Ubuntu on WSL2」のやり直し方/Qiita](https://qiita.com/PoodleMaster/items/b54db3608c4d343d27c4)
- 
 
-### wslサービスの再起動
+---
 
-**管理者のpowershellにて**  
-```console
-> Get-Service LxssManager | Restart-Service
-```
+## wslでsystemdを利用する
+ - 概要
+   - デフォルトでは利用できない
+   - 仮想マシンのLinuxに`/etc/wsl.conf`に設定を書き込むことで有効化できる
+ - 参考
+   - [Systemd support is now available in WSL!](https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl/)
+
+---
 
 ### Windowsのファイルシステムへのアクセス
  - `/mnt/<dirve-letter>`のパスにマウントされる
@@ -112,6 +132,8 @@ $ chsh -s /bin/zsh
 ```console
 $ sudo mount -t drvfs Z: network-drive
 ```
+
+---
 
 ### wslの中でdockerを利用する
  - `Docker Desktop for Windows`がインストールされてwsl2 integrationが設定されていれば、wslの内部でもdockerコマンドが利用可能になる
