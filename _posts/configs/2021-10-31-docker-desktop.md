@@ -54,3 +54,9 @@ docker-desktopの設定より、wsl統合を選択できる
    - armアーキテクチャのコンテナを`linux/amd64`で動作させるような場合にでる
  - 対応
    - `--platform linux/amd64`のオプションを設定してビルドする
+
+### コンテナレジストリへのpushingが終わらない
+ - 原因
+	 - docker desktopのバグか何かを踏んだ
+ - 対応
+	 - docker desktopを再起動
