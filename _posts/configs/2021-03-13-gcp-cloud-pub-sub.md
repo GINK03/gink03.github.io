@@ -97,8 +97,6 @@ subscription_id = "test-subscriber"
 timeout = 5.0
 
 subscriber = pubsub_v1.SubscriberClient()
-# The `subscription_path` method creates a fully qualified identifier
-# in the form `projects/{project_id}/subscriptions/{subscription_id}`
 subscription_path = subscriber.subscription_path(project_id, subscription_id)
 
 def callback(message: pubsub_v1.subscriber.message.Message) -> None:
@@ -111,13 +109,28 @@ print(f"Listening for messages on {subscription_path}..\n")
 # Wrap subscriber in a 'with' block to automatically call close() when done.
 with subscriber:
     try:
-        # When `timeout` is not set, result() will block indefinitely,
-        # unless an exception is encountered first.
         streaming_pull_future.result()
     except TimeoutError:
         streaming_pull_future.cancel()  # Trigger the shutdown.
         streaming_pull_future.result()  # Block until the shutdown is complete.
 ```
+
+---
+
+## Cloud Pub/SubからCloud Functionsをトリガーする
+
+### 概要
+ - Subscription側でメッセージを受け取ったらFunctionsを起動することが可能
+ - CUIでもデプロイできるが、Pub/Subの管理画面から、Functionsをトリガーすることもできる
+   - CUIでうまくいかなった際に、WebUIから操作したところ、トリガーできた
+
+### 手順
+ - WebUI
+   - Pub/Subの管理画面
+   - トピックを選択
+   - Functionsに紐づけたいトピックのハンバーガーボタンから、`Cloud Functionをトリガー`を選択し、functionsを初期化
+
+---
 
 ## 参考
  - [エミュレータを使用したローカルでのアプリのテスト/GoogleCloud](https://cloud.google.com/pubsub/docs/emulator)
