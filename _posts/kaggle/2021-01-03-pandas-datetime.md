@@ -66,6 +66,15 @@ df["ts"] = pd.DatetimeIndex(df["ts"]).tz_convert("Asia/Tokyo")
 
 ---
 
+## `tz aware`のデータを`tz native`にする
+ - `tz aware`のデータと`tz native`のデータは比較することができないので、どちらかをどちらかに寄せる必要がある
+
+```python
+df["tz_native"] = df["tz_aware"].dt.tz_localize(None)
+```
+
+---
+
 ### Series.dt.floor 
  - 概要
    - 時間情報を荒い粒度に変換する
