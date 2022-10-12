@@ -37,6 +37,12 @@ update_dates: ["2022-04-25"]
  - `App Keys`
    - バケットにアクセスするためのキーを発行管理する
 
+## 画像やスタティックコンテンツの配信レポジトリとして使う
+ - 公開設定にする
+   - `Buckets` -> `Bucket Settings` -> `Public`に変更
+ - Friendly URLを取得する
+   - 共有したいファイルを選択し、詳細を表示するとFriendly URLが得られる
+
 ## 各OSからB2バケットをマウントできるツール
  - Windows
    - [/mountainduck/](/mountainduck/)
