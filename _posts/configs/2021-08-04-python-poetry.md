@@ -12,15 +12,22 @@ update_dates: ["2021-10-26","2021-10-18","2021-10-18","2021-08-12","2021-08-04"]
 
 # poetryの使い方
 
+## 概要
+ - `requirements.txt`に変わるパッケージマネージメント
+ - pipでインストールするより、厳格に依存を管理する
+   - pipでは環境を作れるのに、poetryでは通らないケースがある
+ - venvを`git init`の感覚で使用できる
+   - 環境を汚染するかもしれないパッケージを使用してもグローバルを汚染しない
+
 ## ドキュメント
  - [公式](https://python-poetry.org/docs/)
  - [cheatsheet](https://gist.github.com/CarlosDomingues/b88df15749af23a463148bd2c2b9b3fb)
 
-
 ## install
 
+**Linux, macOS, Windows(WSL)**
 ```console
-$ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+$ curl -sSL https://install.python-poetry.org | python3 -
 ```
 
 ## projectの作成
@@ -39,6 +46,13 @@ $ poetry init
 
 ```console
 $ poetry shell
+```
+
+## envに入っているかどうかの確認
+
+```console
+$ which python3
+# ~/Library/Caches/pypoetry/virtualenvs/tests-lightweight-mmm-tlHTGgKh-py3.10/bin/python3 などのようにpoetryのvenvのバイナリを指しているかで判断
 ```
 
 ## envの確認
