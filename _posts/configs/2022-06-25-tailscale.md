@@ -20,6 +20,7 @@ update_dates: ["2022-06-25"]
  - UDP NAT traversalをサポートしており、NATの内側のコンピュータでもVPNネットワークに参加できる
  - 一定のコンピュータ数(20)までは無料なので、個人で利用するには十分そう
  - 登録しているコンピュータのIPアドレスは[Machines](https://login.tailscale.com/admin/machines)から確認できる
+ - ある程度のオーバーヘッドがあり、速度が半分程度になる
 
 ## ユースケース
  - ファイヤーウォールの内部に設定したセキュアな環境にアクセスする
@@ -38,6 +39,13 @@ $ sudo tailscale up
 
 **macos**
  - `app store`から`tailscale`を検索してインストール
+
+## FOSSバージョンのheadscaleについて
+ - 概要
+   - tailscaleのFOSS
+   - tailscaleのコントロールプレーンのみをself hostにすることで完全に無料にしている
+   - インストールのハードルが高い
+     - dockerで管理するのがよい
 
 ## 仮想インターフェイス
  - Linux
