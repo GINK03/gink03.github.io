@@ -62,7 +62,9 @@ pandas_gbq.context.credentials = (
 ```
 
 ## 対話式のUIでクレデンシャルを初期化する
- - キャッシュに保存されたクレデンシャルを再設定したい時など
+ - ユースケース
+   - キャッシュに保存されたクレデンシャルを再設定したい時
+   - 明示的に、driveのスコープを有効化する時
 
 ```python
 import pydata_google_auth
@@ -73,6 +75,7 @@ SCOPES = [
 credentials = pydata_google_auth.get_user_credentials(
     SCOPES,
     auth_local_webserver=False,
+    # credentials_cache=pydata_google_auth.cache.NOOP, # 有効化すると、明示的にキャッシュを使用しない
 )
 pd.read_gbq(query, projectid, dialect='standard', use_bqstorage_api=True, credentials=credentials)
 ```
