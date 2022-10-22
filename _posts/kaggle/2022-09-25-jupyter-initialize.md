@@ -37,6 +37,9 @@ else:
 from IPython.display import HTML, display
 # jupyter notebookの幅を設定
 display(HTML("<style>.container { width:85% !important; }</style>"))
+# フォントを設定
+#display(HTML("""<style type='text/css'>.CodeMirror{ font-size: 13px; font-family: "PlemolJP Console NF"; }</style>"""))
+display(HTML("""<style type='text/css'>.CodeMirror{ font-size: 13px; font-family: "SF Mono"; } </style>"""))
 
 # よく使うライブラリ
 import pandas as pd
