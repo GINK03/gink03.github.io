@@ -5,14 +5,15 @@ date: 2021-06-01
 excerpt: "google apps scriptの使い方"
 project: false
 config: true
-tag: ["google apps script", "spreadsheets"]
+tag: ["gas", "google apps script", "spreadsheets"]
 comments: false
 sort_key: "2022-04-16"
 update_dates: ["2022-04-16","2022-04-01","2022-03-09","2022-02-27","2022-02-27","2022-02-10"]
 ---
 
 # google apps scriptの使い方
- - [google spreadsheets](/google-spreadsheets/)等で使用できるJavaScriptのスクリプト
+ - [google spreadsheets](/google-spreadsheets/)等で使用できるJavaScriptのスクリプト 
+ - 短縮表現は`GAS(ガス)`
 
 ## google spreadsheetsでの関数の作り方
  - `[拡張機能]` -> `[Apps Script]`
@@ -182,6 +183,13 @@ range.setNumberFormat("#,##0.00")
  - 参考
    - [【GAS】スプレッドシートの表示形式で数字フォーマットを変更する方法(setNumberFormat)](https://auto-worker.com/blog/?p=3814)
 
+#### rangeの値をまとめて消去
+
+```js
+sheet.getRange("E2:M" + sheet.getLastRow()).clear({ contentsOnly: true, skipFilteredRows: false });
+```
+ - カラムを指定する文字を利用してヘッダー以外の値をクリアすることができる
+
 #### カラムの移動
 
 ```js
@@ -203,10 +211,11 @@ Logger.log(response.getContentText());
 
 ```js
 // トーストの開始
-SpreadsheetApp.getActiveSpreadsheet().toast("なにか処理しています...",-1);
+SpreadsheetApp.getActiveSpreadsheet().toast("なにか処理しています...", "タイトル",-1);
 // トーストの終了
 SpreadsheetApp.getActiveSpreadsheet().toast("完了.");
 ```
+ - 引数の順序が `toast(description, title, option)`であることに注意
 
 ---
 
