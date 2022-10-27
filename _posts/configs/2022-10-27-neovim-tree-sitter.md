@@ -56,3 +56,17 @@ require("nvim-treesitter.configs").setup({
   -- additional_vim_regex_highlighting = false,
 })
 ```
+
+---
+
+## トラブルシューティング
+
+### エラーが消えない時
+ - 原因
+   - バージョンアップに伴う不整合
+ - 対応
+   - 一度パッケージを完全に削除してから、再インストール
+     - plugであれば、~/.config/nvim/plugged/から削除し再インストール
+ - 参考
+   - [Highlights broken after update with `query: invalid node type` #3092](https://github.com/nvim-treesitter/nvim-treesitter/issues/3092)
+   - 一度パッケージを完全に削除してから、再インストール
