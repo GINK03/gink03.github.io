@@ -35,6 +35,29 @@ update_dates: ["2022-09-24"]
 CMD gunicorn --bind 0.0.0.0:$PORT --workers=2 bin:app
 ```
 
+### ARG
+ - dockerfile内部に変数を与える
+ - ローカル開発と本番で使用する基底イメージが異なる時
+ - dockerfile内部で挙動を変えたいときなど
+
+**例**
+```dockerfile
+ARG BASE_CONTAINER=nvidia-base-container:latest
+FROM $BASE_CONTAINER
+
+WORKDIR /
+COPY . /app/
+RUN pip install -r ./app/requirements.txt
+WORKDIR /app
+```
+ - `BASE_CONTAINER`にデフォルトの値として`nvidia-base-container:latest`を与えている
+ - `BASE_CONTAINER`はビルド時に指定することで明示的にオーバーライドできる
+
+**例**
+```console
+$ docker build . --build-arg BASE_CONTAINER="ubuntu"
+```
+
 ### 環境変数をdockerfile内部で使う
  - 例えば`$HOME`が必要なときに以下のような記述が可能
 
