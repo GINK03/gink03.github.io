@@ -38,8 +38,8 @@ from IPython.display import HTML, display
 # jupyter notebookの幅を設定
 display(HTML("<style>.container { width:85% !important; }</style>"))
 # フォントを設定
-#display(HTML("""<style type='text/css'>.CodeMirror{ font-size: 13px; font-family: "PlemolJP Console NF"; }</style>"""))
-display(HTML("""<style type='text/css'>.CodeMirror{ font-size: 13px; font-family: "SF Mono"; } </style>"""))
+display(HTML("""<style type='text/css'>.CodeMirror{ font-size: 13px; font-family: "PlemolJP Console NF"; }</style>"""))
+#display(HTML("""<style type='text/css'>.CodeMirror{ font-size: 13px; font-family: "SF Mono"; } </style>"""))
 
 # よく使うライブラリ
 import pandas as pd
@@ -49,7 +49,16 @@ from tqdm.auto import tqdm
 # データフレームを表示する際に浮動小数点数のフォーマットを指定
 pd.options.display.float_format = '{:,.6f}'.format
 
+# 表示するカラムの上限
+pd.set_option('display.max_columns', None)
+
 # ワーニングをフィルタしたい際
 import warnings
-# warnings.filterwarnings("ignore")
+from pandas.core.common import SettingWithCopyWarning
+warnings.simplefilter(action="ignore", category=SettingWithCopyWarning) # コピーの警告
+
+import gzip
+import pandas as pd
+import json
+import glob
 ```
