@@ -17,6 +17,7 @@ update_dates: ["2022-08-12"]
  - pythonのdict型のようなデータを保持する
  - local emulatorがある
  - firestoreという次世代のnosqlもある(若干使い方が異なる, local emulatorのセットアップが異なる)
+ - bytes型を保存することはできない(Cloud Storageと連携を期待している)
 
 ## ローカルエミュレータの使用法
 
@@ -24,6 +25,9 @@ update_dates: ["2022-08-12"]
 ```console
 $ gcloud components install cloud-datastore-emulator
 ```
+ - メモリーエラーが発生する時
+   - 環境変数のJavaのメモリを増やす
+     - e.g. `export JAVA_TOOL_OPTIONS="-Xmx16g"`
 
 ### ローカルエミュレータの起動
 ```console
@@ -139,6 +143,30 @@ for _ in tqdm(range(10**5)):
     chrs = np.random.choice(list("1234567890"), size=3, replace=True)
     update_data(user="".join(chrs))
 ```
+
+---
+
+## 特定のプロパティをインデックスしない(デフォルトではすべてのプロパティがインデックスされる)
+ - 検索で使わないプロパティは除外しておくとディスク容量を削減できる
+
+```python
+task_key = client.key(kind, key) # キーを取得
+task = datastore.Entity(key=task_key, exclude_from_indexes=("data",)) # データのプロパティは除外する
+task["data"] = data # 値を入れる
+client.put(task) # 保存
+```
+ - 参考
+   - [インデックス/GoogleCloud](https://cloud.google.com/datastore/docs/concepts/indexes#unindexed_properties)
+
+---
+
+## トラブルシューティング
+
+### io.grpc.StatusRuntimeException: RESOURCE_EXHAUSTED: gRPC message exceeds maximum size ...と出てデータをやり取りできない
+ - 原因
+   - 読み書きのデータが大きすぎる
+ - 対応
+   - 一度にやり取りするデータを減らす
 
 ---
 
