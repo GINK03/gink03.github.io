@@ -71,3 +71,8 @@ $ curl https://us-central1-starry-lattice-256603.cloudfunctions.net/function-2/t
 team_id = 1
 ```
 
+---
+
+## 参考
+ - [Use multiple paths in Cloud Functions, Python and Flask/Google Cloud - Community](https://medium.com/google-cloud/use-multiple-paths-in-cloud-functions-python-and-flask-fc6780e560d3)
+ - [Using Flask Routing in GCP Function?/stack overflow](https://stackoverflow.com/questions/53488766/using-flask-routing-in-gcp-function/55576232#55576232)
