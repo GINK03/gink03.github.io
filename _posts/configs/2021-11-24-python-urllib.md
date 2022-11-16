@@ -16,6 +16,7 @@ update_dates: ["2022-05-20"]
 ## 概要
  - python3のURLハンドリングモジュール
  - urlのパラメータの組み立て、パース
+   - パースしたプロパティ(scheme, netloc, pathなど)にはメンバ変数としてアクセス可能
  - urlからのデータ取得を行える
 
 ## 具体例例
@@ -23,7 +24,7 @@ update_dates: ["2022-05-20"]
 ### urlを要素ごとに分ける
 
 ```python
-from urllib import poarse
+from urllib import parse
 x = parse.urlparse("https://news.yahoo.co.jp/something?a=b")
 display(x)
 # ParseResult(scheme='https', netloc='news.yahoo.co.jp', path='/something', params='', query='a=b', fragment='')
