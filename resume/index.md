@@ -56,6 +56,7 @@ Introductory in Japanese and in English are mixed.
      - [Google Cloud Professional Data Engineer](https://user-images.githubusercontent.com/4949982/111860752-0c9de300-898d-11eb-8bca-aa3f1713a1ab.png)
      - [Google Cloud Professional Machine Learning Engineer](https://user-images.githubusercontent.com/4949982/113427171-8ca55d80-940f-11eb-8ecb-8c6048bffee5.png)
    - **python**
+     - [PythonZen & PEP 8 検定試験](https://f004.backblazeb2.com/file/gimpeik/Images/Screenshot+2022-11-16+at+12.33.23.png)
      - [Pythonエンジニア認定/データ分析試験](https://user-images.githubusercontent.com/4949982/102969927-edccb380-4539-11eb-80c4-ae1f92a84267.png)
      - [Pythonエンジニア認定/基礎試験](https://user-images.githubusercontent.com/4949982/102303112-d1f76980-3f9d-11eb-923b-cb90165f8ef7.png) 
    - **oracle**
