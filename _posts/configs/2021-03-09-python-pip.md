@@ -61,6 +61,32 @@ for pkg_name in ["requests", "bs4", "loguru"]:
 $ pip install --upgrade --no-deps --force-reinstall <packagename>
 ```
 
+## `requirements.txt`と`constraints.txt`
+ - `requirements.txt`
+   - 必要なパッケージ
+   - バージョンは`package==x.y.z`と表現
+   - 指定しないと、最新版が使用される
+   - 範囲指定は`package<X.Y.Z,>=x.y.z`と表現する
+ - `constraints.txt`
+   - サブパッケージ
+   - `requirements.txt`より優先される
+   - 複数のプロジェクトで共用するなどを想定されているファイル
+     - 複数間のプロジェクトで同じバージョンを維持したい時
+
+## pip freeze
+ -  今、インストールされているパッケージをバージョン情報を付与してstdoutに出力
+
+```console
+$ pip freeze | less
+apt-xapian-index==0.49
+apturl==0.5.2
+argon2-cffi==21.3.0
+argon2-cffi-bindings==21.2.0
+...
+```
+
+---
+
 ## トラブルシューティング
 
 ### OSX(mac)でpipでインストールしたはずの実行ファイルが見つからない
