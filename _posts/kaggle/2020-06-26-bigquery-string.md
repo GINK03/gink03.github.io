@@ -2,7 +2,7 @@
 layout: post
 title: "bigquery string"
 date: 2020-06-26
-excerpt: "bigquery stringのチートシート"
+excerpt: "bigqueryの文字列関連のチートシート"
 tags: ["bq", "bigquery", "gcp"]
 kaggle: true
 comments: false
@@ -10,7 +10,7 @@ sort_key: "2022-09-09"
 update_dates: ["2022-09-09"]
 ---
 
-# bigquery stringのチートシート
+# bigqueryの文字列関連のチートシート
 
 ## LOWER
 
@@ -49,6 +49,13 @@ SELECT CONCAT('T.P.', ' ', 'Bar') as author;
 +---------------------+
 ```
 
+## REGEXP_CONTAINS
+ - 正規表現にマッチしたらどうかという真偽値を返す
+
+```sql
+SELECT REGEXP_CONTAINS("ポケモンゲットだぜ", "(ゲットだぜ)")  -- true
+```
+
 ## REGEXP_EXTRACT, REGEXP_EXTRACT_ALL
  - 正規表現で一致した内容をパースする
  - `REGEXP_EXTRACT_ALL`はすべてパースする(nestしたレコードになるので、最終的にUNNESTの操作が必要)
@@ -67,6 +74,15 @@ FROM UNNEST([
   ("例夫", "reio@yahoo.com", 10),
   ("例ちゃん", "reichan@aol.com", 15)
 ])
+```
+
+## REGEXP_REPLACE
+ - マッチした部分を別の文字に置き換える
+ - REPLACE関数だと何度もネストする必要があるような場合に簡潔に記せる
+
+```sql
+SELECT
+  REGEXP_REPLACE(text, r"^prefix1|^prefix2|^prefix3", "") as text
 ```
 
 ---
