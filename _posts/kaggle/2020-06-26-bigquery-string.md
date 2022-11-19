@@ -49,6 +49,26 @@ SELECT CONCAT('T.P.', ' ', 'Bar') as author;
 +---------------------+
 ```
 
+## REGEXP_EXTRACT, REGEXP_EXTRACT_ALL
+ - 正規表現で一致した内容をパースする
+ - `REGEXP_EXTRACT_ALL`はすべてパースする(nestしたレコードになるので、最終的にUNNESTの操作が必要)
+
+**具体例**
+```sql
+SELECT
+  id,
+  name,
+  email,
+  REGEXP_EXTRACT(email, r"^([a-zA-Z0-9]{1,})@") as email_prefix, -- emailのプレフィックスにマッチする
+FROM UNNEST([
+  STRUCT("abc" AS name, "abc@google.com" as email, 1 AS id),
+  ("abcd", "abc@microsoft.com", 2),
+  ("例子", "reiko@google.com", 4),
+  ("例夫", "reio@yahoo.com", 10),
+  ("例ちゃん", "reichan@aol.com", 15)
+])
+```
+
 ---
 
 ## 参考
