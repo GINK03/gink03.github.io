@@ -1,6 +1,6 @@
 ---
 layout: post
-title:"bigquery python"
+title: "bigquery python"
 date: 2022-09-20
 excerpt: "bigquery pythonのチートシート"
 tags: ["bq", "bigquery", "gcp"]

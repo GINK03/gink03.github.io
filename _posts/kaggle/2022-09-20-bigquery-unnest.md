@@ -1,6 +1,6 @@
 ---
 layout: post
-title:"bigquery unnest"
+title: "bigquery unnest"
 date: 2022-09-20
 excerpt: "bigquery unnestのチートシート"
 tags: ["bq", "bigquery", "gcp"]

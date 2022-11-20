@@ -1,6 +1,6 @@
 ---
 layout: post
-title:"bigquery cli"
+title: "bigquery cli"
 date: 2022-09-20
 excerpt: "bigquery cliのチートシート"
 tags: ["bq", "bigquery", "gcp"]
