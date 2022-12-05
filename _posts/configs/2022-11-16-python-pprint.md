@@ -20,6 +20,7 @@ update_dates: ["2022-11-16"]
 ## 具体例
 
 ```python
+import pprint
 import numpy as np
 import pandas as pd
 
