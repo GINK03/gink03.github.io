@@ -14,7 +14,7 @@ update_dates: ["2021-06-05","2021-06-03","2021-05-31"]
 
 
 ## accumulate
-累積和を得る(numpyには累積積もある)  
+ - 累積和を得る(numpyには累積積もある)  
 
 ```python
 import itertools
@@ -33,7 +33,7 @@ print(*ptns) # (1, 3) (1, 5) (3, 5)
 ```
 
 ## combinations_with_replacement
-重複を許可する  
+ - 重複を許可したコンビネーション
 
 ```python
 import itertools
@@ -53,8 +53,7 @@ print(*ptns) # (1, 3) (1, 5) (3, 1) (3, 5) (5, 1) (5, 3)
 ```
 
 ## product
-
-repeatを用いる例  
+ - repeatを用いる例  
 
 ```python
 import itertools
@@ -63,8 +62,8 @@ ptns = itertools.product(arr, repeat=2)
 print(*ptns) # (1, 1) (1, 3) (1, 5) (3, 1) (3, 3) (3, 5) (5, 1) (5, 3) (5, 5)
 ```
 
-複数の要素をクロスさせる例  
-for文のネストをflattenできるので便利
+ - 複数の要素をクロスさせる例  
+ - for文のネストをflattenできるので便利
 
 ```python
 import itertools
@@ -73,8 +72,8 @@ print(*ptns) # (1, 'a', True) (1, 'a', False) (1, 'b', True) (1, 'b', False) (2,
 ```
 
 ## groupby
-pandasのgroupbyなどとは異なる挙動なので注意  
-連続するグループごとに集計することができる  
+ - pandasのgroupbyなどとは異なる挙動なので注意  
+ - 連続するグループごとに集計することができる  
 
 ```python
 bin_lst = [random.choice([0, 1]) for i in range(20)]
@@ -91,7 +90,7 @@ for gk, viter in itertools.groupby(bin_lst):
 ```
 
 ## count
-カウンター付き無限ループ
+ - カウンター付き無限ループ
 
 ```python
 import itertools
@@ -110,10 +109,26 @@ for i in itertools.repeat(11, 3):
 ```
 
 ## starmap
-mapの複数引数版  
+ - mapの複数引数版  
 
 ```python
 import itertools
 print(*itertools.starmap(lambda l,m,r: l**m + r, [(2,2, 1), (2,3, 0), (3,3, 0)])) # 5 8 27
 # print(*map(lambda l,r: l**r, [(2,2), (2,3), (3,3)])) -> mapは引数を一個のみ
 ```
+
+## zip_longest
+ - 長い方に合わせたzip
+ - 短いほうが不足する場合、埋める値を指定できる
+
+```python
+import itertools
+def solve(v1, v2):
+    lst = []
+    for a1, a2 in itertools.zip_longest(v1, v2, fillvalue=None):
+        lst.append((a1, a2))
+    return lst
+
+print(solve([1, 2], [3,4,5,6])) # [(1, 3), (2, 4), (None, 5), (None, 6)]
+```
+
