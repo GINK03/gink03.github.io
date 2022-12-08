@@ -15,10 +15,14 @@ Introductory in Japanese and in English are mixed.
 
 
 ### 【PROFESSIONAL EXPERIENXE in 個人事業主】2020/12 ~
- - 機械学習を用いた適切な資産運用を行うモデルの開発と検証
+ - [youtrust.jp](https://lp.youtrust.jp/)にて、企業様へSNS会員をレコメンドするモデル・システムの開発
  - ライブ配信サービスにて、作成されたモデルのKPIの検証と、新規KPIの策定
+ - 機械学習を用いた適切な資産運用を行うモデルの開発と検証
 
 ### 【PROFESSIONAL EXPERIENCE in DeNA】2018/04 ~
+ - マーケティング事業にて、Marketing Mix Modelingを使用した、KPI推論
+ - マーケティング事業にて、GPTを使用したテキストクリエイティブの自動生成
+ - マーケティング事業にて、機械学習を用いたTwitterの広告の最適化
  - オートモーティブ事業にて、車の特定の運用に関わる時間を推定するモデルの構築とシステム化
  - ライブ配信サービスにて、レコメンドモデルのEDA、構築、運用の経験
  - Developed a system that can predict ticket number of amount in Yokohama-DeNA Baysters.
@@ -42,6 +46,8 @@ Introductory in Japanese and in English are mixed.
  - Developed recommendation engine which serve correct ad-items for each users.
  - Developed detection system, can know which user has high attention to his ad or not.
 
+## In vitro presentation/体外発表
+ - [CEDEC 2022](https://cedec.cesa.or.jp/2022)
 
 ## Qualifications/Certifications
  - ***Qualifications(資格)***
