@@ -76,6 +76,17 @@ df["tz_native"] = df["tz_aware"].dt.tz_localize(None)
 
 ---
 
+## `NaT`をハンドルする
+ - pandas.Seriesか要素のオブジェクトに対して適応可能
+
+```python
+max_ts = df["ts"].max() # NaTがmax_tsに入ることがある
+if pd.notna(max_ts):
+  # do something...
+```
+
+---
+
 ### Series.dt.floor 
  - 概要
    - 時間情報を荒い粒度に変換する
