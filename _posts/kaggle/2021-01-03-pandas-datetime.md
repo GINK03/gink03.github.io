@@ -68,6 +68,7 @@ df["ts"] = pd.DatetimeIndex(df["ts"]).tz_convert("Asia/Tokyo")
 
 ## `tz aware`のデータを`tz native`にする
  - `tz aware`のデータと`tz native`のデータは比較することができないので、どちらかをどちらかに寄せる必要がある
+ - BigQueryから取得したデータがJSTなのに`+00:00`のサフィックスが付いており、システム的に、utc awareとみなされてしまっているケースなどがあり、その場合に適応
 
 ```python
 df["tz_native"] = df["tz_aware"].dt.tz_localize(None)
@@ -79,11 +80,13 @@ df["tz_native"] = df["tz_aware"].dt.tz_localize(None)
  - 概要
    - 時間情報を荒い粒度に変換する
    - 変換は切り捨て
+   - BigQueryのTRUNC関数のイメージ
  - Google Colab
    - [pandas-dt-floor-example](https://colab.research.google.com/drive/1JGGaV1wDt-7w2bwDAQEjwus22ns7ZB_B?usp=sharing)
 
 ```python
 df = pd.DataFrame()
+df["ts"] = df["ts"].dt.floor("5H") # 5分区切りにする
 
 df["day"] = [ datetime.datetime.now() - datetime.timedelta(days=i) for i in range(100) ]
 df["floored"] = df["day"].dt.floor("7D") # 一週間区切りにする
@@ -155,3 +158,8 @@ index	datetime	YYYY_W	range
 9	2100-01-11 00:00:00	2100_02	2100-01-11 ~ 2100-01-17
 """
 ```
+
+---
+
+## 参考
+ - [pandas.Timestamp.floor/pandas.pydata.org](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Timestamp.floor.html)
