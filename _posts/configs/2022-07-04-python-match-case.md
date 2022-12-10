@@ -18,8 +18,9 @@ update_dates: ["2022-07-04"]
    - vimなどのシンタックスハイライトや構文解析器が対応していないことがある
  - if文を書くと大変なので、C++のswtich文の様に書ける方法
  - 値を変数にキャプチャすることもできる
+ - caseステートメントでif文を書くこともできる
 
-## 具体例
+## 具体例(値の一致の判定と、値の変数へのキャプチャ)
 
 ```python
 def check(point):
@@ -46,6 +47,22 @@ if __name__ == "__main__":
     check((20, 10)) # orでのマッチ
     check((10, 10)) # X=a, Y=b
     check(("a", "b", "c")) # 例外
+```
+
+### 具体例(caseでifを使う)
+ - ラムダ式の条件判定を書くことでcaseにif判定を入れることができる
+ - 例では奇数のみを表示する例
+
+```python
+def looper():
+    for i in range(100):
+        match i:
+            case i if i%2 == 0:
+                continue
+            case _:
+                pass
+        print(i)
+looper()
 ```
 
 ## 参考
