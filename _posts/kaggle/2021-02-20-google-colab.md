@@ -142,3 +142,8 @@ files.download("filename.csv") # ダウンロード
 ### インターネット上の全員に公開
  - `[共有]` -> `[リンクを取得]` -> `[変更]から"リンクを知っている全員"を選択` -> `[完了]`
    - コメントや提案はフィードバックされるらしい
+
+---
+
+## 参考
+ - [Colab でデータを探索する/Google Cloud](https://cloud.google.com/bigquery/docs/explore-data-colab)
