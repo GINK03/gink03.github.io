@@ -20,6 +20,7 @@ update_dates: ["2022-11-26"]
    - おそらく実装はB-tree
    - 二分探索をサポート
  - `add`, `remove`の速度が二分探索なので十分に早い
+ - 自分で類似のデータ構造を実装しようとすると大変
 
 ## インストール
 
@@ -39,6 +40,8 @@ assert list(slst) == sorted(lst)
 
 assert(slst.bisect_left(5) == 2)
 assert(slst.bisect_right(5) == 4)
+
+slst.add(10) # 値の追加
 ```
 
 ## SortedDictの具体例
