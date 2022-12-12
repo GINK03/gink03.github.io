@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "python assignment expressions"
+title: "python walrus operator(assignment expressions)"
 date: "2022-07-04"
-excerpt: "python assignment expressionsの使い方"
+excerpt: "python walrus operator(assignment expressions)の使い方"
 project: false
 config: true
 tag: ["python", "assignment expressions", "walrus operator", "ウォルラス演算子"]
@@ -11,20 +11,35 @@ sort_key: "2022-07-04"
 update_dates: ["2022-07-04"]
 ---
 
-# python assignment expressionsの使い方
+# python walrus operator(assignment expressions)の使い方
 
 ## 概要
  - python 3.8から導入された`:=`という演算子
    - ウォルラス演算子と呼ばれる
- - 変数に束縛を行いつつ、評価をするということができる
+ - 変数に束縛を行いつつ、値を返すということができる
 
 ## 具体例
+
+### if文で値を評価しつつ、変数に代入する
 
 ```python
 if match := re.match(pattern, text):
     print(match)
 ```
  - `match`という変数をifの上で作る必要がない
+
+### リスト内包表記で値を変更しながら、変更した値を得る
+
+```python
+nums = [0, 1, 2, 3, 4]
+
+total = 0
+sum_list = [total := total + i for i in nums]
+
+assert(sum_list == [0, 1, 3, 6, 10])
+```
+
+### iteratorから値を取り出す
 
 ```python
 while line := getstream():
