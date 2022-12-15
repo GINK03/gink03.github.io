@@ -172,5 +172,14 @@ index	datetime	YYYY_W	range
 
 ---
 
+## 時間、WeekOfDayなど特定の情報を取り出す
+
+```python
+df["hour"] = df["datetime"].dt.hour
+df["dow"] = df["datetime"].dt.day_of_week
+```
+
+---
+
 ## 参考
  - [pandas.Timestamp.floor/pandas.pydata.org](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Timestamp.floor.html)
