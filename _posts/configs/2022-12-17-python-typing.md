@@ -1,0 +1,47 @@
+---
+layout: post
+title: "python typing"
+date: 2022-12-17
+excerpt: "pythonのtyping"
+tags: ["python", "python3", "typing"]
+config: true
+comments: false
+sort_key: "2022-12-17"
+update_dates: ["2022-12-17"]
+---
+
+# pythonのtyping
+
+## 概要
+ - python3の特定のバージョンから導入された型アノテーション
+ - vscodeやpyrightなどのチェックツールで静的チェックができるようになる
+
+## Union型
+ - `python3.10`から`|`でUnionを指定できる
+ - Unionとは`いずれかの型`ということ
+ - 例では`List[int]`か`pd.Series`を入力で期待する場合
+
+```python
+from typing import List
+
+def function(value: List[int] | pd.Series):
+    pass
+```
+
+## Optional型
+ - よくあるデザインパターンの一種
+ - 例外を用いないで失敗したら`None`を返すなどのパターン
+
+```python
+from typing import Optional
+
+def function(value: int) -> Optional[int]:
+    if value == 0:
+        return None
+    return 10.0/value
+```
+
+---
+
+## 参考
+ - [typing — Support for type hints/docs.python.org](https://docs.python.org/3/library/typing.html)
