@@ -78,3 +78,18 @@ except requests.exceptions.Timeout as exc:
 ## マルチプロセスでrequestsを動作させるTIPS
  - マルチプロセスのスケジューラかrequestsの動作の不安定さかの影響で、1リクエストに1プロセスを割り当ててしまうとハングアップしてしまう
  - urlのチャンクを作ってチャンクをプロセスに割り当てるというスタイルを取ると安定する
+
+## streamで情報を取得する
+ - twitter apiのstream sampleを利用する例
+
+```python
+url = "https://api.twitter.com/2/tweets/sample/stream"
+bearer_oauth = "..."
+
+r = requests.request("GET", url, auth=bearer_oauth, stream=True)
+for line in r.iter_lines():
+    if line:
+        json_response = json.loads(line)
+        print(json.dumps(json_response, indent=4, sort_keys=True))
+```
+
