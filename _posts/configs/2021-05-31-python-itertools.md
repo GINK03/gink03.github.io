@@ -89,6 +89,21 @@ for gk, viter in itertools.groupby(bin_lst):
 # 1 [1]
 ```
 
+**keyを指定する場合**
+
+```python
+import itertools
+data = [(0, "a"), (0, "b"), (1, "c"), (1, "d"), (0, "e")]
+
+for grp_key, iters in itertools.groupby(data, key=lambda x:x[0]):
+    print(grp_key, list(iters))
+"""
+0 [(0, 'a'), (0, 'b')]
+1 [(1, 'c'), (1, 'd')]
+0 [(0, 'e')]
+"""
+```
+
 ## count
  - カウンター付き無限ループ
 
