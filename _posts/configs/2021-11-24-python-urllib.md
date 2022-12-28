@@ -31,12 +31,15 @@ display(x)
 ```
 
 ### パースした一部の要素を変更する
+ - 例ではURLからパラメータを削除している
 
 ```python
 x = parse.urlparse("https://news.yahoo.co.jp/something?a=b")
-x._replace(scheme="http")
+x = x._replace(params='')
 display(x)
-# ParseResult(scheme='http', netloc='news.yahoo.co.jp', path='/something', params='', query='a=b', fragment='')
+# ParseResult(scheme='https', netloc='news.yahoo.co.jp', path='/something', params='', query='a=b', fragment='')
+display(x.geturl())
+# http://news.yahoo.co.jp/something
 ```
 
 ### パースしたオブジェクトからstr型のURLを得る
