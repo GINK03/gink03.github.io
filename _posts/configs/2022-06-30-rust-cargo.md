@@ -39,12 +39,13 @@ $ cargo build
 $ cargo run
 ```
 
-### プロジェクトのインストール
+### プロジェクト(オンラインの公式レポジトリ含む)のインストール
 
 ```console
 $ cargo install <project-name>
 ```
  - デフォルトでは`$HOME/.cargo/bin`にインストールされる
+ - cargoにはupgradeコマンドが無く、`cargo install ...`を行うとオンラインの公式レポジトリのビルドをupgradeできる
 
 ---
 
