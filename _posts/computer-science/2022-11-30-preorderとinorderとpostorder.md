@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "二分木のinorderとpreorder"
+title: "inorderとpreorderとpostorder"
 date: 2022-11-30
-excerpt: "二分木のinorderとpreorderについて"
+excerpt: "inorderとpreorderとpostorderについて"
 computer_science: true
 tag: ["algorithm", "data structure", "データ構造", "bst", "binary search tree", "二分木", "二分探索木"]
 comments: false
@@ -10,17 +10,19 @@ sort_key: "2022-11-30"
 update_dates: ["2022-11-30"]
 ---
 
-# 二分木のinorderとpreorderについて
+# inorderとpreorderとpostorderについて
 
 ## 概要
- - 二分木(特に二分探索木)で、nodeの値を検索順序によって`inorder`と`preorder`がある
- - `preorder`はノードからたどった順
+ - dfsの記録順序によって`inorder`と`preorder`と`postorder`がある
+ - `preorder`は事前にスキャン
    - `Node -> Left -> Right`
- - `inorder`はLeftをスキャンしてからRightをスキャンする順
+ - (二分木の場合)`inorder`はLeftをスキャンしてからRightをスキャンする順
    - `Left -> Node -> Right`
+ - `postoder`は戻りがけのスキャン
+   - オイラー路(一筆書きの経路)を記録するときなど
  - 二分探索木は一般的なデータの入れ方であれば、左に小さい値が入っているので、`inorder`でデータを取得すれば昇順で結果を得られる
 
-## 具体的な実装
+## 二分木の具体的な実装
  
 **ノード**
 ```python
