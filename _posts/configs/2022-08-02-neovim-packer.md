@@ -14,6 +14,7 @@ update_dates: ["2022-08-02"]
 
 ## 概要
  - neovim専用のパッケージマネージャ(vimでは動作しない)
+ - `:PakcerSync`ではgithubのコミットハッシュを監視しているので、force pushされたレポジトリがあるとエラーになる
 
 ## インストール
 
@@ -43,6 +44,18 @@ end)
    - アップデートしてインストール
  - `:PackerSync`
    - `:PackerUpdate`して`:PackerCompile`する
+
+---
+
+## トラブルシューティング
+
+### `:PackerSync`でエラーがでてアップデートできない
+ - 原因
+   - 参照しているライブラリのgitがforce pushされたなどで不整合が起きた
+ - 対応
+   - `.local/share/nvim/site/pack/packer/<packege-name>`を削除して再度`:PackerSync`を行う
+
+---
 
 ## 参考
  - [wbthomason/packer.nvim](https://github.com/wbthomason/packer.nvim)
