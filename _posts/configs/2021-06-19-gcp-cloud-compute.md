@@ -1,16 +1,23 @@
 ---
 layout: post
-title: "gcp cloud compute engine"
+title: "gcp cloud compute"
 date: 2021-06-19
-excerpt: "gcp cloud compute engineについて"
-tags: ["cloud compute engine", "gcp"]
+excerpt: "gcp cloud computeについて"
+tags: ["cloud compute", "gcp"]
 config: true
 comments: false
 sort_key: "2021-06-19"
 update_dates: ["2021-06-19","2021-06-19"]
 ---
 
-# cloud compute engineについて
+# cloud computeについて
+
+## 概要
+ - GCPのvm
+ - Linuxを使用する場合、ユーザはユーザ名が含まれた公開鍵を以下に登録することで自動的に作成される
+   - [Metadata/Google Cloud](https://console.cloud.google.com/compute/metadata)
+
+## 基本的な操作
 
 ### computeインスタンスの一覧を表示
 
