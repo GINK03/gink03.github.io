@@ -44,6 +44,8 @@ pd.Series([1,2,2,3]).rank(method="average")
 ```
 
 ### first
+ - 同じ値であれば最初に出現したレコードが高い順位になる
+ - トータルで100%にしたいときなどがユースケースになる
 
 ```python
 pd.Series([1,2,2,3]).rank(method="first")
@@ -52,6 +54,10 @@ pd.Series([1,2,2,3]).rank(method="first")
 2    3.0
 3    4.0
 ```
+
+## `pct(percentile)`オプション
+ - `0.0 ~ 1.0`に圧縮するオプション
+ - `method="first"`と組み合わせると、`0.0 ~ 1.0`に埋め込める
 
 ## 参考
  - [pandas.DataFrame.rank¶](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rank.html)
