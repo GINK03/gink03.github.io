@@ -47,7 +47,9 @@ table_ida = "any_bucket.target_table01"
 df.to_gbq(table_id, project_id=project_id, if_exists="replace")
 ```
 
-## クレデンシャル(サービスアカウントの認証情報)を用いて初期化する
+## 認証
+
+### クレデンシャル(サービスアカウントの認証情報)を用いて初期化する
  - AWSでbigqueryにアクセスするときなどに必要な措置
  - `google.oauth2`には以下のライブラリが必要
    - `google-api-python-client google-auth-httplib2 google-auth-oauthlib`
@@ -61,7 +63,7 @@ pandas_gbq.context.credentials = (
 )
 ```
 
-## 対話式のUIでクレデンシャルを初期化する
+### 対話式のUIでクレデンシャルを初期化する
  - ユースケース
    - キャッシュに保存されたクレデンシャルを再設定したい時
    - 明示的に、driveのスコープを有効化する時
@@ -80,7 +82,7 @@ credentials = pydata_google_auth.get_user_credentials(
 pd.read_gbq(query, projectid, dialect='standard', use_bqstorage_api=True, credentials=credentials)
 ```
 
-## キャッシュされたユーザ認証のクレデンシャルを明示的に使う
+### キャッシュされたユーザ認証のクレデンシャルを明示的に使う
 
 ```python
 from pathlib import Path
@@ -96,12 +98,18 @@ df = pd.read_gbq(query, projectid, dialect="standard", credentials=credentials, 
 ```
  - 自動で優先される`GOOGLE_APPLICATION_CREDENTIALS`が設定されてしまっているときなどに有効
 
-## dockerのコンテナと認証情報を共有する
+### dockerのコンテナと認証情報を共有する
  - dockerでpandas_gbqを使用している際に、クレデンシャルをローカルと共有し、テストを通すために必要
 
 ```console
 $ docker run -v ~/.config/pandas_gbq/:/root/.config/pandas_gbq -it <container-name>
 ```
+
+## `use_bqstorage_api`オプションについて
+ - このオプションを有効化するとダウンロードが高速化する
+ - `bqstorage`の機能を使うには `bigquery.readsessions.create`, `bigquery.readsessions.getData`, `bigquery.readsessions.update`の権限がIAMに設定されている必要がある
+
+---
 
 ## トラブルシューティング
 
