@@ -93,3 +93,13 @@ for line in r.iter_lines():
         print(json.dumps(json_response, indent=4, sort_keys=True))
 ```
 
+## form submitをpostで再現する
+ - シングルページの設計のサイトでポストでデータを送ることでコンテンツを変更する場合、formのデータをpostで送ることで再現できる
+ - Google Chromeで事前になんの情報を送信するか調べておく
+
+```python
+# postでpageFlg, page, order, limitの情報を送ってコンテンツを描画する仕様
+with requests.post("https://xxx.xxx/index.php", data={"pageFlg": "1", "page": "1", "order": "1", "limit": "1000"}) as r:
+    text = r.text
+```
+
