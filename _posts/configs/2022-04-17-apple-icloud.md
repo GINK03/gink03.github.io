@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "apple icloud"
+title: "apple iCloud"
 date: 2021-04-17
-excerpt: "apple icloudについて"
+excerpt: "apple iCloudについて"
 tags: ["apple", "ios", "macOS", "support", "icloud"]
 config: true
 comments: false
@@ -10,12 +10,12 @@ sort_key: "2022-05-10"
 update_dates: ["2022-05-10","2022-04-17"]
 ---
 
-# apple icloudについて
+# apple iCloudについて
 
 ## 概要
  - Apple社が提供するクラウドサービス
  - GoogleやMSのものに比べてバグが多い印象
- - macOSでは深い箇所にpathが設定されているのでシンボリックリンクを貼っておいたほうが利便性が高い
+ - iCloud DriveはmacOSでは深い箇所にpathが設定されているのでシンボリックリンクを貼っておいたほうが利便性が高い
 
 ## iCloud Driveのシンボリックリンクを作成する
 
@@ -47,5 +47,15 @@ $ ln -s "$HOME/Library/Mobile Documents/com~apple~CloudDocs/" ~/iCloudDrive
    - かっこいいメールアドレスが取得できる可能性が高いが、メールフィルタがgmailほど賢くない
    - gmailに全転送して使うのが現実的
 
+## iCloud リンク
+ - 概要
+   - 30日間有効なアクセスリンクを提供する
+   - AirDropが使えないときの代替手段として使える
+ - 使用法
+   - `共有ボタン`を選択
+   - `iCloud リンクをコピー`を選択
+   - リンクアドレスをe-mailなどで共有
+
 ## 参考
- - [mac iCloudフォルダパス| ターミナルコマンドでiCloudファイルへ移動する方法](https://qiita.com/thinkalot/items/246ec53804d907950e23)
+ - [mac iCloudフォルダパス| ターミナルコマンドでiCloudファイルへ移動する方法/qiita](https://qiita.com/thinkalot/items/246ec53804d907950e23)
+ - [iCloud.comでiCloudのリンクを使って写真とビデオを共有する/support.apple.com](https://support.apple.com/ja-jp/guide/icloud/mm93a9b98683/icloud)
