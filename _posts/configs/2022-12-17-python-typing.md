@@ -41,6 +41,12 @@ def function(value: int) -> Optional[int]:
     return 10.0/value
 ```
 
+## Dict型とその派生
+ - 以下のものが存在する
+   - `typing.Dict`
+   - `typing.DefaultDict`
+   - `typing.OrderedDict`
+
 ---
 
 ## 参考
