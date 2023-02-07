@@ -52,5 +52,19 @@ for word in words:
     node[WORD_KEY] = word
 ```
 
+## typingの応用
+ - `dict`, `defaultdict`ともに専用のタイピングが用意されている
+   - それぞれに応じた型ヒントを与えれば良い
+
+```python
+from typing import Dict, DefaultDict
+import collections
+
+nd: Dict = dict()
+dd: DefaultDict = collections.defaultdict(int)
+```
+
+---
+
 ## 参考
  - [212. Word Search II/LeetCode](https://leetcode.com/problems/word-search-ii/)
