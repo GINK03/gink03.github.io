@@ -22,7 +22,7 @@ update_dates: ["2023-02-09"]
 ```python
 from scipy.stats import norm
 
-prob = norm(<observed_x>, loc=<mean>, scale=<std>)
+prob = norm.pdf(<observed_x>, loc=<mean>, scale=<std>)
 ```
 
 ---
