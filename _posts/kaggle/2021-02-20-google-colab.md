@@ -24,6 +24,9 @@ update_dates: ["2022-04-05","2022-04-05","2021-05-30","2021-05-30"]
  - GPUが無料で使える
 
 ## 注意すべき点
+ - デフォルトでは少し古いバージョンのpythonがインストールされている
+   - `match case`など最新の文法が使えないことがある
+ - [/pandas-gbq/](/pandas-gbq/)の認証方法が異なる
  - terminalが無料版では使えない
    - 有料のproでは使える
  - 数分でセッションがリセットされる
@@ -60,6 +63,22 @@ print('All changes made in this colab session should now be visible in Drive.')
 **google driveにパッケージをインストールする**
 ```python
 !pip install ${PKG} -t "/content/drive/MyDrive/colab/libs" 2>&1 > /dev/null
+```
+
+## pandas-gbqの認証を行う
+ - local jupyterとの違い
+   - `import pydata_google_auth`で明示的にクレデンシャルを取り出す必要なはない
+   - `from google.colab import auth`を使用する 
+
+```python
+from google.colab import auth
+auth.authenticate_user()
+
+query = """
+...
+"""
+projectid = '<your-project>'
+df = pd.read_gbq(query, projectid, dialect='standard', use_bqstorage_api=True,)
 ```
 
 ## BigQueryにクエリを送り、pandas dataframeを取得する
