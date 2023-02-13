@@ -56,6 +56,7 @@ for pkg_name in ["requests", "bs4", "loguru"]:
 
 ## 依存を無視してインストール
  - グローバル環境がおかしくなるリスクがあるので、使う必要がある場合はpoetryなどで環境を分ける
+ - 強制インストールのユースケース以外では、colabで使用する際に現在のpandas, numpyの整合性を壊さないなどのユースケースもある
 
 ```console
 $ pip install --upgrade --no-deps --force-reinstall <packagename>
@@ -72,6 +73,12 @@ $ pip install --upgrade --no-deps --force-reinstall <packagename>
    - `requirements.txt`より優先される
    - 複数のプロジェクトで共用するなどを想定されているファイル
      - 複数間のプロジェクトで同じバージョンを維持したい時
+
+## 指定のpythonのバージョンを無視してインストール
+
+```console
+$ pip install --ignore-requires-python <packagename>
+```
 
 ## pip freeze
  -  今、インストールされているパッケージをバージョン情報を付与してstdoutに出力
