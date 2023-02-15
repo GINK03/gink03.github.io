@@ -80,6 +80,14 @@ $ pip install --upgrade --no-deps --force-reinstall <packagename>
 $ pip install --ignore-requires-python <packagename>
 ```
 
+## 特定のgithubのブランチからインストール
+ - URLの前に`git+`のプレフィックスが必要
+ - `@<branch-name>`のサフィックスが必要
+
+```console
+$ python3 -m pip install git+https://github.com/Garve/mamimo.git@main
+```
+
 ## pip freeze
  -  今、インストールされているパッケージをバージョン情報を付与してstdoutに出力
 
