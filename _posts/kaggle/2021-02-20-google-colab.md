@@ -47,12 +47,20 @@ pd.DataFrame.query = partialmethod(pd.DataFrame.query, engine="python")
 ```
 
 ## Google Driveのマウント
+ - csvの出力先をGoogle Driveに設定すればGoogle Sheetsですぐ開くことができ、便利
+ - 例ではマウントパスを`/content/drive`としているが、実際にマウントされるのは`/content/drive/MyDrive`になる
 
 **マウント**
 ```python
 from google.colab import drive
 drive.mount('/content/drive')
 ```
+
+**csvをGoogle Driveに保存して、Google Sheetsで開く**
+```python
+df.to_csv('/content/drive/MyDrive/<filename.csv>', index=False)
+```
+ - Google Driveを開き(https://drive.google.com/drive/u/2/searchなど)、ファイル名で検索し、Google Sheetsで開く
 
 **明示的に同期する**
 ```python
@@ -69,6 +77,8 @@ print('All changes made in this colab session should now be visible in Drive.')
  - local jupyterとの違い
    - `import pydata_google_auth`で明示的にクレデンシャルを取り出す必要なはない
    - `from google.colab import auth`を使用する 
+ - Googleアカウントとの関連
+   - Google Colabを動作させているアカウントと、認証しているアカウントの権限が一致していないとエラーが発生し正しく動作しない
 
 ```python
 from google.colab import auth
