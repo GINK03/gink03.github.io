@@ -49,6 +49,8 @@ pd.DataFrame.query = partialmethod(pd.DataFrame.query, engine="python")
 ## Google Driveのマウント
  - csvの出力先をGoogle Driveに設定すればGoogle Sheetsですぐ開くことができ、便利
  - 例ではマウントパスを`/content/drive`としているが、実際にマウントされるのは`/content/drive/MyDrive`になる
+   - 共有ドライブは`/content/drive/Shareddrives`になる
+   - 共通で使用するデータソース・ライブラリを等を置いておくなどの使い方も可能
 
 **マウント**
 ```python
@@ -71,6 +73,20 @@ print('All changes made in this colab session should now be visible in Drive.')
 **google driveにパッケージをインストールする**
 ```python
 !pip install ${PKG} -t "/content/drive/MyDrive/colab/libs" 2>&1 > /dev/null
+```
+
+**shareddrivesに置いたライブラリをインストールする**
+```python
+from pathlib import Path
+import os
+from google.colab import drive
+
+drive.mount('/content/drive', force_remount=True)
+if Path('/content/drive/Shareddrives/XXX/YYY.zip').exists():
+  os.system("python3 -m pip install /content/drive/Shareddrives/XXX/YYY.zip --ignore-requires-python --no-deps")
+  print('インストールが完了しました')
+else:
+  raise Exception("YYYライブラリが見つかりませんでした")
 ```
 
 ## pandas-gbqの認証を行う
