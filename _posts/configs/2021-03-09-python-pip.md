@@ -15,6 +15,11 @@ update_dates: ["2022-04-15","2022-01-02","2021-11-01","2021-10-27","2021-03-09"]
 ## 概要
  - pythonのパッケージマネージャ
  - よりロバストに管理したい場合は、poetryが用いられる
+   - poetry形式で管理されたモジュールやライブラリでもpipでインストールできる
+ - インストール可能な対象は以下の通り
+   - pypiで管理されたパッケージ
+   - gitで管理されたパッケージ
+   - zip形式のパッケージ
 
 ## rootとuser
  
@@ -86,6 +91,13 @@ $ pip install --ignore-requires-python <packagename>
 
 ```console
 $ python3 -m pip install git+https://github.com/Garve/mamimo.git@main
+```
+
+## zip形式のパッケージをインストール
+ - google colabなどで社内開発したパッケージを利用したい場合など、google driveにzipで置いてインストール可能
+
+```console
+$ python3 -m pip install ./<path-to-zipped-library.zip>
 ```
 
 ## pip freeze
