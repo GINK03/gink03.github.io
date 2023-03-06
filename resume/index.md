@@ -47,6 +47,7 @@ Introductory in Japanese and in English are mixed.
  - Developed detection system, can know which user has high attention to his ad or not.
 
 ## In vitro presentation/体外発表
+ - [AIによるテキストクリエイティブの自動生成/TechCon 2023](https://techcon2023.dena.dev/session/session10/)
  - [CEDEC 2022](https://cedec.cesa.or.jp/2022)
 
 ## Qualifications/Certifications
