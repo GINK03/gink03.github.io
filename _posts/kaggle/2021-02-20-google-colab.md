@@ -36,6 +36,18 @@ update_dates: ["2022-04-05","2022-04-05","2021-05-30","2021-05-30"]
    - iframeで情報をやり取りしているためらしい
  - pandasのquery関数がengineを指定しないと動作しない
 
+## google colabかjupyter notebookなのかをコードベースで判別する
+ - google colabにしかない環境変数を参考にすることで分岐できる
+ - `os.environ`で確認できる
+   - `COLAB_RELEASE_TAG`などが判別条件として使える
+
+```python
+if "COLAB_RELEASE_TAG" in os.environ:
+    print("google colabで実行")
+else:
+    print("local jupyterでの実行")
+```
+
 ## GUIで変数を変更する(スライダーやドロップリストを表示する)
  - `#@param ~`という記述を追加することで変数をGUIで操作できる
  - `#@param [a, b, c] {type: "raw"}`でドロップリスト
