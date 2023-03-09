@@ -22,6 +22,15 @@ update_dates: ["2022-08-31"]
  - ISO8601に適合した出力を得るには、`.isoformat()`関数が必要
    - デフォルトでは`microseconds`まで表示されるので、`timespec="seconds"`まで表示される
 
+## 各種初期化方法
+ - 日付の粒度で初期化
+   - `datetime.date(2099, 11, 3)`
+ - `yyyy-mm-dd HH:MM:SS`の粒度で初期化
+   - `datetime.datetime(2099, 11, 3, 10, 30, 15, 0)`
+     - 最後はmicro seconds
+ - 現在の時刻で初期化
+   - `datetime.now()`
+
 ## 具体例
 
 ```python
