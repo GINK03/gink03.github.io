@@ -14,6 +14,7 @@ comments: false
 
 ## 概要
  - `pd.Series`の値を置き換える
+ - 何通りが方法があり、dict型で置き換える方法と、listで置き換える方法がある
  - `pd.NaT`や`None`もハンドルすることができ、時間のパースが絡む際に便利
    - `pd.NaT`; Not a Time
 
@@ -42,6 +43,9 @@ print(df)
 1  2099-01-02 00:00:00
 2                 None
 """
+
+# 20000, 23000の値を50000に置き換える
+series.replace(to_replace=[20000,23000], value=50000)
 ```
 
 ## 参考
