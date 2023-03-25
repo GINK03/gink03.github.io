@@ -3,7 +3,7 @@ layout: post
 title: "youtube-dl"
 date: 2021-02-10
 excerpt: "youtube-dlの使い方"
-tags: ["youtube", "python"]
+tags: ["youtube", "python", "youtube-dl", "yt-dlp"]
 config: true
 comments: false
 sort_key: "2022-05-12"
@@ -18,20 +18,23 @@ update_dates: ["2022-05-12","2022-04-25","2021-09-08","2021-08-16","2021-02-11",
    - 参考
 	 - [Standing up for developers: youtube-dl is back](https://github.blog/2020-11-16-standing-up-for-developers-youtube-dl-is-back/)  
  - ffmpegがインストールされていないと、音声と動画を分離している際に合成できない
+ - 開発がゆっくりなこともあり、活発なforkとして`yt-dlp`がある
 
 ## 公式ドキュメント等
- - [github.com](https://github.com/ytdl-org/youtube-dl)
+ - [youtube-dl/github.com](https://github.com/ytdl-org/youtube-dl)
+ - [yt-dlp/github.com](https://github.com/yt-dlp/yt-dlp)
 
 ## インストール
 
 ```console
-$ pip install youtube-dl
+$ python3 -m pip install youtube-dl -U
+$ python3 -m pip install yt-dlp -U
 ```
 
 ※ YouTubeの最新の構造に対応するために、最新のものを使ったほうが良い
 
 
-## よく使うコマンド
+## よく使うコマンドとオプション
 
 **ダウンロード可能なフォーマット一覧**
 ```console
@@ -66,6 +69,13 @@ $ youtube-dl -o ${OUTPUT_NAME} "${YOUTUBE_LINK}"
 **チャンネルの動画をすべてダウンロードする**  
 ```console
 $ youtube-dl -f best -ciw -o "%(title)s.%(ext)s" -v https://www.youtube.com/channel/${CHANNEL_ID}
+```
+
+**エラーが発生しても継続する**
+ - 特に`yt-dlp`でyoutube以外の動画をダウンロードする際に発生しがちで`-i`オプションを指定しないと、リトライを繰り返してしまう
+
+```console
+$ yt-dlp <movie-list> -i
 ```
 
 ## youtube-dlのforkのyt-dlpについて
