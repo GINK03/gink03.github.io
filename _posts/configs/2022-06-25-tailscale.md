@@ -14,13 +14,16 @@ update_dates: ["2022-06-25"]
 
 ## 概要
  - hamachiのようなp2p VPN
-   - シェアウェアである点もhamachiと似ている
+   - 一部GUIがシェアウェアである点もhamachiと似ている
  - wireguardをバックエンドに使用しており、認証関連をマネージしてくれるもの
    - wireguardは多少設定が面倒であるが、tailscaleを用いるとGoogle AccountやMicrosoft Accountでログインするだけで利用できる
  - UDP NAT traversalをサポートしており、NATの内側のコンピュータでもVPNネットワークに参加できる
  - 一定のコンピュータ数(20)までは無料なので、個人で利用するには十分そう
  - 登録しているコンピュータのIPアドレスは[Machines](https://login.tailscale.com/admin/machines)から確認できる
  - ある程度のオーバーヘッドがあり、速度が半分程度になる
+ - コントロールプレーンというマネージをするサーバが必要で、無料で使うにはこれが制限となる
+   - 半年に一度認証が解除されるのでいざというときに使えないのが痛い
+ - [headscale](https://github.com/juanfont/headscale)というコントロールプレーンをセフルホストにするOSSもある
 
 ## ユースケース
  - ファイヤーウォールの内部に設定したセキュアな環境にアクセスする
@@ -39,6 +42,13 @@ $ sudo tailscale up
 
 **macos**
  - `app store`から`tailscale`を検索してインストール
+ - app store版ではCLIは入らない
+
+**macOSにビルドしてインストール**
+```console
+$ go install tailscale.com/cmd/tailscale{,d}@main
+$ sudo $HOME/.go/bin/tailscaled install-system-daemon # launchdに登録
+```
 
 ## FOSSバージョンのheadscaleについて
  - 概要
@@ -91,4 +101,5 @@ traceroute to 100.123.207.30 (100.123.207.30), 64 hops max, 52 byte packets
 
 ## 参考
  - [/r/Tailscale/](https://www.reddit.com/r/Tailscale/)
+ - [Tailscaled on macOS](https://github.com/tailscale/tailscale/wiki/Tailscaled-on-macOS)
  - [How to re-authenticate in Linux](https://github.com/tailscale/tailscale/issues/367)
