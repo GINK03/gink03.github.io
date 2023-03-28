@@ -31,10 +31,11 @@ display(ax)
  - `x`; 当てなければindexが使用される
  - `y`; Y軸の値
  - `rot`; X軸のラベルの回転
+ - `figsize`; 画像の大きさ
 
 ```python
 df = pd.DataFrame({'lab':['A', 'B', 'C'], 'val':[10, 30, 20]})
-ax = df.plot.bar(x='lab', y='val', rot=90)
+ax = df.plot.bar(x='lab', y='val', rot=90, figsize=(5,5))
 display(ax)
 ```
 
