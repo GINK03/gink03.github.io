@@ -19,6 +19,7 @@ update_dates: ["2023-02-24"]
 ## DS.API
  - 検索プラットフォームという強みを生かしてキーワードのトレンド、トレンドに紐づくデモグラ情報を知ることができる
  - search volumeを知るAPIなども用意されており、バズ度を定量化することも可能
+ - [DS.API リファレンス](https://datasolution.yahooapis.jp/swagger/)
 
 ---
 
