@@ -34,6 +34,7 @@ $ gcloud auth application-default login
 ```console
 $ docker run -it -v ~/.config/:/root/.config <container-name>
 ```
+これは一般的なGCPを用いたpythonスクリプトでも最初に参照される  
 
 ## pythonでADCからクレデンシャル情報を得る
 
