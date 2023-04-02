@@ -25,6 +25,11 @@ update_dates: ["2021-11-15"]
 $ brew install alacritty
 ```
 
+**windows**
+```console
+> winget install alacritty
+```
+
 ## 設定
 
 `$HOME/.alacritty.yml`のファイルが最初に起動すると自動生成されるのでこれを編集する  
