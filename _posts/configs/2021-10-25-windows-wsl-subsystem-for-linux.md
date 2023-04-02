@@ -18,6 +18,17 @@ update_dates: ["2022-05-22"]
    - WSL1ではnativeで動作していたが、WSL2では仮想マシンベースになった
  - Linux側のVMのターミナルからWindowsのバイナリを実行できたり、Windows側からLinuxのバイナリを実行できる
  - WSL2からはLinux部分とWindows部分でIPを共有していない
+ - デフォルトの設定パスは`C:\Users\<username>\.wslconfig`
+
+## 設定
+ - `.wslconfig`に設定を書き込むことで反映できる
+
+### Linux上のメモリを増やす
+
+```config
+[wsl2]
+memory=120GB # Limits VM memory in WSL 2 to 128 GB
+```
 
 ## ユースケース毎の使い方
 
