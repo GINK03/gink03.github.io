@@ -24,6 +24,8 @@ update_dates: ["2022-06-25"]
  - コントロールプレーンというマネージをするサーバが必要で、無料で使うにはこれが制限となる
    - 半年に一度認証が解除されるのでいざというときに使えないのが痛い
  - [headscale](https://github.com/juanfont/headscale)というコントロールプレーンをセフルホストにするOSSもある
+ - exit nodeを指定・利用することできる
+   - VPNをトンネリングで利用しているイメージ
 
 ## ユースケース
  - ファイヤーウォールの内部に設定したセキュアな環境にアクセスする
@@ -88,6 +90,27 @@ $ netperf -H 100.123.207.30 -t TCP_STREAM -v 2 -- -o mean_latency,throughput
 MIGRATED TCP STREAM TEST from (null) (0.0.0.0) port 0 AF_INET to (null) () port 0 AF_INET
 Mean Latency Microseconds,Throughput
 33108.25,31.51
+```
+
+## exit nodeの設定
+ - tailscaleのルーティングするデバイスを指定してexit nodeにすることができる
+   - exit nodeはルータみたいなイメージ
+
+**linuxをexit nodeとしての設定**
+```console
+$ echo 'net.ipv4.ip_forward = 1' | sudo tee -a /etc/sysctl.conf
+$ echo 'net.ipv6.conf.all.forwarding = 1' | sudo tee -a /etc/sysctl.conf
+$ sudo sysctl -p /etc/sysctl.conf
+$ sudo tailscale up --advertise-exit-node
+```
+
+**macOSでexit nodeを利用する**
+ - tailscaleのアイコンをクリック
+ - `Exit Node`を選択
+
+**linuxでexit nodeを利用する**
+```console
+$ sudo tailscale up --exit-node=<exit-node-ip>
 ```
 
 ## tracerouteで中継サーバが無いか、確認する
