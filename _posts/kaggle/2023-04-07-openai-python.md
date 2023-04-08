@@ -15,7 +15,7 @@ update_dates: ["2023-04-07"]
 ## 概要
  - pythonでGPTで生成する例
 
-## 具体例
+## GPT3の例
 
 ```python
 import openai
@@ -48,6 +48,39 @@ for choice in response.choices:
 """
 ```
 
+## ChatGPTの例
+
+```python
+import openai
+openai.api_key = "<api-key>"
+
+response = openai.ChatCompletion.create(
+  model="gpt-3.5-turbo",
+  messages=[
+        {"role": "system", "content": "You are a very helpful assistant."},
+        {"role": "user", "content": "一般的に男性と女性で子供に対する姿勢が異なるかと思います。どの点が異なるのか教えて下さい。"},
+        {"role": "assistant", "content": "わかりました。可能であれば参考になる情報を教えて下さい。"},
+        {"role": "user", "content": 
+"""以下が私の意見です。
+男性の育児参加が叫ばれている昨今ですが、社会一般の風潮としてのイシューはありますが、なんらか統計的事実に基づいていないことが多いです。
+男性でも女性より育児コミットしている人もいれば、典型的な女性の役割として育児をする女性もいます。
+男性、女性で区別するより、個人の個別の事情に応じて何らか適切な支援をすることが大切であり、あまり男女の子供の育児に対する姿勢の違いは重要でないとの認識です。
+"""
+        }
+    ]
+)
+
+for choice in response.choices:
+    print(choice.message.role)
+    print(choice.message.content)
+    print()
+
+"""
+assistant
+ありがとうございます。確かに、育児に関する男性と女性の姿勢については、人それぞれであるというのが現状です。一般的に、女性は子育てに情熱的であり、子どもとのコミュニケーションを重視し、愛情豊かなケアを提供することが多いと言われています。しかし、男性は子育てに参加することで、家庭内での役割分担や家族の絆を深めることができるというメリットがあります。男性は、遊びやスポーツなどアクティブで体を動かす遊び方を提供することが多く、子どもたちにとっては新鮮で楽しい体験が得られることがあります。また、男性の参加によって、子どもたちが父親との時間を大切にするようになり、父子関係の構築にもつながることがあります。したがって、男性も女性も、それぞれのスタイルで育児に関わることが大切であり、家庭や子どもたちの状況に応じた適切な支援が必要です。
+"""
+```
+
 ## モデルの一覧を確認する
 
 ```python
@@ -62,4 +95,9 @@ models.sort_values(by=["date"], ascending=False)
 | gpt-3.5-turbo-0301            | model    | 1677649963 | openai          | [<OpenAIObject model_permission id=modelperm-Dh9cbvU3d1LUSG2vFb8JHeBT at 0x7f6927631e40> JSON: { | gpt-3.5-turbo-0301            |          | 2023-03-01 05:52:43 |
 |                               |          |            |                 |   "allow_create_engine": false,                                                                  |                               |          |                     |
 |                               |          |            |                 |   "allow_fine_tuning": false,                                                                    |                               |          |
+
+---
+
+## 参考
+ - [Chat completions](https://platform.openai.com/docs/guides/chat/chat-completions-beta)
 
