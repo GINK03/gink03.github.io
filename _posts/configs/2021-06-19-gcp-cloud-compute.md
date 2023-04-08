@@ -14,8 +14,8 @@ update_dates: ["2021-06-19","2021-06-19"]
 
 ## 概要
  - GCPのvm
- - Linuxを使用する場合、ユーザはユーザ名が含まれた公開鍵を以下に登録することで自動的に作成される
-   - [Metadata/Google Cloud](https://console.cloud.google.com/compute/metadata)
+ - sshの公開鍵を登録するにはメタデータレポジトリの[compute/metadata](https://console.cloud.google.com/compute/metadata)に設定すれば良い
+   - 公開鍵のメモに記されたユーザが自動的に作成され、`~/.ssh/authorized_keys`に追記される
 
 ## 基本的な操作
 
