@@ -5,7 +5,7 @@ date: 2022-04-25
 excerpt: "Mountain Duckの使い方"
 project: false
 config: true
-tag: ["s3", "mountainduck", "windows", "osx"]
+tag: ["s3", "mountainduck", "windows", "macos"]
 comments: false
 sort_key: "2022-04-25"
 update_dates: ["2022-04-25"]
@@ -17,11 +17,12 @@ update_dates: ["2022-04-25"]
  - 様々なオンラインストレージサービスをマウントしてフィアルシステムのように扱えるツール
  - GCSやS3をストレージとして扱うことがきでる
    - [/backblaze/](/backblaze/)のB2のようなS3互換のプロトコルのオブジェクトストレージをオンラインストレージとして使おうとすると、まともなクライアントがこれぐらいしか無い
+ - スマートシンクに対応していて、ファイルが参照されるまでダウンロードされない
  - シェアウェアである
 
 ## インストール
 
-**osx**  
+**macOS**  
 ```console
 $ brew install mountain-duck
 ```
@@ -40,6 +41,8 @@ $ brew install mountain-duck
 ## マウントポイント
  - osx
    - `~/Library/Group Containers/G69SCX94XU.duck/Library/Application Support/duck/Volumes/*****/*****`
+   - 深い場所になるのでリンクを張っておくと便利
+     - e.g. `ln -s "$HOME/Library/Group Containers/G69SCX94XU.duck/Library/Application Support/duck/" $HOME/duck`
  - windows
    - ネットワークドライブとしてマウントされる
 
