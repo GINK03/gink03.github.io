@@ -43,6 +43,10 @@ update_dates: ["2022-04-25"]
  - Friendly URLを取得する
    - 共有したいファイルを選択し、詳細を表示するとFriendly URLが得られる
 
+## Master Application Key
+ - mountainduckなどでマウントする際に指定するIDとクレデンシャルのペアのこと
+ - すべてのバケットが参照可能になるので管理に注意
+
 ## 各OSからB2バケットをマウントできるツール
  - Windows
    - [/mountainduck/](/mountainduck/)
