@@ -47,6 +47,7 @@ $ python3 -m pip install google-cloud-language
 ### 概要
  - 文字列のネガポジを判定する
  - 改行区切りや"。"で終わっている文を一つの文として見做しておらず、様々な箇所で区切られる
+   - 文章全体について知りたい場合は、戻り値のメンバ変数の`response.document_sentiment`にアクセスする
 
 ### コード
  - [gist](https://gist.github.com/GINK03/2a22e4432ac8d489997f86a0970e603e)
