@@ -49,6 +49,7 @@ Introductory in Japanese and in English are mixed.
 ## In vitro presentation/体外発表
  - [AIによるテキストクリエイティブの自動生成/TechCon 2023](https://techcon2023.dena.dev/session/session10/)
  - [CEDEC 2022](https://cedec.cesa.or.jp/2022)
+ - [IoTを活用した新産業モデル創出基盤整備事業](https://www.nedo.go.jp/content/100899064.pdf)
 
 ## Qualifications/Certifications
  - ***Qualifications(資格)***
