@@ -14,7 +14,18 @@ update_dates: ["2022-09-21"]
 
 ## 概要
  - 複数のpythonのバイナリがある場合、jupyterが正しくインストールされなかったり、問題を起こすことがある
-   - jupyterの起動の際に`python3 -m notebook`で起動すると明示的に起動するバイナリが指定しやすい
+   - jupyterの起動の際に`python3 -m jupyter lab`, `python3 -m notebook`で起動すると明示的に起動するバイナリが指定しやすい
+
+---
+
+## 環境を分ける
+ - システムのpythonがバージョンアップであったり、OSの都合であったりで、ライブラリの不整合が起こることがあり、[/poetry/](/python-poetry/)など環境を分割できるソフトウェアでpythonを分けると安全
+
+```python
+$ poerty new adhoc-analytics
+$ cd adhoc-analytics
+$ poetry shell
+```
 
 ---
 
