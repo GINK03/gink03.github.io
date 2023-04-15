@@ -33,8 +33,10 @@ $ curl -sSL https://install.python-poetry.org | python3 -
 ## projectの作成
 
 ```console
-$ poetry new demo
+$ poetry new <project-name> # 新規にディレクトリを作成する場合
+$ poetry new . # 現在のディレクトリを新規に管理する場合
 ```
+
 
 ## 既存のディレクトリをpoetry管理
 
@@ -67,10 +69,12 @@ $ poetry env list
 $ poetry env remove env-name
 ```
 
-## envの外からpoetryのpythonでスクリプトを実行する
+## envの外からpoetryの環境でコマンドを実行する
+ - `poetry run`を利用することで、`poetry shell`で発生する可能性がある(システムPATHが交じることによる)PATHの優先順位の問題による不整合などを回避できる
 
 ```console
-$ poetry run python3 script-name
+$ poetry run python3 script-name # pythonのスクリプトを実行する場合
+$ poetry run jupyter lab --port 2000 # PATH汚染を回避してjupyterを実行する場合
 ```
 
 ## パッケージのインストール
