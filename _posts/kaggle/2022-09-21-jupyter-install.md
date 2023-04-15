@@ -22,9 +22,9 @@ update_dates: ["2022-09-21"]
  - システムのpythonがバージョンアップであったり、OSの都合であったりで、ライブラリの不整合が起こることがあり、[/poetry/](/python-poetry/)など環境を分割できるソフトウェアでpythonを分けると安全
 
 ```python
-$ poerty new adhoc-analytics
-$ cd adhoc-analytics
-$ poetry shell
+$ poerty new .
+$ poetry add jupyterlab tqdm pandas seaborn scikit-learn ipywidgets theme-darcula joblib sortedcontainers
+$ poetry run jupyter lab --port 2000 # poetry shellはPATHを完全に書き換えないのでglobal環境とぶつかることがある
 ```
 
 ---
