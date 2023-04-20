@@ -44,7 +44,7 @@ $ gcloud secrets versions add <secret-id> --data-file="/path/to/file.txt"
 $ echo -n "this is my super secret data" | gcloud secrets versions add secret-id --data-file=-
 ```
 
-### シークレットのバージョンにアクセスする
+### CUIでシークレットのバージョンにアクセスする
 
 **cui**
 ```console
@@ -65,6 +65,33 @@ response = client.access_secret_version(request={"name": name})
 payload = response.payload.data.decode("UTF-8")
 print(payload)
 
+"""
+this is my super secret data
+"""
+```
+
+### notebookからシークレットのバージョンにアクセスする
+
+```python
+from typing import Dict, List
+
+from google.cloud import secretmanager
+from google.colab import auth
+
+auth.authenticate_user()
+
+def get_secret(
+    secret_name: str,
+    project_id: str = "starry-lattice-256603",
+    version: str = "latest",
+) -> str:
+    client = secretmanager.SecretManagerServiceClient()
+    name = client.secret_version_path(project_id, secret_name, version)
+    response = client.access_secret_version(request={"name": name})
+    payload = response.payload.data.decode("UTF-8")
+    return payload
+
+print(get_secret("test-secret-id"))
 """
 this is my super secret data
 """
