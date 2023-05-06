@@ -30,7 +30,7 @@ $ sudo apt install wakeonlan
 $ brew install wakeonlan
 ```
 
-## windowsでwakeonlanを待ち受けする
+## windowsでwakeonlanで待ち受けする
  - 手順
    - `デバイスマネージャー`を起動
    - `ネットワークアダプタ`を選択
@@ -38,6 +38,17 @@ $ brew install wakeonlan
    - `電源の管理`のタブを選択
    - `このデバイスで、コンピューターのスタンバイ状態を解除できるようにする`を有効化
    - `Magic Packetでのみ、コンピュータのスタンバイ状態を解除できるようにする`を有効化
+
+## ubuntuでwakeonlanで待ち受けをする
+
+```console
+# 確認
+$ sudo ethtool <nic-name>
+Supports Wake-on: <letters> # <letters>に`g`が含まれていればwolが動作する
+
+# 有効化
+$ sudo ethtool -s <nic-name> wol g
+```
 
 ## wakeonlanで対象のPCを起動する
 
@@ -50,3 +61,4 @@ $ wakeonlan <mac-address>
 ```console
 $ wakeonlan -i `dig +short <hostname>` -p <port> <mac-address> 
 ```
+
