@@ -55,6 +55,15 @@ System Benchmarks Index Score                                        2036.4
 System Benchmarks Index Score                                        8266.5
 ```
 
+**ubuntu, ryzen 5700G**
+
+```console
+# シングルコア
+System Benchmarks Index Score                                        2786.6
+# マルチコア
+System Benchmarks Index Score                                       16117.7
+```
+
 **osx, m1**
 
 ```console
