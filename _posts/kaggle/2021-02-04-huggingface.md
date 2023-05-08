@@ -16,7 +16,24 @@ update_dates: ["2022-04-05","2022-03-24"]
 ## 概要
  - transformerなどを主に扱った機械学習モデルのシェアサイト
    - モデルをアップロードしたり、一部の機能にはユーザ登録とログインが必要
+   - [/git-lfs/](/git-lfs/)が必要
  - pytorch, tensorflowを便利にラップしたライブラリを提供する
+
+## インストールとログイン
+ - Webで発行されるtokenで認証する
+
+```console
+$ python3 -m pip install huggingface_hub
+$ huggingface-cli login
+Token: **********
+```
+
+## モデルとデータセットのダウンロード
+ - [/git-lfs/](/git-lfs/)が必要
+
+```console
+$ git clone https://huggingface.co/username/repo_name
+```
 
 ---
 
