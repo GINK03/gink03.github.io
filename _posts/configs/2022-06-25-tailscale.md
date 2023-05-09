@@ -17,6 +17,7 @@ update_dates: ["2022-06-25"]
    - 一部GUIがシェアウェアである点もhamachiと似ている
  - wireguardをバックエンドに使用しており、認証関連をマネージしてくれるもの
    - wireguardは多少設定が面倒であるが、tailscaleを用いるとGoogle AccountやMicrosoft Accountでログインするだけで利用できる
+   - デフォルトでは一定期間でkey expireするので、無効化するにはWebUIから`disable key expiry`を選択する
  - UDP NAT traversalをサポートしており、NATの内側のコンピュータでもVPNネットワークに参加できる
  - 一定のコンピュータ数(20)までは無料なので、個人で利用するには十分そう
  - 登録しているコンピュータのIPアドレスは[Machines](https://login.tailscale.com/admin/machines)から確認できる
@@ -25,7 +26,8 @@ update_dates: ["2022-06-25"]
    - 半年に一度認証が解除されるのでいざというときに使えないのが痛い
  - [headscale](https://github.com/juanfont/headscale)というコントロールプレーンをセフルホストにするOSSもある
  - exit nodeを指定・利用することできる
-   - VPNをトンネリングで利用しているイメージ
+   - VPNをトンネリングで利用しているイメージですべてのトラヒックをexit node経由で行うことができる
+
 
 ## ユースケース
  - ファイヤーウォールの内部に設定したセキュアな環境にアクセスする
