@@ -182,5 +182,14 @@ df["dow"] = df["datetime"].dt.day_of_week
 
 ---
 
+## クオーター(期)を計算する
+
+```python
+pd.to_datetime(["2020-12-01", "2023-04-25"]).to_period("Q").astype(str)
+# Index(['2020Q4', '2023Q2'], dtype='object')
+```
+
+---
+
 ## 参考
  - [pandas.Timestamp.floor/pandas.pydata.org](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Timestamp.floor.html)
