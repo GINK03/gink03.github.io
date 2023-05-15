@@ -73,3 +73,17 @@ df.query('column.isnull()')
 ```python
 df.query('column.str.contains("something", regex=True)')
 ```
+
+### スペースで区切られたカラム名の操作
+
+```python
+df = pd.DataFrame({"a b c": [1, 2, 3], "value": [4, 5, 6]})
+df.query('`a b c` >= 2')
+
+"""
+|    |   a b c |   value |
+|---:|--------:|--------:|
+|  1 |       2 |       5 |
+|  2 |       3 |       6 |
+"""
+```
