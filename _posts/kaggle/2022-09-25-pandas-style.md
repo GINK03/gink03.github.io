@@ -23,8 +23,8 @@ comments: false
    - 最大値に色を付ける
  - `highlight_min`
    - 最小値に色を付ける
- - `hide_index`
-   - インデックスを非表示
+ - `hide`
+   - インデックスを非表示(1.3.0以降から)
  - `background_gradient(cmap='Blues')`
    - ヒートマップ
 
@@ -36,7 +36,7 @@ df.head(10).style.format({"BasePay": "${:20,.0f}",
                           "TotalPay": "${:20,.0f}",
                           "TotalPayBenefits":"${:20,.0f}"}) \
                  .format({"JobTitle": lambda x:x.lower(), "EmployeeName": lambda x:x.lower()}) \
-                 .hide_index() \
+                 .hide() \ # 1.3.0からhide関数になった
                  .background_gradient(cmap='Blues')
 ```
 
