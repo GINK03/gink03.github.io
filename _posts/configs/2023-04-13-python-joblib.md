@@ -24,8 +24,10 @@ $ python3 -m pip install joblib
 
 ## 並列化
  - デフォルトではプロセスベース
+   - `n_jobs=-1`ですべてのプロセスを使用する
  - `with parallel_backend('threading', n_jobs=n_jobs):`でくくるとthredingベースで並列化を行う
  - `delayed`は遅延関数化するラッパー
+ - `tqdm`を利用する際は`delayed`インスタンスを作成するイテレータのリスト内包表記に記す
 
 ### 並列化の具体例
  - GCPのセンチメント分析を並列でアクセスする場合
