@@ -96,6 +96,20 @@ models.sort_values(by=["date"], ascending=False)
 |                               |          |            |                 |   "allow_create_engine": false,                                                                  |                               |          |                     |
 |                               |          |            |                 |   "allow_fine_tuning": false,                                                                    |                               |          |
 
+## エンベッティングを行う
+
+```python
+import openai
+
+openai.api_key = "<api-key>"
+
+def get_embedding(text, model="text-embedding-ada-002"):
+   text = text.replace("\n", " ")
+   return openai.Embedding.create(input = [text], model=model)['data'][0]['embedding']
+
+df['embedding'] = df["tweet_text"].apply(lambda x: get_embedding(x, model='text-embedding-ada-002'))
+```
+
 ---
 
 ## 参考
