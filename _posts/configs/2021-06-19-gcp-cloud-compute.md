@@ -16,6 +16,8 @@ update_dates: ["2021-06-19","2021-06-19"]
  - GCPのvm
  - sshの公開鍵を登録するにはメタデータレポジトリの[compute/metadata](https://console.cloud.google.com/compute/metadata)に設定すれば良い
    - 公開鍵のメモに記されたユーザが自動的に作成され、`~/.ssh/authorized_keys`に追記される
+ - startup-scriptを設定することができる
+   - root権限で実行される
 
 ## 基本的な操作
 
@@ -50,6 +52,13 @@ function gmosh() {
   ip=`gcloud compute instances list --filter $1 --format=json --project=starry-lattice-256603 | jq ".[0].networkInterfaces[0].accessConfigs[0].natIP"`
   mosh $ip
 }
+```
+
+### startup-scriptで12時間後にシャットダウンする
+
+```bash
+#!/bin/bash
+echo 'shutdown -h now' | at now + 12 hours
 ```
 
 ### VMをstop
