@@ -7,7 +7,7 @@ tags: ["ubuntu", "linux", "repositories"]
 config: true
 comments: false
 sort_key: "2023-06-03"
-update_dates: ["2023-06-03]
+update_dates: ["2023-06-03"]
 ---
 
 # ubuntuのレポジトリについて
