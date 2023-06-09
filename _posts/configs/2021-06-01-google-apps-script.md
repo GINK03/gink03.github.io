@@ -217,6 +217,47 @@ SpreadsheetApp.getActiveSpreadsheet().toast("完了.");
 ```
  - 引数の順序が `toast(description, title, option)`であることに注意
 
+#### GASからOAuthでのアクセス認証があるCloud Functions/Runにアクセスする
+ - 手順
+   - Apps Scriptの`Project Settings`からアクセス対象のGCPプロジェクトnumberを設定する
+   - `appscript.json`で`"oauthScopes": [ "openid", "https://www.googleapis.com/auth/script.external_request", ...]`を設定する
+   - 認証制御付きのCloud Functions/Runを作る
+     - 古いものはアクセスできない
+   - `identityToken`をheaderに設定することでアクセス可能なる
+ - 参考
+   - [Google Apps Script 経由で Google Cloud Function を安全に呼び出す](https://stackoverflow.com/questions/61781421/securely-calling-a-google-cloud-function-via-a-google-apps-script)
+
+```js
+function parseJwt(token) {
+  var body = token.split('.')[1];
+  var decoded = Utilities.newBlob(Utilities.base64Decode(body)).getDataAsString();
+  var payload = JSON.parse(decoded);
+  var profileId = payload.sub;
+  return payload
+};
+
+function myFunction() {
+  let id_token = ScriptApp.getIdentityToken();
+  Logger.log(id_token);
+  Logger.log(parseJwt(id_token));
+
+  var url = 'https://function-1-********-an.a.run.app'; // 置き換えてください
+  var options = {
+    method: 'post',
+    headers: {
+      'Authorization': 'Bearer ' + id_token,
+      'Content-Type': 'application/json'
+    },
+    payload: JSON.stringify({
+      name: 'Hello World'
+    })
+  };
+  
+  var response = UrlFetchApp.fetch(url, options);
+  Logger.log(response.getContentText());
+}
+```
+
 ---
 
 ## 例; コンピュートエンジンの自動停止
