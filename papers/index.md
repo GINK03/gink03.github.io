@@ -7,6 +7,7 @@ comments: false
 ---
 
 ## papers/読んだ論文リンク集
+ - [Ouyang, L., et al. (2022). Training language models to follow instructions with human feedback. Retrieved from http://arxiv.org/abs/2203.02155](https://arxiv.org/abs/2203.02155)
  - [Bayesian Methods for Media Mix Modeling with Carryover and Shape Effects](https://storage.googleapis.com/pub-tools-public-publication-data/pdf/b20467a5c27b86c08cceed56fc72ceadb875184a.pdf)
  - [Playing Atari with Deep Reinforcement Learning](https://arxiv.org/pdf/1312.5602.pdf)
  - [A Self-Attentive model for Knowledge Tracing](https://arxiv.org/abs/1907.06837)
