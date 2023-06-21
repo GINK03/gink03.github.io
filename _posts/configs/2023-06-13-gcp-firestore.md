@@ -85,6 +85,23 @@ query = collection_ref.where("day", ">=", "2023-01-01").where("day", "<=", "2023
 pd.DataFrame([doc.to_dict() for doc in query.stream()])
 ```
 
+**すべてのデータを取得**
+```python
+collection_ref = db.collection('<twitter-account>')
+for doc in collection_ref.stream():
+    doc.to_dict()
+```
+
+**すべてのデータを削除**
+ - 原則バッチでしか削除できないのでなくなるまで実行する
+
+```python
+collection_ref = db.collection('<twitter-account>')
+docs = collection_ref.list_documents(page_size=100)
+for doc in docs:
+    doc.delete()
+```
+
 ## 参考
  - [Cloud Firestore を使ってみる/firebase.google.com](https://firebase.google.com/docs/firestore/quickstart?hl=ja)
 
