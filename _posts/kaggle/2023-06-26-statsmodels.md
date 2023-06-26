@@ -76,3 +76,6 @@ Notes:
 8.128881695464988e-60 0.44976460059264567
 """
 ```
+
+## Google Colab
+ -  [statsmodels-example](https://colab.research.google.com/drive/1DsKoop_ryE_UeHZCu3_QAuDvrBpVf7Ju?usp=sharing)
