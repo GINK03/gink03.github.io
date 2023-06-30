@@ -20,3 +20,8 @@ update_dates: ["2023-04-13"]
 
 ## 便利なchrome extension
  - [Superpower ChatGPT](https://chrome.google.com/webstore/detail/superpower-chatgpt/amhmeenmapldpjdedekalnfifgnpfnkc/related)
+
+## Price Estimation
+ - トークン数をカウントするのに[/tiktoken/](/tiktoken/)などのツールが有る
+ - オンライン計算機
+   - [GPTPromptsHub](https://www.gptpromptshub.com/chatgpt-pricing-calculator)
