@@ -14,8 +14,9 @@ update_dates: ["2022-05-17"]
 # pythonでのxmlの扱い方
 
 ## 概要
- - 小さいxmlデータであれば、BeautifulSoupなどで簡単にパースできる
+ - 小さいxmlデータであれば、`BeautifulSoup`などで簡単にパースできる
  - wikipediaなどxmlでダンプされた巨大なデータがあり、パースには独自のノウハウが要求される
+ - 大量のデータを処理する際には`lxml`だけで処理を行うほうがだいぶ高速
 
 ## `xml.etree.ElementTree`で`iterparse`する
  - 概要と留意点
