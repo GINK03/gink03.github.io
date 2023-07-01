@@ -31,6 +31,8 @@ update_dates: ["2022-03-26"]
      1. `pd.to_datetime(c, format="%Y-%m-%d %H:%M:%S")`
      2. `pd.to_datetime(c, infer_datetime_format=True)`
      3. `pd.to_datetime(c)`
+   - エラーを無視するには以下のオプションが必要
+     -  `errors="ignore"`
 
 ### 参考処理時間(ツイッターのデータ)
 
