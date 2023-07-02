@@ -26,7 +26,7 @@ update_dates: ["2022-05-17","2022-01-10"]
  - `jawiki-YYYYMMDD-pages-logging.xml`
    - wikipediaの記事の編集者に関するログ(アクセスして閲覧している人のログではない)
    - ユーザの追加、ブロック、記事の削除依頼などが主に見れるようである
- - `jawiki-YYYYMMDD-pages-meta-history6.xml-<value-start><value-end>`
+ - `jawiki-YYYYMMDD-stub-meta-history.xml.gz`
    - wikipediaの記事の編集履歴のページ順のスナップショット
    - どの記事が頻繁に編集されるのか、どの記事がどのような編集履歴をたどったのかを明らかにすることができる
      - 編集が激しい記事 => 人気のミームだと考えられる
@@ -63,45 +63,43 @@ update_dates: ["2022-05-17","2022-01-10"]
  - 無圧縮で19GBあるのでインメモリで展開するのは非現実的である
  - `<page> ~ </page>`のテキストを取得して逐次lxmlなどで解析するなどする工夫が必要
    - 添付するコードの例では状態機械をqueueで作成して`<page>`タグ部分を抽出している
- - ライブラリを利用してパースするには[/python-xml/](/python-xml/)を参考
+ - ライブラリを利用してパースするには[/pythno-lxml/](/python-lxml/)や[/python-xml/](/python-xml/)を参考
 
-**具体的な例1**  
+**具体的な例(lxml)を利用**
 ```python
-from collections import deque
-import json
-import itertools
+import pandas as pd
 from tqdm.auto import tqdm
-from bs4 import BeautifulSoup
-fp = open("./jawiki-latest-pages-meta-current.xml")
+import itertools
+import json
+import lxml.etree
+counter = iter(tqdm(itertools.count(0)))
 
-def parse_page(page):
-    soup = BeautifulSoup(page, "lxml")
-    title = soup.title.text
-    text = soup.find("text").text
+dic = {}
 
-# <page>タグを見つける初期値
-que = deque(list("<page>"))
-que.popleft()
+# インクリメンタルなパース
+context = lxml.etree.iterparse('./jawiki-20230620-stub-meta-history.xml', events=('end',), tag='{http://www.mediawiki.org/xml/export-0.10/}page')
 
-target_que = deque(list("<page>"))
-for count in tqdm(itertools.count(0)):
-    # 一文字追加
-    char = fp.read(1)
-    if len(char) == 0:
-        break
-    que.append(char)
-    if que == target_que:
-        buff = "<page>"
-        while True:
-            buff += fp.read(1)
-            if "</page>" in buff[-7:]:
-                break
-        parse_page(buff)
-    # 左を捨てる
-    que.popleft()
+# イベントと要素を反復処理
+for event, elem in context:
+    next(counter)
+    # ここで各 <page> 要素を処理
+    title = elem.find('{http://www.mediawiki.org/xml/export-0.10/}title')
+    ts = [x.text for x in elem.findall('.//{http://www.mediawiki.org/xml/export-0.10/}datetime')]
+
+    if title is not None:
+        dic[title.text] = json.dumps(ts)
+
+    # 現在の要素とその子要素をメモリから削除することが重要
+    elem.clear()
+    # さらにメモリ使用量を削減するために、間接参照を削除
+    while elem.getprevious() is not None:
+        del elem.getparent()[0]
+
+df = pd.DataFrame.from_dict(dic, orient="index")
+df.to_csv("title_ts.csv")
 ```
 
-**具体的な例2(iterparseを利用する例)**
+**具体的な例2(xml.etree.ElementTreeを利用する例)**
 ```python
 import xml.etree.ElementTree as ET
 from bs4 import BeautifulSoup
