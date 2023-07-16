@@ -30,13 +30,24 @@ update_dates: ["2021-10-26","2021-10-18","2021-10-18","2021-08-12","2021-08-04"]
 $ curl -sSL https://install.python-poetry.org | python3 -
 ```
 
+**ubuntu**
+```console
+$ sudo apt install python3-poetry
+```
+
+## uninstall
+
+```console
+$ curl -sSL https://install.python-poetry.org | python3 - --uninstall
+$ rm -rf ~/.poetry
+```
+
 ## projectの作成
 
 ```console
 $ poetry new <project-name> # 新規にディレクトリを作成する場合
 $ poetry new . # 現在のディレクトリを新規に管理する場合
 ```
-
 
 ## 既存のディレクトリをpoetry管理
 
@@ -75,6 +86,17 @@ $ poetry env remove env-name
 ```console
 $ poetry run python3 script-name # pythonのスクリプトを実行する場合
 $ poetry run jupyter lab --port 2000 # PATH汚染を回避してjupyterを実行する場合
+```
+
+## pyenvと組み合わせて特定のバージョンのpythonを使用する
+ - 例として`3.11.4`を使用する場合を記す
+
+```console
+$ cd <poetry-project>
+$ pyenv local 3.11.4
+# pyproject.tomlを編集してpythonバージョンを3.11.4に固定
+$ poetry use env python3.11
+$ poetry install
 ```
 
 ## パッケージのインストール
@@ -133,13 +155,17 @@ $ poetry run test
 
 ## トラブルシューティング
 
+### poetryのパッケージが壊れる
+ - 原因
+   - pythonのバージョンのアップグレードや混在で壊れる
+ - 対応
+   - poetryを一度アンイストールして、`rm -rf ~/.poetry`して再度インストール
+
 ### pyarrowがaddできない
-
-**原因**  
- - `pip`を最新化する必要があった  
-**対応**  
- - pipを最新化して`poetry add pip`する
-
+ - 原因
+   - `pip`を最新化する必要があった  
+ - 対応
+   - pipを最新化して`poetry add pip`する
 
 ## poetryを使ったDockerfileのテンプレート
 
