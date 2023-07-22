@@ -110,6 +110,16 @@ else:
   raise Exception("YYYライブラリが見つかりませんでした")
 ```
 
+## Google Colabのipynbファイルにblack(リンター)を適応する
+ - 手順
+   - google driveをマウント
+     - `/content/drive/MyDrive/Colab Notebooks/`に編集中のipynbファイルが保存される
+     - 編集中のファイル名に明示的にipynbの拡張子をつけていないとblackが適応できない
+   - コマンドを実行
+     - `!pip install "black[jupyter]"`
+     - `!black "/content/drive/MyDrive/Colab Notebooks/foo-bar.ipynb"`
+   - 外部から編集されることになるので、ipynbファイルを開き直す
+
 ## pandas-gbqの認証を行う
  - local jupyterとの違い
    - `import pydata_google_auth`で明示的にクレデンシャルを取り出す必要なはない
