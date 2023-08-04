@@ -21,15 +21,14 @@ update_dates: ["2022-11-19"]
 
 ```sql
 SELECT
-  id,
   name,
-  email,
+  email
 FROM UNNEST([
-  STRUCT(1 AS id, "abc" AS name, "abc@google.com" as email),
-  (2, "abcd", "abcd@microsoft.com"),
-  (3, "例子", "reiko@google.com"),
-  (4, "例夫", "reio@yahoo.com"),
-  (5, "例ちゃん", "reichan@aol.com")
+  STRUCT("山田 太郎" as name, "taro.yamada@example.com" as email),
+  ("佐藤 花子", "hanako.sato@example.com"),
+  ("鈴木 一郎", "ichiro.suzuki@example.com"),
+  ("田中 二郎", "jiro.tanaka@example.com"),
+  ("高橋 三郎", "saburo.takahashi@example.com")
 ])
 ```
 
