@@ -39,5 +39,8 @@ person.name = "Bob"
 print(person.name)  # Bob
 ```
 
+### Google Colab
+ - [python-property-example](https://colab.research.google.com/drive/1X5f21fXMTxm0IANk27E-H29M4BsOIjkE?usp=sharing)
+
 ## 参考
  - [Built-in Functions#property](https://docs.python.org/3/library/functions.html#property)
