@@ -71,7 +71,7 @@ def cv_train(X_train, y_train, category, param, eval_func, verbose, early_stoppi
 
 df = df.sample(frac=1)
 X_train = df.drop(columns=["target"]).copy()
-y_train = np.log1p(df["target"])
+y_train = np.log1p(df["target"]).astype(np.float32)
 category = []
 param = param
 eval_func = mean_absolute_error
@@ -90,6 +90,11 @@ display(ret["eval_loss"])
      - 回帰なのでデフォルトのstratifiedが内部的に有効になっている
    - 対応
      - 明示的にstratifiedを無効にする
+ - `TypeError: Wrong type(FloatingArray) for label.`と出る
+   - 原因
+     - 入力可能なデータ型は`np.float32`, `float`, `int`, `bool`が期待されるが、`float64`などが設定されててしまっている
+   - 対応
+     - `.astype`で型を変える
 
 ---
 
