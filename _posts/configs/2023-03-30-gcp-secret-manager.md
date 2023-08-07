@@ -41,7 +41,7 @@ $ gcloud secrets versions add <secret-id> --data-file="/path/to/file.txt"
 
 **標準入力から**
 ```console
-$ echo -n "this is my super secret data" | gcloud secrets versions add secret-id --data-file=-
+$ echo -n "this is my super secret data" | gcloud secrets versions add <secret-id> --data-file=-
 ```
 
 ### CUIでシークレットのバージョンにアクセスする
