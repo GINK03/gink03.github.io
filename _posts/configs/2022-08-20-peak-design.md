@@ -26,26 +26,19 @@ update_dates: ["2022-08-20"]
 
 ## 各製品の特徴と感想
 
-### [UNIVERSAL ADAPTER](https://www.peakdesign.com/collections/mobile/products/universal-adapter)
- - スマホやタブレットをSlimLink対応させるためのパーツ
- - 両面テープでスマホに貼り付けられる
- - 内部に金属が入っているようでmagsafe製品ともくっつく
-
-### [エブリデイ バックパック 20L](https://www.ginichi.co.jp/information/pressrelease/10194/)
+### [エブリデイバックパック](https://www.peakdesign.com/collections/all-bags)
  - 頑丈でたくさんのポケットが有り、どの面からも取り出し可能
  - マジックテープでセパレータが内部に設置できて、カメラを収納しやすくなっている
  - 高機能なため重い
    - 簡単な外出であれば、$100前後のtimbuk2などのほうが都合がいい
 
-### [キャプチャー](https://www.ginichi.co.jp/news/3865/)
+### [キャプチャー](https://www.peakdesign.com/products/capture)
  - リュックのベルトにアルカスイスのIFを付け足すキット
- - 金属のプレートとネジ
+ - 本体は金属のプレートとネジ
 
-### [エブリデイ ケース](https://www.ginichi.co.jp/information/pressrelease/22223/)
- - スリムリンクという仕組みで、スマホをカメラの三脚に接続できる
- - 磁石でのみでロックするソフトロック
- - 物理的なロック機構でロックするハードロック
-   - 自転車などにマウントしたりしても大丈夫
+### [モバイルトライポッド](https://www.peakdesign.com/products/mobile-tripod)
+ - スマホの後ろに磁力で接着できる金属板
+ - 金属板を展開すると小型のトライポッドになる
 
 ### [スリムウォレット](https://www.peakdesign.com/products/mobile-wallet?variant=39475540197453)
  - ソフトロック(磁石)でスマホにくっつくカードが入る財布
@@ -56,9 +49,25 @@ update_dates: ["2022-08-20"]
 ### [クリエイターキット](https://www.peakdesign.com/products/creator)
  - 三脚とスマホをつなぐ
  - ハードロックでスマホをマウントする機構
- - アルカスイス互換でマウントできる
+ - マウントが２つ付属する
+   - アルカスイス規格
+   - 1/4インチメスネジとGP規格(GoPro)のメス側
+     - マウントは樹脂製で大きな力では破損してしまう
 
----
+### [エブリデイケース](https://www.peakdesign.com/collections/mobile)
+ - スリムリンクという仕組みで、スマホをカメラの三脚に接続できる
+ - 磁石でのみでロックするソフトロック
+ - 物理的なロック機構でロックするハードロック
+   - 自転車などにマウントしたりしても大丈夫
+
+### [ユニバーサルアダプタ](https://www.peakdesign.com/collections/mobile/products/universal-adapter)
+ - スマホやタブレットをSlimLink対応させるためのパーツ
+ - 両面テープでスマホに貼り付けられる
+ - 内部に金属が入っているようでmagsafe製品ともくっつく
+
+### [アウトフロントバイクマウント](https://www.peakdesign.com/products/out-front-bike-mount)
+ - 自転車(ロードバイク・ピストバイク含む)にスリムリンクでマウントできるようにするキット
+ - 磁力と爪で強力にマウントするのでスマホが途中で外れるようなこともなく、安全
 
 ## 参考
  - [www.peakdesign.com](https://www.peakdesign.com)
