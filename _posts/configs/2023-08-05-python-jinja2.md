@@ -54,7 +54,7 @@ from jinja2 import Template
 template = Template("""
 SELECT
     {% for column in columns -%}
-      {{ column }}{% if not loop.last %}, {% endif %}
+      { { column } }{ % if not loop.last % }, { % endif % }
     {%- endfor %}
 FROM
     {{ table_name }};
