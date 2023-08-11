@@ -55,11 +55,13 @@ pd.set_option('display.max_columns', None)
 # ワーニングをフィルタしたい際
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning,) # ユーザーワーニングを無視
-from pandas.core.common import SettingWithCopyWarning
-warnings.simplefilter(action="ignore", category=SettingWithCopyWarning) # コピーの警告
+#from pandas.core.common import SettingWithCopyWarning
+#warnings.simplefilter(action="ignore", category=SettingWithCopyWarning) # コピーの警告
 
 import gzip
 import pandas as pd
 import json
 import glob
+import pprint
+pp = pprint.PrettyPrinter(indent=2, width=120, depth=6)
 ```
