@@ -25,11 +25,25 @@ update_dates: ["2023-06-03"]
      - 秋葉原のUDXにサーバが有るらしい
  - レポジトリの回線の太さは以下のリンクの表に記されている
    - [Official Archive Mirrors for Ubuntu](https://launchpad.net/ubuntu/+archivemirrors)
+ - `security.ubuntu.com`は変更してはだめ
+   - ミラーへの反映は行われるが時間差があるため、ubuntuのセキュリティチームが変更を推奨していない
 
 ## `aruchive.ubuntu.com`を`ftp.udx.icscoe.jp/Linux`に変える
- - vim等で`/etc/apt/sources.list`を開く
- - `:s/archive.ubuntu.com/ftp.udx.icscoe.jp\/Linux/g`
- - `:s/security.ubuntu.com/ftp.udx.icscoe.jp\/Linux/g`
+ - vim
+   - `/etc/apt/sources.list`を開く
+   - `:s/archive.ubuntu.com/ftp.udx.icscoe.jp\/Linux/g`
+ - sed
+   - 秋葉原のUDXのサーバに切り替え
+     - `sudo sed -i.org -r 's@http://(jp\.)?archive\.ubuntu\.com/ubuntu/?@https://ftp.udx.icscoe.jp/Linux/ubuntu/@g' /etc/apt/sources.list`
+   - 秋葉原のUDXのサーバから元のarchive.ubuntu.comサーバに戻す
+     - `sudo sed -i.udx -r 's@https://ftp\.udx\.icscoe\.jp/Linux/ubuntu/?@http://archive.ubuntu.com/ubuntu@g' /etc/apt/sources.list`
+
+## トラブルシューティング
+ - `do-release-upgrade -d`できない
+   - 対応
+     - UDXのレポジトリから元のレポジトリに戻すことで`do-release-upgrade`できた
 
 ## 参考
  - [Ubuntu aptが遅かったので jp.archive.ubuntu.com を変更](https://kuni92.net/2022/10/ubuntu-apt-jparchiveubuntucom.html)
+ - [Ubuntuのapt mirrorの設定って結局どうすればいいの？](https://zenn.dev/ciffelia/articles/c394962a8f188a)
+ - [security.ubuntu.comはそのままで](https://jyn.jp/what-is-security-ubuntu-com/)
