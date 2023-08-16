@@ -77,6 +77,42 @@ range_slider = widgets.FloatRangeSlider(
 display(range_slider)
 ```
 
+### 複数行のテキストボックス(TextArea)
+
+```python
+textarea = widgets.Textarea(
+    value='',
+    placeholder='Type something',
+    description='String:',
+    disabled=False
+)
+```
+
+## ウィジェットに関数を紐付ける
+
+### ボタンを描画して押されたら関数を実行する
+
+```python
+button = widgets.Button(
+    description='送信',
+    disabled=False,
+    button_style='',
+    tooltip='Click me',
+    icon='check'
+)
+
+output = widgets.Output()
+output.clear_output(wait=True)
+
+def on_button_clicked(b):
+    with output:
+        print("Button clicked.")
+
+button.on_click(on_button_clicked)
+
+display(button, output)
+```
+
 ### 二つの変数を操作してすぐ結果を得る
 
 ```python
