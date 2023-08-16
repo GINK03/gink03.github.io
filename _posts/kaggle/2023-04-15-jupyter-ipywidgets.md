@@ -125,3 +125,13 @@ widgets.interact(
     y=widgets.FloatSlider(min=-10, max=10, step=0.1, value=0, description="y")
 );
 ```
+
+## stdoutをキャプチャして表示する
+
+```python
+out = widgets.Output(layout={'border': '1px solid black'})
+with out:
+    for i in range(10):
+        print(i, 'Hello world!')
+display(out) # 1pxの黒い枠に囲まれたテキストが表示される
+```
