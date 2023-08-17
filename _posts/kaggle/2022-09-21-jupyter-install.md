@@ -24,7 +24,8 @@ update_dates: ["2022-09-21"]
 ```console
 $ poerty new .
 $ poetry add jupyterlab tqdm pandas seaborn scikit-learn ipywidgets theme-darcula joblib sortedcontainers \
-pydata-google-auth google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client google-cloud-bigquery
+    pydata-google-auth google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client google-cloud-bigquery \
+    db-dtypes google-cloud-bigquery-storage
 $ poetry run jupyter lab --port 2000 --ip '0.0.0.0' # poetry shellはPATHを完全に書き換えないのでglobal環境とぶつかることがある
 ```
 
