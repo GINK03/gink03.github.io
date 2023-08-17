@@ -49,6 +49,32 @@ SELECT CONCAT('T.P.', ' ', 'Bar') as author;
 +---------------------+
 ```
 
+## SPLIT + SAFE_OFFSET
+ - 特定の文字で分割してリストとして要素でアクセスする
+ - 指定したインデックスが存在しない場合に安全に扱うために`SAFE_OFFSET`関数がある
+   - 例外時には`null`が帰る
+
+```sql
+SELECT
+  name,
+  SPLIT(email, "@")[SAFE_OFFSET(1)] as domain
+FROM UNNEST([
+  STRUCT("山田 太郎" as name, "taro.yamada@example.com" as email),
+  ("佐藤 花子", "hanako.sato@example.com"),
+  ("鈴木 一郎", "ichiro.suzuki@example.com"),
+  ("田中 二郎", "jiro.tanaka@example.com"),
+  ("高橋 三郎", "a-illigal-email-address")
+])
+```
+
+| name      | domain      |
+|-----------|-------------|
+| 山田 太郎 | example.com |
+| 佐藤 花子 | example.com |
+| 鈴木 一郎 | example.com |
+| 田中 二郎 | example.com |
+| 高橋 三郎 |             |
+
 ## REGEXP_CONTAINS
  - 正規表現にマッチしたらどうかという真偽値を返す
 
