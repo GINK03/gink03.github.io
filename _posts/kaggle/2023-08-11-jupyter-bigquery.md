@@ -19,7 +19,9 @@ update_dates: ["2023-08-11"]
 ## `google-cloud-bigquery`を利用する場合
 
 ```python
-# pip install pydata-google-auth google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client google-cloud-bigquery 
+# pip install pydata-google-auth google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client google-cloud-bigquery \
+#   google-cloud-bigquery-storage db-dtypes
+
 import pydata_google_auth
 from google.cloud import bigquery
 
