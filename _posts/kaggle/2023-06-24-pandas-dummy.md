@@ -21,7 +21,10 @@ update_dates: ["2023-06-24"]
  - あるカラムの値をダミー変数化する
 
 ```python
-df = pd.DataFrame({"sns": ["twitter", "facebook", "instagram", "tiktok", "youtube"]})
+df = pd.DataFrame({
+    "sns": ["twitter", "facebook", "instagram", "tiktok", "youtube"],
+    "follwers": [10000, 100, 100000, 20000, 5000]
+})
 pd.get_dummies(df["sns"], prefix="sns")
 """
 |index|sns\_facebook|sns\_instagram|sns\_tiktok|sns\_twitter|sns\_youtube|
@@ -31,6 +34,21 @@ pd.get_dummies(df["sns"], prefix="sns")
 |2|0|1|0|0|0|
 |3|0|0|1|0|0|
 |4|0|0|0|0|1|
+"""
+```
+
+### get_dummiesで得られた内容を元のデータセットと結合する
+
+```python
+pd.concat([df, pd.get_dummies(df["sns"], prefix="sns").astype(int)], axis=1).drop(columns=["sns"])
+"""
+|index|follwers|sns\_facebook|sns\_instagram|sns\_tiktok|sns\_twitter|sns\_youtube|
+|---|---|---|---|---|---|---|
+|0|10000|0|0|0|1|0|
+|1|100|1|0|0|0|0|
+|2|100000|0|1|0|0|0|
+|3|20000|0|0|1|0|0|
+|4|5000|0|0|0|0|1|
 """
 ```
 
