@@ -339,21 +339,7 @@ $ appify script-name.sh "app-name"
 ---
 
 ## SMB(Server Message Block)のマウント
-
-**コマンドで行う場合**
-
-```console
-$ open 'smb://<username>@<ip-address>/<path>'
-```
- - エスケープコード
-   - `@` -> `%40`
-
-**具体例**
- - マイクロソフトアカウントでWindowsPCの共有フォルダにアクセスする
-
-```console
-$ open 'smb://gimpeik%40icloud.com@192.168.40.16/share'
-```
+ - [/apple-macos-file-sharing/](/apple-macos-file-sharing/)
 
 ---
 
