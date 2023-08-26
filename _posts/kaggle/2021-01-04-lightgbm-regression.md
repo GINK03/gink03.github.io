@@ -51,10 +51,14 @@ def cv_train(X_train, y_train, category, param, eval_func, verbose, early_stoppi
     trn_data = lgb.Dataset(X_train, label=y_train, categorical_feature=category)
     num_round = n_estimators
     lgb.reset_parameter()
+    
+    # tss = TimeSeriesSplit(5) # time series splitを利用する際は有効化
+    # folds = tss.split(X_train)
     ret = lgb.cv(
             params=param,
             train_set=trn_data,
             nfold=5, # fold数, 多いと安定する
+            # folds=tss, # time series splitを利用する際, この行を有効化し、nfoldを無効化
             num_boost_round=num_round,
             verbose_eval=verbose,
             early_stopping_rounds=early_stopping_rounds,
