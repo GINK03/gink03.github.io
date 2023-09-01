@@ -48,14 +48,8 @@ else:
     print("local jupyterでの実行")
 ```
 
-## GUIで変数を変更する(スライダーやドロップリストを表示する)
- - `#@param ~`という記述を追加することで変数をGUIで操作できる
- - `#@param [a, b, c] {type: "raw"}`でドロップリスト
- - `#@param {type:"slider", min:0, max:1000, step:100}`でスライダー
-
-<div>
-  <img src="https://f004.backblazeb2.com/file/gimpeik/Images/Screenshot+2023-03-05+at+16.55.13.png">
-</div>
+## Formを使用する
+ - [/google-colab-form/](/google-colab-form/)
 
 ## pandasのquery関数にデフォルトで`engine="python"`を与える
 
