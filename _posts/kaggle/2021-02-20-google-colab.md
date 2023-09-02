@@ -51,58 +51,11 @@ else:
 ## Formを使用する
  - [/google-colab-form/](/google-colab-form/)
 
-## pandasのquery関数にデフォルトで`engine="python"`を与える
+## google colabでgoogle driveの使い方
+ - [/google-colab-drive/](/google-colab-drive/)
 
-```python
-%pip install pandas -U 2>&1 > /dev/nul 
-import pandas as pd
-import numpy as np
-from functools import partialmethod
-pd.DataFrame.query = partialmethod(pd.DataFrame.query, engine="python")
-```
-
-## Google Driveのマウント
- - csvの出力先をGoogle Driveに設定すればGoogle Sheetsですぐ開くことができ、便利
- - 例ではマウントパスを`/content/drive`としているが、実際にマウントされるのは`/content/drive/MyDrive`になる
-   - 共有ドライブは`/content/drive/Shareddrives`になる
-   - 共通で使用するデータソース・ライブラリを等を置いておくなどの使い方も可能
-
-**マウント**
-```python
-from google.colab import drive
-drive.mount('/content/drive')
-```
-
-**csvをGoogle Driveに保存して、Google Sheetsで開く**
-```python
-df.to_csv('/content/drive/MyDrive/<filename.csv>', index=False)
-```
- - Google Driveを開き(https://drive.google.com/drive/u/2/searchなど)、ファイル名で検索し、Google Sheetsで開く
-
-**明示的に同期する**
-```python
-drive.flush_and_unmount()
-print('All changes made in this colab session should now be visible in Drive.')
-```
-
-**google driveにパッケージをインストールする**
-```python
-!pip install ${PKG} -t "/content/drive/MyDrive/colab/libs" 2>&1 > /dev/null
-```
-
-**shareddrivesに置いたライブラリをインストールする**
-```python
-from pathlib import Path
-import os
-from google.colab import drive
-
-drive.mount('/content/drive', force_remount=True)
-if Path('/content/drive/Shareddrives/XXX/YYY.zip').exists():
-  os.system("python3 -m pip install /content/drive/Shareddrives/XXX/YYY.zip --ignore-requires-python --no-deps")
-  print('インストールが完了しました')
-else:
-  raise Exception("YYYライブラリが見つかりませんでした")
-```
+## google colabでgoogle spreadsheetの使い方
+ - [/google-colab-spreadsheet/](/google-colab-spreadsheet/)
 
 ## Google Colabのipynbファイルにblack(リンター)を適応する
  - 手順
