@@ -16,6 +16,7 @@ update_dates: ["2023-04-15"]
  - pyenvはvenvと別のもの
    - pyenvはpythonのバイナリを複数管理するためのソフトウェアで、venvは依存を隔離して別のパッケージ体系にするもの
  - poetryで指定したバージョンのpythonを利用するときなどに必要 
+ - pyenvを最新に更新するには`~/.pyenv`以下にあるgitを最新版にする必要がある
 
 ## 依存
 
@@ -41,6 +42,12 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 # poetryとの連携用の環境変数
 export POETRY_PYENV_PLUGIN_ENABLE=1
+```
+
+## pyenvのアップデート
+
+```console
+$ cd $(pyenv root) && git pull && cd -
 ```
 
 ## 判例
