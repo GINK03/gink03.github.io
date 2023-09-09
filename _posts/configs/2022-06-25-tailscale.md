@@ -27,6 +27,7 @@ update_dates: ["2022-06-25"]
  - [headscale](https://github.com/juanfont/headscale)というコントロールプレーンをセフルホストにするOSSもある
  - exit nodeを指定・利用することできる
    - VPNをトンネリングで利用しているイメージですべてのトラヒックをexit node経由で行うことができる
+ - relayモードとdirectモードがあり、directモードはとても早いが`41641/udp`の開放が必要になる
 
 
 ## ユースケース
@@ -48,7 +49,7 @@ $ sudo tailscale up
  - `app store`から`tailscale`を検索してインストール
  - app store版ではCLIは入らない
 
-**macOSにビルドしてインストール**
+**macOSにビルドしてインストール/アップデート**
 ```console
 $ go install tailscale.com/cmd/tailscale{,d}@main
 $ sudo $HOME/.go/bin/tailscaled install-system-daemon # launchdに登録
@@ -67,16 +68,19 @@ $ sudo $HOME/.go/bin/tailscaled install-system-daemon # launchdに登録
  - macOS
    - `utunX`
 
-## 現在アクティブなデバイスの一覧を表示
+## 現在アクティブなデバイスの一覧と接続形式を表示
 
 ```console
 $ tailscale status
 ```
  - 接続可能なデバイスの一覧を表示できる
  - メニューバーやタスクトレイから確認するより早い
+ - 通信方式の確認
+   - `relay <tok>`のような表示のときrelayサーバ経由でのアクセス
+   - `direct 211.15.239.222:15968`のような表示のときdirectアクセス
 
 ## ベンチマーク
- - VPNを接続してない場合に比べて、約パフォーマンスが54%に低下する
+ - relayサーバ経由だと、約パフォーマンスが54%に低下する
 
 **直接接続した場合**
 ```console
