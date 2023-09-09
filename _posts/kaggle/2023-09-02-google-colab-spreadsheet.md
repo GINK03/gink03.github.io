@@ -20,20 +20,22 @@ update_dates: ["2023-09-03"]
 ```python
 import gspread
 from google.auth import default
-
-creds, _ = default()
-GC = gspread.authorize(creds)
+from google.colab import auth
+# OAuth認証を行う
+auth.authenticate_user()
 
 def load_gss(worksheet: str) -> pd.DataFrame:
-  wb = GC.open_by_url('https://docs.google.com/spreadsheets/d/*************************-HmrNNaIAs7vXeTP-eVI/edit#gid=969528449')
-  a = pd.DataFrame(wb.worksheet('投稿文').get_all_values())
+  client = gspread.authorize(default()[0])
+  wb = client.open_by_url('https://docs.google.com/spreadsheets/d/*************************-HmrNNaIAs7vXeTP-eVI/edit#gid=969528449')
+  a = pd.DataFrame(wb.worksheet(worksheet).get_all_values())
   a.columns = a.iloc[0].tolist()
   a = a[1:]
   return a
 
 def save_gss(worksheet: str, df: pd.DataFrame):
-  wb = GC.open_by_url('https://docs.google.com/spreadsheets/d/********************************-HmrNNaIAs7vXeTP-eVI/edit#gid=969528449')
-  wb.values_update("投稿文",
+  client = gspread.authorize(default()[0])
+  wb = client.open_by_url('https://docs.google.com/spreadsheets/d/********************************-HmrNNaIAs7vXeTP-eVI/edit#gid=969528449')
+  wb.values_update(worksheet,
                 params={'valueInputOption': 'USER_ENTERED'},
                 body={"values":  np.vstack([df.columns, df.values]).tolist()})
 ```
