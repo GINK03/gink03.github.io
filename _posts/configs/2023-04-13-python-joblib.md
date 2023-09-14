@@ -22,22 +22,25 @@ update_dates: ["2023-04-14"]
 $ python3 -m pip install joblib
 ```
 
-## 並列化
- - デフォルトではプロセスベース
+## parallel_backendの引数
+ - `backend`
+   - デフォルトではプロセスベース
+   - `backend="threading"`でthredingベース
+   - `backend="multiprocessing"`でprocessベース
+ - `n_jobs`
    - `n_jobs=-1`ですべてのプロセスを使用する
- - `with parallel_backend('threading', n_jobs=n_jobs):`でくくるとthredingベースで並列化を行う
- - `delayed`は遅延関数化するラッパー
- - `tqdm`を利用する際は`delayed`インスタンスを作成するイテレータのリスト内包表記に記す
 
 ### 並列化の具体例
- - GCPのセンチメント分析を並列でアクセスする場合
+ - functionという関数をthreadで並列でアクセスする場合
+ - `delayed`は遅延関数化するラッパー
+ - `tqdm`を利用する際は`delayed`インスタンスを作成するイテレータのリスト内包表記に記す
 
 ```python
 from joblib import Parallel, delayed
 from joblib import parallel_backend
 
-with parallel_backend('threading', n_jobs=5):
-    Parallel()(delayed(gcp_analyze_entity_sentiment)(text) for text in df.sample(frac=1)["text"])
+with parallel_backend(backend='threading', n_jobs=-1):
+    Parallel()(delayed(function)(arg) for arg in args)
 ```
 
 ### 共有メモリを利用したマルチプロセスの並列化の例
