@@ -19,6 +19,7 @@ update_dates: ["2023-08-15"]
    - ユーザが自身の権限でデバイスをマウントできる
    - 電源のoffしてからの取り外しなどのUSBフラッシュメモリ的なもののユースケースも想定されている
  - `/media/<username>/<label-or-UUID>`で自動でマウントポイントが作成される
+   - 一般的にUUIDは非常に長いのでlabelを設定しておくのが望ましい
  - `polkit`(PolicyKit)で管理されており、パスワードレスでマウントするなどができる
 
 ## コマンドの例
@@ -46,3 +47,14 @@ polkit.addRule(function(action, subject) {
 });
 # systemctl restart polkit
 ```
+
+## 各フォーマットのlabelを設定するコマンド
+ - `ext4`
+   - `$ sudo e2label /dev/sda <label>`
+ - `btrfs`
+   - `$ sudo btrfs filesystem label /dev/sda <label>`
+ - `xfs`
+   - `$ sudo xfs_admin -L <label> /dev/sda`
+ - `ntfs`
+   - `$ sudo ntfslabel /dev/sda1 <label>`
+
