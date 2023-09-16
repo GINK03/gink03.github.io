@@ -28,7 +28,11 @@ update_dates: ["2022-06-25"]
  - exit nodeを指定・利用することできる
    - VPNをトンネリングで利用しているイメージですべてのトラヒックをexit node経由で行うことができる
  - relayモードとdirectモードがあり、directモードはとても早いが`41641/udp`の開放が必要になる
-
+   - 手動でポートを変更したい場合は`/etc/default/tailscaled`を編集すれば良い
+   - 同じサブネットに複数のtailscaleのノードがあったとしてもポートを自動調整するので原則として変更する必要はない
+ - directモードを確立できない場合、世界中に配置されたDERPと呼ばれる公開サーバをリレーとしてフォールバックする
+   - `tailscale status`で接続状況を確認できる
+     - `relay "tok"`であれば東京のリレーサーバを経由している
 
 ## ユースケース
  - ファイヤーウォールの内部に設定したセキュアな環境にアクセスする
@@ -53,6 +57,16 @@ $ sudo tailscale up
 ```console
 $ go install tailscale.com/cmd/tailscale{,d}@main
 $ sudo $HOME/.go/bin/tailscaled install-system-daemon # launchdに登録
+```
+
+## tailscale ping
+ - tailscale上でのネットワークのネゴシエーションを含んだpingを行う
+ - replayモードからdirectモードに変更するためにも使用できる
+
+```console
+$ tailscale ping 100.108.132.113
+pong from kichijouji (100.108.132.113) via DERP(tok) in 39ms
+pong from kichijouji (100.108.132.113) via 211.15.239.222:41641 in 38ms
 ```
 
 ## FOSSバージョンのheadscaleについて
@@ -127,6 +141,11 @@ $ traceroute 100.123.207.30
 traceroute to 100.123.207.30 (100.123.207.30), 64 hops max, 52 byte packets
  1  100.123.207.30 (100.123.207.30)  167.247 ms  43.860 ms  149.437 ms
 ```
+
+## トラブルシューティング
+ - direct connectionが利用できない
+   - 原因
+     - 接続クライアント側(ノートパソコン等)で公衆無線LANなどを利用していると、ルーターの制限のためか、directモードが確立できないことがあった
 
 ## 参考
  - [/r/Tailscale/](https://www.reddit.com/r/Tailscale/)
