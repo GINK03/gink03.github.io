@@ -14,6 +14,7 @@ update_dates: ["2023-06-03"]
 
 ## 概要
  - poetryと同じようなツール
+   - pyenvの役割もrye単独で担っている
  - 哲学としてはconda, pipなど乱雑するパッケージマネージメント方式を考えないようにするようなツール
    - ryeとはライ麦畑のことらしい
    - [ryeがあることでマネージメントのスタンダードが一個増えてしまう自己矛盾](https://github.com/mitsuhiko/rye/discussions/6)がある
@@ -42,13 +43,8 @@ $ rye init <project-name> && cd <project-name>
 $ rye pin <version> # e.g. rye pin 3.11
 ```
 
-## venvのアクティベーション
-
-```console
-$ . .venv/bin/activation
-```
-
 ## パッケージの追加
+ - パッケージも追加してもsyncするまで実際にはインストールされない
 
 ```console
 $ rye add <package-name> # e.g. rye add openai
@@ -58,6 +54,19 @@ $ rye add <package-name> # e.g. rye add openai
 
 ```console
 $ rye sync 
+```
+
+## ryeの環境下でコマンドを実行
+ - 固有で使用できるコマンドの一覧が引数なしで表示される
+
+```console
+$ rye run <command>
+```
+
+## venvのアクティベーション
+
+```console
+$ . .venv/bin/activation
 ```
 
 ## 参考
