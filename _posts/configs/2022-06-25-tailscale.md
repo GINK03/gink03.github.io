@@ -133,14 +133,25 @@ $ sudo tailscale up --advertise-exit-node
 $ sudo tailscale up --exit-node=<exit-node-ip>
 ```
 
-## tracerouteで中継サーバが無いか、確認する
- - ホップが存在しないので、本当に仲介を挟まずにアクセスできていそうである
+## wireguardとrelayサーバ経由のtailscaleの速度の違い
+ - 2 ~ 3倍程度の速度差ある
 
+**wireguard**
 ```console
-$ traceroute 100.123.207.30
-traceroute to 100.123.207.30 (100.123.207.30), 64 hops max, 52 byte packets
- 1  100.123.207.30 (100.123.207.30)  167.247 ms  43.860 ms  149.437 ms
+$ netperf -H 10.87.131.4 -t TCP_STREAM -- -o mean_latency,throughput
+MIGRATED TCP STREAM TEST from (null) (0.0.0.0) port 0 AF_INET to (null) () port 0 AF_INET
+Mean Latency Microseconds,Throughput
+10961.86,94.87
 ```
+
+**relayサーバ経由のtailscale**
+```console
+$ netperf -H 100.82.111.109 -t TCP_STREAM -- -o mean_latency,throughput
+MIGRATED TCP STREAM TEST from (null) (0.0.0.0) port 0 AF_INET to (null) () port 0 AF_INET
+Mean Latency Microseconds,Throughput
+27856.18,37.48
+```
+
 
 ## トラブルシューティング
  - direct connectionが利用できない
