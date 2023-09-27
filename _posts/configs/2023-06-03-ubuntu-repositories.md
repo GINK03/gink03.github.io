@@ -15,7 +15,10 @@ update_dates: ["2023-06-03"]
 ## 概要
  - ubuntuのソフトウェアや更新のバイナリはレポジトリに管理されている
  - レポジトリのURLは`/etc/apt/sources.list`に平文で記述されている
- - どこのサーバを参照するかで速度が大きく異なる
+ - サードパーティのレポジトリは`apt-add-repository`で追加できる
+
+## レポジトリのURLを変更する
+ - どこのサーバを参照するかでダウンロード速度が大きく異なる
    - `jp.archive.ubuntu.com`
      - 遅い
    - `archive.ubuntu.com`
@@ -28,7 +31,7 @@ update_dates: ["2023-06-03"]
  - `security.ubuntu.com`は変更してはだめ
    - ミラーへの反映は行われるが時間差があるため、ubuntuのセキュリティチームが変更を推奨していない
 
-## `aruchive.ubuntu.com`を`ftp.udx.icscoe.jp/Linux`に変える
+### 変更例; `aruchive.ubuntu.com`を`ftp.udx.icscoe.jp/Linux`に変える
  - vim
    - `/etc/apt/sources.list`を開く
    - `:s/archive.ubuntu.com/ftp.udx.icscoe.jp\/Linux/g`
@@ -38,10 +41,22 @@ update_dates: ["2023-06-03"]
    - 秋葉原のUDXのサーバから元のarchive.ubuntu.comサーバに戻す
      - `sudo sed -i.udx -r 's@https://ftp\.udx\.icscoe\.jp/Linux/ubuntu/?@http://archive.ubuntu.com/ubuntu@g' /etc/apt/sources.list`
 
+## サードパーティのレポジトリを追加・削除する
+
+**追加**
+```console
+$ sudo apt-add-repository ppa:example/ppa
+```
+
+**削除**
+```console
+$ sudo apt-add-repository --remove ppa:example/ppa
+```
+
 ## トラブルシューティング
  - `do-release-upgrade -d`できない
    - 対応
-     - UDXのレポジトリから元のレポジトリに戻すことで`do-release-upgrade`できた
+     - UDXのレポジトリから元のレポジトリに戻すことで`do-release-upgrade`で可能
 
 ## 参考
  - [Ubuntu aptが遅かったので jp.archive.ubuntu.com を変更](https://kuni92.net/2022/10/ubuntu-apt-jparchiveubuntucom.html)
