@@ -16,6 +16,7 @@ update_dates: ["2023-01-28"]
  - open.aiが提供する画像生成AI
  - dall-eでダリと発音すると思われる
  - 類似のmidjourneyやstable diffusionに比べて著作権やコンプライアンスの意識が高い
+ - dall-e 3からChatGPTと同じインターフェースでの対話での生成が可能になる
  
 ## 著作権やコンプライアンスへの配慮
  - 各種配慮
@@ -30,4 +31,5 @@ update_dates: ["2023-01-28"]
 ---
 
 ## 参考
+ - [DALL·E 3](https://openai.com/dall-e-3)
  - [DALL·E 2](https://openai.com/dall-e-2/)
