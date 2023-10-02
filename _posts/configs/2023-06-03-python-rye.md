@@ -69,5 +69,13 @@ $ rye run <command>
 $ . .venv/bin/activation
 ```
 
+## トラブルシューティング
+ - pyenvとryeを併用したときにpythonが起動しなくなる
+   - 原因
+     - pyenvのglobalのpythonが未設定の際に発生する
+   - 対応
+     - pyenvのglobalのpythonを設定する
+       - `pyenv global <version>`
+
 ## 参考
  - [Rye: An Experimental Package Management Solution for Python](https://rye-up.com/)
