@@ -14,7 +14,9 @@ update_dates: ["2022-05-17","2022-01-10"]
 # wikipediaの(データの)使い方
 
 ## 概要
- - わかりやすいデータセットとしてwikipediaのダンプデータを使うことができる
+ - 研究開発用のデータセットとしてwikipediaのダンプデータを使うことができる
+ - テキストはMediaWikiのウィキテキスト・ウィキマークアップ言語で記述されている
+   - サニタイズを行うには[mwparserfromhell](https://github.com/earwig/mwparserfromhell)を利用すると便利
 
 ## データの種類
  - `pages-meta-current.xml.bz2`
@@ -34,7 +36,23 @@ update_dates: ["2022-05-17","2022-01-10"]
 ## ダウンロードサイト
  - [Index of /jawiki/](https://dumps.wikimedia.org/jawiki/)
 
-## データの凡例
+## ウィキテキストのサニタイズ例
+
+```python
+import mwparserfromhell
+
+def parse_from_hell(text):
+    wikicode = mwparserfromhell.parse(text)
+    clean_text = wikicode.strip_code()
+    return clean_text
+
+wikipedia_text = "I has a template! {{foo|bar|baz|eggs=spam}} See it?"
+
+clean_text = parse_from_hell(wikipedia_text)
+print(clean_text) # I has a template! See it?
+```
+
+## データのパース例
 
 ### pages-meta-current.xml.bz2
  - xmlで構成されている
