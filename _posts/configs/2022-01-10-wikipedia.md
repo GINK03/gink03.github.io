@@ -46,7 +46,7 @@ def parse_from_hell(text):
     clean_text = wikicode.strip_code()
     return clean_text
 
-wikipedia_text = "I has a template! {{foo|bar|baz|eggs=spam}} See it?"
+wikipedia_text = "I has a template! { { foo|bar|baz|eggs=spam } } See it?"
 
 clean_text = parse_from_hell(wikipedia_text)
 print(clean_text) # I has a template! See it?
