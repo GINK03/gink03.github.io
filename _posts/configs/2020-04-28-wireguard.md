@@ -198,3 +198,12 @@ Endpoint = 138.2.4.109:41194 # IPv4で接続するとき
 PersistentKeepalive = 1
 ```
  - `AllowdIPs`でip routeで優先されるサブネットを適切に設定する必要がある
+
+## トラブルシューティング
+ - macOSでドメインが解決できない
+   - 原因
+     - wireguardのDNSがIPの範囲を超えて反映される
+     - 挙動的にはバグと思われる
+   - 対応
+     - macOS + wireguardの場合、wireguard側でDNSを設定しない
+
