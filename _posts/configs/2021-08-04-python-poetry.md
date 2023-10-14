@@ -95,7 +95,7 @@ $ poetry run jupyter lab --port 2000 # PATH汚染を回避してjupyterを実行
 $ cd <poetry-project>
 $ pyenv local 3.11.4
 # pyproject.tomlを編集してpythonバージョンを3.11.4に固定
-$ poetry use env python3.11
+$ poetry env use python3.11
 $ poetry install
 ```
 
