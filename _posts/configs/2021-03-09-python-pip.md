@@ -20,6 +20,11 @@ update_dates: ["2022-04-15","2022-01-02","2021-11-01","2021-10-27","2021-03-09"]
    - pypiで管理されたパッケージ
    - gitで管理されたパッケージ
    - zip形式のパッケージ
+ - [PEP 668](https://peps.python.org/pep-0668/)の提案により、グローバル環境にインストールすることは非推奨となった
+
+## PEP 668以降でグローバル環境にインストールする方法
+ - `pip3 install <packagename> --break-system-packages`を用いる
+ - 環境変数`PIP_BREAK_SYSTEM_PACKAGES="1"`を設定する
 
 ## rootとuser
  
@@ -123,3 +128,8 @@ argon2-cffi-bindings==21.2.0
  - 対応
    - パスが通っている空間にシンボリックリンクを貼る、PATHを追加するなど
  
+---
+
+## 参考
+ - [Python 3.11, pip and (breaking) system packages](https://veronneau.org/python-311-pip-and-breaking-system-packages.html)
+
