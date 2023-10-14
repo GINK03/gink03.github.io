@@ -26,6 +26,7 @@ $ git clone https://github.com/github/copilot.vim.git \
 
 ## 認証
  - 一部のneovimのプラグインが干渉して認証プロセスが見ずらいことがある
+   - 例えば、"folke/noice.nvim"は認証プロセスを見えなくするので一時的に無効化する必要がある
 
 ```vim
 :Copilot setup
