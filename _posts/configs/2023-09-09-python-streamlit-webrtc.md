@@ -15,6 +15,8 @@ update_dates: ["2023-09-09"]
 ## 概要
  - streamlit上で画像/音声をリアルタイム処理しその結果を確認できるライブラリ
  - 音声・画像をwebアプリで利用するにはSSLが必要になるが、localhostでは例外的に動作できる
+ - また、SSLとSTUN/TURNサーバーを利用することで、インターネットでも動作可能
+   - 安定して利用できるSTUN/TURNサーバーは限定されている
  - macOSであればiPhoneをカメラとして利用できるので、iPhoneアプリを制作した前提でテスト可能
 
 ## インストール
@@ -107,6 +109,13 @@ if ctx.video_processor:
     if st.button("Snapshot"):
         ctx.video_processor.snapshot = True
 ```
+
+## トラブルシューティング
+ - インターネット環境下でカメラ機能が動作しない
+   - 原因
+      - STUN/TURNサーバーが利用できない・不安定である
+   - 対応
+      - [streamlit-webrtcの公式見解](https://github.com/whitphx/streamlit-webrtc#configure-the-turn-server-if-necessary)によると、twilioのSTUN/TURNサーバーを利用することを推奨している
 
 ## 参考
  - [Streamlit + Web Cam/Qiita](https://qiita.com/kotai2003/items/fe7dedd03ed049ac0265)
