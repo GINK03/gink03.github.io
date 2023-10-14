@@ -45,6 +45,18 @@ end)
  - `:PackerSync`
    - `:PackerUpdate`して`:PackerCompile`する
 
+## 一時的にプラグインを無効化する
+ - 無効化したいプラグインの`use`に`disable = true`を追加する
+ - `disable = true` を追加したプラグインは `:PackerSync` で無効化される
+
+```lua
+use {
+  'myusername/example',
+  disable = true,
+  ...
+}
+```
+
 ---
 
 ## トラブルシューティング
