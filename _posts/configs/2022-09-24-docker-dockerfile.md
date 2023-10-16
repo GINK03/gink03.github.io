@@ -88,6 +88,12 @@ node_modules/
 *.swp
 *.bak
 
+# 任意のサブディレクトリ名をもつものを無視する
+**/subdir/
+
+# 任意のサブディレクトリにあるファイルを無視する
+**/*.log
+
 # Ignore git related files
 .git/
 .gitignore
