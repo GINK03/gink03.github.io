@@ -69,6 +69,26 @@ $ rye run <command>
 $ . .venv/bin/activation
 ```
 
+## Dockerでryeのプロジェクトを実行する
+
+**コンテナにryeをインストールしない場合**
+
+```dockerfile
+FROM python:3.11
+
+RUN apt-get update -y && apt-get install -y
+RUN pip install --upgrade pip
+
+WORKDIR /app
+COPY . /app/
+
+# ryeのrequirements.lockをrequirements.txtに変換してからpipでインストール
+RUN sed '/-e/d' requirements.lock > requirements.txt
+RUN pip install -r requirements.txt
+
+CMD sh -c "<command>"
+```
+
 ## トラブルシューティング
  - pyenvとryeを併用したときにpythonが起動しなくなる
    - 原因
@@ -79,3 +99,4 @@ $ . .venv/bin/activation
 
 ## 参考
  - [Rye: An Experimental Package Management Solution for Python](https://rye-up.com/)
+ - [Rye + Docker #239](https://github.com/mitsuhiko/rye/discussions/239)
