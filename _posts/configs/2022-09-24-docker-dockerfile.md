@@ -72,6 +72,27 @@ RUN cd /tmp/mecab-ipadic-neologd; ./bin/install-mecab-ipadic-neologd -n -y --pre
  - `.dockerignore`を追加して特定のディレクトリをスキップするようにする
  - この設定は`Dockerfile`内部でも有効
 
+**例**
+```dockerignore
+# Ignore all log files
+*.log
+
+# Except this one
+!important.log
+
+# Ignore node_modules directory
+node_modules/
+
+# Ignore temporary files
+*.tmp
+*.swp
+*.bak
+
+# Ignore git related files
+.git/
+.gitignore
+```
+
 ---
 
 ## cacheを有効に使いこなす
