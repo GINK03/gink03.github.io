@@ -16,7 +16,10 @@ update_dates: ["2023-06-22"]
  - pipがグローバルのパッケージを汚染してしまうので作られたツール
    - 別の環境にインストールされ、システムのパッケージと競合しない
    - [PEP 668](https://peps.python.org/pep-0668/)の提案に依拠する
+ - ユースケースとしてコマンドラインで単独で動作するパッケージをインストールするのに適している
+   - e.g. `jupyter-lab`
  - [pypa](https://github.com/pypa/pipx)の提供なのでオーソライズドなもの 
+ - インストールされた実態は`~/.local/pipx/venvs`
 
 ## インストール
 
@@ -40,6 +43,26 @@ $ sudo apt install pipx
 
 ```console
 $ pipx install <package-name>
+```
+
+## 実行するPythonのバイナリ・バージョンを指定し、パッケージ名にsuffixをつける
+ - 例えば、`python3.11`で`jupyterlab`をインストールする場合は、`jupyterlab_3.11`という名前になる
+
+```console
+$ pipx install <package-name> --python $(which python3) --suffix <suffix>
+```
+
+### 例; jupyterlabをインストールする
+
+```console
+$ pipx install jupyterlab --python $(which python3) --suffix _3.11
+$ pipx inject jupyterlab_3.11 tqdm pandas seaborn scikit-learn ipywidgets theme-darcula joblib sortedcontainers
+```
+
+## パッケージの一覧を表示する
+
+```console
+$ pipx list
 ```
 
 ## インストールせずにパッケージを実行する
