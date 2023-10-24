@@ -12,6 +12,18 @@ update_dates: ["2023-07-16"]
 
 # macOSのトラブルシューティング
 
+### `open and save panel service not responding`とプロセスに表示されアプリがストールする
+ - 原因
+   - macOS sonoma以降のクラウドドライブのバグ
+ - 対応
+   - iCloud Driveを一時的にオフにする
+
+### macOS sonomaのスクリーンロック画面からパスワードでログインできない
+ - 原因
+   - Active Directoryと内容の同期が取れていないバグ
+ - 対応
+   - Apple Watch, 指紋認証などのバイオメトリック認証でログインする
+
 ### ネットワークが`self-assigned ip address`になり通信できない
  - 原因
    - DHCPサーバからIPアドレスの通知を受け取れなくなっている
