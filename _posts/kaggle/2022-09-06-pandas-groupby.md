@@ -65,3 +65,13 @@ display(df.groupby(by=["A"]).agg(B_lst=("B", list)).reset_index())
 df = df.groupby(by=["day"]).sample(n=100000, random_state=1)
 ```
 
+## groupbyした上でrollingする
+ - 各グループでrollingしたい場合に使える
+ - `transform`を使うことで、rollingした値を元のデータフレームに追加できる
+   - `transform`を用いないとグループ間の境界を考慮しない
+
+**具体例**
+```python
+# 各グループでrollingした値を元のデータフレームに追加する例
+df["rolling_mean"] = df.groupby(by=["group name"])["value"].transform(lambda x: x.rolling(7, 1).mean())
+```
