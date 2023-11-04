@@ -97,6 +97,18 @@ CMD sh -c "<command>"
      - pyenvのglobalのpythonを設定する
        - `pyenv global <version>`
 
+ - ryeとpyenvのpython環境名の非互換により、neovim, pyrightなどのpythonパスが正しく設定されない
+   - 原因
+     - ryeの命名規則は `cpython-x86_64-linux@3.11.5` などであるので、pyenvの命名規則とは異なる
+   - 対応
+     - pyenv側で環境に対してシンボリックリンクを張って同様の環境名を用意することで、neovim, pyrightなどのpythonパスの不具合を回避できる　
+
+**修正例**
+```console
+$ ln -s $HOME/.pyenv/versions/3.11.5 $HOME/.pyenv/versions/cpython-x86_64-linux@3.11.5
+```
+
+
 ## 参考
  - [Rye: An Experimental Package Management Solution for Python](https://rye-up.com/)
  - [Rye + Docker #239](https://github.com/mitsuhiko/rye/discussions/239)
