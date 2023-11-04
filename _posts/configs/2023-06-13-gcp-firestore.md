@@ -14,34 +14,38 @@ update_dates: ["2023-06-13"]
 
 ## 概要
  - [gcp datastore](/gcp-datastore/)の新バージョン
+ - nosqlデータベース
  - インターフェイスもアップデートされており、文法には互換がない
    - firestoreをdatastore互換モードで動作させる方法はある
 
 ## インストール
 
 ```console
-$ pip install firebase-admin
+$ pip install google-cloud-firestore
 ```
 
-## pythonでの具体例
+## エミュレータ
+
+**Ubuntuの場合**
+```console
+$ sudo apt install default-jre
+$ sudo apt-get install google-cloud-sdk-firestore-emulator
+$ gcloud emulators firestore start # エミュレータの起動
+$ export FIRESTORE_EMULATOR_HOST=[::1]:8414 # 環境変数の設定
+```
+
+## pythonでの具体例(ツイートのアカウントごとの保存)
 
 **ADCでアクセス**
 ```console
 $ gcloud auth application-default login
 ```
 
-**dbにアクセス**
+**dbインスタンスの初期化**
 ```python
-os.environ["GOOGLE_CLOUD_PROJECT"] = "<gcp-project-id>"
-import firebase_admin
-from firebase_admin import credentials
-from firebase_admin import firestore
+from google.cloud import firestore
 
-# Use the application default credentials.
-cred = credentials.ApplicationDefault()
-
-firebase_admin.initialize_app(cred)
-db = firestore.client()
+db = firestore.Client()
 ```
 
 **データの保存**
@@ -57,15 +61,9 @@ ref.set({"text": text,
 **データの取得**
 ```python
 ref = db.collection("<twitter-account>").document("<tweet-id>")
-ref.get().to_dict() # dict型でデータが得られる
-```
-
-**キーの存在の判定**
-```python
-ref = db.collection("<twitter-account>").document("<tweet-id>")
 doc = ref.get()
-if doc.exists: # メンバ変数でわかる
-    print("exists")
+if doc.exists: # ドキュメントの有無はメンバ変数でわかる
+    print(f"Document data: {doc.to_dict()}")
 else:
     print("not exists")
 ```
