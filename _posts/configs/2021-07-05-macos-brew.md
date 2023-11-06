@@ -3,7 +3,7 @@ layout: post
 title: "brew"
 date: 2021-07-05
 excerpt: "brewついて"
-tags: ["brew", "osx"]
+tags: ["brew", "macOS"]
 config: true
 comments: false
 sort_key: "2022-01-22"
@@ -51,25 +51,16 @@ $ brew install firefox
 **cask用のバージョン管理拡張機能**  
  - [homebrew-cask-upgrade](https://github.com/buo/homebrew-cask-upgrade)
 
-## 必須ソフトをまとめて入れる
+## brewでインストールしたパッケージのdumpとrestore
 
-```shell
-brew install python3
-brew install gcc
-brew install tmux
-brew install mosh
-brew install zsh; chsh -s /bin/zsh
-brew install wget
-brew install htop
+**dump**
+```console
+$ brew bundle dump # Brewfileが生成される
+```
 
-brew install \
-google-chrome \
-google-japanese-ime \
-vivaldi \
-iterm2 \
-alfred \
-karabiner-elements \
-mas
+**restore**
+```console
+$ brew bundle # Brewfileがあるディレクトリで実行する
 ```
 
 ## インストールされたパッケージ一覧
