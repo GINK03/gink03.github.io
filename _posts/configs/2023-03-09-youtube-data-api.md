@@ -44,7 +44,7 @@ API_VERSION = 'v3'
 
 def get_authenticated_service():
   flow = InstalledAppFlow.from_client_secrets_file(CLIENT_SECRETS_FILE, SCOPES)
-  credentials = flow.run_local_server()
+  credentials = flow.run_local_server(port=8080) # ローカルサーバでOAuth認証を通す, 必要に応じてポート番号を変更
   return build(API_SERVICE_NAME, API_VERSION, credentials = credentials)
 
 def channels_list_by_username(service, **kwargs):
@@ -98,6 +98,36 @@ items = response.get("items")
 for item in items:
     pp.pprint(item)
     print("="*50)
+```
+
+## チャンネルIDを指定して動画を取得
+
+```python
+# チャンネルのアップロードされた動画を取得
+def get_channel_videos(youtube, channel_id):
+    # チャンネルのコンテンツ詳細を取得してアップロードプレイリストのIDを取得
+    channel_response = youtube.channels().list(id=channel_id, 
+                                               part='contentDetails').execute()
+    playlist_id = channel_response['items'][0]['contentDetails']['relatedPlaylists']['uploads']
+    
+    videos = []
+    next_page_token = None
+    
+    # プレイリストから動画を取得（ページトークンを使って全動画を取得する）
+    while True:
+        playlist_response = youtube.playlistItems().list(playlistId=playlist_id,
+                                                         part='snippet',
+                                                         maxResults=50,
+                                                         pageToken=next_page_token).execute()
+        
+        videos += playlist_response['items']
+        next_page_token = playlist_response.get('nextPageToken')
+        if next_page_token is None:
+            break
+    return videos
+
+# 動画一覧を取得して表示
+videos = get_channel_videos(youtube , "UC67Wr_9pA4I0glIxDt_Cpyw")
 ```
 
 ---
