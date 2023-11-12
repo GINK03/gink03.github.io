@@ -15,7 +15,7 @@ update_dates: ["2023-05-15"]
 ## 概要
   - 低レイヤーであったファイルシステムをラップしたもの
 
-## よく使う機能
+## よく使う機能とメンバ変数
  - パス結合
    - `Path("directory") / "file"`
  - ファイル・ディレクトリのイテレータ
@@ -39,3 +39,7 @@ update_dates: ["2023-05-15"]
    - `Path("file").unlink()`
  - シンボリックリンクの作成
    - `Path('path/to/symlink.txt').symlink_to(Path('path/to/original_file.txt'))`
+ - ファイル名(拡張子付き)
+   - `Path("path/to/file.txt").name` -> `file.txt`
+ - ファイル名(拡張子なし)
+   - `Path("path/to/file.txt").stem` -> `file`
