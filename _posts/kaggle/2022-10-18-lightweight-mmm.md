@@ -33,15 +33,31 @@ $ python3 -m pip install --upgrade --no-deps --force-reinstall lightweight_mmm
 ## 具体例
 
 ```python
+# ダミーデータを作成
+import pandas as pd
+df = pd.DataFrame()
+df["instagram_cost"] = np.random.normal(1000, 100, 365)
+df["instagram_imp"] = df["instagram_cost"] * 10
+df["instagram_install"] = df["instagram_cost"] / 1.0 +  np.random.normal(100, 10, 365)
+df["x_cost"] = np.random.normal(2000, 200, 365)
+df["x_imp"] = df["x_cost"] * 10
+df["x_install"] = df["x_cost"] / 2.0 +  np.random.normal(100, 10, 365)
+df["google_cost"] = np.random.normal(3000, 300, 365)
+df["google_imp"] = df["google_cost"] * 10
+df["google_install"] = df["google_cost"] / 3.0 + np.random.normal(100, 10, 365)
+
+# 仮に真の成果がGoogleとXとinstagramが1:1:1だったとする
+df["target"] = df["google_install"]  + df["x_install"]  + df["instagram_install"] 
+
 from lightweight_mmm import preprocessing, lightweight_mmm, plot, optimize_media
 import jax.numpy as jnp
 
 # impression等
-media_scaled      = preprocessing.CustomScaler(divide_operation=jnp.mean).fit_transform(media)
+media_scaled      = preprocessing.CustomScaler(divide_operation=jnp.mean).fit_transform(df[["instagram_imp", "x_imp", "google_imp"]].values)
 # 目的変数
-target_scaled     = preprocessing.CustomScaler(divide_operation=jnp.mean).fit_transform(target)
+target_scaled     = preprocessing.CustomScaler(divide_operation=jnp.mean).fit_transform(df[["target"]].values)
 # 投資したコスト等
-costs_scaled      = preprocessing.CustomScaler(divide_operation=jnp.mean).fit_transform(costs)
+costs_scaled      = preprocessing.CustomScaler(divide_operation=jnp.mean).fit_transform(df[["instagram_cost", "x_cost", "google_cost"]].mean(axis=0).values)
 mmm = lightweight_mmm.LightweightMMM(model_name="hill_adstock")
 mmm.fit(
         media       = media_scaled,
