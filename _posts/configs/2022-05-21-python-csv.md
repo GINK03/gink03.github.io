@@ -17,6 +17,14 @@ update_dates: ["2022-05-21"]
  - `csv`というcsvファイルをハンドルするためのモジュールがある
  - pandasで操作してしまうほうが簡単であるが、pandasが導入できないときなどに使用できる
 
+## 型推論に失敗するケース
+ - XのIDのような大きい整数値があるとき、floatになってしまう
+   - dtype引数で明示的に型を指定する必要がある
+
+```python
+import pandas as pd
+df = pd.read_csv("x_sample.csv", dtype={"id": int})
+```
 
 ## 具体例
 
