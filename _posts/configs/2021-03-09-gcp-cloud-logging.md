@@ -58,6 +58,9 @@ import json
 client = google.cloud.logging.Client()
 client.setup_logging()
 
+# ログレベルをINFOに設定
+logging.getLogger().setLevel(logging.INFO)
+
 # 方法1. extraで渡す
 data_dict = {"hello": "world"}
 logging.warning("message field", extra={"json_fields": data_dict})
