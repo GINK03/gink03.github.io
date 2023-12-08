@@ -27,7 +27,8 @@ $ poetry add jupyterlab tqdm pandas seaborn scikit-learn ipywidgets theme-darcul
     pydata-google-auth google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client google-cloud-bigquery \
     pandas-gbq japanize-matplotlib \
     db-dtypes google-cloud-bigquery-storage neovim pip pyright google-cloud-secret-manager \
-    openai tiktoken spacy requests jinja2 gspread
+    openai tiktoken spacy requests jinja2 gspread \
+    jedi_language_server
 $ poetry run jupyter lab --port 2000 --ip '0.0.0.0' # poetry shellはPATHを完全に書き換えないのでglobal環境とぶつかることがある
 ```
 
