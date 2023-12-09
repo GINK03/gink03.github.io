@@ -17,11 +17,21 @@ update_dates: ["2023-06-13"]
  - nosqlデータベース
  - インターフェイスもアップデートされており、文法には互換がない
    - firestoreをdatastore互換モードで動作させる方法はある
+ - 2023年に一つのプロジェクトに対して複数のデータベースが使用可能になった
+   - デフォルトのデータベース名は`(default)`
 
 ## インストール
 
 ```console
 $ pip install google-cloud-firestore
+```
+
+## データベースを作成する
+
+```console
+$ gcloud alpha firestore databases create \
+  --database="database-name" \
+  --location="asia-northeast1"
 ```
 
 ## エミュレータ
