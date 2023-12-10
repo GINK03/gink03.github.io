@@ -29,8 +29,6 @@ update_dates: ["2023-05-15"]
    - `Path("file").write_text("foo bar")`
  - パスの絶対値を得る
    - `Path("file").resolve()`
- - ファイルサイズを得る
-   - `Path("file").stat().st_size`
  - ディレクトリの作成
    - `Path("directory").mkdir(exist_ok=True)`
  - ファイルの作成
@@ -43,3 +41,38 @@ update_dates: ["2023-05-15"]
    - `Path("path/to/file.txt").name` -> `file.txt`
  - ファイル名(拡張子なし)
    - `Path("path/to/file.txt").stem` -> `file`
+ - ファイルの拡張子
+   - `Path("file.txt").suffix` -> `.txt`
+ - ファイルの親ディレクトリ
+   - `Path("path/to/file.txt").parent` -> `path/to`
+ - stat機能
+   - ファイルサイズを得る
+     - `Path("file").stat().st_size`
+   - ファイルの更新日時を得る
+     - `Path("file").stat().st_mtime`
+   - ファイルの作成日時を得る
+     - `Path("file").stat().st_ctime`
+   - ファイルのアクセス日時を得る
+     - `Path("file").stat().st_atime`
+   - ファイルのパーミッションを得る
+     - `Path("file").stat().st_mode`
+   - ファイルの所有者を得る
+     - `Path("file").stat().st_uid`
+   - ファイルのグループを得る
+     - `Path("file").stat().st_gid`
+   - ファイルのデバイスを得る
+     - `Path("file").stat().st_dev`
+   - ctime, mtime, atimeはUNIXエポックからの秒数で返される
+     - `datetime.fromtimestamp(Path("file").stat().st_mtime)`
+
+## 具体的な使用例
+
+### ファイルの更新日時でソートする
+
+```python
+from pathlib import Path
+from datetime import datetime
+
+for path in sorted(Path(".").glob("*"), key=lambda x: x.stat().st_mtime):
+    print(path, datetime.fromtimestamp(path.stat().st_mtime))
+```
