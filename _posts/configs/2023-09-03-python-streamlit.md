@@ -37,7 +37,11 @@ st.set_page_config(
 )
 ```
 
-## 具体的なコード
+## ページの遷移
+ - `st.experimental_set_query_params` や `st.session_state` を使うことで、ページの遷移を実現できる
+ - URLパラメータを設定するのにタイムラグがあるので意図した動作にならないことがある
+
+## 最小の構成例
 
 ```python
 import streamlit as st
@@ -65,7 +69,7 @@ img_file_buffer = st.camera_input("Take a picture")
  - 外部からアクセスするには`--server.address 0.0.0.0`が必要になる
 
 ```console
-$ streamlit run app.py --server.port 8080 --server.address 0.0.0.0"
+$ streamlit run src/app.py --server.port 8080 --server.address 0.0.0.0"
 ```
 
 ## Dockerfileの例
@@ -83,7 +87,7 @@ COPY . /app/
 
 RUN poetry install --no-ansi --no-interaction
 
-CMD sh -c "streamlit run app.py --server.port 8080 --server.address 0.0.0.0"
+CMD sh -c "streamlit run src/app.py --server.port 8080 --server.address 0.0.0.0"
 ```
 
 ## 参考
