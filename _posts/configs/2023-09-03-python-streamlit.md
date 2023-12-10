@@ -24,6 +24,19 @@ update_dates: ["2023-09-03"]
 $ pip install streamlit
 ```
 
+## ページの設定
+ - デフォルトでは表示幅が狭く、テーブルが見づらいので、`st.set_page_config`で設定する
+
+```python
+import streamlit as st
+st.set_page_config(
+  layout="wide",
+  page_icon="🏠",
+  initial_sidebar_state="expanded",
+  page_title="Streamlit Example",
+)
+```
+
 ## 具体的なコード
 
 ```python
