@@ -50,6 +50,15 @@ class Item(Model):
     timestamp = DateTime(auto=True) # type: ignore
 ```
 
+### データの存在の確認
+
+```python
+if Item.collection.get("id"):
+    print("exist")
+else:
+    print("not exist")
+```
+
 ### データの追加
 
 ```python
@@ -62,13 +71,13 @@ item.save()
 ### データの取得
 
 ```python
-item = Item.collection.get("collection_name" + "id")
+item = Item.collection.get("id")
 ```
 
 ### データの更新
 
 ```python
-item = Item.collection.get("collection_name" + "id")
+item = Item.collection.get("id")
 item.name = "test2"
 item.save(merge=True)
 ```
@@ -76,7 +85,7 @@ item.save(merge=True)
 ### データの削除
 
 ```python
-item = Item.collection.delete("collection_name" + "id")
+item = Item.collection.delete("id")
 ```
 
 ### クエリ
