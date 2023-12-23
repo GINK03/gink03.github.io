@@ -40,5 +40,21 @@ $ ruff check <dir>
 $ ruff check <file> --fix
 ```
 
+**pre-commitに設定**
+```yaml
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version.
+    rev: v0.1.9
+    hooks:
+      # Run the linter.
+      - id: ruff
+        types_or: [ python, pyi, jupyter ]
+        args: [ --fix ]
+      # Run the formatter.
+      - id: ruff-format
+        types_or: [ python, pyi, jupyter ]
+```
+
 **GitHub actionsでの設定**
  - [/github-actions-workflows/](/github-actions-workflows/)
