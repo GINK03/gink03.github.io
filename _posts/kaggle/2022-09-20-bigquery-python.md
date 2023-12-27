@@ -14,6 +14,7 @@ update_dates: ["2022-09-20"]
 
 ## 概要
  - [/pandas-gbq/](/pandas-gbq/)とは別のGoogleオフィシャルのpythonバインディング
+   - pandas-gbqより安定していると言われている
  - BQへのストリームライトなどをサポートする
 
 ## モジュールのインストール
@@ -23,6 +24,59 @@ $ python3 -m pip install google-cloud-bigquery
 ```
 
 ## 具体例
+
+### BQからデータをpandasで取得する
+
+```python
+from google.cloud import bigquery
+import pandas as pd
+
+# クライアントを初期化
+client = bigquery.Client()
+
+# クエリを設定
+query = """
+    SELECT name, SUM(number) as total_people
+    FROM `bigquery-public-data.usa_names.usa_1910_2013`
+    WHERE state = 'TX'
+    GROUP BY name
+    ORDER BY total_people DESC
+    LIMIT 20
+"""
+
+# クエリを実行してDataFrameに結果を格納
+df = client.query(query).to_dataframe()
+
+# 結果を表示
+print(df)
+```
+
+### BQにデータのチャンクを書き込む
+
+```python
+from google.cloud import bigquery
+
+# クライアントを設定
+client = bigquery.Client()
+
+# テーブルIDを指定
+table_id = "your-project.your_dataset.your_table"
+
+# テーブルに挿入する行を準備
+rows_to_insert = [
+    {"column_name": "value1", "other_column_name": "value2"},  # 例としての行データ
+    # その他の行データ...
+]
+
+# テーブルにデータを挿入
+errors = client.insert_rows_json(table_id, rows_to_insert)  # API request
+
+# 結果を確認
+if errors == []:
+    print("New rows have been added.")
+else:
+    print("Errors occurred:", errors)
+```
 
 ### BQをバックエンドに設定した勤怠管理システム
 
