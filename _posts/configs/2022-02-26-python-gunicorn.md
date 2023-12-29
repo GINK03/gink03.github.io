@@ -39,7 +39,8 @@ $ python3 -m pip install gunicorn
 
 ### flaskのコードをgunicornで起動する
  - flask単体だと、同じ位置のファイルをインポートできるが、gunicornからだとインポートできない
-   - `__init__.py`にて明示的に`from .foo import bar`のようなスタイルでインポートする必要がある
+   - `Failed to find attribute 'app' in 'src.bin'`のようなエラーが出る
+   - `__init__.py`にて明示的に`from .app import app`を追加する必要がある
 
 #### ディレクトリ構造
 
@@ -73,13 +74,13 @@ def home():
     return "foobar"
 
 if __name__ == '__main__':
-        app.run(host="0.0.0.0", port=5000)
+    app.run(host="0.0.0.0", port=5000)
 ```
 
 #### 起動コマンド
 
 ```console
-$ gunicorn --bind 127.0.0.1:4400 --workers=2 bin:app
+$ gunicorn --bind 127.0.0.1:4400 --workers=2 --timeout=600 bin:app
 ```
  - `--bind 127.0.0.1`はローカルホストからのみのアクセスを許可する
  - `--bind 0.0.0.0`にするとすべてのアクセスを許可する
