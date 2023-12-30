@@ -30,14 +30,14 @@ update_dates: ["2022-04-22","2022-04-22","2022-04-22"]
  - cloud storage作成・書き込み権限(コンテナレジストリが依存)
 
 ## dockerのコンテナの配置先
- - `gcr.io`
-   - `dockerhub.io`は利用できない
+ - Container Registry
+ - Artifact Registry
 
-## コンテナイメージのデプロイ
- - web uiからできる
- - テンポラリなURLが与えられる
+## シークレットの管理
+ - Cloud Runの環境変数に設定すると、シークレットとして扱われる
+   - バックエンドの実態はSecret Manager
 
-### CUIからデプロイ
+### デプロイ
 
 **リソースを指定しない場合**  
 ```console
@@ -56,7 +56,7 @@ $ gcloud run deploy <my-api> --image=gcr.io/<my-project>/name \
 ```
  - [参考](https://cloud.google.com/sdk/gcloud/reference/run/deploy)
 
-## ポートは環境変数で渡さるほうが良い
+## ポートは環境変数で指定する
  - `$PORT`で公開ポートが指定できるほうが良いとされている
  - 例えば、`PORT=5050`と設定したとしても、cloud run環境では必ずhttpsのデフォルトポート`443`にリダイレクトされる
 
