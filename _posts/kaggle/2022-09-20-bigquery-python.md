@@ -127,3 +127,11 @@ def end_attendance():
 if __name__ == "__main__":
     application.run(host='0.0.0.0', port=2345)
 ```
+
+## トラブルシューティング
+
+### `OSError: Project was not passed and could not be determined from the environment.`
+ - 原因
+   - 使用するプロジェクトが特定できない
+ - 対応
+   - `export GCLOUD_PROJECT=my-project-1234`などで環境変数を設定する
