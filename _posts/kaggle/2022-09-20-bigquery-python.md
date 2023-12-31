@@ -51,6 +51,37 @@ df = client.query(query).to_dataframe()
 print(df)
 ```
 
+### BQにデータをpandasで書き込む
+
+```python
+from google.cloud import bigquery
+
+# クライアントを設定
+client = bigquery.Client()
+
+# テーブルIDを指定
+table_id = "your-project.your_dataset.your_table"
+
+# DataFrameを準備
+df = pd.DataFrame(
+    [
+        ["value1", "value2"],
+        # その他の行データ...
+    ],
+    columns=["column_name", "other_column_name"],
+)
+
+# テーブルにデータを挿入
+job_config = bigquery.LoadJobConfig()
+job_config.write_disposition = bigquery.WriteDisposition.WRITE_TRUNCATE # 既存のテーブルが捨てて新規作成
+
+job = client.load_table_from_dataframe(df, table_id, job_config=job_config)
+job.result()  # ロード完了まで待機
+
+# 結果を確認
+logger.info("Loaded {} rows into {}.".format(job.output_rows, table_id))
+```
+
 ### BQにデータのチャンクを書き込む
 
 ```python
