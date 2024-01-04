@@ -95,6 +95,14 @@ if pd.notna(max_ts):
    - 時間情報を荒い粒度に変換する
    - 変換は切り捨て
    - BigQueryのTRUNC関数のイメージ
+   - オフセットエイリアスの種類
+     - `Y`: 年
+     - `Q`: 四半期
+     - `M`: 月
+     - `W`: 週
+     - `D`: 日
+     - `H`: 時
+     - `T`: 分
  - Google Colab
    - [pandas-dt-floor-example](https://colab.research.google.com/drive/1JGGaV1wDt-7w2bwDAQEjwus22ns7ZB_B?usp=sharing)
 
