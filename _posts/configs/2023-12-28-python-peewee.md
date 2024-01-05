@@ -36,6 +36,7 @@ db = SqliteDatabase('my_database.db')
 class User(Model):
     username = CharField(unique=True)
     password = CharField(null=True)
+    timestamp = DateTimeField(default=datetime.datetime.now)
     email = CharField(null=True)
 
     class Meta:
@@ -58,8 +59,10 @@ db.create_tables([User, Tweet])
 # ユーザの作成
 user1 = User.create(username='user1', password='pass123', email='user1@example.com')
 user2 = User.create(username='user2', password='pass123', email='user2@example.com')
-# ユーザの取得と更新
-user = User.get(User.username == 'user1')
+# ユーザの取得と更新(get)
+user = User.get(User.username == 'user1') # getは一致するものがないと例外を投げる
+# ユーザの取得と更新(get_or_none)
+user = User.get_or_none(User.username == 'user1') # get_or_noneは一致するものがないとNoneを返す
 user.username = 'new_username'
 user.save()
 # ユーザの削除
@@ -73,3 +76,12 @@ tweets = Tweet.select().where(Tweet.user == user2)
 for tweet in tweets:
     print(tweet.message)
 ```
+
+### 大量のデータを取得する
+ - `iterator()`を使うと一件ずつ取得することができる
+
+```python
+for tweet in Tweet.select().order_by(Tweet.id).iterator():
+    print(tweet.message)
+```
+
