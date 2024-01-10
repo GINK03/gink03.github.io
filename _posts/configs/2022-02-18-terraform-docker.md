@@ -16,6 +16,11 @@ comments: false
 
 ## インストール
 
+**nix**  
+```console
+$ nix-env -iA nixpkgs.terraform
+```
+
 **ubuntu, debian**  
 ```console
 $ curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
@@ -25,28 +30,34 @@ $ sudo apt-get update && sudo apt-get install terraform
 
 ## ローカルでdockerコンテナを立ち上げる
 
- 1. ディレクトリを作成し、`main.tf`というファイルを作成する
+ - 1. ディレクトリを作成し、`provider.tf`, `main.tf`というファイルを作成する
 
-```tf
+**provider.tf**
+```hcl
 terraform {
   required_providers {
     docker = {
-      source = "kreuzwerker/docker"
-      version = "~> 2.15.0"
+      source  = "kreuzwerker/docker"
+      version = "~> 2.13"
     }
   }
 }
 
-provider "docker" {}
+provider "docker" {
+  host = "unix:///var/run/docker.sock"
+}
+```
 
+**main.tf**
+```hcl
 resource "docker_image" "nginx" {
-  name = "nginx:latest"
+  name         = "nginx:latest"
   keep_locally = false
 }
 
 resource "docker_container" "nginx" {
   image = docker_image.nginx.latest
-  name = "tutorial"
+  name  = "nginx-container"
   ports {
     internal = 80
     external = 8080
@@ -54,23 +65,31 @@ resource "docker_container" "nginx" {
 }
 ```
 
- 2. 初期化を行う
+ - 2. 初期化
 
 ```console
 $ terraform init
 ```
 
- 3. 反映する
+ - 3. 反映
+
 ```console
 $ terraform apply
 ```
- 4. 動作確認
+ 
+ - 4. 動作確認
 
 ```console
 $ curl http://localhost:8080
 <!DOCTYPE html>
 <html>
 ...
+```
+ 
+ - 5. 削除
+
+```console
+$ terraform destroy
 ```
 
 ## 参考
