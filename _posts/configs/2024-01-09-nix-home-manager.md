@@ -26,10 +26,10 @@ $ nix-shell '<home-manager>' -A install
 ```
 
 ## 設定ファイルのパス
- - `~/.config/nixpkgs/home.nix`
+ - `~/.config/home-manager/home.nix`
 
 ## 基本的なコマンド
- - `home-manager swith`
+ - `home-manager switch`
    - 設定ファイルを反映
  - `home-manager edit`
    - 設定ファイルを編集
@@ -42,3 +42,26 @@ $ nix-shell '<home-manager>' -A install
 
 ## 作成した設定ファイル
  - [home.nix](https://bitbucket.org/nardtree/gimpei-dot-files/src/master/files/home-manager/home.nix)
+
+## トラブルシューティング
+
+### `warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8)`と都度出る
+ - 原因
+   - `nix-shell -p glibcLocales`実行で再現
+ - 対応
+   - `LC_ALL`をunsetする
+   - `~/.nixpkgs/config.nix`に以下を追加する
+
+```nix
+{
+  packageOverrides = pkgs: {
+    myLocaleSettings = pkgs.lib.overrideDerivation pkgs.glibc (oldAttrs: {
+      LOCALE_ARCHIVE = pkgs.lib.fileContents "/usr/lib/locale/locale-archive";
+    });
+  };
+}
+```
+ - 参考
+   - [Can"t solve 'setlocale: LC_ALL: cannot change locale' Issues on Nix running on Ubuntu](https://www.reddit.com/r/Nix/comments/18xjscn/cant_solve_setlocale_lc_all_cannot_change_locale/)
+   - [#90523](https://github.com/NixOS/nixpkgs/issues/90523)
+   - [nix-shell cannot change locale warning](https://stackoverflow.com/questions/62287269/nix-shell-cannot-change-locale-warning)
