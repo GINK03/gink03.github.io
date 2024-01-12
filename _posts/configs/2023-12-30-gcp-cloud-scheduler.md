@@ -37,5 +37,23 @@ $ gcloud beta scheduler jobs create http \
   --oidc-service-account-email=[YOUR_SERVICE_ACCOUNT_EMAIL]
 ```
 
+### 設定の確認
+
+```console
+$ gcloud beta scheduler jobs describe \
+  [JOB_NAME] \
+  --location="asia-northeast1"
+```
+
+### スケジュールの変更
+ - 以下の例では、3日ごとに実行するように変更している
+
+```console
+$ gcloud beta scheduler jobs update http \
+  [JOB_NAME] \
+  --schedule="0 9 */3 * *" \
+  --location="asia-northeast1"
+```
+
 ## 参考
  - [cron ジョブのスケジュールを設定して実行する | Google Cloud](https://cloud.google.com/scheduler/docs/schedule-run-cron-job?hl=ja)
