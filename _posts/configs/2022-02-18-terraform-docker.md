@@ -7,6 +7,8 @@ project: false
 config: true
 tag: ["terraform", "gcp"]
 comments: false
+sort_key: "2022-02-18"
+update_dates: ["2022-02-18"]
 ---
 
 # terraformの基本的な使い方
