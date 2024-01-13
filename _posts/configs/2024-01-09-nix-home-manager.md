@@ -40,8 +40,41 @@ $ nix-shell '<home-manager>' -A install
  - `home-manager packages`
    - インストールされているパッケージを確認
 
+## パッケージのアップデート
+
+```console
+$ nix-channel --update
+$ home-manager switch
+```
+
 ## 作成した設定ファイル
  - [home.nix](https://bitbucket.org/nardtree/gimpei-dot-files/src/master/files/home-manager/home.nix)
+
+## systemdのサービスを設定
+ - `home.nix`に以下を追加
+ - `systemctl --user enable home-manager-service`で有効化
+
+```nix
+# systemd servicesを設定する例
+systemd.user.services.home-manager-service = {
+  Unit = {
+    Description = "systemd service ";
+    After = [ "network.target" ];
+  };
+  Install = {
+    WantedBy = [ "default.target" ];
+  };
+  Service = {
+    Type = "simple";
+    ExecStart = "${pkgs.writeShellScript "home-manager-service" ''
+      #!/bin/sh
+      echo 1
+    ''}";
+    Restart = "always";
+    RestartSec = 5;
+  };
+};
+```
 
 ## トラブルシューティング
 
