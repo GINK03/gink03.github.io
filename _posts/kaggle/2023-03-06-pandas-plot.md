@@ -39,6 +39,29 @@ ax = df.plot.bar(x='lab', y='val', rot=90, figsize=(5,5))
 display(ax)
 ```
 
+## pandas.Series.plot.pie
+ - `explode`; 各要素の切り出し幅
+ - `autopct`; パーセンテージの表示形式
+ - `shadow`; 影の表示
+
+```python
+df = pd.DataFrame()
+
+df["example"] = (np.random.random((10000,)) > 0.3).astype(int)
+df["example"].value_counts().to_frame()["count"] \
+            .plot.pie(
+                explode=[0.05,0.05], # 幅
+                autopct='%1.1f%%', 
+                shadow=True, 
+                textprops={'fontsize':16}) \
+            .set_title("distribution")
+```
+
+<div align="center">
+  <img src="https://f004.backblazeb2.com/file/gimpeik/Images-2024/Screenshot+2024-01-13+at+10.49.48.png" width="80%">
+</div>
+
+
 ---
 
 ## 参考
