@@ -58,19 +58,24 @@ parse.urljoin("https://news.yahoo.co.jp/ex0/ex1/?a=b", "../../relative.html")
 # 'https://news.yahoo.co.jp/relative.html'
 ```
 
-### URLパラメータ(クエリ)のパース
+### URLクエリのパース
 
 ```python
 # URLパラメータ(クエリ)のパース
 from urllib import parse
-display(parse.parse_qs("key1=1&key2=2")) # {'key1': ['1'], 'key2': ['2']}
+query = parse.parse_qs("key1=1&key2=2")
+for key in list(query.keys()):
+    if key == "key1":
+        del query[key]
+display(query) # {'key2': ['2']}
 ```
 
-### URLパラメータ(クエリ)の組み立て
+### URLクエリの組み立て
+ - `doseq=True`を指定すると、同じキーが複数ある場合にリストになる
 
 ```python
 from urllib import parse
-parse.urlencode({"key1": 1, "key2": 2, "japanese": "日本語"}) # key1=1&key2=2&japanese=%E6%97%A5%E6%9C%AC%E8%AA%9E
+display(parse.urlencode({"key1": 1, "key2": 2, "japanese": "日本語"}, doseq=True)) # 'key1=1&key2=2&japanese=%E6%97%A5%E6%9C%AC%E8%AA%9E'
 ```
 
 ### URLからデータを取得
