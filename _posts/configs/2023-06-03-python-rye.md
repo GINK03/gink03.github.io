@@ -18,6 +18,8 @@ update_dates: ["2023-06-03"]
  - 哲学としてはconda, pipなど乱雑するパッケージマネージメント方式を考えないようにするようなツール
    - ryeとはライ麦畑のことらしい
    - [ryeがあることでマネージメントのスタンダードが一個増えてしまう自己矛盾](https://github.com/mitsuhiko/rye/discussions/6)がある
+ - `rye add`で追加したパッケージは`project.toml`に記述される
+   - パッケージのバージョンをあとから変更する際は`project.toml`を編集し`rye sync`を実行
  
 ## poetryとの差分
  - pythonの任意のバージョンのインストールがryeのほうが楽に行える
