@@ -15,6 +15,7 @@ update_dates: ["2024-01-30"]
 
 ## 概要
  - terraformでgcpのリソースを管理
+ - すでに様々なリソースがデプロイ済みであっても、terraformで管理できる
  - 各機能の説明は[Google Cloud Platform Provider](https://registry.terraform.io/providers/hashicorp/google/latest/docs)を参照
 
 ## 具体例
