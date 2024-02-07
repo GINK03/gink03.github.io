@@ -14,7 +14,12 @@ update_dates: ["2021-12-03"]
 # userとgroupについて
 
 ## 概要
- - userとgroupについて
+ - linuxでは、ユーザとグループの概念がある
+   - ユーザ
+     - ファイルやディレクトリの所有者
+   - グループ
+     - ユーザをまとめるためのもの
+     - docker, libvirtなどの特定の権限を持つユーザをまとめるために使われる
 
 ## ファイルと役割
  - `/etc/shadow`
@@ -88,10 +93,15 @@ update_dates: ["2021-12-03"]
 # passwd -u <username> # unlock
 ```
 
-## groupコマンド
+## groupsコマンド
 
 ### 概要
  - ユーザの所属しているグループを表示
+
+```console
+$ groups
+<username> adm cdrom sudo dip plugdev kvm lpadmin lxd sambashare docker libvirt
+```
 
 ## idコマンド
 
