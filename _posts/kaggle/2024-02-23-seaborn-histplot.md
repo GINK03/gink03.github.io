@@ -29,6 +29,7 @@ ax0, ax1 = axs
 # kde=Trueでカーネル密度推定も描画
 sns.histplot(data=data, x="column", kde=True, bins=np.arange(0, 20, 0.25), stat="probability", ax=ax0)
 ax0.set(xlim=(0, 20), xticks=np.arange(0, 20, 0.25), title="title")
+ax0.set_xticklabels(ax0.get_xticklabels(), rotation=90)
 
 # 平均値、中央値を描画
 ax0.axvline(data["column"].mean(), color='r', linestyle='--', linewidth=2)
@@ -39,4 +40,6 @@ sns.histplot(data=data, x="rate", kde=True, bins=np.arange(0, 20, 0.25), cumulat
 # 0.05, 0.5の位置に線を引く
 ax1.axhline(0.05, color='r', linestyle='-', linewidth=2)
 ax1.axhline(0.50, color='r', linestyle=':', linewidth=2)
+ax1.set(xlim=(0, 20), xticks=np.arange(0, 20, 0.25), title="title(cumulative)")
+ax1.set_xticklabels(ax1.get_xticklabels(), rotation=90)
 ```
