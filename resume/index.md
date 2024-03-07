@@ -14,9 +14,10 @@ This is a resume of my work experience.
 Introductory in Japanese and in English are mixed.
 
 ### PROFESSIONAL EXPERIENXE in 個人事業主, 2020/12 ~
+ - [youtrust.jp](https://lp.youtrust.jp/)にて、GPT-4を用いたSQLの自動生成モデルの開発
  - [youtrust.jp](https://lp.youtrust.jp/)にて、企業様へSNS会員をレコメンドするモデル・システムの開発
  - ライブ配信サービスにて、作成されたモデルのKPIの検証と、新規KPIの策定
- - 機械学習を用いた適切な資産運用を行うモデルの開発と検証
+ - 機械学習を用いた競馬の予測モデルの開発
 
 ### PROFESSIONAL EXPERIENCE in DeNA, 2018/04 ~
  - マーケティング事業にて、Marketing Mix Modelingを使用した、KPI推論
@@ -44,6 +45,8 @@ Introductory in Japanese and in English are mixed.
  - Developed detection system, can know which user has high attention to his ad or not.
 
 ## External announcement/対外発表
+ - 2024
+   - [TOW✕DeNA Promotion AI Labについて](https://techcon2024.dena.dev/session/session10/)
  - 2023
    - [ChatGPTの仕組みの解説と実務でのLLMの適用の紹介/東京電機大学特別講演](https://www.slideshare.net/gimpeikobayashi/chatgptllmlatestpdf)
    - [テキスト生成AI×デジタルマーケで効果的な成果を。より自然なクリエイティブを生む秘訣/dena.ai](https://dena.ai/story/market-ai/)
