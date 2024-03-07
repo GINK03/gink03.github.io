@@ -59,3 +59,8 @@ update_dates: ["2022-05-02","2022-03-28","2022-03-26","2022-03-25","2022-03-24"]
      - jamfが導入されている場合、ユーザのAppleIDがプライマリのAppleIDではないので、ユニバーサルコントロールが動作しない
    - 参考
      - [Jamf + Apple's Universal Control](https://community.jamf.com/t5/jamf-pro/jamf-apple-s-universal-control/td-p/291922)
+ - 前回動作したのに動作しなくなった
+   - 原因
+     - 不明
+   - 対応
+     - `システム環境設定` -> `ディスプレイ` -> `ユニバーサルコントロール` -> `Allow your pointer and keyboard ...`をOFFにして、再度ONにすると動作する
