@@ -50,7 +50,7 @@ Introductory in Japanese and in English are mixed.
  - 2023
    - [ChatGPTの仕組みの解説と実務でのLLMの適用の紹介/東京電機大学特別講演](https://www.slideshare.net/gimpeikobayashi/chatgptllmlatestpdf)
    - [テキスト生成AI×デジタルマーケで効果的な成果を。より自然なクリエイティブを生む秘訣/dena.ai](https://dena.ai/story/market-ai/)
-   - [葛飾区のファミリー・サポート・センターの取材](https://www.katsushika-shakyo.com/service/problem/fsc/)
+   - [葛飾区のファミリー・サポート・センターの取材](https://f004.backblazeb2.com/file/gimpeik/Images-2024/Screenshot+2024-03-16+at+16.50.03.png)
    - [MMM(Marketing Mix Modeling)を内製化した話/DeNAデータ分析ブログ](https://medium.com/dena-analytics-blog/mmm-marketing-mix-modeling-%E3%82%92%E5%86%85%E8%A3%BD%E5%8C%96%E3%81%97%E3%81%9F%E8%A9%B1-5b6d6f58ee67)
    - [AIによるテキストクリエイティブの自動生成/TechCon 2023](https://techcon2023.dena.dev/session/session10/)
  - 2022
