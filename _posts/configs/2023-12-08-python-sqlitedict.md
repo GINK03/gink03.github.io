@@ -37,16 +37,16 @@ load_dotenv()
 client = OpenAI()
 
 # データベースを開く
-db = SqliteDict("data/embedding_cache.sqlite")
+embedding_db = SqliteDict("embedding_db.sqlite")
 
-def get_embedding(text, model="text-embedding-ada-002"):
+def get_embedding(text, model="text-embedding-3-small"):
     url_pattern = r"(http|ftp|https):\/\/([\w\-_]+(?:(?:\.[\w\-_]+)+))([\w\-\.,@?^=%&:/~\+#]*[\w\-\@?^=%&/~\+#])?"
     text = re.sub(url_pattern, "<URL>", text)
-    if vec := db.get(text):
+    if vec := embedding_db.get(text):
         return vec
     else:
         vec = client.embeddings.create(input = [text], model=model).data[0].embedding
-        db[text] = vec
-        db.commit()
+        embedding_db[text] = vec
+        embedding_db.commit()
         return vec
 ```
