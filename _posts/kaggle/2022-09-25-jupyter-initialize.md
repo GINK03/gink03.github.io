@@ -27,41 +27,29 @@ import importlib
 if importlib.util.find_spec("japanize_matplotlib"):
     import japanize_matplotlib
 else:
-    # 日本語フォントが入っていないなど/
+    # 日本語フォントが入っていないなどに対応
     import os
     os.system("pip install japanize-matplotlib")
     import japanize_matplotlib
 %config InlineBackend.print_figure_kwargs={'facecolor' : "w"} # matplot, seabornが生成するpngが透明にならないようにする
-
 # HTMLの描画を有効化する
 from IPython.display import HTML, display
 # jupyter notebookの幅を設定
 display(HTML("<style>.container { width:85% !important; }</style>"))
 # フォントを設定
 display(HTML("""<style type='text/css'>.CodeMirror{ font-size: 13px; font-family: "PlemolJP Console NF"; }</style>"""))
-#display(HTML("""<style type='text/css'>.CodeMirror{ font-size: 13px; font-family: "SF Mono"; } </style>"""))
 
-# よく使うライブラリ
 import pandas as pd
+pd.options.display.float_format = '{:,.6f}'.format # 小数点以下6桁まで表示
+pd.set_option('display.max_columns', None) # columnを省略せず表示
 import numpy as np
+np.random.seed(42) # 乱数のシードを固定
 from tqdm.auto import tqdm
-
-# データフレームを表示する際に浮動小数点数のフォーマットを指定
-pd.options.display.float_format = '{:,.6f}'.format
-
-# 表示するカラムの上限
-pd.set_option('display.max_columns', None)
-
-# ワーニングをフィルタしたい際
-import warnings
-warnings.filterwarnings("ignore", category=UserWarning,) # ユーザーワーニングを無視
-#from pandas.core.common import SettingWithCopyWarning
-#warnings.simplefilter(action="ignore", category=SettingWithCopyWarning) # コピーの警告
-
 import gzip
-import pandas as pd
 import json
 import glob
 import pprint
 pp = pprint.PrettyPrinter(indent=2, width=120, depth=6)
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning,) # ユーザーワーニングを無視
 ```
