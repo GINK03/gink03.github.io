@@ -52,4 +52,6 @@ import pprint
 pp = pprint.PrettyPrinter(indent=2, width=120, depth=6)
 import warnings
 warnings.filterwarnings("ignore", category=UserWarning,) # ユーザーワーニングを無視
+from joblib import Parallel, delayed, parallel_backend # 並列処理
+import itertools # イテレータの生成
 ```
