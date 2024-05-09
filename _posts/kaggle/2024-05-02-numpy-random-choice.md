@@ -17,6 +17,7 @@ update_dates: ["2024-05-02"]
  - `np.random.choice`は、配列からランダムに要素を選択する関数
  - seedを固定して再現性を持たせることができる
    - `np.random.seed(42)`
+ - デフォルトでは `replace=True` で復元抽出
 
 ## パラメータ
  - `a` : 配列
