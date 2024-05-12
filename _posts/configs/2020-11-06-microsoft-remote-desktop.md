@@ -16,7 +16,8 @@ update_dates: ["2022-04-28","2022-02-23","2021-09-07"]
 ## 概要
  - microsoftが開発しているリモートデスクトップのプロトコルとそれを利用したソフトウェア
  - rdpはnetflixの映画など保護された動画コンテンツを送ることができない
- - rdpは定期的にアップデートされるがたまにバグるので、代替の手段は１つ以上あると良い
+ - windowsのリモートデスクトップクライアントは`mstsc`というコマンドで起動できる
+   - `mstsc`は`microsoft terminal services client`の略
 
 ## server sideの設定
  - Windows Professionalで`settings` -> `enable remote desktop`のスイッチを有効にする
@@ -28,7 +29,15 @@ update_dates: ["2022-04-28","2022-02-23","2021-09-07"]
 
 ## client sideの設定
 
-### macosx
+### Windows
+ - **起動**
+   - `windows` + `r` -> `mstsc`
+ - **mstscオプション**
+   - `mstsc /v:hostname` - hostnameに接続する
+   - `mstsc /admin` - 管理者権限で接続する
+   - `mstsc <filename>.rdp` - rdpファイルを読み込む
+
+### macOS
  - **インストール**
    - `app store` -> (microsoft remote desktopを検索) -> (onlineで設定したmicrosoft accountのメールアドレスとパスワードでログイン可能)  
  - **設定**
@@ -41,7 +50,7 @@ update_dates: ["2022-04-28","2022-02-23","2021-09-07"]
      - この制限のため、IMEのキーマップを変更するなどの対応が必要
        - キーマップの再設定には[/powertoys/](/powertoys/)を用いると便利
 
-### ios
+### iOS
  - **インストール**
    - `app store` -> (microsoft remote desktopを検索) -> (onlineで設定したmicrosoft accountのメールアドレスとパスワードでログイン可能)  
  - **設定**
@@ -49,36 +58,10 @@ update_dates: ["2022-04-28","2022-02-23","2021-09-07"]
  - **制限**
    - `ctrl + ]`など定義したショートカットの信号が送れないなどの問題があり、ショートカットやキーコンビネーションに難あり
 
-### remmina(サードパーティソフトウェア)
- - Linuxで使うときなど  
- - 完成度は完璧でなはないが、そこそこ使える  
-
-```console
-$ sudo snap install remmina
-```
-
-**起動**
-```console
-$ sudo remmina
-```
-
-`New Connection Profile`でprofileを新規作成する
- - `Server` : local IPアドレス
- - `Username` : Microsoft Online Accountのメールアドレス
- - `Password` : Microsoft Online Accountのパスワード
- - `Domain` : なし
- - `Resolution` : `Use client resolution`にチェック
- - `Colour depth` : `RemoteFX(32 bpp)`
- - `Quality` : `Best(slowest)`
- - `Sound` : `Local - high quality`
- - `Security` : `Negotiate`
- - `Ignore certificate` : check on
- - `Glyph cache` : check on
-
 ## トラブルシューティング
 
 ### グローバルIP接続時にクライアントのWindowsでVPNに接続すると応答がなくなる
  - **原因**
-   - グローバルIPはVPNソフトがWindowsのケットのルーティングを変更するため、リーチできなくなるために発生する
+   - グローバルIPはVPNソフトがWindowsのパケットのルーティングを変更するため、リーチできなくなるために発生する
  - **対応**
    - グローバルIPでRDPでアクセスしている場合、VPNを利用しない
