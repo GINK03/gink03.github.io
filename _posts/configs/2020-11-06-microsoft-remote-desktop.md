@@ -18,6 +18,7 @@ update_dates: ["2022-04-28","2022-02-23","2021-09-07"]
  - rdpはnetflixの映画など保護された動画コンテンツを送ることができない
  - windowsのリモートデスクトップクライアントは`mstsc`というコマンドで起動できる
    - `mstsc`は`microsoft terminal services client`の略
+ - 企業によってはセキュリティの観点から、ローカルPCの機能をほとんど制限し、リモートデスクトップのみを利用するようにしている場合がある
 
 ## server sideの設定
  - Windows Professionalで`settings` -> `enable remote desktop`のスイッチを有効にする
