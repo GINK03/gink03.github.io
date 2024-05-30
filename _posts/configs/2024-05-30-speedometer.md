@@ -33,3 +33,6 @@ update_dates: ["2024-05-30"]
  - iPhone 15 Pro Max
    - speedometer 3.0
      - Safari: 18.8
+
+## 参考
+ - [「Speedometer 3.0」が発表](https://forest.watch.impress.co.jp/docs/news/1575562.html)
