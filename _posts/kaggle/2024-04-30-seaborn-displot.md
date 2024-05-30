@@ -42,9 +42,14 @@ sns.displot(data, x="total_bill", col="time", kde=True)
 **同じグラフに複数のヒストグラムを描画する場合**
  - hue列の値によってヒストグラムを分割して描画
  - `kind='kde'` でカーネル密度推定で描画
+ - `common_norm=False` で個々のヒストグラムで正規化
 
 ```python
-sns.displot(data, x="total_bill", hue="time", kind="kde")
+sns.displot(data, 
+            x="total_bill", 
+            hue="time", 
+            common_norm=False,
+            kind="kde")
 ```
 
 **binsの切り方を指定する場合**
