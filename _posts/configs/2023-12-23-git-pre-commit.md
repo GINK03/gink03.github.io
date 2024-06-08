@@ -31,8 +31,8 @@ $ pipx install pre-commit
 
 ## レポジトリに設定
  1. リポジトリのルートに`.pre-commit-config.yaml`を作成
- 2. `pre-commit-config.yaml`に、実行したいコマンドを記述
- 3. `pre-commit install`を実行
+ 2. `.pre-commit-config.yaml`に、実行したいコマンドや設定を記述
+ 3. `pre-commit install`を実行して設定を有効化
 
 ## 手動で実行
 
