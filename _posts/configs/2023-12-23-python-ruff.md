@@ -16,6 +16,7 @@ update_dates: ["2023-12-23"]
  - pythonのlinter
  - 2023年で人気
    - 高速
+ - プロジェクトのルートに`.ruff.toml`を作成することで設定可能
 
 ## インストール
 
@@ -40,6 +41,29 @@ $ ruff check <dir>
 $ ruff check <file> --fix
 ```
 
+
+## 設定例
+
+**.ruff.toml**
+```toml
+exclude = [
+    ".git"
+]
+line-length = 88
+indent-width = 4
+target-version = "py311"
+
+[lint]
+select = ["E4", "E7", "E9", "F"]
+ignore = []
+
+fixable = ["ALL"]
+unfixable = []
+
+[format]
+quote-style = "single"
+```
+
 **pre-commitに設定**
 ```yaml
 repos:
@@ -58,3 +82,6 @@ repos:
 
 **GitHub actionsでの設定**
  - [/github-actions-workflows/](/github-actions-workflows/)
+
+## 参考
+ - [Configuring Ruff](https://docs.astral.sh/ruff/configuration/)
