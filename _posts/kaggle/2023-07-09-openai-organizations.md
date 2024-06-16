@@ -30,11 +30,13 @@ $ curl https://api.openai.com/v1/models \
 ```python
 import os
 import openai
-openai.organization = os.getenv("USING_ORGANIZATION_ID")
+openai.organization = os.getenv("OPENAI_ORGANIZATION")
 openai.api_key = os.getenv("OPENAI_API_KEY")
 openai.Model.list()
 ```
 
 ## 参考
+ - [Organization settings](https://platform.openai.com/settings/organization/general) 
+   - organization idの管理
  - [Requesting organization](https://platform.openai.com/docs/api-reference/requesting-organization)
  - [Organization、Member、API keyの関係について](https://zenn.dev/hokawa/articles/dd1a18c9192fc9)
