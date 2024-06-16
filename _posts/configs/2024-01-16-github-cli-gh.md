@@ -37,8 +37,10 @@ $ sudo yum install gh
 ```console
 $ gh auth login
 ```
+  - httpsでの認証を選択
   - terminalに表示される指示に従って、githubのトークンを取得
   - トークンを[Device Activation](https://github.com/login/device/)に入力する
+  - ブラウザが開けないエラーを無視しても問題ない
 
 ## ログイン情報をgitに使う
 
