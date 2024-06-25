@@ -26,31 +26,43 @@ comments: false
    - [pd-group-example](https://colab.research.google.com/drive/1LZWraVv7P48ym_PWJwFwUxSchq0ziBN9?usp=sharing)
 
 ## カスタムaggregation functionを用いる
- - aggで指定する関数の引数はseriesになる
- - functools.reduce等をラップして関数を定義する
 
 **具体例**
 ```python
-def nsum(series):
-    return functools.reduce(lambda x,y: x + "。 " + y, series)
-tweet_agg = tweet.groupby(by=["screen_name", "user_id"]).agg(tweet_text=("tweet_text", nsum)).reset_index()
-```
- - tweet_text(str)をコンキャットする例
+df = pd.DataFrame()
+df["Category"] = [np.random.choice(["a", "b", "c"]) for i in range(10)]
+df["Value"] = list(range(10))
 
-## aggregationした値をリストで保持する
- - 要約しないでlistデータで維持する方法
- - [pandas-agg-list-example](https://colab.research.google.com/drive/1_l_Dx76i_BmMQSoW_H8L8iluDc0ty-BE?usp=sharing)
+def custom_sum(series: pd.Series):
+    return sum([x for x in series.tolist() if x%2 == 0])
+    
+grouped = df.groupby(by=["Category"]).agg(custom_sum=("Value", custom_sum)).reset_index()
 
-**具体例**
-```python
-df["A"] = [random.choice(["a", "b", "c"]) for i in range(100) ]
-df["B"] = list(range(100))
-
-display(df.groupby(by=["A"]).agg(B_lst=("B", list)).reset_index())
 """
-0	a	[4, 5, 7, 10, 12, 16, 17, 18, 22, 25, 28, 31, ...
-1	b	[0, 1, 2, 8, 9, 13, 15, 21, 24, 26, 27, 29, 30...
-...
+| Category   |   custom_sum |
+|:-----------|-------------:|
+| a          |           20 |
+| b          |            0 |
+| c          |            0 |
+"""
+```
+
+## aggregationした値をリストにする
+
+**具体例**
+```python
+df = pd.DataFrame()
+df["Category"] = [np.random.choice(["a", "b", "c"]) for i in range(10)]
+df["Value"] = list(range(10))
+
+grouped = df.groupby(by=["Category"]).agg(lst=("Value", list)).reset_index()
+
+"""
+| Category   | lst             |
+|:-----------|:----------------|
+| a          | [2, 3, 8]       |
+| b          | [4, 5]          |
+| c          | [0, 1, 6, 7, 9] |
 """
 ```
 
@@ -74,4 +86,24 @@ df = df.groupby(by=["day"]).sample(n=100000, random_state=1)
 ```python
 # 各グループでrollingした値を元のデータフレームに追加する例
 df["rolling_mean"] = df.groupby(by=["group name"])["value"].transform(lambda x: x.rolling(7, 1).mean())
+```
+
+## groupbyした上でテキストを結合する
+
+**具体例**
+```python
+data = {
+    'Category': ['A', 'A', 'B', 'B', 'C', 'C'],
+    'Text': ['apple', 'banana', 'cherry', 'date', 'elderberry', 'fig'],
+}
+df = pd.DataFrame(data)
+grouped = df.groupby('Category').agg({'Text': ', '.join}).reset_index()
+
+"""
+| Category   | Text            |
+|:-----------|:----------------|
+| A          | apple, banana   |
+| B          | cherry, date    |
+| C          | elderberry, fig |
+"""
 ```
