@@ -19,6 +19,10 @@ comments: false
    - `na_option`
      - NaNをどうするか
      - `keep`; そのまま無視する
+   - `pct`
+     - `0.0 ~ 1.0`に圧縮する
+   - `ascending`
+     - `True`で昇順、`False`で降順
 
 
 ## methodによる挙動の違い
