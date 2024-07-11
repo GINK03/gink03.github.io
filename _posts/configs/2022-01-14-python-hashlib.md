@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "hashlib"
+title: "python hashlib"
 date: "2022-01-14"
-excerpt: "hashlibの使い方"
+excerpt: "pythonのhashlibの使い方"
 project: false
 config: true
 tag: ["python", "hashlib"]
@@ -34,9 +34,10 @@ for algorithm in [md5, sha1, sha224, sha256, sha512, sha3_512]:
     m = algorithm()
     m.update(b"Nobody inspects")
     m.update(b" the spammish repetition")
-    # print(m.digest())
     print(algorithm)
     print(m.digest_size)
+    print(m.digest()) # digest値
+    print(m.hexdigest()) # 文字列でのダイジェスト値
 ```
  - `md5`
    - 16バイト
@@ -50,6 +51,13 @@ for algorithm in [md5, sha1, sha224, sha256, sha512, sha3_512]:
    - 64バイト
  - `pbkdf2_hmac`
    - 64バイト
+
+## stringのハッシュ化
+
+```python
+def compute_hash(text: str) -> str:
+    return hashlib.sha256(text.encode('utf-8')).hexdigest()
+```
 
 ## google colab
  - [colab](https://colab.research.google.com/drive/1IpHzMY9QrlYuRnSFWKpKoVu9APqSry96?usp=sharing)
