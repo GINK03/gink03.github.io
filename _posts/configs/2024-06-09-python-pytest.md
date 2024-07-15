@@ -42,11 +42,15 @@ project/
 ```
 
 **pytest.ini**
+ - テスト対象のディレクトリの指定
+ - テスト対象のファイル名の指定
 
 ```ini
 # pytest.ini
 [pytest]
 pythonpath = src
+testpaths = tests
+python_files = test_*.py tests_*.py
 ```
 
 **src/my_module.py**
