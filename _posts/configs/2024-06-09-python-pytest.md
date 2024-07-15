@@ -84,3 +84,9 @@ $ pytest
 $ pytest tests/test_my_module.py::test_add
 ```
 
+## トラブルシューティング
+
+### pytestを実行してもテストが実行されない
+ - 原因
+   - `tests/__init__.py`が存在しない
+   - `pytest.ini`に記されている`python_files`に一致していないテストファイル名になっている
