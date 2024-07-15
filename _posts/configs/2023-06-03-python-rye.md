@@ -20,6 +20,7 @@ update_dates: ["2023-06-03"]
    - [ryeがあることでマネージメントのスタンダードが一個増えてしまう自己矛盾](https://github.com/mitsuhiko/rye/discussions/6)がある
  - `rye add`で追加したパッケージは`project.toml`に記述される
    - パッケージのバージョンをあとから変更する際は`project.toml`を編集し`rye sync`を実行
+ - 2024年7月現在、uvを開発しているAstralに移管された
  
 ## poetryとの差分
  - pythonの任意のバージョンのインストールがryeのほうが楽に行える
@@ -28,7 +29,7 @@ update_dates: ["2023-06-03"]
 ## インストール
 
 ```console
-$ curl -sSf https://rye-up.com/get | bash
+$ curl -sSf https://rye.astral.sh/get | bash
 $ echo 'source "$HOME/.rye/env"' >> ~/.bashrc
 $ source "$HOME/.rye/env"
 ```
@@ -89,6 +90,20 @@ RUN sed '/-e/d' requirements.lock > requirements.txt
 RUN pip install -r requirements.txt
 
 CMD sh -c "<command>"
+```
+
+## タスクランナーとしての利用
+ - `[tool.rye.scripts]` にタスクを記述することで、`rye run <task-name>`で実行できる
+
+**例**
+```toml
+[tool.rye.scripts]
+test = { cmd = "pytest -s" }
+```
+
+**実行**
+```console
+$ rye run test
 ```
 
 ## トラブルシューティング
