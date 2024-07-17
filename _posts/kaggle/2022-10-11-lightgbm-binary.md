@@ -55,7 +55,8 @@ gbm = lgb.train(params,
                 num_boost_round=100,
                 valid_sets=[train_data, valid_data],
                 valid_names=['train', 'valid'],
-                callbacks=[lgb.log_evaluation(period=10)])
+                callbacks=[lgb.log_evaluation(period=10),
+                           lgb.early_stopping(stopping_rounds=10, first_metric_only=True)])
 ```
 
 ## cvのテンプレート
