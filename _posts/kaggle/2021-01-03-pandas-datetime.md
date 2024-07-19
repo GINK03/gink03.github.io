@@ -25,14 +25,17 @@ update_dates: ["2022-03-26"]
 ---
 
 ## pd.to_datetime
- - 概要
+ - パース速度
    - `pd.to_datetime`はオプションによって速度が大きく異る  
    - 早い順に以下の通り
      1. `pd.to_datetime(c, format="%Y-%m-%d %H:%M:%S")`
      2. `pd.to_datetime(c, infer_datetime_format=True)`
      3. `pd.to_datetime(c)`
-   - エラーを無視するには以下のオプションが必要
-     -  `errors="ignore"`
+ - エラーハンドリング
+   - エラー時に`NaT`を返す
+     -  `errors="coerce"`
+   - エラー時にそのままの値を返す
+     - `errors="ignore"`
 
 ### 参考処理時間(ツイッターのデータ)
 
@@ -49,25 +52,18 @@ df["tweet_date"] = pd.to_datetime(df["created_at"]) # 3min 37s
 pd.to_datetime(df["created_at"], format="%a %b %d %H:%M:%S +0000 %Y") + pd.DateOffset(hours=9)
 ```
 
----
-
 ## Series.dt.strftime
- - 概要
-   - 時間を文字列に変換する
+ - 時間を文字列に変換する
 
 ```python
 df["date"].dt.strftime("%Y-%m-%d") # "年-月-日"
 ```
-
----
 
 ## timestampをUTC -> Asia/Tokyoにする
 
 ```python
 df["ts"] = pd.DatetimeIndex(df["ts"]).tz_convert("Asia/Tokyo")
 ```
-
----
 
 ## `tz aware`のデータを`tz native`にする
  - `tz aware`のデータと`tz native`のデータは比較することができないので、どちらかをどちらかに寄せる必要がある
@@ -76,8 +72,6 @@ df["ts"] = pd.DatetimeIndex(df["ts"]).tz_convert("Asia/Tokyo")
 ```python
 df["tz_native"] = df["tz_aware"].dt.tz_localize(None)
 ```
-
----
 
 ## `NaT`をハンドルする
  - pandas.Seriesか要素のオブジェクトに対して適応可能
@@ -88,21 +82,18 @@ if pd.notna(max_ts):
   # do something...
 ```
 
----
-
-### Series.dt.floor 
- - 概要
-   - 時間情報を荒い粒度に変換する
-   - 変換は切り捨て
-   - BigQueryのTRUNC関数のイメージ
-   - オフセットエイリアスの種類
-     - `Y`: 年
-     - `Q`: 四半期
-     - `M`: 月
-     - `W`: 週
-     - `D`: 日
-     - `H`: 時
-     - `T`: 分
+## Series.dt.floor 
+ - 時間情報を荒い粒度に変換する
+ - 変換は切り捨て
+ - BigQueryのTRUNC関数のイメージ
+ - オフセットエイリアスの種類
+   - `Y`: 年
+   - `Q`: 四半期
+   - `M`: 月
+   - `W`: 週
+   - `D`: 日
+   - `H`: 時
+   - `T`: 分
  - Google Colab
    - [pandas-dt-floor-example](https://colab.research.google.com/drive/1JGGaV1wDt-7w2bwDAQEjwus22ns7ZB_B?usp=sharing)
 
@@ -130,26 +121,20 @@ day	floored
 """
 ```
 
----
-
-### Series.dt.round
- - 概要
-   - 時間の丸め込み
-   - 四捨五入的に振る舞う
+## Series.dt.round
+ - 時間の丸め込み
+ - 四捨五入的に振る舞う
 
 ```python
 # 15分の粒度で丸め込む場合
 df["round_time"] = pd.to_datetime(df["date"]).dt.round('15min')
 ```
 
----
-
-### WeekNumber(week number)を範囲で文字表記する
- - 概要
-   - week numberはその年の何番目の週かをカウントする指標
-   - 週毎のKPIを出したいときなどに便利
-   - その年のある週を指し示すフォーマットは`%Y_%W`
-   - 復元に必要な情報は`%Y_%W%w`
+## WeekNumber(week number)を範囲で文字表記する
+ - week numberはその年の何番目の週かをカウントする指標
+ - 週毎のKPIを出したいときなどに便利
+ - その年のある週を指し示すフォーマットは`%Y_%W`
+ - 復元に必要な情報は`%Y_%W%w`
  - Google Colab
    - [pandas-weeknumber-day-range](https://colab.research.google.com/drive/1lXbSN08QQ9GXjuhUQC0jtOj_YuKszNwc?usp=sharing)
 
@@ -181,8 +166,6 @@ index	datetime	YYYY_W	range
 """
 ```
 
----
-
 ## 時間、WeekOfDayなど特定の情報を取り出す
 
 ```python
@@ -190,16 +173,12 @@ df["hour"] = df["datetime"].dt.hour
 df["dow"] = df["datetime"].dt.day_of_week
 ```
 
----
-
 ## クオーター(期)を計算する
 
 ```python
 pd.to_datetime(["2020-12-01", "2023-04-25"]).to_period("Q").astype(str)
 # Index(['2020Q4', '2023Q2'], dtype='object')
 ```
-
----
 
 ## 参考
  - [pandas.Timestamp.floor/pandas.pydata.org](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Timestamp.floor.html)
