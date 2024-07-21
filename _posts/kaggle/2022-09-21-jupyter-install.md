@@ -24,6 +24,7 @@ update_dates: ["2022-09-21"]
 ```console
 $ poerty new .
 $ poetry add jupyterlab tqdm pandas seaborn scikit-learn ipywidgets joblib sortedcontainers \
+    scipy lightgbm shap \
     pydata-google-auth google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client google-cloud-bigquery \
     pandas-gbq japanize-matplotlib \
     db-dtypes google-cloud-bigquery-storage neovim pip pyright google-cloud-secret-manager \
