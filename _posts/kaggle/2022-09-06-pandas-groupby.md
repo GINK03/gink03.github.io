@@ -66,6 +66,30 @@ grouped = df.groupby(by=["Category"]).agg(lst=("Value", list)).reset_index()
 """
 ```
 
+## aggregationした値の最頻値を取得する
+
+**具体例**
+```python
+import pandas as pd
+
+# サンプルデータの作成
+data = {
+    'Category': ['A', 'A', 'A', 'B', 'B', 'C', 'C', 'C', 'C'],
+    'Value': [1, 2, 2, 3, 3, 4, 4, 4, 5]
+}
+df = pd.DataFrame(data)
+
+# グループごとの最頻値を計算
+mode_df = df.groupby(by=['Category']).agg(value_mode=('Value', lambda x: x.mode().iloc[0])).reset_index()
+"""
+| Category   |   value_mode |
+|:-----------|-------------:|
+| A          |            2 |
+| B          |            3 |
+| C          |            4 |
+"""
+```
+
 ## groupbyした上でsamplingする
  - 各グループで同じだけのサンプルが欲しい場合などに使える
  - 戻り値は`pd.DataFrame`
