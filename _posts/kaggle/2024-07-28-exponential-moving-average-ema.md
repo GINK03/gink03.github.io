@@ -21,14 +21,16 @@ update_dates: ["2024-07-28"]
 
 ## 計算方法
 
-**平滑係数（smoothing factor）**
+**平滑係数（smoothing factor）** 
+
 $$
 \alpha = \frac{2}{N+1}
 $$
 
  - N: データ数
 
-**EMAの計算式**
+**EMAの計算式**  
+
 $$
 EMA_t = \alpha \times X_t + (1 - \alpha) \times EMA_{t-1}
 $$
