@@ -5,7 +5,7 @@ date: 2020-11-06
 excerpt: "microsoft remote desktop(rdp)の概要"
 project: false
 config: true
-tag: ["microsoft remote desktop", "rdp"]
+tag: ["microsoft remote desktop", "rdp", "mstsc"]
 comments: false
 sort_key: "2022-04-28"
 update_dates: ["2022-04-28","2022-02-23","2021-09-07"]
@@ -19,6 +19,7 @@ update_dates: ["2022-04-28","2022-02-23","2021-09-07"]
  - windowsのリモートデスクトップクライアントは`mstsc`というコマンドで起動できる
    - `mstsc`は`microsoft terminal services client`の略
  - 企業によってはセキュリティの観点から、ローカルPCの機能をほとんど制限し、リモートデスクトップのみを利用するようにしている場合がある
+ - リモートデスクトップの中でスクリーンショットを行うには、`snipping tool`を利用する
 
 ## server sideの設定
  - Windows Professionalで`settings` -> `enable remote desktop`のスイッチを有効にする
