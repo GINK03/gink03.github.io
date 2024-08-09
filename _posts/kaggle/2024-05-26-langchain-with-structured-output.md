@@ -15,6 +15,13 @@ update_dates: ["2024-05-26"]
 ## 概要
  - 特定の構造化形式で出力を強制する機能
  - pydanticを使用して構造化された出力を定義
+ - openai, google-genaiで使用可能
+
+## インストール
+
+```console
+$ pip install langchain-openai langchain-google-genai
+```
 
 ## 使用例
 
@@ -34,7 +41,8 @@ def make_structured(content: str):
     prompt = "与えられたニュース記事の情報を、Googleでファクトチェックするためにクエリにする主張を１行で抜き出してください。" \
             "翻訳が必要ならば日本語英語それぞれに翻訳し、適切に構造化してください。" \
             "またあなたが考えるファクトかどうかをbooleanで答えてください。: \n {content}"
-    llm = ChatOpenAI(model="gpt-4o", temperature=0)
+    llm = ChatOpenAI(model="gpt-4o", temperature=0) # openaiのモデルを指定
+    llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash",) # google-genaiのモデルを指定
     structured_llm = llm.with_structured_output(Claim)
     res = structured_llm.invoke(prompt.format(content=content))
     return res
