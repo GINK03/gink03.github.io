@@ -32,8 +32,8 @@ else:
     os.system("pip install japanize-matplotlib")
     import japanize_matplotlib
 %config InlineBackend.print_figure_kwargs={'facecolor' : "w"} # matplot, seabornが生成するpngが透明にならないようにする
-# HTMLの描画を有効化する
-from IPython.display import HTML, display
+# HTML, Markdownの描画を有効化する
+from IPython.display import HTML, display, Markdown
 # jupyter notebookの幅を設定
 display(HTML("<style>.container { width:85% !important; }</style>"))
 # フォントを設定
