@@ -28,6 +28,7 @@ $ pip install langchain-openai langchain-google-genai
 ```python
 from typing import Optional
 from langchain_openai import ChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.pydantic_v1 import BaseModel, Field
 
 class Claim(BaseModel):
