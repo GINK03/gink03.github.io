@@ -16,6 +16,7 @@ update_dates: ["2024-07-13"]
  - geminiの使い方をpythonでの例で説明する
  - geminiの課金設定はGoogle Cloudのプロジェクトに紐づいている
  - APIキーは `GOOGLE_API_KEY` として環境変数に設定すると自動で読み込まれる
+ - APIキーの発行は [aistudio.google.com](https://aistudio.google.com/app/) から行う
 
 ## インストール
 
