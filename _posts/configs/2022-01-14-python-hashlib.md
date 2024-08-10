@@ -55,6 +55,7 @@ for algorithm in [md5, sha1, sha224, sha256, sha512, sha3_512]:
 ## stringのハッシュ化
 
 ```python
+import hashlib
 def compute_hash(text: str) -> str:
     return hashlib.sha256(text.encode('utf-8')).hexdigest()
 ```
