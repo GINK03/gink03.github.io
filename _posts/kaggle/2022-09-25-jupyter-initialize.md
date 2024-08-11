@@ -38,7 +38,6 @@ from IPython.display import HTML, display, Markdown
 display(HTML("<style>.container { width:85% !important; }</style>"))
 # フォントを設定
 display(HTML("""<style type='text/css'>.CodeMirror{ font-size: 13px; font-family: "PlemolJP Console NF"; }</style>"""))
-
 import pandas as pd
 pd.options.display.float_format = '{:,.6f}'.format # 小数点以下6桁まで表示
 pd.set_option('display.max_columns', None) # columnを省略せず表示
@@ -54,4 +53,8 @@ import warnings
 warnings.filterwarnings("ignore", category=UserWarning,) # ユーザーワーニングを無視
 from joblib import Parallel, delayed, parallel_backend # 並列処理
 import itertools # イテレータの生成
+from pathlib import Path
+import hashlib
+def compute_hash(text: str) -> str: return hashlib.sha256(text.encode('utf-8')).hexdigest()[:32]
+from loguru import logger
 ```
