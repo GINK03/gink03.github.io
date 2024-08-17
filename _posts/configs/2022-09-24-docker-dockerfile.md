@@ -97,6 +97,9 @@ node_modules/
 # Ignore git related files
 .git/
 .gitignore
+
+# Ignore venv
+.venv/
 ```
 
 ---
