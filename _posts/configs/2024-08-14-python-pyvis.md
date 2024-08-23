@@ -16,6 +16,7 @@ update_dates: ["2024-08-14"]
  - グラフを描画するためのライブラリ
  - jupyter notebook上で描画するには、`notebook=True` を指定し、`IPython.display.IFrame` で表示する
  - `add_node` でノードを追加し、`add_edge` でノードを引数にエッジを追加する
+ - `Network(directional=True)` で有向グラフを作成する
 
 ## インストール
 
