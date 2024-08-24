@@ -13,11 +13,19 @@ update_dates: ["2022-07-17"]
 # python strの使い方
 
 ## 概要
+ - `split`で文字列を分割する
+   - `split(" ", 1)`で最初の1つだけ分割する
  - strのインデックスはutf8の一文字単位で区切られている
- - slicingの末尾がよく割らなくなりがち(end-1の位置までsliceされる)
+   - slicingの末尾がよくわからなくなりがち(end-1の位置までsliceされる)
 
 ## 具体例
 
+**splitの使い方**
+```python
+assert "a b c d".split(" ", 1) == ["a", "b c d"]
+```
+
+**sliceの使い方**
 ```python
 s = "あいうえお"
 # indexの最初はその文字
