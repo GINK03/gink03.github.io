@@ -16,7 +16,7 @@ update_dates: ["2022-02-01"]
 ## 概要
  - AWSが提供するサーバレスのOLAP Database
  - S3にログデータが置いてあることを期待する
-   - ログデータは正規表現でパースできることを期待する
+   - ログデータはcsv形式や正規表現でパースできることを期待している
  - S3のデータのスキャン量に応じて課金される
 
 ## aws athena home
@@ -28,42 +28,59 @@ update_dates: ["2022-02-01"]
  3. `[エディタ]`から`データベース`を指定してクエリを編集して実行する
    - すでにデータベースが設定されていると仮定している
 
-## big queryとの違い
- - S3からrow指向でデータを読み込むのでbig queryに比べてあんまり効率が良くない
+## redshift/bigqueryとの違い
+ - S3からrow指向でデータを読み込むのでbigqueryに比べてあんまり効率が良くない
  - プレビュー機能がない
+ - S3にデータが置いてあることを前提にしおり、出力もS3に保存される
 
 ## 新規でデータベースを追加する
 
-### クエリエディタからデータベースを追加する
-
+**クエリエディタからデータベースを追加する**
 ```sql
-CREATE DATABASE mydatabase;
+CREATE DATABASE my-database;
 ```
 
-### テーブルを追加する
+## テーブルを作成
 
+**apachelog内のjsonデータをパースする**
 ```sql
-CREATE EXTERNAL TABLE IF NOT EXISTS cloudfront_logs (
-  `Date` DATE,
-  Time STRING,
-  Location STRING,
-  Bytes INT,
-  RequestIP STRING,
-  Method STRING,
-  Host STRING,
-  Uri STRING,
-  Status INT,
-  Referrer STRING,
-  os STRING,
-  Browser STRING,
-  BrowserVersion STRING
-  ) ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.RegexSerDe'
-  WITH SERDEPROPERTIES (
-  "input.regex" = "^(?!#)([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+([^ ]+)\\s+[^\(]+[\(]([^\;]+).*\%20([^\/]+)[\/](.*)$"
-  ) LOCATION 's3://(s3のパス)/cloudfront/plaintext/';
+CREATE EXTERNAL TABLE IF NOT EXISTS apache_logs_json (
+    json_data string
+)
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.RegexSerDe'
+WITH SERDEPROPERTIES (
+    "input.regex" = ".*(\\{.*\\})"
+)
+LOCATION 's3://my-bucket/apache_logs_json/'
+TBLPROPERTIES ('has_encrypted_data'='false');
 ```
 
-## 参考
- - [Amazon Athenaによるデータ分析入門](https://business.ntt-east.co.jp/content/cloudsolution/column-72.html)
+**jsonデータをパースしてテーブルを作成する**
+```sql
+CREATE EXTERNAL TABLE IF NOT EXISTS log_table (
+    time timestamp,
+    user string,
+    host string,
+    event string,
+    req string,
+    referrer string,
+    ua string
+)
+LOCATION 's3://my-bucket/log_table/'
+TBLPROPERTIES ('has_encrypted_data'='false');
+```
 
+```sql
+INSERT INTO log_table
 
+SELECT 
+    from_iso8601_timestamp(json_extract_scalar(json_data, '$.time')) as time,
+    json_extract_scalar(json_data, '$.user') as user,
+    json_extract_scalar(json_data, '$.host') as host,
+    json_extract_scalar(json_data, '$.event') as event,
+    json_extract_scalar(json_data, '$.req') as req,
+    json_extract_scalar(json_data, '$.referrer') as referrer,
+    json_extract_scalar(json_data, '$.ua') as ua
+FROM 
+    "my-database"."apache_logs_json" 
+```
