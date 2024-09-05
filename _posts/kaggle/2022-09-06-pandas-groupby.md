@@ -90,6 +90,26 @@ mode_df = df.groupby(by=['Category']).agg(value_mode=('Value', lambda x: x.mode(
 """
 ```
 
+## countとsizeの違い
+ - `count`は`NaN`を含まない値の数をカウントする
+ - `size`は全ての値の数をカウントする
+
+```python
+import pandas as pd
+import numpy as np
+
+df = pd.DataFrame({"Category": ['A', 'A', 'A', 'B', 'B', 'B', 'C', 'C', 'C'],
+                  "Value": [1, 2, 3, 1, 2, np.nan, 1, np.nan, np.nan]})
+df.groupby(by='Category').agg(count=("Value", "count"), size=("Value", "size"))
+"""
+| Category   |   count |   size |
+|:-----------|--------:|-------:|
+| A          |       3 |      3 |
+| B          |       2 |      3 |
+| C          |       1 |      3 |
+"""
+```
+
 ## groupbyした上でsamplingする
  - 各グループで同じだけのサンプルが欲しい場合などに使える
  - 戻り値は`pd.DataFrame`
