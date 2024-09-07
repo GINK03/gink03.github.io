@@ -18,5 +18,6 @@ update_dates: ["2023-11-18"]
  - 左サイドバーのextension(パズルのピース)からインストールできる
 
 ## おすすめ拡張機能
- - jupyterlab-vim
+ - `jupyterlab_vim`
    - vimのキーバインドをjupyter labで使えるようにする
+   - 有効化・無効化は `Settings` -> `Setting Editor` -> `Notebook Vim` から変更できる
