@@ -16,25 +16,21 @@ update_dates: ["2022-09-21"]
  - 複数のpythonのバイナリがある場合、jupyterが正しくインストールされなかったり、問題を起こすことがある
    - jupyterの起動の際に`python3 -m jupyter lab`, `python3 -m notebook`で起動すると明示的に起動するバイナリが指定しやすい
 
----
-
-## 環境を分ける
- - システムのpythonがバージョンアップであったり、OSの都合であったりで、ライブラリの不整合が起こることがあり、[/poetry/](/python-poetry/)など環境を分割できるソフトウェアでpythonを分けると安全
+## poetry, ryeで環境を分ける
+ - システムのpythonではライブラリの不整合が起こることがあり、[/poetry/](/python-poetry/)など環境を分割できるソフトウェアを用いると安全
 
 ```console
 $ poerty new .
 $ poetry add jupyterlab tqdm pandas seaborn scikit-learn ipywidgets joblib sortedcontainers \
-    scipy lightgbm shap \
+    scipy lightgbm \
     pydata-google-auth google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client google-cloud-bigquery \
     pandas-gbq japanize-matplotlib \
     db-dtypes google-cloud-bigquery-storage neovim pip pyright google-cloud-secret-manager \
     openai tiktoken spacy requests jinja2 gspread \
     jedi_language_server \
-    theme-darcula catppuccin-jupyterlab
-$ poetry run jupyter lab --port 2000 --ip '0.0.0.0' # poetry shellはPATHを完全に書き換えないのでglobal環境とぶつかることがある
+    theme-darcula catppuccin-jupyterlab jupyterlab-miami-nights jupyterlab-simpledark
+$ poetry run jupyter lab --port 2000 --ip '0.0.0.0'
 ```
-
----
 
 ## インストール
 
@@ -61,8 +57,6 @@ $ docker run -v $PWD/work:/home/jovyan -p 8888:8888 jupyter/scipy-notebook start
  - pipでjupyterをインストールするより安定する
  - [Jupyter Docker Stacks](https://jupyter-docker-stacks.readthedocs.io/en/latest/)
 
----
-
 ## 起動オプション
 
 ### ポートを指定して起動する
@@ -78,8 +72,6 @@ $ python3 -m notebook
  - `jupyter`コマンドのPATHがおかしくなっているときに代替コマンドとして利用可能
    - ユーザスペースにpythonをインストールした際に発生しがちのトラブル
 
----
-
 ## jupyterへモジュールのインストール
 
 ### `pip`, `conda`でのモジュールインストール
@@ -88,8 +80,6 @@ $ python3 -m notebook
 ```
  - パス参照が異なることがあるため、`%`を用い、`!`を使用しない
 
----
-
 ## jupyterがハングしたときの対応
 
 ### ターミナルから強制再起動
@@ -97,8 +87,6 @@ $ python3 -m notebook
 $ pkill -f "python3 -m ipykernel_launcher"
 ```
  - killしても自動でカーネルがふたたび立ち上がる
-
----
 
 ## 初期設定
 
