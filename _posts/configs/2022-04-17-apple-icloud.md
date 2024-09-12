@@ -17,12 +17,6 @@ update_dates: ["2022-05-10","2022-04-17"]
  - GoogleやMSのものに比べてバグが多い印象
  - iCloud DriveはmacOSでは深い箇所にpathが設定されているのでシンボリックリンクを貼っておいたほうが利便性が高い
 
-## iCloud Driveのシンボリックリンクを作成する
-
-```console
-$ ln -s "$HOME/Library/Mobile Documents/com~apple~CloudDocs/" ~/iCloudDrive
-```
-
 ## iCloud Drive(ソフトウェア)
  - 概要
    - クラウドドライブソフトウェア
@@ -41,6 +35,9 @@ $ ln -s "$HOME/Library/Mobile Documents/com~apple~CloudDocs/" ~/iCloudDrive
    - インストール直後は大量のダウンロードが発生するため、数時間経たないと新規ファイル等のアップロード等の操作は行えない
  - webクライアント
    - [www.icloud.com/iclouddrive/](https://www.icloud.com/iclouddrive/)
+ - トラブルシューティング
+   - ファイルの同期が遅くファイルの削除が反映されない場合
+     - Webクライアントでファイルを削除するとすべてのデバイスでファイルが削除される
 
 ## iCloud メール
  - 概要
