@@ -16,7 +16,6 @@ update_dates: ["2022-04-24","2022-02-16","2022-02-06","2022-02-04","2022-02-01",
  - macosxのシステムのキーボードの動きに対してフックを掛けて任意のキーを別の任意のキーに変換する、任意のキーショートカットを任意のシェルスクリプトに割り当てることができるソフトウェア
    - ショートカットにshell script、apple scriptを割り当てる方法として他には[/raycast/](/raycast/)を使用する方法がある
 
-
 ## インストール
 
 **ダウンロード**  
@@ -64,7 +63,6 @@ $ sudo '/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall.sh'
    - `goku`コマンドでednファイルを解析して`karabiner.json`へ書き込む
   
 ### GokuRakuJoudoの設定例
-
 
 ```
 {:devices       {;; define devices
@@ -127,6 +125,10 @@ $ sudo '/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall.sh'
  - [link](https://ke-complex-modifications.pqrs.org/)
  - Microsoft RDPでコマンドをctrlにアプリが起動中のときのみ置き換える設定などがあり、便利である
 
+## 尊師スタイルの設定
+ - MacBookの上に外部キーボードを乗せて使うことを尊師スタイルと呼ぶ
+ - `settings` -> `devices` -> `Disable the built-in keyboard while device is connected`を有効にする
+
 ## apple script(osascript)について
  - MacOSXの挙動を制御しているのは`apple script`なので特定のアプリになにかメッセージを与えるときには、`apple script`を実行する`shell script`を記述すれば良い  
  - 作成した`apple script`は[gist](https://gist.github.com/GINK03/7d646e1da20af7e51b30759f1b46d441)でホストしている
@@ -142,6 +144,6 @@ $ sudo '/Library/Application Support/org.pqrs/Karabiner-Elements/uninstall.sh'
 
 ### アプリの実行権限のパーミッションが消える
  - 原因
-   - osxがクラッシュして強制再起動したときにkarabinerの実行権限が消失し再設定もできなくなる
+   - macosがクラッシュして強制再起動したときにkarabinerの実行権限が消失し再設定もできなくなる
  - 対応
    - karabinerのドライバーをアンインストールし、macを再起動、再インストールで解決した
