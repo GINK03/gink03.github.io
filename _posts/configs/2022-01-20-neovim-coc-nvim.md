@@ -45,6 +45,12 @@ $ yarn install
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 ```
 
+## 動作の確認
+
+```vimscript
+:CocInfo
+```
+
 ## 各種language-serverのインストール
 
 **jedi-language-serverの場合**  
