@@ -16,7 +16,6 @@ update_dates: ["2022-09-03"]
  - `bq`コマンドでアップロードする方法とpython等のスクリプトでload(アップロード)する方法などがある
 
 ## pythonでデータをアップロードする
- - twitterのランダムサンプル情報(pickle化したもの)をbigqueryにloadする例
  - pandasの`pandas.io.json.build_table_schema`関数を使用することでschema情報をダンプすることができる
  - load(アップロード)に失敗した場合はwebUIから確認できる
 
@@ -32,14 +31,19 @@ import io
 from loguru import logger
 from tqdm.auto import tqdm
 
-def load_to_bigquery(x: pd.DataFrame):
+project = "your_project_id"
+dataset_name = "your_dataset_name"
+
+def load_to_bigquery(x: pd.DataFrame, table_name: str):
     # BQで読み込み可能なスキーマ情報を、pandasの機能で作成する
     # NULLABLE情報を追加
     table_schema = build_table_schema(x, index=False)["fields"]
     for schema in table_schema:
+        if schema["type"] == "number":
+            schema["type"] = "FLOAT"  # NUMBER を FLOAT に修正
         schema["mode"] = "NULLABLE"
 
-    # そのままjson化すると、unixtimeになってしまう
+    # そのままjson化すると、unixtimeになってしまうので、文字列に変換(必要に応じて変更)
     x["created_at"] = x["created_at"].dt.strftime("%Y-%m-%d %H:%M:%S")
     data = x.to_json(orient="records", lines=True)
     # 末尾のブランクの改行を削除
@@ -48,9 +52,9 @@ def load_to_bigquery(x: pd.DataFrame):
 
     # 書き込み先のGCPプロジェクト, dataset, テーブル名を指定
     # datasetが存在しない場合、エラーになる
-    client = bigquery.Client(project="starry-lattice-256603")
-    dataset = client.dataset("research_gimpei")
-    table = dataset.table("tmp")
+    client = bigquery.Client(project=project)
+    dataset = client.dataset(dataset_name)
+    table = dataset.table(table_name)
 
     # デフォルトでは追記する形でBQにデータを保存する
     job_config = bigquery.LoadJobConfig()
@@ -75,8 +79,6 @@ for filename in tqdm(glob.glob("./twitter-random-sample/_agg_tweets/*.pkl")):
     x["created_at"] = pd.to_datetime(x["created_at"], format="%a %b %d %H:%M:%S +0000 %Y") + pd.DateOffset(hours=9)
     load_to_bigquery(x)
 ```
-
----
 
 ## 参考
  - [列ベースの時間パーティション分割テーブルにデータを読み込む/GoogleCloud](https://cloud.google.com/bigquery/docs/samples/bigquery-load-table-partitioned?hl=ja#bigquery_load_table_partitioned-python)
