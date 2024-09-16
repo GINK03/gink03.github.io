@@ -16,9 +16,24 @@ update_dates: ["2022-03-29"]
  - bigqueryなどで使えるanalytics function(分析関数)の説明
    - analytics functionには別名が多くあり、window functionと表現されることもあった
    - bigqueryのWebUIでanalytics functionと表現されているため、analytics functionとして扱う
+ - 分析関数はアナリティクス関数やウィンドウ関数とも呼ばれる
  - row番号を取得したい、lagを計算したいなどができる
- - 単純にGROUP BYしてしまうとリークになる場合にも利用できる
+ - 分析関数は集計関数とは異なり、行ごとに値を返す
+   - 単純にGROUP BYしてしまうとリークになる場合にも利用できる
  - `WHERE`, `HAVING`ではフィルタできず、`QUALIFY`という機能で記述する必要がある
+
+## 基本構文
+
+```sql
+関数名() OVER (
+  [PARTITION BY 列名]
+  [ORDER BY 列名 [ASC|DESC]]
+  [ウィンドウフレーム]
+)
+```
+ - `PARTITION BY`: グルーピングする列を指定
+ - `ORDER BY`: ソートする列を指定
+ - `ウィンドウフレーム`: ウィンドウフレームを指定
 
 ## 各種機能
 
