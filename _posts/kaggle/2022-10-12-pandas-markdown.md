@@ -36,5 +36,8 @@ print(df.to_markdown(index=False))
 '''
 ```
 
+## マークダウン形式のデータを読み込む
+ - [/python-markdown/](/python-markdown/)を参照
+
 ## 参考
  - [pandas.DataFrame.to_markdown](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_markdown.html)
