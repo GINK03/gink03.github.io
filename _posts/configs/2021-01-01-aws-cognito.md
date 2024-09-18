@@ -1,17 +1,17 @@
 ---
 layout: post
-title: "aws cognite"
+title: "aws cognito"
 date: 2020-12-31
-excerpt: "aws cogniteの使い方"
+excerpt: "aws cognitoの使い方"
 project: false
 config: true
-tag: ["aws", "cognite"]
+tag: ["aws", "cognito"]
 comments: false
 sort_key: "2021-01-27"
 update_dates: ["2021-01-27","2021-01-01","2021-01-01"]
 ---
 
-# aws cogniteの使い方
+# aws cognitoの使い方
 
 ## 概要
  - 認証関連のクライドサービス
