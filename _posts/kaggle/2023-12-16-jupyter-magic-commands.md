@@ -2,26 +2,33 @@
 layout: post
 title: "jupyter magic commands"
 date: 2023-12-16
-excerpt: "jupyter magic commands"
+excerpt: "jupyter magic commandsの使い方"
 tag: ["jupyter", "kaggle", "python"]
 comments: false
 sort_key: "2023-11-18"
 update_dates: ["2023-11-18"]
 ---
 
-# jupyter magic commands
+# jupyter magic commandsの使い方
 
 ## 概要
  - pythonのプログラムとは別にjupyter独自のコマンドがある
  - セルの先頭に`%`, `%%`をつけることで実行できる
 
-## マジックの使い方と使用例
+## 代表的なマジックコマンドの使用例
 
 ### `%%time`, `%time`
  - `%time`
    - 次の行の実行時間を測定する
  - `%%time`
    - セル全体の実行時間を測定する
+
+### `%env`
+ - 環境変数を設定する
+
+```python
+%env OPENAI_API_KEY=xxxxxxxxxxxxxxxxxxxx
+```
 
 ### `%%writefile <output-name>`
  - セルに記述するとセルの内容がファイルとして出力される
