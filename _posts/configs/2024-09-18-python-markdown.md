@@ -3,7 +3,7 @@ layout: post
 title: "python markdown"
 date: 2024-09-18
 excerpt: "python markdownの使い方"
-tags: ["python", "markdown", "pandas"
+tags: ["python", "markdown", "pandas"]
 config: true
 comments: false
 sort_key: "2024-09-18"
