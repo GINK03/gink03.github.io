@@ -15,12 +15,14 @@ update_dates: ["2022-09-20"]
 ## 概要
  - コマンドからSQLの実行、データのロードができる
  - `gcloud`をインストールすると自動的に入るコマンド
+ - ロケーションを横断してテーブルを結合できないので、データセットのロケーションを指定する必要がある
 
 ## ユースケース別コマンド例
  - プロジェクトをセット
    - `gcloud set project <PROJECT-NAME>`
- - バケットを作成
-   - `bq mk {PROJECT_NAME}:{BUCKET_NAME}`
+ - データセットを作成
+   - `bq mk --dataset {PROJECT_NAME}:{DATASET_NAME}`
+   - `bq --location=asia-northeast1 mk --dataset {PROJECT_NAME}:{DATASET_NAME}` -- ロケーションの指定
  - テーブルを作成
    - 凡例
      - `bq mk {PROJECT_NAME}:{BUCKET_NAME}.{TABLE_NAME} {SCHEMA}`
