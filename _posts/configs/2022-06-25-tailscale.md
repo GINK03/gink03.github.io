@@ -27,6 +27,8 @@ update_dates: ["2022-06-25"]
  - [headscale](https://github.com/juanfont/headscale)というコントロールプレーンをセフルホストにするOSSもある
  - exit nodeを指定・利用することできる
    - VPNをトンネリングで利用しているイメージですべてのトラヒックをexit node経由で行うことができる
+   - exit node利用時に任意のnameserverを指定することができる
+     - `Admin Console` -> `DNS` -> `nameservers`にDNSを設定 + `Override local DNS`を有効にする
  - relayモードとdirectモードがあり、directモードはとても早いが`41641/udp`の開放が必要になる
    - 手動でポートを変更したい場合は`/etc/default/tailscaled`を編集すれば良い
    - 同じサブネットに複数のtailscaleのノードがあったとしてもポートを自動調整するので原則として変更する必要はない
