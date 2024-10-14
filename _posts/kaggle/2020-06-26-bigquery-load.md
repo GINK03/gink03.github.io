@@ -61,6 +61,8 @@ def load_to_bigquery(x: pd.DataFrame, table_name: str):
     job_config.source_format = bigquery.SourceFormat.NEWLINE_DELIMITED_JSON
     job_config.schema = table_schema
     # パーティションを使用しない場合はこの設定は必要ない
+    # この例ではDAY単位でパーティションを作成すが、他にもHOUR, MONTH, YEARが指定可能
+    # (DAYではパーティションの更新界数が多すぎてクオータ制限に引っかかることがあるのでその場合はMONTHなどに変更する)
     job_config.time_partitioning = bigquery.TimePartitioning(
         type_=bigquery.TimePartitioningType.DAY,
         field="created_at",  # パーティションに使うカラム
