@@ -34,7 +34,7 @@ from tqdm.auto import tqdm
 project = "your_project_id"
 dataset_name = "your_dataset_name"
 
-def load_to_bigquery(x: pd.DataFrame, table_name: str):
+def load_to_bigquery(x: pd.DataFrame, table_name: str, mode: str = "replace"):
     # BQで読み込み可能なスキーマ情報を、pandasの機能で作成する
     # NULLABLE情報を追加
     table_schema = build_table_schema(x, index=False)["fields"]
@@ -42,9 +42,9 @@ def load_to_bigquery(x: pd.DataFrame, table_name: str):
         if schema["type"] == "number":
             schema["type"] = "FLOAT"  # NUMBER を FLOAT に修正
         schema["mode"] = "NULLABLE"
-
+        
     # そのままjson化すると、unixtimeになってしまうので、文字列に変換(必要に応じて変更)
-    x["created_at"] = x["created_at"].dt.strftime("%Y-%m-%d %H:%M:%S")
+    x["timestamp"] = x["timestamp"].dt.strftime("%Y-%m-%d %H:%M:%S")
     data = x.to_json(orient="records", lines=True)
     # 末尾のブランクの改行を削除
     data = data.strip()
@@ -65,21 +65,21 @@ def load_to_bigquery(x: pd.DataFrame, table_name: str):
     # (DAYではパーティションの更新界数が多すぎてクオータ制限に引っかかることがあるのでその場合はMONTHなどに変更する)
     job_config.time_partitioning = bigquery.TimePartitioning(
         type_=bigquery.TimePartitioningType.DAY,
-        field="created_at",  # パーティションに使うカラム
+        field="timestamp",  # パーティションに使うカラム
         # expiration_ms=7776000000,  # 90 days.
     )
+
+    # mode オプションで追記 (append) かリプレース (replace) かを選択
+    if mode == "replace":
+        job_config.write_disposition = bigquery.WriteDisposition.WRITE_TRUNCATE
+    else:
+        job_config.write_disposition = bigquery.WriteDisposition.WRITE_APPEND
+
     logger.info(f"table_schema = {table_schema}")
     # ファイルとして指定することで読み込むが、io.StringIO経由でも読み込める
     job = client.load_table_from_file(io.StringIO(data), table, job_config=job_config)
     # 結果を出力
     logger.info(f"result = {job.result()}")
-
-# 以下は参考程度
-for filename in tqdm(glob.glob("./twitter-random-sample/_agg_tweets/*.pkl")):
-    x = pd.read_pickle(filename)
-    x = x[['screen_name', 'name', 'description', 'url', 'created_at', 'text', 'source']]
-    x["created_at"] = pd.to_datetime(x["created_at"], format="%a %b %d %H:%M:%S +0000 %Y") + pd.DateOffset(hours=9)
-    load_to_bigquery(x)
 ```
 
 ## 参考
