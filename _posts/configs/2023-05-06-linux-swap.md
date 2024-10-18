@@ -26,6 +26,9 @@ $ sudo swapoff -a
 $ sudo rm /swapfile
 ```
 
+## swapを無効化する
+ - `/etc/fstab` の`/swapfile~` の行をコメントアウトして再起動する
+
 ## swapfileを作成する
  - `/swapfile`に32Gのswapfileを作成する場合
 
