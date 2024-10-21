@@ -15,41 +15,21 @@ update_dates: ["2022-05-27"]
 
 ## 概要
  - huggingfaceのデータセットのレポジトリにコードからアクセスできるツール
+ - 一部の前処理なども含まれている
 
 ## インストール
 
 ```console
-$ python3 -m pip install datasets
+$ pip install datasets
 ```
 
 ## 具体例
 
-### 使用できるデータセットの確認
-
+**IMDBデータセットを使う**
 ```python
-from datasets import list_datasets, load_dataset
-
-df = pd.DataFrame({"dataset": list_datasets()})
-df
-```
-
-### データを加工する
-
-```python
-from datasets import list_datasets, load_dataset
-
-
-# Load a dataset and print the first example in the training set
-dataset = load_dataset('squad')
-
-# Process the dataset - add a column with the length of the context texts
-dataset_with_length = dataset.map(lambda x: {"length": len(x["context"])})
-
-# Process the dataset - tokenize the context texts (using a tokenizer from the 🤗 Transformers library)
-from transformers import AutoTokenizer
-tokenizer = AutoTokenizer.from_pretrained('bert-base-cased')
-
-tokenized_dataset = squad_dataset.map(lambda x: tokenizer(x['context']), batched=True)
+from datasets import load_dataset
+dataset = load_dataset('imdb', split="train") 
+dataset.to_pandas()
 ```
 
 ## 参考
