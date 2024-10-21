@@ -32,5 +32,16 @@ dataset = load_dataset('imdb', split="train")
 dataset.to_pandas()
 ```
 
+**MS MARCO データセットをストリーミングでロードし、最初の10件を取得**
+```python
+import pandas as pd
+from datasets import load_dataset
+
+dataset = load_dataset("ms_marco", "v1.1", split="train", streaming=True).take(10)
+data_list = list(dataset)
+df = pd.DataFrame(data_list)
+df
+```
+
 ## 参考
  - [huggingface/datasets](https://github.com/huggingface/datasets)
