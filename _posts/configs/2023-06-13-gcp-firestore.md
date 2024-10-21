@@ -40,7 +40,7 @@ $ gcloud alpha firestore databases create \
 ```console
 $ sudo apt install default-jre
 $ sudo apt-get install google-cloud-sdk-firestore-emulator
-$ gcloud emulators firestore start # エミュレータの起動
+$ gcloud emulators firestore start --host-port=0.0.0.0:8414 # ポートを指定して起動
 $ export FIRESTORE_EMULATOR_HOST=[::1]:8414 # 環境変数の設定
 ```
 
@@ -55,12 +55,12 @@ $ gcloud auth application-default login
 ```python
 from google.cloud import firestore
 
-db = firestore.Client()
+client = firestore.Client()
 ```
 
 **データの保存**
 ```python
-ref = db.collection("<twitter-account>").document("<tweet-id>")
+ref = client.collection("<twitter-account>").document("<tweet-id>")
 ref.set({"text": text,
         "date": date,
         "favs": favs,
@@ -70,7 +70,7 @@ ref.set({"text": text,
 
 **データの取得**
 ```python
-ref = db.collection("<twitter-account>").document("<tweet-id>")
+ref = client.collection("<twitter-account>").document("<tweet-id>")
 doc = ref.get()
 if doc.exists: # ドキュメントの有無はメンバ変数でわかる
     print(f"Document data: {doc.to_dict()}")
@@ -80,7 +80,7 @@ else:
 
 **ソートして取得**
 ```python
-collection_ref = db.collection('<twitter-account>')
+collection_ref = client.collection('<twitter-account>')
 query = collection_ref.order_by(
     'date', direction=firestore.Query.DESCENDING).limit(1000)
 pd.DataFrame([doc.to_dict() for doc in query.stream()])
@@ -88,26 +88,23 @@ pd.DataFrame([doc.to_dict() for doc in query.stream()])
 
 **条件を指定して取得**
 ```python
-collection_ref = db.collection('<twitter-account>')
+collection_ref = client.collection('<twitter-account>')
 query = collection_ref.where("day", ">=", "2023-01-01").where("day", "<=", "2023-12-31")
 pd.DataFrame([doc.to_dict() for doc in query.stream()])
 ```
 
 **すべてのデータを取得**
 ```python
-collection_ref = db.collection('<twitter-account>')
+collection_ref = client.collection('<twitter-account>')
 for doc in collection_ref.stream():
-    doc.to_dict()
+    print(f"{doc.id} => {doc.to_dict()}")
 ```
 
 **すべてのデータを削除**
- - 原則バッチでしか削除できないのでなくなるまで実行する
-
 ```python
-collection_ref = db.collection('<twitter-account>')
-docs = collection_ref.list_documents(page_size=100)
-for doc in docs:
-    doc.delete()
+collection_ref = client.collection('<twitter-account>')
+for doc in collection_ref.stream():
+    doc.reference.delete()
 ```
 
 ## 参考
