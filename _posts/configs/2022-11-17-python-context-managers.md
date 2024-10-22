@@ -16,6 +16,28 @@ update_dates: ["2022-11-17"]
  - `with`ステートメントで自動でリソースを開放するを行える機能
  - 関数デコレータで実装する方法と、クラスで実装する方法がある
 
+## 関数デコレータで実装する方法
+
+```python
+from contextlib import contextmanager
+
+@contextmanager
+def section(name):
+    print(f"=== {name} 開始 ===")
+    yield
+    print(f"=== {name} 終了 ===")
+
+with section("データ読み込み"):
+    # データを読み込む処理
+    data = load_data()
+    print("データを読み込みました")
+
+with section("データ処理"):
+    # データを処理するコード
+    processed_data = process_data(data)
+    print("データを処理しました")
+```
+
 ## クラスで実装する方法
 
 ```python
@@ -33,33 +55,6 @@ with MyMeasureContextManager():
     time.sleep(1.0)
 """
 2022-11-17 04:11:03.385 | INFO     | __main__:__exit__:8 - exit, elapsed = 1.0011460781097412
-"""
-```
-
-## 関数デコレータで実装する方法
-
-```python
-from contextlib import contextmanager
-from loguru import logger
-import time
-from typing import Any
-
-@contextmanager
-def measure_time(any: Any = None):
-    tlog = None
-    try:
-        tlog = time.time()
-        yield None # ここで受け取ったインスタンスを返す
-    finally:
-        elp = time.time() - tlog
-        logger.info(f"exit, elapsed = {elp}")
-        if any:
-           del any # インスタンス引数があればそれを削除
-
-with measure_time():
-    time.sleep(1.0)
-"""
-2022-11-17 04:03:28.849 | INFO     | __main__:closing:14 - exit, elapsed = 1.0011351108551025
 """
 ```
 
