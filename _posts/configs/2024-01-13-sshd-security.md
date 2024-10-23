@@ -43,6 +43,12 @@ $ sudo systemctl restart ssh
 
 ## 補遺
 
+### debianでのsshdのログの確認
+
+```console
+$ sudo journalctl -u ssh
+```
+
 ### 2024-01-13の攻撃されたときのログ
 
 ```console
