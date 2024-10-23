@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "systemd"
+title: "systemd service"
 date: 2020-04-30
-excerpt: "systemdの使い方"
+excerpt: "systemd serviceの使い方"
 tags: ["linux", "systemd", "systemctl"]
 config: true
 comments: false
@@ -10,7 +10,7 @@ sort_key: "2021-12-23"
 update_dates: ["2021-12-23","2021-11-28","2021-09-16","2021-09-07","2021-09-07","2021-09-07","2021-07-09","2020-05-01","2020-04-30"]
 ---
 
-# systemdの使い方
+# systemd serviceの使い方
 
 ## 概要
  - systemdは一般的にプロセスをデーモナイズするときに便利なLinuxのサービスの一つ
@@ -45,7 +45,6 @@ update_dates: ["2021-12-23","2021-11-28","2021-09-16","2021-09-07","2021-09-07",
  - `echo $PATH` した内容をPATHに追加することでユーザの環境変数で設定されているPythonを動作させることができる。
 
 **ユーザ権限でユーザのbinを用いて特定のプロセスを動かしたいとき**
-
 ```
 [Unit]
 Description=AUTO BACKUP SERVICE
@@ -68,42 +67,9 @@ WantedBy=multi-user.target
 $ sudo cp hoge.service /etc/systemd/system
 ```
 
-## ユーザ権限のsystemdの作成
- 
-### serviceファイルの設定の違い
-   - `User`の項目は必要ない
-   - 動作しないときは`WantedBy`を`default.target`に
+## ユーザのディレクトリに配置する場合
+ - [/systemd-service-user/](/systemd-service-user/)に記載
 
-### systemdのパス
- - `~/.config/systemd/user`の下にserviceファイルを置くことになる
-
-### 実行
- - `systemctl --user start|stop|enable|disable <foo>`となる
-
-### 細かいところ
- - `loginctl enable-linger $USER`するとユーザがログインしていなくても動作する
-
-### ログの確認
- - `journalctl --user -u <service-name>.service`
-
-### 参考
- - [ユーザレベルで systemd のユニットファイルを書くときの注意点](https://zenn.dev/noraworld/articles/systemd-unit-files-user-level-tips)
-
-### 具体例
-
-```config
-[Unit]
-Description=RSYNC
-After=network.target
-StartLimitIntervalSec=0
-[Service]
-Type=simple
-Restart=always
-RestartSec=5
-ExecStart=sh -c "<any-command>"
-[Install]
-WantedBy=default.target
-```
 
 ## 例; `/etc/rc.local`の再現
  - rc.localをスタートアップスクリプトを昔はかけたが、今現在は存在しない。  
