@@ -63,3 +63,33 @@ $ sudo journalctl -u ssh
  1月 13 14:55:34 Kichijouji sshd[437851]: Invalid user admin from 5.252.118.227 port 44508
  1月 13 14:55:35 Kichijouji sshd[437851]: Connection closed by invalid user admin 5.252.118.227 port 44508 [preauth]
 ```
+
+### ログインを試みたIPアドレスの国別の頻度
+
+| country         |   count |
+|:----------------|--------:|
+| China           |   13418 |
+| United States   |    8197 |
+| The Netherlands |    7794 |
+| Singapore       |    6642 |
+| Hong Kong       |    5930 |
+| India           |    4776 |
+| Germany         |    3746 |
+| Brazil          |    3433 |
+| Vietnam         |    3048 |
+| Russia          |    2697 |
+
+### ログインを試みたユーザ名の頻度
+
+| user     |   count |
+|:---------|--------:|
+| ubuntu   |    6813 |
+| admin    |    4877 |
+| user     |    4755 |
+| test     |    3501 |
+| debian   |    1960 |
+| postgres |    1352 |
+| oracle   |    1247 |
+| support  |     984 |
+| deploy   |     949 |
+| sysadmin |     928 |
