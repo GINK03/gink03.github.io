@@ -13,6 +13,7 @@ update_dates: ["2022-08-12"]
 # gcp datastoreの使い方
 
 ## 概要
+ - 2024年現在、新規利用する際は[firestore](/gcp-firestore/)を利用することが推奨されている
  - GCP上で動作するマネージドのnosql
  - pythonのdict型のようなデータを保持する
  - local emulatorがある
