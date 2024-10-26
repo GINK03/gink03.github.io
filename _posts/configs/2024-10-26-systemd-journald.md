@@ -45,7 +45,12 @@ $ sudo systemctl restart systemd-journald
 [Journal]
 SystemMaxUse=100G
 SystemKeepFree=10G
+Storage=persistent
 ```
 
  - `SystemMaxUse` - ログの最大容量
  - `SystemKeepFree` - ログの最小容量
+ - `Storage` - ログの保存方法
+   - `volatile` - メモリに保存
+   - `persistent` - ディスクに保存
+   - `auto` - ディスクに保存(デフォルト)
