@@ -26,7 +26,8 @@ update_dates: ["2024-10-26"]
  - `journalctl --user -u hoge.service` - ユーザが起動したサービスのログを表示
  - `journalctl -g "キーワード"` - キーワードを含むログを表示
  - `journalctl -r` - ログを逆順に表示
- - `journalctl -o json-pretty` - JSON形式で表示
+ - `journalctl -o json` - JSONL形式で表示
+ - `journalctl -o json-pretty` - 整形されたJSON形式で表示
  - `journalctl -o short-iso` - timestampをISO8601形式で表示
  - `journalctl --disk-usage` - ログのディスク使用量を表示
 
