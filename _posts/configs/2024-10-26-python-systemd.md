@@ -51,3 +51,33 @@ $ journalctl --user -o json-pretty -n 1
         "SYSLOG_IDENTIFIER" : "my_application"
 }
 ```
+
+## コードスニペット
+
+```python
+from systemd import journal
+
+def logger_debug(message, **kwargs):
+    journal.send(
+        MESSAGE=message,
+        SYSLOG_IDENTIFIER='my_application',
+        PRIORITY=journal.Priority.DEBUG,
+        **kwargs
+    )
+
+def logger_warning(message, **kwargs):
+    journal.send(
+        MESSAGE=message,
+        SYSLOG_IDENTIFIER='my_application',
+        PRIORITY=journal.Priority.WARNING,
+        **kwargs
+    )
+
+def logger_error(message, **kwargs):
+    journal.send(
+        MESSAGE=message,
+        SYSLOG_IDENTIFIER='my_application',
+        PRIORITY=journal.Priority.ERROR,
+        **kwargs
+    )
+```
