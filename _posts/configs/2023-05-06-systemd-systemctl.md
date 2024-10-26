@@ -17,24 +17,7 @@ update_dates: ["2023-05-06"]
  - systemdの操作もsystemctlの役割
 
 ### ログ
- - `journalctl`コマンドを利用する
- - stdout, stderr的な内容が出力される  
- - NOTE: systemdの種類によってはユーザ権限で動作することができ、`-f` オプションでトレイリングになる(要順序確認)  
- - `--since`, `--until`を指定することでログの期間を指定することができる
- - `--reverse`を指定することで降順に表示させることができる
- - デフォルトではページャが有効になっており`--no-pager`で無効化できる
- - `-l|--full`は表示可能なログをすべて表示する
- - `-o json`でアウトプットをjsonフォーマットとすることができる
-
-**サービスのログをトレイリング**  
-```console
-$ journalctl -u hoge.service -f
-```
-
-**カーネルのログ(dmseg)を表示**  
-```console
-$ journalctl -k
-```
+ - [/systemd-journald/](/systemd-journald/)を参照
 
 ## ユニットの一覧を表示
 
