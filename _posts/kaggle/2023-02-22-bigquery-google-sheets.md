@@ -14,19 +14,21 @@ update_dates: ["2023-02-22"]
 
 ## 概要
  - google sheetsでまとめたデータをbigqueryで参照・使用できるように設定する方法
- - 使用するコマンドが多くめんどくさい
+ - 使用するコマンドが多く手順が複雑
 
 ## 手順
- - `gcloud`コマンドでデータを共有したいGCPプロジェクトをセットする
- - `gcloud`コマンドでgoogle driveへのアクセスを許可する
- - `bq mkdef`コマンドで定義テンプレートを作成する
+ - `gcloud` コマンドでgoogle driveへのアクセスを許可する
+ - `bq mkdef` コマンドで定義テンプレートを作成する
  - 定義テンプレートを編集し[/google sheets/](/google-sheets/)の参照先シート・参照範囲と型を指定する
  - `bq mk`コマンドで定義テンプレートを参照しテーブルを作成
 
 ### google driveへのアクセスを許可
 
 ```console
+# gcloud auth loginを使用する場合
 $ gcloud auth login --enable-gdrive-access
+# gcloud auth application-default loginを使用する場合
+$ gcloud auth application-default login --scopes=https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/bigquery,https://www.googleapis.com/auth/drive
 ```
 
 ### `bq mkdef`コマンドで定義テンプレートを作成する
@@ -84,8 +86,6 @@ suzuki,    male,   20
 yamada,    female, 21
 kobayashi, female, 18
 ```
-
----
 
 ## 参考
  - [GoogleスプレッドシートをデータソースとするBigQuery外部テーブルをCLIで作成する](https://dev.classmethod.jp/articles/202109-google-spreadsheet-bigquery-external-table-with-cli/)
