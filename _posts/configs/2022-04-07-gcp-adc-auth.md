@@ -26,7 +26,10 @@ update_dates: ["2022-04-11","2022-04-07"]
 ## OAuth2で認証ファイルを出力する
 
 ```console
+# デフォルのスコープで認証ファイルを出力
 $ gcloud auth application-default login
+# 特定のスコープで認証ファイルを出力
+$ gcloud auth application-default login --scopes=https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/bigquery,https://www.googleapis.com/auth/drive
 ```
 すると`~/.config/gcloud/applicstion_default_credentials.json`が得られる
 
