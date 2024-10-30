@@ -24,8 +24,8 @@ $ python3 -m pip install --upgrade google-auth-oauthlib google-auth-httplib2
 
 ## GCPからYouTube data APIの有効化とキーを払い出す
  - `APIとサービス`から`YouTube Data API`を検索して有効化
- - `OAuth 2.0 クライアント ID`からdesktop用の認証情報を作成し、jsonフォーマットでダウンロード
- - pythonなどで実行した際にローカルサーバでOAuth認証を通す
+ - `APIのキー` からキーを払い出す
+   - APIのキーは制限を行い、使用するAPIのみに制限をかけることができる
 
 ## 認証までの具体例
 
@@ -36,29 +36,26 @@ from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 from google_auth_oauthlib.flow import InstalledAppFlow
 
-# `OAuth 2.0 クライアント ID`のキーを `client_secret.json` で保存
-CLIENT_SECRETS_FILE = "client_secret.json"
-SCOPES = ['https://www.googleapis.com/auth/youtube.force-ssl']
+# APIキーを直接指定
+API_KEY = "***********************************"
 API_SERVICE_NAME = 'youtube'
 API_VERSION = 'v3'
 
-def get_authenticated_service():
-  flow = InstalledAppFlow.from_client_secrets_file(CLIENT_SECRETS_FILE, SCOPES)
-  credentials = flow.run_local_server(port=8080) # ローカルサーバでOAuth認証を通す, 必要に応じてポート番号を変更
-  return build(API_SERVICE_NAME, API_VERSION, credentials = credentials)
+def get_service():
+    return build(API_SERVICE_NAME, API_VERSION, developerKey=API_KEY)
 
 def channels_list_by_username(service, **kwargs):
-  results = service.channels().list(
-    **kwargs
-  ).execute()
-  
-  print('This channel\'s ID is %s. Its title is %s, and it has %s views.' %
-       (results['items'][0]['id'],
-        results['items'][0]['snippet']['title'],
-        results['items'][0]['statistics']['viewCount']))
+    results = service.channels().list(
+        **kwargs
+    ).execute()
 
-os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'
-service = get_authenticated_service()
+    print('This channel\'s ID is %s. Its title is %s, and it has %s views.' %
+          (results['items'][0]['id'],
+           results['items'][0]['snippet']['title'],
+           results['items'][0]['statistics']['viewCount']))
+
+
+service = get_service()
 channels_list_by_username(service, part='snippet,contentDetails,statistics', forUsername='GoogleDevelopers')
 ```
 
@@ -129,8 +126,6 @@ def get_channel_videos(youtube, channel_id):
 # 動画一覧を取得して表示
 videos = get_channel_videos(youtube , "UC67Wr_9pA4I0glIxDt_Cpyw")
 ```
-
----
 
 ## 参考
  - [Python クイックスタート/developers.google.com/youtube](https://developers.google.com/youtube/v3/quickstart/python?hl=ja)
