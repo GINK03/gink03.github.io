@@ -25,5 +25,11 @@ $ brew install fuse-t
 $ brew install fuse-t-sshfs
 ```
 
+## トラブルシューティング
+ - 問題
+   - iPhoneの大量のファイルからmacOSのsshfsでマウントしたディレクトリにコピーを行うとmacOS・linuxがクラッシュする
+ - 原因
+   - 不明
+
 ## 参考
  - [Userspace FUSE for macOS](https://www.fuse-t.org/)
