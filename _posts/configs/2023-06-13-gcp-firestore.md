@@ -19,6 +19,8 @@ update_dates: ["2023-06-13"]
    - firestoreをdatastore互換モードで動作させる方法はある
  - 2023年に一つのプロジェクトに対して複数のデータベースが使用可能になった
    - デフォルトのデータベース名は`(default)`
+ - 操作に失敗した場合には、リトライが可能
+ - embeddingデータなど大量のデータを保存する場合は、シリアライズして保存するほうが良い
 
 ## インストール
 
@@ -54,18 +56,24 @@ $ gcloud auth application-default login
 **dbインスタンスの初期化**
 ```python
 from google.cloud import firestore
+from google.api_core.retry import Retry, if_exception_type
+from google.api_core.exceptions import Aborted
 
-client = firestore.Client()
+client = firestore.Client(project="project-id", database="database-name")
 ```
 
 **データの保存**
 ```python
+# リトライポリシーの設定
+retry_policy = Retry(predicate=if_exception_type(Aborted))
+
 ref = client.collection("<twitter-account>").document("<tweet-id>")
 ref.set({"text": text,
         "date": date,
         "favs": favs,
         "keywords": keywords,
-        "embedding": embedding})
+        "embedding": embedding},
+        retry=retry_policy)
 ```
 
 **データの取得**
@@ -103,7 +111,7 @@ for doc in collection_ref.stream():
 **すべてのデータを削除**
 ```python
 collection_ref = client.collection('<twitter-account>')
-for doc in collection_ref.stream():
+for doc in collection_ref.stream(retry=Retry()):
     doc.reference.delete()
 ```
 
