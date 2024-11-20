@@ -65,3 +65,43 @@ models
 token_num = model.count_tokens("あなたはGemini？あなたにできることを5つ教えて？")
 print(token_num)
 ```
+
+**動画の分析**
+```python
+# 動画のアップロード
+video_file_name = "videos/BigBuckBunny_320x180.mp4"
+print(f"Uploading file...")
+video_file = genai.upload_file(path=video_file_name)
+print(f"Completed upload: {video_file.uri}")
+
+# 動画の分析
+prompt = "日本語でこの動画を説明してください"
+model = genai.GenerativeModel(model_name="models/gemini-1.5-flash")
+response = model.generate_content([prompt, video_file],
+                                  request_options={"timeout": 600})
+print(response.text)
+"""
+承知いたしました。以下に動画の説明を日本語で記述します。
+
+この動画は、The Peach Open Movie Projectが制作した短編アニメーション「ビッグバックバニー」です。
+
+まず、緑豊かな牧歌的な風景が広がります。木々が生い茂り、小川が流れ、草花が咲き乱れる、のどかな情景が映し出されます。そこに、太ったウサギが登場します。ウサギは、のんびりとした様子で、草むらの中を歩いたり、花をクンクンかいだりしています。その後、ウサギは大きな木を見つけ、木の根元に隠された巣穴から現れます。
+
+このウサギは、非常に大きく、ずんぐりむっくりとした体型をしています。体毛は白く、長い耳を持っています。表情は、時に穏やかで、時に少し不機嫌な様子も見せます。
+
+動画の後半では、ウサギは森の中で、リスやチンチラといった他の動物たちと遭遇します。リスは、ウサギをからかうような仕草を見せ、チンチラはどんぐりを抱えています。そして、ウサギは弓矢を作り、リスに矢を放とうとします。
+
+全体を通して、動画は明るく、ユーモラスな雰囲気で、動物たちの愛らしい動きと表情が魅力的です。特に、太ったウサギのコミカルな姿は、見ている人を楽しくさせてくれます。
+
+動画の最後にはスタッフロールが流れ、制作チームや関係者の名前が表示されます。
+"""
+
+# トークン数の見積もり
+model.count_tokens([prompt, video_file])
+"""
+total_tokens: 175827
+"""
+
+# アップロードした動画の削除
+genai.delete_file(video_file.name)
+```
