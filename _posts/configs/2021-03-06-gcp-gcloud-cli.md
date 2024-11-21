@@ -116,18 +116,12 @@ bindings:
 $ gcloud components update
 ```
 
----
-
 ## apiとの関係
  - `gcloud`コマンドは`API`をコマンドでラップしたものであるが、python等のスクリプトから呼び出す際は`google-api-python-client`を用いる  
  - 仕様が複雑で[ドキュメント](https://googleapis.github.io/google-api-python-client/docs/)を精読しないと使うことが難しい  
 
----
-
 ## 参考
  - [Cloud SDK のインストール/Google Cloud](https://cloud.google.com/sdk/docs/install?hl=ja)
-
----
 
 ## トラブルシューティング
 
@@ -138,3 +132,7 @@ $ gcloud components update
    - 所属しているGCPによっては短時間でクレデンシャルexpireすることがあり、その度に再認証が必要
    - `gcloud auth login`を実行して再認証を行う
    - web browserがないマシンでは、web browserがあるマシンで実行してくれとのメッセージとともにURLとtokenが出力される
+
+### `Your application has authenticated using end user credentials from Google Cloud SDK without a quota project.` という警告がでる
+ - 対応
+   - `GOOGLE_CLOUD_PROJECT=<project-id>` と `GOOGLE_CLOUD_QUOTA_PROJECT=<project-id>` を環境変数に設定する
