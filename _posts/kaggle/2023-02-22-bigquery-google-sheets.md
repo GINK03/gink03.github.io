@@ -14,15 +14,38 @@ update_dates: ["2023-02-22"]
 
 ## 概要
  - google sheetsでまとめたデータをbigqueryで参照・使用できるように設定する方法
- - 使用するコマンドが多く手順が複雑
+ - SQLでデータを参照する設定と、コマンドでデータを参照する設定がある　
+   - コマンドで参照は使用するコマンドが多く手順が複雑
 
-## 手順
+## SQLでgoogle sheetsのデータを参照する方法
+
+### Google Drive統合の有効化
+
+```console
+$ bq --project_id=<PROJECT_ID> update --location=US --connection GoogleDriveConnectionName
+```
+
+### テーブル作成
+
+```sql
+CREATE EXTERNAL TABLE `xxx.yyy.zzz` -- テーブル名
+( col1 STRING, col2 STRING, col3 STRING, col4 STRING ) -- カラム情報を明示的に定義
+OPTIONS (
+  format = 'GOOGLE_SHEETS',
+  uris = ['https://docs.google.com/spreadsheets/d/*****************************/edit?gid=0#gid=0'],
+  skip_leading_rows = 1
+);
+```
+
+## コマンドでgoogle sheetsのデータを参照する方法
+
+### 手順
  - `gcloud` コマンドでgoogle driveへのアクセスを許可する
  - `bq mkdef` コマンドで定義テンプレートを作成する
  - 定義テンプレートを編集し[/google sheets/](/google-sheets/)の参照先シート・参照範囲と型を指定する
  - `bq mk`コマンドで定義テンプレートを参照しテーブルを作成
 
-### google driveへのアクセスを許可
+#### google driveへのアクセスを許可
 
 ```console
 # gcloud auth loginを使用する場合
@@ -31,13 +54,13 @@ $ gcloud auth login --enable-gdrive-access
 $ gcloud auth application-default login --scopes=https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/bigquery,https://www.googleapis.com/auth/drive
 ```
 
-### `bq mkdef`コマンドで定義テンプレートを作成する
+#### `bq mkdef`コマンドで定義テンプレートを作成する
 
 ```console
 $ bq mkdef <url> > bq_def.json
 ```
 
-### 定義テンプレートを編集しgoogle sheetsの参照先シート・参照範囲と型を指定する
+#### 定義テンプレートを編集しgoogle sheetsの参照先シート・参照範囲と型を指定する
  - `sourceUris`: google sheetsのURL
  - `googleSheetsOptions : range`: 参照するシート名・カラム
  - `schema`: 型
@@ -62,7 +85,7 @@ $ bq mkdef <url> > bq_def.json
 }
 ```
 
-### `bq mk`コマンドで定義テンプレートを参照しテーブルを作成
+#### `bq mk`コマンドで定義テンプレートを参照しテーブルを作成
 
 ```console
 $ bq mk --external_table_definition="./bq_def.json" \
@@ -71,7 +94,7 @@ $ bq mk --external_table_definition="./bq_def.json" \
 # Table 'xxxx:yyyy.zzzz' successfully created.
 ```
 
-### 確認
+#### 確認
 
 ```sql
 SELECT
