@@ -40,7 +40,6 @@ df.columns = df.columns.droplevel()
 df.columns = df.columns.to_series().str.join('_')
 ```
 
----
 
 ## pivot_tableでvaluesの引数が複数になる場合
  - `aggfunc`でどのように集約するかを決める必要がある
@@ -51,6 +50,32 @@ df.pivot_table(index=["os", "date"],
               columns=["source"], 
               values=["any duplicatable value"],
               aggfunc=np.mean) # 平均を取る場合
+```
+
+## 様々なaggfunc
+
+```python
+# サンプルデータの作成
+data = {
+    '商品': ['A', 'B', 'A', 'B', 'A', 'B'],
+    '地域': ['東', '東', '西', '西', '東', '西'],
+    '売上': [100, 150, 200, 250, 300, 350],
+    '数量': [10, 15, 20, 25, 30, 35]
+}
+
+df = pd.DataFrame(data)
+
+# ピボットテーブルの作成
+pivot = pd.pivot_table(
+    df,
+    index='商品',               # 行に設定する列
+    columns='地域',             # 列に設定する列
+    values=['売上', '数量'],    # 集計対象の値
+    aggfunc={
+        '売上': 'sum',          # 売上の合計
+        '数量': ['mean', 'first']  # 数量の平均と最初の値
+    }
+)
 ```
 
 ## pivot_tableで存在しないデータの値を埋める
