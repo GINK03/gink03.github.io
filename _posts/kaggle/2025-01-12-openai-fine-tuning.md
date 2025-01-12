@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "openai fine tuned" 
+title: "openai fine tuning" 
 date: 2025-01-12
-excerpt: "openai fine tuned"
+excerpt: "openai fine tuning"
 kaggle: true
 tag: ["openai", "fine-tuned", "fine-tuning"]
 comments: false
@@ -10,13 +10,14 @@ sort_key: "2025-01-12"
 update_dates: ["2025-01-12"]
 ---
 
-# openai fine tuned
+# openai fine tuning
 
 ## 概要
  - openaiのモデルはいくつかのモデルをfine-tunedすることができる
  - fine-tunedしたモデルは、openaiのAPIを使って利用することができる
  - ハイパーパラメータの設定項目は[openaiのapi-reference](https://platform.openai.com/docs/api-reference/fine-tuning/create)に記載されている
    - epoch, batch_size, learning_rate_multiplier などが設定可能
+ - supervised learningで通常のchat形式で学習を行うだけでもtool callingのような特定のタスクにも影響を与えることができる
 
 ## ユースケース
  - Setting the style, tone, format, or other qualitative aspects
