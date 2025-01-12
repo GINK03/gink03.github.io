@@ -23,6 +23,17 @@ $ pip install instructor
 
 ## 使用例
 
+**openaiパラメータの設定**
+
+```python
+import openai
+import instructor
+
+client = instructor.from_openai(
+    openai.OpenAI(), model="gpt-4o", temperature=0.2
+)
+```
+
 **画像の分析**
 
 ```python
