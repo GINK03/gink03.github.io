@@ -36,10 +36,10 @@ class ExtractUser(BaseModel):
 client = instructor.from_gemini(
     client=genai.GenerativeModel(
         model_name="models/gemini-1.5-flash-latest",
-    ),
-    generation_config=genai.GenerationConfig(
-        #max_output_tokens=2000,
-        temperature=0.2,
+        generation_config=genai.GenerationConfig(
+            #max_output_tokens=2000,
+            temperature=0.2,
+        ),
     ),
     mode=instructor.Mode.GEMINI_JSON,
 )
