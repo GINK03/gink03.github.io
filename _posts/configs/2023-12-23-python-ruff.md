@@ -75,9 +75,11 @@ repos:
       - id: ruff
         types_or: [ python, pyi, jupyter ]
         args: [ --fix ]
+        exclude: __init__\.py
       # Run the formatter.
       - id: ruff-format
         types_or: [ python, pyi, jupyter ]
+        exclude: __init__\.py
 ```
 
 **GitHub actionsでの設定**
