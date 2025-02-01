@@ -29,7 +29,7 @@ google-auth-httplib2
 google-auth-oauthlib
 ```
 
-## 具体例(デフォルトのサービスアカウントでトークンを生成する)
+## 具体例: デフォルトのサービスアカウントでトークンを生成する
 
 ```python
 import google.auth
@@ -47,35 +47,50 @@ print(project) # プロジェクト名
 print(access_token)
 ```
 
-## 具体例(サービスアカウントのクレデンシャルファイルでvertex AIにローカルPCから接続する)
+## 具体例: cloud functionsへのリクエストをSAのクレデンシャルで行う
+
 
 ```python
-import google.auth
-import google.auth.transport.requests
+import requests
+from pathlib import Path
+
 from google.oauth2 import service_account
-    
-ENDPOINT_ID="<endpoint_id>"
-PROJECT_ID="<project_id>"
+from google.auth.transport.requests import Request
 
-def make_authorized_get_request(obj: List[List[str]]):
-    credentials = service_account.Credentials.from_service_account_file(
-        "/Users/<username>/.var/GOOGLE_APPLICATION_CREDENTIALS_VERTEX_AI.json",
-        scopes=['https://www.googleapis.com/auth/cloud-platform'] # scopes
-    )
-    auth_req = google.auth.transport.requests.Request()
-    credentials.refresh(auth_req)
-    access_token = credentials.token
-    headers = {
-        "Authorization": f"Bearer {access_token}",
-        "Content-type": "application/json"
-    }
-    url = f"https://us-central1-aiplatform.googleapis.com/v1/projects/{PROJECT_ID}/locations/us-central1/endpoints/{ENDPOINT_ID}:predict"
-    with requests.post(url=url, headers=headers, json=obj) as r:
-        ret = r.text
-    return json.loads(ret)
+# サービスアカウントのJSONキーのパス
+SERVICE_ACCOUNT_FILE = Path(
+    "~/.var/*************************.json"
+).expanduser()
+
+# 呼び出し先のエンドポイント URL (audience)
+TARGET_URL = "https://****************************.cloudfunctions.net/get_range"
+
+# サービスアカウントから、指定のaudience用のIDトークンを扱う資格情報を生成
+credentials = service_account.IDTokenCredentials.from_service_account_file(
+    SERVICE_ACCOUNT_FILE,
+    target_audience=TARGET_URL,  # Cloud Functions/Run で指定するaudience
+)
+
+# トークンを最新状態に更新
+request_adapter = Request()
+credentials.refresh(request_adapter)
+
+# 取得した ID トークンを Authorization ヘッダーにセット
+headers = {
+    "Authorization": f"Bearer {credentials.token}",
+    "Content-Type": "application/json",
+}
+
+# 必要に応じて送信するボディがあれば、ここで定義（今回は空の JSON を送信）
+data = {}
+
+# POST リクエストを送信
+response = requests.post(TARGET_URL, headers=headers, json=data, timeout=70)
+
+# レスポンスのステータスコードと本文を表示
+print("Status Code:", response.status_code)
+print("Response Body:", response.text)
 ```
-
----
 
 ## 参考
  - [Credentials and account types/google-auth](https://googleapis.dev/python/google-auth/1.7.0/user-guide.html)
