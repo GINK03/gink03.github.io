@@ -21,10 +21,22 @@ update_dates: ["2023-06-27"]
 
 **pip**
 ```console
-$ python3 -m pip install dateutil
+$ pip install python-dateutil
 ```
 
 ## 具体例
+
+### ２つの日時の差を知る
+
+```python
+import datetime
+from dateutil.relativedelta import relativedelta
+
+relativedelta(datetime.datetime.now(), datetime.date(2020, 11, 6))
+"""
+relativedelta(years=+4, months=+2, days=+30, hours=+16, minutes=+22, seconds=+46, microseconds=+187582)
+"""
+```
 
 ### 次の特定の曜日の日を知る
 
