@@ -22,8 +22,6 @@ update_dates: ["2022-03-26"]
    - `week number`で`group by`したいが範囲として表記したい
  - `XXXX-YY-ZZ`で表示されているとき`dbdate`型、`object`型が混在することがあるので気をつける
 
----
-
 ## pd.to_datetime
  - パース速度
    - `pd.to_datetime`はオプションによって速度が大きく異る  
@@ -171,6 +169,28 @@ index	datetime	YYYY_W	range
 ```python
 df["hour"] = df["datetime"].dt.hour
 df["dow"] = df["datetime"].dt.day_of_week
+```
+
+## 曜日を取り出す
+
+```python
+import pandas as pd
+
+df = pd.DataFrame()
+df["di"] = pd.date_range("2030-01-01", "2030-01-07")
+df["day_name"] = df["di"].dt.day_name()
+df
+"""
+|    | di                  | day_name   |
+|---:|:--------------------|:-----------|
+|  0 | 2030-01-01 00:00:00 | Tuesday    |
+|  1 | 2030-01-02 00:00:00 | Wednesday  |
+|  2 | 2030-01-03 00:00:00 | Thursday   |
+|  3 | 2030-01-04 00:00:00 | Friday     |
+|  4 | 2030-01-05 00:00:00 | Saturday   |
+|  5 | 2030-01-06 00:00:00 | Sunday     |
+|  6 | 2030-01-07 00:00:00 | Monday     |
+"""
 ```
 
 ## クオーター(期)を計算する
