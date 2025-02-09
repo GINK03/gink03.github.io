@@ -19,6 +19,7 @@ comments: false
    - e.g. GithubCopilot
    - vsixファイルをダウンロードしてインストールすることはできる
  - https化することで、マークダウンのプレビューやjupyter-notebookの実行も可能
+   - 実質、https化は必須
 
 ## インストール
 
@@ -46,32 +47,11 @@ auth: none
 cert: false
 ```
 
-### https化
- - VPNのローカルIPを利用する場合
- - caddyでhttps化する例
+## VSIXファイルのインストール
+ - code-serverが起動しているコンピュータにVSIXファイルをアップロード
+ - `$ code-server --install-extension ~/<vsixファイル名>`
+ - code-serverの拡張機能の画面で `Reload Window` をクリック
 
-**自己証明書の作成**
-```console
-$ openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout localhost.key -out localhost.crt -subj "/CN=${IP_ADDR}"
-```
-
-**Caddyfile**
-```config
-{
-    email ${EMAIL}
-}
-
-${IP_ADDR} {
-    bind ${IP_ADDR}
-    tls localhost.crt localhost.key
-    reverse_proxy localhost:9090
-}
-```
-
-**https化**
-```console
-$ sudo caddy run --config ./Caddyfile
-```
 
 ## 参考
  - [Coding on iPad using VSCode, Caddy, and code-server](https://tailscale.com/kb/1166/vscode-ipad/)
