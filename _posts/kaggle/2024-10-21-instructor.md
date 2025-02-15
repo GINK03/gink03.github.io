@@ -13,7 +13,8 @@ update_dates: ["2024-10-21"]
 # instructorの使い方
 
 ## 概要
- - openaiのfunction callingをpydanticで呼び出せるようにしたライブラリ
+ - openaiのtool callingをpydanticで呼び出せるようにしたライブラリ
+ - たまに構造化に失敗するので、リトライ機能が必要になることがある
 
 ## インストール
 
@@ -32,6 +33,39 @@ import instructor
 client = instructor.from_openai(
     openai.OpenAI(), model="gpt-4o", temperature=0.2
 )
+```
+
+**リトライ**
+```python
+import openai
+import instructor
+from pydantic import BaseModel
+from tenacity import Retrying, stop_after_attempt, wait_fixed
+
+client = instructor.from_openai(openai.OpenAI(), mode=instructor.Mode.TOOLS)
+
+class Output(BaseModel):
+    name: str
+    age: int
+
+response = client.chat.completions.create(
+    model="gpt-4-turbo-preview",
+    response_model=Output,
+    messages=[
+        {"role": "user", "content": "Extract `jason is 12`"},
+    ],
+    max_retries=Retrying(
+        stop=stop_after_attempt(6), # 試行回数  
+        wait=wait_fixed(1), # 待機時間
+    ),  
+)
+print(response.model_dump_json(indent=2))
+"""
+{
+  "name": "jason",
+  "age": 12
+}
+"""
 ```
 
 **画像の分析**
