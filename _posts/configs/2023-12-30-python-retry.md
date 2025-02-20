@@ -16,6 +16,10 @@ update_dates: ["2023-12-30"]
 ## 概要
  - 関数の実行をリトライするデコレータ
  - 例外が発生した場合にリトライする
+ - オプション
+   - `tries`: リトライ回数
+   - `delay`: リトライ間隔
+   - `jitter`: リトライ間隔のランダム要素
  
 ## インストール
 
@@ -29,7 +33,7 @@ $ pip install retry
 ```python
 from retry import retry
 
-@retry(tries=3, delay=2)
+@retry(tries=3, delay=2, jitter=(0, 9))
 def test_function():
     # ここにリトライしたい処理を書く
     print("関数を実行")
