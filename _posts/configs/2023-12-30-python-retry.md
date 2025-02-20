@@ -77,11 +77,12 @@ def function_that_raises_value_error():
 **リトライの状況をログに記録**
 ```python
 from retry import retry
+import logging
 
-def log_retry(attempt):
-    print(f"リトライ {attempt}回目を実行中...")
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
-@retry(tries=3, delay=2, on_retry=log_retry)
+@retry(tries=3, delay=2, logger=logger)
 def function_with_logging():
     # 何らかの処理
     pass
