@@ -16,6 +16,7 @@ update_dates: ["2022-10-12"]
  - jupyterなどでdataframeを表示したとき、デフォルトではHTMLで、tab or space区切りになっている
    - markdownの書類に転記する際に変換が面倒
  - markdownフォーマットで直接出力可能
+ - 空白を圧縮するには`re.sub(r"\s{2,}", " ", df.to_markdown())`を使う
 
 ## マークダウンフォーマットで表示する
 
@@ -33,6 +34,31 @@ print(df.to_markdown(index=False))
 | a   |   1 |
 | b   |   2 |
 | c   |   3 |
+'''
+```
+
+**tablefmtでフォーマット指定**
+```python
+print(df.to_markdown(tablefmt="pipe"))
+'''
+|    | A   |   B |
+|---:|:----|----:|
+|  0 | a   |   1 |
+|  1 | b   |   2 |
+|  2 | c   |   3 |
+'''
+
+print(df.to_markdown(tablefmt="grid"))
+'''
++----+-----+-----+
+|    | A   |   B |
++====+=====+=====+
+|  0 | a   |   1 |
++----+-----+-----+
+|  1 | b   |   2 |
++----+-----+-----+
+|  2 | c   |   3 |
++----+-----+-----+
 '''
 ```
 
