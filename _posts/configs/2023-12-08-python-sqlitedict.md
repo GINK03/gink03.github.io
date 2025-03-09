@@ -15,6 +15,7 @@ update_dates: ["2023-12-08"]
 ## 概要
  - pythonでdictのような使い方ができるsqliteをバックエンドにしたデータ恒久化ライブラリ
  - `autocommit=True` にすると、データの変更が即座にデータベースに反映される
+ - `flag='r'` にすると、読み込み専用でデータベースを開く
  - APIからのデータ取得などで、データをキャッシュするのに便利
 
 ## インストール
@@ -24,6 +25,40 @@ $ pip install sqlitedict
 ```
 
 ## 使い方
+
+**2つのプロセスで並列アクセスする例**
+
+```python
+from sqlitedict import SqliteDict
+from multiprocessing import Process
+import time
+
+# 書き込みプロセス
+def writer():
+    db = SqliteDict('example.db', autocommit=True)
+    for i in range(10**5):
+        db[f'key_{i}'] = f'value_{i}'
+        print(f"Writer: Wrote key_{i}")
+        time.sleep(0.1)
+    db.close()
+
+# 読み取りプロセス
+def reader():
+    db = SqliteDict('example.db', flag='r')
+    for _ in range(10**5):
+        print("Reader: Current data:", dict(db))
+        time.sleep(0.5)
+    db.close()
+
+if __name__ == '__main__':
+    # プロセス開始
+    p1 = Process(target=writer)
+    p2 = Process(target=reader)
+    p1.start()
+    p2.start()
+    p1.join()
+```
+
 
 **openaiのembeddingを保存する例**
 
