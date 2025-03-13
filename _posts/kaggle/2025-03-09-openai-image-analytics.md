@@ -21,6 +21,11 @@ update_dates: ["2025-03-09"]
 
 ## 具体例
 
+**インストール**
+```console
+$ pip install pdf2image pdfminer.six
+```
+
 ```python
 from pdf2image import convert_from_path
 from pdf2image.exceptions import (
@@ -32,6 +37,7 @@ from pdfminer.high_level import extract_text
 import base64
 import io
 import numpy as np
+from openai import OpenAI
 
 def convert_doc_to_images(path, max_width=800, max_height=800):
     images = convert_from_path(path)
