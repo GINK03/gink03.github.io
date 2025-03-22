@@ -15,6 +15,7 @@ update_dates: ["2023-04-14"]
 ## 概要
  - on-demand computing
  - Transparent parallelization
+ - joblibのhash関数は再現可能なハッシュを生成する
 
 ## インストール
 
