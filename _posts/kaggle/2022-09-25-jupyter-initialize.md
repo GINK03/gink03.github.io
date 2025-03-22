@@ -45,6 +45,7 @@ import glob
 import pprint; pp = pprint.PrettyPrinter(indent=2, width=120, depth=6)
 import warnings; warnings.filterwarnings("ignore", category=UserWarning,) # ユーザーワーニングを無視
 from joblib import Parallel, delayed, parallel_backend # 並列処理
+from joblib import hash # 再現可能なハッシュ値の生成
 import itertools # イテレータの生成
 from pathlib import Path
 import hashlib
