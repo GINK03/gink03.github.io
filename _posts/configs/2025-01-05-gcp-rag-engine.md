@@ -14,6 +14,7 @@ update_dates: ["2025-01-05"]
 
 ## 概要
  - vertex aiのサービスの一部にrag engineがある
+ - サービスアカウントで使用する際の権限は、`roles/aiplatform.admin`が必要
  - rag engineはマネージドなRAG用のベクトル検索エンジン
 
 ## インストール
@@ -32,8 +33,8 @@ import vertexai
 
 # Create a RAG Corpus, Import Files, and Generate a response
 
-PROJECT_ID = "cosmic-bonfire-354108"
-display_name = "test_corpus"
+PROJECT_ID = "your-project-id"
+display_name = "corpus_name"
 
 # Initialize Vertex AI API once per session
 vertexai.init(project=PROJECT_ID, location="us-central1")
@@ -51,7 +52,7 @@ rag_corpus = rag.create_corpus(
 # Import Files to the RagCorpus
 rag.import_files(
     rag_corpus.name,
-    ['gs://lipronext-rag-test/銀河鉄道の夜.txt'],
+    ['gs://your-bucket-name/銀河鉄道の夜.txt'],
     chunk_size=512,  # Optional
     chunk_overlap=100,  # Optional
     max_embedding_requests_per_min=900,  # Optional
@@ -79,7 +80,7 @@ for c in response.contexts.contexts:
     print(c.score)
     print("=" * 20)
 """
-gs://lipronext-rag-test/銀河鉄道の夜.txt
+gs://your-bucket-name/銀河鉄道の夜.txt
 むかしのバルドラの野原に一ぴきの蝎がいて小さな虫やなんか殺してたべて生きていたんですって。するとある日いたちに見附かって食べられそうになったんですって。さそりは一生けん命遁げて遁げたけどとうとういたちに押えられそうになったわ、そのときいきなり前に井戸があってその中に落ちてしまったわ、もうどうしてもあがられないでさそりは溺れはじめたのよ。そのときさそりは斯う云ってお祈りしたというの、
 　ああ、わたしはいままでいくつのものの命をとったかわからない、そしてその私がこんどいたちにとられようとしたときはあんなに一生けん命にげた。それでもとうとうこんなになってしまった。ああなんにもあてにならない。どうしてわたしはわたしのからだをだまっていたちに呉れてやらなかったろう。そしたらいたちも一日生きのびたろうに。どうか神さま。私の心をごらん下さい。こんなにむなしく命をすてずどうかこの次にはまことのみんなの幸のために私のからだをおつかい下さい。って云ったというの。そしたらいつか蝎はじぶんのからだがまっ赤なうつくしい火になって燃えてよるのやみを照らしているのを見たって。
 0.3496684384006816
@@ -93,8 +94,14 @@ gs://lipronext-rag-test/銀河鉄道の夜.txt
 **コーパスの一覧と削除**
 ```python
 corpora = rag.list_corpora()
-print(corpora)
 
+# 一覧の確認
+for corpus in corpora:
+    print(corpus.display_name) # display_nameで設定した名前
+    print(corpus.name) # システムで設定された名前
+
+
+# Delete all corpora
 for corpus in list(corpora):
     rag.delete_corpus(name=corpus.name)
 ```
