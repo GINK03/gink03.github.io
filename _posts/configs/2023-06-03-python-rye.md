@@ -81,13 +81,13 @@ FROM python:3.11
 
 RUN apt-get update -y && apt-get install -y
 RUN pip install --upgrade pip
+RUN pip install uv
 
 WORKDIR /app
 COPY . /app/
 
-# ryeのrequirements.lockをrequirements.txtに変換してからpipでインストール
-RUN sed '/-e/d' requirements.lock > requirements.txt
-RUN pip install -r requirements.txt
+COPY requirements.lock ./
+RUN uv pip install --no-cache --system -r requirements.lock
 
 CMD sh -c "<command>"
 ```
