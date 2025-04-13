@@ -67,9 +67,10 @@ img_file_buffer = st.camera_input("Take a picture")
 
 ## 起動
  - 外部からアクセスするには`--server.address 0.0.0.0`が必要になる
+ - `--server.headless true`を指定しないと、ローカルで起動したときにブラウザが立ち上がる
 
 ```console
-$ streamlit run src/app.py --server.port 8080 --server.address 0.0.0.0"
+$ streamlit run src/app.py --server.port 8080 --server.address "0.0.0.0" --server.headless true
 ```
 
 ## Dockerfileの例
