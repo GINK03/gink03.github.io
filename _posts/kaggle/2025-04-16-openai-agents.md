@@ -110,3 +110,6 @@ await main()
 """
 ```
 
+## 参考
+ - [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/)
+ - [openai-agents-python/examples/](https://github.com/openai/openai-agents-python/tree/main/examples)
