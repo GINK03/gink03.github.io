@@ -15,6 +15,7 @@ update_dates: ["2025-04-20"]
 ## 概要
  - openaiが開発したterminalで動作するコーディングサポートエージェント
  - 2023年時点のcodex(コード補完AI)とは別物
+ - コードの編集に限ると、Web版のChatGPTよりも優れている
 
 ## 特徴
  - 大きなファイルはスライディングしながら読み込む
@@ -60,6 +61,13 @@ safeCommands:
  - `foo.py で何をやっているか教えて`
  - `src/* を読み込んでどのようなことを行うコードなのか教えて`
  - `ありがとう、今までの改善すべき点をまとめて codex-review.md に書き出して`
+
+## トラブルシューティング
+ - ネットワークに問題が無いのに、エラーで処理が止まる場合
+   - 原因
+     - どうやらf-stringの中に `{` が二回連続していると、エラーになることがある
+   - 対応
+     - jinja2のテンプレートで`Environment(variable_start_string='[[', variable_end_string=']]', autoescape=False)` を使う
 
 ## 参考
  - [github.com/openai/codex](https://github.com/openai/codex)
