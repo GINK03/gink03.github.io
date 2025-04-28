@@ -3,7 +3,7 @@ layout: post
 title: "python redis"
 date: 2024-07-07
 excerpt: "python redisの使い方"
-tags: ["redis", "elastic-cache", "docker", "python"]
+tags: ["redis", "elastic-cache", "docker", "python", "valkey"]
 config: true
 comments: false
 sort_key: "2024-07-07"
@@ -12,12 +12,18 @@ update_dates: ["2024-07-07"]
 
 # python redisの使い方
 
+## 概要
+ - redisまたはvalkeyのpythonクライアント
+ - ほぼ同じ機能の名前の`valkey`というパッケージのクライアントが存在する
+
 ## インストール
 
 **python**
 ```console
-$ pip install redis
+$ pip install redis # redis
+$ pip install valkey # valkey
 ```
+
 
 ## 使用例
 
@@ -26,6 +32,7 @@ $ pip install redis
 import redis
 
 client = redis.Redis(host='localhost', port=6379, decode_responses=True, ssl=False, username=None, password=None)
+# client = valkey.ValKey(host='localhost', port=6379, decode_responses=True, ssl=False, username=None, password=None) # valkeyの使用例
 
 client.flushdb() # DBをすべてクリア ref. https://stackoverflow.com/questions/45916183/how-do-i-to-flush-redis-db-from-python-redis
 
