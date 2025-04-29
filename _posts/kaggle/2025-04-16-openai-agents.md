@@ -74,6 +74,39 @@ await chat_with_memory("お腹が空きました。どうしたらいいです�
 """
 ```
 
+## toolの定義と呼び出し
+
+```python
+import asyncio
+from agents import function_tool
+from agents import Agent, Runner
+
+@function_tool
+def get_weather(city: str) -> str:
+    return f"The weather in {city} is sunny."
+
+cb_agent = Agent(
+    name="ChatBot",
+    instructions="あなたは親切なアシスタントです。ユーザーの質問にやさしく丁寧に答えてください。",
+    tools=[get_weather],
+)
+
+chat_history = []
+
+async def chat_with_memory(user_message):
+    chat_history.append({"role": "user", "content": user_message})
+
+    result = await Runner.run(cb_agent, chat_history)
+
+    chat_history.append({"role": "assistant", "content": result.final_output})
+    return result.final_output
+
+await chat_with_memory("今日の東京の天気を教えて")
+"""
+今日の東京の天気は晴れです。素敵な一日をお過ごしください！🌞
+"""
+```
+
 ## ハンドオフ(Agentの切り替え)
 
 ```python
