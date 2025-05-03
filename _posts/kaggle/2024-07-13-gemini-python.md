@@ -74,6 +74,10 @@ print(f"Uploading file...")
 video_file = genai.upload_file(path=video_file_name)
 print(f"Completed upload: {video_file.uri}")
 
+# アップロードしたファイルのリスティング
+for file in genai.list_files():
+  print(file.display_name, file.name, file.uri)
+
 # 動画の分析
 prompt = "日本語でこの動画を説明してください"
 model = genai.GenerativeModel(model_name="models/gemini-1.5-flash")
