@@ -56,6 +56,15 @@ BTは、高度なAIを搭載したヴァンガード級タイタン。当初は�
 """
 ```
 
+**モデルの一覧**
+```python
+import pandas as pd
+from google import genai
+client = genai.Client()
+models = pd.DataFrame([dict(model) for model in client.models.list()])
+display(models)
+```
+
 **ファイルのアップロード**
 ```python
 file = client.files.upload(file='README.md')
