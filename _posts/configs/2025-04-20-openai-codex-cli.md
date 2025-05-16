@@ -75,7 +75,7 @@ safeCommands:
 ## トラブルシューティング
  - ネットワークに問題が無いのに、エラーで処理が止まる場合
    - 原因
-     - どうやらf-stringの中に `{` が二回連続していると、エラーになることがある
+     - どうやら `{` が二回連続している or `[{` などの特殊な構文があると、codexがエラーを起こすことがある
    - 対応
      - jinja2のテンプレートで`Environment(variable_start_string='[[', variable_end_string=']]', autoescape=False)` を使う
 
