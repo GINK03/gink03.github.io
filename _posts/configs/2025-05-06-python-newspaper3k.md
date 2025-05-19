@@ -49,3 +49,15 @@ print(article.text)   # 本文
 # 要約の抽出
 print(article.summary)  # 要約
 ```
+
+**オフラインのHTMLファイルからの抽出**
+
+```python
+from newspaper import Article
+
+html = "<html><body><h1>Sample Title</h1><p>This is a sample article.</p></body></html>"
+
+article = Article(url='', language='ja')
+article.download(input_html=html)
+article.parse()
+```
