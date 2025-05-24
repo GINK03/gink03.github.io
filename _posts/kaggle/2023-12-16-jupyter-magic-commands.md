@@ -59,10 +59,19 @@ CPU cores   : 2
 Architecture: 64bit
 ```
 
-### `%autoreload`の使い方
+### `%autoreload`
  - 自作したpythonモジュール等をimportたびに更新するmagic
 
 ```python
 %load_ext autoreload
 %autoreload 2
+```
+
+### `%%html`
+ - セルの内容をHTMLとして表示する
+ - iframeを埋め込むことができる
+
+```python
+%%html
+<iframe src="sample.html" width="800" height="600"></iframe>
 ```
