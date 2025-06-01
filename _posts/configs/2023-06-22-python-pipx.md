@@ -13,11 +13,12 @@ update_dates: ["2023-06-22"]
 # pythonのpipxの使い方
 
 ## 概要
+ - node.jsの`npx`に似た機能を提供する
  - pipがグローバルのパッケージを汚染してしまうので作られたツール
    - 別の環境にインストールされ、システムのパッケージと競合しない
    - [PEP 668](https://peps.python.org/pep-0668/)の提案に依拠する
  - ユースケースとしてコマンドラインで単独で動作するパッケージをインストールするのに適している
-   - e.g. `jupyter-lab`
+   - e.g. `yt-dlp`, `jupyterlab`, `pycowsay`など
  - [pypa](https://github.com/pypa/pipx)の提供なのでオーソライズドなもの 
  - インストールされた実態は`~/.local/pipx/venvs`
 
@@ -39,33 +40,47 @@ $ brew install pipx
 $ sudo apt install pipx
 ```
 
-## パッケージのインストール
+## 基本的な操作
+
+### パッケージのインストール
 
 ```console
 $ pipx install <package-name>
 ```
 
-## 実行するPythonのバイナリ・バージョンを指定し、パッケージ名にsuffixをつける
+### 実行するPythonのバイナリを指定し、パッケージ名にsuffixをつける
  - 例えば、`python3.11`で`jupyterlab`をインストールする場合は、`jupyterlab_3.11`という名前になる
 
 ```console
 $ pipx install <package-name> --python $(which python3) --suffix <suffix>
 ```
 
-### 例; jupyterlabをインストールする
+#### 例; jupyterlabをインストールする
 
 ```console
 $ pipx install jupyterlab --python $(which python3) --suffix _3.11
 $ pipx inject jupyterlab_3.11 tqdm pandas seaborn scikit-learn ipywidgets theme-darcula joblib sortedcontainers
 ```
 
-## パッケージの一覧を表示する
+### すべてのパッケージのアップグレード
+
+```console
+$ pipx upgrade-all
+```
+
+### すべてのパッケージをアンインストール
+
+```console
+$ pipx uninstall-all
+```
+
+### パッケージの一覧を表示する
 
 ```console
 $ pipx list
 ```
 
-## インストールせずにパッケージを実行する
+### インストールせずにパッケージを実行する
 
 ```console
 $ pipx run <package-name>
@@ -84,3 +99,14 @@ $ pipx run pycowsay moo
            ||----w |
            ||     ||
 ```
+
+## トラブルシューティング
+
+### pipxのバージョンが古い
+ - 対応
+   - `python -m pip install --upgrade pip pipx`
+
+### パッケージが壊れている
+ - 対応
+   - `pipx uninstall <package-name>`
+   - `pipx install <package-name>`
