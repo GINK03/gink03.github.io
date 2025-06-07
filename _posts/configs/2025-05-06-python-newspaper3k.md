@@ -20,6 +20,7 @@ update_dates: ["2025-05-06"]
 
 ```console
 $ pip install newspaper3k
+$ pip install "lxml[html_clean]" # HTMLのクリーンアップ用
 ```
 
 ## python readabilityのアルゴリズム
