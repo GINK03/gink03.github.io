@@ -24,29 +24,23 @@ $ pip install instructor
 
 ## 使用例
 
-**openaiパラメータの設定**
-
+**基本**
 ```python
 import openai
 import instructor
-
-client = instructor.from_openai(
-    openai.OpenAI(), model="gpt-4o", temperature=0.2
-)
-```
-
-**リトライ**
-```python
-import openai
-import instructor
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from tenacity import Retrying, stop_after_attempt, wait_fixed
 
-client = instructor.from_openai(openai.OpenAI(), mode=instructor.Mode.TOOLS)
+client = instructor.from_openai(
+    openai.OpenAI(),
+    model="gpt-4.1",
+    temperature=0.0,
+    mode=instructor.Mode.TOOLS
+)
 
 class Output(BaseModel):
-    name: str
-    age: int
+    name: str = Field(..., description="The name of the person")
+    age: int = Field(..., description="The age of the person")
 
 response = client.chat.completions.create(
     model="gpt-4-turbo-preview",
