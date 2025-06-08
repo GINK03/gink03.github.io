@@ -75,7 +75,7 @@ print(f"Completed upload: {video_file.uri}")
 
 # アップロードしたファイルのリスティング
 for file in genai.list_files():
-  print(file.display_name, file.name, file.uri)
+    print(file.display_name, file.name, file.uri, file.update_time)
 
 # 動画の分析
 prompt = "日本語でこの動画を説明してください"
