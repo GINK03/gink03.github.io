@@ -57,3 +57,13 @@ $ aws dynamodb get-item \
     --key \
         '{"item_id": {"S": "1"}}'
 ```
+
+### トラブルシューティング
+
+ - dynamodbをバックエンドにしたAPIで起動時にエラーが起きる
+   - 原因
+     - WCU（書き込みキャパシティユニット）が不足している
+   - 対処
+     - テーブルのWCUを増やす
+   - 参考
+     - [プロビジョンドモードのスロットリング](https://docs.aws.amazon.com/ja_jp/amazondynamodb/latest/developerguide/TroubleshootingThrottling-common-issues.html)
