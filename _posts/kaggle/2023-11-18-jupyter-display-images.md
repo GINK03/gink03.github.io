@@ -14,7 +14,22 @@ update_dates: ["2023-11-18"]
 ## 概要
  - jupyterで画像を表示する方法
 
-## 画像をリサイズしコンパクトに表示する
+## 標準機能で画像を表示する
+
+```python
+from IPython.display import Image, display
+
+def display_image(image_path):
+    """
+    指定されたパスの画像を表示します。
+
+    :param image_path: str
+        画像ファイルのパス。
+    """
+    display(Image(filename=image_path, width=150))
+```
+
+## PILで画像をリサイズしコンパクトに表示する
 
 ```python
 from PIL import Image
