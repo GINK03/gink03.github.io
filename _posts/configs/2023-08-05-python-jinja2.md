@@ -72,5 +72,22 @@ FROM
 """
 ```
 
+### エスケープ文字を変更
+
+```python
+from jinja2 import Environment
+
+jinja_env = Environment(
+    variable_start_string='[[',
+    variable_end_string=']]',
+)
+
+template = jinja_env.from_string("こんにちは、[[ name ]]さん")
+print(template.render(**{"name": "山田"}))
+"""
+こんにちは、山田さん
+"""
+```
+
 ## 参考
  - [Jinja — Jinja Documentation (3.1.x)](https://jinja.palletsprojects.com/en/3.1.x/)
