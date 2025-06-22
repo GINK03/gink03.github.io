@@ -26,12 +26,34 @@ update_dates: ["2025-04-17"]
 $ pip install google-adk
 ```
 
+## `.env`の設定
+
+**Google AI Studio**
+```
+GOOGLE_GENAI_USE_VERTEXAI="False"
+GOOGLE_API_KEY="**your_api_key**"
+```
+
+**Vertex AI**
+```
+GOOGLE_GENAI_USE_VERTEXAI=1
+GOOGLE_CLOUD_PROJECT=<your_project_id>
+GOOGLE_CLOUD_LOCATION=<your_project_location>
+GOOGLE_CLOUD_STORAGE_BUCKET=<your-storage-bucket>  # Only required for deployment on Agent Engine
+```
+
 ## 起動
 
 ### 開発UIの起動
 
 ```console
-$ adk web
+$ adk web --host "0.0.0.0"
+```
+
+### CLIでの起動
+
+```console
+$ adk run <path-to-directory>
 ```
 
 ## 簡単な例(google検索)
