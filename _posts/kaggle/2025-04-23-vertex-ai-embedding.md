@@ -59,3 +59,9 @@ for i, embedding in enumerate(embeddings):
     print(f"Embedding (first 5 elements): {embedding.values[:5]}...")
     print("-" * 20)
 ```
+
+## トラブルシューティング
+ - `google.api_core.exceptions.TooManyRequests: 429` エラーが発生
+   - 対応
+     - `IAMと管理 / 割当` から `Vertex AI API` + `Regional online prediction requests per base model per minute per region per base_model` で検索し割当を確認
+     - 割当が足りない場合は、割当の増加をリクエストする
