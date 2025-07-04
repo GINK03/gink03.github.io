@@ -24,7 +24,12 @@ update_dates: ["2024-02-04"]
 
 **macOS**
 ```console
-$ brew install terraform
+# brew では最新のバージョンがインストールされないため、tfenvを使用することを推奨
+$ brew uninstall terraform
+$ brew install tfenv
+$ tfenv install latest
+$ tfenv use latest
+$ terraform -v
 ```
 
 **ubuntu**
