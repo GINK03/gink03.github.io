@@ -15,6 +15,7 @@ update_dates: ["2025-06-27"]
 ## 概要
  - gemini cliはターミナルで使用可能なgemini
  - 操作感はcodex cliやclaude codeと近い
+ - デフォルトで画像の解析が可能
 
 ## インストール
 
@@ -28,7 +29,7 @@ $ npm install -g @google/gemini-cli
 $ bun install -g @google/gemini-cli
 ```
 
-## 環境変数でキーを渡す
+## (認証)環境変数でキーを渡す
 
 ```console
 $ export GEMINI_API_KEY="your_api_key"
@@ -36,3 +37,7 @@ $ export GEMINI_API_KEY="your_api_key"
 
 ## インストラクション
  - プロジェクトルートに`GEMINI.md`を作成
+
+## yoloモード
+ - `-y`, `--yolo`オプションをつけるとすべての操作を許可するyoloモードになる
+
