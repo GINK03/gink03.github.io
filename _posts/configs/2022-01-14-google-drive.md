@@ -18,6 +18,7 @@ update_dates: ["2022-04-25","2022-04-24","2022-04-16","2022-01-14"]
  - S3やGCSに近い仕組みになっており通常のHDDとは異なる
    - HDDのようにして使うとAPI制限にすぐ到達する
  - ファイルが所属するディレクトリのことをparentという
+ - GCPの Google Drive APIを利用することでプログラマティックに操作できる
 
 ## 仕組み
  - ファイルとディレクトリには名前とは別に`fileId`と呼ばれる固有のハッシュ値のようなものが存在する
@@ -29,12 +30,35 @@ update_dates: ["2022-04-25","2022-04-24","2022-04-16","2022-01-14"]
        - `fileId4`(ファイル)
        - `fileId5`(ファイル)
 
-## URLからWebUIにアクセス
- - [google.com/drive/](https://google.com/drive/)
+## pythonでファイルのダウンロード
+ - GCPでGoogle Drive API を有効化
+ - `gcloud auth application-default login --scopes="https://www.googleapis.com/auth/drive.readonly,https://www.googleapis.com/auth/cloud-platform"` でADCを設定
 
----
+```python
+from googleapiclient.discovery import build
+from googleapiclient.http import MediaIoBaseDownload
+import google.auth, io, pathlib
 
-## 使用できるクライアント
+FILE_ID = "1QDDZ2IoGN8xOzeu_********"
+DEST    = pathlib.Path("video.mp4")
+
+# 「Drive 読み取り専用」スコープで ADC を取得
+scopes = ["https://www.googleapis.com/auth/drive.readonly"]
+creds, _ = google.auth.default(scopes=scopes)          # ← gcloud で得た資格情報を自動読込 :contentReference[oaicite:0]{index=0}
+
+service = build("drive", "v3", credentials=creds)
+request = service.files().get_media(fileId=FILE_ID)
+
+with io.FileIO(DEST, "wb") as fh:
+    downloader = MediaIoBaseDownload(fh, request)
+    done = False
+    while not done:
+        status, done = downloader.next_chunk()
+        print(f"{status.progress()*100:.1f} % downloaded")
+print("✅ 完了:", DEST)
+```
+
+## 使用できるクライアントソフト
 
 ### [(osx)Google Drive for Desktop](https://support.google.com/a/users/answer/9965580?hl=en)
  - 公式クライント
@@ -53,7 +77,6 @@ update_dates: ["2022-04-25","2022-04-24","2022-04-16","2022-01-14"]
 ### [/gdrive/](/gdrive/)
  - linux, osxで使用できるCUIクライアント
 
----
 
 ## どれくらいの容量を契約すればいいのか
  - 結論
@@ -64,7 +87,6 @@ update_dates: ["2022-04-25","2022-04-24","2022-04-16","2022-01-14"]
    - どうしてもエグレス料金がかさみそうなときは、selfhostで解決する
      - 環境がない場合、[/bore/](/bore/)などで自分のコンピュータのポートを公開すれば世界からアクセス可能になる
 
----
 
 ## トラブルシューティング
 
