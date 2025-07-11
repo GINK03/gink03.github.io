@@ -16,6 +16,8 @@ update_dates: ["2025-04-20"]
  - openaiが開発したterminalで動作するコーディングサポートエージェント
  - 2023年時点のcodex(コード補完AI)とは別物
  - コードの編集に限ると、Web版のChatGPTよりも優れている
+ - `ctrl + j` で改行
+ - `ctrl + d` で終了
 
 ## 特徴
  - 大きなファイルはスライディングしながら読み込む
@@ -40,6 +42,12 @@ $ bun install -g @openai/codex
 $ export OPENAI_API_KEY=sk-...
 ```
 
+## 実行
+
+```console
+$ codex --model codex-mini-latest
+```
+
 ## インストラクション
  - `~/.codex/instructions.md`: グローバル設定
  - `project/codex.md`: プロジェクト独自設定
@@ -48,7 +56,7 @@ $ export OPENAI_API_KEY=sk-...
  - `~/.codex/config.yaml`: 設定ファイルの場所
 
 ```yaml
-model: o4-mini
+model: codex-mini-latest
 approvalMode: suggest
 fullAutoErrorMode: ask-user
 notify: true
