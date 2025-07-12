@@ -22,6 +22,7 @@ update_dates: ["2023-12-23"]
 
 ```console
 $ pipx install ruff
+$ pipx install pre-commit # pre-commitのインストール
 ```
 
 ## 使い方
@@ -41,27 +42,52 @@ $ ruff check <dir>
 $ ruff check <file> --fix
 ```
 
+**手動でpre-commitの実行**
+```console
+$ pre-commit run ruff --all-files
+```
 
 ## 設定例
 
 **.ruff.toml**
 ```toml
 exclude = [
-    ".git"
+    ".git",
+    "__pycache__",
+    ".venv",
+    "venv",
+    ".mypy_cache",
+    ".pytest_cache",
+    "*.egg-info"
 ]
 line-length = 88
 indent-width = 4
 target-version = "py311"
 
 [lint]
-select = ["E4", "E7", "E9", "F"]
-ignore = []
+select = [
+    "E",     # pycodestyle errors
+    "W",     # pycodestyle warnings
+    "F",     # pyflakes
+    "I",     # isort
+    "B",     # flake8-bugbear
+    "C4",    # flake8-comprehensions
+    "UP",    # pyupgrade
+    "ARG",   # flake8-unused-arguments
+    "SIM",   # flake8-simplify
+    "PTH",   # flake8-use-pathlib
+]
+extend-ignore = [
+    "E501",  # line too long (handled by formatter)
+    "B008",  # do not perform function calls in argument defaults
+    "B905",  # zip() without an explicit strict= parameter
+]
 
 fixable = ["ALL"]
 unfixable = []
 
 [format]
-quote-style = "single"
+quote-style = "double"
 ```
 
 **pre-commitに設定**
@@ -69,17 +95,15 @@ quote-style = "single"
 repos:
   - repo: https://github.com/astral-sh/ruff-pre-commit
     # Ruff version.
-    rev: v0.1.9
+    rev: v0.12.3
     hooks:
       # Run the linter.
       - id: ruff
-        types_or: [ python, pyi, jupyter ]
-        args: [ --fix ]
-        exclude: __init__\.py
+        types_or: [ python, pyi ]
+        args: ["--fix", "--config=.ruff.toml"]
       # Run the formatter.
       - id: ruff-format
-        types_or: [ python, pyi, jupyter ]
-        exclude: __init__\.py
+        types_or: [ python, pyi ]
 ```
 
 **GitHub actionsでの設定**
