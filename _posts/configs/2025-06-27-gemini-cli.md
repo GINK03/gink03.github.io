@@ -29,6 +29,25 @@ $ npm install -g @google/gemini-cli
 $ bun install -g @google/gemini-cli
 ```
 
+## MCPの連携
+ - `~/.gemini/settings.json` にMCPの設定を記述
+
+**例**
+```json
+{
+  "theme": "Default",
+  "selectedAuthType": "gemini-api-key",
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ]
+    }
+  }
+}
+```
+
 ## (認証)環境変数でキーを渡す
 
 ```console
