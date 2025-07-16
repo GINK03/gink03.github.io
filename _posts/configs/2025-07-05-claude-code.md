@@ -28,6 +28,17 @@ $ npm install -g @anthropic-ai/claude-code
 $ bun install -g @anthropic-ai/claude-code
 ```
 
+## 実行
+
+```console
+$ claude
+```
+
+**自動許可**
+```console
+$ claude --dangerously-skip-permissions
+```
+
 ## 認証
  - console.anthropic.comを選択可能
 
