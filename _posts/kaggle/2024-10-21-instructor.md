@@ -15,6 +15,7 @@ update_dates: ["2024-10-21"]
 ## 概要
  - openaiのtool callingをpydanticで呼び出せるようにしたライブラリ
  - たまに構造化に失敗するので、リトライ機能が必要になることがある
+ - openrouter経由でも利用可能
 
 ## インストール
 
@@ -160,3 +161,7 @@ df
 | Taylor Alonso   | Intern   | Harper Russo   | Employee       |
 """
 ```
+
+## 参考
+ - [Structured outputs with OpenRouter, a complete guide with instructor](https://python.useinstructor.com/integrations/openrouter/)
+
