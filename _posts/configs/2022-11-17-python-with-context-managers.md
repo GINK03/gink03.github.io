@@ -4,7 +4,7 @@ title: "python context manager"
 date: "2022-11-17"
 excerpt: "pythonのcontext managerの使い方"
 config: true
-tag: ["python", "context manager"]
+tag: ["python", "context manager", "with", "decorator", "class"]
 comments: false
 sort_key: "2022-11-17"
 update_dates: ["2022-11-17"]
@@ -15,8 +15,16 @@ update_dates: ["2022-11-17"]
 ## 概要
  - `with`ステートメントで自動でリソースを開放するを行える機能
  - 関数デコレータで実装する方法と、クラスで実装する方法がある
+ - `with`を使用せずに`__enter__`と`__exit__`メソッドを呼ぶことでも使用可能
 
-## 関数デコレータで実装する方法
+## withを使用しない例(pandasの表示設定)
+
+```python
+def display_full(df): (lambda c: (c.__enter__(), display(df), c.__exit__()))\
+    (pd.option_context("display.max_colwidth", None, "display.max_rows", None, "display.max_columns", None))
+```
+
+## 関数デコレータで実装する方法(処理の開始と終了をログに出力する例)
 
 ```python
 from contextlib import contextmanager
