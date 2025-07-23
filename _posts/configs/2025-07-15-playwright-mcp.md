@@ -18,7 +18,8 @@ update_dates: ["2025-07-15"]
  - すべての要素をツリー構造(Accessibility Tree)で表現するためかトークンの消費が激しい
 
 ## プロファイル
- - `~/.cache/ms-playwright/mcp-chrome-profile/`
+ - **Linux**
+   - `~/.cache/ms-playwright/mcp-chrome-profile/`
 
 ## mcpの設定例
 
