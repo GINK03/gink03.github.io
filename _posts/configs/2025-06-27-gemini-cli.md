@@ -43,6 +43,10 @@ $ bun install -g @google/gemini-cli
       "args": [
         "@playwright/mcp@latest"
       ]
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp"]
     }
   }
 }
@@ -60,3 +64,10 @@ $ export GEMINI_API_KEY="your_api_key"
 ## yoloモード
  - `-y`, `--yolo`オプションをつけるとすべての操作を許可するyoloモードになる
 
+## `-p` オプション
+ - 対話ではなく最初にプロンプトを渡して実行するオプション
+ - この状態でも`GEMINI.md`のインストラクションは読み込まれる
+ 
+```console
+$ gemini -y -p "GEMINI.mdに書いてあるミッションを実行してください"
+```
