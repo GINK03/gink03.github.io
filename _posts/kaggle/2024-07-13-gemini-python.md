@@ -34,7 +34,7 @@ from IPython.display import Markdown
 import os
 import pandas as pd
 
-model = genai.GenerativeModel('models/gemini-2.5-pro-preview-05-06')
+model = genai.GenerativeModel('models/gemini-2.5-pro')
 response = model.generate_content(
     """タイタンフォール２のストーリーについて300文字程度で要約して。名言等を添えて感動を伝わるように.
     例えば、BTの「trust me.」など
@@ -79,7 +79,7 @@ for file in genai.list_files():
 
 # 動画の分析
 prompt = "日本語でこの動画を説明してください"
-model = genai.GenerativeModel(model_name="models/gemini-1.5-flash")
+model = genai.GenerativeModel(model_name="models/gemini-2.5-flash")
 response = model.generate_content([prompt, video_file],
                                   request_options={"timeout": 600})
 print(response.text)
