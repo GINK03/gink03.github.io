@@ -23,7 +23,7 @@ update_dates: ["2024-08-11"]
 $ pipx install yt-dlp
 ```
 
-## 使い方
+## ユースケース別使い方
 
 ### 特定のキーワードで検索
 
@@ -48,4 +48,14 @@ channel_url = "https://www.youtube.com/feed/trending?gl=JP"
 result = subprocess.run(['yt-dlp', '-J', '--flat-playlist', channel_url], 
                         capture_output=True, text=True)
 data = json.loads(result.stdout)
+```
+
+### 音声のみをダウンロード
+
+```console
+$ yt-dlp -f bestaudio \
+       -x --audio-format mp3 \
+       --postprocessor-args "-ac 2 -ar 16000" \
+       -o "%(title)s.%(ext)s" \
+       "https://www.youtube.com/watch?v=<動画ID>"
 ```
