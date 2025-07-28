@@ -23,6 +23,7 @@ $ pip install google-cloud-aiplatform
 
 ## サンプルコード
 
+**RAG (Retrieval-Augmented Generation) のためのテキスト埋め込みの生成**
 ```python
 import vertexai
 from vertexai.language_models import TextEmbeddingModel, TextEmbeddingInput
@@ -58,6 +59,34 @@ for i, embedding in enumerate(embeddings):
     print(f"Embedding dimension: {len(embedding.values)}")
     print(f"Embedding (first 5 elements): {embedding.values[:5]}...")
     print("-" * 20)
+```
+
+**コンテンツベースのレコメンド**
+```python
+import vertexai, numpy as np
+from vertexai.language_models import TextEmbeddingModel, TextEmbeddingInput
+
+vertexai.init(project="your-project-id", location="asia-northeast1")
+model = TextEmbeddingModel.from_pretrained("gemini-embedding-001")
+
+texts = [
+    "抹茶ラテの作り方",
+    "グリーンティーラテの簡単レシピ",
+    "サッカー最新戦術の解説"
+]
+
+inputs = [TextEmbeddingInput(t, task_type="SEMANTIC_SIMILARITY") for t in texts]
+
+# 768 dim に圧縮（MRL）
+embs = model.get_embeddings(inputs, output_dimensionality=768)
+# デフォルトの次元
+# embs = model.get_embeddings(inputs,)
+
+# 正規化はお好みで（推奨）
+array = np.vstack([e.values for e in embs]).astype("float32")
+array /= np.linalg.norm(array, axis=1, keepdims=True)
+
+print(array.shape)      # (3, 768)
 ```
 
 ## トラブルシューティング
