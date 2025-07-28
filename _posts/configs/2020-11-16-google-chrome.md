@@ -44,12 +44,15 @@ e.g.
  - 操作
    - `タブの上で右クリック` -> `[固定]`を選択
 
-## メモリの節約(memory saver)
+### タブの移動
+ - `Option + Cmd + 矢印` で右左のタブへ移動
+
+### メモリの節約(memory saver)
  - `設定` -> `memory saver`を有効化することでメモリの消費を抑えることができる
  - 強さの設定
    - Moderate：抑えめに休止
    - Balanced：推奨設定
-   - Maximum：すぐに休止
+   - Maximum：すぐに休止(個人的なオススメ)
 
 ## extensions
 
