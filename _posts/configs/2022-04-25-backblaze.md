@@ -19,6 +19,8 @@ update_dates: ["2022-04-25"]
  - 価格が安いことがとにかく売りである
    - GoogleDriveやOneDriveよりはるかに安価であるのでBackblazeを契約したほうがよい
  - 一日に使える金額のキャップをすることが可能であり、操作ミスやDoS攻撃や大量のアクセスでのエグレス料金による破産を防げる
+ - アクセスログを特定のバケットに保存することができる
+ - バケットの公開設定をすることで、画像やスタティックコンテンツの配信レポジトリとして使うことができる
 
 ## B2の各機能の解説
  - `Buckets`
@@ -43,15 +45,18 @@ update_dates: ["2022-04-25"]
  - Friendly URLを取得する
    - 共有したいファイルを選択し、詳細を表示するとFriendly URLが得られる
 
-## Master Application Key
+## `Master Application Key` とは
  - mountainduckなどでマウントする際に指定するIDとクレデンシャルのペアのこと
  - すべてのバケットが参照可能になるので管理に注意
 
+## WebUIの操作
+ - バケットを選択し、コンピュータからアップロードすることができる
+   - このときファイルのソート機能がないので大量のファイルをアップロードする場合は注意が必要(vimium等で操作することをおすすめ)
+
 ## 各OSからB2バケットをマウントできるツール
- - Windows
-   - [/mountainduck/](/mountainduck/)
- - OSX
+ - macOS
    - [/mountainduck/](/mountainduck/)
    - [/rclone/](/rclone/)
  - Linux
    - [/rclone/](/rclone/)
+
