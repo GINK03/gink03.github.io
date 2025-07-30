@@ -14,6 +14,18 @@ comments: false
 
 ## 概要
  - テキストの埋め込みを生成するためのAPI
+ - MRLに対応しておりあとの方の次元を削っても性能が落ちにくい
+   - 次元ごとの特徴
+     - 1〜256 dim: 主要テーマ
+     - 257〜768 dim: 語彙・文脈の細部
+     - 769 dim以降: 追加的な手がかり
+   - vertex aiのエンベッティングでは768 / 1,536 / 3,072 dimが推奨
+
+## task_type
+ - `SEMANTIC_SIMILARITY`: セマンティック類似性
+ - `CLASSIFICATION`: 分類タスクのための埋め込み(傾向はSEMANTIC_SIMILARITYに近い)
+ - `RETRIEVAL_QUERY`: 検索クエリのための埋め込み
+ - `RETRIEVAL_DOCUMENT`: 検索ドキュメントのための埋め込み
 
 ## インストール
 
