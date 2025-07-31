@@ -58,6 +58,7 @@ Yahoo Japan(https://www.yahoo.co.jp/)から調べてください
     return history
 
 history = await main()
+
 print("=" * 80)
 for step in history.history:
     for act in step.model_output.action:        # ← 0.5.x 系は action（単数）
@@ -80,6 +81,9 @@ print("=" * 80)
 **Geminiを利用する例**
 
 ```python
+from IPython.display import Markdown
+from pathlib import Path
+import base64
 import asyncio
 from dotenv import load_dotenv
 from browser_use import Agent
@@ -109,6 +113,11 @@ async def main():
     return await agent.run(max_steps=5)
 
 history = await main()
+
+# ステップごとの スクリーンショットを保存
+for idx, shot in enumerate(history.screenshots()):
+    if shot:
+        Path(f"outputs/step_{idx:03}.png").write_bytes(base64.b64decode(shot))
 
 print("=" * 80)
 for step in history.history:
