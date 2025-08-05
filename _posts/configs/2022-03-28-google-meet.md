@@ -25,6 +25,11 @@ update_dates: ["2022-03-28"]
 ## 設定方法
  - [meet.google.com](https://meet.google.com/)の右上の歯車から音声デバイス、カメラの設定を行う
 
+## 録画と書き起し
+ - 録画は個人のGoogle Oneの契約が必要
+ - 書き起しはGoogle Workspaceのみ利用可能
+ - 録画と書き起しは Google Driveの `My Drive` の `Meet Recordings` フォルダに保存される
+
 ## トラブルシューティング
 
 ### Macで画面の共有ができない
