@@ -18,6 +18,7 @@ update_dates: ["2025-04-20"]
  - コードの編集に限ると、Web版のChatGPTよりも優れている
  - `ctrl + j` で改行
  - `ctrl + d` で終了
+ 
 
 ## 特徴
  - 大きなファイルはスライディングしながら読み込む
@@ -47,6 +48,10 @@ $ export OPENAI_API_KEY=sk-...
 ```console
 $ codex --model codex-mini-latest
 ```
+
+## コマンドラインオプション
+ - `-m`: モデルを指定
+ - `--full-auto`: 自動モードで実行
 
 ## インストラクション
  - `~/.codex/instructions.md`: グローバル設定
