@@ -28,7 +28,8 @@ update_dates: ["2022-03-28"]
 ## 録画と書き起し
  - 録画は個人のGoogle Oneの契約が必要
  - 書き起しはGoogle Workspaceのみ利用可能
- - 録画と書き起しは Google Driveの `My Drive` の `Meet Recordings` フォルダに保存される
+ - 録画と書き起しは Goole Workspaceのメンバーであれば Google Driveの `My Drive` の `Meet Recordings` フォルダに保存される
+   - Google Workspace外のメンバーの場合は、後で後でメールで(Google Workspaceのメンバーが有効化した)書き起しが送信される
 
 ## トラブルシューティング
 
