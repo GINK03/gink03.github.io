@@ -53,6 +53,7 @@ def compute_hash(text: str) -> str: return hashlib.sha256(text.encode('utf-8')).
 # pandasのDataFrameを表示する際に、全ての情報を表示する関数
 def display_full(df): (lambda c: (c.__enter__(), display(df), c.__exit__()))\
     (pd.option_context("display.max_colwidth", None, "display.max_rows", None, "display.max_columns", None))
+from jinja2 import Template, Environment; JinjaEnv = Environment(variable_start_string='[[', variable_end_string=']]')
 from loguru import logger
 # jupyter aiの有効化
 %load_ext jupyter_ai
