@@ -7,6 +7,9 @@
  - `_posts/<subdir>` 以下に個々のmarkdownコンテンツが配置されている
  - `<subdir>`はコンテンツの性質に応じて作成されている
 
+## 基本的に守ってほしいこと
+ - `git` 関連の操作（`git commit`, `pre-commit関連のチェック` 等) は必要ない
+
 ## 遵守事項
  - `git restore .` を絶対行わない
 
