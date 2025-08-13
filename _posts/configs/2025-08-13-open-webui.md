@@ -1,27 +1,27 @@
 ---
 layout: post
-title: "open webui"
-date: "2025-08-13"
-excerpt: "open webuiの使い方"
+title: "open-webui"
+date: 2025-08-13
+excerpt: "open-webuiの使い方"
 config: true
-tags: ["open webui"]
+tag: ["open-webui"]
 comments: false
 sort_key: "2025-08-13"
 update_dates: ["2025-08-13"]
 ---
 
-# open webuiの使い方
+# open-webuiの使い方
 
 ## 概要
- - ローカルLLMや自身のLLMサービスのキーを入力すること(BYOK)でLLMを利用できるサービス
- - openrouterを利用することができるため、様々なLLMを利用できる
+- ローカルLLMや自前のLLMサービスのAPIキーを入力すること (BYOK) でLLMを利用できるサービス
+- OpenRouterを利用できるため、様々なLLMを利用できる
 
 ## 利用方法
  - 以下の２つ
    - docker
    - pythonの仮想環境
 
-**pythonの仮想環境(uv)**
+**pythonの仮想環境 (uv)**
 
 ```console
 $ uv init .
@@ -43,6 +43,5 @@ CODE_EVAL_VALVE_OVERRIDE_REQUIRE_RESOURCE_LIMITING=false
 CODE_EVAL_VALVE_OVERRIDE_MAX_RAM_MEGABYTES=0
 ```
 
-## tool, functionの導入
+## Tool, Functionの導入
  - `管理者パネル` -> `Functions` -> マーケットプレイスからダウンロード
-
