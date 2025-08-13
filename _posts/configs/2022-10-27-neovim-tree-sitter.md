@@ -4,7 +4,7 @@ title: "neovim tree-sitter"
 date: "2022-10-27"
 excerpt: "neovim tree-sitterの使い方"
 config: true
-tag: ["neovim", "lua", "luajit", "tree-sitter"]
+tags: ["neovim", "lua", "luajit", "tree-sitter"]
 comments: false
 sort_key: "2022-10-27"
 update_dates: ["2022-10-27"]
