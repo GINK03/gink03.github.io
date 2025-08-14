@@ -65,6 +65,20 @@ token_num = model.count_tokens("あなたはGemini？あなたにできること
 print(token_num)
 ```
 
+**ファイルアップロード(完了まで待つ)**
+```python
+file = genai.upload_file(path=filename)
+while True:
+    file_id = getattr(file, "name", getattr(file, "id", file))
+    file = genai.get_file(file_id)
+    if getattr(file, "state", None) == 2:
+        break
+    else:
+        print(f"Uploading file {filename}...")
+        time.sleep(1)
+```
+
+
 **動画の分析**
 ```python
 # 動画のアップロード
