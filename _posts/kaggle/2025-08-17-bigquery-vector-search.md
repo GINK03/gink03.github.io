@@ -55,6 +55,14 @@ pandas_gbq.to_gbq(
 )
 ```
 
+## ベクトルインデックスの付与
+
+```sql
+-- ベクトルインデックスの作成例
+CREATE VECTOR INDEX my_index ON `your_project.your_dataset.document_embeddings`(embedding)
+OPTIONS(distance_type='COSINE', index_type='IVF');
+```
+
 ## 類似度計算
 
 ```python
