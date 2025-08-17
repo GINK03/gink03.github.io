@@ -3,7 +3,7 @@ layout: post
 title: "bigquery vector search"
 date: 2025-08-17
 excerpt: "bigquery vector search"
-tags: ["bq", "bigquery", "gcp", "bigquery", "cast"]
+tags: ["bq", "bigquery", "gcp", "vector_search", "cosine"]
 kaggle: true
 comments: false
 sort_key: "2025-08-17"
@@ -19,55 +19,40 @@ update_dates: ["2025-08-17"]
 
 ```python
 import pandas as pd
-from google.cloud import bigquery
 import pandas_gbq
 
-# --- 1. 準備 ---
-# GCPプロジェクトIDとBigQueryのデータセット・テーブルIDを設定
-project_id = "your-gcp-project-id"  # ご自身のプロジェクトIDに変更してください
-dataset_id = "your_dataset_id"      # 例: "vector_search_dataset"
-table_id = "your_table_id"          # 例: "document_embeddings"
-table_ref = f"{project_id}.{dataset_id}.{table_id}"
+project_id = "your-gcp-project-id"
+table_ref = "your_project.your_dataset.document_embeddings"
 
-# --- サンプルデータ (Pandas DataFrame) の作成 ---
-data = {
-    'id': [1, 2, 3, 4, 5],
-    'text': [
+df = pd.DataFrame({
+    "id": [1, 2, 3, 4, 5],
+    "text": [
         "犬は忠実な動物です。",
         "猫は独立した動物です。",
         "犬は公園を散歩するのが好きです。",
         "猫は日向ぼっこを好みます。",
-        "車は便利な乗り物です。"
+        "車は便利な乗り物です。",
     ],
-    # Embeddingは float のリスト型で表現
-    'embedding': [
+    "embedding": [
         [0.1, 0.8, 0.2],
         [0.9, 0.2, 0.3],
         [0.2, 0.7, 0.3],
         [0.8, 0.3, 0.4],
-        [0.5, 0.5, 0.9]
-    ]
-}
-df = pd.DataFrame(data)
+        [0.5, 0.5, 0.9],
+    ],
+})
 
-# --- 2. BigQueryへのデータロード ---
-# BigQueryのテーブルスキーマを明示的に定義
-table_schema = [
-    {'name': 'id', 'type': 'INTEGER'},
-    {'name': 'text', 'type': 'STRING'},
-    # EmbeddingカラムをARRAY<FLOAT64>型にマッピングすることが重要
-    {'name': 'embedding', 'type': 'FLOAT64', 'mode': 'REPEATED'},
-]
-
-# pandas-gbq を使ってDataFrameをBigQueryにアップロード
 pandas_gbq.to_gbq(
     df,
     table_ref,
     project_id=project_id,
-    if_exists='replace', # 既にテーブルがあれば上書き
-    table_schema=table_schema
+    if_exists="replace",
+    table_schema=[
+        {"name": "id", "type": "INTEGER"},
+        {"name": "text", "type": "STRING"},
+        {"name": "embedding", "type": "FLOAT64", "mode": "REPEATED"},
+    ],
 )
-print(f"\nDataFrameをBigQueryテーブル '{table_ref}' にロードしました。")
 ```
 
 ## 類似度計算
@@ -79,12 +64,14 @@ from google.cloud import bigquery
 bq_client = bigquery.Client()
 
 # クエリとパラメータ
-sql_query = """
+query_embedding = [0.1, 0.8, 0.2]  # 検索クエリのベクトル（次元はembeddingと一致させる）
+
+sql_query = f"""
 SELECT
-    base.id,
-    base.text,
-    ML.DISTANCE(base.embedding, @query_vector, 'COSINE') AS similarity
-FROM `project.dataset.table` AS base
+  id,
+  text,
+  1.0 - ML.DISTANCE(embedding, @query_vector, 'COSINE') AS similarity  -- コサイン類似度
+FROM `{table_ref}`
 ORDER BY similarity DESC
 LIMIT 10
 """
