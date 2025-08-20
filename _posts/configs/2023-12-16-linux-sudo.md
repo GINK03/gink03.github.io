@@ -31,6 +31,11 @@ update_dates: ["2023-12-16"]
 
 ## 新規ユーザにsudo権限を付与する
 
+**ユーザの追加**
+```console
+$ sudo adduser <user>
+```
+
 **sudoグループに追加**
 
 ```console
