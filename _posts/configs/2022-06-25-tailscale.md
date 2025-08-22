@@ -3,7 +3,7 @@ layout: post
 title: "tailscale"
 date: 2022-06-25
 excerpt: "tailscaleの使い方"
-tags: ["tailscale", "vpn", "wireguard"]
+tag: ["tailscale", "vpn", "wireguard"]
 config: true
 comments: false
 sort_key: "2022-06-25"
@@ -15,35 +15,44 @@ update_dates: ["2022-06-25"]
 ## 概要
  - hamachiのようなp2p VPN
    - 一部GUIがシェアウェアである点もhamachiと似ている
- - wireguardをバックエンドに使用しており、認証関連をマネージしてくれるもの
+ - wireguardをバックエンドに使用しており、認証関連を管理してくれるもの
    - wireguardは多少設定が面倒であるが、tailscaleを用いるとGoogle AccountやMicrosoft Accountでログインするだけで利用できる
-   - デフォルトでは一定期間でkey expireするので、無効化するにはWebUIから`disable key expiry`を選択する
  - UDP NAT traversalをサポートしており、NATの内側のコンピュータでもVPNネットワークに参加できる
  - 一定のコンピュータ数(20)までは無料なので、個人で利用するには十分そう
- - 登録しているコンピュータのIPアドレスは[Machines](https://login.tailscale.com/admin/machines)から確認できる
  - ある程度のオーバーヘッドがあり、速度が半分程度になる
- - コントロールプレーンというマネージをするサーバが必要で、無料で使うにはこれが制限となる
-   - 半年に一度認証が解除されるのでいざというときに使えないのが痛い
- - [headscale](https://github.com/juanfont/headscale)というコントロールプレーンをセフルホストにするOSSもある
- - exit nodeを指定・利用することできる
-   - VPNをトンネリングで利用しているイメージですべてのトラヒックをexit node経由で行うことができる
-   - exit node利用時に任意のnameserverを指定することができる
-     - `Admin Console` -> `DNS` -> `nameservers`にDNSを設定 + `Override local DNS`を有効にする
- - relayモードとdirectモードがあり、directモードはとても早いが`41641/udp`の開放が必要になる
+ - コントロールプレーンという管理サーバが必要で、無料プランではここが制約となる
+   - 半年に一度認証が解除されるため、いざというときに使えないのが痛い
+
+## 仕組みと用語の整理
+ - 認証・鍵管理
+   - デフォルトでは一定期間でキーが期限切れになるため、無効化するにはWeb UIから`disable key expiry`を選択する
+ - デバイス/アドレス管理
+   - 登録しているコンピュータのIPアドレスは[Machines](https://login.tailscale.com/admin/machines)から確認できる
+ - directモードとrelayモード
+   - relayモードとdirectモードがあり、directモードはとても速いが`41641/udp`の開放が必要になる
    - 手動でポートを変更したい場合は`/etc/default/tailscaled`を編集すれば良い
    - 同じサブネットに複数のtailscaleのノードがあったとしてもポートを自動調整するので原則として変更する必要はない
- - directモードを確立できない場合、世界中に配置されたDERPと呼ばれる公開サーバをリレーとしてフォールバックする
-   - `tailscale status`で接続状況を確認できる
-     - `relay "tok"`であれば東京のリレーサーバを経由している
+   - directモードを確立できない場合、世界中に配置されたDERPと呼ばれる公開サーバをリレーとしてフォールバックする
+     - `tailscale status`で接続状況を確認できる（`relay "tok"`であれば東京のリレーサーバ経由）
+ - exit node
+   - exit nodeを指定・利用することができる
+   - VPNをトンネリングで利用しているイメージですべてのトラフィックをexit node経由で行うことができる
+   - exit node利用時に任意のnameserverを指定することができる
+     - `Admin Console` -> `DNS` -> `nameservers`にDNSを設定 + `Override local DNS`を有効にする
+ - 仮想インターフェイス
+   - Linux: `tailscale0`
+   - macOS: `utunX`
+ - セルフホストのコントロールプレーン
+   - [headscale](https://github.com/juanfont/headscale)というコントロールプレーンをセルフホストにするOSSもある
 
 ## ユースケース
- - ファイヤーウォールの内部に設定したセキュアな環境にアクセスする
+ - ファイアウォールの内部に構築したセキュアな環境にアクセスする
    - ssh
      - グローバルIPの設定がいらない
    - jupyter
      - 踏み台の設定がいらないので楽
 
-## インストール
+## セットアップ（インストール）
 
 **linux**
 ```console
@@ -51,40 +60,18 @@ $ curl -fsSL https://tailscale.com/install.sh | sh
 $ sudo tailscale up
 ```
 
-**macos**
- - `app store`から`tailscale`を検索してインストール
- - app store版ではCLIは入らない
+**macOS**
+ - `App Store`から`tailscale`を検索してインストール
+ - App Store版ではCLIは含まれない
 
-**macOSにビルドしてインストール/アップデート**
+**macOSでビルドしてインストール/アップデート**
 ```console
 $ go install tailscale.com/cmd/tailscale{,d}@main
 $ sudo $HOME/.go/bin/tailscaled install-system-daemon # launchdに登録
 ```
 
-## tailscale ping
- - tailscale上でのネットワークのネゴシエーションを含んだpingを行う
- - replayモードからdirectモードに変更するためにも使用できる
-
-```console
-$ tailscale ping 100.108.132.113
-pong from kichijouji (100.108.132.113) via DERP(tok) in 39ms
-pong from kichijouji (100.108.132.113) via 211.15.239.222:41641 in 38ms
-```
-
-## FOSSバージョンのheadscaleについて
- - 概要
-   - tailscaleのFOSS
-   - tailscaleのコントロールプレーンのみをself hostにすることで完全に無料にしている
-   - インストールのハードルが高い
-     - dockerで管理するのがよい
-
-## 仮想インターフェイス
- - Linux
-   - `tailscale0`
- - macOS
-   - `utunX`
-
-## 現在アクティブなデバイスの一覧と接続形式を表示
+## よく使うコマンド
+ - 接続デバイス一覧と接続形式の確認
 
 ```console
 $ tailscale status
@@ -95,8 +82,37 @@ $ tailscale status
    - `relay <tok>`のような表示のときrelayサーバ経由でのアクセス
    - `direct 211.15.239.222:15968`のような表示のときdirectアクセス
 
+ - ネゴシエーション込みのping（direct誘導にも有効）
+
+```console
+$ tailscale ping 100.108.132.113
+pong from kichijouji (100.108.132.113) via DERP(tok) in 39ms
+pong from kichijouji (100.108.132.113) via 211.15.239.222:41641 in 38ms
+```
+
+## exit nodeの設定/利用
+ - tailscaleのルーティングするデバイスを指定してexit nodeにすることができる
+   - exit nodeはルーターのようなイメージ
+
+**linuxをexit nodeとして設定**
+```console
+$ echo 'net.ipv4.ip_forward = 1' | sudo tee -a /etc/sysctl.conf
+$ echo 'net.ipv6.conf.all.forwarding = 1' | sudo tee -a /etc/sysctl.conf
+$ sudo sysctl -p /etc/sysctl.conf
+$ sudo tailscale up --advertise-exit-node
+```
+
+**macOSでexit nodeを利用する**
+ - tailscaleのアイコンをクリック
+ - `Exit Node`を選択
+
+**linuxでexit nodeを利用する**
+```console
+$ sudo tailscale up --exit-node=<exit-node-ip>
+```
+
 ## ベンチマーク
- - relayサーバ経由だと、約パフォーマンスが54%に低下する
+ - relayサーバ経由だと、パフォーマンスが約54%に低下する
 
 **直接接続した場合**
 ```console
@@ -114,29 +130,8 @@ Mean Latency Microseconds,Throughput
 33108.25,31.51
 ```
 
-## exit nodeの設定
- - tailscaleのルーティングするデバイスを指定してexit nodeにすることができる
-   - exit nodeはルータみたいなイメージ
-
-**linuxをexit nodeとしての設定**
-```console
-$ echo 'net.ipv4.ip_forward = 1' | sudo tee -a /etc/sysctl.conf
-$ echo 'net.ipv6.conf.all.forwarding = 1' | sudo tee -a /etc/sysctl.conf
-$ sudo sysctl -p /etc/sysctl.conf
-$ sudo tailscale up --advertise-exit-node
-```
-
-**macOSでexit nodeを利用する**
- - tailscaleのアイコンをクリック
- - `Exit Node`を選択
-
-**linuxでexit nodeを利用する**
-```console
-$ sudo tailscale up --exit-node=<exit-node-ip>
-```
-
-## wireguardとrelayサーバ経由のtailscaleの速度の違い
- - 2 ~ 3倍程度の速度差ある
+### wireguardとrelayサーバ経由のtailscaleの速度の違い
+ - 2〜3倍程度の速度差がある
 
 **wireguard**
 ```console
@@ -154,11 +149,17 @@ Mean Latency Microseconds,Throughput
 27856.18,37.48
 ```
 
+## セルフホスト（headscale）
+ - 概要
+   - tailscale互換のFOSS
+   - tailscaleのコントロールプレーンのみをself-hostにすることで完全に無料にしている
+   - インストールのハードルが高い
+     - Dockerで管理するのがよい
 
 ## トラブルシューティング
  - direct connectionが利用できない
    - 原因
-     - 接続クライアント側(ノートパソコン等)で公衆無線LANなどを利用していると、ルーターの制限のためか、directモードが確立できないことがあった
+     - 接続クライアント側（ノートパソコン等）で公衆無線LANなどを利用していると、ルーターの制限のためか、directモードが確立できないことがあった
 
 ## 参考
  - [/r/Tailscale/](https://www.reddit.com/r/Tailscale/)
