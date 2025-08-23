@@ -17,11 +17,11 @@ update_dates: ["2022-09-21"]
    - jupyterの起動の際に`python3 -m jupyter lab`, `python3 -m notebook`で起動すると明示的に起動するバイナリが指定しやすい
 
 ## poetry, rye, uvで環境を分けてインストールする
- - システムのpythonではライブラリの不整合が起こることがあり、[/poetry/](/python-poetry/)など環境を分割できるソフトウェアを用いると安全
+ - システムのpythonではライブラリの不整合が起こることがあり、[/poetry/](/python-poetry/)や[/python-uv/](/python-uv/)など環境を分割できるソフトウェアを用いると安全
 
 ```console
-$ rye init .
-$ rye add jupyterlab tqdm pandas seaborn scikit-learn ipywidgets joblib sortedcontainers \
+$ uv init .
+$ uv add jupyterlab tqdm pandas seaborn scikit-learn ipywidgets joblib sortedcontainers \
     scipy lightgbm \
     pydata-google-auth google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client google-cloud-bigquery \
     pandas-gbq japanize-matplotlib \
@@ -29,8 +29,8 @@ $ rye add jupyterlab tqdm pandas seaborn scikit-learn ipywidgets joblib sortedco
     openai tiktoken spacy requests jinja2 gspread \
     jedi_language_server \
     theme-darcula catppuccin-jupyterlab jupyterlab-miami-nights jupyterlab-simpledark
-$ rye run jupyter lab --port 20000 --ip '0.0.0.0'
-$ systemd-run --user --scope -p MemoryMax=16G jupyter lab --port 20000 --ip '0.0.0.0' # linuxでリソースを制限する場合
+$ uv run jupyter lab --port 20000 --ip '0.0.0.0'
+$ systemd-run --user --scope -p MemoryMax=16G uv run jupyter lab --port 20000 --ip '0.0.0.0' # linuxでリソースを制限する場合
 ```
 
 ## その他のインストール
