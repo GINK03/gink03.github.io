@@ -122,3 +122,27 @@ total_tokens: 175827
 # アップロードした動画の削除
 genai.delete_file(video_file.name)
 ```
+
+**embedding**
+```python
+import google.generativeai as genai
+
+def get_document_embedding(text):
+    # 埋め込みモデルを指定してテキストの埋め込みを生成
+    response = genai.embed_content(
+        model="models/gemini-embedding-001",  # 最新の埋め込みモデル
+        content=text,
+        task_type="RETRIEVAL_DOCUMENT",
+    )
+    return response["embedding"]
+
+
+def get_query_embedding(text):
+    # 埋め込みモデルを指定してテキストの埋め込みを生成
+    response = genai.embed_content(
+        model="models/gemini-embedding-001",  # 最新の埋め込みモデル
+        content=text,
+        task_type="RETRIEVAL_QUERY",
+    )
+    return response["embedding"]
+```
