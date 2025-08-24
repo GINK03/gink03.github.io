@@ -95,24 +95,33 @@ print(response.text)
 
 **embedding**
 ```python
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 
-def get_document_embedding(text):
-    # 埋め込みモデルを指定してテキストの埋め込みを生成
-    response = genai.embed_content(
-        model="models/gemini-embedding-001",  # 最新の埋め込みモデル
-        content=text,
-        task_type="RETRIEVAL_DOCUMENT",
+client = genai.Client()
+
+def get_document_embedding(text: str) -> list[float]:
+    response = client.models.embed_content(
+        model="gemini-embedding-001",  # 2025年最新の推奨モデルに更新
+        contents=text,
+        config=types.EmbedContentConfig(
+            task_type="RETRIEVAL_DOCUMENT"  # 大文字で正しい値
+        )
     )
-    return response["embedding"]
+    return response.embeddings[0].values  # 単一のembeddingのvaluesを返す
 
-
-def get_query_embedding(text):
-    # 埋め込みモデルを指定してテキストの埋め込みを生成
-    response = genai.embed_content(
-        model="models/gemini-embedding-001",  # 最新の埋め込みモデル
-        content=text,
-        task_type="RETRIEVAL_QUERY",
+def get_query_embedding(text: str) -> list[float]:
+    response = client.models.embed_content(
+        model="gemini-embedding-001",  # 2025年最新の推奨モデルに更新
+        contents=text,
+        config=types.EmbedContentConfig(
+            task_type="RETRIEVAL_QUERY"  # 大文字で正しい値
+        )
     )
-    return response["embedding"]
+    return response.embeddings[0].values  # 単一のembeddingのvaluesを返す
+
+get_document_embedding("今日は良い天気ですね")
+"""
+[0.123, 0.456, 0.789, ...]  # 実際の値はモデルによって異なる
+"""
 ```
