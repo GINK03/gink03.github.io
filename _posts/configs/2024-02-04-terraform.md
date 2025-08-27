@@ -8,7 +8,7 @@ config: true
 tag: ["terraform", "gcp", "google cloud platform", "aws"]
 comments: false
 sort_key: "2024-02-04"
-update_dates: ["2024-02-04"]
+update_dates: ["2024-02-04", "2025-08-27"]
 ---
 
 # terraformの基本的な使い方
@@ -34,21 +34,19 @@ $ terraform -v
 
 **ubuntu**
 ```console
-# 1. HashiCorp GPGキーを登録
-$ curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+# 1. GPGキーを keyrings に登録（apt-key は非推奨のため使用しない）
+$ sudo mkdir -p /etc/apt/keyrings
+$ curl -fsSL https://apt.releases.hashicorp.com/gpg \
+  | sudo gpg --dearmor -o /etc/apt/keyrings/hashicorp.gpg
 
-# 2. リポジトリを追加（Ubuntu のコードネームは自動取得）
-$ sudo apt-add-repository \
-   "deb [arch=amd64] https://apt.releases.hashicorp.com \
-   $(lsb_release -cs) main"
+# 2. リポジトリを追加（Ubuntu のコードネームは /etc/os-release から取得）
+$ source /etc/os-release
+$ echo "deb [signed-by=/etc/apt/keyrings/hashicorp.gpg] \
+https://apt.releases.hashicorp.com ${VERSION_CODENAME} main" \
+  | sudo tee /etc/apt/sources.list.d/hashicorp.list > /dev/null
 
 # 3. パッケージリストを更新して Terraform をインストール
 $ sudo apt-get update && sudo apt-get install -y terraform
-```
-
-**nix**
-```console
-$ nix profile install terraform
 ```
 
 ## 基本的なコマンド
@@ -60,17 +58,43 @@ $ nix profile install terraform
 ## gitでの管理
  - 状態ファイルの管理
    - `.gitignore` に `terraform.tfstate` と `terraform.tfstate.backup` を追加
+   - `.gitignore` に `.terraform/` も追加（プラグインやキャッシュのディレクトリ）
    - `terraform.tfstate` はリモートストレージに保存することが推奨されているため、リポジトリに保存する必要はない
+   - 依存プロバイダの固定用 `./.terraform.lock.hcl` は再現性のためコミットする
  - 機密情報の管理
-   - `terraform.tfvars` に機密情報を記述することは推奨されていない
-   - 機密情報は環境変数やシークレットマネージャーを使用して管理することが推奨されている
+   - 機密情報を含む `.tfvars` をリポジトリにコミットしない（`.gitignore` に追記）
+   - 代替として、環境変数 `TF_VAR_foo=...` を使う、あるいは各クラウドのシークレットマネージャーを使用
+   - 変数定義は `variable "foo" { sensitive = true }` を用いて出力に漏れないようにする
 
-## gitでcommit前のチェック
+## gitで commit 前のチェック
 
 **formatの静的チェック**
 ```console
 $ terraform fmt -recursive
 $ terraform validate
+```
+
+## よくある構成
+
+```console
+repo/
+  envs/
+    dev/
+      main.tf
+      providers.tf
+      variables.tf     # env固有の値（project_id, region, zone など）
+      backend.tf
+      versions.tf
+      terraform.tfvars # 任意: project_id 等をここに
+  modules/
+    network/
+      main.tf
+      variables.tf
+      outputs.tf
+    vm/
+      main.tf
+      variables.tf
+      outputs.tf
 ```
 
 ## 参考
