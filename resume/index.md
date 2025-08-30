@@ -20,6 +20,9 @@ Introductory in Japanese and in English are mixed.
  - 機械学習を用いた競馬の予測モデルの開発
 
 ### PROFESSIONAL EXPERIENCE in DeNA, 2018/04 ~
+ - AIエージェントのリサーチと業務適応の探索
+ - ヘルスケア分野にて横断的な分析を行い新たなインサイトの導入
+ - ヘルスケア分野にて生成AIのシステムを導入し業務効率化
  - マーケティング事業にて、Marketing Mix Modelingを使用した、KPI推論
  - マーケティング事業にて、GPTを使用したテキストクリエイティブの自動生成
  - マーケティング事業にて、機械学習を用いたTwitterの広告の最適化
