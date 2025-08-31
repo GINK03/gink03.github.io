@@ -13,9 +13,9 @@ update_dates: ["2025-07-05"]
 # claude codeの使い方
 
 ## 概要
- - codex cli, gemini cliに似たagentic CLIツール
+ - Codex CLI、Gemini CLIに似たエージェント型のCLIツール
  - `CLAUDE.md` ファイルをプロジェクトのルートに置くことで、claude codeがプロジェクトのコードを理解し、質問に答えたり、コードを生成したりする
- - AWSのbedrockやGCPのModel Gardenでclaudeのモデルをデプロイすれば、そこから利用可能
+ - AWSのBedrockやGCPのModel GardenでClaudeのモデルをデプロイすれば、そこから利用可能
 
 ## インストール
 
@@ -26,7 +26,7 @@ $ npm install -g @anthropic-ai/claude-code
 
 **bun**
 ```console
-$ bun install -g @anthropic-ai/claude-code
+$ bun add -g @anthropic-ai/claude-code
 ```
 
 ## 実行
@@ -40,11 +40,34 @@ $ claude
 $ claude --dangerously-skip-permissions
 ```
 
-## 認証
- - console.anthropic.comを選択可能
+## ヘッドレス実行
 
- 
-## GCPのModel Garden経由ででの利用
+```console
+$ claude -p "ミッションを実行せよ" \
+  --max-turns 100 --dangerously-skip-permissions --verbose
+```
+
+**ログをストリーミング**
+```console
+$ claude -p "ミッションを実行せよ" \
+  --max-turns 100 \
+  --dangerously-skip-permissions \
+  --output-format=stream-json \
+  --verbose
+```
+
+## 認証
+ - 認証先として console.anthropic.com を選択可能
+
+## API経由での利用
+
+**環境変数**
+```bash
+export ANTHROPIC_API_KEY=sk-ant-*****
+export ANTHROPIC_MODEL=sonnet # 自動でsonnetの最新バージョンを使用
+```
+
+## GCPのModel Garden経由での利用
  - Model Gardenで使用したいモデルをデプロイ
    - デプロイだけでは課金されない
  - 必要な環境変数を設定 
@@ -56,6 +79,5 @@ $ claude --dangerously-skip-permissions
 export CLAUDE_CODE_USE_VERTEX=1
 export ANTHROPIC_VERTEX_PROJECT_ID=cosmic-bonfire-354108
 export CLOUD_ML_REGION=us-east5
-export ANTHROPIC_MODEL=claude-3-7-sonnet@20250219
+export ANTHROPIC_MODEL=claude-3-7-sonnet@20250219 # デプロイしたモデルを指定
 ```
-
