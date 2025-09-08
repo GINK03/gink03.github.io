@@ -6,24 +6,24 @@ excerpt: "code-serverの使い方"
 config: true
 tag: ["vscode", "microsoft", "code-server", "code"]
 sort_key: "2023-10-24"
-update_dates: ["2020-10-24"]
+update_dates: ["2023-10-24"]
 comments: false
 ---
 
 # code-serverの使い方
 
 ## 概要
- - vscodeをブラウザ上で動かすことができるoss
- - iPadなどのモバイル端末でもvscodeを使える
- - ossなので拡張機能の一部が使えない
-   - e.g. GithubCopilot
-   - vsixファイルをダウンロードしてインストールすることはできる
- - https化することで、マークダウンのプレビューやjupyter-notebookの実行も可能
-   - 実質、https化は必須
+ - VS Codeをブラウザ上で動かすことができるOSS
+ - iPadなどのモバイル端末でもVS Codeを使える
+ - OSSのため拡張機能の一部が使えない
+   - 例: GitHub Copilot
+   - VSIX ファイルをダウンロードしてインストールできる
+ - HTTPS 化することで、マークダウンのプレビューや Jupyter Notebook の実行も可能
+   - 実質、HTTPS 化は必須
 
 ## インストール
 
-**linux**
+**Linux**
 ```console
 $ curl -fsSL https://code-server.dev/install.sh | sh
 ```
@@ -51,7 +51,12 @@ cert: false
  - code-serverが起動しているコンピュータにVSIXファイルをアップロード
  - `$ code-server --install-extension ~/<vsixファイル名>`
  - code-serverの拡張機能の画面で `Reload Window` をクリック
+ - トラブルシューティング
+   - VSIX のインストールに失敗する場合は `unzip -t <vsixファイル名>.vsix` でファイルが壊れていないか確認
 
+## セキュアなアクセス + HTTPS 化
+ - Cloudflare のトンネルを使用した上で Cloudflare Access を使用する
+   - トンネルで設定したドメインに対して Google の OAuth で認証をかける
 
 ## 参考
  - [Coding on iPad using VSCode, Caddy, and code-server](https://tailscale.com/kb/1166/vscode-ipad/)
