@@ -12,20 +12,21 @@ update_dates: ["2024-09-20"]
 # jupyter aiの使い方
 
 ## 概要
- - jupyter lab/notebookでLLMを使う機能
-   - github copilotのようにコードコンプリケーションを行うわけではない
+ - JupyterLab/Jupyter NotebookでLLMを使う機能
+   - GitHub Copilotのようにコード補完を行うわけではない
+ - `langchain-openai`がなかったり、環境変数がなかったりするとそもそもUI上の選択肢に表示されない
 
 ## インストール
 
 ```console
-$ pip install jupyter-ai
+$ pip install jupyter-ai jupyter-ai-magics langchain-openai
 ```
 
 ## 使い方
 
 **初期化**
 ```python
-# 環境変数の設定
+# 環境変数の設定(APIキーの設定)
 %env OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 # extensionの読み込み
 %load_ext jupyter_ai
@@ -38,20 +39,19 @@ $ pip install jupyter-ai
 
 **エイリアスの設定**
 ```python
-# openai-chat:gpt-4oをgpt-4oとして登録
-%ai register gpt-4o openai-chat:gpt-4o
+%ai register gpt-5 openai-chat:gpt-5
 ```
 
 **コードの生成**
 ```python
-%%ai gpt-4o -f code
+%%ai gpt-5 -f code
 フィボナッチ数列を計算する関数をお願いします。実行例も含めてください
 ```
 
-**特定のコードブロックを入力に文章を生成**
+**特定のコードブロックを入力にして文章を生成**
 ```python
-%%ai gpt-4o
-以下のコードをmatch case文を使用するようにリファクタリングして
+%%ai gpt-5
+以下のコードをmatch-case文を使用するようにリファクタリングして
 日本語のコメントで改善点を明示して
 --
 {In[36]}
