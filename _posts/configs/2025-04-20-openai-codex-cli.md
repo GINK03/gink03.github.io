@@ -106,6 +106,11 @@ safeCommands:
      - どうやら `{` が二回連続している or `[{` などの特殊な構文があると、codexがエラーを起こすことがある
    - 対応
      - jinja2のテンプレートで`Environment(variable_start_string='[[', variable_end_string=']]', autoescape=False)` を使う
+ - APIキーでクオータに余裕があるのにエラーが出る場合
+   - 原因
+    - login系やAPIキーが競合しており、クオータ不足の方を掴んでいる可能性
+   - 対応
+    - `codex logout` でログアウトしてから再度起動する
 
 ## 参考
  - [github.com/openai/codex](https://github.com/openai/codex)
