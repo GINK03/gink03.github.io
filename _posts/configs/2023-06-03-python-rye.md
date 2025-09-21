@@ -21,6 +21,7 @@ update_dates: ["2023-06-03"]
  - `rye add`で追加したパッケージは`project.toml`に記述される
    - パッケージのバージョンをあとから変更する際は`project.toml`を編集し`rye sync`を実行
  - 2024年7月現在、uvを開発しているAstralに移管された
+   - そのため、第一選択はuvになる
  
 ## poetryとの差分
  - pythonの任意のバージョンのインストールがryeのほうが楽に行える
@@ -32,6 +33,12 @@ update_dates: ["2023-06-03"]
 $ curl -sSf https://rye.astral.sh/get | bash
 $ echo 'source "$HOME/.rye/env"' >> ~/.bashrc
 $ source "$HOME/.rye/env"
+```
+
+## アンイストール
+
+```console
+$ rye self uninstall
 ```
 
 ## プロジェクトの始め方
