@@ -4,7 +4,7 @@ title: "neovim tree-sitter"
 date: "2022-10-27"
 excerpt: "neovim tree-sitterの使い方"
 config: true
-tags: ["neovim", "lua", "luajit", "tree-sitter"]
+tag: ["neovim", "lua", "luajit", "tree-sitter"]
 comments: false
 sort_key: "2022-10-27"
 update_dates: ["2022-10-27"]
@@ -13,9 +13,9 @@ update_dates: ["2022-10-27"]
 # neovim tree-sitterの使い方
 
 ## 概要
- - より高級なパーサーを利用してのシンタックスハイライト、オートインデント
- - 各言語ごとにパーサーのバイナリをインストールする必要がある
- - インストールされていない言語があったとしても警告等は出ないので、色が変だと感じたら`TSInstall all`するとよい
+ - 高精度の構文解析に基づくシンタックスハイライトと自動インデント
+ - 各言語ごとにパーサーのバイナリをインストールが必要
+ - 色が崩れたと感じたら `:TSInstall all` や `:TSUpdate` を実行
 
 ## 各言語のパーサーをインストール
 
@@ -29,6 +29,13 @@ update_dates: ["2022-10-27"]
 $ sudo npm install -g tree-sitter-cli
 ```
 
+## 初期設定（tree-sitter CLI）
+ - CLI の初期設定を実行し、ユーザー設定を作成
+
+```console
+$ tree-sitter init-config
+```
+
 ## 設定の具体例
 
 ```lua
@@ -36,25 +43,23 @@ print('start to load init-treesitter.lua.')
 
 require("nvim-treesitter.configs").setup({
   ensure_installed = { "python", "markdown", "lua", "rust" },
-  sync_install = false, -- デフォルト
-  auto_install = true, -- 自動インストール
+  sync_install = false,     -- 同期インストールしない（デフォルト）
+  auto_install = true,      -- 未インストール言語を自動インストール
   ignore_install = { "javascript" },
   highlight = {
-    enable = true,              -- false will disable the whole extension
-    disable = { "ruby" },  -- list of language that will be disabled
+    enable = true,
+    -- 大きいファイルや特定言語で無効化
+    disable = function(lang, buf)
+      if lang == "ruby" then return true end
+      local max_filesize = 500 * 1024 -- 500KB
+      local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
+      if ok and stats and stats.size > max_filesize then
+        return true
+      end
+    end,
+    additional_vim_regex_highlighting = false,
   },
-  indent = {
-    enable = true
-  },
-  -- 大きいファイルのときは無効化
-  disable = function(lang, buf)
-    local max_filesize = 5 * 100 * 1024 -- 500 KB
-    local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
-    if ok and stats and stats.size > max_filesize then
-      return true
-    end
-  end,
-  -- additional_vim_regex_highlighting = false,
+  indent = { enable = true },
 })
 ```
 
