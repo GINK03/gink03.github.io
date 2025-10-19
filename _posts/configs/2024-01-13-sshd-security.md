@@ -33,7 +33,7 @@ PasswordAuthentication no
 
 **debian**
 ```console
-$ sudo systemctl restart sshd
+$ sudo systemctl restart ssh
 ```
 
 **ubuntu**
