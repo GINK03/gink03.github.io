@@ -29,6 +29,7 @@ import anyio
 from claude_agent_sdk import ClaudeSDKClient, ClaudeAgentOptions, AssistantMessage, TextBlock
 
 options = ClaudeAgentOptions(
+    system_prompt="あなたは優秀な開発アシスタントです。", # システムプロンプト
     allowed_tools=["Read", "Write", "Bash"],
     permission_mode="acceptEdits",
 )
