@@ -30,33 +30,8 @@ update_dates: ["2022-04-25","2022-04-24","2022-04-16","2022-01-14"]
        - `fileId4`(ファイル)
        - `fileId5`(ファイル)
 
-## Python でファイルのダウンロード
- - GCP で Google Drive API を有効化
- - `gcloud auth application-default login --scopes="https://www.googleapis.com/auth/drive.readonly,https://www.googleapis.com/auth/cloud-platform"` で ADC を設定
-
-```python
-from googleapiclient.discovery import build
-from googleapiclient.http import MediaIoBaseDownload
-import google.auth, io, pathlib
-
-FILE_ID = "1QDDZ2IoGN8xOzeu_********"
-DEST    = pathlib.Path("video.mp4")
-
-# 「Drive 読み取り専用」スコープで ADC を取得
-scopes = ["https://www.googleapis.com/auth/drive.readonly"]
-creds, _ = google.auth.default(scopes=scopes)          # gcloud で得た資格情報を自動読込
-
-service = build("drive", "v3", credentials=creds)
-request = service.files().get_media(fileId=FILE_ID)
-
-with io.FileIO(DEST, "wb") as fh:
-    downloader = MediaIoBaseDownload(fh, request)
-    done = False
-    while not done:
-        status, done = downloader.next_chunk()
-        print(f"{status.progress()*100:.1f} % downloaded")
-print("✅ 完了:", DEST)
-```
+## Python での利用例
+ - 詳細は [/google-drive-python/](/google-drive-python/)
 
 ## 使用できるクライアントソフト
 
