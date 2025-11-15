@@ -14,11 +14,11 @@ update_dates: ["2024-02-04", "2025-08-27"]
 # terraformの基本的な使い方
 
 ## 概要
- - IaC(Infrastructure as Code)の一つ
+ - IaC (Infrastructure as Code) の一つ
  - AWS, GCP, Azureなどのクラウドプロバイダーに対応
- - HCL(HashiCorp Configuration Language)という独自の言語を使用
+ - HCL (HashiCorp Configuration Language) という独自の言語を使用
  - `terraform apply` を行うと `terraform.tfstate` というファイルが生成され、その中に現在の状態が保存される
-   - `terraform.tfstate` はS3やGCSなどのリモートストレージに保存することが推奨
+   - `terraform.tfstate` はS3やGCSなどのリモートストレージに保存することが推奨であり、チームで状態を共有できる
 
 ## インストール
 
@@ -32,21 +32,14 @@ $ tfenv use latest
 $ terraform -v
 ```
 
-**ubuntu**
+**Ubuntu**
 ```console
-# 1. GPGキーを keyrings に登録（apt-key は非推奨のため使用しない）
-$ sudo mkdir -p /etc/apt/keyrings
-$ curl -fsSL https://apt.releases.hashicorp.com/gpg \
-  | sudo gpg --dearmor -o /etc/apt/keyrings/hashicorp.gpg
-
-# 2. リポジトリを追加（Ubuntu のコードネームは /etc/os-release から取得）
-$ source /etc/os-release
-$ echo "deb [signed-by=/etc/apt/keyrings/hashicorp.gpg] \
-https://apt.releases.hashicorp.com ${VERSION_CODENAME} main" \
-  | sudo tee /etc/apt/sources.list.d/hashicorp.list > /dev/null
-
-# 3. パッケージリストを更新して Terraform をインストール
-$ sudo apt-get update && sudo apt-get install -y terraform
+$ git clone --depth=1 https://github.com/tfutils/tfenv.git ~/.tfenv
+$ echo 'export PATH="$HOME/.tfenv/bin:$PATH"' >> ~/.zshrc
+$ source ~/.zshrc
+$ tfenv install latest
+$ tfenv use latest
+$ terraform -v
 ```
 
 ## 基本的なコマンド
@@ -66,7 +59,7 @@ $ sudo apt-get update && sudo apt-get install -y terraform
    - 代替として、環境変数 `TF_VAR_foo=...` を使う、あるいは各クラウドのシークレットマネージャーを使用
    - 変数定義は `variable "foo" { sensitive = true }` を用いて出力に漏れないようにする
 
-## gitで commit 前のチェック
+## gitでcommit前のチェック
 
 **formatの静的チェック**
 ```console
