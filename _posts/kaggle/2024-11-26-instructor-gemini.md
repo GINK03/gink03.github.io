@@ -19,46 +19,38 @@ update_dates: ["2024-11-26"]
 ## インストール
 
 ```console
-$ pip install "instructor[google-generativeai]"
+$ pip install "instructor[google-genai]"
 ```
 
 ## 使用例
 
 ```python
 import instructor
-import google.generativeai as genai
+from google import genai
 from pydantic import BaseModel
 
-class ExtractUser(BaseModel):
+
+class User(BaseModel):
     name: str
     age: int
 
-client = instructor.from_gemini(
-    client=genai.GenerativeModel(
-        model_name="models/gemini-1.5-flash-latest",
-        generation_config=genai.GenerationConfig(
-            #max_output_tokens=2000,
-            temperature=0.2,
-        ),
-    ),
-    mode=instructor.Mode.GEMINI_JSON,
+
+client = instructor.from_provider("google/gemini-2.5-flash")
+
+# As a parameter
+response = client.chat.completions.create(
+    system="Jason is 25 years old",
+    messages=[{"role": "user", "content": "You are a data extraction assistant"}],
+    response_model=User,
+    generation_config={
+        "temperature": 0.0,
+        #"max_output_tokens": 256,
+        #"top_p": 1,
+        #"top_k": 32,
+    },
 )
 
-# note that client.chat.completions.create will also work
-resp: ExtractUser = client.messages.create(
-    messages=[
-        {
-            "role": "user",
-            "content": "Extract Jason is 25 years old.",
-        }
-    ],
-    response_model=ExtractUser,
-)
-
-print(resp)
-"""
-ExtractUser(name='Jason', age=25)
-"""
+print(response)
 ```
 
 ## 参考
