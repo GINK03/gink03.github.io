@@ -59,3 +59,32 @@ $ yt-dlp -f bestaudio \
        -o "%(title)s.%(ext)s" \
        "https://www.youtube.com/watch?v=<動画ID>"
 ```
+
+### cookies.txtを使ってダウンロード
+ - ブラウザ拡張Get cookies.txt LOCALLYなどで取得した`cookies.txt`を使うとログインが必要な動画もダウンロードできる
+ - `cookies.txt`はyoutubeにログイン済みのブラウザプロファイルから保存する
+
+```console
+$ yt-dlp --cookies cookies.txt \
+         -f bestvideo+bestaudio \
+         -o "%(title)s.%(ext)s" \
+         "https://www.youtube.com/watch?v=<動画ID>"
+```
+
+Pythonから`subprocess.run`で呼び出す場合の例
+
+```python
+import subprocess
+
+url = "https://www.youtube.com/watch?v=<動画ID>"
+subprocess.run(
+    [
+        "yt-dlp",
+        "--cookies", "cookies.txt",
+        "-f", "bestvideo+bestaudio",
+        "-o", "%(title)s.%(ext)s",
+        url,
+    ],
+    check=True,
+)
+```
