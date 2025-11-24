@@ -26,22 +26,24 @@ $ pip install "instructor[google-genai]"
 
 ```python
 import instructor
-from google import genai
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
-class User(BaseModel):
-    name: str
-    age: int
+class Blog(BaseModel):
+    title: str = Field(..., description="ブログのタイトル")
+    body: str = Field(..., description="ブログ本文")
 
 
-client = instructor.from_provider("google/gemini-2.5-flash")
+client = instructor.from_provider(
+    "google/gemini-2.5-pro",
+    mode=instructor.Mode.GENAI_STRUCTURED_OUTPUTS,
+)
 
 # As a parameter
 response = client.chat.completions.create(
-    system="Jason is 25 years old",
-    messages=[{"role": "user", "content": "You are a data extraction assistant"}],
-    response_model=User,
+    system="あなたはブログ記事を構造化するアシスタント",
+    messages=[{"role": "user", "content": "instructorとgeminiの使い方についてブログを書きたい"}],
+    response_model=Blog,
     generation_config={
         "temperature": 0.0,
         #"max_output_tokens": 256,
