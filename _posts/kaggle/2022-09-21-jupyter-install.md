@@ -17,11 +17,11 @@ update_dates: ["2022-09-21"]
    - 起動は `python3 -m jupyter lab` や `python3 -m notebook` とすると、利用するPythonを明示できる
 
 ## Poetry, uvで環境を分けてインストールする
- - システムのPythonではライブラリの不整合が起こることがあり、[/poetry/](/python-poetry/)や[/python-uv/](/python-uv/)など環境を分離できるツールを用いると安全
+ - システムのPythonではライブラリの不整合が起こることがあり、[Poetry](/python-poetry/)や[uv](/python-uv/)など環境を分離できるツールを用いると安全
 
 ```console
 $ uv init .
-$ uv add jupyterlab tqdm pandas seaborn scikit-learn ipywidgets joblib sortedcontainers \
+$ uv add jupyterlab nest-asyncio tqdm pandas seaborn scikit-learn ipywidgets joblib sortedcontainers \
     scipy lightgbm \
     pydata-google-auth google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client google-cloud-bigquery \
     pandas-gbq japanize-matplotlib \
@@ -47,7 +47,7 @@ $ brew install jupyterlab
 
 ### pip経由
 ```console
-$ python3 -m pip install jupyter
+$ python3 -m pip install jupyterlab
 ```
 
 ### Dockerを利用
@@ -62,13 +62,13 @@ $ docker run -v $PWD/work:/home/jovyan -p 8888:8888 jupyter/scipy-notebook start
 
 ### ポートを指定して起動する
 ```console
-$ jupyter notebook --port=<port-number>
+$ jupyter lab --port=<port-number>
 ```
  - ポートがすでに使用済みだと別のポートが割り振られる
 
 ### モジュールとして起動する
 ```console
-$ python3 -m notebook
+$ python3 -m jupyter lab
 ```
  - `jupyter`コマンドのPATHがおかしくなっているときに代替コマンドとして利用可能
    - ユーザー・スペースにPythonをインストールした際に発生しがちなトラブル
@@ -92,39 +92,41 @@ $ pkill -f "python3 -m ipykernel_launcher"
 ## 初期設定
 
 ### 設定ファイルのパス
- - `~/.jupyter/jupyter_notebook_config.py`
+ - `~/.jupyter/jupyter_lab_config.py` または `~/.jupyter/jupyter_server_config.py`
+ - 設定ファイルの生成: `jupyter lab --generate-config`
 
 ### 設定項目の説明
- - `c.NotebookApp.ip = "<ip-address>"`
+ - `c.ServerApp.ip = "<ip-address>"`
    - IPアドレスの制限
    - `"0.0.0.0"`ですべてのアクセスを受け入れる
- - `c.NotebookApp.open_browser = <boolean>`
+ - `c.ServerApp.open_browser = <boolean>`
    - `False`で起動時にブラウザを立ち上げない
- - `c.NotebookApp.password = "<something-hash>"`
+ - `c.ServerApp.password = "<something-hash>"`
     - パスワードのハッシュ値を入れる
+ - ※古いバージョン(Notebook v6以前)では `c.NotebookApp` が使用されます。
 
 **設定の具体例**
 ```python
-c.NotebookApp.ip = "0.0.0.0"
-c.NotebookApp.open_browser = False
-c.NotebookApp.password = u"sha1:f1d4830a643a:4a247c958f7a5c2a9cd4ba5b419a09a76ae2bfaf"
-c.NotebookApp.port = 8888
+c.ServerApp.ip = "0.0.0.0"
+c.ServerApp.open_browser = False
+c.ServerApp.password = u"sha1:f1d4830a643a:4a247c958f7a5c2a9cd4ba5b419a09a76ae2bfaf"
+c.ServerApp.port = 8888
 ```
 
 ### パスワードのハッシュ値を作成する
 
-**Jupyter Notebookを使用する場合**
+**JupyterLab / Jupyter Serverを使用する場合**
 ```python
-In [1]: from notebook.auth import passwd
+In [1]: from jupyter_server.auth import passwd
 In [2]: passwd()
 Enter password:
 Verify password:
 Out[2]: 'sha1:67c9e60bb8b6:9ffede0825894254b2e042ea597d771089e11aed'
 ```
 
-**IPythonを使用する場合**
+**古いJupyter Notebook (v6以前)を使用する場合**
 ```python
-In [1]: from IPython.lib import passwd
+In [1]: from notebook.auth import passwd
 In [2]: passwd()
 Enter password:
 Verify password:
