@@ -25,6 +25,7 @@ import warnings; warnings.filterwarnings("ignore", category=UserWarning,) # ユ�
 from pprint import PrettyPrinter; pp = PrettyPrinter(indent=2, width=120, depth=6)
 from joblib import Parallel, delayed, parallel_backend # 並列処理
 from joblib import hash as jhash; assert jhash("aiueo") == "56f49dd184d759edae89c96f0822001a" # 再現性のあるハッシュ関数
+from dotenv import load_dotenv; load_dotenv() # .envを読み込む
 import nest_asyncio; nest_asyncio.apply() # イベントループの再入可能化
 import numpy as np; np.random.seed(42) # 乱数のシードを固定
 import pandas as pd; pd.options.display.float_format = '{:,.6f}'.format; pd.set_option('display.max_columns', None) # columnを省略せず表示
