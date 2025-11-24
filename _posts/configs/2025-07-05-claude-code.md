@@ -81,3 +81,15 @@ export ANTHROPIC_VERTEX_PROJECT_ID=cosmic-bonfire-354108
 export CLOUD_ML_REGION=us-east5
 export ANTHROPIC_MODEL=claude-3-7-sonnet@20250219 # デプロイしたモデルを指定
 ```
+
+**~/.claude/settings.json**
+```json
+{
+  "env": {
+    "CLAUDE_CODE_USE_VERTEX": "1",
+    "ANTHROPIC_VERTEX_PROJECT_ID": "cosmic-bonfire-354108",
+    "CLOUD_ML_REGION": "us-east5",
+    "ANTHROPIC_MODEL": "claude-sonnet-4-5@20250929"
+  }
+}
+```
