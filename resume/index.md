@@ -1,25 +1,29 @@
 ---
 layout: page
 title: "Resume"
-tags: ["resume", "履歴書"]
+tag: ["resume", "履歴書"]
 date: 2018-03-19
 comments: false
 ---
 
 ## RESUME
-私の業務経験のレジュメです。
+私の業務経験のレジュメです
 This is a resume of my work experience. 
 
-日本語による紹介と英語による紹介が混在しています。
-Introductory in Japanese and in English are mixed.
+日本語による紹介と英語による紹介が混在しています
+Introductions in Japanese and English are mixed.
 
-### PROFESSIONAL EXPERIENXE in 個人事業主, 2020/12 ~
+
+
+### PROFESSIONAL EXPERIENCE in 個人事業主, 2020/12 ~
+ - [株式会社EXIDEA](https://emma.tools/)にて、[EmmaTools](https://emma.tools/)の開発
+ - [株式会社EXIDEA](https://exidea.co.jp/)にて、[ReVolt]()の開発
+ - [株式会社Lipronext](https://lipronext.com/)にて、[NOIMチャット版](https://prtimes.jp/main/html/rd/p/000000024.000064851.html)のPM
  - [youtrust.jp](https://lp.youtrust.jp/)にて、GPT-4を用いたSQLの自動生成モデルの開発
  - [youtrust.jp](https://lp.youtrust.jp/)にて、企業様へSNS会員をレコメンドするモデル・システムの開発
- - ライブ配信サービスにて、作成されたモデルのKPIの検証と、新規KPIの策定
- - 機械学習を用いた競馬の予測モデルの開発
 
 ### PROFESSIONAL EXPERIENCE in DeNA, 2018/04 ~
+ - マルチモーダルLLMを利用した広告動画の感情分析
  - AIエージェントのリサーチと業務適応の探索
  - ヘルスケア分野にて横断的な分析を行い新たなインサイトの導入
  - ヘルスケア分野にて生成AIのシステムを導入し業務効率化
@@ -28,31 +32,31 @@ Introductory in Japanese and in English are mixed.
  - マーケティング事業にて、機械学習を用いたTwitterの広告の最適化
  - オートモーティブ事業にて、車の特定の運用に関わる時間を推定するモデルの構築とシステム化
  - ライブ配信サービスにて、レコメンドモデルのEDA、構築、運用の経験
- - Developed a system that can predict ticket number of amount in Yokohama-DeNA Baysters.
- - Developed a system that can predict amount of merchandise items in Yokohama-DeNA Baystars offline(or online) stores.
- - Developed a system that can recommend news items is suitable for mobage users.
- - Analyzed main factors, which explain playing game users are active or not. 
- - Developed a system which predict game playing users have high motivation to our games or not.
- - Researched and made a paper with NEDO, predicting amount of rain in japanese dam with deep learning.
+ - Developed a system that can predict the number of tickets sold for Yokohama-DeNA Baystars games
+ - Developed a system that can predict the amount of merchandise items required in Yokohama-DeNA Baystars offline and online stores
+ - Developed a system that can recommend news items suitable for Mobage users
+ - Analyzed key factors that explain whether game players are active or not
+ - Developed a system that predicts whether game players have high motivation toward our games
+ - Researched and co-authored a paper with NEDO predicting rainfall in Japanese dams using deep learning
  
 ### PROFESSIONAL EXPERIENCE in IREP, 2016/4 ~ 2018/3
- - Developed Visualization and analysis of customer journal on Web site using big data processing by EMR (Hadoop)　for Advertisement.(refer to the link)
- - Created URL similarity calculation and funnel analysis by word2vec for Advertisement.
- - Created Analysis of sales factor by regression model and crosstab
- - Assistant of Predictive model creation by XGBoost and LightGBM
- - Designed Automatic categorization of Web sites by SVM and fasttext (Text classification)
- - Developed Automatic periodical acquisition of data from Twitter API etc. using Python, MySQL, S3
+ - Developed visualization and analysis of customer journeys on websites using big data processing with EMR (Hadoop) for advertisements
+ - Created URL similarity calculations and funnel analysis using word2vec for advertisements
+ - Created analysis of sales factors using regression models and crosstab
+ - Assisted in creating predictive models using XGBoost and LightGBM
+ - Designed automatic website categorization using SVM and fastText (text classification)
+ - Developed automatic periodic data acquisition from the Twitter API and others using Python, MySQL, and S3
 
 ### PROFESSIONAL EXPERIENCE in Yahoo Japan, 2011/4 ~ 2014/3
- - Developed recommendation engine which serve correct ad-items for each users.
- - Developed detection system, can know which user has high attention to his ad or not.
+ - Developed a recommendation engine that serves appropriate ad items for each user
+ - Developed a detection system that identifies users with high attention to ads
 
 ## External announcement/対外発表
  - 2024
    - [TOW✕DeNA Promotion AI Labについて](https://techcon2024.dena.dev/session/session10/)
  - 2023
    - [ChatGPTの仕組みの解説と実務でのLLMの適用の紹介/東京電機大学特別講演](https://www.slideshare.net/gimpeikobayashi/chatgptllmlatestpdf)
-   - [テキスト生成AI×デジタルマーケで効果的な成果を。より自然なクリエイティブを生む秘訣/dena.ai](https://dena.ai/story/market-ai/)
+   - [テキスト生成AI×デジタルマーケで効果的な成果を、より自然なクリエイティブを生む秘訣/dena.ai](https://dena.ai/story/market-ai/)
    - [葛飾区のファミリー・サポート・センターの取材](https://f004.backblazeb2.com/file/gimpeik/Images-2024/Screenshot+2024-03-16+at+16.50.03.png)
    - [MMM(Marketing Mix Modeling)を内製化した話/DeNAデータ分析ブログ](https://medium.com/dena-analytics-blog/mmm-marketing-mix-modeling-%E3%82%92%E5%86%85%E8%A3%BD%E5%8C%96%E3%81%97%E3%81%9F%E8%A9%B1-5b6d6f58ee67)
    - [AIによるテキストクリエイティブの自動生成/TechCon 2023](https://techcon2023.dena.dev/session/session10/)
