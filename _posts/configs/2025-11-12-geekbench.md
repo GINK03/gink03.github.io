@@ -50,6 +50,10 @@ $ ./Geekbench-6.2.2-LinuxARMPreview/geekbench_aarch64
  - **AMD Ryzen 7 5700G**
    - Single-Core Score: 918
    - Multi-Core Score: 4664
+ - **CIX P1 CP8180**
+   - Single-Core Score: 1314
+   - Multi-Core Score: 6821
  - **MacBook Pro (14-inch, 2024)**
    - Single-Core Score: 3626
    - Multi-Core Score: 19382
+
