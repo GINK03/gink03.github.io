@@ -74,6 +74,11 @@ export ANTHROPIC_MODEL=sonnet # 自動でsonnetの最新バージョンを使用
    - 例では `claude-3-7-sonnet@20250219` を使用
  - gcloudコマンドでADCを設定
 
+**ADCの設定**
+```bash
+$ gcloud auth application-default login
+```
+
 **環境変数**
 ```bash
 export CLAUDE_CODE_USE_VERTEX=1
