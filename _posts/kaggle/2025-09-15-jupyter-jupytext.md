@@ -34,6 +34,15 @@ formats = "ipynb,py:percent"
 notebook_metadata_filter = "-jupytext"
 ```
 
+**markdown形式を使いたい場合**
+
+```toml
+[tool.jupytext]
+# md をカンマ区切りで追加
+formats = "ipynb,py:percent,md"
+notebook_metadata_filter = "-jupytext"
+```
+
 ### Jupyter Labでのペアリング設定
  - 1. `Cmd + Shift + C` でコマンドパレットを開く
  - 2. 「jupytext」と入力し、「**Pair Notebook with percent script**」を選択
