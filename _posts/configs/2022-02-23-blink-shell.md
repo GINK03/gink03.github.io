@@ -14,9 +14,9 @@ update_dates: ["2022-02-23"]
 # blink shellの使い方
 
 ## 概要
- - iosで動作するターミナルエミュレータ
- - ssh, moshがビルトインされているので秘密鍵を設定すれば任意のlinuxにアクセスすることができる
- - appleの規約により実行可能なバイトコードを作成する機能は無効なので`gcc`や`python`は含まれていない
+ - iOSで動作するターミナルエミュレータ
+ - ssh, moshがビルトインされているので秘密鍵を設定すれば任意のLinuxにアクセスできる
+ - Appleの規約により実行可能なバイトコードを作成する機能は無効なため`gcc`や`python`は含まれない
 
 ## 使用できるコマンド
 
@@ -39,7 +39,7 @@ xcall
  - **タブの新規作成**
    - `Cmd + T`
  - **前のタブに移動**
-   - `Cmd + Shift + [` 
+   - `Cmd + Shift + [`
  - **次のタブに移動**
    - `Cmd + Shift + ]`
  - **ズームイン** 
@@ -47,10 +47,15 @@ xcall
  - **ズームアウト**
    - `Cmd + -`
 
-## 任意のフォントのインストール 
- - `Settings` -> `Appearances` -> `New a new Font`
+## 任意のフォントのインストール
+ - `Settings` -> `Appearances` -> `Add a new Font`
    - 新しく設定したいフォントの名前を設定
-   - css拡張子のオンライン上に公開されているフォントをダウンロード
-   - ダウンロードしたファイルを設定
+   - オンラインで公開されているCSS形式のフォントをダウンロード
+   - ダウンロードしたファイルを指定
  - **参考** 
    - [Blink Shell Fonts](https://github.com/BlinkSh/fonts)
+
+## 特殊なキーコードを送る
+ - `Settings` -> `Keyboard` -> `Custom Presses`
+   - 送信したいHexコードを設定できる
+   - e.g.) Alt + backtick を送信したい場合は "1B60" を設定する
