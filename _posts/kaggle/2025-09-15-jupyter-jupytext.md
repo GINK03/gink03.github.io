@@ -39,7 +39,7 @@ notebook_metadata_filter = "-jupytext"
 ```toml
 [tool.jupytext]
 # md をカンマ区切りで追加
-formats = "ipynb,py:percent,md"
+formats = "ipynb,md"
 notebook_metadata_filter = "-jupytext"
 ```
 
