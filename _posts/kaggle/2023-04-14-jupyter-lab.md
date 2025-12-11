@@ -14,8 +14,8 @@ update_dates: ["2023-04-14"]
 
 ## 概要 
  - jupyter classicでは動作しない拡張機能がjupyter labで動作することがある
- - jupyter classicより機能が増加してい
- - OSのpythonは不整合を起こすことがあるからvertualenvなどで環境を分けたほうが良い
+ - jupyter classicより機能が増加している
+ - OSのpythonは不整合を起こすことがあるからvirtualenvなどで環境を分けたほうが良い
 
 ## インストール
 
@@ -59,3 +59,9 @@ $ python3 -m pip install theme-darcula
    - adblockによりjavascriptが実行されていない
  - 対応
    - adblockを利用していないブラウザで実行する
+
+### セルのレンダリングが行われず何もないように見える
+ - 原因
+   - GPUとの相性
+ - 対応
+   - `Settings` -> `Setting Editor` -> `Notebook` -> `Windowing mode: none` を選択
