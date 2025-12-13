@@ -25,8 +25,28 @@ $ pip install trafilatura
 
 ## 使い方
 
+**基本的な使用例**
 ```python
 import trafilatura
 downloaded = trafilatura.fetch_url('https://example.com/')
 result = trafilatura.extract(downloaded)
+```
+
+**マークダウン形式で抽出**
+```python
+from trafilatura import fetch_url, extract
+
+url = 'https://example.com/'
+downloaded = fetch_url(url)
+
+if downloaded:
+    # Markdown形式で抽出
+    result = extract(
+        downloaded,
+        output_format="markdown",  # または "md"
+        include_links=True,        # リンクを保持する場合
+        include_images=True,       # 画像参照を保持する場合
+        include_tables=True        # テーブルを保持する場合
+    )
+    print(result)
 ```
