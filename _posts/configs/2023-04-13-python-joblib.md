@@ -13,8 +13,8 @@ update_dates: ["2023-04-14"]
 # pythonのjoblibの使い方
 
 ## 概要
- - on-demand computing
- - Transparent parallelization
+ - on-demand computingで必要なタスクだけを並列化できる
+ - コードの書き換えを最小に保ったTransparent parallelizationを提供する
  - joblibのhash関数は再現可能なハッシュを生成する
 
 ## インストール
@@ -25,11 +25,13 @@ $ python3 -m pip install joblib
 
 ## parallel_backendの引数
  - `backend`
-   - デフォルトではプロセスベース
-   - `backend="threading"`でthredingベース
+   - デフォルトではprocessベース
+   - `backend="threading"`でthreadingベース
    - `backend="multiprocessing"`でprocessベース
+   - I/Oバウンドならthreadingを、CPUバウンドならmultiprocessingを選ぶとよい
  - `n_jobs`
-   - `n_jobs=-1`ですべてのプロセスを使用する
+   - `n_jobs=-1`で利用可能なすべてのCPUを使う
+   - 明示しない場合はシングルスレッドになることに注意
 
 ### 並列化の具体例
  - functionという関数をthreadで並列でアクセスする場合
@@ -37,15 +39,17 @@ $ python3 -m pip install joblib
  - `tqdm`を利用する際は`delayed`インスタンスを作成するイテレータのリスト内包表記に記す
 
 ```python
+from tqdm.auto import tqdm
 from joblib import Parallel, delayed
 from joblib import parallel_backend
 
 with parallel_backend(backend='threading', n_jobs=-1):
-    Parallel()(delayed(function)(arg) for arg in args)
+    Parallel()(delayed(function)(arg) for arg in tqdm(args))
 ```
 
 ### 共有メモリを利用したマルチプロセスの並列化の例
  - 共有化できるのはnumpy objectに限定される
+ - `/dev/shm`のようなtmpfs上に配置するとI/Oのオーバーヘッドが少ない
 
 ```python
 import numpy as np
