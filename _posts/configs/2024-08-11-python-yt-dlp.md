@@ -88,3 +88,25 @@ subprocess.run(
     check=True,
 )
 ```
+
+### pythonのAPIから動画を取得
+
+```python
+import os
+import yt_dlp
+
+def download_video_to_dir(url, output_filename, download_dir):
+    # ディレクトリが存在しない場合は作成
+    os.makedirs(download_dir, exist_ok=True)
+    
+    ydl_opts = {
+        # paths: ダウンロード先のディレクトリを指定
+        'paths': {'home': download_dir},
+        
+        # outtmpl: ファイル名のみを指定（ディレクトリを含めない）
+        'outtmpl': f"{output_filename}.%(ext)s",
+    }
+
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        ydl.download([url])
+```
