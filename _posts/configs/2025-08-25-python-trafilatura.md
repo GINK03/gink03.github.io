@@ -25,7 +25,12 @@ $ pip install trafilatura
 
 ## 使い方
 
-**基本的な使用例**
+**基本的な使用例(コマンドライン)**
+```console
+$ trafilatura -u "https://example.com/article" --markdown
+```
+
+**基本的な使用例(コード)**
 ```python
 import trafilatura
 downloaded = trafilatura.fetch_url('https://example.com/')
