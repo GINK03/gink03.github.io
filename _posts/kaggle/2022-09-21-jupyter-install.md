@@ -26,7 +26,7 @@ $ uv add jupyterlab nest-asyncio tqdm pandas seaborn scikit-learn ipywidgets job
     pydata-google-auth google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client google-cloud-bigquery \
     pandas-gbq japanize-matplotlib \
     db-dtypes google-cloud-bigquery-storage neovim pip pyright google-cloud-secret-manager \
-    openai tiktoken spacy requests jinja2 gspread python-dotenv loguru \
+    openai tiktoken spacy requests jinja2 gspread python-dotenv loguru rich \
     jedi-language-server jupytext \
     theme-darcula catppuccin-jupyterlab jupyterlab-miami-nights jupyterlab-simpledark
 $ uv run jupyter lab --port 20000 --ip '0.0.0.0' --ServerApp.disable_check_xsrf=True
