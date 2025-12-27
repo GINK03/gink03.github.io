@@ -15,6 +15,7 @@ update_dates: ["2023-02-06"]
 ## 概要
  - デフォルトの仕様で外れ値も描画するので`ax.set(ylim=~)`などで制限する
  - 対数スケールになってしまうときは`ax.set_yscale("linear")`でリニアスケールに設定できる
+ - カテゴリの並び順を固定したい場合は`order`引数で順序を指定する
  
 ## 具体例
 
@@ -22,6 +23,16 @@ update_dates: ["2023-02-06"]
 
 ```python
 ax = sns.boxplot(data=df, x="menu", y="value")
+ax.set_yscale("linear")
+ax.set(ylim=(0, 200000))
+display(ax)
+```
+
+### カテゴリ順序を指定する場合
+
+```python
+order = ["menu_a", "menu_b", "menu_c"]
+ax = sns.boxplot(data=df, x="menu", y="value", order=order)
 ax.set_yscale("linear")
 ax.set(ylim=(0, 200000))
 display(ax)
