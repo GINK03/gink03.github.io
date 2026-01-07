@@ -4,7 +4,7 @@ title: "strong opinions, loosely held"
 date: 2026-01-07
 excerpt: "strong opinions, loosely held"
 computer_science: true
-tag: ["]
+tag: ["哲学", "データサイエンス", "意思決定"]
 comments: false
 sort_key: "2026-01-07"
 update_dates: ["2026-01-07"]
