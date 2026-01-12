@@ -32,6 +32,7 @@ options = ClaudeAgentOptions(
     system_prompt="あなたは優秀な開発アシスタントです。", # システムプロンプト
     allowed_tools=["Read", "Write", "Bash"],
     permission_mode="acceptEdits",
+    env={"ANTHROPIC_API_KEY": os.environ.get("ANTHROPIC_API_KEY", "").strip()}, # APIキー利用時(任意)
 )
 
 async def main():
