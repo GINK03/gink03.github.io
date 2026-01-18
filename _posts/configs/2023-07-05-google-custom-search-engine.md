@@ -30,18 +30,25 @@ update_dates: ["2023-07-05"]
 ## pythonからの利用例
 
 ```python
+import os
 import requests
 import pandas as pd
 
 def search(query: str) -> pd.DataFrame:
     tmp = []
-    api_key = "****************************************"
+    api_key = os.environ.get("GOOGLE_CUSTOM_SEARCH_API_KEY")
+    if not api_key:
+        raise ValueError("GOOGLE_CUSTOM_SEARCH_API_KEY is required")
     cse_id = "bdec2f8ae667e39e1" # custom search engine id
     url = f"https://www.googleapis.com/customsearch/v1?q={query}&key={api_key}&cx={cse_id}"    
     response = requests.get(url)
     if response.status_code == 200:
         results = response.json()
-        for result in results["items"]:
+        items = results.get("items")
+        if not items:
+            print("No results")
+            return pd.DataFrame(columns=["title", "snippet", "link"])
+        for result in items:
             tmp.append(result)
     else:
         print("Error", response.status_code)
@@ -66,4 +73,3 @@ display(search("たぬかな"))
 
 ## 参考
  - [Custom Search JSON API: はじめに/developers.google.com](https://developers.google.com/custom-search/v1/introduction?hl=ja)
-
