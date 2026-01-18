@@ -32,6 +32,24 @@ df
 """
 ```
 
+**reset_indexでindexを列に戻す**
+
+reset_index(names=["newname"]) でindex列の名前を指定できる
+
+```python
+df = pd.DataFrame({'A': [1, 2, 3]})
+df.index.name = 'old'
+df_reset = df.reset_index(names=["newname"])
+df_reset
+"""
+|   newname |   A |
+|----------:|----:|
+|         0 |   1 |
+|         1 |   2 |
+|         2 |   3 |
+"""
+```
+
 **マルチレベルのindex**
 
 ```python
