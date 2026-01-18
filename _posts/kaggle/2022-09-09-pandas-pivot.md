@@ -14,13 +14,13 @@ comments: false
 
 ## pivotとpivot_tableの違い
  - `pivot_table`は`pivot`の一般化
- - `pivot_table`はaggregation関数を使えたり、`fill_value`を使える
+ - `pivot_table`は集約関数を使えたり、`fill_value`を使える
 
 ## pivot
- - 特定のrowのvalueをcolumnにする
+ - 特定の行の値を列にする
  - `index`, `columns`, `values`を指定する
 
-e.g. 全世界の年ごとのドクターの数
+例 全世界の年ごとのドクターの数
 
 ```python
 import pandas as pd
@@ -28,13 +28,13 @@ df = pd.read_csv("medicalDoctors.csv")
 df.pivot(index=["Location"], columns=["Period"], values=["First Tooltip"])
 ```
 
-### pivotした結果、multilevelになったcolumnをdropする
+### pivotした結果、マルチレベルになったcolumnを削除する
 
 ```python
 df.columns = df.columns.droplevel()
 ```
 
-### pivotした結果、index名とかが指定できなくなるとき
+### pivotした結果、index名などが指定できなくなるとき
 
 ```python
 df.columns = df.columns.to_series().str.join('_')
@@ -50,6 +50,14 @@ df.pivot_table(index=["os", "date"],
               columns=["source"], 
               values=["any duplicatable value"],
               aggfunc=np.mean) # 平均を取る場合
+```
+
+## pivot_table後のマルチレベルcolumnをフラット化
+ - 複雑になったcolumnをフラットにして、indexも列に戻すと扱いやすい
+
+```python
+pivot = df.pivot_table(index=["os", "date"], columns=["source"], values=["value"])
+flat = pivot.droplevel(0, axis=1).reset_index()
 ```
 
 ## 様々なaggfunc
@@ -88,5 +96,5 @@ df.pivot_table(index=["date", "os"], columns=["source"], values=["value_column"]
 ---
 
 ## 参考
- - [Pandas Pivot — The Ultimate Guide/medium](https://towardsdatascience.com/pandas-pivot-the-ultimate-guide-5c693e0771f3#:~:text=Pandas%20has%20a%20pivot_table%20function,,%20which%20calculates%20the%20average).)
+ - [Pandas Pivot — The Ultimate Guide/medium](https://towardsdatascience.com/pandas-pivot-the-ultimate-guide-5c693e0771f3#:~:text=Pandas%20has%20a%20pivot_table%20function,,%20which%20calculates%20the%20average)
  - [Pandas: Difference between pivot and pivot_table. Why is only pivot_table working?/stackoverflow](https://stackoverflow.com/questions/30960338/pandas-difference-between-pivot-and-pivot-table-why-is-only-pivot-table-workin)
