@@ -32,5 +32,6 @@ $ bun install -g @github/copilot
  - **ログイン**
    - 起動後に `/login` とすると認証URLが表示されるのでブラウザでアクセス
  - **モデルの指定**
-   - 環境変数で渡す
+   - 1. 環境変数で渡す
      - e.g. `COPILOT_MODEL=gpt-5 copilot`
+   - 2. `/model` コマンドで指定 
