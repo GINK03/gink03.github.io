@@ -89,5 +89,22 @@ print(template.render(**{"name": "山田"}))
 """
 ```
 
+### プレースホルダが未指定の場合に例外を出す
+ - すべての変数が指定されていないと例外を出すには`StrictUndefined`を使う
+
+```python
+from jinja2 import Template, StrictUndefined
+
+template = Template("こんにちは、{{ name }}さん", undefined=StrictUndefined)
+
+try:
+    print(template.render(**{}))
+except Exception as e:
+    print(type(e).__name__, str(e))
+"""
+UndefinedError 'name' is undefined
+"""
+```
+
 ## 参考
  - [Jinja — Jinja Documentation (3.1.x)](https://jinja.palletsprojects.com/en/3.1.x/)
