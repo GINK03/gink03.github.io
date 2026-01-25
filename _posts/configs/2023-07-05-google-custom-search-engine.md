@@ -13,6 +13,7 @@ update_dates: ["2023-07-05"]
 # google custom search engineの概要と使い方
 
 ## 概要
+ - NOTE: 2026年1月現在、GoogleはCSEのウェブ全体での検索を段階的に廃止予定
  - googleのサーチエンジンをAPIとして利用できる機能
  - 一日100件までは無料で利用できるがそれ以上は有料
    - $5/1000件
@@ -72,4 +73,5 @@ display(search("たぬかな"))
 ```
 
 ## 参考
+ - [Updates to our web search products and Programmable Search Engine capabilities](https://news.ycombinator.com/item?id=46730436)
  - [Custom Search JSON API: はじめに/developers.google.com](https://developers.google.com/custom-search/v1/introduction?hl=ja)
