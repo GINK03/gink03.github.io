@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "gemini python genai" 
+title: "gemini python genai"
 date: 2025-03-15
 excerpt: "pythonでgenaiの使い方"
 kaggle: true
@@ -26,47 +26,47 @@ $ pip install google-genai
 
 **テキスト生成**
 ```python
+import os
 from google import genai
 from google.genai import types
+from IPython.display import Markdown, display
 
-client = genai.Client(api_key='GEMINI_API_KEY')
+client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
 response = client.models.generate_content(
     model='gemini-2.0-flash', contents='''
-タイタンフォール２のストーリーを解説して。
-BTとジャックの友情を強調して、1000文字程度のマークダウン形式でお願い。
+タイタンフォール2のストーリーを解説して
+BTとジャックの友情を強調して、1000文字程度のマークダウン形式でお願い
 '''
 )
 display(Markdown(response.text))
 """
 タイタンフォール2 ストーリー解説：BTとジャックの絆
-タイタンフォール2は、一兵士ジャック・クーパーと、彼の乗機となるタイタン、BT-7274の絆を描く物語です。辺境の星タイフォンを舞台に、IMC（星間製造公社）と、その支配からの解放を目指すミリシアとの戦いが繰り広げられます。
-
-パイロットになることを夢見るライフルマン、ジャックは、熟練パイロットのラスト・パイロットであるタイ・ラストモサの指導を受けます。しかし、タイフォンでの戦闘中、ラストモサは戦死。瀕死のラストモサは、ジャックに自身のタイタン、BT-7274の操縦権を託します。
-
-BTは、高度なAIを搭載したヴァンガード級タイタン。当初はプロトコルに従い、ジャックをパイロットとして認識しますが、共に困難を乗り越える中で、その関係は変化していきます。IMCが開発した超兵器「フォールド兵器」の破壊を目指す中、二人は様々な危機に直面します。
-
-惑星の自然災害、IMCの精鋭部隊、そして狡猾な傭兵集団「エイペックスプレデターズ」との戦いを通して、BTはジャックの判断を尊重し、時には自らの命を顧みず彼を守ります。ジャックもまた、BTの能力を最大限に引き出し、互いに信頼を深めていきます。
-
-特に印象的なのは、BTがジャックを安全な場所へ送り出すために、自らを犠牲にする場面です。幾度となく訪れる別れの危機を乗り越え、二人の間に芽生えた友情は、単なる機械と人間の関係を超越した、深い絆として描かれています。
-
-最終的に、ジャックとBTはフォールド兵器の破壊に成功し、IMCの野望を阻止します。しかし、その代償としてBTは破壊されてしまいます。物語の終わりに、BTは自身の記憶をジャックのヘルメットにアップロードしており、二人の物語はまだ終わっていないことを示唆します。
-
-タイタンフォール2は、アクションシューティングとしての面白さはもちろん、AIと人間の友情、自己犠牲、そして希望を描いた感動的な物語です。BTとジャックの絆は、多くのプレイヤーの心を掴み、忘れられない記憶として刻まれています。
+タイタンフォール2は、兵士ジャックと相棒タイタンBTの絆を描く物語
+辺境の星タイフォンで、IMCとミリシアの戦いが展開される
+ジャックは戦死したラストモサからBTを託され、共に任務を進める
+数々の危機を乗り越え、二人の信頼は深まり、強い友情へと変わっていく
+フォールド兵器の破壊に成功するが、BTは犠牲となる
+BTの記憶はジャックのヘルメットに残り、物語の続きが示唆される
 """
 ```
 
 **モデルの一覧**
 ```python
+import os
 import pandas as pd
 from google import genai
-client = genai.Client()
+client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 models = pd.DataFrame([dict(model) for model in client.models.list()])
 display(models)
 ```
 
 **ファイルのアップロード**
 ```python
+import os
+from google import genai
+client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+
 file = client.files.upload(file='README.md')
 response = client.models.generate_content(
     model='gemini-2.0-flash',
@@ -89,7 +89,7 @@ response = client.models.generate_content(
 
 print(response.text)
 """
-札幌の天気は雪です。
+札幌の天気は雪です
 """
 ```
 
@@ -102,26 +102,58 @@ client = genai.Client()
 
 def get_document_embedding(text: str) -> list[float]:
     response = client.models.embed_content(
-        model="gemini-embedding-001",  # 2025年最新の推奨モデルに更新
+        model="gemini-embedding-001",
         contents=text,
         config=types.EmbedContentConfig(
-            task_type="RETRIEVAL_DOCUMENT"  # 大文字で正しい値
+            task_type="RETRIEVAL_DOCUMENT"
         )
     )
-    return response.embeddings[0].values  # 単一のembeddingのvaluesを返す
+    return response.embeddings[0].values
 
 def get_query_embedding(text: str) -> list[float]:
     response = client.models.embed_content(
-        model="gemini-embedding-001",  # 2025年最新の推奨モデルに更新
+        model="gemini-embedding-001",
         contents=text,
         config=types.EmbedContentConfig(
-            task_type="RETRIEVAL_QUERY"  # 大文字で正しい値
+            task_type="RETRIEVAL_QUERY"
         )
     )
-    return response.embeddings[0].values  # 単一のembeddingのvaluesを返す
+    return response.embeddings[0].values
 
 get_document_embedding("今日は良い天気ですね")
 """
 [0.123, 0.456, 0.789, ...]  # 実際の値はモデルによって異なる
 """
+```
+
+**grounding**
+```python
+from google import genai
+from google.genai.types import Tool, GoogleSearch, GenerateContentConfig
+
+client = genai.Client(vertexai=True, location="us-central1")
+keyword = "生成AI 最新動向"
+
+response = client.models.generate_content(
+    model="gemini-2.5-pro",
+    contents=(
+        f"# 依頼\n"
+        f"- 「{keyword}」について最新の情報をリサーチして詳しく教えてください\n"
+        f"- 参照元URLも同時に書いてください\n"
+        f"- 出力はマークダウン形式"
+    ),
+    config=GenerateContentConfig(
+        tools=[Tool(google_search=GoogleSearch())],
+        response_modalities=["TEXT"],
+    ),
+)
+candidate = response.candidates[0]
+
+queries = candidate.grounding_metadata.web_search_queries
+domains = []
+for i, chunk in enumerate(candidate.grounding_metadata.grounding_chunks):
+    # web属性の中に uri, title, domain が入っています
+    if chunk.web:
+        domains.append(chunk.web.domain)
+print(keyword, queries, domains)
 ```
