@@ -35,6 +35,8 @@ $ bun add -g @anthropic-ai/claude-code
 $ claude
 ```
 
+ - 選択肢でescで抜けられないときはctrl + escで抜けられる
+
 **自動許可**
 ```console
 $ claude --dangerously-skip-permissions
