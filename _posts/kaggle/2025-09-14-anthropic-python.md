@@ -76,3 +76,20 @@ display(Markdown(resp.content[0].text))
 エンディングでは希望の光も見えますが、それまでの旅路で築かれた二人の絆こそが、この物語を忘れられないものにしているのです。
 """
 ```
+
+## count token
+
+```python
+from anthropic import Anthropic
+
+text = "これはテストです。モデルによってトークン数が変わるか確認しています。"
+
+client = Anthropic()
+resp = client.messages.count_tokens(
+    model="claude-sonnet-4-5-20250929",
+    # system=system,      # create()でsystemを使っているなら同じものを渡す
+    # tools=tools,        # tool定義を使っているなら同じものを渡す
+    messages=[{"role": "user", "content": text}],
+)
+claude_token = resp.input_tokens
+```
