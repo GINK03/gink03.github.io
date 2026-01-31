@@ -13,8 +13,8 @@ update_dates: ["2025-03-15"]
 # pythonでgenaiの使い方
 
 ## 概要
- - `google-generativeai` とは別のライブラリ
- - `google-generativeai` より新しく、GCPのプロジェクトやリージョンの設定を行うことができる
+- `google-generativeai` とは別のライブラリ
+- `google-generativeai` より新しく、GCPのプロジェクトIDやリージョンを明示して使える
 
 ## インストール
 
@@ -22,7 +22,7 @@ update_dates: ["2025-03-15"]
 $ pip install google-genai
 ```
 
-## サンプルコード
+## サンプルコード集
 
 **テキスト生成**
 ```python
@@ -74,7 +74,7 @@ response = client.models.generate_content(
 )
 ```
 
-**tool call**
+**ツール呼び出し**
 ```python
 def get_current_weather(location: str) -> str:
     ret = '東京: 晴れ, 名古屋: 雨, 札幌: 雪'
@@ -93,7 +93,14 @@ print(response.text)
 """
 ```
 
-**embedding**
+**トークンカウント**
+```python
+core_model = "gemini-2.5-pro"
+client = genai.Client()
+gemini_token = client.models.count_tokens(model=core_model, contents=text).total_tokens
+```
+
+**埋め込み**
 ```python
 from google import genai
 from google.genai import types
@@ -126,7 +133,7 @@ get_document_embedding("今日は良い天気ですね")
 """
 ```
 
-**grounding**
+**Grounding (Google Search)**
 ```python
 from google import genai
 from google.genai.types import Tool, GoogleSearch, GenerateContentConfig
