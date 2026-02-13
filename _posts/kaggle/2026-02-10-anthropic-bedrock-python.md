@@ -53,28 +53,26 @@ print(message.content[0].text)
 ```
 
 ## 利用可能なモデルの確認
+ - `inferenceProfileId`が指定するモデル名に対応
 
 ```python
-import os
 import boto3
 import pandas as pd
 
-aws_profile = os.environ.get("AWS_PROFILE")
-aws_region = os.environ.get("AWS_REGION", "ap-northeast-1")
-session = (
-    boto3.Session(profile_name=aws_profile, region_name=aws_region)
-    if aws_profile
-    else boto3.Session(region_name=aws_region)
-)
-bedrock_client = session.client(service_name='bedrock')
+client = boto3.client('bedrock', region_name='ap-northeast-1')
 
-try:
-    response = bedrock_client.list_foundation_models(byProvider='anthropic')
-    models_data = response.get('modelSummaries', [])
-    model_df = pd.DataFrame(models_data)
-    print(f"取得モデル数: {len(model_df)}")
-    columns = ['modelId', 'modelName', 'inputModalities', 'outputModalities', 'responseStreamingSupported']
-    print(model_df[columns].to_string(index=False))
-except Exception as e:
-    print(f"モデル取得に失敗: {e}")
+response = client.list_inference_profiles()
+
+profiles = [profile for profile in response['inferenceProfileSummaries']]
+
+df = pd.DataFrame(profiles)
+
+df['createdAt'] = pd.to_datetime(df['createdAt'])
+
+df = df[
+    df['inferenceProfileId'].str.contains('anthropic') & 
+    (df['createdAt'] >= pd.Timestamp('2025-09-01', tz='UTC'))
+]
+
+display(df)
 ```
