@@ -76,3 +76,23 @@ df = df[
 
 display(df)
 ```
+
+## litellmでの利用例
+
+```python
+import litellm
+
+response = litellm.completion(
+    model="bedrock/jp.anthropic.claude-sonnet-4-5-20250929-v1:0",
+    messages=[
+        {"role": "user", "content": "タイタンフォール２のストーリーについて３行で説明"}
+    ],
+    temperature=0.0,
+)
+print(response.choices[0].message.content)
+"""
+1. **辺境民兵の新米パイロット、ジャック・クーパーが戦闘中にベテランパイロットの死により、タイタン「BT-7274」を引き継ぐ**
+2. **BTと絆を深めながら、IMC（星間製造企業）の惑星破壊兵器を阻止する任務を遂行**
+3. **最後はBTが自己犠牲でクーパーを救い、兵器を破壊して惑星を守る感動的な結末**
+"""
+```
