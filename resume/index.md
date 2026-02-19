@@ -66,7 +66,7 @@ Introductions in Japanese and English are mixed.
    - [IoTを活用した新産業モデル創出基盤整備事業](https://www.nedo.go.jp/content/100899064.pdf)
 
 ## Patent/特許
- - 特許番号: 2023-124039
+ - 特願: 2023-124039
    - 文章の作成を支援するためのシステム、方法、及びプログラム
 
 ## Qualifications/Certifications
