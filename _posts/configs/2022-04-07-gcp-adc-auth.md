@@ -1,67 +1,82 @@
 ---
-layout: post 
-title: "GCP Google Auth(ADC)"
+layout: post
+title: "GCP ADC 認証"
 date: 2022-04-07
-excerpt: "GCP Google Auth(ADC)のプラクティス"
+excerpt: "GCP Application Default Credentials ADC の使い方メモ"
 project: false
 config: true
 tag: ["gcp", "google auth", "ADC"]
 comments: false
 sort_key: "2022-04-11"
-update_dates: ["2022-04-11","2022-04-07"]
+update_dates: ["2022-04-07", "2022-04-11"]
 ---
 
-# GCP Google Authのプラクティス
+# GCP ADC 認証のプラクティス
 
 ## 概要
- - GCPでpythonやjsなどから他のシステムを参照するときにどのようなフローで認証するのがよいのかプラクティスがある
- - 一般的に、サービスアカウントのクレデンシャル情報をdockerの中に入れたりするのはセキュリティ上よくない
-   - gcloud 認証ヘルパーという機能を用いてクレデンシャル情報を入れたり、特定のpythonライブラリを用いる
+ - GCP で Python や JS から API を利用するときの認証フローのメモ
+ - サービスアカウント鍵を Docker イメージに含めるのは避けたい
+   - `gcloud` の認証や ADC を使ってローカルの認証情報を参照する
 
 ## Application Default Credentials (ADC) の優先順位
- 1. `GOOGLE_APPLICATION_CREDENTIALS`に設定された鍵フィアル
- 2. OAuth2時に出力された`~/.config/gcloud/applicstion_default_credentials.json`のファイル
- 3. GCP上のメタデータから得られた情報
+ 1. `GOOGLE_APPLICATION_CREDENTIALS` に設定された鍵ファイル
+ 2. OAuth2 で作成される `~/.config/gcloud/application_default_credentials.json`
+ 3. GCP 上のメタデータから得られる情報
 
 ## OAuth2で認証ファイルを出力する
 
 ```console
-# デフォルのスコープで認証ファイルを出力
+# デフォルトのスコープで認証ファイルを出力
 $ gcloud auth application-default login
 # 特定のスコープで認証ファイルを出力
 $ gcloud auth application-default login --scopes=https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/bigquery,https://www.googleapis.com/auth/drive
 ```
-すると`~/.config/gcloud/applicstion_default_credentials.json`が得られる
+すると `~/.config/gcloud/application_default_credentials.json` が作成される
 
-これをdocker等で使うときは以下のように認証ファイルを共有する
+これを Docker 等で使うときは以下のように認証ファイルを共有する
+
 ```console
 $ docker run -it -v ~/.config/:/root/.config <container-name>
 ```
-これは一般的なGCPを用いたpythonスクリプトでも最初に参照される  
+これは一般的な GCP を用いた Python スクリプトでも最初に参照される
 
-## pythonでADCからクレデンシャル情報を得る
+## `CLOUDSDK_CONFIG` でプロジェクトごとに認証と設定をカプセル化する
+ - `envrc` などで以下の環境変数を与える
 
-**google-authのインストール**  
+```shell
+# gcloud CLIのコンフィグとADCの出力先をカレントディレクトリ配下に指定
+export CLOUDSDK_CONFIG="${PWD}/.gcloud_config"
+
+# 各種GCPクライアントライブラリ向けにADCの参照パスを明示
+export GOOGLE_APPLICATION_CREDENTIALS="${CLOUDSDK_CONFIG}/application_default_credentials.json"
+```
+
+## Python で ADC からクレデンシャルを得る
+
+**google-auth のインストール**  
+
 ```console
 $ python3 -m pip install google-auth
 ```
 
-**credentialsインスタンスを得る**  
+**credentials インスタンスを得る**  
+
 ```python
 import google.auth
 credentials, project_id = google.auth.default()
 ```
- - 環境変数の`GOOGLE_APPLICATION_CREDENTIALS`がセットされていると最初にそちらから読み取られる
- 
-### GOOGLE_APPLICATION_CREDENTIALSを優先しないようにする
+ - 環境変数の `GOOGLE_APPLICATION_CREDENTIALS` がセットされていると最初にそちらから読み取られる
+
+### `GOOGLE_APPLICATION_CREDENTIALS` を優先しないようにする
 
 ```console
 $ unset GOOGLE_APPLICATION_CREDENTIALS
 ```
 
-## dockerコンテナの内部で認証を通す
+## Docker コンテナ内で認証を通す
+
  - ローカル開発などに限定したとき
- - root部分は適宜変更
+ - `/root` 部分は適宜変更
 
 ```console
 $ docker run -v ~/.config/gcloud/:/root/.config/gcloud -p 8080:8080 -it <image-name>
