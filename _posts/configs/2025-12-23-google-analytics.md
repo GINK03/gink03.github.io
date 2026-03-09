@@ -29,6 +29,10 @@ update_dates: ["2025-12-23"]
  - UTM以外の任意パラメータも付与できる
  - 例: `?utm_source=name&utm_medium=referral&conversation_id=123e4567-e89b-12d3-a456-426614174000`
 
+## tid(G-XXXXXXX)を特定する
+ - google chromeのデベロッパーツールを開いてネットワークタブで`collect`を検索
+ - リクエストのペイロードに`tid=G-XXXXXXX`の形式でGA4の測定IDが含まれている
+
 ## BigQueryへのエクスポート
  - GA4のイベントデータはBigQueryにエクスポート可能
  - 日次エクスポートは日本時間の1日単位で作成される
@@ -82,6 +86,16 @@ WHERE
   _TABLE_SUFFIX BETWEEN '20240101' AND '20251221'
 GROUP BY
   page_location
+```
+
+## トラブルシューティング
+ 
+### ログが取得できない
+ - DNSなどでトラッキングがブロックされている
+ - digコマンドで`www.google-analytics.com`の名前解決ができるか確認する
+
+```console
+$ dig www.google-analytics.com
 ```
 
 ## 参考
