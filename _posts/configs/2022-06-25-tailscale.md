@@ -13,9 +13,9 @@ update_dates: ["2022-06-25"]
 # tailscaleの使い方
 
 ## 概要
- - hamachiのようなp2p VPN
+ - hamachiのようなP2P VPN
    - 一部GUIがシェアウェアである点もhamachiと似ている
- - wireguardをバックエンドに使用しており、認証関連を管理してくれるもの
+ - wireguardをバックエンドに使用しており、認証まわりを管理してくれる
    - wireguardは多少設定が面倒であるが、tailscaleを用いるとGoogle AccountやMicrosoft Accountでログインするだけで利用できる
  - UDP NAT traversalをサポートしており、NATの内側のコンピュータでもVPNネットワークに参加できる
  - 一定のコンピュータ数(20)までは無料なので、個人で利用するには十分そう
@@ -36,8 +36,9 @@ update_dates: ["2022-06-25"]
      - `tailscale status`で接続状況を確認できる（`relay "tok"`であれば東京のリレーサーバ経由）
  - exit node
    - exit nodeを指定・利用することができる
-   - VPNをトンネリングで利用しているイメージですべてのトラフィックをexit node経由で行うことができる
-   - exit node利用時に任意のnameserverを指定することができる
+   - VPNトンネリングを使うイメージで、すべてのトラフィックをexit node経由にできる
+ - Override DNS
+   - tailscale有効時 | exit node利用時 に任意のnameserverを指定することができる
      - `Admin Console` -> `DNS` -> `nameservers`にDNSを設定 + `Override local DNS`を有効にする
  - 仮想インターフェイス
    - Linux: `tailscale0`
@@ -50,7 +51,7 @@ update_dates: ["2022-06-25"]
    - ssh
      - グローバルIPの設定がいらない
    - jupyter
-     - 踏み台の設定がいらないので楽
+     - 踏み台の設定が不要で楽
 
 ## セットアップ（インストール）
 
@@ -92,7 +93,7 @@ pong from kichijouji (100.108.132.113) via 211.15.239.222:41641 in 38ms
 
 ## exit nodeの設定/利用
  - tailscaleのルーティングするデバイスを指定してexit nodeにすることができる
-   - exit nodeはルーターのようなイメージ
+   - exit nodeはルーターのような役割を持つ
 
 **linuxをexit nodeとして設定**
 ```console
@@ -152,14 +153,14 @@ Mean Latency Microseconds,Throughput
 ## セルフホスト（headscale）
  - 概要
    - tailscale互換のFOSS
-   - tailscaleのコントロールプレーンのみをself-hostにすることで完全に無料にしている
+   - tailscaleのコントロールプレーンのみをself-hostすることで完全無料で運用できる
    - インストールのハードルが高い
-     - Dockerで管理するのがよい
+     - Dockerで管理するのが良い
 
 ## トラブルシューティング
  - direct connectionが利用できない
    - 原因
-     - 接続クライアント側（ノートパソコン等）で公衆無線LANなどを利用していると、ルーターの制限のためか、directモードが確立できないことがあった
+     - 接続クライアント側（ノートパソコン等）で公衆無線LANなどを利用していると、ルーター側の制限によりdirectモードを確立できないことがある
 
 ## 参考
  - [/r/Tailscale/](https://www.reddit.com/r/Tailscale/)
