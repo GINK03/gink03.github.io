@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "apple iphone troubleshooting"
+title: "apple ios troubleshooting"
 date: 2024-05-04
 excerpt: "apple iphoneのトラブルシューティング"
 project: false

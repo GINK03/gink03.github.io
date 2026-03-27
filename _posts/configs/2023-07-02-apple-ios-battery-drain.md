@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "apple iphone battery drain"
+title: "apple ios battery drain"
 date: 2023-07-02
 excerpt: "apple iphoneのバッテリードレインに対する対応"
 project: false
 config: true
-tag: ["apple", "iphone", "ios"]
+tag: ["apple", "iphone", "ios", "battery"]
 comments: false
 sort_key: "2023-07-02"
 update_dates: ["2023-07-02"]
