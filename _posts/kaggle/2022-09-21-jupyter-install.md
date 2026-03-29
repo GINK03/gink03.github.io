@@ -24,7 +24,7 @@ $ uv init .
 $ uv add jupyterlab nest-asyncio tqdm pandas seaborn scikit-learn ipywidgets joblib sortedcontainers \
     scipy lightgbm \
     pydata-google-auth google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client google-cloud-bigquery \
-    pandas-gbq japanize-matplotlib \
+    pandas-gbq japanize-matplotlib adjustText \
     db-dtypes google-cloud-bigquery-storage neovim pip pyright google-cloud-secret-manager \
     openai tiktoken spacy requests jinja2 gspread python-dotenv loguru rich \
     jedi-language-server jupytext \
@@ -102,8 +102,8 @@ $ pkill -f "python3 -m ipykernel_launcher"
  - `c.ServerApp.open_browser = <boolean>`
    - `False`で起動時にブラウザを立ち上げない
  - `c.ServerApp.password = "<something-hash>"`
-    - パスワードのハッシュ値を入れる
- - ※古いバージョン(Notebook v6以前)では `c.NotebookApp` が使用されます。
+   - パスワードのハッシュ値を入れる
+ - ※古いバージョン(Notebook v6以前)では `c.NotebookApp` が使用される
 
 **設定の具体例**
 ```python
