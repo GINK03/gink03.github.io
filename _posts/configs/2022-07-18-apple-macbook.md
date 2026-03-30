@@ -3,7 +3,7 @@ layout: post
 title: "Apple MacBook"
 date: 2022-07-18
 excerpt: "Apple MacBookについて"
-tags: ["apple", "macos", "osx"]
+tag: ["apple", "macos", "osx"]
 config: true
 comments: false
 sort_key: "2022-07-18"
@@ -28,11 +28,13 @@ update_dates: ["2022-07-18"]
      - Magic Keyboard
      - Magic Mouse
    - 外部ディスプレイの接続方法の確保
-     - Thunderbold 3, 4
+     - Thunderbolt 3, 4
      - HDMI出力可能なハブ
  - **MacBook側の設定**
    - sshdを設定しておく
    - スリープをしないようにする
+ - **バッテリーの充電上限の設定**
+   - macOS 26.4以降ではバッテリーの充電上限を設定できるので80%に設定
 
 ## アクセサリ
 
@@ -47,6 +49,6 @@ update_dates: ["2022-07-18"]
 
 ### HDMI出力可能なハブ経由でTVに出力するとちらつく, 60Hzで出力できない
  - 原因
-   - HDMIハブの問題で、品質が一定しなく、正常に出力できない
+   - HDMIハブの問題で、品質が安定せず、正常に出力できない
  - 対応
-   - Thunderboldのケーブルで繋ぐ
+   - Thunderboltのケーブルで繋ぐ
