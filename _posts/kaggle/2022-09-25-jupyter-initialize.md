@@ -31,9 +31,8 @@ import numpy as np; np.random.seed(42) # 乱数のシードを固定
 import pandas as pd; pd.options.display.float_format = '{:,.6f}'.format; pd.set_option('display.max_columns', None) # columnを省略せず表示
 # visualization
 import seaborn as sns
-import matplotlib
-import matplotlib.pyplot as plt
-import matplotlib.dates as mdates # time seriesの描画
+import matplotlib; import matplotlib.pyplot as plt; import matplotlib.dates as mdates # time seriesの描画
+from adjustText import adjust_text # ラベルの重なりを自動調整
 %config InlineBackend.print_figure_kwargs={'facecolor' : "w"} # matplot, seabornが生成するpngが透明にならないようにする
 japanize_spec = importlib.util.find_spec("japanize_matplotlib")
 if japanize_spec: import japanize_matplotlib
