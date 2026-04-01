@@ -34,7 +34,7 @@ from IPython.display import Markdown, display
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
 response = client.models.generate_content(
-    model='gemini-2.0-flash', contents='''
+    model='gemini-2.5-flash', contents='''
 タイタンフォール2のストーリーを解説して
 BTとジャックの友情を強調して、1000文字程度のマークダウン形式でお願い
 '''
@@ -69,7 +69,7 @@ client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
 file = client.files.upload(file='README.md')
 response = client.models.generate_content(
-    model='gemini-2.0-flash',
+    model='gemini-2.5-flash',
     contents=['このファイルを要約して', file]
 )
 ```
@@ -82,7 +82,7 @@ def get_current_weather(location: str) -> str:
 
 
 response = client.models.generate_content(
-    model='gemini-2.0-flash',
+    model='gemini-2.5-flash',
     contents='今の札幌の天気は？',
     config=types.GenerateContentConfig(tools=[get_current_weather]),
 )
@@ -131,6 +131,29 @@ get_document_embedding("今日は良い天気ですね")
 """
 [0.123, 0.456, 0.789, ...]  # 実際の値はモデルによって異なる
 """
+```
+
+**Vertex AI経由でのテキスト生成**
+ - API keyの代わりにGCPのプロジェクトIDで認証する
+ - `location='global'` を指定することで最寄りのリージョンに自動ルーティングされる
+
+```python
+import os
+from google import genai
+from IPython.display import Markdown, display
+
+client = genai.Client(vertexai=True, location='global', project='<project-id>')
+
+response = client.models.generate_content(
+    model='gemini-2.5-flash', contents=f'''
+# 依頼
+<ここにプロンプトを記述>
+<text>
+{text}
+</text>
+'''
+)
+display(Markdown(response.text))
 ```
 
 **Grounding (Google Search)**
