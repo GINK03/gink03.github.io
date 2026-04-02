@@ -3,7 +3,7 @@ layout: post
 title: "gcp bigquery analytics hub"
 date: 2023-12-27
 excerpt: "gcp bigquery analytics hubの概要"
-tags: ["gcp", "bigquery", "analytics hub"]
+tag: ["gcp", "bigquery", "analytics hub", "terraform"]
 config: true
 comments: false
 sort_key: "2023-12-27"
@@ -15,6 +15,13 @@ update_dates: ["2023-12-27"]
 ## 概要
  - BigQueryのデータセットをプロジェクト・組織をまたいで共有するための機能
  - データの公開単位はデータセットになる
+
+## 権限管理の観点でのユースケース
+ - データレイク側のプロジェクトでPIIを除去・マスクしたデータセットをAnalytics Hubで公開することで、アナリスト向けプロジェクトにread onlyのデータセットを安全に共有できる
+   - アナリストにデータレイク本体へのアクセス権を付与する必要がなくなる
+   - 公開データセットの購読者はread onlyのため、元データへの書き込みや削除のリスクを排除できる
+ - エクスチェンジ単位で権限を管理するため、データセットごとに個別に権限設定する手間が省ける
+ - 管理にはTerraformを用いるのが一般的で、`google_bigquery_analytics_hub_data_exchange` および `google_bigquery_analytics_hub_listing` リソースで構成管理できる
 
 ## 権限の粒度と設定
  - プリンシパル
