@@ -2,3 +2,9 @@
 .sass-cache/
 Gemfile.lock
 _site/
+package.json
+package-lock.json
+node_modules/
+.python-version
+.jekyll-metadata
+CLAUDE.md
