@@ -8,7 +8,7 @@ config: true
 tag: ["terraform", "gcp", "google cloud platform"]
 comments: false
 sort_key: "2024-01-30"
-update_dates: ["2024-01-30"]
+update_dates: ["2024-01-30", "2026-04-17"]
 ---
 
 # terraform + gcpの基本的な使い方
@@ -44,7 +44,6 @@ $ gsutil mb -p $PROJECT_ID -l asia-northeast1 -b on gs://$BUCKET
 
 **backend.tf**
 ```hcl
-# backend.tf
 terraform {
   backend "gcs" {
     bucket = "tfstate-<YOUR_PROJECT_ID>"
@@ -62,7 +61,7 @@ terraform {
   required_providers {
     google = {
       source  = "hashicorp/google"
-      version = "~> 6.0"   # 6.x 系に固定（お好みで >=6,<8 でもOK）
+      version = "~> 6.0"
     }
   }
 }
@@ -70,8 +69,7 @@ terraform {
 
 ## 最小限のリソース別ファイル構成
 
-```console
-$ tree .
+```
 .
 ├── apis.tf
 ├── backend.tf
@@ -83,4 +81,37 @@ $ tree .
 ├── variables.tf
 └── versions.tf
 ```
+
+## `prevent_destroy` による削除保護
+
+ディスク・VPCなど削除すると復旧が困難なリソースには `lifecycle` ブロックで `prevent_destroy = true` を設定する
+
+```hcl
+resource "google_compute_disk" "data" {
+  name = "my-data-disk"
+  # ...
+
+  lifecycle {
+    prevent_destroy = true
+  }
+}
+
+resource "google_compute_network" "vpc" {
+  name = "my-vpc"
+  # ...
+
+  lifecycle {
+    prevent_destroy = true
+  }
+}
+```
+
+ - `terraform destroy` や `terraform apply` でリソースの削除が発生する場合にエラーで停止する
+ - 設定を外さない限り削除できないため、誤操作の最後の砦になる
+
+AIエージェントとの組み合わせでは特に重要
+
+ - AIエージェントに `terraform apply` の権限を与える構成では、エージェントが意図せずリソース削除を含む変更を提案・実行するリスクがある
+ - `prevent_destroy = true` を設定しておくと、削除を含む `plan` はapply時にエラーになるため、データロスの防止になる
+ - ディスク・VPC・データベースなど、再作成コストが高いリソースには必ず設定する
 
