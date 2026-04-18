@@ -65,6 +65,7 @@ MetricFlowは時間軸集計のベースとなるtime spineテーブルを要求
 
 `models/utilities/metricflow_time_spine.sql`
 
+{% raw %}
 ```sql
 {{ config(materialized='table') }}
 
@@ -73,6 +74,7 @@ from unnest(
     generate_date_array('2020-01-01', '2030-12-31', interval 1 day)
 ) as date
 ```
+{% endraw %}
 
 `models/utilities/_models.yml`
 
