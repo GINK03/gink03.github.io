@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Boyer-Moore多数決アルゴリズム"
-date: 3022-07-20
+date: 2022-07-20
 excerpt: "Boyer-Moore多数決アルゴリズムについて"
 computer_science: true
 tag: ["boyter-moore majority vote", "最頻値", "多数決", "投票アルゴリズム"]
-sort_key: "3022-07-20"
-update_dates: ["3022-07-20"]
+sort_key: "2022-07-20"
+update_dates: ["2022-07-20"]
 comments: false
 ---
 

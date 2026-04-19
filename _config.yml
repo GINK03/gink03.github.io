@@ -28,8 +28,8 @@ sass:
 # Comments
 disqus_shortname:   nardtree
 
-# Gems
-gems:
+# Plugins
+plugins:
   - jekyll-mentions
   - jekyll-feed
   - jekyll-sitemap
