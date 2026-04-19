@@ -57,4 +57,9 @@ dry-runなどをしたいときは以下のコマンドで実行
 # run-pars /var/spool/cron/crontabs
 ```
 
+## キーの場所
 
+ - `cert.pem` と `fullchain.pem` からなっている
+ - `/etc/letsencrypt/live/{HOSTNAME}` に最新バージョンへのシンボリックリンクがある
+ - 本体は `/etc/letsencrypt/archive/{HOSTNAME}/[cert|fullchain]{VERSION_NUMBER}.pem`
+ - ユーザはこのフォルダを参照できないので `sudo chown -R {USER} /etc/letsencrypt/archive` などで対応する
