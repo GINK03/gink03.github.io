@@ -7,7 +7,7 @@ tag: ["tailscale", "vpn", "wireguard"]
 config: true
 comments: false
 sort_key: "2022-06-25"
-update_dates: ["2022-06-25"]
+update_dates: ["2022-06-25", "2026-04-17"]
 ---
 
 # tailscaleの使い方
@@ -148,6 +148,94 @@ $ netperf -H 100.82.111.109 -t TCP_STREAM -- -o mean_latency,throughput
 MIGRATED TCP STREAM TEST from (null) (0.0.0.0) port 0 AF_INET to (null) () port 0 AF_INET
 Mean Latency Microseconds,Throughput
 27856.18,37.48
+```
+
+## peer relay
+
+ - tailnet内の任意のデバイスをリレーサーバとして指定できる機能（Tailscale 1.86以降）
+ - directモードが確立できない場合、DERPサーバより先にpeer relayを試みる（DERP → peer relay → direct の優先順位ではなく、direct不可 → peer relay → DERPの順）
+ - DERPサーバより低レイテンシ・高スループットで、クラウド環境ではエグレスコスト削減にもなる
+ - iOS・Apple TV・Androidはpeer relayデバイスにはなれないが、利用側としては使用可能
+
+**接続優先順位**
+```
+direct → peer relay → DERP
+```
+
+**step 1: peer relayデバイスの設定**
+
+UDPポートを指定してpeer relayとして起動する
+
+```console
+$ tailscale set --relay-server-port=40000
+```
+
+ポートフォワードやロードバランサ経由の場合はstaticエンドポイントも指定する
+
+```console
+$ tailscale set --relay-server-port=40000 --relay-server-static-endpoints="203.0.113.1:40000"
+```
+
+**step 2: ACLのgrantポリシーを追加**
+
+Admin Console → Access controls のJSONに `tailscale.com/cap/relay` ケイパビリティを持つgrantを追加する
+
+```json
+{
+  "grants": [
+    {
+      "src": ["tag:clients"],
+      "dst": ["tag:my-relay"],
+      "app": {
+        "tailscale.com/cap/relay": []
+      }
+    }
+  ]
+}
+```
+
+ - `src`: peer relay経由でアクセスされる側のデバイス（strictなNATやファイアウォール内のデバイス）
+ - `dst`: peer relayとして機能させるデバイス
+ - `*` を `src` に使うと全デバイスがpeer relayを経由しようとするため避ける
+
+このACLポリシーはTerraformの `tailscale_acl` リソースで管理できる
+
+```hcl
+resource "tailscale_acl" "main" {
+  acl = jsonencode({
+    grants = [
+      {
+        src = ["tag:clients"]
+        dst = ["tag:my-relay"]
+        app = {
+          "tailscale.com/cap/relay" = []
+        }
+      }
+    ]
+  })
+}
+```
+
+**接続状況の確認**
+
+```console
+$ tailscale status | grep peer-relay
+```
+
+peer relay経由の接続は `direct` や `relay` ではなく `peer-relay` と表示される
+
+**サーバサイドの設定確認**
+
+```console
+$ tailscale debug prefs
+```
+
+`RelayServerPort` にポート番号が設定されていればpeer relayが有効になっている
+
+**無効化**
+
+```console
+$ tailscale set --relay-server-port=""
 ```
 
 ## セルフホスト（headscale）
