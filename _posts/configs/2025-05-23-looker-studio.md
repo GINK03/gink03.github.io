@@ -3,10 +3,10 @@ layout: post
 title: "looker studio"
 date: 2025-05-23
 excerpt: "looker studioの使い方"
-tags: ["bi tool", "looker studio", "gcp"]
+tag: ["bi tool", "looker studio", "gcp"]
 config: true
 sort_key: "2025-05-23"
-update_dates: ["2025-05-23"]
+update_dates: ["2025-05-23", "2026-04-26"]
 ---
 
 # looker studioの使い方
@@ -16,6 +16,43 @@ update_dates: ["2025-05-23"]
  - Google Data Studioのリブランド名
  - ノーコード／ローコードのドラッグ＆ドロップ操作中心
  - 基本無料で使用できるが、権限関連を強化した有償版もある
+
+## 基本的な使い方
+
+**BQカスタムクエリへの接続**
+
+データソースにBigQueryのカスタムクエリを指定するのが典型的な使い方
+
+ - データソース追加 → BigQuery → カスタムクエリ → SQLを記述して接続
+ - テーブルを直接指定するより、必要なカラムに絞ったクエリを渡す方が描画が速い
+
+**ディメンションとメジャーの選択**
+
+接続後の基本操作の流れ
+
+ 1. ディメンションを選ぶ（集計の軸になるカラム — 日付・カテゴリ・地域など）
+ 2. メジャーに集計操作を指定する（SUM・AVG・COUNT・MAX・MIN など）
+ 3. グラフ種別を選ぶ（折れ線・棒・円・表・スコアカードなど）
+
+ディメンションとメジャーの区別がLooker Studioの中心概念で、カラムの型（文字列→ディメンション、数値→メジャー）から自動判定されるが手動で変更できる
+
+## dbtとの連携方針
+
+**Looker Studio側を薄く保つ**
+
+ - dbtのmartレイヤーをデータソースとして接続し、Looker Studio側のカスタムクエリにはビジネスロジックを入れない
+ - フィルタリング・カラム選択・軽い結合程度にとどめ、集計・指標の定義・ビジネスルールはdbt側に寄せる
+ - ロジックをLooker Studioに書いてしまうと、ダッシュボードごとに定義が散らばり、指標の再現性が失われる
+
+```sql
+-- Looker Studio側のカスタムクエリはこの程度にとどめる
+SELECT *
+FROM `my_project.mart.fct_orders`
+WHERE created_at >= DATE_SUB(CURRENT_DATE(), INTERVAL 90 DAY)
+```
+
+ - 集計・KPIの定義・JOIN・フラグ生成はすべてdbt側のmartモデルで行う
+ - [dbt記事](/dbt/) も参照
 
 ## 有償無償の違い
 
