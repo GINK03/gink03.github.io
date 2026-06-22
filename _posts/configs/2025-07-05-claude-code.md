@@ -7,7 +7,7 @@ config: true
 tag: ["claude code"]
 comments: false
 sort_key: "2025-07-05"
-update_dates: ["2025-07-05"]
+update_dates: ["2025-07-05", "2026-06-22"]
 ---
 
 # Claude Code の使い方
@@ -29,6 +29,7 @@ $ npm install -g @anthropic-ai/claude-code
 
 ```console
 $ bun add -g @anthropic-ai/claude-code
+$ bun pm -g trust @anthropic-ai/claude-code
 ```
 
 ## 実行
@@ -66,6 +67,20 @@ $ claude -p "ミッションを実行せよ" \
 
 ## 認証
  - 認証先として `console.anthropic.com` を選択できる
+
+## トラブルシューティング
+
+### `claude native binary not installed`
+ - Bunでglobal installしたときにpostinstallが実行されず、ネイティブバイナリが入っていないと発生する
+ - `bun pm -g trust @anthropic-ai/claude-code`でpostinstallを許可する
+
+```text
+Error: claude native binary not installed.
+
+Either postinstall did not run (--ignore-scripts, some pnpm configs)
+or the platform-native optional dependency was not downloaded
+(--omit=optional).
+```
 
 ## API 経由での利用
 
