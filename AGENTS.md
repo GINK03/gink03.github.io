@@ -40,6 +40,34 @@
  - `docs/reference/` — 実装済みの設計パターン、運用方針、参照資料
  - `docs/archive/` — 完了済み・歴史的記録。新規に archive へ移す文書は、可能ならファイル先頭に `> **Status**: ✅ Completed / ❌ Abandoned / 🗄️ Archived` を記載する。既存文書は古い形式のものも残っていてよい
 
+## SEO（2026-06-26 調査と対応の記録）
+他エージェント向けの引き継ぎ。詳細な改善案は `docs/draft/seo-improvements.md` も参照
+
+**わかったこと（診断）**
+ - 本当のボトルネックは順位ではなく「インデックス未登録」。Search Console の URL Inspection で確認したところ、トップ `/` と一部の一覧ページ（`/configs/` `/kaggle/`）は index 済みだが、そこからリンクされた個別記事は `/git/` `/markdown/` `/sops/` `/dijkstra/` 等ことごとく "URL is unknown to Google"（5年前の記事すら未クロール）
+ - 内部リンク自体は概ね健全（一覧ページは絶対URLで全記事にリンク済み、`/posts/` は1541記事をリンクするマスター一覧）。それでも記事が拾われない
+ - 原因は典型的なクロールバジェット枯渇＝ドメイン権威の低さ（github.io・1700超の短い記事）。技術では解消できない領域
+
+**対処したこと（テクニカル、実装済み）**
+ - 構造化データ JSON-LD（BlogPosting、`dateModified` は `update_dates` 由来）を `_includes/head.html` に出力
+ - 全レイアウトの `<html>` に `lang="ja"`
+ - robots.txt に `Sitemap:` 行、`jekyll-sitemap` が `/sitemap.xml`(約1770URL) を生成
+ - H1重複の解消＋見出しレベル正規化（本文h1を1745→1、レベル飛び0）。規約は「基本的に守ってほしいこと」参照
+ - 画像LCP（ロゴ737K→41K、背景をWebP化451K→216K）
+ - トップから `/posts/`(全記事一覧)・`/projects/`・`/bookmarks/`・`/tags/` への導線追加（`_layouts/home.html`）
+ - Search Console に `gink03.github.io` をプロパティ登録済み（所有者: angeldust03@gmail.com）
+
+**やるべきこと / 未了**
+ - Search Console で `sitemap.xml` を送信（ユーザ対応中）。送信後、数日〜数週でインデックス状況を再確認する
+ - トピッククラスタ化（関連記事の相互リンク自動付与）は未着手。内部で効くのでテクニカル施策として有力
+ - 権威向上（被リンク・Zenn/Qiitaクロスポスト）は非テクニカルで保留。当面はテクニカルに対応できる範囲で進める方針
+
+**インデックス状況の確認方法（エージェント向け）**
+ - ADC（`gcloud auth application-default`、readonlyスコープ `auth/webmasters.readonly`）で Search Console API を叩ける。quota project は個人GCP `starry-lattice-256603`、`X-Goog-User-Project` ヘッダ必須
+ - URL Inspection: `POST https://searchconsole.googleapis.com/v1/urlInspection/index:inspect`（body: `inspectionUrl`, `siteUrl`）で任意URLの index 状況を即時照会
+ - sitemap送信や登録系は書き込みスコープ `auth/webmasters` が必要（readonlyでは403）
+ - PageSpeed/Lighthouse は dots の `bin/seocheck <url>`（ADC利用・キー不要）でSEO/性能スコアを取得できる
+
 ## 遵守事項
  - `git restore .` を絶対行わない
  - 質問への応答のみが求められている場合、リポジトリ内のファイル（コードや記事）を編集しない
