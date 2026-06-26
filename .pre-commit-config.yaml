@@ -1,5 +1,12 @@
+# gitleaks はソースビルド(language: golang)だと Go/GOROOT 環境に依存して落ちるため、
+# mise 等でインストール済みの gitleaks バイナリを直接呼ぶ local hook にしている
+# 前提: PATH 上に gitleaks があること (例: mise use -g go:github.com/zricethezav/gitleaks/v8)
 repos:
-  - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.24.3
+  - repo: local
     hooks:
       - id: gitleaks
+        name: Detect hardcoded secrets (gitleaks)
+        description: Detect hardcoded secrets using Gitleaks
+        entry: gitleaks git --pre-commit --redact --staged --verbose
+        language: system
+        pass_filenames: false
