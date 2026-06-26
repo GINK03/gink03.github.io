@@ -1,7 +1,28 @@
 # SEO改善案
 
+> **Status**: ✅ Completed（#7 を除き実装済み / 2026-06-26）
+
 このサイト（gink03.github.io / Jekyll + jekyll-theme-cayman）のSEO改善案をまとめる
 調査日時点のビルド済みHTML（`_site`）と各テンプレートを確認した結果に基づく
+
+## 実施結果サマリ
+
+| # | 項目 | 状態 | 主なコミット / 内容 |
+|---|---|---|---|
+| 1 | 構造化データ JSON-LD | ✅ | `head.html` に BlogPosting を出力（`dateModified` は `update_dates` 由来） |
+| 2 | `<html lang="ja">` | ✅ | 全12レイアウトに付与 |
+| 3 | robots.txt の Sitemap 参照 | ✅ | `Sitemap: https://gink03.github.io/sitemap.xml` |
+| 4 | 更新日シグナル | ✅ | #1 の `dateModified` で達成 |
+| 5 | H1 重複の解消 | ✅ | 本文 h1 を 1745→1 に（タイトル削除1447 / 降格297 / 多重h1降格23） |
+| 5+ | 見出しレベル正規化 | ✅ | レベル飛び37→0、非h2始まり7→0（32記事をツリー正規化） |
+| 6 | 画像 LCP 最適化 | ✅ | ロゴ 737K→41K、背景 451K→216K(WebP) |
+| 7 | OG画像の記事別最適化 | ⏭️ 見送り | 集客CTR寄りで優先度低・運用コスト高のため不要と判断 |
+
+検証: 各段で `bundle exec jekyll build` ＋見出しチェッカー、デプロイ後に本番URLで確認。
+
+---
+
+## 以下は当初の改善案（記録として残す）
 
 ## 前提（確認済みの現状）
  - プラグイン: `jekyll-sitemap`, `jekyll-feed`, `jekyll-mentions`, `jekyll-gist`
