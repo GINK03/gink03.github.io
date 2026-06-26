@@ -27,6 +27,15 @@
 ## push後の確認
  - `git push` 後に `gh run list --limit 5` でGitHub Pagesのビルド状況を確認する
 
+## docs/ 運用
+ - `docs/draft/` — 非定型のメモ、一時アウトプット、会話から作った手順書、暫定ドラフト。後で root README や恒久文書へ昇格させる前提の置き場
+ - `docs/todo/` — 未着手の構想・アイデア
+ - `docs/active/` — 進行中・残課題あり
+ - `docs/hold/` — 今すぐ着手しない保留項目。着手する段階で `docs/todo/` または `docs/active/` に切り出す
+ - `docs/adr/` — アーキテクチャ/技術的な意思決定の記録（Architecture Decision Record）。`NNNN-タイトル.md` の連番で1決定1ファイル。背景（Context）・決定（Decision）・影響（Consequences）・ステータス（Proposed / Accepted / Superseded 等）を記載する
+ - `docs/reference/` — 実装済みの設計パターン、運用方針、参照資料
+ - `docs/archive/` — 完了済み・歴史的記録。新規に archive へ移す文書は、可能ならファイル先頭に `> **Status**: ✅ Completed / ❌ Abandoned / 🗄️ Archived` を記載する。既存文書は古い形式のものも残っていてよい
+
 ## 遵守事項
  - `git restore .` を絶対行わない
  - 質問への応答のみが求められている場合、リポジトリ内のファイル（コードや記事）を編集しない

@@ -37,6 +37,25 @@
     {% if site.bing-verify %}    <meta name="msvalidate.01" content="{{ site.bing-verify }}">{% endif %}
     {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
     <link rel="canonical" href="{{ canonical }}">
+    <!-- 構造化データ (JSON-LD) -->
+    {% if page.date %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": {{ canonical | jsonify }} },
+      "url": {{ canonical | jsonify }},
+      "headline": {{ page.title | jsonify }},
+      {% if page.excerpt %}"description": {{ page.excerpt | markdownify | strip_html | strip_newlines | normalize_whitespace | jsonify }},{% endif %}
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{% if page.update_dates %}{{ page.update_dates | last | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}",
+      "author": { "@type": "Person", "name": "gimpei.kobayashi" },
+      "publisher": { "@type": "Person", "name": "gimpei.kobayashi", "logo": { "@type": "ImageObject", "url": "{{ site.url }}/{{ site.logo }}" } },
+      "image": "{{ site.url }}/{{ site.logo }}"{% if page.tags %},
+      "keywords": {{ page.tags | join: ', ' | jsonify }}{% endif %}
+    }
+    </script>
+    {% endif %}
     <link href="{{ site.url }}/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
     <!-- Handheld -->
     <meta name="HandheldFriendly" content="True">
