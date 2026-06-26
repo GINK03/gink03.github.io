@@ -13,7 +13,7 @@ comments: false
 ## 概要
  - キーを置き換えたり、キーに特定のスクリプトを紐付けて自動化するソフトウェア
     - osxの[/karabiner/](/karabiner/)に相当する
- - 現在はmicrosoftのossである[/powertoys/](/powertoys/)が代替として公式の提供ということもあり優れている
+ - 現在はmicrosoftのossである[/powertoys/](/windows-powertoys/)が代替として公式の提供ということもあり優れている
  - autohotkeyは自動起動しない
  - autohotkeyは`.ahk`のスクリプトファイルをダブルクリックすることで起動できる
  - スクリプトファイルを更新した場合、ファイルをダブルクリックし、現在のautohotkeyプロセスを再起動することで設定が反映される

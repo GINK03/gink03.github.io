@@ -43,7 +43,7 @@ update_dates: ["2022-02-11"]
  - `Keyboard Manager`
    - 概要
      - mac osのkarabinerと同様にキーの置き換えだったり、キーコンビネーションの定義ができる
-     - [/rdp/](/rdp/)経由で用いるときに複雑なキーバンドをシングルキーで定義可能なのでホストマシンと干渉しなく、便利
+     - [/rdp/](/microsoft-remote-desktop-rdp/)経由で用いるときに複雑なキーバンドをシングルキーで定義可能なのでホストマシンと干渉しなく、便利
  - `PowerToys Run`
    - 概要
      - mac osのraycastとほぼ同様（いくつかの機能は足らない）を提供する

@@ -32,4 +32,4 @@ update_dates: ["2022-05-02"]
      - `サービスに登録`
 
 ## 便利な使い方
- - [/powertoys/](/powertoys/)と連携してショートカットに登録しておくと便利
+ - [/powertoys/](/windows-powertoys/)と連携してショートカットに登録しておくと便利

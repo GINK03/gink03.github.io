@@ -11,7 +11,7 @@ sort_key: "2022-04-16"
 update_dates: ["2022-04-16","2022-04-01","2022-03-09","2022-02-27","2022-02-27","2022-02-10"]
 ---
 
- - [google spreadsheets](/google-spreadsheets/)等で使用できるJavaScriptのスクリプト 
+ - [google spreadsheets](/google-sheets/)等で使用できるJavaScriptのスクリプト 
  - 短縮表現は`GAS(ガス)`
 
 ## google spreadsheetsでの関数の作り方

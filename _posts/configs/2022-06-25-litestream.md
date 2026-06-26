@@ -29,7 +29,7 @@ $ minio server minio-test --address ":9000" --console-address ":9001"
 $ mc alias set localhost http://localhost:9000 minioadmin minioadmin
 $ mc mb localhost/test
 ```
- - [/minio/](/minio/)の詳しい使い方は専用のページを参照
+ - [/minio/](/minio-server/)の詳しい使い方は専用のページを参照
 
 **sqliteでテスト用のテーブルを作成**
 ```console

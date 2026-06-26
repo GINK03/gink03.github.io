@@ -27,7 +27,7 @@ update_dates: ["2022-04-09"]
 
 ## NFC(Near field communication)タグとしての機能
  - iPhoneやAndroidでNFCタグとして読み取ることができる
-   - 読み取った際に[/shortcuts/](/shortcuts/)でイベントを起こすこともできる
+   - 読み取った際に[/shortcuts/](/apple-shortcuts/)でイベントを起こすこともできる
  - カードキーで開けるタイプの扉のキーとして設定できる
    - SUICAや白いNFCカードなどを持たなくて済む
 

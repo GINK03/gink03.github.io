@@ -12,7 +12,7 @@ update_dates: ["2021-12-23","2021-11-28","2021-09-16","2021-09-07","2021-09-07",
 
 ## 概要
  - systemdは一般的にプロセスをデーモナイズするときに便利なLinuxのサービスの一つ
- - systemdは[/systemctl/](/systemctl/)コマンドで操作される
+ - systemdは[/systemctl/](/systemd-systemctl/)コマンドで操作される
  - systemdの設定のパス
    - `/etc/systemd/system/`
      - システムの管理するunit

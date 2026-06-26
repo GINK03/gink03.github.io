@@ -14,7 +14,7 @@ update_dates: ["2023-11-17"]
 
 ## 概要
  - flaskのようなpythonのAPI専用のフレームワーク
- - [/pydantic](/pydantic/)を使用している
+ - [/pydantic](/python-pydantic/)を使用している
    - 型情報のバリデーションとドキュメント生成を行う
  - `/docs`でOpenAPIドキュメントを表示することができる
    - ドキュメントはBaseModelを継承したクラスの情報から生成される

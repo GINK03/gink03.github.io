@@ -14,7 +14,7 @@ comments: false
 
 ## 概要
  - ubuntuにおいては `NetworkManager` がインストールされているか, `netplan` は使えるか、などで設定の方法が変化し、状況に応じた設定が必要になる
- - Windowsにおいては[/powershell/](/powershell/)を用いることで特定のIPアドレスを付与できる
+ - Windowsにおいては[/powershell/](/windows-powershell/)を用いることで特定のIPアドレスを付与できる
 
 ## ubuntu, debian(NetworkManagerがアクティブな場合)
  - NetworkManagerがアクティブかどうかは以下のコマンドで確認できる
