@@ -10,8 +10,6 @@ sort_key: "2026-02-26"
 update_dates: ["2026-02-26"]
 ---
 
-# Spec Driven Development SDD
-
 ## 概要
 
  - ソフトウェアの仕様を中心に据えた開発手法

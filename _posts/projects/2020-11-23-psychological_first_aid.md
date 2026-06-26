@@ -8,8 +8,6 @@ tag: ["心理応急処置", "Psychological First Aid"]
 comments: false
 ---
 
-# 心理応急処置(PFA,サイコロジカル・ファーストエイド)
-
 ## 日本語によるドキュメント
  - [サイコロジカル・ファーストエイド・フィールドガイド](https://saigai-kokoro.ncnp.go.jp/pdf/who_pfa_guide.pdf)
 

@@ -11,8 +11,6 @@ sort_key: "2023-02-18"
 update_dates: ["2023-02-18"]
 ---
 
-# microsoft edgeについて
-
 ## 概要
  - マイクロソフトが作成したブラウザ
  - google chromeと同じ描画エンジンを利用している

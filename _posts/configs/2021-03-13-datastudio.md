@@ -10,7 +10,7 @@ sort_key: "2021-03-13"
 update_dates: ["2021-03-13"]
 ---
 
-# data studio/data portalについて
+## data studio/data portalについて
 
 ## 概要
 bigqueryへ接続することが可能であり、様々な情報を可視化することができる  

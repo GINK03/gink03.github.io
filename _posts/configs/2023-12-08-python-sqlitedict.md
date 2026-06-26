@@ -10,7 +10,7 @@ sort_key: "2023-12-08"
 update_dates: ["2023-12-08"]
 ---
 
-# pythonのsqlitedictの使い方
+## pythonのsqlitedictの使い方
 
 ## 概要
  - pythonでdictのような使い方ができるsqliteをバックエンドにしたデータ恒久化ライブラリ

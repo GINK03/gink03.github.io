@@ -12,8 +12,6 @@ sort_key: "2024-07-21"
 update_dates: ["2024-07-21"]
 ---
 
-# pandas argsort
-
 ## 概要
  - pandasのargsortはdataframeのindexのseriesを返す
  - pandasのseriesを引数にnp.argsortを適応することでpd.Series.argsortと同じ結果を得ることができる

@@ -10,7 +10,7 @@ sort_key: "2023-07-20"
 update_dates: ["2023-07-20"]
 ---
 
-# bigqueryのgenerate date array(日付の生成)の使い方
+## bigqueryのgenerate date array(日付の生成)の使い方
 
 ## 概要
  - BigQueryにおけるpandasのdate_rangeに相当する機能

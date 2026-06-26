@@ -10,7 +10,6 @@ sort_key: "2021-04-19"
 update_dates: ["2021-04-19","2021-03-31","2021-03-29"]
 ---
 
-# google cloud professional cloud developer認定
  - 模擬試験を解いてみて
    - 全体的な質問でdata engineering的な側面を持っている
    - machine learning engineer的な側面は少ない

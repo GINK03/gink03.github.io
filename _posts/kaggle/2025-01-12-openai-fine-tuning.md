@@ -10,8 +10,6 @@ sort_key: "2025-01-12"
 update_dates: ["2025-01-12"]
 ---
 
-# openai fine tuning
-
 ## 概要
  - openaiのモデルはいくつかのモデルをfine-tunedすることができる
  - fine-tunedしたモデルは、openaiのAPIを使って利用することができる

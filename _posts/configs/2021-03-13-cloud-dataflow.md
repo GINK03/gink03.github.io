@@ -10,8 +10,6 @@ sort_key: "2021-06-19"
 update_dates: ["2021-06-19"]
 ---
 
-# cloud dataflowについて
-
 ## 概要
  - apache beam alternative
  - 賢いmap reduce

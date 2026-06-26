@@ -10,8 +10,6 @@ sort_key: "2025-10-05"
 update_dates: ["2025-10-05"]
 ---
 
-# OpenAI Agents React-like
-
 
 ## 概要
  - OpenAI Agents を使用した React-like な実装

@@ -10,7 +10,7 @@ sort_key: "2025-11-01"
 update_dates: ["2025-11-01"]
 ---
 
-# Google Drive を Python で使う
+## Google Drive を Python で使う
 
 ## 事前準備
  - GCP で Google Drive API を有効化

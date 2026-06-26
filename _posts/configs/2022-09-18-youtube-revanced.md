@@ -10,8 +10,6 @@ sort_key: "2022-09-18"
 update_dates: ["2022-09-18"]
 ---
 
-# youtube revancedの使い方
-
 ## 概要
  - YouTubeのapkにいくつかのパッチを当てるソフトウェア
    - 不必要な機能の削除

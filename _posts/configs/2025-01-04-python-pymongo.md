@@ -10,7 +10,7 @@ sort_key: "2025-01-04"
 update_dates: ["2025-01-04"]
 ---
 
-# pythonでpymongoを使う
+## pythonでpymongoを使う
 
 ## インストール
 

@@ -11,8 +11,6 @@ sort_key: "2024-07-21"
 update_dates: ["2024-07-21"]
 ---
 
-# numpy digitizeの使い方
-
 ## 概要
  - pandasのcutと同じような機能を持つ関数
 

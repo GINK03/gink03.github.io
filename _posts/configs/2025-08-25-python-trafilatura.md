@@ -10,7 +10,7 @@ sort_key: "2025-08-25"
 update_dates: ["2025-08-25"]
 ---
 
-# python trafilatureの使い方
+## python trafilatureの使い方
 
 ## 概要
  - `trafilatura`は、ウェブページからテキストを抽出するためのPythonライブラリ

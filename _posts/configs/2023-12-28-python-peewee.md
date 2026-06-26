@@ -11,8 +11,6 @@ sort_key: "2023-12-28"
 update_dates: ["2023-12-28"]
 ---
 
-# python peeweeの使い方
-
 ## 概要
  - pythonでORMを使うためのライブラリ
  - 使い方はSQLAlchemyとほぼ同じ(より簡単)

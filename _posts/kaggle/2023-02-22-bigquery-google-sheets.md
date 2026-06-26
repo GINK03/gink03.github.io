@@ -10,8 +10,6 @@ sort_key: "2023-02-22"
 update_dates: ["2023-02-22"]
 ---
 
-# bigqueryでgoogle sheetsのデータを参照する方法
-
 ## 概要
  - google sheetsでまとめたデータをbigqueryで参照・使用できるように設定する方法
  - SQLでデータを参照する設定と、コマンドでデータを参照する設定がある　

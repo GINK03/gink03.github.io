@@ -11,7 +11,7 @@ sort_key: "2023-06-30"
 update_dates: ["2023-06-30"]
 ---
 
-# google apps scriptのlibraryの使い方
+## google apps scriptのlibraryの使い方
 
 ## 概要
  - 複数のgoogle sheetsで共通して利用するコードを管理する際にlibraryの機能を用いる

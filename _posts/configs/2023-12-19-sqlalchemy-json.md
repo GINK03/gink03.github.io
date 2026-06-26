@@ -10,8 +10,6 @@ sort_key: "2023-12-19"
 update_dates: ["2023-12-19"]
 ---
 
-# sqlalchemy+jsonの使い方
-
 ## 概要
  - sqliteでサポートされているjson1拡張を使うことができる
  - sqlalchemyで使用する際には、型がstrになっているようである

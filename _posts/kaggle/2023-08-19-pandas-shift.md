@@ -10,7 +10,7 @@ sort_key: "2023-08-19"
 update_dates: ["2023-08-19"]
 ---
 
-# pandasのshift関数の使い方
+## pandasのshift関数の使い方
 
 ## 概要
  - レコードをずらす操作

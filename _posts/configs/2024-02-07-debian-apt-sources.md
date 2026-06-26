@@ -10,8 +10,6 @@ sort_key: "2024-02-07"
 update_dates: ["2020-02-07"]
 ---
 
-# debianのapt sourcesについて
-
 ## 概要
  - debianではデフォルトではaptのレポジトリの設定が`main`のみになっている
  - ソフトウェアのライセンスに応じて `main`, `contrib`, `non-free`, `non-free-firmware` がある

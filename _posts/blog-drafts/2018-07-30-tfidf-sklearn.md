@@ -7,8 +7,6 @@ tags: [tfidf, sklearn]
 comments: false
 ---
 
-# tfidf
-
 手で計算しなくても便利なライブラリがある。
 
 ```python

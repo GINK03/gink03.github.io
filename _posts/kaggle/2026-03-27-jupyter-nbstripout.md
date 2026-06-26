@@ -9,7 +9,7 @@ sort_key: "2026-03-27"
 update_dates: ["2026-03-27"]
 ---
 
-# Jupyterでnbstripoutを使用
+## Jupyterでnbstripoutを使用
 
 ## 概要
  - `.ipynb`ファイルからgit管理に不要な出力を削除するためのツール

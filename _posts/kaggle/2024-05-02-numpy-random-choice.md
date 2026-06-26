@@ -11,8 +11,6 @@ sort_key: "2024-05-02"
 update_dates: ["2024-05-02"]
 ---
 
-# numpy random choiceの使い方
-
 ## 概要
  - `np.random.choice`は、配列からランダムに要素を選択する関数
  - seedを固定して再現性を持たせることができる

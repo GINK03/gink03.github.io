@@ -11,8 +11,6 @@ sort_key: "2021-02-17"
 update_dates: ["2021-02-17","2021-02-05","2021-02-03","2021-02-03"]
 ---
 
-# elasticsearchの使い方
-
 ## インストールと開始
  - インストールバイナリをダウンロードしてインストールする
    - [link](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html)

@@ -10,8 +10,6 @@ sort_key: "2025-10-22"
 update_dates: ["2025-10-22"]
 ---
 
-# AWS Dyneinの使用方法
-
 ## 概要
  - DyneinはAWS Labsが開発したDynamoDB用のCLIツール
  - DynamoDBのテーブルやデータ操作を簡単に行うことができる

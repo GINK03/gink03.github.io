@@ -10,7 +10,7 @@ sort_key: "2021-06-19"
 update_dates: ["2022-05-25", "2021-06-19"]
 ---
 
-# cloud loggingについて
+## cloud loggingについて
 
 ## 概要
  - gcpのloggingの仕組みの一つ

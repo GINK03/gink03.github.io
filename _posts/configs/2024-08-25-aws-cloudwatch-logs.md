@@ -11,8 +11,6 @@ sort_key: "2024-08-25"
 update_dates: ["2024-08-25"]
 ---
 
-# aws cloudwatch logsの概要と使い方
-
 ## 概要
  - aws cloudwatch logsは、awsのログ管理サービス
  - ログを収集・保存・検索・監視することができる

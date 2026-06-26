@@ -10,7 +10,7 @@ sort_key: "2023-02-06"
 update_dates: ["2023-02-06"]
 ---
 
-# seabornの箱ひげ図(boxplot)
+## seabornの箱ひげ図(boxplot)
 
 ## 概要
  - デフォルトの仕様で外れ値も描画するので`ax.set(ylim=~)`などで制限する

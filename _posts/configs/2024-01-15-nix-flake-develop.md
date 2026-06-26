@@ -10,8 +10,6 @@ sort_key: "2024-01-15"
 update_dates: ["2024-01-15"]
 ---
 
-# nix flake developについて
-
 ## 概要
  - nix flake developはnix flakeの一機能
  - nix-shellの代替

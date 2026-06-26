@@ -9,8 +9,6 @@ sort_key: "2024-09-20"
 update_dates: ["2024-09-20"]
 ---
 
-# jupyter aiの使い方
-
 ## 概要
  - JupyterLab/Jupyter NotebookでLLMを使う機能
    - GitHub Copilotのようにコード補完を行うわけではない

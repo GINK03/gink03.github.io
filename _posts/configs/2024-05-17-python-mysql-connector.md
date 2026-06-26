@@ -11,8 +11,6 @@ sort_key: "2024-05-17"
 update_dates: ["2024-05-17"]
 ---
 
-# python mysql connectorの使い方
-
 ## 概要
  - pure pythonでmysqlに接続するためのライブラリ
  - `ssl`を使って暗号化通信も可能なので、セキュリティを考慮したい場合にも使える

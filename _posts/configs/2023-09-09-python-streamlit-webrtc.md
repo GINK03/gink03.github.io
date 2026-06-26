@@ -10,7 +10,7 @@ sort_key: "2023-09-09"
 update_dates: ["2023-09-09"]
 ---
 
-# streamlitのwebrtcの概要と使い方
+## streamlitのwebrtcの概要と使い方
 
 ## 概要
  - streamlit上で画像/音声をリアルタイム処理しその結果を確認できるライブラリ

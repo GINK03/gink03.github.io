@@ -11,7 +11,6 @@ sort_key: "2021-04-28"
 update_dates: ["2021-04-28"]
 ---
 
-# 座標圧縮(coordinate compression)について
  - データサイエンスのrankに該当する概念
  - 二分探索を使うことで`O(n log n)`する
 

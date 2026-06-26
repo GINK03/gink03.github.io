@@ -10,7 +10,7 @@ sort_key: "2023-05-06"
 update_dates: ["2023-05-06"]
 ---
 
-# linuxのswapについて
+## linuxのswapについて
 
 ## 概要
  - macOSのswapのように使用できる

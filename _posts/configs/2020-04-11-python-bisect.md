@@ -10,7 +10,7 @@ sort_key: "2020-04-11"
 update_dates: ["2020-04-11"]
 ---
 
-# pythonのbisectの使い方
+## pythonのbisectの使い方
  - `binary search`をするライブラリ
  - これらを便利にラップしたものが、[/python-sortedcontainers/](/python-sortedcontainers/)
 

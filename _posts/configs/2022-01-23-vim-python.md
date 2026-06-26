@@ -11,8 +11,6 @@ sort_key: "2022-01-23"
 update_dates: ["2022-01-23"]
 ---
 
-# vimのpythonバインディングについて
-
 ## 概要
  - vim(neovim含む)はpythonとデフォルトでバインディング可能である
  - そこそこ早く動作するのでvimscriptやluaが書きにくい時は使用すると生産性が高い
@@ -62,9 +60,9 @@ vim.current.buffer
 
 ---
 
-# 具体例
+## 具体例
 
-## 次の特定の文字までカーソルをジャンプする関数
+### 次の特定の文字までカーソルをジャンプする関数
 
 ```vimscript
 function! GotoNextParenthes()

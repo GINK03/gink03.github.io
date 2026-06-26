@@ -10,8 +10,6 @@ sort_key: "2024-05-30"
 update_dates: ["2024-05-30"]
 ---
 
-# browserbench sppdometerの概要
-
 ## 概要
  - メジャーなJavaScriptフレームワークを使ったWebアプリケーションのパフォーマンスを測定するためのベンチマーク
  - 計測視点は以下

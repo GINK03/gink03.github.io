@@ -10,8 +10,6 @@ sort_key: "2025-12-27"
 update_dates: ["2025-12-27"]
 ---
 
-# instructor litellmの使い方
-
 ## 概要
  - instructorをlitellm経由で使う方法
  - モデルごとの差異を吸収しつつPydanticのスキーマで構造化出力を受け取れる

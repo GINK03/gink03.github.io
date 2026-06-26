@@ -10,7 +10,7 @@ sort_key: "2023-03-30"
 update_dates: ["2023-03-30"]
 ---
 
-# pandasのjson normalizeの使い方
+## pandasのjson normalizeの使い方
 
 ## 概要
  - ネストしたjsonをテーブルデータとして変換する関数

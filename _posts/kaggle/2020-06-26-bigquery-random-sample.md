@@ -10,8 +10,6 @@ sort_key: "2022-03-01"
 update_dates: []
 ---
 
-# bigquery random sampleの方法
-
 ## 指定行数をランダムサンプルする
 
 ```sql

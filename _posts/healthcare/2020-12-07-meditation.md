@@ -10,7 +10,7 @@ sort_key: "2021-01-27"
 update_dates: ["2021-01-27"]
 ---
 
-# 瞑想と科学的な根拠と効用
+## 瞑想と科学的な根拠と効用
 
 ## 科学的エビデンス
  - [*meditation-in-depth*](https://www.nccih.nih.gov/health/meditation-in-depth)

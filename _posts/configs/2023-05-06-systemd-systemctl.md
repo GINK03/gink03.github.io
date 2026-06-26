@@ -10,8 +10,6 @@ sort_key: "2023-05-06"
 update_dates: ["2023-05-06"]
 ---
 
-# systemctlの使い方
-
 ## 概要
  - systemctlはシステム関連の様々な操作を行うことができる
  - systemdの操作もsystemctlの役割

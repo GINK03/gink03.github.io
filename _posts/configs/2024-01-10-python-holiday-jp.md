@@ -11,8 +11,6 @@ sort_key: "2024-01-10"
 update_dates: ["2024-01-10"]
 ---
 
-# python japan holiday(holiday_jp)の使い方
-
 ## 概要
  - pythonで日本の祝日を取得するライブラリ
  - [holiday-jp](https://github.com/holiday-jp/holiday_jp/blob/master/holidays.yml)を元にしている

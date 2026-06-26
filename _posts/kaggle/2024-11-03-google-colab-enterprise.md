@@ -10,8 +10,6 @@ sort_key: "2024-11-03"
 update_dates: ["2024-11-03"]
 ---
 
-# google colab enterpriseの使い方
-
 ## 概要
  - google cloudの機能のvertex aiの中にgoogle colab enterpriseがある
  - terminalも使用可能なので任意のソフトウェアをインストール可能

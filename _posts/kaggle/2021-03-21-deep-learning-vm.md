@@ -11,8 +11,6 @@ sort_key: "2021-03-21"
 update_dates: ["2021-03-21"]
 ---
 
-# ai platform deep learning vmについて
-
 ## 概要
  - gcpのai platformで利用できるvmイメージ
 

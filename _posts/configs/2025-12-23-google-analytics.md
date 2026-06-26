@@ -11,8 +11,6 @@ sort_key: "2025-12-23"
 update_dates: ["2025-12-23"]
 ---
 
-# Google Analyticsの使い方と活用法
-
 ## 概要
  - GA4のイベントデータはBigQueryにエクスポート可能
  - URLパラメータを活用してキャンペーン効果測定が可能

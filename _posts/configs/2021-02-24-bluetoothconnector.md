@@ -10,8 +10,6 @@ sort_key: "2021-02-24"
 update_dates: ["2021-02-24"]
 ---
 
-# bluetoothconnectorの使い方
-
 ## 概要
 bluetoothconnectorはbluetoothへの接続をコマンドで行えるものである  
 

@@ -10,7 +10,7 @@ sort_key: "2023-02-16"
 update_dates: ["2023-02-16"]
 ---
 
-# pandasのmulti level columnsの使い方
+## pandasのmulti level columnsの使い方
 
 ## 概要
  - aggregateした場合、`transpose` した場合などにカラム名がmulti levelになることがある

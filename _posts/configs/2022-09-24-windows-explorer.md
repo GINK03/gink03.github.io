@@ -10,8 +10,6 @@ sort_key: "2022-09-24"
 update_dates: ["2022-09-24"]
 ---
 
-# windows explorerの使い方
-
 ## 概要
  - windowsのファイルを移動するソフトウェア
 

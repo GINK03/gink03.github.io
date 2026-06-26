@@ -10,8 +10,6 @@ sort_key: "2024-01-09"
 update_dates: ["2020-01-09"]
 ---
 
-# debianのインストール
-
 ## debianのインストールメディアの入手方法
  - [Debian の CD](https://www.debian.org/CD/)からBitTorrentでダウンロードする
 

@@ -10,8 +10,6 @@ sort_key: "2025-08-13"
 update_dates: ["2025-08-13"]
 ---
 
-# jina-readerの使い方
-
 ## 概要
  - 深層学習ベースのhtml -> markdown変換ツール
  - 一部無料(apiキーなし)でも利用可能

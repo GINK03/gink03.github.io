@@ -10,7 +10,7 @@ sort_key: "2023-03-03"
 update_dates: ["2023-03-03"]
 ---
 
-# pandasのcategoricalな変数の扱い方
+## pandasのcategoricalな変数の扱い方
 
 ## 概要
  - pandasにはカテゴリ型が存在する

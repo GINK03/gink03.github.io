@@ -10,7 +10,7 @@ sort_key: "2024-07-13"
 update_dates: ["2024-07-13"]
 ---
 
-# pythonでgeminiの使い方
+## pythonでgeminiの使い方
 
 ## 概要
  - geminiの使い方をpythonでの例で説明する

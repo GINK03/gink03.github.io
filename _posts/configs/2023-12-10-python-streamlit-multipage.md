@@ -10,7 +10,7 @@ sort_key: "2023-12-10"
 update_dates: ["2023-12-10", "2026-04-26"]
 ---
 
-# streamlitのmultipageの概要と使い方
+## streamlitのmultipageの概要と使い方
 
 ## 概要
  - streamlitは基本はsingle pageで動作するが、multipageで動作させることもできる

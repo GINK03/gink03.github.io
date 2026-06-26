@@ -10,8 +10,6 @@ sort_key: "2025-07-20"
 update_dates: ["2025-07-20"]
 ---
 
-# AWS CLI での Lambda@Edge の使い方
-
 ## 概要
  - lambda@edgeはCloudFrontのエッジロケーションで実行されるlambda関数
  - `us-east-1`でlambda関数を作成して、CloudFrontのディストリビューションに関連付ける必要がある

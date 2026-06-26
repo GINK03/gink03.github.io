@@ -10,8 +10,6 @@ sort_key: "2022-11-16"
 update_dates: ["2022-11-16"]
 ---
 
-# python pprintの使い方
-
 ## 概要
  - pythonのpritty print
    - 標準出力に出力時に整形して出力する

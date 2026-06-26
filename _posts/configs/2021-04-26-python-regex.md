@@ -10,8 +10,6 @@ sort_key: "2022-01-19"
 update_dates: ["2022-01-19","2021-10-20","2021-08-06","2021-04-26"]
 ---
 
-# pythonのregex
-
 ## 概要
  - Alternative regular expression module, to replace re.
  - pythonのライブラリでJavaなどでサポートされている高機能な正規表現が使える

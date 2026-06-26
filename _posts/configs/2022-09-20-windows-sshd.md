@@ -10,8 +10,6 @@ sort_key: "2022-09-20"
 update_dates: ["2022-09-20"]
 ---
 
-# windows sshdの使い方
-
 ## 概要
  - windowsにsshでアクセスするにはsshdのセットアップが必要
  - 公開鍵暗号でアクセスもできる

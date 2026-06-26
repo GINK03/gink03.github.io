@@ -10,8 +10,6 @@ sort_key: "2021-11-25"
 update_dates: ["2021-11-25","2021-11-23","2020-05-22"]
 ---
 
-# systemd-resolved
-
 ## 概要
  - Ubuntu 20.04からDNSの設定がこのサービス経由で設定される
  - 一時的には`/etc/resolv.conf`を直接変更することを許容しているが、恒久的に変更するには`/etc/systemd/resolved.conf`を変更する

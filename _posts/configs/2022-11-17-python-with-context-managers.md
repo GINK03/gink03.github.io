@@ -10,7 +10,7 @@ sort_key: "2022-11-17"
 update_dates: ["2022-11-17"]
 ---
 
-# pythonのcontext managerの使い方
+## pythonのcontext managerの使い方
 
 ## 概要
  - `with`ステートメントで自動でリソースを開放するを行える機能

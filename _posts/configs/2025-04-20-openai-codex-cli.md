@@ -10,8 +10,6 @@ sort_key: "2025-04-20"
 update_dates: ["2025-04-20"]
 ---
 
-# openai codex cliの使い方
-
 ## 概要
  - openaiが開発したterminalで動作するコーディングサポートエージェント
  - 2023年時点のcodex(コード補完AI)とは別物

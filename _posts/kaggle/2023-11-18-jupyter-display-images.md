@@ -9,8 +9,6 @@ sort_key: "2023-11-18"
 update_dates: ["2023-11-18"]
 ---
 
-# jupyter display images
-
 ## 概要
  - jupyterで画像を表示する方法
 

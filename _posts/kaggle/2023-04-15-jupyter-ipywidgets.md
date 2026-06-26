@@ -10,8 +10,6 @@ sort_key: "2023-04-15"
 update_dates: ["2023-04-15"]
 ---
 
-# jupyter ipywidgetsの使い方
-
 ## 概要 
  - jupyterでGUI機能を追加するもの
  - 最終的な提供物に対してipywidgetsを設定してわかりやすく提供することができる

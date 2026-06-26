@@ -7,8 +7,6 @@ tags: [python, rpc]
 comments: false
 ---
 
-# Simplest Python RPC
-
 ## 目次
  - 今のPythonのRPCは種類が多すぎる
  - 標準ライブラリで実行できる価値

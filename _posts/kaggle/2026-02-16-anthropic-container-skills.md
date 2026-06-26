@@ -10,7 +10,7 @@ sort_key: "2026-02-16"
 update_dates: ["2026-02-16"]
 ---
 
-# Container Skillsとは
+## Container Skillsとは
 
  - Container Skillsは、AnthropicがClaude API向けに提供する機能
  - 特定のタスク（PowerPoint、Excel、Word、PDFの作成・編集など）をサーバサイドの隔離されたコンテナ環境で実行する

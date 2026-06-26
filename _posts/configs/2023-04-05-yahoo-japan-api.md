@@ -11,8 +11,6 @@ sort_key: "2023-04-05"
 update_dates: ["2023-04-05"]
 ---
 
-# yahoo japan apiの使い方
-
 ## 概要
  - Yahoo Japanが提供するAPI
  - よく使うところでは形態素解析のAPIなど

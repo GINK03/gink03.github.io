@@ -8,7 +8,7 @@ tag: ["novel", "recommend"]
 comments: false
 ---
 
-# Tweetの #名刺代わりの小説10選 から機械学習を使わずレコメンド
+## Tweetの #名刺代わりの小説10選 から機械学習を使わずレコメンド
 
 ## 導入・目的
 

@@ -10,8 +10,6 @@ sort_key: "2022-12-14"
 update_dates: ["2022-12-14"]
 ---
 
-# 2Dのunion-findについて
-
 ## 概要
  - 2Dで考える際に、union-findのparentsのlist構造はflattenしてアクセスする必要があり、この点を気をつければ通常のunion-findとして扱える
  

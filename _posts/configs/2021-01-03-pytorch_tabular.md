@@ -10,7 +10,7 @@ update_dates: ["2021-01-27","2021-01-06"]
 ---
 
 
-# pytorchでtabularデータを学習&推論する
+## pytorchでtabularデータを学習&推論する
  - deep learningでtabularデータを扱う
 
 ## 参考

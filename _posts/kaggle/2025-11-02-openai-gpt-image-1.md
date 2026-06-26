@@ -10,8 +10,6 @@ sort_key: "2025-11-02"
 update_dates: ["2025-11-02"]
 ---
 
-# openai gpt-image-1の使い方
-
 ## 概要
  - OpenAIの画像生成モデル「gpt-image-1」の使い方
  - 指定できる画像サイズ

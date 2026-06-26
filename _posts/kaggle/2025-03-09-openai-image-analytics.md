@@ -10,8 +10,6 @@ sort_key: "2025-03-09"
 update_dates: ["2025-03-09"]
 ---
 
-# openai image analytics
-
 
 ## 概要
  - openaiを用いた画像解析の方法について記載

@@ -11,7 +11,6 @@ sort_key: "2021-03-21"
 update_dates: ["2021-03-21"]
 ---
 
-# ai platform algorithmsについて
  - ***線形学習者***
  - ***ワイド＆ディープ***
    - TensorFlow Estimatorによる実装

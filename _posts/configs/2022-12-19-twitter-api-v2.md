@@ -10,8 +10,6 @@ sort_key: "2022-12-19"
 update_dates: ["2022-12-19"]
 ---
 
-# twitter API v2の概要と使い方
-
 ## 概要
  - 2022年から新しく刷新されたtwitter API
  - 旧APIと認証方式が異なり`bear-token`から認証できる

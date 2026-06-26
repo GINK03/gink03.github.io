@@ -10,7 +10,7 @@ sort_key: "2025-11-01"
 update_dates: ["2025-11-01"]
 ---
 
-# zsh のキーバインド
+## zsh のキーバインド
 
 ## よく使う設定
  - `"^[^?"`: backward-kill-word

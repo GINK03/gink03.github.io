@@ -11,7 +11,6 @@ sort_key: "2021-03-21"
 update_dates: ["2021-03-21"]
 ---
 
-# ai platform data labeling serviceについて
  - gcpの機能の一つで、ラベリングを行うサービス
  - [docs](https://cloud.google.com/ai-platform/data-labeling/docs)
  - 対応する形式

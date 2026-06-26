@@ -10,8 +10,6 @@ sort_key: "2025-02-15"
 update_dates: ["2025-02-15"]
 ---
 
-# bigquery safe cast
-
 ## 概要
  - bigqueryでのcastを安全に行う方法
  - 例外が発生するような場合にはnullを返す

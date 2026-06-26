@@ -10,7 +10,7 @@ sort_key: "2022-03-22"
 update_dates: ["2022-03-22"]
 ---
 
-# pytorchの基本的な使い方"
+## pytorchの基本的な使い方"
 
 ## 概要
  - pytorchの基本的な文法・演算方法

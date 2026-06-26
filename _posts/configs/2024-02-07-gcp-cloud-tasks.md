@@ -10,8 +10,6 @@ sort_key: "2024-02-07"
 update_dates: ["2024-02-07"]
 ---
 
-# gcp cloud tasksの概要
-
 ## 概要
  - gcpのタスクキューサービス
  - self-hostedのrabbitmqやredisのようなもの

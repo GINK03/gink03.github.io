@@ -9,8 +9,6 @@ tag: ["日本の会計年度", "fiscal year", "pandas", "python", "Google Play S
 comments: false
 ---
 
-# japan fiscal year(日本の会計年度)について
-
 ## 会計年度
  - 4月1日から翌年3月31日までの期間
 

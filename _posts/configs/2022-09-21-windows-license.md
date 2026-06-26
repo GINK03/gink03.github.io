@@ -10,7 +10,7 @@ sort_key: "2022-09-21"
 update_dates: ["2022-09-21"]
 ---
 
-# windows licenseのまとめ
+## windows licenseのまとめ
 
 ## 概要
  - EUでキーのリセールが認めれてから、Windowsが安く購入できるようになった

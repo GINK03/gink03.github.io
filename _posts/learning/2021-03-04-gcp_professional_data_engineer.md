@@ -10,8 +10,6 @@ sort_key: "2021-03-18"
 update_dates: ["2021-03-18","2021-03-14","2021-03-10","2021-03-10","2021-03-10","2021-03-06"]
 ---
 
-# google cloud professional data engineer試験
-
 ## 出題範囲
  - [link](https://cloud.google.com/certification/guides/data-engineer)
 

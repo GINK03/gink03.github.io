@@ -10,8 +10,6 @@ sort_key: "2022-03-01"
 update_dates: ["2022-03-01"]
 ---
 
-# bigquery shuffle, random sampleの方法
-
 ## データをシャッフルする
 
 ```sql

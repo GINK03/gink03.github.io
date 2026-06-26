@@ -11,7 +11,7 @@ sort_key: "2023-12-11"
 update_dates: ["2023-12-11"]
 ---
 
-# gitの設定
+## gitの設定
 
 ## 概要
  - git configコマンドまたは`~/.gitconfig`ファイルによって設定を行う

@@ -10,8 +10,6 @@ config: true
 comments: false
 ---
 
-# minio
-
 ## 概要
  - S3互換のバケットの管理システムでオンプレで動作させられるソフトウェア
  - [/mountainduck/](/mountainduck/)を利用することでファイルシステムとしてマウントでき、プライベートクラウドとして運用が可能である

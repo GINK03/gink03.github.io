@@ -11,8 +11,6 @@ sort_key: "2024-08-18"
 update_dates: ["2024-08-18"]
 ---
 
-# numpy random shuffleとpermutationの使い方
-
 ## 概要
  - `shuffle`と`permutation`は、配列をランダムに並び替える関数
    - `shuffle`は、元の配列を直接変更する

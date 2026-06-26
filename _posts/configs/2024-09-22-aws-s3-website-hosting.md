@@ -10,7 +10,7 @@ update_dates: ["2024-09-22"]
 comments: false
 ---
 
-# AWS s3でwebsiteのhostingの使い方
+## AWS s3でwebsiteのhostingの使い方
 
 ## 概要
  - s3の設定を変更することで、s3でwebsiteをhostingすることができる

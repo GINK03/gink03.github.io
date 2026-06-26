@@ -10,8 +10,6 @@ sort_key: "2025-06-27"
 update_dates: ["2025-06-27"]
 ---
 
-# gemini cliの使い方
-
 ## 概要
  - gemini cliはターミナルで使用可能なgemini
  - 操作感はcodex cliやclaude codeと近い

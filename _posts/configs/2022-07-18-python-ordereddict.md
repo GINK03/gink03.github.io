@@ -10,8 +10,6 @@ sort_key: "2022-07-18"
 update_dates: ["2022-07-18"]
 ---
 
-# Python OrderedDictの使い方
-
 ## 概要
  - C++のsetのように二分木のような構造で実装されたdict
  - 順序を保存する

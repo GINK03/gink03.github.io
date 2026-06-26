@@ -10,8 +10,6 @@ update_dates: ["2022-09-16"]
 comments: false
 ---
 
-# pandas sampleのチートシート
-
 ## 概要
  - データのサンプリング
 

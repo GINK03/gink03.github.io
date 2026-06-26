@@ -10,8 +10,6 @@ sort_key: "2023-06-09"
 update_dates: ["2023-06-09"]
 ---
 
-# json web tokens(jwt)について
-
 ## 概要
  - header, payload, signatureの情報をそれぞれbase64でエンコードしたものを`.(ピリオド)`で結合したもの
    - header

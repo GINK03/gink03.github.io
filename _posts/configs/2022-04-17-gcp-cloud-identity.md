@@ -11,8 +11,6 @@ sort_key: "2022-04-17"
 update_dates: ["2022-04-17"]
 ---
 
-# gcp cloud identityの使い方
-
 ## 概要
  - IDaaS(Identity as a Service)の一種で、oktaのようなサービス
  - メールとカレンダーが無い無料版と、制限がない有料版がある

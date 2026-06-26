@@ -10,8 +10,6 @@ sort_key: "2022-04-08"
 update_dates: ["2022-04-08"]
 ---
 
-# gcp translation apiについて
-
 ## できること
  - 任意の言語から他の言語に翻訳する
  - Basic版と発展版がある

@@ -10,8 +10,6 @@ sort_key: "2024-01-15"
 update_dates: ["2024-01-15"]
 ---
 
-# nix profileについて
-
 ## 概要
  - [/nix-env/](/nix-env/)を整理したもの
 

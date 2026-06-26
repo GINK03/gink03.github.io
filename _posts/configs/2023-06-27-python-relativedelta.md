@@ -10,7 +10,7 @@ sort_key: "2023-06-27"
 update_dates: ["2023-06-27"]
 ---
 
-# pythonのrelativedelta(dateutil)の使い方
+## pythonのrelativedelta(dateutil)の使い方
 
 ## 概要
  - dateutilという外部パッケージに、relativedeltaという機能がある

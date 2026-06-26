@@ -10,7 +10,6 @@ sort_key: "2021-04-26"
 update_dates: ["2021-04-26"]
 ---
 
-# wordcloud
  - 便利なライブラリ[wordcloud](https://amueller.github.io/word_cloud/index.html)が用意されている
 
 ## ギャラリー

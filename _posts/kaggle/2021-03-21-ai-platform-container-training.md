@@ -11,7 +11,6 @@ sort_key: "2021-03-21"
 update_dates: ["2021-03-21"]
 ---
 
-# ai platform container trainingについて
  - [docs](https://cloud.google.com/ai-platform/training/docs/using-containers)
  - 分散学習をする際、コンテナの利用が推奨されることがある
    - 三種類のコンテナからなる

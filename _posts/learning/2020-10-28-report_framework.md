@@ -10,7 +10,7 @@ sort_key: "2021-01-27"
 update_dates: ["2021-01-27"]
 ---
 
-# レポートのフレームワーク
+## レポートのフレームワーク
 
 ## usable links
  - [adelaide.edu.au](https://www.adelaide.edu.au/writingcentre/sites/default/files/docs/learningguide-writingaresearchreport.pdf)

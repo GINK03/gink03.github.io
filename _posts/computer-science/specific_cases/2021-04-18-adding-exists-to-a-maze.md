@@ -10,7 +10,6 @@ tag: ["algorithm", "graph", "data structure", "データ構造"]
 comments: false
 ---
 
-# [specific]Adding Exits to a Maze
  - [dfs](/dfs)で解くことが可能な例
 
 ## 問題

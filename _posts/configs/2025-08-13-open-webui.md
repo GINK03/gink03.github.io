@@ -10,8 +10,6 @@ sort_key: "2025-08-13"
 update_dates: ["2025-08-13"]
 ---
 
-# open-webuiの使い方
-
 ## 概要
 - ローカルLLMや自前のLLMサービスのAPIキーを入力すること (BYOK) でLLMを利用できるサービス
 - OpenRouterを利用できるため、様々なLLMを利用できる

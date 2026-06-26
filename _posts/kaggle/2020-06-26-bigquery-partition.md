@@ -8,7 +8,7 @@ kaggle: true
 comments: false
 ---
 
-# BigQueryのpatitionについて
+## BigQueryのpatitionについて
 
 ## 概要
  - partitionを分割することでクエリ時にスキャンする範囲を限定し、金銭的な負荷を減らす

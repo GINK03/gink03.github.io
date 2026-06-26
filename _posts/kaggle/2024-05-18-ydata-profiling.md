@@ -11,8 +11,6 @@ sort_key: "2024-05-18"
 update_dates: ["2024-05-18"]
 ---
 
-# ydata-profilingの使い方
-
 ## 概要
  - `ydata-profiling`はデータの概要を確認するためのライブラリ
  - 連続値では以下の情報を出力

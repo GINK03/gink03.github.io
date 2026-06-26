@@ -12,8 +12,6 @@ update_dates: ["2022-10-12"]
 ---
 
 
-# lightgbm callbacksのチートシート
-
 ## 概要
  - 以下の機能について、callbackで関数を与える必要がある
    - early stopping

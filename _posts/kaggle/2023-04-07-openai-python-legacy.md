@@ -10,7 +10,7 @@ sort_key: "2023-04-07"
 update_dates: ["2023-04-07"]
 ---
 
-# openaiのpythonの使い方
+## openaiのpythonの使い方
 
 ## 概要
  - pythonでGPTで生成する例

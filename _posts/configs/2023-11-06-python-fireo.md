@@ -10,7 +10,7 @@ sort_key: "2023-11-06"
 update_dates: ["2023-11-06"]
 ---
 
-# pythonのfireoの概要と使い方
+## pythonのfireoの概要と使い方
 
 ## 概要
  - [gcpのfirestore](/gcp-firestore/)をpythonから操作するためのライブラリ(ORM)

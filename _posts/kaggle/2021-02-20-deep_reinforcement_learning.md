@@ -11,7 +11,7 @@ sort_key: "2021-02-20"
 update_dates: ["2021-02-20","2021-02-20"]
 ---
 
-# deep reinforcement learningの論文
+## deep reinforcement learningの論文
  - deel Q learningの初めてに近い論文を読んだのでまとめる
 
 ## 前提と式  

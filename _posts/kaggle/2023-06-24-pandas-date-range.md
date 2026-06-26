@@ -10,7 +10,7 @@ sort_key: "2023-06-24"
 update_dates: ["2023-06-24"]
 ---
 
-# pandasのdate_rangeの変換
+## pandasのdate_rangeの変換
 
 ## 概要
  - `start`と`end`の情報を与えて、一定の粒度の時間の値を作る関数

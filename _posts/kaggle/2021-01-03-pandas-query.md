@@ -10,8 +10,6 @@ update_dates: ["2022-05-30"]
 comments: false
 ---
 
-# pandas queryのチートシート
-
 ## 概要
  - 複雑なフィルタを簡単に記す機能
  - 文字列を引数にとってSQL likeに処理することができる

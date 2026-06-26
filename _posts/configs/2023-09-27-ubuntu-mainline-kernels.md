@@ -10,7 +10,7 @@ sort_key: "2023-09-27"
 update_dates: ["2023-09-27"]
 ---
 
-# ubuntuのmainline kernelsの使い方
+## ubuntuのmainline kernelsの使い方
 
 ## 概要
  - [Ubuntu Mainline Kernel PPA](https://kernel.ubuntu.com/~kernel-ppa/mainline/)から最新のカーネルをdebパッケージでインストールできる

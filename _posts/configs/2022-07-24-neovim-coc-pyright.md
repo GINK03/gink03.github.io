@@ -10,8 +10,6 @@ sort_key: "2022-05-19"
 update_dates: ["2022-05-19","2022-02-02","2022-01-25","2022-01-20"]
 ---
 
-# coc-pyrightの使い方
-
 ## 概要
  - microsoftのvscodeのpython用のlanguage serverのpyrightをcoc-neovimに移植したもの
  - cocのlanguage serverは小さいプロジェクトが散在している状態なので、いつサポートが切れるかわかない

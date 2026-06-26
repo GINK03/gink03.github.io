@@ -10,7 +10,7 @@ sort_key: "2022-10-02"
 update_dates: ["2022-10-02"]
 ---
 
-# windowsでnvidia製品を使う
+## windowsでnvidia製品を使う
 
 ## 概要
  - ゲーム・クリエイティブ用にnvidia GPUを使うことがある

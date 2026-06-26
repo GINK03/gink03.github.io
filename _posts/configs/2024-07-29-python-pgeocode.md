@@ -10,8 +10,6 @@ sort_key: "2024-07-29"
 update_dates: ["2024-07-29"]
 ---
 
-# python pgeocodeの使い方
-
 ## 概要
  - pythonで郵便番号(zip code)から緯度経度を取得するためのライブラリ
  - 世界各国の郵便番号に対応している

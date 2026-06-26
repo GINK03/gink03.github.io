@@ -7,8 +7,6 @@ tags: ["metacritic", "サーベイランス", "statistics"]
 comments: false
 ---
 
-# metacriticの妥当性の検討を行った論文のサーベイ
-
 ## メタスコア
  - `metacritic`が得時にレビュワーごとに割り当てた重みによる加重平均によって決定される[1]
  - `metacritic`はレビュワーに割り当てた重みを公表しないと決めている[2] 

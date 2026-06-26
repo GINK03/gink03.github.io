@@ -11,8 +11,6 @@ sort_key: "2022-05-17"
 update_dates: ["2022-05-17"]
 ---
 
-# pythonでのxmlの扱い方
-
 ## 概要
  - 小さいxmlデータであれば、`BeautifulSoup`などで簡単にパースできる
  - wikipediaなどxmlでダンプされた巨大なデータがあり、パースには独自のノウハウが要求される

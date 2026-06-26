@@ -11,8 +11,6 @@ sort_key: "2022-05-17"
 update_dates: ["2022-05-17"]
 ---
 
-# pythonでのwarningsの扱い方
-
 ## 概要
  - `deprecated`になった機能や望ましくない使い方をするとwarningsが出ることがある
  - jupyterで出ると面倒なことがあり、コントロールが必要なことがある

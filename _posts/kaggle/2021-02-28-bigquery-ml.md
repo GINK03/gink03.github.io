@@ -11,8 +11,6 @@ sort_key: "2021-02-28"
 update_dates: ["2021-02-28"]
 ---
 
-# bigquery mlについて
-
 ## モデルの作り方
 
 ```sql

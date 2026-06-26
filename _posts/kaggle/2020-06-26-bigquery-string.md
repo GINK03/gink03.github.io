@@ -10,7 +10,7 @@ sort_key: "2022-09-09"
 update_dates: ["2022-09-09"]
 ---
 
-# bigqueryの文字列関連のチートシート
+## bigqueryの文字列関連のチートシート
 
 ## LOWER
 

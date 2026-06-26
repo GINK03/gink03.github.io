@@ -11,7 +11,7 @@ sort_key: "2023-03-16"
 update_dates: ["2023-03-16"]
 ---
 
-# microsoft onenodeについて
+## microsoft onenodeについて
 
 ## 概要
  - マイクロソフト版apple notes

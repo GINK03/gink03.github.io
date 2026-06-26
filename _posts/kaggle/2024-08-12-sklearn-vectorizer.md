@@ -10,8 +10,6 @@ sort_key: "2024-08-12"
 update_dates: ["2024-08-12"]
 ---
 
-# sklearn vectorizerの使い方
-
 ## 概要
  - tf-idf, count, hashなどのvectorizerを提供
  - transformメソッドでテキストデータをスパース行列に変換

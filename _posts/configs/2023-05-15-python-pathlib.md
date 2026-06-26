@@ -10,7 +10,7 @@ sort_key: "2023-05-15"
 update_dates: ["2023-05-15"]
 ---
 
-# pythonのpathlibの使い方
+## pythonのpathlibの使い方
 
 ## 概要
   - 低レイヤーであったファイルシステムをラップしたもの

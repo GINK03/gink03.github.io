@@ -10,8 +10,6 @@ update_dates: ["2022-06-19"]
 comments: false
 ---
 
-# Sentence Transformersの使い方
-
 ## 概要
  - (BERTなどで)文章をベクトル化する
  - 各種言語でのプリトレンドモデルが公開されており、日本語のモデルもある

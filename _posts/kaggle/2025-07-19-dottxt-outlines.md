@@ -10,7 +10,7 @@ sort_key: "2025-07-19"
 update_dates: ["2025-07-19"]
 ---
 
-# outliensの使い方
+## outliensの使い方
 
 ## 概要
  - outlinesはLLMを用い構造化を低失敗確率で行うためのツール

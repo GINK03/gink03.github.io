@@ -11,8 +11,6 @@ sort_key: "2022-04-24"
 update_dates: ["2022-04-24"]
 ---
 
-# Microsoft OneDriveの使い方
-
 ## 概要
  - Microsoft社が提供するクライドドライブ
  - 昔のdropboxのようなUI

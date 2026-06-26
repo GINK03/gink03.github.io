@@ -10,8 +10,6 @@ sort_key: "2022-10-04"
 update_dates: ["2022-10-04"]
 ---
 
-# cloudflare wranglerの使い方
-
 ## 概要
  - GCPのgcloud, AWSのawsコマンドに相当するツール
  - npmでインストールできる

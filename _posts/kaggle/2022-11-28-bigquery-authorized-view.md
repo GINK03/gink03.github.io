@@ -10,8 +10,6 @@ sort_key: "2022-11-28"
 update_dates: ["2022-11-28"]
 ---
 
-# bigquery authorized viewの使い方
-
 ## 概要
  - 権限を設定できるビュー
  - ユースケース

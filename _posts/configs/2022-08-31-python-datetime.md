@@ -10,8 +10,6 @@ sort_key: "2022-08-31"
 update_dates: ["2022-08-31"]
 ---
 
-# python datetimeの使い方
-
 ## 概要
  - [ISO8601(RFC3339)](https://qiita.com/estaro/items/2b7074839d2a5e883dc1)という企画がある
    - UTCの例 

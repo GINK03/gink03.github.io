@@ -10,7 +10,7 @@ sort_key: "2023-11-17"
 update_dates: ["2023-11-17"]
 ---
 
-# pythonのfastapiの概要と使い方
+## pythonのfastapiの概要と使い方
 
 ## 概要
  - flaskのようなpythonのAPI専用のフレームワーク

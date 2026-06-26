@@ -11,7 +11,7 @@ sort_key: "2021-05-24"
 update_dates: ["2021-05-24","2021-05-22"]
 ---
 
-# factorial, permutaion, combinationについて
+## factorial, permutaion, combinationについて
 MODを含む計算の時、標準関数では遅いため独自に実装する方針が有効である  
 
 ## python

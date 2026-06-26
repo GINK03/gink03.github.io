@@ -11,7 +11,7 @@ sort_key: "2021-03-21"
 update_dates: ["2021-03-21"]
 ---
 
-# 説明可能なAIについて
+## 説明可能なAIについて
  - gcpの機能の一つ
  - [docs](https://cloud.google.com/ai-platform/prediction/docs//overview)
 

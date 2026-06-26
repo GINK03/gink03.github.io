@@ -10,8 +10,6 @@ sort_key: "2025-03-25"
 update_dates: ["2025-03-25"]
 ---
 
-# openai tts
-
 
 ## 概要
  - openaiにはtext-to-speechのモデルがある

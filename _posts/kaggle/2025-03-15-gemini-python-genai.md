@@ -10,7 +10,7 @@ sort_key: "2025-03-15"
 update_dates: ["2025-03-15"]
 ---
 
-# pythonでgenaiの使い方
+## pythonでgenaiの使い方
 
 ## 概要
 - `google-generativeai` とは別のライブラリ

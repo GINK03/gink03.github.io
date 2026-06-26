@@ -10,7 +10,7 @@ sort_key: "2023-12-08"
 update_dates: ["2023-12-08"]
 ---
 
-# streamlitのdataframeの表示方法
+## streamlitのdataframeの表示方法
 
 ## 概要
  - streamlitでdataframeを表示するには２つの方法がある

@@ -10,7 +10,7 @@ sort_key: "2023-12-16"
 update_dates: ["2023-12-16"]
 ---
 
-# linuxのsudoについて
+## linuxのsudoについて
 
 ## 概要
  - sudoはsuper user doの略

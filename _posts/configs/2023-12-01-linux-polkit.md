@@ -10,7 +10,7 @@ sort_key: "2023-12-01"
 update_dates: ["2023-12-01"]
 ---
 
-# linuxのpolkitについて
+## linuxのpolkitについて
 
 ## 概要
  - polkitはunix系のOSで非特権ユーザが部分的に特権を行うためのフレームワーク

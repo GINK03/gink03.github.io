@@ -10,7 +10,7 @@ sort_key: "2025-11-24"
 update_dates: ["2025-11-24"]
 ---
 
-# pythonでasyncioを使うときの全体像
+## pythonでasyncioを使うときの全体像
 
 ## 概要
  - asyncioはasyncとawaitでI/Oバウンド処理を並行に動かすための仕組み
@@ -148,9 +148,9 @@ asyncio.run(main())
 ```
 
 
-# 並列数を制限したいときの書き方
+## 並列数を制限したいときの書き方
 
-## Semaphoreで同時実行数を制限する
+### Semaphoreで同時実行数を制限する
 
 ```python
 import asyncio
@@ -174,7 +174,7 @@ asyncio.run(main())
  - async with semaphoreブロックを抜けると鍵が返却され次のタスクが動き出す
 
 
-## TaskGroupとSemaphoreを組み合わせる
+### TaskGroupとSemaphoreを組み合わせる
 
  - TaskGroup自体には並列数を制限するオプションはない
  - ライフサイクル管理はTaskGroup並列数制限はSemaphoreという役割分担

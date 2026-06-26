@@ -9,8 +9,6 @@ sort_key: "2025-09-15-jupyter-jupytext"
 update_dates: ["2025-09-15"]
 ---
 
-# jupyter jupytextの概要と使い方
-
 ## 概要
  - Jupytextは、Jupyter Notebook（`.ipynb`）ファイルと、プレーンテキスト形式のファイル（`.py`や`.md`など）を双方向に同期するためのツール
  - Jupyter LabでJupytextを使用してファイルを同期させると、ノートブックを更新するたびに、ペアリングされた`.py`や`.md`ファイルも自動的に更新される

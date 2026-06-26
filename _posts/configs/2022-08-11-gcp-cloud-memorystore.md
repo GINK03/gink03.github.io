@@ -10,8 +10,6 @@ sort_key: "2022-08-11"
 update_dates: ["2022-08-11"]
 ---
 
-# gcp cloud memorystoreの使い方
-
 ## 概要
  - マネージドの`redis`または`memcached`
  - デフォルトでアクセスが同じ管理グループに限定されるのでセキュリティ的に安心

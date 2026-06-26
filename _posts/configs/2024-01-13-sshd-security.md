@@ -11,7 +11,7 @@ sort_key: "2024-01-13"
 update_dates: ["2020-01-13"]
 ---
 
-# sshdのsecurityについて
+## sshdのsecurityについて
 
 ## 概要
  - debianのsshdはデフォルトではrootログインが許可、パスワード認証が許可されているので適切な設定が必要

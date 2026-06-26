@@ -11,8 +11,6 @@ sort_key: "2022-05-10"
 update_dates: ["2022-05-10"]
 ---
 
-# google chromeの便利な設定と機能とカスタマイズ 
-
 ## 便利な設定
 
 ### Google Chromeの更新後に見ていたページを復元する

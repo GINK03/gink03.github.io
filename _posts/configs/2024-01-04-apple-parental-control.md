@@ -10,7 +10,7 @@ sort_key: "2024-01-04"
 update_dates: ["2024-01-04"]
 ---
 
-# parental controlの設定方法
+## parental controlの設定方法
 
 ## 概要
  - Apple IDで設定した子供の端末に対して、親の端末から制限をかけることができる

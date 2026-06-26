@@ -10,8 +10,6 @@ sort_key: "2025-11-03"
 update_dates: ["2025-11-03"]
 ---
 
-# gemini nano banana
-
 ## 概要
  - geminiの画像生成モデル
 

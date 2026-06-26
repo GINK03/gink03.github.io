@@ -11,8 +11,6 @@ sort_key: "2024-04-24"
 update_dates: ["2024-04-24"]
 ---
 
-# aws ecrの使い方
-
 ## 概要
  - awsのコンテナレジストリ
  - GCPのContainer Registryと同じようなもの

@@ -10,8 +10,6 @@ sort_key: "2022-06-30"
 update_dates: ["2022-06-30"]
 ---
 
-# cppのoptionalの使い方
-
 ## 概要
  - `#include <optional>`が必要
  - 型は`std::optional<T>`

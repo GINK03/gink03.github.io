@@ -10,8 +10,6 @@ sort_key: "2024-10-20"
 update_dates: ["2024-10-20"]
 ---
 
-# pandas concat
-
 ## 概要
  - `pd.concat` は、複数のデータフレームを結合する関数
  - 結合方法は、`axis` で指定

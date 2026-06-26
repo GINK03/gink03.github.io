@@ -11,8 +11,6 @@ sort_key: "2024-06-02"
 update_dates: ["2024-06-02"]
 ---
 
-# python sqliteの使い方
-
 ## 概要
  - デフォルトでsqlite3が使える
  - マルチプロセスでの利用時には`check_same_thread=False`を指定し、`PRAGMA journal_mode=WAL;`を実行

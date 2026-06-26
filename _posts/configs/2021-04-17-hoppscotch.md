@@ -10,7 +10,6 @@ sort_key: "2021-04-17"
 update_dates: ["2021-04-17"]
 ---
 
-# hoppscotchについて
  - コマンドラインのcurlやwgetなどに変わるソフトウェア
  - web uiベースで動作する
    - dockerでまとまっているのでインストールの必要がない

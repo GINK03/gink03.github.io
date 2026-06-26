@@ -10,8 +10,6 @@ sort_key: "2025-08-23-cloudflare-mail-routing.md"
 update_dates: ["2025-08-23", "2025-08-24"]
 ---
 
-# Cloudflare Mail Routingの設定方法と使い方
-
 ## 概要
  - Cloudflare Mail Routing は、ドメインのメールアドレスを他のメールサービスに転送する機能
 

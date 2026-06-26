@@ -10,7 +10,7 @@ sort_key: "2025-05-26"
 update_dates: ["2025-05-26"]
 ---
 
-# openai anget mcp stdio
+## openai anget mcp stdio
 
 ## 概要
  - コマンドタイプ(stdioで通信するタイプ)のMCPを使用する例

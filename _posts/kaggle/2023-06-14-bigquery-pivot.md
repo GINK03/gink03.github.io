@@ -10,7 +10,7 @@ sort_key: "2023-06-14"
 update_dates: ["2023-06-14"]
 ---
 
-# bigqueryのpivotの使い方
+## bigqueryのpivotの使い方
 
 ## 概要
  - `PIVOT`を記述することで特定のvalueをカラムに変換できる

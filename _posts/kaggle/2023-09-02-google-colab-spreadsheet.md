@@ -10,8 +10,6 @@ sort_key: "2023-09-03"
 update_dates: ["2023-09-03"]
 ---
 
-# google colabでgoogle spreadsheetsの使い方
-
 ## 概要
  - [/gspread/](/gspread/)というライブラリを利用することでスプレッドシートへの読み書きを行える
 

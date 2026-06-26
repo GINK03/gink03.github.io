@@ -11,8 +11,6 @@ sort_key: "2026-02-22"
 update_dates: ["2026-02-22"]
 ---
 
-# Herfindahl-Hirschman Index HHI
-
 ## 概要
  - Herfindahl-Hirschman Index HHI は市場集中度を数値化する指標
  - 企業ごとの市場シェアがわかれば計算できる

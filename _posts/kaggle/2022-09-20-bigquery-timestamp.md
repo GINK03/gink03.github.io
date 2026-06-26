@@ -10,8 +10,6 @@ sort_key: "2022-09-20"
 update_dates: ["2022-09-20"]
 ---
 
-# bigquery timestampのチートシート
-
 
 ## 具体例
 

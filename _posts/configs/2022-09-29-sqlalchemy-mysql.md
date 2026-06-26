@@ -10,8 +10,6 @@ sort_key: "2022-09-29"
 update_dates: ["2022-09-29"]
 ---
 
-# sqlalchemy+mysqlの使い方
-
 ## 概要
  - pythonのORM
 

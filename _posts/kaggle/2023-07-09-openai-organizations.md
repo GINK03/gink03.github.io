@@ -10,8 +10,6 @@ sort_key: "2023-07-09"
 update_dates: ["2023-07-09"]
 ---
 
-# openai organizationsの概念
-
 ## 概要
  - APIにリクエストするときにヘッダーに`organization id`を指定すると組織の割当に対して課金される
    - つまり、API keyの発行主体は課金されず、`organization id`を発行した組織が課金される

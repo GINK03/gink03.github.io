@@ -10,7 +10,7 @@ sort_key: "2023-12-10"
 update_dates: ["2023-12-10"]
 ---
 
-# openaiのwhisperの使い方
+## openaiのwhisperの使い方
 
 ## 概要
  - openaiが公開しているOSSのspeech-to-textモデル

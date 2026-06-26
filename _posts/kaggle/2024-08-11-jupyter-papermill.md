@@ -9,8 +9,6 @@ sort_key: "2024-08-11"
 update_dates: ["2024-08-11"]
 ---
 
-# jupyter papermillの使い方
-
 ## 概要
  - jupyter notebookをコマンドラインから実行するためのツール
  - `parameters`というタグをつけたセルを指定して、そのセルの値を変更して実行することができる

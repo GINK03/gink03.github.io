@@ -10,7 +10,6 @@ sort_key: "2021-01-27"
 update_dates: ["2021-01-27"]
 ---
 
-# ポジティブ心理学について
  - [coursera](https://www.coursera.org/learn/positive-psychology-visionary-science)
  - すごい良かった 
 

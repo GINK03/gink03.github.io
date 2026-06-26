@@ -10,7 +10,7 @@ sort_key: "2022-03-22"
 update_dates: ["2022-03-22"]
 ---
 
-# pytorchのoptimizerの使い方
+## pytorchのoptimizerの使い方
 
 ## 概要
  - pytorchでのoptimizerの使い方

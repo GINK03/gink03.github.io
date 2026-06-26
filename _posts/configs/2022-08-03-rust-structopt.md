@@ -10,8 +10,6 @@ sort_key: "2022-08-03"
 update_dates: ["2022-08-03"]
 ---
 
-# rust structoptの使い方
-
 ## 概要
  - 3rd partyの引数ハンドルライブラリ
    - `use structopt::StructOpt;`

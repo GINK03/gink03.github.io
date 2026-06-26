@@ -11,8 +11,6 @@ sort_key: "2022-05-22"
 update_dates: ["2022-05-22"]
 ---
 
-# WSL(Windows Subsystem for Linux)の使い方
-
 ## 概要
  - WindowsでLinuxのコマンドをOSと密に連携して操作するシステム
    - WSL1ではnativeで動作していたが、WSL2では仮想マシンベースになった

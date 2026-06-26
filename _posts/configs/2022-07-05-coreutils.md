@@ -10,8 +10,6 @@ sort_key: "2022-07-05"
 update_dates: ["2022-07-05"]
 ---
 
-# uutils/coreutilsの使い方
-
 ## 概要
  - GNU coreutilsのrustで再実装されたバージョン
  - Windowsでもビルドしてインストールできる

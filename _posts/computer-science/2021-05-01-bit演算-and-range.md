@@ -10,8 +10,6 @@ sort_key: "2021-12-30"
 update_dates: ["2021-12-30"]
 ---
 
-# bit演算(range and)について
-
 ## 概要
  - 2つのbit表現の数値(left, right)があるとき、その間の数値をすべてandをとった際にどんな値になるか
  - bit表現を縦に見た時、一つでも0があれば0であり、leftとrightの一致する最大のbitが`[left, right]`間の値をすべてandをとったものとなる

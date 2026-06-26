@@ -12,7 +12,7 @@ sort_key: "2022-03-26"
 update_dates: ["2022-03-26"]
 ---
 
-# pandasのdatetime操作について
+## pandasのdatetime操作について
 
 ## 概要
  - よく使う機能をチートシートとして記す

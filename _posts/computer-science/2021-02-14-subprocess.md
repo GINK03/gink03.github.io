@@ -11,8 +11,6 @@ sort_key: "2021-02-14"
 update_dates: ["2021-02-14"]
 ---
 
-# subprocessについて
-
 ## 概要
  - 標準出力に入出力するインターフェース  
  - linuxでは`fd(file descriptor)`を用いてやり取りする

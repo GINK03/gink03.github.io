@@ -10,8 +10,6 @@ sort_key: "2022-09-05"
 update_dates: ["2022-09-05"]
 ---
 
-# catboost uncertaintyの仕組みとチートシート
-
 ## 概要
  - catboostは決定木でありながら、不確実性を計算することができる
  - 技術的には`Virtual ensemble`とうことをやっている

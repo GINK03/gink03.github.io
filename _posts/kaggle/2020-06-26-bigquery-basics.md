@@ -10,7 +10,7 @@ sort_key: "2022-03-01"
 update_dates: ["2022-03-01"]
 ---
 
-# bigqueryの基本
+## bigqueryの基本
 
 ## COUNT(DISTINCT value)
  - group byしたときにユニーク数を出す

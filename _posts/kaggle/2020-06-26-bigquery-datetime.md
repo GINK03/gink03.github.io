@@ -10,7 +10,7 @@ sort_key: "2022-09-06"
 update_dates: ["2022-09-06"]
 ---
 
-# bigqueryの時間機能
+## bigqueryの時間機能
 
 ## カラムの型情報の確認
  - timestamp型とdatetime型は別のもの

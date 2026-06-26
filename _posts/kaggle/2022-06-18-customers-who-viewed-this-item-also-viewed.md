@@ -10,8 +10,6 @@ update_dates: ["2022-06-18"]
 comments: false
 ---
 
-# customers who viewed this item also viewed(この商品を見ている人はこの商品も見ています)について
-
 ## 概要
  - レコメンドアルゴリズムの一つ
  - 強力

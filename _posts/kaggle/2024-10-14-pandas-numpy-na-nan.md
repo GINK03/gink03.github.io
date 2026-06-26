@@ -10,8 +10,6 @@ sort_key: "2024-10-14"
 update_dates: ["2024-10-14"]
 ---
 
-# pandas numpyのna, nanの使い方
-
 ## 概要
  - pandasでは欠損値を`pd.NA`で表現する
    - `pd.NA`は 様々なデータ型に対応している

@@ -10,7 +10,7 @@ sort_key: "2025-02-09"
 update_dates: ["2025-02-09"]
 ---
 
-# caddyでtailscaleのIPアドレスをssl化する
+## caddyでtailscaleのIPアドレスをssl化する
 
 ## 概要
  - 自己証明書を使用し、tailscaleのIPアドレスをssl化する方法を記載

@@ -11,8 +11,6 @@ sort_key: "2024-01-30"
 update_dates: ["2024-01-30", "2026-04-17"]
 ---
 
-# terraform + gcpの基本的な使い方
-
 ## 概要
  - terraformでgcpのリソースを管理
  - すでに様々なリソースがデプロイ済みであっても、terraformで管理できる

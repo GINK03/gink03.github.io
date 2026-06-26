@@ -10,8 +10,6 @@ sort_key: "2024-04-30"
 update_dates: ["2024-04-30"]
 ---
 
-# seaborn displot 
-
 ## 概要
  - seabornでヒストグラムを描画する
    - 2024年現在、`sns.distplot`は非推奨

@@ -8,7 +8,7 @@ tag: ["python", "pytorch"]
 comments: false
 ---
 
-# pytorchのmodelの使い方
+## pytorchのmodelの使い方
 
 ## 概要
  - pytorchでのモデルの作成方法

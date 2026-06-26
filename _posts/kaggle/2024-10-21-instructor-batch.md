@@ -10,8 +10,6 @@ sort_key: "2024-10-21"
 update_dates: ["2024-10-21"]
 ---
 
-# instructor batchの使い方
-
 ## 概要
  - openaiのAPIをバッチで利用するためのライブラリ
  - 型情報はpydanticを利用している

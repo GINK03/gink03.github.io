@@ -10,8 +10,6 @@ sort_key: "2024-05-31"
 update_dates: ["2024-05-31"]
 ---
 
-# matplotlib/seaborn font
-
 ## seaborn特有の問題点
  - フォントを設定したあとも
    - `sns.set()`, `sns.set_theme()` でフォントが上書きされることがある

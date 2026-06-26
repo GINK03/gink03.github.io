@@ -11,8 +11,6 @@ sort_key: "2025-11-22"
 update_dates: ["2025-11-22"]
 ---
 
-# google chrome extentions
-
 ## Vimium
 vimライクなキーバインドをgoogle chromeに追加する  
  - キーボードでリンクのクリック候補を出してクリックできるのはこれしかない(視線でデフォルトをjとかそういうふうにしてほしいけど現状できない)

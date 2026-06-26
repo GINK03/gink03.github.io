@@ -8,7 +8,6 @@ computer_science: true
 comments: false
 ---
 
-# snowflake
  - twitterIDのユニーク化をするアルゴリズム
  - 時間に対して昇順になっていることが保証される点がただのハッシュと異なる
 

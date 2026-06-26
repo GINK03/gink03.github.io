@@ -11,8 +11,6 @@ sort_key: "2023-10-21"
 update_dates: ["2023-10-21"]
 ---
 
-# Text-to-SQL Spiderについて
-
 ## 概要
  - [Text-to-SQL Spider](https://yale-lily.github.io/spider)は、自然言語の質問文からSQL文を生成するタスク
  - コンペティション形式になっており、Spiderデータセットを用いてモデルの性能を定量化している

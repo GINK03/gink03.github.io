@@ -11,8 +11,6 @@ sort_key: "2018-01-19"
 update_dates: ["2018-01-19"]
 ---
 
-# cuda + cudnnのセットアップ
-
 ## 手順
  - STEP 1: CUDA, CUDNN, Driverのファイルをダウンロードする
    - 1. Download Cuda  (Linux -> x86-64 -> Ubuntu -> xx.yy(version) -> runfile(local))

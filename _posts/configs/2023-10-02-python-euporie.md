@@ -10,7 +10,7 @@ sort_key: "2023-10-02"
 update_dates: ["2023-10-02"]
 ---
 
-# pythonのeuporieの概要と使い方
+## pythonのeuporieの概要と使い方
 
 ## 概要
  - jupyter(ipythonのクライアント)をterminalで実行するためのツール 

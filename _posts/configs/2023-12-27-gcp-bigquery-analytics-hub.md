@@ -10,8 +10,6 @@ sort_key: "2023-12-27"
 update_dates: ["2023-12-27"]
 ---
 
-# gcp bigquery analytics hub
-
 ## 概要
  - BigQueryのデータセットをプロジェクト・組織をまたいで共有するための機能
  - データの公開単位はデータセットになる

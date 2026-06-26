@@ -10,7 +10,7 @@ sort_key: "2023-03-06"
 update_dates: ["2023-03-06"]
 ---
 
-# pandasのplotの使い方
+## pandasのplotの使い方
 
 ## 概要
  - pandasは一部matplotをラップしており、pandasの関数から描画が可能である

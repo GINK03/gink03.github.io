@@ -10,8 +10,6 @@ sort_key: "2022-04-08"
 update_dates: ["2022-04-08","2022-01-03","2021-09-16"]
 ---
 
-# zip/unzip と unar の使い方
-
 ## macOS / Linux での zip/unzip の基本
 
 ### zip ファイルの解凍（unzip）

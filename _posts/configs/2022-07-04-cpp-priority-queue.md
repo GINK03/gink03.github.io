@@ -10,8 +10,6 @@ sort_key: "2022-07-04"
 update_dates: ["2022-07-04"]
 ---
 
-# cppのpriority_queの使い方
-
 ## 概要
  - pythonのheapqに相当するライブラリ
    - listをラップした形ではなくてC++は専用のデータ構造が用意されている

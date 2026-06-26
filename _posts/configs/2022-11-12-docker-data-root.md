@@ -10,7 +10,7 @@ sort_key: "2022-11-12"
 update_dates: ["2022-11-12"]
 ---
 
-# dockerのdata-rootの設定
+## dockerのdata-rootの設定
 
 ## 概要
  - dockerのコンテナのキャッシュやボリュームは、デフォルトでは`/var/lib/docker`にすべて配置される

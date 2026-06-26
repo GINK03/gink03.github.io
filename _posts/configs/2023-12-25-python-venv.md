@@ -10,7 +10,7 @@ sort_key: "2023-12-25"
 update_dates: ["2023-12-25"]
 ---
 
-# pythonのvenvの使い方
+## pythonのvenvの使い方
 
 ## 概要
  - poetry, ryeでバージョン管理できなないパッケージが稀にあり、その場合はvenvを使用

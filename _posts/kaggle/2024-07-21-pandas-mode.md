@@ -12,8 +12,6 @@ sort_key: "2024-07-21"
 update_dates: ["2024-07-21"]
 ---
 
-# pandas mode
-
 ## 概要
  - pandasのSeriesやDataFrameに対して、最頻値を取得する関数　
  - 最頻値は複数ある可能性があるため、Seriesで返される

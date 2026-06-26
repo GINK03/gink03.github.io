@@ -11,7 +11,7 @@ sort_key: "2023-04-04"
 update_dates: ["2023-04-04"]
 ---
 
-# sshのconfigの設定
+## sshのconfigの設定
 
 ## 概要
  - クライアントサイドの設定のこと

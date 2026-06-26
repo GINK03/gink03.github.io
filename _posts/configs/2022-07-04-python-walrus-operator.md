@@ -11,8 +11,6 @@ sort_key: "2022-07-04"
 update_dates: ["2022-07-04"]
 ---
 
-# python walrus operator(assignment expressions)の使い方
-
 ## 概要
  - python 3.8から導入された`:=`という演算子
    - ウォルラス演算子と呼ばれる

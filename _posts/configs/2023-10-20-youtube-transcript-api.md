@@ -10,8 +10,6 @@ sort_key: "2023-10-20"
 update_dates: ["2023-10-20"]
 ---
 
-# youtube-transcript-apiの使い方と概要
-
 ## 概要
  - youtubeの字幕を取得するためのライブラリ
  - 非公式のAPIを使用しているため、youtubeの仕様変更により動作しなくなる可能性がある

@@ -10,8 +10,6 @@ sort_key: "2022-11-17"
 update_dates: ["2022-11-17"]
 ---
 
-# bigquery scheduleの使い方
-
 ## 概要
  - BigQueryのクエリを定期実行できる
  - 粒度はhourly, daily, weeklyなど

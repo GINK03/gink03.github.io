@@ -10,7 +10,7 @@ sort_key: "2025-08-26"
 update_dates: ["2025-08-26"]
 ---
 
-# macOSのlaunchctlの使い方
+## macOSのlaunchctlの使い方
 
 ## 概要
  - XML形式の設定ファイルを使用して、macOSのサービスやデーモンを管理するためのコマンドラインツール

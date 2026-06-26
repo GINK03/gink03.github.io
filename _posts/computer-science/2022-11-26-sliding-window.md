@@ -10,8 +10,6 @@ sort_key: "2022-11-26"
 update_dates: ["2022-11-26"]
 ---
 
-# sliding windowする際の高速な計算
-
 ## 概要
  - sliding windowをlist(linked list)のようなもので切り出すとその切り出した内容を処理するのは遅い
    - windowsの中に特定の値が含まれるかは`O(n * k)`になる

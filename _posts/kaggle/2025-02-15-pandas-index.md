@@ -10,8 +10,6 @@ sort_key: "2025-02-15"
 update_dates: ["2025-02-15"]
 ---
 
-# pandas index
-
 ## 概要
  - pandasのindexについて
 

@@ -11,8 +11,6 @@ sort_key: "2025-01-05"
 update_dates: ["2025-01-05"]
 ---
 
-# plotly sankey diagram(サンキー図)
-
 ## 概要
  - plotlyでサンキー図を作成する方法について記載
 

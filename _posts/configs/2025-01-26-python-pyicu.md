@@ -10,8 +10,6 @@ sort_key: "2025-01-24"
 update_dates: ["2025-01-24"]
 ---
 
-# python pyicuの使い方
-
 ## 概要
  - pythonからICUを利用するためのラッパーライブラリ
 

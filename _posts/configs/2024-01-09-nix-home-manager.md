@@ -10,8 +10,6 @@ sort_key: "2024-01-09"
 update_dates: ["2024-01-09"]
 ---
 
-# nix home-managerの使い方
-
 ## 概要
  - nixがインストールされていることが前提
  - dotfilesを管理するためのツール

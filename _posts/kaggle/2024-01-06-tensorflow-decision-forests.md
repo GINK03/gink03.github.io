@@ -11,8 +11,6 @@ sort_key: "2024-01-06"
 update_dates: ["2024-01-06"]
 ---
 
-# tensorflow decision forestsの使い方
-
 ## 概要
  - tensorflowのエコシステムを利用した決定木の実装
  - 商用利用可能

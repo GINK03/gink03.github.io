@@ -11,8 +11,6 @@ sort_key: "2022-05-20"
 update_dates: ["2022-05-20"]
 ---
 
-# python doctestの使い方
-
 ## 概要
  - pythonのdocstring内部に簡単なテストを記述できるもの
  - `>>> func_name(args...)\nvalue...`のような記述法

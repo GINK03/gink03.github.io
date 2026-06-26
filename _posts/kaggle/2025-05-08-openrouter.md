@@ -10,8 +10,6 @@ update_dates: ["2025-05-08"]
 comments: false
 ---
 
-# openrouterの使い方
-
 ## 概要
  - いろいろなLLMをAPIで使えるサービス
  - サブスクリプション不要で重要課金での支払いが可能

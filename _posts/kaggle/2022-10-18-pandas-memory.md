@@ -10,7 +10,7 @@ sort_key: "2022-10-18"
 update_dates: ["2022-10-18"]
 ---
 
-# pandasのmemoryについて
+## pandasのmemoryについて
 
 ## 概要
  - pandasのデータ型を小さいデータを指定して読み込むことでメモリの使用量を削減できる

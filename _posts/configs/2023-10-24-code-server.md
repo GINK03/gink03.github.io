@@ -10,8 +10,6 @@ update_dates: ["2023-10-24"]
 comments: false
 ---
 
-# code-serverの使い方
-
 ## 概要
  - VS Codeをブラウザ上で動かすことができるOSS
  - iPadなどのモバイル端末でもVS Codeを使える

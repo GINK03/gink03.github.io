@@ -10,8 +10,6 @@ sort_key: "2025-06-03"
 update_dates: ["2025-06-03"]
 ---
 
-# gcp workload identity federation
-
 ## 概要
  - 直接 GCP のサービスアカウントを使用するのではなく、外部 ID プロバイダを使用して GCP リソースにアクセスするための方法
  - workload identity federation (WIF) の特徴

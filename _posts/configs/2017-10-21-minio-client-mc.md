@@ -10,7 +10,7 @@ config: true
 comments: false
 ---
 
-# MinIOクライアント mc の使い方
+## MinIOクライアント mc の使い方
 
 ## 概要
  - MinIOおよびS3互換ストレージをCLIで操作するクライアントツール

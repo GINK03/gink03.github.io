@@ -10,8 +10,6 @@ sort_key: "2023-07-05"
 update_dates: ["2023-07-05"]
 ---
 
-# google custom search engineの概要と使い方
-
 ## 概要
  - NOTE: 2026年1月現在、GoogleはCSEのウェブ全体での検索を段階的に廃止予定
  - googleのサーチエンジンをAPIとして利用できる機能

@@ -10,8 +10,6 @@ sort_key: "2023-06-24"
 update_dates: ["2023-06-24"]
 ---
 
-# attention mechanismについて
-
 ## 概要
  - `query`, `key`, `value`の要素で`query`に対するグローバルな`key`の類似度を考慮できるようにしたもの
  - RNNの長距離の情報が消えるという側面を解決したもの

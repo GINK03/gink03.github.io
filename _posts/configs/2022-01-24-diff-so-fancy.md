@@ -11,8 +11,6 @@ sort_key: "2022-01-24"
 update_dates: ["2022-01-24"]
 ---
 
-# diff-so-fancyの使い方
-
 ## 概要
  - `git diff`や`diff`にてカラフルにdiffを表示する
 

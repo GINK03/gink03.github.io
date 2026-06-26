@@ -10,7 +10,7 @@ sort_key: "2023-01-11"
 update_dates: ["2023-01-11"]
 ---
 
-# cloud compute spot vmについて
+## cloud compute spot vmについて
 
 ## 概要
  - `preemptible(プリエンプティブ)`という言い方もある

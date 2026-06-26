@@ -11,8 +11,6 @@ sort_key: "2022-01-31"
 update_dates: ["2022-01-31"]
 ---
 
-# duckdb minio(s3)の使い方
-
 ## 概要
  - duckdbはバックエンドにminio(s3)を使うことができる
 

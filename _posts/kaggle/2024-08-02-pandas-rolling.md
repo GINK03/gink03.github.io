@@ -10,7 +10,7 @@ sort_key: "2024-08-02"
 update_dates: ["2024-08-02"]
 ---
 
-# pandasのrollingの使い方
+## pandasのrollingの使い方
 
 ## 概要
  - pandasのrollingは、移動平均や移動合計などを計算する際に使用する

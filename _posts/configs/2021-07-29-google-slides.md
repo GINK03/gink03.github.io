@@ -10,8 +10,6 @@ sort_key: "2021-07-29"
 update_dates: ["2022-06-08", "2021-07-29"]
 ---
 
-# google slidesの使い方
-
 ## テーマを適応する
  1. `[Slide]`
  2. `[Change theme]`

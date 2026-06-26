@@ -10,8 +10,6 @@ sort_key: "2023-06-13"
 update_dates: ["2023-06-13"]
 ---
 
-# gcp firestoreの使い方
-
 ## 概要
  - [gcp datastore](/gcp-datastore/)の新バージョン
  - nosqlデータベース

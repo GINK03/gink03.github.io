@@ -10,8 +10,6 @@ update_dates: ["2022-08-05"]
 comments: false
 ---
 
-# Variance Inflation Factor(VIF)について
-
 ## 概要
  - 線形重回帰などで問題になる多重共線性の大きさを測定する指標
  - 変数間の相関係数行列を作成し、操作することで得られる

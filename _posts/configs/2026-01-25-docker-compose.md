@@ -10,8 +10,6 @@ sort_key: "2026-01-25"
 update_dates: ["2026-01-25"]
 ---
 
-# docker compose
-
 ## 概要
  - Docker Compose v2の使い方をまとめる
  - 実行は `docker compose` を使う

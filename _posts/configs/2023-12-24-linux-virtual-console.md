@@ -10,7 +10,7 @@ sort_key: "2023-12-24"
 update_dates: ["2023-12-24"]
 ---
 
-# linuxのvirtual console(仮想コンソール)について
+## linuxのvirtual console(仮想コンソール)について
 
 ## 概要
  - LinuxでGUIがない状態での作業を行うための仮想コンソール

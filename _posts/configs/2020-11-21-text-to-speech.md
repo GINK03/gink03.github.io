@@ -11,8 +11,6 @@ sort_key: "2020-11-22"
 update_dates: ["2020-11-22"]
 ---
 
-# text-to-speech
-
 ## OSXの`say`
 
 **発音できるボイス一覧**

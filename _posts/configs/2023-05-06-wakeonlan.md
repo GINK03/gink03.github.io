@@ -10,8 +10,6 @@ sort_key: "2023-05-06"
 update_dates: ["2023-05-06"]
 ---
 
-# wakeonlanの使い方
-
 ## 概要
  - NICにmac addressを指定してPCを起動する機能/コマンド
  - BIOS/UEFIとOSの双方で有効化されている必要がある

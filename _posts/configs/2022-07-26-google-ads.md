@@ -10,8 +10,6 @@ sort_key: "2022-07-26"
 update_dates: ["2022-07-26"]
 ---
 
-# google adsの概要と使い方
-
 ## 概要
  - google adwardsの次のサービス
  - `Dispaly`, `Video`, `App`, `Smart`キャンペーンなど

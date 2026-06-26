@@ -11,8 +11,6 @@ sort_key: "2025-09-29"
 update_dates: ["2025-09-29"]
 ---
 
-# GitHub Copilot CLIの使い方
-
 ## 概要
  - claude code, codex cli, gemini-cliに続くterminalで動くAIアシスタント
 

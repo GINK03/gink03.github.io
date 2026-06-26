@@ -10,8 +10,6 @@ sort_key: "2024-08-25"
 update_dates: ["2024-08-25"]
 ---
 
-# python pyathenaの使い方
-
 ## 概要
  - AWS Athena に対してクエリを実行するためのライブラリ
  - BigQuery のpandas-gbqのような使い勝手を提供

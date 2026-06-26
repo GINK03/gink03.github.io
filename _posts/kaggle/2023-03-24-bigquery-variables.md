@@ -10,7 +10,7 @@ sort_key: "2023-03-24"
 update_dates: ["2023-03-24"]
 ---
 
-# bigqueryでの変数(variables)の使い方
+## bigqueryでの変数(variables)の使い方
 
 ## 概要
  - `DECLARE`と`SET`を組み合わせて変数を定義できる

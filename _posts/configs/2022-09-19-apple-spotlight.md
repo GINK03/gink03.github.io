@@ -10,8 +10,6 @@ sort_key: "2022-09-19"
 update_dates: ["2022-09-19"]
 ---
 
-# apple spotlight(スポットライト検索)の使い方
-
 ## 概要
  - ios, macOSで使える検索機能 + ランチャー機能
    - [/raycast/](/raycast/)が上位互換的な使い方ができるので、実質ios限定の機能

@@ -10,7 +10,7 @@ sort_key: "2023-12-23"
 update_dates: ["2023-12-23"]
 ---
 
-# pythonのruffの概要と使い方
+## pythonのruffの概要と使い方
 
 ## 概要
  - pythonのlinter

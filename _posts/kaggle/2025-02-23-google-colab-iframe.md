@@ -10,7 +10,7 @@ sort_key: "2025-02-23"
 update_dates: ["2025-02-23"]
 ---
 
-# google colabでiframeを使う方法
+## google colabでiframeを使う方法
 
 ## 概要
  - google colabでは読み込むサイトが 以下の制約がなければ、iframeで読み込むことができる

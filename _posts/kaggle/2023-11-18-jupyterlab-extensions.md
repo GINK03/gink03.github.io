@@ -9,8 +9,6 @@ sort_key: "2023-11-18"
 update_dates: ["2023-11-18"]
 ---
 
-# jupyterlab extensions
-
 ## 概要
  - vscodeのextensionのようにjupyterlabにもextensionがある
 

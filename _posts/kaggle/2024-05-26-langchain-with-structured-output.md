@@ -10,8 +10,6 @@ sort_key: "2024-05-26"
 update_dates: ["2024-05-26"]
 ---
 
-# langchain with structured output
-
 ## 概要
  - 特定の構造化形式で出力を強制する機能
  - pydanticを使用して構造化された出力を定義

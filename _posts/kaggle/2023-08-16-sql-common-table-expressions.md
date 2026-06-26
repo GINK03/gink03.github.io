@@ -9,8 +9,6 @@ sort_key: "2023-08-16"
 update_dates: ["2023-08-16"]
 ---
 
-# Common Table Expressions(CTE)の対応状況とメリット
-
 ## 概要
  - 最新のSQLite, MySQL(<8.0), OracleやBigQueryで使用できるwith句を使った構文のこと
 

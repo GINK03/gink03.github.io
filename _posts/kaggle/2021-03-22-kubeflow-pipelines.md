@@ -11,8 +11,6 @@ sort_key: "2021-03-22"
 update_dates: ["2021-03-22"]
 ---
 
-# kubeflow pipelinesについて
-
 ## 概要
  - 機械学習用のパイプライン
  - ***記法***

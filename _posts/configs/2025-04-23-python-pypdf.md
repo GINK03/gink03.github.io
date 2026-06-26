@@ -10,8 +10,6 @@ sort_key: "2025-04-23"
 update_dates: ["2025-04-23"]
 ---
 
-# python pypdfの使い方
-
 ## 概要
  - MITライセンス
  - Pure PythonでPDFを操作するためのライブラリ

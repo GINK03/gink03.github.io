@@ -10,8 +10,6 @@ sort_key: "2026-02-02"
 update_dates: ["2026-02-02"]
 ---
 
-# ollama gpt-ossの使い方
-
 ## 概要
  - showコマンドでModelfileを取得して編集するほうが安定
 

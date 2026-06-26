@@ -10,8 +10,6 @@ sort_key: "2024-03-30"
 update_dates: ["2024-03-30"]
 ---
 
-# openai billing
-
 ## 概要
  - 2024年からOpenAIへの支払いがCredit Balanceに一度チャージされ、Pay as you goの形式で支払われるようになった
 

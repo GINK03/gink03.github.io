@@ -10,8 +10,6 @@ sort_key: "2024-10-26"
 update_dates: ["2024-10-26"]
 ---
 
-# systemd-journaldの使い方
-
 ## 概要
  - `systemd-journald`は`systemd`の一部であり、ログを管理するデーモン
  - `systemd-journald`はデフォルトでは`/run/log/journal`にログを保存する

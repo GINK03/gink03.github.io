@@ -10,8 +10,6 @@ sort_key: "2024-02-23"
 update_dates: ["2024-02-23"]
 ---
 
-# seaborn histplot
-
 ## 概要
  - distplotが非推奨になり、代わりにhistplot, displotが推奨になった
  - 通常のヒストグラムを描画する

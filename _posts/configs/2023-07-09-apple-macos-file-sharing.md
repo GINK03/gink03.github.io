@@ -10,7 +10,7 @@ sort_key: "2023-07-09"
 update_dates: ["2023-07-09"]
 ---
 
-# macOSのfile sharing(共有ファイル・フォルダ)の設定
+## macOSのfile sharing(共有ファイル・フォルダ)の設定
 
 ## 概要
  - macOSにはデフォルトでファイルを共有する機能がある

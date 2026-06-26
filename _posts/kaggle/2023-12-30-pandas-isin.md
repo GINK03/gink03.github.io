@@ -10,7 +10,7 @@ sort_key: "2023-12-30"
 update_dates: ["2023-12-30"]
 ---
 
-# pandasのisinの使い方
+## pandasのisinの使い方
 
 ## 概要
  - ２つのDataFrameを比較する際に、isinを使うと便利

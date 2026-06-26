@@ -10,7 +10,7 @@ sort_key: "2022-12-15"
 update_dates: ["2022-12-15"]
 ---
 
-# pandasのexpanding(accumulate operation)について
+## pandasのexpanding(accumulate operation)について
 
 ## 概要
  - BigQueryなどのstandard SQLで使用できるwindow関数のような使い方ができる

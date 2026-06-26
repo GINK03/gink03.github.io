@@ -10,8 +10,6 @@ sort_key: "2024-12-05"
 update_dates: ["2024-12-05"]
 ---
 
-# cloud run jobsについて
-
 ## 概要
  - cloud run jobsは、cloud runの新機能で、バッチ処理やcronジョブを実行するための機能
  - httpのエンドポイントを持たず、実行できる

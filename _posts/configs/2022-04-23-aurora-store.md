@@ -11,8 +11,6 @@ sort_key: "2022-04-23"
 update_dates: ["2022-04-23"]
 ---
 
-# Aurora Storeの使い方
-
 ## 概要
  - Google Play Storeのオープンソースクライアント
    - GoogleアカウントやGoogle開発者サービスを利用しなくてもソフトウェアのインストールが行える

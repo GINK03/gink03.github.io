@@ -9,8 +9,6 @@ sort_key: "2025-05-23"
 update_dates: ["2025-05-23", "2026-04-26"]
 ---
 
-# looker studioの使い方
-
 ## 概要
  - [/looker/](/looker/)とは別のBIツール
  - Google Data Studioのリブランド名

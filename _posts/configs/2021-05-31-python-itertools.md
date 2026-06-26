@@ -10,8 +10,6 @@ sort_key: "2021-06-05"
 update_dates: ["2021-06-05","2021-06-03","2021-05-31"]
 ---
 
-# itertools(python3)チートシート
-
 
 ## accumulate
  - 累積和を得る(numpyには累積積もある)  

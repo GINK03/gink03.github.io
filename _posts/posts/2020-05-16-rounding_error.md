@@ -7,8 +7,6 @@ tags: ["rounding error", "競プロ"]
 comments: false
 ---
 
-# rounding error
-
 気づかないとなんで `WA` したかわからない
 
 ## 例

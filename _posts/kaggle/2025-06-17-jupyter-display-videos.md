@@ -9,8 +9,6 @@ sort_key: "2025-06-17"
 update_dates: ["2025-06-17"]
 ---
 
-# jupyter display videos
-
 ## 標準機能で画像を表示する
 
 ```python

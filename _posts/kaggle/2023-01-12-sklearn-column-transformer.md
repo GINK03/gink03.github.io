@@ -10,7 +10,7 @@ sort_key: "2023-01-12"
 update_dates: ["2023-01-12"]
 ---
 
-# sklearn column trasnformerの使い方と定義
+## sklearn column trasnformerの使い方と定義
 
 ## 概要
  - pandasのデータフレームをカラム名を指定して加工するsklearnのpipeline

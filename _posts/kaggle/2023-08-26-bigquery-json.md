@@ -10,7 +10,7 @@ sort_key: "2023-08-26"
 update_dates: ["2023-08-26"]
 ---
 
-# bigqueryのjsonのパースとエンコード
+## bigqueryのjsonのパースとエンコード
 
 ## 概要
  - 偶にBigQueryのデータにjsonエンコードされたテキストが入っていることがあり、パースする必要がある

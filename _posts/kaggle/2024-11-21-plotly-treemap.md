@@ -11,8 +11,6 @@ sort_key: "2024-11-21"
 update_dates: ["2024-11-21"]
 ---
 
-# plotly treemap
-
 ## 概要
  - 株価の可視化などに使用されるtreemap
 

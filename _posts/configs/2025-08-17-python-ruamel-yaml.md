@@ -10,8 +10,6 @@ sort_key: "2025-08-17"
 update_dates: ["2025-08-17"]
 ---
 
-# python ruamel.yamlの使い方
-
 ## 概要
  - `ruamel.yaml`は、PythonでYAMLファイルを読み書きするためのライブラリ
  - [/python-pyyaml/](/python-pyyaml/)より高機能で細かい制御が可能

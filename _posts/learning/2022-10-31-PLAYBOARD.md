@@ -10,8 +10,6 @@ sort_key: "2022-10-31"
 update_dates: ["2022-10-31"]
 ---
 
-# PLAYBOARD(youtuberのKPI確認ツール)の使い方
-
 ## 概要
  - YouTuberのスパチャの金額の確認
  - プロモーション動画と通常動画のパフォーマンスの差

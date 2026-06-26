@@ -10,7 +10,7 @@ sort_key: "2023-01-14"
 update_dates: ["2023-01-14"]
 ---
 
-# pythonのabc(Abstract Base Classes)の使い方
+## pythonのabc(Abstract Base Classes)の使い方
 
 ## 概要
  - JavaやC++でよくあるデザインパターンの一つで抽象クラスを作成し、継承して具体化する

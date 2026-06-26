@@ -10,7 +10,7 @@ sort_key: "2023-12-01"
 update_dates: ["2023-12-01"]
 ---
 
-# openaiのpythonの使い方
+## openaiのpythonの使い方
 
 ## 概要
  - openaiのライブラリのバージョン1.0.0以降でインターフェースの大幅な変更があった

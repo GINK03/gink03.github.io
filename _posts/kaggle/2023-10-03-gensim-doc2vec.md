@@ -11,7 +11,7 @@ sort_key: "2023-10-03"
 update_dates: ["2023-10-03"]
 ---
 
-# gensimのdoc2vecについて
+## gensimのdoc2vecについて
 
 ## 概要
  - Word2Vecをベースとした機能の拡張

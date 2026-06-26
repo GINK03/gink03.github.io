@@ -11,8 +11,6 @@ sort_key: "2023-12-23"
 update_dates: ["2023-12-23"]
 ---
 
-# github actions/workflowsの使い方
-
 ## 概要
  - github workflows/actionsはgithub上で動作するCI/CDツール
  - `.github/workflows`以下にyamlファイルを配置することで動作する

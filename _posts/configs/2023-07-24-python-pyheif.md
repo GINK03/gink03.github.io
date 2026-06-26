@@ -11,7 +11,7 @@ sort_key: "2023-07-24"
 update_dates: ["2023-07-24"]
 ---
 
-# pythonのpyheifの使い方
+## pythonのpyheifの使い方
 
 ## 概要
  - iOS、macOSで撮影されたjpeg画像は一般的なjpegと互換性のあるものではなく、独自のHigh Efficiency Image Format (HEIF)というもの

@@ -11,8 +11,6 @@ sort_key: "2023-09-23"
 update_dates: ["2023-09-23"]
 ---
 
-# neovim github copilotの使い方
-
 ## 概要
  - vscodeのgithub copilotのようにneovimでgithub copilotを使うことができる
 

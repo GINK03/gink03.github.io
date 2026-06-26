@@ -10,8 +10,6 @@ sort_key: "2026-02-21"
 update_dates: ["2026-02-21"]
 ---
 
-# BigQuery の SELECT * EXCEPT / REPLACE
-
 ## 概要
 
  - `SELECT * EXCEPT(...)` で不要な列を除外できる

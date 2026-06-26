@@ -10,7 +10,7 @@ sort_key: "2022-02-11"
 update_dates: ["2022-02-11"]
 ---
 
-# powertoysの使い方
+## powertoysの使い方
 
 ## 概要
  - microsoftが提供するmac osで便利であるけれどwindowsにないソフトウェアを提供している

@@ -12,8 +12,6 @@ sort_key: "2024-05-25"
 update_dates: ["2024-05-25"]
 ---
 
-# pandas timestamp isocalendar
-
 ## 概要
  - pandasのtimestampオブジェクトには、isocalendarメソッドがあり、その年、週、曜日を取得できる
 

@@ -10,7 +10,7 @@ sort_key: "2023-05-09"
 update_dates: ["2023-05-09"]
 ---
 
-# pythonのmmapの使い方
+## pythonのmmapの使い方
 
 ## 概要
  - 低レベルな`/dev/shm`でシェアードメモリーを扱うためのマネージャ

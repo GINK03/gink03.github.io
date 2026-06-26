@@ -10,7 +10,7 @@ sort_key: "2023-01-28"
 update_dates: ["2023-01-28"]
 ---
 
-# open.aiのdall-eについて
+## open.aiのdall-eについて
 
 ## 概要
  - open.aiが提供する画像生成AI

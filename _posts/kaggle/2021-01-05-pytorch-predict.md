@@ -10,7 +10,7 @@ sort_key: "2022-03-22"
 update_dates: ["2022-03-22"]
 ---
 
-# pytorchのpredictの使い方
+## pytorchのpredictの使い方
 
 ## 概要
  - pytorchでのpredictの使い方

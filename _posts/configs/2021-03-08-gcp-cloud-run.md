@@ -10,8 +10,6 @@ sort_key: "2022-04-22"
 update_dates: ["2022-04-22","2022-04-22","2022-04-22"]
 ---
 
-# cloud runついて
-
 ## 概要
  - dockerのコンテナをデプロイして最小限の構成で動作させられるもの
  - cloud functionより高級でkubernetesより低級

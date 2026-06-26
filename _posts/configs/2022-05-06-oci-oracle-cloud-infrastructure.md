@@ -11,8 +11,6 @@ sort_key: "2022-05-06"
 update_dates: ["2022-05-06"]
 ---
 
-# OCI(oracle cloud infrastructure)について
-
 ## 概要
  - Oracleが提供するクラウドサービス
  - AWSと似たインターフェースと機能を備えている

@@ -9,7 +9,7 @@ sort_key: "2023-07-26"
 update_dates: ["2023-07-26"]
 ---
 
-# jupyterでのnbconvertによるドキュメント共有方法 
+## jupyterでのnbconvertによるドキュメント共有方法 
 
 ## 概要
  - jupyterの実行環境を持たない人に分析結果を報告する場合、HTMLやPDFで出力すると良い

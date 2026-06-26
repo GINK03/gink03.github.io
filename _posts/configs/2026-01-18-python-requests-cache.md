@@ -11,8 +11,6 @@ sort_key: "2026-01-18"
 update_dates: ["2026-01-18"]
 ---
 
-# requests cache
-
 ## 概要
  - requests_cacheでHTTPレスポンスを永続化する
  - リダイレクトをキャッシュ対象に含めるとURL解決が速くなる

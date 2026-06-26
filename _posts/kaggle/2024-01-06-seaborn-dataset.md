@@ -11,8 +11,6 @@ sort_key: "2024-01-06"
 update_dates: ["2024-01-06"]
 ---
 
-# seaborn datasetの使い方
-
 ## 概要
  - seabornには簡単に使えるデータセットが用意されている
  - toy datasetとして使える

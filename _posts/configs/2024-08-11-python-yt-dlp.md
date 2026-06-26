@@ -10,8 +10,6 @@ sort_key: "2024-08-11"
 update_dates: ["2024-08-11"]
 ---
 
-# python yt-dlpの使い方
-
 ## 概要
  - youtube-dlのフォーク
  - youtube-dlよりも高速で、多機能

@@ -10,8 +10,6 @@ sort_key: "2022-07-15"
 update_dates: ["2022-07-15"]
 ---
 
-# python listの使い方
-
 ## 概要
  - C++のvectorに該当する
  - popが遅いので、多用する際は`deque`を使用する

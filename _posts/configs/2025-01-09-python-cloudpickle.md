@@ -10,8 +10,6 @@ sort_key: "2025-01-09"
 update_dates: ["2025-01-09"]
 ---
 
-# python cloudpickle
-
 ## 概要
  - pickleの拡張版
  - lambda式や`__main__`で定義された関数をシリアライズ可能で別の名前空間で復元可能

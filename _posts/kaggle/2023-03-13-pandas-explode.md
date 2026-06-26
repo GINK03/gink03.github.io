@@ -10,7 +10,7 @@ sort_key: "2023-03-13"
 update_dates: ["2023-03-13"]
 ---
 
-# pandasのexplodeの使い方
+## pandasのexplodeの使い方
 
 ## 概要
  - 収められている値がlistのとき、listを展開して新たなデータフレームを作る操作

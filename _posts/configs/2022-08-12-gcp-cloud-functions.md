@@ -10,8 +10,6 @@ sort_key: "2022-08-12"
 update_dates: ["2022-08-12"]
 ---
 
-# gcp cloud functionsの使い方
-
 ## 概要
  - python, nodejs, goで関数単位でデプロイできるクラウドサービス
    - pythonで動作させる場合、`flask`の`request`に相当する引数を与えることができる

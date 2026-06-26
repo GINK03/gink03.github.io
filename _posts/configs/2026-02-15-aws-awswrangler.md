@@ -10,8 +10,6 @@ sort_key: "2026-02-15"
 update_dates: ["2026-02-15"]
 ---
 
-# AWS Data Wrangler（awswrangler）の使用方法
-
 ## 概要
  - AWS Data Wrangler（awswrangler）は AWSのログ系やデータ系サービスをPythonから扱いやすくするライブラリ
 

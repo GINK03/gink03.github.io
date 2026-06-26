@@ -10,8 +10,6 @@ update_dates: ["2022-05-30"]
 comments: false
 ---
 
-# pandas replaceのチートシート
-
 ## 概要
  - `pd.Series`の値を置き換える
  - 何通りが方法があり、dict型で置き換える方法と、listで置き換える方法がある

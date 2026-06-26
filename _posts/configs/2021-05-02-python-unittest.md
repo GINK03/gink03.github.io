@@ -10,8 +10,6 @@ sort_key: "2022-05-20"
 update_dates: ["2022-05-20"]
 ---
 
-# pythonのunittestについて
-
 ## 概要
  - 標準モジュールの`unittest`でそこそこテストできる  
  - モックの機能もある

@@ -10,8 +10,6 @@ update_dates: ["2022-05-30", "2020-12-29"]
 comments: false
 ---
 
-# autohotkeyの使い方
-
 ## 概要
  - キーを置き換えたり、キーに特定のスクリプトを紐付けて自動化するソフトウェア
     - osxの[/karabiner/](/karabiner/)に相当する

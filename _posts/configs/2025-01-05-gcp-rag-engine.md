@@ -10,8 +10,6 @@ sort_key: "2025-01-05"
 update_dates: ["2025-01-05"]
 ---
 
-# gcp rag engine
-
 ## 概要
  - vertex aiのサービスの一部にrag engineがある
  - サービスアカウントで使用する際の権限は、`roles/aiplatform.admin`が必要

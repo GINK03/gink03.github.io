@@ -10,8 +10,6 @@ update_dates: ["2022-09-09"]
 comments: false
 ---
 
-# pandas pivotのチートシート
-
 ## pivotとpivot_tableの違い
  - `pivot_table`は`pivot`の一般化
  - `pivot_table`は集約関数を使えたり、`fill_value`を使える

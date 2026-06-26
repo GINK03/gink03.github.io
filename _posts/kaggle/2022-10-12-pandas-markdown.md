@@ -10,7 +10,7 @@ sort_key: "2022-10-12"
 update_dates: ["2022-10-12"]
 ---
 
-# pandasのmarkdownについて
+## pandasのmarkdownについて
 
 ## 概要
  - jupyterなどでdataframeを表示したとき、デフォルトではHTMLで、tab or space区切りになっている

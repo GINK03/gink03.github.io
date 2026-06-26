@@ -10,8 +10,6 @@ life_hack: true
 comments: false
 ---
 
-# TOM'S HARDWAREの記事を読むときの注意点
-
 ## 概要
  - CPU, GPU, SSD, マザーボードなどのハードウェアのレビューサイト
  - GPUのレビューは特に評価が高い

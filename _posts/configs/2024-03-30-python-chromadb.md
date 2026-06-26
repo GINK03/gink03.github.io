@@ -11,8 +11,6 @@ sort_key: "2024-03-30"
 update_dates: ["2024-03-30"]
 ---
 
-# python chromadbの使い方
-
 ## 概要
  - embeddingしたテキストを保存し、L2, cosine, IP距離でテキストをクエリに検索できるデータベース
  - embeddingに外部のサービス(e.g. OpenAI)を使える

@@ -11,8 +11,6 @@ sort_key: "2022-02-01"
 update_dates: ["2022-02-01"]
 ---
 
-# aws athenaの使い方
-
 ## 概要
  - AWSが提供するサーバレスのOLAP Database
  - S3にログデータが置いてあることを期待する

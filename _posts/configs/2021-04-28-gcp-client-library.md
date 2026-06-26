@@ -10,7 +10,6 @@ sort_key: "2021-04-28"
 update_dates: ["2021-04-28"]
 ---
 
-# gcp client libraryチートシート
  - `google-api-python-client`というpackage
  - pythonでGCPのAPIを叩く際に必要
  - 様々なAPIがgoogleからも開発されているが、これが一番根幹のAPIになる

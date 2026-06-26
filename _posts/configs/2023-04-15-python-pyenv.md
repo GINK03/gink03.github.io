@@ -10,7 +10,7 @@ sort_key: "2023-04-15"
 update_dates: ["2023-04-15"]
 ---
 
-# pythonのpyenvの使い方
+## pythonのpyenvの使い方
 
 ## 概要
  - pyenvはvenvと別のもの

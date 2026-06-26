@@ -10,8 +10,6 @@ sort_key: "2024-11-24"
 update_dates: ["2024-11-24"]
 ---
 
-# pandas data typesの種類
-
 ## 概要
  - 拡張データタイプとして`pd.Int64Dype`や`pd.Float64Dtype`などがある
    - `np.nan`が含まれると、intではなくfloatになる問題があったが、これを解決するために導入された

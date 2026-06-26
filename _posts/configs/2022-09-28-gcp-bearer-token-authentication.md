@@ -10,8 +10,6 @@ sort_key: "2022-09-28"
 update_dates: ["2022-09-28"]
 ---
 
-# gcp bearer token authenticationの使い方
-
 ## 概要
  - GCPのサービスにREST APIで接続する際に認証として必要なトークンを出力する機能
  - トークンはサービスアカウントのクレデンシャルから生成できる

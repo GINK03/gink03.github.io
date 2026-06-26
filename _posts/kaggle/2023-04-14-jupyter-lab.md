@@ -10,8 +10,6 @@ sort_key: "2023-04-14"
 update_dates: ["2023-04-14"]
 ---
 
-# jupyter labの使い方
-
 ## 概要 
  - jupyter classicでは動作しない拡張機能がjupyter labで動作することがある
  - jupyter classicより機能が増加している

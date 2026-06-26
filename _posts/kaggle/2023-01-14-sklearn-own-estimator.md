@@ -10,8 +10,6 @@ sort_key: "2023-01-12"
 update_dates: ["2023-01-12"]
 ---
 
-# sklearn own estimatorの設計と開発
-
 ## 概要
  - `sklearn`形式の`fit`, `predict`, `transform`などを一般化したインターフェースで扱う方法
  - `sklearn`のパイプラインで設計された処理に独自のestimatorを組み込む際に、独自に設計・開発が必要

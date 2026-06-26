@@ -11,8 +11,6 @@ sort_key: "2024-04-30"
 update_dates: ["2024-04-30"]
 ---
 
-# aws dynamodbの概要と使い方
-
 ## 概要
  - AWSのマネージドNoSQLデータベースサービス
  - GCPのFirestoreに相当

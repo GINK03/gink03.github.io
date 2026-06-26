@@ -11,7 +11,7 @@ sort_key: "2025-10-29"
 update_dates: ["2025-10-29"]
 ---
 
-# NumPy の `where` 関数の使い方
+## NumPy の `where` 関数の使い方
 
 ## 概要
  - 基本構文

@@ -12,8 +12,6 @@ sort_key: "2024-07-21"
 update_dates: ["2024-07-21"]
 ---
 
-# pandas clip
-
 ## 具体例
 
 ```python

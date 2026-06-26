@@ -10,8 +10,6 @@ sort_key: "2025-01-16"
 update_dates: ["2025-01-16"]
 ---
 
-# gemini chat python
-
 ## 概要
  - geminiでのchatでは特別なAPIが用意されている
  - openaiのroleとは異なり、systemに相当するroleがないので代替する必要がある

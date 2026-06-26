@@ -10,8 +10,6 @@ sort_key: "2022-09-20"
 update_dates: ["2022-09-20"]
 ---
 
-# bigquery pythonのチートシート
-
 ## 概要
  - [/pandas-gbq/](/pandas-gbq/)とは別のGoogleオフィシャルのpythonバインディング
    - pandas-gbqより安定していると言われている

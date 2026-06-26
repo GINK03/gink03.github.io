@@ -10,8 +10,6 @@ sort_key: "2024-11-12"
 update_dates: ["2024-11-12"]
 ---
 
-# sklearn elasticnetの使い方
-
 ## 概要
  - `ElasticNet` を用いる方法と `SGDRegressor` を用いる方法がある
    - `ElasticNet` - 座標降下法を用いる

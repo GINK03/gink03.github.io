@@ -11,8 +11,6 @@ sort_key: "2022-02-16"
 update_dates: ["2022-02-16","2022-01-09"]
 ---
 
-# eternal-terminalの使い方
-
 ## 概要
  - Eternal TCP is a layer in between an application and unix TCP sockets that make the sockets robust to TCP disconnects including roaming and connection failure
  - roamingと再開可能なtcpでの接続を行うsshラッパー

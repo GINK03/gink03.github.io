@@ -10,8 +10,6 @@ sort_key: "2024-10-18"
 update_dates: ["2024-10-18"]
 ---
 
-# bigquery notebooksの使い方
-
 ## 概要
  - BigQueryのweb UI上でJupyter notebookを使える機能
    - BigQuery上のデータのアクセス方法がJupyter notebookと少し異なる

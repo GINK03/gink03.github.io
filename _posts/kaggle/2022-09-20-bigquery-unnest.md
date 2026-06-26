@@ -10,8 +10,6 @@ sort_key: "2022-09-20"
 update_dates: ["2022-09-20"]
 ---
 
-# bigquery unnestのチートシート
-
 ## 概要
  - 複雑にネストされた情報は`UNNEST`でアクセスできる
    - ネストとは値が`List[Dict[str, Any]]`のような構造

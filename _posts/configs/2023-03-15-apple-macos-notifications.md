@@ -10,8 +10,6 @@ sort_key: "2023-03-15"
 update_dates: ["2023-03-15"]
 ---
 
-# macOS notificationsの設定
-
 ## 概要
  - 重要なアプリからの通知を見逃さないようにする
 

@@ -10,8 +10,6 @@ sort_key: "2023-09-03"
 update_dates: ["2023-09-03"]
 ---
 
-# google colabでgoogle driveの使い方
-
 ## 概要
  - colabからgoogle driveをマウントできる
  - csvの出力先をGoogle Driveに設定すればGoogle Sheetsですぐ開くことができ、便利

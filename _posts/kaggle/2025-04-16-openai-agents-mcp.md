@@ -10,7 +10,7 @@ sort_key: "2025-04-16"
 update_dates: ["2025-04-16"]
 ---
 
-# openai anget mcp
+## openai anget mcp
 
 
 ## 概要

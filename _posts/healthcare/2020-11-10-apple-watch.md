@@ -9,7 +9,6 @@ tag: ["healthcare", "apple watch"]
 comments: false
 ---
 
-# apple watchの使い方
  - 健康管理以外の軸の価値を見出す必要はない
  - とりあえず着けていればpush型の通知で気づきが多いのでその価値で十分ペイする
 

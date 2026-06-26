@@ -10,7 +10,7 @@ sort_key: "2023-08-15"
 update_dates: ["2023-08-15"]
 ---
 
-# linuxのifupdownについて
+## linuxのifupdownについて
 
 ## 概要
  - linuxのサービスの`networking`を含むパッケージが`ifupdown`

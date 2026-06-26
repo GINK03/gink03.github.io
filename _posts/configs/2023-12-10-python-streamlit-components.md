@@ -10,7 +10,7 @@ sort_key: "2023-12-10"
 update_dates: ["2023-12-10"]
 ---
 
-# streamlitのdataframeの概要と使い方
+## streamlitのdataframeの概要と使い方
 
 ## 概要
  - streamlitの表示オブジェクトはユーザ自身が作成することができる

@@ -10,8 +10,6 @@ sort_key: "2022-07-08"
 update_dates: ["2022-07-08"]
 ---
 
-# cppのvectorの使い方
-
 ## 概要
  - std
  - `sort`, `reverse`は`<algorithm>`に内包されている

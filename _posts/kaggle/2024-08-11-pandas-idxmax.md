@@ -10,7 +10,7 @@ sort_key: "2024-08-11"
 update_dates: ["2024-08-11"]
 ---
 
-# pandasのidxmaxの使い方
+## pandasのidxmaxの使い方
 
 ## 概要
  - pandasの`idxmax`関数は、最大値を持つ行・列のインデックスを取得する関数

@@ -10,8 +10,6 @@ sort_key: "2025-07-05"
 update_dates: ["2025-07-05", "2026-06-22"]
 ---
 
-# Claude Code の使い方
-
 ## 概要
  - Codex CLI や Gemini CLI に近いエージェント型の CLI ツール
  - `CLAUDE.md` をプロジェクトのルートに置くと Claude Code が文脈を読み取りやすくなる

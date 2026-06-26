@@ -10,7 +10,7 @@ sort_key: "2024-03-04"
 update_dates: ["2024-03-04"]
 ---
 
-# pandasのdroplevelの使い方
+## pandasのdroplevelの使い方
 
 ## 概要
  - index, columnがMultiIndexの場合、指定したlevelを削除する

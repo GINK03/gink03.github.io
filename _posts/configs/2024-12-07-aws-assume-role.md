@@ -10,8 +10,6 @@ update_dates: ["2024-12-07"]
 comments: false
 ---
 
-# aws assume roleの使い方
-
 ## 概要
  - 一時的な認証情報を払い出すための機能
    - e.g. webの面でのセキュリティ向上

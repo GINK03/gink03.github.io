@@ -11,8 +11,6 @@ sort_key: "2021-01-14"
 update_dates: ["2021-01-14"]
 ---
 
-# sqlalchemy
-
 ## install
 
 ```console

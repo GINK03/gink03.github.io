@@ -10,8 +10,6 @@ sort_key: "2022-08-10"
 update_dates: ["2022-08-10"]
 ---
 
-# python dataclassの使い方
-
 ## 概要
  - scalaなどであるdataclassのpython版
  - namedtupleなどと異なり、mutableなデータを扱える

@@ -11,7 +11,7 @@ sort_key: "2024-01-06"
 update_dates: ["2024-01-06"]
 ---
 
-# python pptxの使い方
+## python pptxの使い方
 
 ## 概要
  - pythonでpowerpointを操作するためのライブラリ

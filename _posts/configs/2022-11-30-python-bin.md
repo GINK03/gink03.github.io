@@ -10,7 +10,7 @@ sort_key: "2022-11-30"
 update_dates: ["2022-11-30"]
 ---
 
-# pythonの2進数表記
+## pythonの2進数表記
 
 ## `bin`関数
 

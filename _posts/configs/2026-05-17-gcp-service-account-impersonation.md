@@ -10,8 +10,6 @@ sort_key: "2026-05-17"
 update_dates: ["2026-05-17"]
 ---
 
-# gcp service account impersonation
-
 ## 概要
  - service account impersonationは、認証済みのユーザやサービスアカウントが、対象サービスアカウントの短期の認証情報を取得してGCP APIを呼ぶ仕組み
  - サービスアカウントキーをローカルやCIに置かずに済むため、キー漏洩のリスクを下げられる

@@ -10,7 +10,7 @@ sort_key: "2022-11-26"
 update_dates: ["2022-11-26"]
 ---
 
-# pythonのsortedcontainersの使い方
+## pythonのsortedcontainersの使い方
 
 ## 概要
  - python3の3.10には`dict`, `set`, `list`の木実装がなさそう

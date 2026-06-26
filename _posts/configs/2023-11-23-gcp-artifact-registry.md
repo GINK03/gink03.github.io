@@ -10,8 +10,6 @@ sort_key: "2023-11-23"
 update_dates: ["2023-11-23"]
 ---
 
-# gcp artifact registry
-
 ## 概要
  - GCPの新しいコンテナレジストリ
  - Google Container Registryとの違いはアクセス範囲にある

@@ -10,8 +10,6 @@ sort_key: "2023-12-30"
 update_dates: ["2023-12-30"]
 ---
 
-# gcp cloud schedulerの概要
-
 ## 概要
  - gcpのサービス間で定期的に処理を実行するためのサービス
  - [/uxni cron/](/unix-cron/)のような機能を提供する

@@ -11,8 +11,6 @@ sort_key: "2022-02-21"
 update_dates: ["2022-02-21"]
 ---
 
-# google search suggestionsの取得
-
 ## 概要
  - google検索時に候補となるキーワードが表示されるサービスがある
    - APIで提供されており、このデータにアクセスすることができる

@@ -10,7 +10,7 @@ sort_key: "2023-01-14"
 update_dates: ["2023-01-14"]
 ---
 
-# pythonのdirの使い方
+## pythonのdirの使い方
 
 ## 概要
  - pythonのオブジェクトのアトリビュートを知るためのビルドイン関数

@@ -10,8 +10,6 @@ tag: ["travel", "子供"]
 comments: false
 ---
 
-# kid's us.land
-
 ## 概要
  - 子供が遊べて親がくつろげる施設
    - WiFiが完備されており、PCで仕事しながら子供が遊ぶことができる

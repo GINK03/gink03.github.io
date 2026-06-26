@@ -10,7 +10,7 @@ sort_key: "2023-07-21"
 update_dates: ["2023-07-21"]
 ---
 
-# macOSのsleepの方法
+## macOSのsleepの方法
 
 ## 概要
  - macOSでCLIでsleepするにはコマンドを実行したバイナリ(またはアプリ)のシステムへの介入の承認が必要になる

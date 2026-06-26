@@ -9,7 +9,7 @@ sort_key: "2023-08-11"
 update_dates: ["2023-08-11"]
 ---
 
-# jupyter notebookでbigqueryを利用する方法
+## jupyter notebookでbigqueryを利用する方法
 
 ## 概要
  - 手法としては`google-cloud-bigquery`と`pandas_gbq`を利用する方法の２つが存在する

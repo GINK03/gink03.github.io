@@ -10,8 +10,6 @@ sort_key: "2026-02-10"
 update_dates: ["2026-02-10"]
 ---
 
-# Anthropic Bedrock Python
-
 ## 概要
  - Anthropic SDKにはAmazon Bedrock向けの`AnthropicBedrock`が用意されている
 

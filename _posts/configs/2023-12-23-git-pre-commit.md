@@ -11,7 +11,7 @@ sort_key: "2023-12-23"
 update_dates: ["2023-12-23"]
 ---
 
-# pre-commitの使い方
+## pre-commitの使い方
 
 ## 概要
  - `git commit`時に、コミット前に何か処理を実行することができる

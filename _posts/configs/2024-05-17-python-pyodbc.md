@@ -11,8 +11,6 @@ sort_key: "2024-05-17"
 update_dates: ["2024-05-17"]
 ---
 
-# python pyodbcの使い方
-
 ## 概要
  - pythonでSQL Serverに接続するためのライブラリ
 

@@ -10,8 +10,6 @@ update_dates: ["2022-09-25"]
 comments: false
 ---
 
-# gcp vertex ai custom containerの使い方
-
 ## 概要
  - Cloud Runで走らせるには不足するような場合(GPUを使いたい場合など)、マネージドにAPIをサーブできる
 

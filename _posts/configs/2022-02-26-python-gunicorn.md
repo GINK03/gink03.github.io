@@ -11,8 +11,6 @@ sort_key: "2022-05-11"
 update_dates: ["2022-05-11","2022-02-26"]
 ---
 
-# gunicornの使い方
-
 ## 概要
  - flaskなどのweb appをラップして実用的なAPI(web)機能を提供する
 

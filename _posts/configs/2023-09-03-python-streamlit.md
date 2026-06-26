@@ -10,7 +10,7 @@ sort_key: "2023-09-03"
 update_dates: ["2023-09-03"]
 ---
 
-# streamlitの概要と使い方
+## streamlitの概要と使い方
 
 ## 概要
  - pythonで簡単なMVPを作成できるライブラリ

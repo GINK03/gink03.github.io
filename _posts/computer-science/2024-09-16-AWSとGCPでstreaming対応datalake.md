@@ -10,8 +10,6 @@ sort_key: "2024-09-16"
 update_dates: ["2020-09-16"]
 ---
 
-# AWSとGCPでstreaming対応datalakeについて
-
 ## 概要
  - AWSとGCPでstreaming対応datalakeの構築方法について
  - 特に、aws上で動作させているプロダクトのログをgcpのbigqueryで分析するパターンの例を紹介

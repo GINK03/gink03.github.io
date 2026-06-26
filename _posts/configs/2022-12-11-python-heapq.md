@@ -10,8 +10,6 @@ sort_key: "2022-12-11"
 update_dates: ["2022-12-11"]
 ---
 
-# python heapqの使い方
-
 ## 概要
  - listをラップしてheapとして利用する
  - orerderedのlistにしてくれるわけではない

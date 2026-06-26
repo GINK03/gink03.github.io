@@ -10,8 +10,6 @@ sort_key: "2022-08-02"
 update_dates: ["2022-08-02"]
 ---
 
-# python enumの使い方
-
 ## 概要
  - pythonで扱えるenum型
  - `str`や`int`を継承することができる

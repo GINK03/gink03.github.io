@@ -10,8 +10,6 @@ update_dates: ["2022-05-30"]
 comments: false
 ---
 
-# pandas rankのチートシート
-
 ## 概要
  - ランク関数
    - `method`

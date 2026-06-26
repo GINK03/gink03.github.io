@@ -10,8 +10,6 @@ sort_key: "2024-09-22"
 update_dates: ["2024-09-22"]
 ---
 
-# obsidian-livesyncの使い方
-
 ## 概要
  - CouchDBを使ったObsidianの同期ツール
  - macOS, iOS両方に対応しているがiOSで使用するにはhttps化が必要

@@ -11,8 +11,6 @@ sort_key: "2024-02-04"
 update_dates: ["2024-02-04", "2025-08-27"]
 ---
 
-# terraformの基本的な使い方
-
 ## 概要
  - IaC (Infrastructure as Code) の一つ
  - AWS, GCP, Azureなどのクラウドプロバイダーに対応

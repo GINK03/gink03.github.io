@@ -10,8 +10,6 @@ sort_key: "2023-08-29"
 update_dates: ["2023-08-29"]
 ---
 
-# Google Sheets Data Validation(入力規則)の使い方
-
 ## 概要
  - 英語表記では`Data Validation`, 日本語文献では`データの入力規則`と表現される
 

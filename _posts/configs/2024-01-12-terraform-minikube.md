@@ -11,8 +11,6 @@ sort_key: "2024-01-12"
 update_dates: ["2024-01-12"]
 ---
 
-# terraform + minikubeの基本的な使い方
-
 ## 概要
  - terraformでminikube上にnginxをデプロイする
 

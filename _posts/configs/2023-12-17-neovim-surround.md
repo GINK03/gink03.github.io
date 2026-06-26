@@ -11,8 +11,6 @@ sort_key: "2023-12-17"
 update_dates: ["2023-12-17"]
 ---
 
-# neovim surroundの使い方
-
 ## 概要
  - neovim用のvim-surround
  - 特定の文字列をカッコや"などで囲むことができる

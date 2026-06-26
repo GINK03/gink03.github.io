@@ -10,8 +10,6 @@ update_dates: ["2022-09-06"]
 comments: false
 ---
 
-# pandas groupbyのチートシート
-
 ## groupby関数で得られるオブジェクト
  - データフレームを特定のキーでグルーピングする
    - groupしたオブジェクトを取り出す

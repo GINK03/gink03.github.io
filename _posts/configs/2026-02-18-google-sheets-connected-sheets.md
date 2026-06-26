@@ -10,8 +10,6 @@ sort_key: "2026-02-18"
 update_dates: ["2026-02-18"]
 ---
 
-# Google Sheets Connected Sheetsの使い方
-
 ## 概要
  - Google SheetsからBigQueryのデータを直接参照できる機能
  - 2023年前後から 個人のGoogleアカウントや ほぼすべてのGoogle Workspaceアカウントで利用できるようになった

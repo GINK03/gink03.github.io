@@ -10,8 +10,6 @@ tag: ["life hack", "aliexpress", "ネット通販"]
 comments: false
 ---
 
-# aliexpressの使い方について
-
 ## ノウハウ
  - 個別のアカウントを作成せず、Google Accountなどに紐付ける
  - 日本語の設定はNG(変だし、バグる)

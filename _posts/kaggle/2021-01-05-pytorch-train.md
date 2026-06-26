@@ -10,7 +10,7 @@ sort_key: "2022-03-22"
 update_dates: ["2022-03-22"]
 ---
 
-# pytorchのtrain, validationの使い方
+## pytorchのtrain, validationの使い方
 
 ## 概要
  - pytorchでのtrainの使い方

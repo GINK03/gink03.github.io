@@ -10,7 +10,7 @@ sort_key: "2023-10-28"
 update_dates: ["2023-10-28", "2026-04-06"]
 ---
 
-# pandasのtransform関数の使い方
+## pandasのtransform関数の使い方
 
 ## 概要
  - 要素やグループに対して、関数を適用する

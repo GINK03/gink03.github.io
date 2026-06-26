@@ -10,8 +10,6 @@ sort_key: "2024-01-10"
 update_dates: ["2020-01-10"]
 ---
 
-# nodejsのnpmの使い方
-
 ## 概要
  - nodejsのパッケージマネージャ
  - node package managerの略

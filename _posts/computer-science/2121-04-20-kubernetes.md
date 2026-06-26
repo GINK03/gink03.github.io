@@ -11,8 +11,6 @@ sort_key: "2021-12-30"
 update_dates: ["2021-12-30"]
 ---
 
-# kubernetesについて
-
 ## GCP上のクラスタ
 
 ### クラスタの作成
@@ -164,7 +162,7 @@ $ kubectl top nodes
 $ kubectl get hpa
 ```
 
-# yamlのパラメータの設定
+## yamlのパラメータの設定
  - `parallelism`
    - ジョブで実行する最大のPOD数
  - `completions`
@@ -172,9 +170,9 @@ $ kubectl get hpa
  - `backofflimit`
    - 指数バックオフで何回チャレンジするか
 
-# 設定テンプレート
+## 設定テンプレート
 
-## 小数点2000桁を計算する
+### 小数点2000桁を計算する
 
 ```yaml
 apiVersion: batch/v1
@@ -196,7 +194,7 @@ spec:
       restartPolicy: Never
 ```
 
-## cron job
+### cron job
 
 ```yaml
 apiVersion: batch/v1
@@ -222,7 +220,7 @@ spec:
  - `kubectl get pods`して`kubectl logs <pod-name>`で結果を確認できる
 	
 
-## hello-app
+### hello-app
 
 ```yaml
 apiVersion: apps/v1
@@ -248,7 +246,7 @@ spec:
 
 ```
 
-## namespaceを作成
+### namespaceを作成
 
 ```yaml
 apiVersion: v1

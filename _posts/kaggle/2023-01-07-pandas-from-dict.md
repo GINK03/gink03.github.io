@@ -10,7 +10,7 @@ sort_key: "2023-01-07"
 update_dates: ["2023-01-07"]
 ---
 
-# pandasのdictからdataframeの変換について
+## pandasのdictからdataframeの変換について
 
 ## 概要
  - pythonのdict型からdataframeの変換は暗黙的に変換される例とorientを指定しなければ行けない例がある

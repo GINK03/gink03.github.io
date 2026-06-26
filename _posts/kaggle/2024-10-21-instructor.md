@@ -10,8 +10,6 @@ sort_key: "2024-10-21"
 update_dates: ["2024-10-21"]
 ---
 
-# instructorの使い方
-
 ## 概要
  - openaiのtool callingをpydanticで呼び出せるようにしたライブラリ
  - たまに構造化に失敗するので、リトライ機能が必要になることがある

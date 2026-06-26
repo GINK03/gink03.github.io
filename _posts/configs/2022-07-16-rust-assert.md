@@ -10,8 +10,6 @@ sort_key: "2022-07-16"
 update_dates: ["2022-07-16"]
 ---
 
-# rust assertの使い方
-
 ## 概要
  - rustでのassertの使い方
  - pythonのassertと似ている

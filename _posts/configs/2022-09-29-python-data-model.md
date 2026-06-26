@@ -10,8 +10,6 @@ sort_key: "2022-09-29"
 update_dates: ["2022-09-29"]
 ---
 
-# python data modelの使い方
-
 ## 概要
  - クラスの`__init__`, `__str__`, `__len__`などこと
 

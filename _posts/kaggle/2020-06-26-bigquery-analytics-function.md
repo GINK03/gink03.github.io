@@ -10,8 +10,6 @@ sort_key: "2022-03-29"
 update_dates: ["2022-03-29"]
 ---
 
-# bigquery analytics function(分析関数)について
-
 ## 概要
  - bigqueryなどで使えるanalytics function(分析関数)の説明
    - analytics functionには別名が多くあり、window functionと表現されることもあった

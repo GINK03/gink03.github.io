@@ -10,8 +10,6 @@ sort_key: "2023-06-27"
 update_dates: ["2023-06-27"]
 ---
 
-# openai chatgpt functionsの使い方
-
 ## 概要
  - ChatGPTのリクエストに事前にfunctionsというフィールドにAPIの情報を入れておくことで質問に答える際にAPIを呼び出す出力を出せる
    - `function_call`に定義した関数名を入力するとAPIの利用を強制することができる

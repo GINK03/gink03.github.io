@@ -10,7 +10,7 @@ sort_key: "2022-08-02"
 update_dates: ["2022-08-02"]
 ---
 
-# neovimでのpacker.nvimの使い方
+## neovimでのpacker.nvimの使い方
 
 ## 概要
  - neovim専用のパッケージマネージャ(vimでは動作しない)

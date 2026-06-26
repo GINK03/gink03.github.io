@@ -10,7 +10,7 @@ sort_key: "2022-10-05"
 update_dates: ["2022-10-05"]
 ---
 
-# grequestsの使い方
+## grequestsの使い方
 
 ## 概要
  - pythonのrequestsライブラリのasync版

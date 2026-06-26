@@ -10,7 +10,7 @@ sort_key: "2024-12-15"
 update_dates: ["2024-12-15"]
 ---
 
-# pythonでsudachipyを使う
+## pythonでsudachipyを使う
 
 ## 概要
  - sudachiはワークスアプリケーションズが開発した形態素解析器

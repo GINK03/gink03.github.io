@@ -10,8 +10,6 @@ sort_key: "2026-01-07"
 update_dates: ["2026-01-07"]
 ---
 
-# strong opinions, loosely held
-
 ## 概要
  - 「Strong Opinions, Loosely Held（強い意見を、緩やかに持つ）」という哲学
 

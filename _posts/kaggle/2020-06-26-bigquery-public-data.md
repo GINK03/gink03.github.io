@@ -10,8 +10,6 @@ sort_key: "2022-04-13"
 update_dates: ["2022-04-13","2022-04-05","2022-04-04"]
 ---
 
-# bigquery public dataについて
-
 ## 概要
  - bigqueryで利用できる公開データセット
  - カラムに対する詳細な説明は[マーケットプレイス](https://console.cloud.google.com/marketplace/product/bigquery-public-datasets/)から確認できる

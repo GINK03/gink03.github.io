@@ -8,8 +8,6 @@ tag: ["davinci resolve"]
 comments: false
 ---
 
-# davinci resolve
-
 ## platforms
  - linux
  - windows

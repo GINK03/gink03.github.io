@@ -10,7 +10,7 @@ sort_key: "2024-11-21"
 update_dates: ["2024-11-21"]
 ---
 
-# pythonでmsgpackを使う
+## pythonでmsgpackを使う
 
 ## 概要
  - msgpackを使用したデータのシリアライズ、デシリアライズについて

@@ -10,7 +10,7 @@ sort_key: "2022-03-22"
 update_dates: ["2022-03-22"]
 ---
 
-# pytorchのdataset classの使い方
+## pytorchのdataset classの使い方
 
 ## 概要
  - `Dataset Class`を継承して使う

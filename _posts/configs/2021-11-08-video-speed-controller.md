@@ -10,8 +10,6 @@ sort_key: "2021-11-08"
 update_dates: ["2021-11-08"]
 ---
 
-# video speed controllerの使い方
-
 ## 概要
  - google chromeの拡張機能で再生している動画の再生速度を変更することができる
  - `shift+D`で0.1倍、再生速度を上げる

@@ -9,8 +9,6 @@ sort_key: "2023-11-18"
 update_dates: ["2023-11-18"]
 ---
 
-# jupyter magic commandsの使い方
-
 ## 概要
  - pythonのプログラムとは別にjupyter独自のコマンドがある
  - セルの先頭に`%`, `%%`をつけることで実行できる

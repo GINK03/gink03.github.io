@@ -10,7 +10,7 @@ sort_key: "2023-12-10"
 update_dates: ["2023-12-10"]
 ---
 
-# streamlitのcolumnsの概要と使い方
+## streamlitのcolumnsの概要と使い方
 
 ## 概要
  - streamlitは2023年現在columns以外でのレイアウト設定ができない

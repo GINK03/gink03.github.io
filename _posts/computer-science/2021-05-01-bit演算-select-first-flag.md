@@ -10,7 +10,7 @@ sort_key: "2021-12-30"
 update_dates: ["2021-12-30"]
 ---
 
-# bit演算 select first flagについて
+## bit演算 select first flagについて
 
 ## 概要
  - `..xxx1010`のようなbit arrayがある時、`..xxx0010`を取り出すアルゴリズム

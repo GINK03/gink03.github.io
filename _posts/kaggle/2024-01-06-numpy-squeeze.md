@@ -11,8 +11,6 @@ sort_key: "2024-01-06"
 update_dates: ["2024-01-06"]
 ---
 
-# numpy squeezeの使い方
-
 ## 概要
  - numpyのflattenと同じような働きをする
  - axisを指定することで、指定した軸を削除することができる

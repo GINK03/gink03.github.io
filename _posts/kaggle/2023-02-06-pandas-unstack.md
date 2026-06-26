@@ -10,7 +10,7 @@ sort_key: "2023-02-06"
 update_dates: ["2023-02-06"]
 ---
 
-# pandasのunstackの使い方
+## pandasのunstackの使い方
 
 ## 概要
  - `aggregate`関数で得られたmulti-indexを展開してカラムに変換する

@@ -11,8 +11,6 @@ sort_key: "2022-02-18"
 update_dates: ["2022-02-18"]
 ---
 
-# terraformの基本的な使い方
-
 ## 概要
  - Terraform is an open-source infrastructure as code software tool
 

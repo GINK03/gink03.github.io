@@ -10,8 +10,6 @@ sort_key: "2024-07-07"
 update_dates: ["2024-07-07"]
 ---
 
-# python redisの使い方
-
 ## 概要
  - redisまたはvalkeyのpythonクライアント
  - ほぼ同じ機能の名前の`valkey`というパッケージのクライアントが存在する

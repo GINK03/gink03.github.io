@@ -10,8 +10,6 @@ sort_key: "2023-04-13"
 update_dates: ["2023-04-13"]
 ---
 
-# openai chatgptの使い方
-
 ## 概要
  - [chat.openai.com/chat](https://chat.openai.com/chat/)
  - GPT-3.5/GPT-4のモデルによるチャットAI

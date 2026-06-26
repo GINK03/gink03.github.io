@@ -11,8 +11,6 @@ sort_key: "2025-12-31"
 update_dates: ["2025-12-31"]
 ---
 
-# GitHub Actionsの基本
-
 ## 概要
  - リポジトリ上のイベント（push や pull_request など）をきっかけに、定義済みの処理を自動実行する仕組み
  - ワークフローは通常 `.github/workflows/*.yml` に置く

@@ -11,8 +11,6 @@ sort_key: "2022-02-08"
 update_dates: ["2022-02-08","2021-10-31"]
 ---
 
-# docker-desktopの使い方
-
 ## 概要
  - macOS, windowsで利用できるdokcerの環境と管理ツールを提供する
  - linux版のdockerと異なり仮想マシンとして動作する

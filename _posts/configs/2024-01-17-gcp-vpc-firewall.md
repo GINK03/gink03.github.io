@@ -10,8 +10,6 @@ sort_key: "2024-01-17"
 update_dates: ["2024-01-17"]
 ---
 
-# gcp vpc firewallの概要
-
 ## 概要
  - GCPのVPC内での通信を制御するための機能
  - Compute Engineのインスタンスに対して適用することができる

@@ -10,8 +10,6 @@ sort_key: "2024-09-07"
 update_dates: ["2024-09-07"]
 ---
 
-# sklearn calibration curveの使い方
-
 ## 概要
  - sklearnのcalibration_curveを使って、確率予測の正確性を評価できる
  - 予測確率の値と実際の正解ラベルから導かれる確率の値をプロットすることで、予測確率の正確性を評価できる

@@ -12,8 +12,6 @@ update_dates: ["2022-10-13"]
 ---
 
 
-# lightgbm importanceのチートシート
-
 ## 概要
  - splitとgainが選べる
    - split; 分岐数

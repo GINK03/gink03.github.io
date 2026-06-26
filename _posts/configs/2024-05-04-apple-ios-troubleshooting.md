@@ -11,7 +11,7 @@ sort_key: "2024-05-04"
 update_dates: ["2024-05-04"]
 ---
 
-# apple iphoneのトラブルシューティング
+## apple iphoneのトラブルシューティング
 
 ## 突然再起動する
  - 原因

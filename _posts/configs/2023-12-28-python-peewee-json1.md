@@ -11,8 +11,6 @@ sort_key: "2023-12-28"
 update_dates: ["2023-12-28"]
 ---
 
-# python peewee(JSON1拡張)の使い方
-
 ## 概要
  - peeweeで`playhouse.sqlite_ext`を使うとJSON1拡張が使えるようになる
 

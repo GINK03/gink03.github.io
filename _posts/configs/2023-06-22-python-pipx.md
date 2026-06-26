@@ -10,7 +10,7 @@ sort_key: "2023-06-22"
 update_dates: ["2023-06-22"]
 ---
 
-# pythonのpipxの使い方
+## pythonのpipxの使い方
 
 ## 概要
  - node.jsの`npx`に似た機能を提供する

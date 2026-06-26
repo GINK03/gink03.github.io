@@ -10,8 +10,6 @@ sort_key: "2024-07-07"
 update_dates: ["2024-07-07"]
 ---
 
-# seaborn lineplot
-
 
 ## lineplotを描画する
 

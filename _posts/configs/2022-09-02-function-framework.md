@@ -10,7 +10,7 @@ sort_key: "2022-08-12"
 update_dates: ["2022-08-12"]
 ---
 
-# gcp cloud functionsの使い方
+## gcp cloud functionsの使い方
 
 ## 概要
  - GCPの[/cloud funcitons/](/gcp-cloud-functions/)のテストフレームワーク

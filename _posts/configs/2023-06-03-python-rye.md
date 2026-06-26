@@ -10,7 +10,7 @@ sort_key: "2023-06-03"
 update_dates: ["2023-06-03"]
 ---
 
-# pythonのryeの使い方
+## pythonのryeの使い方
 
 ## 概要
  - poetryと同じようなツール

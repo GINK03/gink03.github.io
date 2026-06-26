@@ -11,8 +11,6 @@ update_dates: ["2022-05-09"]
 ---
 
 
-# apple airpodsについて
-
 ## 概要
  - 分離しているタイプのAirPods Pro, ヘッドセットタイプのAirPods Maxなどがある
 

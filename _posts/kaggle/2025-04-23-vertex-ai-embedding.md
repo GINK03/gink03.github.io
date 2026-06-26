@@ -10,8 +10,6 @@ update_dates: ["2025-04-23"]
 comments: false
 ---
 
-# gcp vertex ai embeddingの使い方
-
 ## 概要
  - テキストの埋め込みを生成するためのAPI
  - MRLに対応しておりあとの方の次元を削っても性能が落ちにくい

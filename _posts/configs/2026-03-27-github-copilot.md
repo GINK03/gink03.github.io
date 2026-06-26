@@ -11,8 +11,6 @@ sort_key: "2026-03-27"
 update_dates: ["2026-03-27"]
 ---
 
-# GitHub Copilotの使い方
-
 ## 概要
  - iosのアプリやwebから使えるllm agent
    - 2026年現状iosとcopilotとwebのcopilotは情報が同期できない模様

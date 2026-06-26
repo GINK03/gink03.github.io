@@ -10,7 +10,7 @@ sort_key: "2023-09-01"
 update_dates: ["2023-09-01"]
 ---
 
-# google colabのformの使い方
+## google colabのformの使い方
 
 ## formで変数を変更する(スライダーやドロップリストを表示する)
  - 概要

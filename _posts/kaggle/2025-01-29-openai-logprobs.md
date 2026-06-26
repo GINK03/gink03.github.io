@@ -10,7 +10,7 @@ sort_key: "2025-01-29"
 update_dates: ["2025-01-29"]
 ---
 
-# openai log probs
+## openai log probs
 
 ## 概要
  - `davinci` や `babbage` などのモデルを使って、文章の生成を行う際に、各単語の出現確率を取得可能

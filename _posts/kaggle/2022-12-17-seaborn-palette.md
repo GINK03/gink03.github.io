@@ -10,8 +10,6 @@ sort_key: "2022-12-17"
 update_dates: ["2022-12-17"]
 ---
 
-# seaborn paletteの使い方
-
 ## 概要
  - `sns.set_palette関数`で設定できるとされているが反映されないこともある
  - `sns.barplot(x, y, platte=pallet)`などplot関数の引数で個別に色を設定できる

@@ -10,8 +10,6 @@ sort_key: "2025-08-17"
 update_dates: ["2025-08-17"]
 ---
 
-# bigquery vector search
-
 ## 概要
  - bigqueryに入っているベクトルデータから類似度を計算する方法
 

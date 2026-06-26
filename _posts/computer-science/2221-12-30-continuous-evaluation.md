@@ -11,8 +11,6 @@ sort_key: "2021-12-30"
 update_dates: ["2021-12-30"]
 ---
 
-# 継続評価(continuous evaluation)について
-
 ## 機械学習の例
  - ***GCP***
    - **仕組み**

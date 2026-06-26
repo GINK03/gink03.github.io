@@ -10,8 +10,6 @@ sort_key: "2021-03-22"
 update_dates: ["2021-03-22","2021-03-20"]
 ---
 
-# google cloud professional machine learning engineer認定
-
 ## 参考ドキュメント
  - [公式の説明](https://cloud.google.com/certification/machine-learning-engineer)
  - [Google Cloud Professional Machine Learning Engineer Exam（BETA）まで20日](https://towardsdatascience.com/20-days-to-google-cloud-professional-machine-learning-engineer-exam-beta-b48909499942)

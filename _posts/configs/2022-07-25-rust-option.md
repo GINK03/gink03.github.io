@@ -10,8 +10,6 @@ sort_key: "2022-07-25"
 update_dates: ["2022-07-25"]
 ---
 
-# rust optionの使い方
-
 ## 概要
  - PythonのOptionalと同じ
  - 値の取り出し方にいくつか方法がある

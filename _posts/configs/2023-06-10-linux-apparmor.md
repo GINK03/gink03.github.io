@@ -10,7 +10,7 @@ sort_key: "2023-06-10"
 update_dates: ["2023-06-10"]
 ---
 
-# linuxのAppArmorについて
+## linuxのAppArmorについて
 
 ## 概要
  - linuxの特にdebian, ubuntunにおいて利用されるセキュリティを高めるためのカーネルモジュール

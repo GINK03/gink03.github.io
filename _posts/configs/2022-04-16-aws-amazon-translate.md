@@ -11,8 +11,6 @@ sort_key: "2022-04-16"
 update_dates: ["2022-04-16"]
 ---
 
-# aws amazon translate APIの使い方
-
 ## 参考
  - 特定言語から特定の言語に変換するAPI
  - 通常のawscliやbotoでのアクセスができる

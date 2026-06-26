@@ -10,8 +10,6 @@ sort_key: "2021-06-19"
 update_dates: ["2021-06-19"]
 ---
 
-# gcp, container registry(gcr)について
-
 ## 概要
  - gcp版dockerhub  
  - あまりパブリックに運用することを想定していない

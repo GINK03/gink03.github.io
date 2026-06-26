@@ -11,8 +11,6 @@ sort_key: "2022-05-22"
 update_dates: ["2022-05-22"]
 ---
 
-# WSA(Windows Subsystem for Android)の使い方
-
 ## 概要
  - Windows 11上でAndroidのアプリを使用可能にする機能
  - WSLと同様の仕組み

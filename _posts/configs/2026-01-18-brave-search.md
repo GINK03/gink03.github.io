@@ -10,8 +10,6 @@ sort_key: "2026-01-18"
 update_dates: ["2026-01-18"]
 ---
 
-# brave search
-
 ## 概要
  - Brave Search APIでWeb検索結果を取得する
  - APIトークンは環境変数で渡す

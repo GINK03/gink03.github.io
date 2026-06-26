@@ -10,8 +10,6 @@ sort_key: "2022-04-05"
 update_dates: ["2022-04-05","2022-04-05","2021-05-30","2021-05-30"]
 ---
 
-# google colabの使い方
-
 ## 概要
  - google製のjupyter notebook
    - 微妙なところに差分がある 

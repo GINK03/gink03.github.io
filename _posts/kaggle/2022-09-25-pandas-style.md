@@ -10,8 +10,6 @@ update_dates: ["2022-09-25"]
 comments: false
 ---
 
-# pandas styleのチートシート
-
 ## 概要
  - notebookで可視化する際にスタイルを整えるのに必要 
  - builder patternになっている

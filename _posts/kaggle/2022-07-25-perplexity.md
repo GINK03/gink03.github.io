@@ -10,8 +10,6 @@ update_dates: ["2022-07-25"]
 comments: false
 ---
 
-# perplexityについて
-
 ## 概要
  - NLPなどで使われるその文章がどの程度の妥当性があるかを判定する指標
  - perplexityはエントロピーを用いて計算される

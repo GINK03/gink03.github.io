@@ -7,7 +7,7 @@ tags: [inception]
 comments: false
 ---
 
-# ボトルネックを利用した転移学習
+## ボトルネックを利用した転移学習
 ```
 p2 tensorflow/tensorflow/examples/image_retraining/retrain.py  --bottleneck_dir $HOME/sdb/food-classify-bottlenecks  --how_many_training_steps 10000  --model_dir $HOME/sdb/food-classify-train  --output_graph $HOME/sdb/food-classify-easytrain/retrained_graph.pb  --output_labels $HOME/sdb/food-classify-easytrain/retrained_labels.txt  --image_dir $HOME/sdb/food-classify-data/raw-data/train/
 ```

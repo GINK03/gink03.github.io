@@ -10,8 +10,6 @@ sort_key: "2025-08-26-microsocks"
 update_dates: ["2025-08-26"]
 ---
 
-# microsocksの使い方
-
 ## 概要
  - 軽量なsocks5プロキシサーバー
  - C言語で書かれており、リソース消費が少ない

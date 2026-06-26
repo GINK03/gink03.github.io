@@ -10,8 +10,6 @@ sort_key: "2022-07-06"
 update_dates: ["2022-07-06"]
 ---
 
-# rustのstringの使い方
-
 ## 概要
  - primitive型の`str`と、`String`がある
 

@@ -10,8 +10,6 @@ sort_key: "2024-10-26"
 update_dates: ["2024-10-26"]
 ---
 
-# python systemdの使い方
-
 ## 概要
  - pythonでlinuxのsystemd-journaldにログを出力する方法
  - `systemd` というライブラリを使う

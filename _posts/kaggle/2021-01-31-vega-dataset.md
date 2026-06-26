@@ -11,7 +11,7 @@ sort_key: "2021-08-29"
 update_dates: ["2021-08-29"]
 ---
 
-# vegaと呼ばれるopen datasetについて
+## vegaと呼ばれるopen datasetについて
  - 概要
    - いろいろなデータが乱雑に入っているデータセット  
    - pip, condaで入るところが便利

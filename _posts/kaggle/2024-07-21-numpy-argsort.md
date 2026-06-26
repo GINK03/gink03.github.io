@@ -11,8 +11,6 @@ sort_key: "2024-07-21"
 update_dates: ["2024-07-21"]
 ---
 
-# numpy argsort
-
 ## 概要
  - `np.argsort` は `pd.Series.argsort()` と似ているが、dataframeのindexを返すのではなく、ndarrayのindexを返す
 

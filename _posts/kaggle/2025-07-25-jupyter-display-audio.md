@@ -9,8 +9,6 @@ sort_key: "2025-07-25-jupyter-display-audio"
 update_dates: ["2025-07-25"]
 ---
 
-# jupyter display audio
-
 ## 標準機能で音声を再生する
 
 ```python

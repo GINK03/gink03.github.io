@@ -10,8 +10,6 @@ update_dates: ["2022-05-25", "2021-06-19"]
 comments: false
 ---
 
-# gcp cloud buildについて
-
 ## 概要
  - dockerをクラウド上でbuildして`gcr.io`にpushする仕組み
  - githubとも連携可能で、ソースコードのpush時などにイベントを紐付けてビルドすることもできる

@@ -10,8 +10,6 @@ sort_key: "2024-03-04"
 update_dates: ["2024-03-04"]
 ---
 
-# seaborn heatmap
-
 ## 概要
  - seabornでヒートマップを描画する
  - 相関行列を可視化するのに便利

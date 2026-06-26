@@ -10,7 +10,7 @@ sort_key: "2025-09-14"
 update_dates: ["2025-09-14"]
 ---
 
-# AnthropicのPythonの使い方
+## AnthropicのPythonの使い方
 
 ## 概要
  - OpenAIのライブラリと似たインターフェース

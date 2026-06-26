@@ -10,8 +10,6 @@ update_dates: ["2022-05-31", "2020-09-21","2020-09-21"]
 comments: false
 ---
 
-# 各OSでコピーとペーストを便利に行う
-
 ## MacOSX
 
 ### pbpasteを使う場合

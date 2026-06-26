@@ -10,8 +10,6 @@ sort_key: "2022-05-20"
 update_dates: ["2022-07-16"]
 ---
 
-# sshのport forwardingの使い方
-
 ## 概要
  - sshの機能の一つであるが、わかりにくく、syntaxが独立しているので別に扱う
    - 使用例

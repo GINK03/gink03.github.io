@@ -10,8 +10,6 @@ sort_key: "2023-07-16"
 update_dates: ["2023-07-16"]
 ---
 
-# macOSのトラブルシューティング
-
 ### `open and save panel service not responding`とプロセスに表示されアプリがストールする
  - 原因
    - macOS sonoma以降のクラウドドライブのバグ

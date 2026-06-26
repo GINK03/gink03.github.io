@@ -10,8 +10,6 @@ update_dates: ["2024-09-22"]
 comments: false
 ---
 
-# aws ip addressの確認
-
 ## 概要
  - awsの各機能にはipアドレスが割り当てられている
  - IP一覧は`https://ip-ranges.amazonaws.com/ip-ranges.json` から取得できる

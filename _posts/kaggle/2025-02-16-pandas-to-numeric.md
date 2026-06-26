@@ -10,8 +10,6 @@ sort_key: "2025-02-16"
 update_dates: ["2025-02-16"]
 ---
 
-# pandas to numeric
-
 ## 概要
  - pandasの `to_numeric` 関数は文字列を数値に変換する関数
  - `errors` 引数で変換できない場合の挙動を指定できる

@@ -11,8 +11,6 @@ sort_key: "2022-05-12"
 update_dates: ["2022-05-12"]
 ---
 
-# pydanticの使い方　
-
 ## 概要
  - pythonのdataclassより簡単でwell managedなdataclass関連を提供するライブラリ
  - `.dict()`, `.json()`メソッドを使うことで、dict形式やjson形式への変換が可能

@@ -10,8 +10,6 @@ sort_key: "2025-07-23-gcp-speech-to-text"
 update_dates: ["2025-07-23"]
 ---
 
-# gcp speech-to-text の使い方
-
 ## 概要
  - モデルベースの音声認識サービスで、diarization（話者分離）や音声の自動文字起こしが可能
    - diarizationは2025年7月時点で日本語に対応していないが、英語や他の言語では利用可能

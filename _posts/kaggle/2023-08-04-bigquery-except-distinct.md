@@ -10,8 +10,6 @@ sort_key: "2023-07-20"
 update_dates: ["2023-07-20"]
 ---
 
-# bigquery except distinct集合演算子の使い方
-
 ## 概要
  - `UNION ALL`, `INTERSECT DISTINCT`などの集合演算子の一つに`EXCEPT DISTINCT`というものがある
  - ２つのテーブルのレコードで集合と考えてsubstructionする操作

@@ -9,8 +9,6 @@ sort_key: "2026-02-22"
 update_dates: ["2026-02-22"]
 ---
 
-# Jupyter vibe analytics
-
 ## 概要
  - vibe analyticsをJupyterで行う
  - いくつかの進め方がある

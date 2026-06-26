@@ -10,8 +10,6 @@ sort_key: "2024-11-26"
 update_dates: ["2024-11-26"]
 ---
 
-# instructor geminiの使い方
-
 ## 概要
  - geminiでもinstructorを使用することができる
  - `temperature`などのパラメータを指定する際はclientの初期化時に指定する

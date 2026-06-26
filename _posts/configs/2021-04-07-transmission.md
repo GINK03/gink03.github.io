@@ -10,7 +10,6 @@ sort_key: "2021-04-07"
 update_dates: ["2021-04-07"]
 ---
 
-# transmission(torrent client)について
 MacOS等でまともに動作するtorrent client  
 
 ## インストール

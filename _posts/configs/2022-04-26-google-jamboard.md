@@ -11,8 +11,6 @@ sort_key: "2022-04-26"
 update_dates: ["2022-04-26"]
 ---
 
-# Google Jamboardの使い方
-
 ## 概要
  - 電子ホワイトボード
  - Google Docsの機能の１つ

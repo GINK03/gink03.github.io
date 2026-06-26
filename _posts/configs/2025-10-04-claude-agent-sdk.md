@@ -10,8 +10,6 @@ sort_key: "2025-10-04"
 update_dates: ["2025-10-04"]
 ---
 
-# Claude Agent SDK の使い方
-
 ## 概要
  - Claude Code を（Coding Agent を超えて）活用するための SDK
  - 認証方法（Amazon Bedrock や Vertex AI など）は Claude Code と同様

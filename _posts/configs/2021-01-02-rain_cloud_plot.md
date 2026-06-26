@@ -11,8 +11,6 @@ sort_key: "2021-01-02"
 update_dates: ["2021-01-02"]
 ---
 
-# rain cloud plot
-
 ## 概要
  - matplotをラップした可視化ライブラリ
    1. box plotとバイオリンプロットを合成したもの

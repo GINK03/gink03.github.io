@@ -10,7 +10,7 @@ sort_key: "2021-03-22"
 update_dates: ["2021-03-22","2021-03-04"]
 ---
 
-# google cloudの認定試験
+## google cloudの認定試験
 
 ## 種類と概要
  - Associate

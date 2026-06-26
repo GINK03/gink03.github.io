@@ -11,7 +11,6 @@ sort_key: "2021-02-20"
 update_dates: ["2021-02-20"]
 ---
 
-# stable baseline3について
  - 強化学習の便利ライブラリ
  - 特徴
    - pytorchのラッパー

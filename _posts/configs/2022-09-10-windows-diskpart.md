@@ -10,8 +10,6 @@ sort_key: "2022-09-10"
 update_dates: ["2022-09-10"]
 ---
 
-# windows diskpartの使い方
-
 ## 概要
  - WindowsではOSが入ったパーティション(EFI, 回復パーティション)をGUIから初期化できない
    - CUIのコマンドで初期化できる

@@ -11,8 +11,6 @@ sort_key: "2022-05-20"
 update_dates: ["2022-05-20"]
 ---
 
-# python loggingの使い方
-
 ## 概要
  - pythonのデフォルトライブラリのlogging機能
  - globalなシングルトンとしてのloggingとインスタンスを初期化してのloggingがある

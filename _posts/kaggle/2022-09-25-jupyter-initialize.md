@@ -10,7 +10,7 @@ sort_key: "2022-09-25"
 update_dates: ["2022-09-25"]
 ---
 
-# jupyterのinitialize(初期化)のチートシート
+## jupyterのinitialize(初期化)のチートシート
 
 ## 概要
  - jupyter notebookを起動した際に、最初に記述しておくコードのスニペット

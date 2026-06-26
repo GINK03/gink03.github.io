@@ -11,7 +11,7 @@ sort_key: "2021-08-05"
 update_dates: ["2021-08-05"]
 ---
 
-# ポリノミアルで特徴量作成
+## ポリノミアルで特徴量作成
  - [公式](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.PolynomialFeatures.html)
 
 ## 概要

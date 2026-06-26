@@ -12,7 +12,6 @@ tag:
 - Scala
 comments: false
 ---
-# データ分析に使える言語はPython, Rだけではない
 ## 目次
 - データ(直列)操作  
 - generatorと遅延評価の闇  
@@ -109,23 +108,23 @@ real    2m4.228s
 ```
 ちょっと、Elixirさん...
 
-# もうひとつの実装系のJavaの必要性
+## もうひとつの実装系のJavaの必要性
 - Sparkで実装されているScalaについて
 - Scalaは発火しやすい印象
 - ScalaとKotlinの差
 
-## Sparkで実装されているScalaについて
+### Sparkで実装されているScalaについて
 　Apache Sparkはモダンな設計思想とフレームワークということもあり、PythonとScalaを標準でサポートしている。ScalaはPythonでコーディングが困難なデータの直列操作にも対応している。  
 　SparkのRDDは、Spark内部の分散処理を意識しないで、データ直列操作をする感覚で操作できる。  
 　KotlinとScalaの差はなんなのかというと、いろいろあるが、使ってみて使いやすいほうを使えばいいと思う。  
  
-## Scalaは発火しやすい印象
+### Scalaは発火しやすい印象
 　エモい話なのなのだが、もともとTwitter社がRuby on Railsの代わりにScalaのフレームワークを作って流行ったという背景が多少なりともある。twitterでScalaからnode jsに移行したといことで大騒ぎになった。真偽はよくわかってないが、Scalaには熱心に解説してくださる方がいて、その方はたいていTwitterユーザですので、衝撃は大きかったようだ。
 [参考](http://www.utali.io/entry/2017/02/24/170000)
 　反論も多数見かけるし、攻撃的な論調もおおく、少々危険な気がしている。  
 [参考](http://kmizu.hatenablog.com/entry/2017/03/22/233335)
 
-## ScalaとKotlinの差
+### ScalaとKotlinの差
 　今回はKotlin中心に紹介したが、Scalaはそれはそれで素晴らしい言語です。いくつかシンタックス以外にも機能の面で違いがあるので、例示したいと思います。
 　他にもいろいろありますが、私がよく使う機能での差異が大きい物を示しています
 
@@ -140,8 +139,8 @@ real    2m4.228s
 - Kotlin's Inline functions facilitate Nonlocal jumps
 - First-class delegation
 
-# 具体的な例
-## (TreasureDataなどの)ウェブページの閲覧データのCSVダンプデータから、ipアドレスをparseして、出現頻度をカウントする
+## 具体的な例
+### (TreasureDataなどの)ウェブページの閲覧データのCSVダンプデータから、ipアドレスをparseして、出現頻度をカウントする
 TresureDataに限らず、生ログは非常に構造化が難しく、よくわからない例外が入っていたりする。  
 Kotlinのパーサが見当たらなかったため、自力で実装した（吐血）  
 Kotlin  
@@ -198,7 +197,7 @@ fun main(args: Array<String>) {
   }
 }
 ```
-## 一文字欠損した場所を求める: [yukicoder no.494](http://yukicoder.me/problems/no/494)
+### 一文字欠損した場所を求める: [yukicoder no.494](http://yukicoder.me/problems/no/494)
 Python
 ```python
 ans = list(filter(lambda x:x[0]!=x[1], zip('yukicoder', input())))
@@ -215,7 +214,7 @@ fun main(args: Array<String>){
 }
 ```
 
-## 正規表現によるmatch: [yukicoder no.495](https://yukicoder.me/problems/no/495)
+### 正規表現によるmatch: [yukicoder no.495](https://yukicoder.me/problems/no/495)
 Python
 ```python
 import re
@@ -233,7 +232,7 @@ fun main(args:Array<String>) {
 }
 ```
 
-## sortの実装: [yukicoder no.490](http://yukicoder.me/submissions/163076)
+### sortの実装: [yukicoder no.490](http://yukicoder.me/submissions/163076)
 Python
 ```python
 n = int(input())
@@ -267,5 +266,5 @@ fun main(args: Array<String> ) {
   println(ts.joinToString(" ") )
 }
 ```
-# 参考
+## 参考
 [1] https://speakerdeck.com/antoniolg/scala-vs-kotlin

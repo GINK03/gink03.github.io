@@ -11,8 +11,6 @@ sort_key: "2023-05-27"
 update_dates: ["2022-05-27"]
 ---
 
-# huggingface datasetsの使い方
-
 ## 概要
  - huggingfaceのデータセットのレポジトリにコードからアクセスできるツール
  - 一部の前処理なども含まれている

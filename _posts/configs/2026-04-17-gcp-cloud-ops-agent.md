@@ -10,8 +10,6 @@ sort_key: "2026-04-17"
 update_dates: ["2026-04-17"]
 ---
 
-# GCP Cloud Ops Agent
-
 ## 概要
  - GCEインスタンスのメモリ・ディスク・ネットワーク等のOS内部メトリクスをCloud Monitoringへ送信するエージェント
  - VMにはデフォルトでインストールされていないため、別途導入が必要

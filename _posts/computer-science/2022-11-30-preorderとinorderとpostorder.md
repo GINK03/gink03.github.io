@@ -10,8 +10,6 @@ sort_key: "2022-11-30"
 update_dates: ["2022-11-30"]
 ---
 
-# inorderとpreorderとpostorderについて
-
 ## 概要
  - dfsの記録順序によって`inorder`と`preorder`と`postorder`がある
  - `preorder`は事前にスキャン

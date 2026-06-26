@@ -11,8 +11,6 @@ sort_key: "2021-02-01"
 update_dates: ["2021-02-01"]
 ---
 
-# quadratic weighted kappa(qwk)というメトリクスについて
-
 ## 概要
  - `actual`と`pred`の`confusion matric`作成してそれに対して`weight`をかける、というもの  
  - 負の値にもなる

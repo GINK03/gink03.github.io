@@ -11,8 +11,6 @@ sort_key: "2024-08-25"
 update_dates: ["2024-08-25"]
 ---
 
-# aws redshift serverlessの概要と使い方
-
 ## 概要
  - GCPのBigQueryのようなサーバーレスなデータウェアハウスサービス
  - RPU（Redshift Processing Unit）という単位で課金される

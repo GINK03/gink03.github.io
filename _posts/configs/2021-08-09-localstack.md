@@ -10,8 +10,6 @@ sort_key: "2021-08-11"
 update_dates: ["2021-08-11","2021-08-10"]
 ---
 
-# localstackの使い方
-
 ## 概要
  - awsのローカルモック環境
  - s3, secrets-managerとかをローカルに再現することができる

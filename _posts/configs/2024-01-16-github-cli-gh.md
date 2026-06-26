@@ -11,8 +11,6 @@ sort_key: "2024-01-16"
 update_dates: ["2021-01-16"]
 ---
 
-# github cliの使い方
-
 ## 概要
  - gitコマンドとは別にgithubの操作ができるcliに`gh`がある
  - `gh`はプロジェクトの作成、issueの作成、PRの作成、PRのマージなどができる

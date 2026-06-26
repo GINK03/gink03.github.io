@@ -10,8 +10,6 @@ update_dates: ["2022-05-31", "2018-01-19"]
 comments: false
 ---
 
-# Tresure Dataの使い方
-
 ## 概要
  - データレークの一種
  - BigQueryを最近は使うことが多い

@@ -10,8 +10,6 @@ sort_key: "2025-04-17"
 update_dates: ["2025-04-17"]
 ---
 
-# google agent development kit(adk)の使い方
-
 
 ## 概要
  - adkは、Googleが開発したエージェントの開発キット

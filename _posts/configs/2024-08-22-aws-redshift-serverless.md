@@ -11,8 +11,6 @@ sort_key: "2024-08-22"
 update_dates: ["2024-08-22"]
 ---
 
-# aws redshift serverlessの概要と使い方
-
 ## 概要
  - AWSのredshift serverlessは、従量課金制のredshiftサービス
  - GCPのbigqueryやawsのathenaに似たサービス

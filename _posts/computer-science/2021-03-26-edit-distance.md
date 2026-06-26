@@ -11,8 +11,6 @@ sort_key: "2021-03-26"
 update_dates: ["2021-03-26","2021-03-26"]
 ---
 
-# edit distance(編集距離)について
-
 ## 概要
  - 編集距離
  - 動的計画法(dynamic programming)の例題としてよく出る

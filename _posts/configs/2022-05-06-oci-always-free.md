@@ -11,8 +11,6 @@ sort_key: "2022-05-07"
 update_dates: ["2022-05-07", "2026-06-16"]
 ---
 
-# OCI Always Freeについて
-
 ## 概要
  - [always free](https://www.oracle.com/jp/cloud/free/)という期間無制限で無料の枠がある
    - サービスごとの上限は変わることがあるため、作成前に[Always Free Resources](https://docs.oracle.com/en-us/iaas/Content/FreeTier/freetier_topic-Always_Free_Resources.htm)と`Limits, Quotas and Usage`を確認する

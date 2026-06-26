@@ -10,8 +10,6 @@ sort_key: "2023-12-30"
 update_dates: ["2023-12-30"]
 ---
 
-# docker trivyの概要と使い方
-
 ## 概要
  - trivyは、dockerイメージの脆弱性を検知するツール
  - GCPのArtifact Registryに登録されているdockerイメージに対して、定期的に実行することで、脆弱性を検知することができる

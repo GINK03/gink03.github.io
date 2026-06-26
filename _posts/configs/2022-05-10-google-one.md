@@ -11,8 +11,6 @@ sort_key: "2022-05-10"
 update_dates: ["2022-05-10"]
 ---
 
-# Google Oneについて
-
 ## 概要
  - かつてのGoogle Driveの有料プラン
  - Google Oneにリブランドされたが、意味合いとして、家族最大6人までシェア可能

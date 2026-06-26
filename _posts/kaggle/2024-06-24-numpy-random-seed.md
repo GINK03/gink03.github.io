@@ -11,8 +11,6 @@ sort_key: "2024-06-24"
 update_dates: ["2024-06-24"]
 ---
 
-# numpy random seedの使い方
-
 ## 概要
  - `np.random.seed(42)`で乱数のシードを固定することができる
  - pandasのsample関数なども結果が固定される

@@ -10,8 +10,6 @@ sort_key: "2024-01-20"
 update_dates: ["2024-01-20"]
 ---
 
-# mullvad vpnの使い方
-
 ## 概要
  - No Log VPNの一つ
  - WireGuardを使っている

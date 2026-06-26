@@ -11,8 +11,6 @@ sort_key: "2025-08-15"
 update_dates: ["2025-08-15"]
 ---
 
-# Cyberduckの使い方
-
 ## 概要
  - オンラインストレージやSFTP/FTP/WebDAVに接続してファイルのアップロード/ダウンロードができるGUIクライアント
  - S3やS3互換のオブジェクトストレージ、GCS（S3互換API経由）、SFTP、WebDAVに対応

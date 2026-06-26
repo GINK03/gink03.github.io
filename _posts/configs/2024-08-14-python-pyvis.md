@@ -10,8 +10,6 @@ sort_key: "2024-08-14"
 update_dates: ["2024-08-14"]
 ---
 
-# python pyvisの使い方
-
 ## 概要
  - グラフを描画するためのライブラリ
  - jupyter notebook上で描画するには、`notebook=True` を指定し、`IPython.display.IFrame` で表示する

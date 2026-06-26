@@ -10,7 +10,7 @@ sort_key: "2022-12-17"
 update_dates: ["2022-12-17"]
 ---
 
-# pythonのtyping
+## pythonのtyping
 
 ## 概要
  - python3の特定のバージョンから導入された型アノテーション

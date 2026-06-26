@@ -10,8 +10,6 @@ sort_key: "2022-12-17"
 update_dates: ["2022-12-17"]
 ---
 
-# Apple Mobile Device Typesの概要と使い方
-
 ## 概要
  - appleのiPhone, iPadのモデルバージョンを識別するためのコード
  - androidのハードウェアのメーカなどを特定する、`arcore-devices`というものある

@@ -10,7 +10,7 @@ sort_key: "2023-05-16"
 update_dates: ["2023-05-16"]
 ---
 
-# linuxのcfdiskについて
+## linuxのcfdiskについて
 
 ## 概要
  - cfdisk - display or manipulate a disk partition table

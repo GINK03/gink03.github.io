@@ -10,7 +10,7 @@ sort_key: "2023-10-03"
 update_dates: ["2023-10-03"]
 ---
 
-# linuxのnbd-clientついて
+## linuxのnbd-clientついて
 
 ## 概要
  - ネットワーク経由でブロックデバイスを提供するサービス・プロトコル

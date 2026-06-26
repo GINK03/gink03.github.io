@@ -10,8 +10,6 @@ sort_key: "2022-10-04"
 update_dates: ["2022-10-04"]
 ---
 
-# cloudflare workersの使い方
-
 ## 概要
  - cloudflareのエッジにインストールできる`cloud functions`的なもの
  - JavaScriptとwasmで動作するものに限定される

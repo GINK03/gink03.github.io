@@ -11,8 +11,6 @@ sort_key: "2025-12-21"
 update_dates: ["2025-12-21"]
 ---
 
-# google pagespeed insightsの使い方と活用法
-
 ## 概要
  - Google Pagespeed Insightsは、ウェブサイトのパフォーマンスを評価し、改善点を提案するツール
  - 一般公開のウェブサイト版と、GCPのPageSpeed Insights APIがある

@@ -11,8 +11,6 @@ sort_key: "2024-01-20"
 update_dates: ["2024-01-20"]
 ---
 
-# python yellowbrickの使い方
-
 ## 概要
  - 可視化ライブラリ
  - seabornやmatplotlibに比べてより機械学習に特化した可視化を行うことができる

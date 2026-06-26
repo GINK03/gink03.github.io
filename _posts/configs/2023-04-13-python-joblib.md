@@ -10,7 +10,7 @@ sort_key: "2023-04-14"
 update_dates: ["2023-04-14"]
 ---
 
-# pythonのjoblibの使い方
+## pythonのjoblibの使い方
 
 ## 概要
  - on-demand computingで必要なタスクだけを並列化できる

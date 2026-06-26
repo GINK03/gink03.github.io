@@ -9,8 +9,6 @@ tag: ["linux", "firewalld", "firewall-cmd"]
 comments: false
 ---
 
-# firewalldの設定と使い方
-
 ## 概要
  - linuxのfirewall設定ソフト
 

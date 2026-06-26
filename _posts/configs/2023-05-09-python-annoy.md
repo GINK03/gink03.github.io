@@ -10,7 +10,7 @@ sort_key: "2023-05-09"
 update_dates: ["2023-05-09"]
 ---
 
-# pythonのannoyの使い方
+## pythonのannoyの使い方
 
 ## 概要
  - RPF（Random Projection Forest）を利用して高次元データの近似最近傍検索を効率的に行う

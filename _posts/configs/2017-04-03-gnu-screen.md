@@ -10,8 +10,6 @@ sort_key: "2018-01-19"
 update_dates: ["2018-01-19"]
 ---
 
-# gnu screen
-
 ## 概要
  - [/tmux/](/tmux/)より古くからあるterminal multiplexer
  - 最新版をgitから取得してコンパイルしないとtrue colorを扱えない

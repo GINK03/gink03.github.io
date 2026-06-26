@@ -11,8 +11,6 @@ sort_key: "2026-04-06"
 update_dates: ["2026-04-06"]
 ---
 
-# dbt セマンティックレイヤー for LLM
-
 ## 概要
 
  - dbt CoreプロジェクトにMetricFlowベースのセマンティックレイヤーを構築し、LLMが自然言語でBigQueryデータを正確に分析できる基盤を作る手順

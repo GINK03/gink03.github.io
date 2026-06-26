@@ -10,8 +10,6 @@ sort_key: "2022-05-17"
 update_dates: ["2022-06-21", "2022-05-17"]
 ---
 
-# Google Sheets
-
 ## 概要
  - excelのオンラインバージョンのアプリ
  - bigqueryと繋げられたり便利

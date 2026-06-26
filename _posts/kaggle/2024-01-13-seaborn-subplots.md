@@ -10,8 +10,6 @@ sort_key: "2024-01-13"
 update_dates: ["2024-01-13"]
 ---
 
-# seaborn subplots
-
 ## 複数のグラフを表示
  - `plt.subplots`ではじめに描画マトリクス`axs`を作成しておき、後から`sns.描画関数`の引数に入れて描画する
 

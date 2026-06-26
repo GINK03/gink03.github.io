@@ -10,8 +10,6 @@ sort_key: "2025-05-02"
 update_dates: ["2025-05-02"]
 ---
 
-# python browser useの使い方
-
 ## 概要
  - LLMでブラウザを操作するエージェント
  - playwrightがインストールされていればheadlessで動作する

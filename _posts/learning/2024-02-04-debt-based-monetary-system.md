@@ -9,8 +9,6 @@ tag: ["投資", "貨幣経済", "Debt-Based Monetary System"]
 comments: false
 ---
 
-# Debt-Based Monetary System(債務ベースの貨幣システム)について
-
 ## 概要
  - 貨幣の発行
    - Debt-Based Monetary Systemでは、`貨幣の発行 = 借り入れ(Debt)` となる

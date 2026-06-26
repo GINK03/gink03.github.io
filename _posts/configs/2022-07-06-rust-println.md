@@ -10,8 +10,6 @@ sort_key: "2022-07-06"
 update_dates: ["2022-07-06"]
 ---
 
-# rustのprintlnの使い方
-
 ## 概要
  - 一種のマクロ
  - pythonのf-stringのような使い方

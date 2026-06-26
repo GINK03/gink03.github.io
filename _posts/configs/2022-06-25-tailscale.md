@@ -10,8 +10,6 @@ sort_key: "2022-06-25"
 update_dates: ["2022-06-25", "2026-04-17"]
 ---
 
-# tailscaleの使い方
-
 ## 概要
  - hamachiのようなP2P VPN
    - 一部GUIがシェアウェアである点もhamachiと似ている

@@ -10,8 +10,6 @@ sort_key: "2025-03-14"
 update_dates: ["2025-03-14"]
 ---
 
-# gemini image analytics
-
 ## 概要
  - geminiでは、画像解析を行うことができる　
  - pdfの分析であっても画像解析を通じての情報抽出が可能

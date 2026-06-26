@@ -10,7 +10,7 @@ sort_key: "2022-11-12"
 update_dates: ["2022-11-12"]
 ---
 
-# gcp cloud functionsのroutingの仕方
+## gcp cloud functionsのroutingの仕方
 
 ## 概要
  - cloud functionsのデフォルトの使い方ではroutingはできない

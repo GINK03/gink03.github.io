@@ -11,8 +11,6 @@ sort_key: "2022-04-09"
 update_dates: ["2022-04-09"]
 ---
 
-# Apple iPadについて
-
 ## 概要
  - apple一般に関しては[/apple/](/apple/)
  - iPad関連のまとめ

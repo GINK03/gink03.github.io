@@ -10,8 +10,6 @@ sort_key: "2025-02-08"
 update_dates: ["2025-02-08"]
 ---
 
-# pandas sparse
-
 ## 概要
  - pandasのデータ形式であってもsparse matrixを扱うことができる
  - 疎行列に変換の際、`pd.NA` などは自動で値が埋まることはない

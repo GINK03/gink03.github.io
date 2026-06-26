@@ -10,8 +10,6 @@ sort_key: "2024-10-01"
 update_dates: ["2024-10-01"]
 ---
 
-# office onlineの使い方
-
 ## 概要
  - office onlineは無料で使えるofficeのオンライン版
  - `www.office365.com`からアクセスできる

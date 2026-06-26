@@ -10,8 +10,6 @@ sort_key: "2023-07-03"
 update_dates: ["2023-07-03"]
 ---
 
-# apple macos storage
-
 ## 概要
  - macosのストレージは不足しがちなのでワークアラウンドで解決する
 

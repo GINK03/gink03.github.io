@@ -10,7 +10,7 @@ sort_key: "2023-05-16"
 update_dates: ["2023-05-16"]
 ---
 
-# linuxのcpufrequtilsについて
+## linuxのcpufrequtilsについて
 
 ## 概要
  - linuxのコマンドでCPUの周波数を設定できるツール

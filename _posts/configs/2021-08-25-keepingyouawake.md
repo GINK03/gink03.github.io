@@ -10,8 +10,6 @@ sort_key: "2021-08-25"
 update_dates: ["2021-08-25"]
 ---
 
-# KeepingYouAwakeの使い方
-
 ## 概要
  - macOSでsleepを防ぐソフトウェア
    - ポリシー管理されたmacOSでも自動スリープを制御できるので、重い計算をするときなどに便利

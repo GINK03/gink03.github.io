@@ -10,7 +10,7 @@ sort_key: "2022-09-27"
 update_dates: ["2022-09-27"]
 ---
 
-# python platfromの使い方
+## python platfromの使い方
 
 ## 概要
  - python標準のOS, CPUのアーキテクチャを簡便に判定するモジュール

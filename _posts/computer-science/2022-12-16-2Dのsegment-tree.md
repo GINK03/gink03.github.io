@@ -10,8 +10,6 @@ sort_key: "2022-12-16"
 update_dates: ["2022-12-16"]
 ---
 
-# 2Dのsegment-treeについて
-
 ## 概要
  - 一次元のsegment-treeより、2次元のsegment-treeに拡張するとだいぶ複雑になる
  

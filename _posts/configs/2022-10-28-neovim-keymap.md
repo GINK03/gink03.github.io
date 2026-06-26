@@ -10,8 +10,6 @@ sort_key: "2022-10-28"
 update_dates: ["2022-10-28"]
 ---
 
-# neovim keymapの使い方
-
 ## 概要
  - luaのAPI経由での設定例
  - `silent`, `expr`, `noremap`の意味

@@ -10,7 +10,7 @@ tag: ["algorithm", "greedy"]
 comments: false
 ---
 
-# greedyアルゴリズムの特殊系
+## greedyアルゴリズムの特殊系
  - どの軸でsortすればよいのか不明な時
  - どういう状態が嬉しいのか定義する
  - 例えば幸福度(A, Bがある)の差がある時
