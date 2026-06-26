@@ -18,7 +18,7 @@ update_dates: ["2021-08-29"]
    - 掛け算
    - 割り算
 
-### ライブラリ`featuretools`の例
+## ライブラリ`featuretools`の例
  - `Deep Feature Synthesis`、略して`dfs`と呼ばれる
 
 例えば、irisのデータセットを読み込み
@@ -50,7 +50,7 @@ feature_matrix, feature_defs = ft.dfs(entityset = es, target_entity = 'data',
 feature_matrix.head()
 ```
 
-#### 使用できる`primitives`
+### 使用できる`primitives`
 
 以下のコマンドで確認できる
 ```python

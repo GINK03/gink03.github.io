@@ -18,35 +18,35 @@ comments: false
 　この場合はこの書き方が有効だという事例を集めていく  
 　参照しやすいように、このページに網羅的に、ブラウザから任意の機能が逆引きできるように記す  
 
-#### コンパイル
+### コンパイル
 ```sh
 kotlinc foo.kt -include-runtime -d foo.jar
 ```
 
-#### 外部jar参照してコンパイル
+### 外部jar参照してコンパイル
 ```sh
 kotlinc foo.kt -cp bar.jar -include-runtime foo.jar
 ```
 
-#### Javaの資産を利用して実行
+### Javaの資産を利用して実行
 注意：この時だけ、jarファイルからメインクラスを指定せずに実行ではなくて、java likeコマンドにて実行
 ```
 $ kotlin -cp .:jsoup-1.10.2.jar:scraper.jar  ScraperKt
 ```
 scraper.jarのメインクラス名はScraperKtに暗黙的になる
 
-#### 実行
+### 実行
 ```sh
 java -jar foo.jar
 ```
-#### ファイル保存
+### ファイル保存
 ```kotlin
 fun _save_conf(json:String) {
   PrintWriter("url_config.json").append(json).close()
 } 
 ```
 
-#### ファイル読み込み
+### ファイル読み込み
 ```kotlin
 fun _load_conf():MutableMap<String, String> { 
   try {
@@ -59,7 +59,7 @@ fun _load_conf():MutableMap<String, String> {
   }
 }
 ```
-#### CSVリードのプラクティス
+### CSVリードのプラクティス
 一部、完全にsequenceとiteratorの棲み分けが完全にできていないのか、やたらめんどくさい（よくない)   
 しばらくしたら、透過的な関数型のインターフェースができると思うので、それまでごまかしながら使う感じ  
 
@@ -88,7 +88,7 @@ fun main(args : Array<String>) {
   }
 }
 ```
-#### iterative(stream的な)ファイルの読み込み
+### iterative(stream的な)ファイルの読み込み
 ```kotlin
 fun chechHatena() {
   val br = BufferedReader(FileReader("./sampleRsv.csv"))
@@ -106,7 +106,7 @@ fun chechHatena() {
 }
 ```
 
-#### kotlin's yield
+### kotlin's yield
 便利である
 ```kotlin
 import kotlin.coroutines.experimental.*
@@ -125,7 +125,7 @@ fun main( args : Array<String> ) {
 }
 ```
 
-#### Kotlinxでさらなるコルーチン
+### Kotlinxでさらなるコルーチン
 並列処理とかで期待できる
 ```kotlin
 // Coroutine ARE light weigh
@@ -141,7 +141,7 @@ fun are_light_weight() = runBlocking<Unit>{
 }  
 ```
 
-#### gsonでシリアライズ
+### gsonでシリアライズ
 データクラスでもいけるぞいぞいぞい
 ```kotlin
 import com.google.gson.Gson
@@ -150,7 +150,7 @@ import com.google.gson.reflect.TypeToken
 val json = gson.toJson(m)
 ```
 
-#### gson
+### gson
 gsonからの復旧  
 リフレクションの型情報の設定がめんどくさい
 ```kotlin
@@ -158,20 +158,20 @@ val type = object : TypeToken<Map<String, String>>() {}.type
 val map:Map<String,String> = gson.fromJson<Map<String, String>>(x, type)
 ```
 
-#### genericな関数の作成
+### genericな関数の作成
 ```kotlin
 fun <T> printerr(t : T) {
   System.`err`.println(t)
 }
 ```
 
-#### last関数(tailだと思ってた)
+### last関数(tailだと思ってた)
 ```kotlin
 last
 fun <T> Iterable<T>.last(): T (source)
 ```
 
-#### 特定の組みあせを全探索するアルゴリズム
+### 特定の組みあせを全探索するアルゴリズム
 ```kotlin
 /* 5000までの全組み合わせを計算する
 BinaryStringで計算する */
@@ -182,7 +182,7 @@ fun main( args : Array<String> ) {
 }
 ```
 
-#### urlパラメータからmap形式に変換
+### urlパラメータからmap形式に変換
 ```kotlin
 val raw  = urlDecoded!!.split("&").map { x ->
  x.split("=")
@@ -193,7 +193,7 @@ val raw  = urlDecoded!!.split("&").map { x ->
 }.toMap()
 ```
 
-#### stdin, stream読み込み
+### stdin, stream読み込み
 ```kotlin
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -206,7 +206,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-#### メモリが足りない！！
+### メモリが足りない！！
 環境変数$JAVA_OPTで定義されているらしく、未定義の場合はゴミみたいなパフォーマンスになるので、要編集
 
 ```sh
@@ -214,7 +214,7 @@ $ nvim $HOME/.sdkman/candidates/kotlin/current/bin/kotlinc
 35 [ -n "$JAVA_OPTS" ] || JAVA_OPTS="-Xmx3000M -Xms3000M"  <- ここを編集
 ```
 
-#### kuromojiによる形態素解析
+### kuromojiによる形態素解析
 色とりどりよりどりみどり
 ```kotlin
 //import com.atilika.kuromoji.ipadic.Token
@@ -237,7 +237,7 @@ fun main(args: Array<String> ) {
 }
 ```
 
-#### Kuromojiによるsteamによる形態素解析
+### Kuromojiによるsteamによる形態素解析
 Collectorsはいつも曖昧
 ```kotlin
 import java.io.BufferedReader
@@ -266,7 +266,7 @@ fun main(args: Array<String> ) {
 }
 ```
 
-#### 正規表現
+### 正規表現
 ```kotlin
     val doc = Jsoup.parse(File(name.toString()), "UTF-8")
     val title = doc.title().replace(" - Wikipedia","")
@@ -278,7 +278,7 @@ fun main(args: Array<String> ) {
     }
 ```
 
-#### 関数拡張(head, tail実装編)
+### 関数拡張(head, tail実装編)
 ```kotlin
 val <T> List<T>.tail: List<T>
   get() = drop(1)
@@ -286,7 +286,7 @@ val <T> List<T>.head: T
   get() = first()
 ```
 
-#### coroutine + yield実装編
+### coroutine + yield実装編
 ```kotlin
   val resultSeq = buildSequence {
     var result:ListObjectsV2Result? = null
@@ -299,7 +299,7 @@ val <T> List<T>.head: T
   }
 ```
 
-##### AWS S3バインディング編
+#### AWS S3バインディング編
 ```kotlin
   val bucketName = "***-ml-scraping"
   val s3Client:AmazonS3 = AmazonS3Client(ProfileCredentialsProvider())
@@ -334,7 +334,7 @@ val <T> List<T>.head: T
   }
 ```
 
-#### シリアライズしたオブジェクトから復旧
+### シリアライズしたオブジェクトから復旧
 ```kotlin
 fun _load_conf():MutableMap<String, String> { 
   try {
@@ -348,7 +348,7 @@ fun _load_conf():MutableMap<String, String> {
 }
 ```
 
-#### javaにおけるglob
+### javaにおけるglob
 ```kotlin
 import java.io.*
 import java.nio.file.Files
@@ -361,7 +361,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-#### jsoupによるhtml取得と解析
+### jsoupによるhtml取得と解析
 ```kotlin
 fun _parser(url:String):Set<String> { 
   var doc:Document
@@ -389,7 +389,7 @@ fun _parser(url:String):Set<String> {
 }
 ```
 
-#### ファイルシステムを利用した似非KVS
+### ファイルシステムを利用した似非KVS
 ```kotlin
 fun _writer(url:String, title:String, text:String) {
    val escapeTitle = title.replace("/", "___SLA___")
@@ -406,7 +406,7 @@ fun _writer(url:String, title:String, text:String) {
 }
 ```
 
-#### N進数変換
+### N進数変換
 ```kotlin
 //stdioからの入力を7進数に変換する例である  
 fun main(args: Array<String>) {
@@ -422,7 +422,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-#### sortedBy(sortedBy系)
+### sortedBy(sortedBy系)
 ```kotlin
 fun main(args: Array<String> ) { 
   val L = readLine()!!.toInt()
@@ -444,7 +444,7 @@ fun main(args: Array<String> ) {
 }
 ```
 
-#### 素数(素数を用いた特殊な場合分け)
+### 素数(素数を用いた特殊な場合分け)
 ```kotlin
 fun main(args: Array<String>) { 
   val n = readLine()!!.toInt()
@@ -473,7 +473,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-#### Unboundのやり方
+### Unboundのやり方
 ```kotlin
 fun main(args: Array<String>) { 
   (1..readLine()!!.toInt() ).map { 
@@ -488,7 +488,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-#### BigDecimal, Power, Rem, Mul, Add
+### BigDecimal, Power, Rem, Mul, Add
 ```kotlin
 import java.math.BigDecimal
 fun main(args: Array<String>) { 
@@ -504,7 +504,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-#### min, max
+### min, max
 ```kotlin
 fun main(args: Array<String>) {
   val n = readLine()!!.toInt()
@@ -516,7 +516,7 @@ fun main(args: Array<String>) {
 }
 ```
 
-#### math.ceil
+### math.ceil
 ```kotlin
 fun main(args:Array<String>) {
   val (a, b) = readLine()!!.split(" ").map{ x -> x.toDouble() }
@@ -524,7 +524,7 @@ fun main(args:Array<String>) {
 }
 ```
 
-#### state machine
+### state machine
 ```kotlin
 fun main(args: Array<String>) {
   val (N, K) = readLine()!!.split(" ").map{ x -> x.toInt() }

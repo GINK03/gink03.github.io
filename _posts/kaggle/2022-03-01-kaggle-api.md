@@ -22,7 +22,7 @@ $ python3 -m pip install kaggle
 
 ## クレデンシャルとそのパスと権限
 
-#### パス
+### パス
 
 ```console
 $ ls ~/.kaggle/kaggle.json

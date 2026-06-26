@@ -15,7 +15,7 @@ update_dates: ["2026-03-04"]
 過去に発生したバグ
  - `shap_values.values.mean(axis=0)` の符号を特徴量の「効果方向」として使った結果、特徴量で符号が逆転しているという**偽の結論**を出力した
 
-#### なぜ誤りが起きるか
+### なぜ誤りが起きるか
 
 ブール特徴量（0/1）ではSHAP値の構造が以下のようになる
 
@@ -33,7 +33,7 @@ mean = P(x=1) × (+0.15) + P(x=0) × (-0.15)
 **x=0 のサンプルが多ければ平均はマイナスになる**  
 正の効果を持つ特徴量が負に見える
 
-#### 正しい計算方法
+### 正しい計算方法
 
 特徴量の「効果方向」は `E[SHAP | feature=high] - E[SHAP | feature=low]` の符号で判断する  
 これはbeeswarmプロットの「青い点（feature=high）の位置」に対応する
@@ -72,7 +72,7 @@ shap_signed = mean_abs_shap * shap_direction  # 符号付き重要度
 shap_direction = np.sign(shap_values.values.mean(axis=0))  # boolean特徴量で誤る
 ```
 
-#### 視覚的な確認
+### 視覚的な確認
 
 コードで算出した `shap_direction` は必ずbeeswarmと目視で整合チェックすること
 
@@ -80,7 +80,7 @@ shap_direction = np.sign(shap_values.values.mean(axis=0))  # boolean特徴量で
  - beeswarmで「青い点が左（負）寄り」→ `shap_direction` は負であるべき
  - 乖離があれば計算が誤っている
 
-#### 符号逆転レポートの解釈ルール
+### 符号逆転レポートの解釈ルール
 
 `sign_match = False` の特徴量を「両モデルで方向が食い違う」と報告する前に：
 

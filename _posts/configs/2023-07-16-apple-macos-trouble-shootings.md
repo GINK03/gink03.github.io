@@ -10,39 +10,39 @@ sort_key: "2023-07-16"
 update_dates: ["2023-07-16"]
 ---
 
-### `open and save panel service not responding`とプロセスに表示されアプリがストールする
+## `open and save panel service not responding`とプロセスに表示されアプリがストールする
  - 原因
    - macOS sonoma以降のクラウドドライブのバグ
  - 対応
    - iCloud Driveを一時的にオフにする
 
-### macOS sonomaのスクリーンロック画面からパスワードでログインできない
+## macOS sonomaのスクリーンロック画面からパスワードでログインできない
  - 原因
    - Active Directoryと内容の同期が取れていないバグ
  - 対応
    - Apple Watch, 指紋認証などのバイオメトリック認証でログインする
 
-### ネットワークが`self-assigned ip address`になり通信できない
+## ネットワークが`self-assigned ip address`になり通信できない
  - 原因
    - DHCPサーバからIPアドレスの通知を受け取れなくなっている
  - 対応
    - (たぶん、必要がなさそうなsharingサービスを使用しない)
    - 再起動
 
-### GUIの重く、まともに操作できない
+## GUIの重く、まともに操作できない
  - 原因
    - メモリの使用しすぎ・WindowServerの不調
  - 対応
    - `アクティビティモニター`から`WindowServer`を強制終了
      - WindowsServerを終了すると、今開いているアプリはすべて終了されるので注意
 
-### google日本語入力の切り替えが遅い場合
+## google日本語入力の切り替えが遅い場合
  - 原因
    - 権限が適切にアサインされていない
  - 対応
    - [参考](https://www.ytyng.com/blog/mac-os-big-sur-google-japanese-input-full-disk-access/)
 
-### osがクラッシュするのでログを確認したい
+## osがクラッシュするのでログを確認したい
  - 原因
    - ログを確認しないと原因を確定できない
  - 対応
@@ -67,13 +67,13 @@ update_dates: ["2023-07-16"]
 }
 ```
 
-### macbook同士をtype-cで接続するとクラッシュする
+## macbook同士をtype-cで接続するとクラッシュする
  - 原因
    - type-cの通信エラーを吐き出し続けて最終的にはOSがクラッシュする 
  - 対応
    - macbook同士を接続しない
 
-### 拡張子の対応付を修正する
+## 拡張子の対応付を修正する
  - 原因
    - Finderの設定が誤っている
  - 対応
@@ -82,7 +82,7 @@ update_dates: ["2023-07-16"]
    - `このアプリケーションで開く`を選択
    - `すべてを変更`を適応
 
-### (クラッシュ)Wake transition timed out after 180 seconds while calling power state change callbacks. Suspected bundle: com.apple.iokit.IOPCIFamily.
+## (クラッシュ)Wake transition timed out after 180 seconds while calling power state change callbacks. Suspected bundle: com.apple.iokit.IOPCIFamily.
  - 原因
    - macのスリープをトリガーとしてたまに起きるバグ
  - 対応
@@ -92,7 +92,7 @@ update_dates: ["2023-07-16"]
  - 参考
    - [Kernel Panic every time I close computer/Apple Community](https://discussions.apple.com/thread/253692363)
 
-### CPUの使用率が異常なとき
+## CPUの使用率が異常なとき
  - 原因
    - 一概には言えないが一部のサービスやプロセスが暴走していることがある
  - 対応
@@ -108,7 +108,7 @@ update_dates: ["2023-07-16"]
        -  `ps aux | grep <process-name>`などで実行バイナリを特定
        - `sudo mv <binary-path> <binary-path>.back`などとしてpathから外す
 
-### ショートカットキーがなにかのプロセス・アプリケーションに食べられてしまうとき
+## ショートカットキーがなにかのプロセス・アプリケーションに食べられてしまうとき
  - 原因
    - 対象のアプリケーションの特定が困難で一見するとキーの不良にも見えるが、ソフトウェア起因である
  - 対応
@@ -117,7 +117,7 @@ update_dates: ["2023-07-16"]
    - CUIプロセスが原因のとき、`ps ux`コマンドでそれらしいのをkillしながら特定
      - `skhd`daemonがoption系のショートカットを食べていた
 
-### Docker Desktop for Macと相性が悪い
+## Docker Desktop for Macと相性が悪い
  - 対策
    - dockerが必要な操作を行った後(コンテナの開発など)はDocker Desktop for Macを終了し、macosを再起動する
  - クラッシュしてしまった場合
