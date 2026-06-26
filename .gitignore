@@ -7,4 +7,3 @@ package-lock.json
 node_modules/
 .python-version
 .jekyll-metadata
-CLAUDE.md
