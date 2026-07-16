@@ -124,4 +124,4 @@ KerasでRNNを用いた文字列の作成を行います。
 <script src="https://gist.github.com/GINK03/6a015233b81a6413bc90d974665fb4d3.js"></script>
 
 ## 参考文献
-[1] [自然言語処理における、Attentionの耐えられない短さ](http://qiita.com/icoxfog417/items/f170666d81f773e4b1a7)
+[1] [自然言語処理における、Attentionの耐えられない短さ](https://qiita.com/icoxfog417/items/f170666d81f773e4b1a7)

@@ -30,6 +30,8 @@
 
 ## push後の確認
  - `git push` 後に `gh run list --limit 5` でGitHub Pagesのビルド状況を確認する
+ - custom Pages Workflowを初めてpushした後は`gh api --method PUT repos/GINK03/gink03.github.io/pages -f build_type=workflow`を一度実行する
+ - `gh api repos/GINK03/gink03.github.io/pages --jq .build_type`が`workflow`であることを確認する
 
 ## docs/ 運用
  - `docs/draft/` — 非定型のメモ、一時アウトプット、会話から作った手順書、暫定ドラフト。後で root README や恒久文書へ昇格させる前提の置き場
@@ -42,7 +44,7 @@
 
 ### ADR の運用（前提）
  - 「後から『なぜこうした？』となる決定」をしたら `docs/adr/` に1ファイル起こす。対象は方針・トレードオフ・代替案の取捨など（例: 大規模な構造変更、ツール選定、やらない判断）。単なる実装詳細やバグ修正は対象外
- - 採番は既存の最大番号+1（ゼロ詰め4桁、`NNNN-kebab-title.md`）。現状は `0001`(SEOテクニカル方針) `0002`(見出し正規化) `0003`(関連記事と品質検査) まで存在
+ - 採番は既存の最大番号+1（ゼロ詰め4桁、`NNNN-kebab-title.md`）。現状は `0001`(SEOテクニカル方針) `0002`(見出し正規化) `0003`(関連記事と品質検査) `0004`(関連記事ランキング) `0005`(検証済みPages成果物) まで存在
  - 既存 ADR は書き換えず、覆す時は新しい ADR を作り、旧側の Status を `Superseded by NNNN` に更新する
  - 関連する決定は本文中で `[[0001-...]]` のように相互リンクする
  - `docs/draft/` 等で大きな方針を実行したら、その要点を ADR として確定させ、ドラフトは経緯ログとして残すか archive へ移す
@@ -63,39 +65,47 @@
  - 画像LCP（ロゴ737K→41K、背景をWebP化451K→216K）
  - トップから `/posts/`(全記事一覧)・`/projects/`・`/bookmarks/`・`/tags/` への導線追加（`_layouts/home.html`）
  - 記事ページをsemantic HTMLへ整理し、公開日と最新更新日を表示
- - 共有タグから関連記事を最大5件自動表示し、トピック間の導線を追加（`_includes/related-posts.html`）
+ - 共有タグ数、本文量、カテゴリ、公開日の近さで関連記事を最大5件事前計算し、1512記事へ導線を追加（`scripts/generate_related_posts.rb`）
  - 公開タグを3記事以上で使われるものに絞り、タグ表記とアンカー衝突を正規化
  - 全記事一覧とカテゴリ一覧を軽量な共通テンプレートへ統合
- - GitHub Pagesと同じ`github-pages` gemへ依存関係を揃え、`Gemfile.lock`を管理
- - 記事メタデータ、見出し、タグ、ビルド、生成後の内部リンクをGitHub Actionsで検査
+ - `github-pages` gemと`Gemfile.lock`を使い、品質検証済みの同一`_site`をcustom Pages Workflowで公開する
+ - 記事メタデータ、見出し、タグ、関連記事データ、ビルド、生成後の内部リンクをGitHub Actionsで検査
  - MathJaxを数式を含むページだけで読み込むよう変更
+ - コメント無効記事でDisqusを読み込まず、ビルド後処理で記事画像の2枚目以降へ`loading="lazy"`、全画像へ`decoding="async"`を付与
+ - HTTP外部リンク57件を実測し、HTTPS応答を確認できた31URLを更新、残りは週次Workflowで検査
+ - ファイル名とfrontmatter公開日が異なる117記事を改名し、CIで完全一致を検査
  - `docs` `scripts` `AGENTS.md`などの運用ファイルをJekyllの公開対象から除外
  - Search Console に `gink03.github.io` をプロパティ登録済み（所有者: angeldust03@gmail.com）
  - 2026-07-04 に Search Console API で `https://gink03.github.io/sitemap.xml` を送信済み、送信結果は `204`、`lastSubmitted: 2026-07-04T01:08:18.179Z`、`isPending: true`、warnings/errors は 0
 
 **やるべきこと / 未了**
- - 送信済みの `sitemap.xml` について、数日〜数週でインデックス状況を再確認する
+ - 2026-07-16に再確認したが、`/posts/` `/git/` `/markdown/` `/sops/` `/dijkstra/`は引き続き「URL が Google に認識されていません」、定期的に再確認する
  - `docs/active/content-consolidation.md`の短文記事584件、概要がタイトルと同一147件、公開中blog-drafts 15件は編集判断で統合または改稿する
  - 権威向上（被リンク・Zenn/Qiitaクロスポスト）は非テクニカルで保留。当面はテクニカルに対応できる範囲で進める方針
 
 **品質チェック（2026-07-16追加）**
  - `bundle exec ruby scripts/validate_content.rb`で全記事のfrontmatter、日付、見出し、パーマリンク、タグを検査
  - `bundle exec ruby scripts/generate_content_audit.rb --check`で統合候補レポートの鮮度を検査
+ - `bundle exec ruby scripts/generate_related_posts.rb --check`で関連記事データの鮮度を検査
  - `bundle exec jekyll build --strict_front_matter`でGitHub Pages互換ビルドを検査
- - `bundle exec ruby scripts/verify_generated_site.rb _site`で構造化データ、関連記事、MathJax、一覧サイズ、公開除外を検査
+ - `bundle exec ruby scripts/enhance_article_images.rb _site`で生成後の記事画像へ読み込み属性を付与
+ - `bundle exec ruby scripts/verify_generated_site.rb _site`で構造化データ、関連記事、画像属性、Disqus、MathJax、一覧サイズ、公開除外を検査
  - `bundle exec ruby scripts/check_internal_links.rb _site`で生成HTML内のローカルリンクと見出しアンカーを検査
- - 詳細な決定は`docs/adr/0003-content-quality-and-topic-navigation.md`を参照
+ - 外部リンクは`.github/workflows/external-links.yml`で毎週検査し、pushの必須条件にはしない
+ - Gitleaksの現在ツリーとGit履歴を検査し、レビュー済みの過去10件だけを`.gitleaksignore`のfingerprintで基準化する
+ - LINE token例とWireGuard PrivateKey例が実値だった場合の失効確認は`docs/active/historical-secret-review.md`で追跡する
+ - 詳細な決定は`docs/adr/0003-content-quality-and-topic-navigation.md`、`0004-related-post-ranking.md`、`0005-verified-pages-artifact.md`を参照
 
 **インデックス状況の確認方法（エージェント向け）**
  - ADC（`gcloud auth application-default`、readonlyスコープ `auth/webmasters.readonly`）で Search Console API を叩ける。quota project は個人GCP `starry-lattice-256603`、`X-Goog-User-Project` ヘッダ必須
  - URL Inspection: `POST https://searchconsole.googleapis.com/v1/urlInspection/index:inspect`（body: `inspectionUrl`, `siteUrl`）で任意URLの index 状況を即時照会
  - sitemap送信や登録系は書き込みスコープ `auth/webmasters` が必要（readonlyでは403）
- - PageSpeed/Lighthouse は dots の `bin/seocheck <url>`（ADC利用・キー不要）でSEO/性能スコアを取得できる
+ - PageSpeed/Lighthouse は dots の `bin/seocheck <url>`で取得できるが、ADCにPageSpeed API用スコープがない場合は403になる
 
 **Search Console 404通知対応の再現手順（2026-07-04 実施）**
  - Search Console API の `sites.list` で `https://gink03.github.io/` が `siteOwner` として見えることを確認する
  - `sitemaps.list` が `{}` の場合でも、公開 `https://gink03.github.io/sitemap.xml` が 200 で取得できるかを確認する、2026-07-04 時点では sitemap は 1776 URL
- - URL Inspection API で代表URLを確認する、2026-07-04 時点では `/` は `PASS` かつ「送信して登録されました」、`/posts/` `/git/` `/markdown/` `/sops/` `/dijkstra/` は「URL が Google に認識されていません」
+ - URL Inspection API で代表URLを確認する、2026-07-16 時点でも `/` は `PASS` かつ「送信して登録されました」、`/posts/` `/git/` `/markdown/` `/sops/` `/dijkstra/` は「URL が Google に認識されていません」
  - Search Console の「見つかりませんでした（404）」の対象URL一覧は API から直接取得できないため、ローカルソース由来の内部リンクをHTTPチェックしてこちら起因の404を探す
  - 内部リンク検査は `_posts/**/*.md`、`_layouts/**/*.html`、`_includes/**/*.html`、root `*.html` から `[](...)` と `href="..."` を抽出し、`https://gink03.github.io` または `/` 始まりのHTMLリンクだけを対象にする、画像、CSS、JS、XML、PDFなどは除外する
  - 抽出したURLを公開サイトに対して `HEAD` し、2xx/3xx以外を修正対象にする、2026-07-04 は 199 件中 5 件の404を修正し、再検査で 198 件中 0 件になった

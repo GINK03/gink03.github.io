@@ -9,6 +9,8 @@ background:         'assets/img/wp5384373.webp'
 tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 locale:             ja_JP
 url:                https://gink03.github.io
+baseurl:            ""
+repository:         GINK03/gink03.github.io
 
 # Jekyll
 permalink:          /:title/

@@ -100,7 +100,7 @@ $ kotlin -cp alice.jar:bob.jar:foo.jar FooKt
        Runtime.getRuntime().exec("wget ${src} -O imgs/${name}/${data_bm}.png")             
     }
 ```
-　PhantomJSは[このサイト](http://phantomjs.org/download.html)からコンパイル済みのバイナリをダウンロードして、PATHが通った場所においておく必要があります。
+　PhantomJSは[このサイト](https://phantomjs.org/download.html)からコンパイル済みのバイナリをダウンロードして、PATHが通った場所においておく必要があります。
 
 ### Thread
 　いくつか書き方があるようですが、もっとも簡単にできた実装です。  　

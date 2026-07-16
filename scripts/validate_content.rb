@@ -25,6 +25,15 @@ posts.each do |post|
 
   published_date = ContentHelpers.iso_date(data["date"])
   errors << "#{post.path}: date must use a valid YYYY-MM-DD value" unless valid_date.call(published_date)
+  if post.filename_date != published_date
+    errors << "#{post.path}: filename date must match published date #{published_date}"
+  end
+
+  post.links.each do |href|
+    if href.start_with?("http://localhost", "http://127.0.0.1", "http://gink03.github.io")
+      errors << "#{post.path}: internal links must use a root-relative or HTTPS URL: #{href}"
+    end
+  end
 
   update_dates = Array(data["update_dates"]).map { |date| ContentHelpers.iso_date(date) }
   if data.key?("update_dates") && update_dates.empty?
@@ -95,6 +104,11 @@ short_posts = posts.count { |post| post.body_characters < 500 }
 same_excerpt = posts.count { |post| post.title.strip.casecmp?(post.excerpt.strip) }
 no_internal_links = posts.count { |post| post.internal_links.empty? }
 singleton_tags = tag_variants.count { |_, values| values.length == 1 }
+missing_image_alt = posts.sum { |post| post.missing_alt_images.length }
+filename_date_mismatch = posts.count do |post|
+  post.filename_date && post.filename_date != ContentHelpers.iso_date(post.data["date"])
+end
+external_http_links = posts.flat_map(&:external_http_links).uniq.length
 
 puts "Content validation passed: #{posts.length} posts"
-puts "Audit counters: short_under_500=#{short_posts} excerpt_equals_title=#{same_excerpt} no_internal_links=#{no_internal_links} singleton_tags=#{singleton_tags}"
+puts "Audit counters: short_under_500=#{short_posts} excerpt_equals_title=#{same_excerpt} no_internal_links=#{no_internal_links} singleton_tags=#{singleton_tags} missing_image_alt=#{missing_image_alt} external_http_links=#{external_http_links} filename_date_mismatch=#{filename_date_mismatch}"

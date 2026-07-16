@@ -21,7 +21,7 @@ sort_key: "2017-04-02"
 　SQL系のデータ集計と系譜を別にする分析手法がある。それは、データの流れを関数のmap, filter, reduce(fold)関数を連続的に通すことで任意の結果を求めるスタイルである。  
 　もともと、マルチプロセス処理やコンピュータをまたいでの並列処理との相性がよく、よく使われる。  
 　具体例を示すとPythonではこのようになる。Pythonでは可読性と構文的な複雑さを回避するため、lambdaと呼ばれる匿名関数は非常に限定的である。  
-[Python ideone](http://ideone.com/2RB6HG)
+[Python ideone](https://ideone.com/2RB6HG)
 ```python
 """
 カンマ区切りで入力し、奇数のみを取り出し二乗する
@@ -34,7 +34,7 @@ print(list(map(lambda x:x**2, filter(lambda x:x%2==1, map(int, ents)))))
 ```
 　この記法をみて、この書き方を積極的に使いたいと思うだろうか。非常に可読性がわるいことがわかるだろう。  
 　Kotlinで書き直すとこのようになる。  
-[Kotlin ideone](http://ideone.com/9MELWe)
+[Kotlin ideone](https://ideone.com/9MELWe)
 ```kotlin
 fun main(args:Array<String>){
   val ans = readLine()!!.split(",").map { x -> 
@@ -70,7 +70,7 @@ Exlixr.main
 　これはどういうことかというと、C#系統やPythonではyieldをつかったiterativeな関数呼び出しなどが該当する。  
 　メリットとしては、実際に値を取り出す操作をする直前に内部の評価機能が働き、初めて計算コストが発生する。hadoopやsparkなどで分析する際には実際には評価しないデータの中から、効率的にデータを取り出すのに一役も二役も買っている。  
 　Python2とPython3の違い、Python3のみデフォルトで関数射影がgeneratorになっているのだがその例を示す。  
-[Python2 ideone](http://ideone.com/feIVwf)  
+[Python2 ideone](https://ideone.com/feIVwf)<br>
 Python2
 ```python
 # coding: utf-8
@@ -121,7 +121,7 @@ real    2m4.228s
  
 ### Scalaは発火しやすい印象
 　エモい話なのなのだが、もともとTwitter社がRuby on Railsの代わりにScalaのフレームワークを作って流行ったという背景が多少なりともある。twitterでScalaからnode jsに移行したといことで大騒ぎになった。真偽はよくわかってないが、Scalaには熱心に解説してくださる方がいて、その方はたいていTwitterユーザですので、衝撃は大きかったようだ。
-[参考](http://www.utali.io/entry/2017/02/24/170000)
+[参考](https://www.utali.io/entry/2017/02/24/170000)
 　反論も多数見かけるし、攻撃的な論調もおおく、少々危険な気がしている。  
 [参考](http://kmizu.hatenablog.com/entry/2017/03/22/233335)
 
@@ -130,7 +130,7 @@ real    2m4.228s
 　他にもいろいろありますが、私がよく使う機能での差異が大きい物を示しています
 
 **Scalaのみある機能**
-- Existential types [参考](http://www.drmaciver.com/2008/03/existential-types-in-scala/)
+- Existential types [参考](https://www.drmaciver.com/2008/03/existential-types-in-scala/)
 - Complicated logic for initialization of traits
 - Custom symbolic operations
 
@@ -198,7 +198,7 @@ fun main(args: Array<String>) {
   }
 }
 ```
-### 一文字欠損した場所を求める: [yukicoder no.494](http://yukicoder.me/problems/no/494)
+### 一文字欠損した場所を求める: [yukicoder no.494](https://yukicoder.me/problems/no/494)
 Python
 ```python
 ans = list(filter(lambda x:x[0]!=x[1], zip('yukicoder', input())))
@@ -233,7 +233,7 @@ fun main(args:Array<String>) {
 }
 ```
 
-### sortの実装: [yukicoder no.490](http://yukicoder.me/submissions/163076)
+### sortの実装: [yukicoder no.490](https://yukicoder.me/submissions/163076)
 Python
 ```python
 n = int(input())

@@ -18,7 +18,7 @@ update_dates: ["2018-01-19"]
    - 2. Download Cudnn 
      - [cudnn](https://developer.nvidia.com/cudnn)
    - 3. Download Nvidia GPU driver 
-     - [Driver](http://www.nvidia.co.jp/Download/index.aspx?lang=jp)
+     - [Driver](https://www.nvidia.co.jp/Download/index.aspx?lang=jp)
  - STEP 2: ドライブファイルをインストール
  - STEP 3: CUDAインストール
  - STEP 4: CUDNNファイルをインストール

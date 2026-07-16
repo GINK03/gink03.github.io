@@ -26,5 +26,5 @@ update_dates: ["2022-08-27"]
    - 諦めて、localとglobalで別のホスト名を利用する
 
 ## 参考
- - [ヘアピン NAT 機能/Yamaha](http://www.rtpro.yamaha.co.jp/RT/docs/nat-descriptor/hairpin_nat.html)
+ - [ヘアピン NAT 機能/Yamaha](https://www.rtpro.yamaha.co.jp/RT/docs/nat-descriptor/hairpin_nat.html)
  - [Cisco ASA でヘアピン NAT を設定する](https://sig9.org/archives/4020)

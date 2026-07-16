@@ -1,0 +1,45 @@
+name: external links
+
+on:
+  schedule:
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: external-links
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
+      - uses: ruby/setup-ruby@003a5c4d8d6321bd302e38f6f0ec593f77f06600 # v1
+        with:
+          ruby-version: "3.3.4"
+          bundler-cache: true
+      - name: Build site
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build --strict_front_matter
+      - name: Enhance article images
+        run: bundle exec ruby scripts/enhance_article_images.rb _site
+      - name: Check external links
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2
+        with:
+          args: >-
+            --no-progress
+            --max-concurrency 16
+            --max-retries 2
+            --timeout 20
+            --exclude '^https://gink03\.github\.io(?:/|$)'
+            --exclude '^http://(?:localhost|127\.0\.0\.1)(?::[0-9]+)?(?:/|$)'
+            '_site/**/*.html'
+          fail: false
+          format: markdown
+          jobSummary: true
+          output: lychee-report.md

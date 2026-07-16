@@ -18,4 +18,4 @@ update_dates: ["2021-03-27"]
 
 ## 参考
  - [拙訳: 擬多項式時間アルゴリズムとは何か](https://blog.hellorusk.net/posts/20200113)
- - [NとかNPとか困難とか完全とか（２）](http://techtipshoge.blogspot.com/2011/06/nnp_12.html)
+ - [NとかNPとか困難とか完全とか（２）](https://techtipshoge.blogspot.com/2011/06/nnp_12.html)

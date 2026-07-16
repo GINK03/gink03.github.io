@@ -1,25 +1,14 @@
-{% assign related_limit = 5 %}
-{% assign related_count = 0 %}
-{% capture related_urls %}|{{ page.url }}|{% endcapture %}
-{% capture related_items %}
-  {% for tag in page.tags %}
-    {% assign tag_posts = site.tags[tag] %}
-    {% if tag_posts.size > 1 and related_count < related_limit %}
-      {% for related in tag_posts %}
-        {% capture related_marker %}|{{ related.url }}|{% endcapture %}
-        {% unless related_urls contains related_marker %}
-          <li><a href="{{ site.url }}{{ related.url }}">{{ related.title | escape }}</a> <time datetime="{{ related.date | date_to_xmlschema }}">{{ related.date | date: '%F' }}</time></li>
-          {% capture related_urls %}{{ related_urls }}{{ related_marker }}{% endcapture %}
-          {% assign related_count = related_count | plus: 1 %}
-          {% break %}
-        {% endunless %}
-      {% endfor %}
-    {% endif %}
-  {% endfor %}
-{% endcapture %}
-{% if related_count > 0 %}
+{% assign related_map = site.data.related_posts.related %}
+{% assign post_map = site.data.related_posts.posts %}
+{% assign related_urls = related_map[page.url] %}
+{% if related_urls and related_urls != empty %}
 <section class="related-posts" aria-labelledby="related-posts-title">
   <h2 id="related-posts-title">関連記事</h2>
-  <ul>{{ related_items | strip }}</ul>
+  <ul>
+    {% for related_url in related_urls limit: 5 %}
+      {% assign related = post_map[related_url] %}
+      <li><a href="{{ site.url }}{{ related_url }}">{{ related.title | escape }}</a> <time datetime="{{ related.date }}">{{ related.date }}</time></li>
+    {% endfor %}
+  </ul>
 </section>
 {% endif %}

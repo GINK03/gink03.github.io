@@ -1,0 +1,11 @@
+# Reviewed historical findings present before repository-wide scanning was enabled
+f7588b6b92336109cbfd916d00ce16d0a4f441b1:_posts/kaggle/2025-07-26-pydub.md:generic-api-key:8
+f20e93736e9a0f5bcb9d71c0cb99c395e5367052:_posts/kaggle/2025-07-26-demucs.md:generic-api-key:8
+ce392be5f189591fdd03971ca0de6164d39e7b7b:_posts/kaggle/2025-07-23-whisperx.md:generic-api-key:9
+1149255025e196c33387c6d44996af4383464532:_posts/configs/2023-03-30-gcp-secret-manager.md:generic-api-key:32
+3cfe44f0de9cad82b897bd00c1dfe916435ed11f:_posts/configs/2022-02-20-flask-rest.md:generic-api-key:126
+a361f33f1b34343756cf8181f4bd13ee6c388e9d:_posts/configs/2020-11-04-vscode.md:generic-api-key:52
+d57aea19af8a7008240df6e38f9074cca659dc66:_posts/configs/2020-05-10-line.py:generic-api-key:25
+53f8140d1ad613005b826824f30baef605f40f24:_posts/configs/2020-04-28-wireguard.md:generic-api-key:75
+53f8140d1ad613005b826824f30baef605f40f24:_posts/configs/2020-04-28-wireguard.md:generic-api-key:92
+c7f5213ed28fbbed95b2d065a32d8deceb7b3df9:_posts/posts/2013-08-16-code-highlighting-post.md:generic-api-key:23

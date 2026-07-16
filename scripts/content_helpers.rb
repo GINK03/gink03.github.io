@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
 require "date"
+require "addressable/uri"
+require "jekyll/url"
+require "jekyll/utils"
+require "kramdown"
+require "kramdown-parser-gfm"
+require "nokogiri"
 require "yaml"
 
 module ContentHelpers
@@ -23,17 +29,49 @@ module ContentHelpers
       body.gsub(/\s+/, "").length
     end
 
+    def rendered_body
+      @rendered_body ||= Nokogiri::HTML.fragment(
+        Kramdown::Document.new(body, input: "GFM").to_html
+      )
+    end
+
+    def links
+      rendered_body.css("a[href]").map { |link| link["href"] }
+    end
+
     def internal_links
-      body.scan(/(?<!!)\[[^\]]*\]\(([^)]+)\)/).flatten.select do |href|
+      links.select do |href|
         href.start_with?("/") || href.start_with?("https://gink03.github.io/")
       end
+    end
+
+    def external_http_links
+      links.select do |href|
+        href.start_with?("http://") &&
+          !href.start_with?("http://localhost") &&
+          !href.start_with?("http://127.0.0.1") &&
+          !href.start_with?("http://gink03.github.io")
+      end
+    end
+
+    def images
+      rendered_body.css("img")
+    end
+
+    def missing_alt_images
+      images.select { |image| image["alt"].to_s.strip.empty? }
+    end
+
+    def filename_date
+      File.basename(path).match(/\A(\d{4}-\d{2}-\d{2})-/)&.[](1)
     end
 
     def url
       return data["permalink"].to_s if data["permalink"]
 
-      slug = File.basename(path, ".md").sub(/\A\d{4}-\d{2}-\d{2}-/, "")
-      "/#{slug}/"
+      title = File.basename(path, ".md").sub(/\A\d{4}-\d{2}-\d{2}-/, "")
+      slug = Jekyll::Utils.slugify(title, mode: "pretty", cased: true)
+      "/#{Jekyll::URL.escape_path(slug)}/"
     end
   end
 

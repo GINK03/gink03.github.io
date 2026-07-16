@@ -39,5 +39,5 @@ update_dates: ["2021-02-11"]
 [調査した論文](/metacritic/)
 
 ## 参考
- - [第6章 メタ分析](http://cogpsy.educ.kyoto-u.ac.jp/personal/Kusumi/datasem17/takano1.pdf)
+ - [第6章 メタ分析](https://cogpsy.educ.kyoto-u.ac.jp/personal/Kusumi/datasem17/takano1.pdf)
  - [meta-analysis](https://en.wikipedia.org/wiki/Meta-analysis)

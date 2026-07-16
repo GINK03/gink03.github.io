@@ -15,3 +15,8 @@ repos:
         entry: bundle exec ruby scripts/validate_content.rb
         language: system
         pass_filenames: false
+      - id: related-posts
+        name: Check generated related posts
+        entry: bundle exec ruby scripts/generate_related_posts.rb --check
+        language: system
+        pass_filenames: false
