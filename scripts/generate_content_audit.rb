@@ -5,7 +5,9 @@ require_relative "content_helpers"
 
 output_path = "docs/active/content-consolidation.md"
 posts = ContentHelpers.load_posts
-short_posts = posts.select { |post| post.body_characters < 200 }.sort_by(&:body_characters)
+short_posts = posts.select { |post| post.body_characters < 200 }.sort_by do |post|
+  [post.body_characters, post.path]
+end
 draft_posts = posts.select { |post| post.path.include?("/_posts/blog-drafts/") || post.path.include?("_posts/blog-drafts/") }
 duplicate_excerpts = posts.select { |post| post.title.strip.casecmp?(post.excerpt.strip) }.sort_by(&:path)
 
