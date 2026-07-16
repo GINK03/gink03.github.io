@@ -5,7 +5,7 @@ date: 2022-02-23
 excerpt: "blink shellの使い方"
 project: false
 config: true
-tag: ["blink shell", "ios", "ターミナルエミュレータ"]
+tag: ["blink shell", "iOS", "ターミナルエミュレータ"]
 comments: false
 sort_key: "2022-02-23"
 update_dates: ["2022-02-23"]

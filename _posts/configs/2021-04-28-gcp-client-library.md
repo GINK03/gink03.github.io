@@ -3,7 +3,7 @@ layout: post
 title: "gcp client library"
 date: 2021-04-28
 excerpt: "gcp client libraryチートシート"
-tags: ["python", "gcp"]
+tags: ["Python", "GCP"]
 config: true
 comments: false
 sort_key: "2021-04-28"

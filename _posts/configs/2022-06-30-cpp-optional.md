@@ -3,7 +3,7 @@ layout: post
 title: "cppのoptional"
 date: 2022-06-30
 excerpt: "cppのoptionalの使い方"
-tags: ["c++", "cpp", "optional"]
+tags: ["C++", "cpp", "optional"]
 config: true
 comments: false
 sort_key: "2022-06-30"

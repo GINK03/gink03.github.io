@@ -3,10 +3,10 @@ layout: post
 title: "bigquery except distinct"
 date: 2023-08-04
 excerpt: "bigquery except distinct集合演算子の使い方"
-tags: ["bq", "bigquery", "gcp", "bigquery", "except distinct"]
+tags: ["bq", "BigQuery", "GCP", "except distinct"]
 kaggle: true
 comments: false
-sort_key: "2023-07-20"
+sort_key: "2023-08-04"
 update_dates: ["2023-07-20"]
 ---
 

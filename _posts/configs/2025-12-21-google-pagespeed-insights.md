@@ -5,7 +5,7 @@ date: 2025-12-21
 excerpt: "google pagespeed insightsの使い方と活用法"
 project: false
 config: true
-tag: ["google","chrome","pagespeed"]
+tag: ["google", "chrome", "pagespeed"]
 comments: false
 sort_key: "2025-12-21"
 update_dates: ["2025-12-21"]

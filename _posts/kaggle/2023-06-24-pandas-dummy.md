@@ -4,7 +4,7 @@ title: "pandas dummy"
 date: 2023-06-24
 excerpt: "pandasのダミー変数の変換"
 kaggle: true
-tag: ["python", "pandas", "dummy"]
+tag: ["Python", "pandas", "dummy"]
 comments: false
 sort_key: "2023-06-24"
 update_dates: ["2023-06-24"]

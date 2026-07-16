@@ -3,7 +3,7 @@ layout: post
 title: "gcp automl-vision"
 date: 2021-03-20
 excerpt: "automl visonついて"
-tags: ["gcp", "automl", "image"]
+tags: ["GCP", "automl", "image"]
 config: true
 comments: false
 sort_key: "2021-03-20"

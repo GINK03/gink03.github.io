@@ -3,7 +3,7 @@ layout: post
 title: "cppのpriority_que"
 date: 2022-07-04
 excerpt: "cppのpriority_queの使い方"
-tags: ["c++", "cpp", "priority_que"]
+tags: ["C++", "cpp", "priority_que"]
 config: true
 comments: false
 sort_key: "2022-07-04"

@@ -2,7 +2,7 @@
 layout: page
 title: Bookmarks
 tags: [about, nardtree, catindog, programming, machine-learning]
-date: 2017-04-2
+date: 2017-04-02
 comments: false
 ---
     

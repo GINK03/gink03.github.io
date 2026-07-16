@@ -4,7 +4,7 @@ title: "python context manager"
 date: "2022-11-17"
 excerpt: "pythonのcontext managerの使い方"
 config: true
-tag: ["python", "context manager", "with", "decorator", "class"]
+tag: ["Python", "context manager", "with", "decorator", "class"]
 comments: false
 sort_key: "2022-11-17"
 update_dates: ["2022-11-17"]

@@ -5,7 +5,7 @@ date: "2022-07-04"
 excerpt: "python match caseの使い方"
 project: false
 config: true
-tag: ["python", "match case"]
+tag: ["Python", "match case"]
 comments: false
 sort_key: "2022-07-04"
 update_dates: ["2022-07-04"]

@@ -3,7 +3,7 @@ layout: post
 title: "zip/unzip と unar"
 date: 2021-09-16
 excerpt: "zip/unzip と unar の使い方と注意点"
-tag: ["zip", "unzip", "linux", "macOS", "windows", "unar", "shift-jis", "文字化け", "解凍"]
+tag: ["zip", "unzip", "Linux", "macOS", "windows", "unar", "shift-jis", "文字化け", "解凍"]
 config: true
 comments: false
 sort_key: "2022-04-08"

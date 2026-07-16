@@ -4,7 +4,7 @@ title: "gcp cloud functions"
 date: "2022-08-11"
 excerpt: "gcp cloud functionsの使い方"
 config: true
-tag: ["gcp", "gcloud", "cloud functions"]
+tag: ["GCP", "gcloud", "cloud functions"]
 comments: false
 sort_key: "2022-08-12"
 update_dates: ["2022-08-12"]

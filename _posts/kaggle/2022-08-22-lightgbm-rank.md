@@ -4,10 +4,9 @@ title: "lightgbm-rank"
 date: 2022-08-22
 excerpt: "lightgbm rankのチートシート"
 kaggle: true
-tag: ["python", "lightgbm", "ランク学習"]
+tag: ["Python", "lightgbm", "ランク学習"]
 comments: false
-sort_key: "2022-04-20"
-update_dates: []
+sort_key: "2022-08-22"
 ---
 
 

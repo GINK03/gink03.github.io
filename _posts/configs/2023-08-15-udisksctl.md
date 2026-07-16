@@ -5,7 +5,7 @@ date: "2023-08-15"
 excerpt: "udisksctlの使い方"
 project: false
 config: true
-tag: ["udisks2", "udisksctl", "linux"]
+tag: ["udisks2", "udisksctl", "Linux"]
 comments: false
 sort_key: "2023-08-15"
 update_dates: ["2023-08-15"]

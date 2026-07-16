@@ -4,7 +4,7 @@ title:  "pytorch dataset"
 date:   2021-01-05
 excerpt: "pytorchのdataset classの使い方"
 project: false
-tag: ["python", "pytorch"]
+tag: ["Python", "pytorch"]
 comments: false
 sort_key: "2022-03-22"
 update_dates: ["2022-03-22"]

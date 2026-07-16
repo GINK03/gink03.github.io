@@ -3,7 +3,7 @@ layout: post
 title: "jupyter bigquery"
 date: 2023-08-11
 excerpt: "jupyter notebookでbigqueryを利用する方法"
-tag: ["jupyter", "kaggle", "python", "bigquery"]
+tag: ["jupyter", "Kaggle", "Python", "BigQuery"]
 comments: false
 sort_key: "2023-08-11"
 update_dates: ["2023-08-11"]

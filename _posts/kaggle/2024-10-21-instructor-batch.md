@@ -4,7 +4,7 @@ title: "instructor batch"
 date: 2024-10-21
 excerpt: "instructor batchの使い方"
 kaggle: true
-tag: ["instructor", "openai", "nlp"]
+tag: ["instructor", "openai", "NLP"]
 comments: false
 sort_key: "2024-10-21"
 update_dates: ["2024-10-21"]

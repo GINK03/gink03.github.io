@@ -5,7 +5,7 @@ date: 2024-05-18
 excerpt: "ydata-profilingの使い方"
 project: false
 kaggle: true
-tag: ["python", "eda", "ydata-profiling"]
+tag: ["Python", "eda", "ydata-profiling"]
 comments: false
 sort_key: "2024-05-18"
 update_dates: ["2024-05-18"]

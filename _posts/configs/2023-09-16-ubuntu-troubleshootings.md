@@ -3,7 +3,7 @@ layout: post
 title: "ubuntu troubleshootings"
 date: 2023-09-16
 excerpt: "ubuntuのトラブルシューティング"
-tags: ["ubuntu", "linux", "トラブルシューティング"]
+tags: ["ubuntu", "Linux", "トラブルシューティング"]
 config: true
 comments: false
 sort_key: "2023-09-16"

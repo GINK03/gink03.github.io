@@ -1,96 +1,112 @@
-    <meta charset="UTF-8">
-    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
-    <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
-    <title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
+{% assign meta_title = site.title %}
+{% if page.title %}{% capture meta_title %}{{ page.title }} - {{ site.title }}{% endcapture %}{% endif %}
+{% if page.excerpt %}
+  {% assign meta_description = page.excerpt %}
+{% elsif page.description %}
+  {% assign meta_description = page.description %}
+{% else %}
+  {% assign meta_description = site.description %}
+{% endif %}
+{% assign meta_description = meta_description | markdownify | strip_html | strip_newlines | normalize_whitespace %}
+{% assign social_image = site.logo %}
+{% if page.feature %}{% assign social_image = page.feature %}{% endif %}
+{% assign social_image_first = social_image | slice: 0 %}
+{% unless social_image contains 'http://' or social_image contains 'https://' %}
+  {% if social_image_first == '/' %}
+    {% capture social_image %}{{ site.url }}{{ social_image }}{% endcapture %}
+  {% else %}
+    {% capture social_image %}{{ site.url }}/{{ social_image }}{% endcapture %}
+  {% endif %}
+{% endunless %}
+{% assign is_article = false %}
+{% if page.layout == 'post' %}{% assign is_article = true %}{% endif %}
+{% assign modified_date = page.date %}
+{% if page.update_dates and page.update_dates != empty %}
+  {% assign sorted_update_dates = page.update_dates | sort %}
+  {% assign modified_date = sorted_update_dates | last %}
+{% endif %}
+{% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
+<meta charset="UTF-8">
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>{{ meta_title | escape }}</title>
+<meta name="description" content="{{ meta_description | escape_once }}">
+<meta name="author" content="gimpei.kobayashi">
+{% if page.robots %}<meta name="robots" content="{{ page.robots | escape }}">{% endif %}
+{% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' | escape }}">{% endif %}
 
-	<!-- SEO対策 -->	
-	{% if page.excerpt %}
-	  <meta name="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">
-	{% else %}
-	  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-	{% endif %}
-	<!-- 著者情報 -->	
-	<meta name="author" content="gimpei.kobayashi">
+<!-- Twitter Cards -->
+<meta name="twitter:card" content="{% if page.feature %}summary_large_image{% else %}summary{% endif %}">
+<meta name="twitter:image" content="{{ social_image | escape }}">
+<meta name="twitter:title" content="{{ page.title | default: site.title | escape }}">
+<meta name="twitter:description" content="{{ meta_description | escape_once }}">
+{% if site.twitter %}<meta name="twitter:site" content="@{{ site.twitter | escape }}">
+<meta name="twitter:creator" content="@{{ site.twitter | escape }}">{% endif %}
 
-    {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
-    <!-- Twitter Cards -->
-    {% if page.feature %}{% capture feature %}{{ page.feature }}{% endcapture %}{% unless feature contains 'http://' or feature contains 'https://' %}{% capture feature %}{{ site.url }}/{{ feature }}{% endcapture %}{% endunless %}
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="{{ feature }}">
-    {% else %}<meta name="twitter:card" content="summary">
-    <meta name="twitter:image" content="{{ site.url }}/{{ site.logo }}">{% endif %}
-    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-    {% if page.excerpt %}<meta name="twitter:description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-    {% if site.twitter %}<meta name="twitter:site" content="@{{ site.twitter }}">
-    <meta name="twitter:creator" content="@{{ site.twitter }}">{% endif %}
-    <!-- Open Graph -->
-    <meta property="og:locale" content="{{ site.locale }}">
-    <meta property="og:type" content="article">
-    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-    {% if page.excerpt %}<meta property="og:description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
-    <meta property="og:site_name" content="{{ site.title }}">
-    <meta property="og:image" content="{{ site.url }}/{{ site.logo }}">
-    {% if site.google.verify %}
-    <!-- Webmaster Tools verfication -->
-    <meta name="google-site-verification" content="{{ site.google.verify }}">{% endif %}
-    {% if site.bing-verify %}    <meta name="msvalidate.01" content="{{ site.bing-verify }}">{% endif %}
-    {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
-    <link rel="canonical" href="{{ canonical }}">
-    <!-- 構造化データ (JSON-LD) -->
-    {% if page.date %}
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "mainEntityOfPage": { "@type": "WebPage", "@id": {{ canonical | jsonify }} },
-      "url": {{ canonical | jsonify }},
-      "headline": {{ page.title | jsonify }},
-      {% if page.excerpt %}"description": {{ page.excerpt | markdownify | strip_html | strip_newlines | normalize_whitespace | jsonify }},{% endif %}
-      "datePublished": "{{ page.date | date_to_xmlschema }}",
-      "dateModified": "{% if page.update_dates %}{{ page.update_dates | last | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}",
-      "author": { "@type": "Person", "name": "gimpei.kobayashi" },
-      "publisher": { "@type": "Person", "name": "gimpei.kobayashi", "logo": { "@type": "ImageObject", "url": "{{ site.url }}/{{ site.logo }}" } },
-      "image": "{{ site.url }}/{{ site.logo }}"{% if page.tags %},
-      "keywords": {{ page.tags | join: ', ' | jsonify }}{% endif %}
-    }
-    </script>
-    {% endif %}
-    <link href="{{ site.url }}/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
-    <!-- Handheld -->
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS -->
-    <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
-    <!-- JS -->
-    <script src="{{ site.url }}/assets/js/modernizr-3.3.1.custom.min.js"></script>
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="{{ site.url }}/assets/img/favicons/apple-icon-precomposed.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ site.url }}/assets/img/favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ site.url }}/assets/img/favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ site.url }}/assets/img/favicons/apple-icon-144x144.png">
-    <link rel="shortcut icon" type="image/png" href="{{ site.url }}/favicon.png" />
-    <link rel="shortcut icon" href="{{ site.url }}/favicon.ico" />
-    <!-- Background Image -->
-    {% if site.background %}
-    {% capture background %}{{ site.background }}{% endcapture %}
-    {% unless background contains 'http://' or background contains 'https://' %}{% capture background %}{{ site.url }}/{{ background }}{% endcapture %}{% endunless %}
-    <style type="text/css">body {background-image:url({{ background }}); {% unless site.tiled_bg %} background-repeat: no-repeat; background-size: cover; {% endunless %}}</style>
-    {% endif %}
-    <!-- Post Feature Image -->
-    {% if page.feature %}
-    {% capture feature %}{{ page.feature }}{% endcapture %}
-    {% unless feature contains 'http://' or feature contains 'https://' %}{% capture feature %}{{ site.url }}/{{ feature }}{% endcapture %}{% endunless %}
-    <style type="text/css">.feature {background-image:url({{ feature }});}</style>
-    {% endif %}
+<!-- Open Graph -->
+<meta property="og:locale" content="{{ site.locale | escape }}">
+<meta property="og:type" content="{% if is_article %}article{% else %}website{% endif %}">
+<meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+<meta property="og:description" content="{{ meta_description | escape_once }}">
+<meta property="og:url" content="{{ canonical | escape }}">
+<meta property="og:site_name" content="{{ site.title | escape }}">
+<meta property="og:image" content="{{ social_image | escape }}">
+{% if is_article %}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+<meta property="article:modified_time" content="{{ modified_date | date_to_xmlschema }}">
+{% for tag in page.tags %}<meta property="article:tag" content="{{ tag | escape }}">
+{% endfor %}{% endif %}
+{% if site.google.verify %}<meta name="google-site-verification" content="{{ site.google.verify | escape }}">{% endif %}
+{% if site.bing-verify %}<meta name="msvalidate.01" content="{{ site.bing-verify | escape }}">{% endif %}
+<link rel="canonical" href="{{ canonical | escape }}">
 
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ99XHGDH8"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+<!-- Structured data -->
+{% if is_article %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": { "@type": "WebPage", "@id": {{ canonical | jsonify }} },
+  "url": {{ canonical | jsonify }},
+  "headline": {{ page.title | jsonify }},
+  "description": {{ meta_description | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ modified_date | date_to_xmlschema }}",
+  "author": { "@type": "Person", "name": "gimpei.kobayashi" },
+  "publisher": { "@type": "Person", "name": "gimpei.kobayashi", "logo": { "@type": "ImageObject", "url": "{{ site.url }}/{{ site.logo }}" } },
+  "image": {{ social_image | jsonify }}{% if page.tags %},
+  "keywords": {{ page.tags | join: ', ' | jsonify }}{% endif %}
+}
+</script>
+{% endif %}
 
-	  gtag('config', 'G-EZ99XHGDH8');
-	</script>
+<link href="{{ site.url }}/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title | escape }} Feed">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
+<script src="{{ site.url }}/assets/js/modernizr-3.3.1.custom.min.js"></script>
+<link rel="apple-touch-icon" href="{{ site.url }}/assets/img/favicons/apple-icon-precomposed.png">
+<link rel="apple-touch-icon" sizes="72x72" href="{{ site.url }}/assets/img/favicons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="{{ site.url }}/assets/img/favicons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="144x144" href="{{ site.url }}/assets/img/favicons/apple-icon-144x144.png">
+<link rel="shortcut icon" type="image/png" href="{{ site.url }}/favicon.png">
+<link rel="shortcut icon" href="{{ site.url }}/favicon.ico">
+{% if site.background %}
+{% capture background %}{{ site.background }}{% endcapture %}
+{% unless background contains 'http://' or background contains 'https://' %}{% capture background %}{{ site.url }}/{{ background }}{% endcapture %}{% endunless %}
+<style>body {background-image:url({{ background }}); {% unless site.tiled_bg %}background-repeat:no-repeat; background-size:cover;{% endunless %}}</style>
+{% endif %}
+{% if page.feature %}
+{% capture feature %}{{ page.feature }}{% endcapture %}
+{% unless feature contains 'http://' or feature contains 'https://' %}{% capture feature %}{{ site.url }}/{{ feature }}{% endcapture %}{% endunless %}
+<style>.feature {background-image:url({{ feature }});}</style>
+{% endif %}
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EZ99XHGDH8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-EZ99XHGDH8');
+</script>

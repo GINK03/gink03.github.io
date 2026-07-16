@@ -5,7 +5,7 @@ date: 2025-09-29
 excerpt: "GitHub Copilot CLIの使い方"
 project: false
 config: true
-tag: ["github", "copilot", "cli"]
+tag: ["github", "copilot", "CLI"]
 comments: false
 sort_key: "2025-09-29"
 update_dates: ["2025-09-29"]

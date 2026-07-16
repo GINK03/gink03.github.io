@@ -3,7 +3,7 @@ layout: post
 title: "python dir"
 date: 2023-01-14
 excerpt: "pythonのdirの使い方"
-tags: ["python", "python3", "dir"]
+tags: ["Python", "python3", "dir"]
 config: true
 comments: false
 sort_key: "2023-01-14"

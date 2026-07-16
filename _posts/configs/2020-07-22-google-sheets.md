@@ -4,9 +4,9 @@ title: "Google Sheets"
 date: 2020-07-22
 excerpt: "Google Sheetsの使い方"
 config: true
-tag: ["google sheets", "gss", "spreadsheets", "google spreadsheets"]
+tag: ["Google Sheets", "gss", "spreadsheets", "google spreadsheets"]
 comments: false
-sort_key: "2022-05-17"
+sort_key: "2022-06-21"
 update_dates: ["2022-06-21", "2022-05-17"]
 ---
 

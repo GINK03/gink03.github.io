@@ -4,7 +4,7 @@ title: "python streamlit columns"
 date: 2023-12-10
 excerpt: "streamlitのcolumnsの概要と使い方"
 config: true
-tag: ["streamlit", "python", "columns"]
+tag: ["streamlit", "Python", "columns"]
 comments: false
 sort_key: "2023-12-10"
 update_dates: ["2023-12-10"]

@@ -4,7 +4,7 @@ title: "gcp bearer token authentication"
 date: "2022-09-28"
 excerpt: "gcp bearer token authenticationの使い方"
 config: true
-tag: ["gcp", "gcloud", "security", "bearer", "token authentication"]
+tag: ["GCP", "gcloud", "security", "bearer", "token authentication"]
 comments: false
 sort_key: "2022-09-28"
 update_dates: ["2022-09-28"]

@@ -4,7 +4,7 @@ title: "pythonのregex"
 date: 2021-04-26
 excerpt: "pythonのregex使い方"
 config: true
-tag: ["python", "library", "regex"]
+tag: ["Python", "library", "regex"]
 comments: false
 sort_key: "2022-01-19"
 update_dates: ["2022-01-19","2021-10-20","2021-08-06","2021-04-26"]

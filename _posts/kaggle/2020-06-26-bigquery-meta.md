@@ -3,7 +3,7 @@ layout: post
 title: "bigqueryのメタデータ"
 date: 2020-06-26
 excerpt: "BigQueryのメタデータについて"
-tags: ["bq", "bigquery", "gcp", "meta"]
+tags: ["bq", "BigQuery", "GCP", "meta"]
 kaggle: true
 comments: false
 sort_key: "2022-05-11"

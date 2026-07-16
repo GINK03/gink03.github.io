@@ -4,9 +4,9 @@ title: "コピーとペースト"
 date: 2020-09-21
 excerpt: "各OSでコピーとペーストを便利に行う"
 config: true
-tag: ["osx", "linux", "tmux"]
-sort_key: "2020-09-21"
-update_dates: ["2022-05-31", "2020-09-21","2020-09-21"]
+tag: ["osx", "Linux", "tmux"]
+sort_key: "2022-05-31"
+update_dates: ["2022-05-31","2020-09-21"]
 comments: false
 ---
 

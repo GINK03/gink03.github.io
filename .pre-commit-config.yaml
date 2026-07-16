@@ -10,3 +10,8 @@ repos:
         entry: gitleaks git --pre-commit --redact --staged --verbose
         language: system
         pass_filenames: false
+      - id: validate-content
+        name: Validate blog content
+        entry: bundle exec ruby scripts/validate_content.rb
+        language: system
+        pass_filenames: false

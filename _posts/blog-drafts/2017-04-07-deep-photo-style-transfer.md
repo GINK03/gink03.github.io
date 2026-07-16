@@ -2,9 +2,10 @@
 layout: post
 title: "Deep Photo Style Transfer"
 date: 2017-04-08
-excerpt: ""
-tags: [DeepLearning]
+excerpt: "Deep Photo Style Transferの実験結果とTorch7、Octave、GPU利用時のノウハウ"
+tags: ["DeepLearning"]
 comments: false
+sort_key: "2017-04-08"
 ---
 ## 編集中
 <p align="center">

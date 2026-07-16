@@ -7,7 +7,7 @@ tags: ["smart", "smartmontools", "smartctl"]
 config: true
 comments: false
 sort_key: "2022-01-19"
-update_dates: ["2022-01-19","2021-03-08","2021-03-08"]
+update_dates: ["2022-01-19","2021-03-08"]
 ---
 
 ## インストール

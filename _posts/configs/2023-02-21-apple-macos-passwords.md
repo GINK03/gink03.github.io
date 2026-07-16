@@ -3,7 +3,7 @@ layout: post
 title: "macOS passwords"
 date: 2023-02-21
 excerpt: "macOSのpasswordsについて"
-tags: ["apple", "macos", "osx", "passwords", "keychain"]
+tags: ["apple", "macOS", "osx", "passwords", "keychain"]
 config: true
 comments: false
 sort_key: "2023-02-21"

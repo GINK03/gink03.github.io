@@ -5,7 +5,7 @@ date: 2024-08-18
 excerpt: "numpy random shuffleとpermutationの使い方"
 project: false
 kaggle: true
-tag: ["numpy", "python"]
+tag: ["numpy", "Python"]
 comments: false
 sort_key: "2024-08-18"
 update_dates: ["2024-08-18"]

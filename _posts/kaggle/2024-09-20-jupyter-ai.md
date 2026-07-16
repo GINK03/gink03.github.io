@@ -3,7 +3,7 @@ layout: post
 title: "jupyter ai"
 date: 2024-09-20
 excerpt: "jupyter aiの使い方"
-tag: ["jupyter", "kaggle", "python"]
+tag: ["jupyter", "Kaggle", "Python"]
 comments: false
 sort_key: "2024-09-20"
 update_dates: ["2024-09-20"]

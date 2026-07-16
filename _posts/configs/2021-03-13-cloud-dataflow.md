@@ -3,7 +3,7 @@ layout: post
 title: "cloud dataflow"
 date: 2021-03-13
 excerpt: "cloud dataflowについて"
-tags: ["cloud dataflow", "apache beam", "gcp"]
+tags: ["cloud dataflow", "apache beam", "GCP"]
 config: true
 comments: false
 sort_key: "2021-06-19"

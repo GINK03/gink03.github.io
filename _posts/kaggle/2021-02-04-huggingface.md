@@ -5,7 +5,7 @@ date: 2021-02-04
 excerpt: "huggingfaceの使い方"
 kaggle: true
 hide_from_post: true
-tag: ["huggingface", "nlp", "python"]
+tag: ["huggingface", "NLP", "Python"]
 comments: false
 sort_key: "2022-04-05"
 update_dates: ["2022-04-05","2022-03-24"]

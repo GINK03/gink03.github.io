@@ -3,9 +3,10 @@ layout: post
 title: "liblinear tools"
 date: 2017-04-03
 excerpt: "A ton of text to test readability with image feature."
-tags: [liblinear-tools]
-feature: http://i.imgur.com/Ds6S7lJ.png
+tags: ["liblinear-tools"]
+feature: https://i.imgur.com/Ds6S7lJ.png
 comments: false
+sort_key: "2017-04-03"
 ---
 
 ## インストール

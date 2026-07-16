@@ -5,7 +5,7 @@ date: "2023-07-24"
 excerpt: "pythonのpyheifの使い方"
 project: false
 config: true
-tag: ["python", "画像", "HEIF", "High Efficiency Image Format"]
+tag: ["Python", "画像", "HEIF", "High Efficiency Image Format"]
 comments: false
 sort_key: "2023-07-24"
 update_dates: ["2023-07-24"]

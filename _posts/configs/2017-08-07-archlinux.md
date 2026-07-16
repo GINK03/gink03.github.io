@@ -3,7 +3,7 @@ layout: post
 title: "ArchLinux setup"
 date: 2017-08-07
 excerpt: "ArchLinux setup"
-tags: [archlinux]
+tags: ["archlinux"]
 config: true
 comments: false
 sort_key: "2018-01-19"

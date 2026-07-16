@@ -8,7 +8,7 @@ config: true
 tag: ["remote desktop", "jump desktop", "rdp"]
 comments: false
 sort_key: "2022-02-23"
-update_dates: ["2022-02-23","2022-02-22","2022-02-22"]
+update_dates: ["2022-02-23","2022-02-22"]
 ---
 
 ## 概要

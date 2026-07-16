@@ -3,7 +3,7 @@ layout: post
 title: "linux dotnet"
 date: 2024-07-07
 excerpt: "linux dotnetの使い方"
-tags: ["dotnet", "linux"]
+tags: ["dotnet", "Linux"]
 config: true
 comments: false
 sort_key: "2024-07-07"

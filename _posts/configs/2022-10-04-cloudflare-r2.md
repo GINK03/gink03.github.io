@@ -3,7 +3,7 @@ layout: post
 title: "Cloudflare R2"
 date: 2022-10-04
 excerpt: "Cloudflare R2の使い方"
-tag: ["cloudflare", "r2", "s3互換"]
+tag: ["Cloudflare", "r2", "s3互換"]
 config: true
 comments: false
 sort_key: "2022-10-04"

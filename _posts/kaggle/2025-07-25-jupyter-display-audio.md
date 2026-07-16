@@ -3,9 +3,9 @@ layout: post
 title: "jupyter display audio"
 date: 2025-07-25
 excerpt: "jupyter display audio"
-tag: ["jupyter", "kaggle", "python"]
+tag: ["jupyter", "Kaggle", "Python"]
 comments: false
-sort_key: "2025-07-25-jupyter-display-audio"
+sort_key: "2025-07-25"
 update_dates: ["2025-07-25"]
 ---
 

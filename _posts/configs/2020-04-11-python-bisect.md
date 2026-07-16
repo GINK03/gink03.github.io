@@ -3,7 +3,7 @@ layout: post
 title: "python bisect"
 date: 2020-04-11
 excerpt: "pythonのbisectの使い方"
-tags: ["python", "bisect", "binary search"]
+tags: ["Python", "bisect", "binary search"]
 config: true
 comments: false
 sort_key: "2020-04-11"

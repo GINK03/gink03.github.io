@@ -4,7 +4,7 @@ title: "python streamlit dataframe"
 date: 2023-12-08
 excerpt: "streamlitのdataframeの表示方法"
 config: true
-tag: ["streamlit", "python"]
+tag: ["streamlit", "Python"]
 comments: false
 sort_key: "2023-12-08"
 update_dates: ["2023-12-08"]

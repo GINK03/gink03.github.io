@@ -3,10 +3,10 @@ layout: post
 title: "looker studio"
 date: 2025-05-23
 excerpt: "looker studioの使い方"
-tag: ["bi tool", "looker studio", "gcp"]
+tag: ["bi tool", "looker studio", "GCP"]
 config: true
-sort_key: "2025-05-23"
-update_dates: ["2025-05-23", "2026-04-26"]
+sort_key: "2026-04-26"
+update_dates: ["2026-04-26","2025-05-23"]
 ---
 
 ## 概要

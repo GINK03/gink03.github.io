@@ -3,7 +3,7 @@ layout: post
 title: "aws sagemaker"
 date: 2024-04-21
 excerpt: "aws sagemaker について"
-tags: ["aws", "sagemaker"]
+tags: ["AWS", "sagemaker"]
 config: true
 comments: false
 sort_key: "2024-04-21"

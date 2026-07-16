@@ -4,7 +4,7 @@ title: "langchain with structured output"
 date: 2024-05-26
 excerpt: "langchain with structured output"
 kaggle: true
-tag: ["langchain", "LLM", "python"]
+tag: ["langchain", "LLM", "Python"]
 comments: false
 sort_key: "2024-05-26"
 update_dates: ["2024-05-26"]

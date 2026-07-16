@@ -4,7 +4,7 @@ title: "python sqlitedict"
 date: 2023-12-08
 excerpt: "pythonのsqlitedictの使い方"
 config: true
-tag: ["sqlitedict", "python", "cache"]
+tag: ["sqlitedict", "Python", "cache"]
 comments: false
 sort_key: "2023-12-08"
 update_dates: ["2023-12-08"]

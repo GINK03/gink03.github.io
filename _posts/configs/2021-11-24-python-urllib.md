@@ -5,7 +5,7 @@ date: "2021-11-24"
 excerpt: "urllibモジュールの使い方"
 project: false
 config: true
-tag: ["urllib", "python"]
+tag: ["urllib", "Python"]
 comments: false
 sort_key: "2022-05-20"
 update_dates: ["2022-05-20"]

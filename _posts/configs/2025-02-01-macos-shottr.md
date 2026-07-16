@@ -3,7 +3,7 @@ layout: post
 title: "macos shottr"
 date: 2025-02-01
 excerpt: "macOS shottrの使い方"
-tags: ["macos", "shottr"]
+tags: ["macOS", "shottr"]
 config: true
 comments: false
 sort_key: "2025-02-01"

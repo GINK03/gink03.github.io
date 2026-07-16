@@ -5,7 +5,7 @@ date: 2024-01-06
 excerpt: "tensorflow decision forestsの使い方"
 kaggle: true
 hide_from_post: true
-tag: ["tensorflow", "decision-forests", "kaggle", "tfdf"]
+tag: ["tensorflow", "decision-forests", "Kaggle", "tfdf"]
 comments: false
 sort_key: "2024-01-06"
 update_dates: ["2024-01-06"]

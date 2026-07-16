@@ -3,7 +3,7 @@ layout: post
 title: "cloudflare workers"
 date: 2022-10-04
 excerpt: "cloudflare workersの使い方"
-tags: ["cloudflare", "workers"]
+tags: ["Cloudflare", "workers"]
 config: true
 comments: false
 sort_key: "2022-10-04"

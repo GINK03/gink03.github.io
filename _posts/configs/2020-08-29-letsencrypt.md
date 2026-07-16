@@ -5,7 +5,7 @@ date:   2020-08-29
 excerpt: "letsencrypt"
 project: false
 config: true
-tag: []
+tag: ["Let's Encrypt", "Certbot", "Linux", "TLS"]
 comments: false
 sort_key: "2020-09-21"
 update_dates: ["2020-09-21","2020-08-29"]

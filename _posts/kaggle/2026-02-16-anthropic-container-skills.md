@@ -4,7 +4,7 @@ title: "Anthropic Container Skills"
 date: 2026-02-16
 excerpt: "Anthropic Container Skillsの使い方"
 kaggle: true
-tag: ["anthropic", "python", "API"]
+tag: ["Anthropic", "Python", "API"]
 comments: false
 sort_key: "2026-02-16"
 update_dates: ["2026-02-16"]

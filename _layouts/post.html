@@ -2,45 +2,43 @@
 layout: compress
 ---
 <!DOCTYPE html>
-<!--[if lt IE 7]><html lang="ja" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html lang="ja" class="no-js lt-ie9 lt-ie8"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html lang="ja" class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--> <html lang="ja" class="no-js"><!--<![endif]-->
+<html lang="ja" class="no-js">
 <head>
   {% include head.html %}
 </head>
 <body>
   {% include nav.html %}
-  <!-- Header -->
-  <header class="header" role="banner">
-	<div class="wrapper">
-	  <div class="content">
-		<div class="post-title {% if page.feature %} feature {% endif %}" style="margin: 0px;">
-		  <h1 style="margin: 0px;">{{ page.title }}</h1>
-		  <p style="margin: 0px;">date: {{ page.date | date: "%F" }} excerpt: {{ page.excerpt }}</p>
-		  <p style="margin: 0px;">tag: {% for tag in page.tags %}<a style="margin: 2px;" href="{{ site.url }}/tags/#{{ tag }}" title="Pages tagged {{ tag }}" class="tag">{{ tag }}</a>{% unless forloop.last %}{% endunless %}{% endfor %}</p>
-		</div>
-		<hr>
-
-		{{ content }}
-		<div class="entry-meta">
-		  {% include meta.html %}
-		</div>
-	  </div>
-	</div>
-	{% if page.comments and site.disqus_shortname %}<section id="disqus_thread" class="animated fadeInUp"></section><!-- /#disqus_thread -->{% endif %}
-  </header>
-  {% include scripts.html %}
-  {% if site.mathjax == true %}
-  <!-- MathJax -->
-  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-  <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-		  inlineMath: [["$","$"],["\\(","\\)"], ["({", "})"]]
-        }
-      });
-  </script>
+  {% assign modified_date = page.date %}
+  {% if page.update_dates and page.update_dates != empty %}
+    {% assign sorted_update_dates = page.update_dates | sort %}
+    {% assign modified_date = sorted_update_dates | last %}
   {% endif %}
+  {% assign published_day = page.date | date: '%F' %}
+  {% assign modified_day = modified_date | date: '%F' %}
+  <main class="header">
+    <div class="wrapper">
+      <article class="content">
+        <header class="post-title {% if page.feature %}feature{% endif %}">
+          <h1>{{ page.title | escape }}</h1>
+          <p><time datetime="{{ page.date | date_to_xmlschema }}">公開日 {{ published_day }}</time>{% if modified_day != published_day %} / <time datetime="{{ modified_date | date_to_xmlschema }}">更新日 {{ modified_day }}</time>{% endif %}</p>
+          {% if page.excerpt %}<p>{{ page.excerpt | escape }}</p>{% endif %}
+          {% if page.tags %}<p>タグ {% include post-tags.html %}</p>{% endif %}
+        </header>
+        <hr>
+        {{ content }}
+        {% include related-posts.html %}
+        <footer class="entry-meta">
+          {% include meta.html %}
+        </footer>
+      </article>
+    </div>
+    {% if page.comments and site.disqus_shortname %}<section id="disqus_thread" class="animated fadeInUp"></section>{% endif %}
+  </main>
+  {% include scripts.html %}
+  {% assign render_mathjax = page.mathjax %}
+  {% if content contains 'type="math/tex' %}{% assign render_mathjax = true %}{% endif %}
+  {% if content contains '\(' %}{% assign render_mathjax = true %}{% endif %}
+  {% if content contains '\[' %}{% assign render_mathjax = true %}{% endif %}
+  {% if site.mathjax == true and render_mathjax == true %}{% include mathjax.html %}{% endif %}
 </body>
 </html>

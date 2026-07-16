@@ -4,7 +4,7 @@ title: "make linux fast again"
 date: "2022-07-22"
 excerpt: "make linux fast againの説明と使い方"
 config: true
-tag: ["security", "linux", "performance"]
+tag: ["security", "Linux", "performance"]
 comments: false
 sort_key: "2022-07-22"
 update_dates: ["2022-07-22"]

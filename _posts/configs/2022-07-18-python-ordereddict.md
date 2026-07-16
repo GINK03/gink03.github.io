@@ -4,7 +4,7 @@ title: "Python OrderedDict"
 date: "2022-07-18"
 excerpt: "Python OrderedDictの使い方"
 config: true
-tag: ["python", "ordereddict"]
+tag: ["Python", "ordereddict"]
 comments: false
 sort_key: "2022-07-18"
 update_dates: ["2022-07-18"]

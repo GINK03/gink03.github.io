@@ -5,7 +5,7 @@ date: 2021-02-28
 excerpt: "ai platform algorithmsについて"
 kaggle: true
 hide_from_post: true
-tag: ["deep-learning", "algorithms", "gcp"]
+tag: ["deep-learning", "algorithms", "GCP"]
 comments: false
 sort_key: "2021-03-21"
 update_dates: ["2021-03-21"]

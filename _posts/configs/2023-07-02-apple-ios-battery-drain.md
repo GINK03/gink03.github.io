@@ -5,7 +5,7 @@ date: 2023-07-02
 excerpt: "apple iphoneのバッテリードレインに対する対応"
 project: false
 config: true
-tag: ["apple", "iphone", "ios", "battery"]
+tag: ["apple", "iphone", "iOS", "battery"]
 comments: false
 sort_key: "2023-07-02"
 update_dates: ["2023-07-02"]

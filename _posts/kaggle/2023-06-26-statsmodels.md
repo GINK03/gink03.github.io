@@ -4,7 +4,7 @@ title: "python statsmodels"
 date: 2023-06-26
 excerpt: "python statsmodelsの使い方"
 kaggle: true
-tag: ["kaggle", "統計", "python", "statsmodels"]
+tag: ["Kaggle", "統計", "Python", "statsmodels"]
 comments: false
 sort_key: "2023-06-26"
 update_dates: ["2023-06-26"]

@@ -4,7 +4,7 @@ title: "instagrapi"
 date: "2022-08-15"
 excerpt: "instagrapiの使い方"
 config: true
-tag: ["instagram", "API"]
+tag: ["Instagram", "API"]
 comments: false
 sort_key: "2022-08-15"
 update_dates: ["2022-08-15"]

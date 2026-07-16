@@ -4,7 +4,7 @@ title: "python exception"
 date: "2022-11-17"
 excerpt: "python exceptionの使い方"
 config: true
-tag: ["python", "exception"]
+tag: ["Python", "exception"]
 comments: false
 sort_key: "2022-11-17"
 update_dates: ["2022-11-17"]

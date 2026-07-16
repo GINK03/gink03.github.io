@@ -4,7 +4,7 @@ title: "python pymongo"
 date: 2025-01-04
 excerpt: "pythonでpymongoを使う"
 config: true
-tag: ["python", "pymongo", "mongodb"]
+tag: ["Python", "pymongo", "MongoDB"]
 comments: false
 sort_key: "2025-01-04"
 update_dates: ["2025-01-04"]

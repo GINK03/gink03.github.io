@@ -4,7 +4,7 @@ title: "pandas markdown"
 date: 2022-10-12
 excerpt: "pandasのmarkdownについて"
 kaggle: true
-tag: ["python", "pandas", "markdown", "チートシート"]
+tag: ["Python", "pandas", "markdown", "チートシート"]
 comments: false
 sort_key: "2022-10-12"
 update_dates: ["2022-10-12"]

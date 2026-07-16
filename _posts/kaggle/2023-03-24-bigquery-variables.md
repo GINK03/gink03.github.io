@@ -3,7 +3,7 @@ layout: post
 title: "bigquery variables"
 date: 2023-03-24
 excerpt: "bigqueryでの変数(variables)の使い方"
-tags: ["bq", "bigquery", "gcp", "bigquery", "variables", "procedural-language"]
+tags: ["bq", "BigQuery", "GCP", "variables", "procedural-language"]
 kaggle: true
 comments: false
 sort_key: "2023-03-24"

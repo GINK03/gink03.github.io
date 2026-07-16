@@ -3,7 +3,7 @@ layout: post
 title: "jupyter cull"
 date: 2025-01-29
 excerpt: "jupyter cull(自動削除)の使い方"
-tag: ["jupyter", "kaggle", "python"]
+tag: ["jupyter", "Kaggle", "Python"]
 comments: false
 sort_key: "2025-01-29"
 update_dates: ["2025-01-29"]

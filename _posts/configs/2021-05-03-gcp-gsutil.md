@@ -3,7 +3,7 @@ layout: post
 title: "gcp gsutil"
 date: 2021-05-03
 excerpt: "gcp gsutilコマンドの使い方"
-tags: ["gcp", "gsutil", "gcloud"]
+tags: ["GCP", "gsutil", "gcloud"]
 config: true
 comments: false
 sort_key: "2021-05-03"

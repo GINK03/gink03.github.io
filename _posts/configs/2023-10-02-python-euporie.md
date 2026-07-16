@@ -4,7 +4,7 @@ title: "python euporie"
 date: 2023-10-02
 excerpt: "pythonのeuporieの概要と使い方"
 config: true
-tag: ["euporie", "python"]
+tag: ["euporie", "Python"]
 comments: false
 sort_key: "2023-10-02"
 update_dates: ["2023-10-02"]

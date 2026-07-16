@@ -5,7 +5,7 @@ date: 2021-02-01
 excerpt: "quadratic weighted kappa(qwk)というメトリクスについて"
 kaggle: true
 hide_from_post: true
-tag: ["qwk", "metrics", "quadratic weighted kappa", "python"]
+tag: ["qwk", "metrics", "quadratic weighted kappa", "Python"]
 comments: false
 sort_key: "2021-02-01"
 update_dates: ["2021-02-01"]

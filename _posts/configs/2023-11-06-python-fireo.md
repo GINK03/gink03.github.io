@@ -4,7 +4,7 @@ title: "python fireo"
 date: 2023-11-06
 excerpt: "pythonのfireoの概要と使い方"
 config: true
-tag: ["python", "fireo", "firebase", "gcp"]
+tag: ["Python", "fireo", "firebase", "GCP"]
 comments: false
 sort_key: "2023-11-06"
 update_dates: ["2023-11-06"]

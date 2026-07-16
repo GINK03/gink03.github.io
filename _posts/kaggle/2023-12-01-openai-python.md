@@ -4,7 +4,7 @@ title: "openai python"
 date: 2023-12-01
 excerpt: "openaiでpythonの使い方"
 kaggle: true
-tag: ["openai", "gpt", "LLM", "python"]
+tag: ["openai", "GPT", "LLM", "Python"]
 comments: false
 sort_key: "2023-12-01"
 update_dates: ["2023-12-01"]

@@ -3,7 +3,7 @@ layout: post
 title: "seaborn heatmap"
 date: 2024-03-04
 excerpt: "seaborn heatmap"
-tags: ["seaborn", "python", "matplotlib", "可視化"]
+tags: ["seaborn", "Python", "matplotlib", "可視化"]
 kaggle: true
 comments: false
 sort_key: "2024-03-04"

@@ -7,6 +7,7 @@ project: false
 healthcare: true
 tag: ["healthcare", "apple watch"]
 comments: false
+sort_key: "2020-11-10"
 ---
 
  - 健康管理以外の軸の価値を見出す必要はない

@@ -4,8 +4,8 @@ config: true
 title: "gcp cloud build"
 date: 2021-04-20
 excerpt: "gcp cloud buildについて"
-tags: ["cloud build", "gcp"]
-sort_key: "2021-06-19"
+tags: ["cloud build", "GCP"]
+sort_key: "2022-05-25"
 update_dates: ["2022-05-25", "2021-06-19"]
 comments: false
 ---

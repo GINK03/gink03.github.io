@@ -6,7 +6,7 @@ excerpt: "exponential moving average (EMA, 指数加重移動平均)の計算方
 project: false
 kaggle: true
 hide_from_post: true
-tag: ["python", "pandas", "チートシート", "exponential moving average", "EMA", "指数加重移動平均"]
+tag: ["Python", "pandas", "チートシート", "exponential moving average", "EMA", "指数加重移動平均"]
 comments: false
 sort_key: "2024-07-28"
 update_dates: ["2024-07-28"]

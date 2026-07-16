@@ -3,10 +3,10 @@ layout: post
 title: "gcp cloud logging"
 date: 2021-03-09
 excerpt: "gcp cloud loggingについて"
-tags: ["gcp", "python"]
+tags: ["GCP", "Python"]
 config: true
 comments: false
-sort_key: "2021-06-19"
+sort_key: "2022-05-25"
 update_dates: ["2022-05-25", "2021-06-19"]
 ---
 

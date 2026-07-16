@@ -5,7 +5,7 @@ date: 2024-01-06
 excerpt: "python pptxの使い方"
 project: false
 config: true
-tag: ["python", "pptx", "powerpoint"]
+tag: ["Python", "pptx", "powerpoint"]
 comments: false
 sort_key: "2024-01-06"
 update_dates: ["2024-01-06"]

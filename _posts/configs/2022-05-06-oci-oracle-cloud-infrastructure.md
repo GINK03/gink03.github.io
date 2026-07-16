@@ -15,7 +15,7 @@ update_dates: ["2022-05-06"]
  - Oracleが提供するクラウドサービス
  - AWSと似たインターフェースと機能を備えている
  - コストがAWSより安いと宣伝されている
- - [always free](Oracle Cloud Free Tier)という期間無制限で無料の枠がある
+ - [Always Free](https://www.oracle.com/cloud/free/)という期間無制限で無料の枠がある
    - Arm Ampere A1 Computeで4コア、24GBメモリを一台まで
    - 2つのBlock Storageで合計200GBまで
 

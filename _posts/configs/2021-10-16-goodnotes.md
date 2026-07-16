@@ -3,11 +3,11 @@ layout: post
 title: "goodnotes"
 date: 2021-10-16
 excerpt: "goodnotesの使い方"
-tags: ["osx", "ios", "goodnotes"]
+tags: ["osx", "iOS", "goodnotes"]
 config: true
 comments: false
 sort_key: "2021-10-18"
-update_dates: ["2021-10-18","2021-10-16","2021-10-16"]
+update_dates: ["2021-10-18","2021-10-16"]
 ---
 
 ## 概要

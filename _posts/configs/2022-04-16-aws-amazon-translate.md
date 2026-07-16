@@ -5,7 +5,7 @@ date: 2022-04-16
 excerpt: "aws amazon translate APIの使い方"
 project: false
 config: true
-tag: ["aws", "nlp", "translate"]
+tag: ["AWS", "NLP", "translate"]
 comments: false
 sort_key: "2022-04-16"
 update_dates: ["2022-04-16"]

@@ -4,7 +4,7 @@ title: "gcp cloud storage"
 date: 2022-05-12
 excerpt: "gcp cloud storageの使い方"
 config: true
-tag: ["gcp", "cloud storage", "object storage"]
+tag: ["GCP", "cloud storage", "object storage"]
 comments: false
 sort_key: "2022-05-13"
 update_dates: ["2022-05-13"]

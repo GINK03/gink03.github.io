@@ -3,7 +3,7 @@ layout: post
 title: "embedrank"
 date: 2023-10-02
 excerpt: "embedrankの概要"
-tag: ["nlp", "embedrank", "python"]
+tag: ["NLP", "embedrank", "Python"]
 comments: false
 sort_key: "2023-10-02"
 update_dates: ["2023-10-02"]

@@ -5,9 +5,9 @@ date: 2024-11-11
 excerpt: "duckdb minio(s3)の使い方"
 project: false
 config: true
-tag: ["olap", "duckdb", "python", "minio", "s3"]
+tag: ["olap", "duckdb", "Python", "minio", "s3"]
 comments: false
-sort_key: "2022-01-31"
+sort_key: "2024-11-11"
 update_dates: ["2022-01-31"]
 ---
 

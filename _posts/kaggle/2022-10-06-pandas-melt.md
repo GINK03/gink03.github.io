@@ -4,7 +4,7 @@ title: "pandas melt"
 date: 2022-10-05
 excerpt: "pandas meltのチートシート"
 kaggle: true
-tag: ["python", "pandas", "melt", "チートシート"]
+tag: ["Python", "pandas", "melt", "チートシート"]
 sort_key: "2022-10-05"
 update_dates: ["2022-10-05"]
 comments: false

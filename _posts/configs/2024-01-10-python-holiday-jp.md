@@ -5,7 +5,7 @@ date: 2024-01-10
 excerpt: "python japan holiday(holiday_jp)の使い方"
 project: false
 config: true
-tag: ["python", "japan holiday", "holiday_jp"]
+tag: ["Python", "japan holiday", "holiday_jp"]
 comments: false
 sort_key: "2024-01-10"
 update_dates: ["2024-01-10"]

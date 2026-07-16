@@ -3,7 +3,7 @@ layout: post
 title: "systemd service"
 date: 2024-10-23
 excerpt: "userで動作するsystemd serviceの使い方"
-tags: ["linux", "systemd", "systemctl"]
+tags: ["Linux", "systemd", "systemctl"]
 config: true
 comments: false
 sort_key: "2024-10-23"

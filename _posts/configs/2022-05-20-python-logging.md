@@ -5,7 +5,7 @@ date: "2022-05-20"
 excerpt: "python loggingの使い方"
 project: false
 config: true
-tag: ["python", "logging"]
+tag: ["Python", "logging"]
 comments: false
 sort_key: "2022-05-20"
 update_dates: ["2022-05-20"]

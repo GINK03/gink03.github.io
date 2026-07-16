@@ -3,7 +3,7 @@ layout: post
 title: "macOS notifications"
 date: 2023-03-15
 excerpt: "macOS notificationsの設定"
-tags: ["apple", "macos", "osx", "settings"]
+tags: ["apple", "macOS", "osx", "settings"]
 config: true
 comments: false
 sort_key: "2023-03-15"

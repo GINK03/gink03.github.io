@@ -6,7 +6,7 @@ excerpt: "pandasのdatetime操作について"
 project: false
 kaggle: true
 hide_from_post: true
-tag: ["python", "pandas", "チートシート"]
+tag: ["Python", "pandas", "チートシート"]
 comments: false
 sort_key: "2022-03-26"
 update_dates: ["2022-03-26"]

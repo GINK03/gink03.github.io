@@ -4,7 +4,7 @@ title: "linux swap"
 date: 2023-05-06
 excerpt: "linuxのswapについて"
 config: true
-tag: ["linux", "swap"]
+tag: ["Linux", "swap"]
 comments: false
 sort_key: "2023-05-06"
 update_dates: ["2023-05-06"]

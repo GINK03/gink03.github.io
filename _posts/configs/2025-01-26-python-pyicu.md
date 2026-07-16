@@ -4,7 +4,7 @@ title: "python pyicu"
 date: 2025-01-24
 excerpt: "python pyicuの使い方"
 config: true
-tag: ["python", "pyicu", "icu", "形態素解析"]
+tag: ["Python", "pyicu", "icu", "形態素解析"]
 comments: false
 sort_key: "2025-01-24"
 update_dates: ["2025-01-24"]

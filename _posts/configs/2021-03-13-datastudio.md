@@ -3,7 +3,7 @@ layout: post
 title: "google data studio/data portal"
 date: 2021-03-13
 excerpt: "data studio/data portalについて"
-tags: ["data studio", "data portal", "gcp"]
+tags: ["data studio", "data portal", "GCP"]
 config: true
 comments: false
 sort_key: "2021-03-13"

@@ -3,7 +3,7 @@ layout: post
 title: "gcp, container registry(gcr)"
 date: 2021-03-06
 excerpt: "gcp, container registry(gcr)について"
-tags: ["gcp", "gcr", "container registry"]
+tags: ["GCP", "gcr", "container registry"]
 config: true
 comments: false
 sort_key: "2021-06-19"

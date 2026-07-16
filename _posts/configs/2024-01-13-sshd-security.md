@@ -5,7 +5,7 @@ date: 2024-01-13
 excerpt: "sshdのsecurityについて"
 project: false
 config: true
-tag: ["ssh", "sshd", "security", "linux", "macOS"]
+tag: ["ssh", "sshd", "security", "Linux", "macOS"]
 comments: false
 sort_key: "2024-01-13"
 update_dates: ["2020-01-13"]

@@ -4,7 +4,7 @@ title: "python sudachipy"
 date: 2024-12-15
 excerpt: "pythonでsudachipyを使う"
 config: true
-tag: ["java", "python", "sudachi", "nlp"]
+tag: ["java", "Python", "sudachi", "NLP"]
 comments: false
 sort_key: "2024-12-15"
 update_dates: ["2024-12-15"]

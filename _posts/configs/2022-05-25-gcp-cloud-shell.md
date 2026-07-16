@@ -5,7 +5,7 @@ date: "2022-05-25"
 excerpt: "gcp cloud shellの使い方"
 project: false
 config: true
-tag: ["gcp", "gcloud", "cloud shell"]
+tag: ["GCP", "gcloud", "cloud shell"]
 comments: false
 sort_key: "2022-05-25"
 update_dates: ["2022-05-25"]

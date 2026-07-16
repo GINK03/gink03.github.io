@@ -3,7 +3,7 @@ layout: post
 title: "youtube revanced"
 date: 2022-09-18
 excerpt: "youtube revancedの使い方"
-tags: ["youtube", "android"]
+tags: ["YouTube", "android"]
 config: true
 comments: false
 sort_key: "2022-09-18"

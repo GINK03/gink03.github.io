@@ -4,7 +4,7 @@ title: "gemini nano banana"
 date: 2025-11-03
 excerpt: "gemini nano banana"
 kaggle: true
-tag: ["gemini", "gpt", "image generation", "python"]
+tag: ["gemini", "GPT", "image generation", "Python"]
 comments: false
 sort_key: "2025-11-03"
 update_dates: ["2025-11-03"]

@@ -4,7 +4,7 @@ title: "minio server"
 date: 2017-10-21
 excerpt: "minio serverの使い方"
 tags: ["minio", "s3"]
-sort_key: "2018-01-19"
+sort_key: "2022-05-30"
 update_dates: ["2022-05-30", "2018-01-19"]
 config: true
 comments: false

@@ -4,7 +4,7 @@ title: "python pathvalidate"
 date: 2023-09-15
 excerpt: "pathvalidateの概要と使い方"
 config: true
-tag: ["pathvalidate", "python"]
+tag: ["pathvalidate", "Python"]
 comments: false
 sort_key: "2023-09-15"
 update_dates: ["2023-09-15"]

@@ -4,7 +4,7 @@ title: "scipy stats"
 date: 2023-02-09
 excerpt: "scipy statsの使い方"
 kaggle: true
-tag: ["python", "scipy", "stats", "チートシート"]
+tag: ["Python", "scipy", "stats", "チートシート"]
 comments: false
 sort_key: "2023-02-09"
 update_dates: ["2023-02-09"]

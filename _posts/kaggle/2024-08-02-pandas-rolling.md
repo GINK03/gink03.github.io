@@ -4,7 +4,7 @@ title: "pandas rolling"
 date: 2024-08-02
 excerpt: "pandasのrollingの使い方"
 kaggle: true
-tag: ["python", "pandas", "rolling", "チートシート"]
+tag: ["Python", "pandas", "rolling", "チートシート"]
 comments: false
 sort_key: "2024-08-02"
 update_dates: ["2024-08-02"]

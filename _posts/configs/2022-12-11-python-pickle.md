@@ -4,7 +4,7 @@ title: "python pickle"
 date: "2022-12-11"
 excerpt: "python pickleの使い方"
 config: true
-tag: ["python", "pickle"]
+tag: ["Python", "pickle"]
 comments: false
 sort_key: "2022-12-11"
 update_dates: ["2022-12-11"]

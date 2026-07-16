@@ -4,7 +4,7 @@ title: "python pyyaml"
 date: 2025-01-30
 excerpt: "python pyyamlの使い方"
 config: true
-tag: ["python", "pyyaml"]
+tag: ["Python", "pyyaml"]
 comments: false
 sort_key: "2025-01-30"
 update_dates: ["2025-01-30"]

@@ -3,7 +3,7 @@ layout: post
 title: "itertools"
 date: 2021-05-31
 excerpt: "itertools(python3)チートシート"
-tags: ["python", "itertools", "チートシート"]
+tags: ["Python", "itertools", "チートシート"]
 config: true
 comments: false
 sort_key: "2021-06-05"

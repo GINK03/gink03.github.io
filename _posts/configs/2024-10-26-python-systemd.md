@@ -3,7 +3,7 @@ layout: post
 title: "python systemd"
 date: 2024-10-26
 excerpt: "python systemdの使い方"
-tags: ["python", "systemd", "journald", "logging"]
+tags: ["Python", "systemd", "journald", "logging"]
 config: true
 comments: false
 sort_key: "2024-10-26"

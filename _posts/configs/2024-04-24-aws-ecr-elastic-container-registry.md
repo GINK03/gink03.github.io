@@ -5,7 +5,7 @@ date: 2024-04-24
 excerpt: "aws ecrの使い方"
 project: false
 config: true
-tag: ["aws", "ecr", "elastic container registry"]
+tag: ["AWS", "ecr", "elastic container registry"]
 comments: false
 sort_key: "2024-04-24"
 update_dates: ["2024-04-24"]

@@ -4,7 +4,7 @@ title: "python playwright"
 date: 2025-05-02
 excerpt: "python playwrightの使い方"
 config: true
-tag: ["python", "playwright"]
+tag: ["Python", "playwright"]
 comments: false
 sort_key: "2025-05-02"
 update_dates: ["2025-05-02"]

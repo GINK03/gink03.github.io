@@ -4,7 +4,7 @@ title: "python str"
 date: "2022-07-17"
 excerpt: "python strの使い方"
 config: true
-tag: ["python", "str"]
+tag: ["Python", "str"]
 comments: false
 sort_key: "2022-07-17"
 update_dates: ["2022-07-17"]

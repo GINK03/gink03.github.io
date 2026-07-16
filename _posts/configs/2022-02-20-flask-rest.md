@@ -5,10 +5,10 @@ date: 2022-02-20
 excerpt: "flaskでrestの使い方"
 project: false
 config: true
-tag: ["flask", "rest", "api"]
+tag: ["flask", "rest", "API"]
 comments: false
-sort_key: "2022-04-07"
-update_dates: ["2022-04-07","2022-02-26","2022-02-20"]
+sort_key: "2026-07-16"
+update_dates: ["2026-07-16","2022-04-07","2022-02-26","2022-02-20"]
 ---
 
 ## flaskでrestの使い方"
@@ -122,12 +122,13 @@ with requests.delete(URL, params={"user": "a", "values": 1}) as r:
 ### POSTとjsonでデータを送るとき
 
 ```python
+import os
 import requests
 import json
 URL = "http://localhost:8080/"
 
 params = {"mode": "m1", "p1": ["https"]}
-headers = {"x-api-key": "660df3bae494e5bc8d76d"}
+headers = {"x-api-key": os.environ["API_KEY"]}
 with requests.post(URL, json=params, headers=headers) as r:
     print(r.text)
 ```

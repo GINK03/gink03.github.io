@@ -5,7 +5,7 @@ date: 2024-01-16
 excerpt: "github cliの使い方"
 project: false
 config: true
-tag: ["github", "workflows", "gh", "cli"]
+tag: ["github", "workflows", "gh", "CLI"]
 comments: false
 sort_key: "2024-01-16"
 update_dates: ["2021-01-16"]

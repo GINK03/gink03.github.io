@@ -5,7 +5,7 @@ date: "2023-08-04"
 excerpt: "pythonのpropertyの使い方"
 project: false
 config: true
-tag: ["python", "property"]
+tag: ["Python", "property"]
 comments: false
 sort_key: "2023-08-04"
 update_dates: ["2023-08-04"]

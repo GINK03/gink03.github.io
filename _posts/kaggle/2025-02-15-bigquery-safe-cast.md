@@ -3,7 +3,7 @@ layout: post
 title: "bigquery safe cast"
 date: 2025-02-15
 excerpt: "bigquery safe cast"
-tags: ["bq", "bigquery", "gcp", "bigquery", "cast"]
+tags: ["bq", "BigQuery", "GCP", "cast"]
 kaggle: true
 comments: false
 sort_key: "2025-02-15"

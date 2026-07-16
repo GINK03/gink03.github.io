@@ -1,0 +1,16 @@
+{% assign post = include.post %}
+{% assign modified_date = post.date %}
+{% if post.update_dates and post.update_dates != empty %}
+  {% assign sorted_update_dates = post.update_dates | sort %}
+  {% assign modified_date = sorted_update_dates | last %}
+{% endif %}
+{% assign published_day = post.date | date: '%F' %}
+{% assign modified_day = modified_date | date: '%F' %}
+<li class="post-summary">
+  <a class="zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title | escape }}</a>
+  <p><time datetime="{{ post.date | date_to_xmlschema }}">公開日 {{ published_day }}</time>{% if modified_day != published_day %} / <time datetime="{{ modified_date | date_to_xmlschema }}">更新日 {{ modified_day }}</time>{% endif %}</p>
+  {% unless include.compact %}
+    {% if post.tags %}<p>タグ {{ post.tags | join: ', ' | escape }}</p>{% endif %}
+    {% if post.excerpt %}<p>{{ post.excerpt | escape }}</p>{% endif %}
+  {% endunless %}
+</li>

@@ -3,7 +3,7 @@ layout: post
 title: "AWS CLI での Lambda@Edge の使い方"
 date: 2025-07-20
 excerpt: "AWS CLI での Lambda@Edge の使い方"
-tags: ["aws", "lambda@edge", "cloudfront"]
+tags: ["AWS", "lambda@edge", "cloudfront"]
 config: true
 comments: false
 sort_key: "2025-07-20"

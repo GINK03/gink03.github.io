@@ -4,7 +4,7 @@ title: "python relativedelta(dateutil)"
 date: 2023-06-27
 excerpt: "pythonのrelativedelta(detautil)の使い方"
 config: true
-tag: ["python", "deteutil", "relativedelta"]
+tag: ["Python", "deteutil", "relativedelta"]
 comments: false
 sort_key: "2023-06-27"
 update_dates: ["2023-06-27"]

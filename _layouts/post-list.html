@@ -2,42 +2,33 @@
 layout: compress
 ---
 <!DOCTYPE html>
-<!--[if lt IE 7]><html lang="ja" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html lang="ja" class="no-js lt-ie9 lt-ie8"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html lang="ja" class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--> <html lang="ja" class="no-js"><!--<![endif]-->
+<html lang="ja" class="no-js">
 <head>
   {% include head.html %}
 </head>
 <body>
   {% include nav.html %}
-  <!-- Header -->
-  <header class="header" role="banner">
-	<div class="wrapper">
-	  <div class="content">
-		<div class="post-title">
-		  <h1>{{ page.title }}</h1>
-		  <h4>すべての投稿を表示しています。各カテゴリへのアクセスはトップページからアクセスできます</h4>
-		  <a class="btn zoombtn" href="{{site.url}}">
-			<i class="fa fa-home"></i>
-		  </a>
-		</div>
-		<div class="post-list">
-		  {% for post in site.posts %} 
-		  {% if post.hide_from_post == null %} <!-- このフラグがある場合、表示しない -->
-		  <ul>
-			<li data-wow-duration="1.5s" style="padding: 0px;">
-			  <a class="zoombtn" href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-			  <p style="font-size: 0.8rem;">更新日:{{ post.date | date: "%F" }}, 概要: {{ post.excerpt }}</p>
-			</li>
-		  </ul>
-		  <hr>
-		  {% endif %}
-		  {% endfor %}
-		</div>
-	  </div>
-	</div>
-  </header>
+  <main class="header">
+    <div class="wrapper">
+      <div class="content">
+        <header class="post-title">
+          <h1>{{ page.title | escape }}</h1>
+          {% if page.excerpt %}<p>{{ page.excerpt | escape }}</p>{% endif %}
+          <a class="btn zoombtn" href="{{ site.url }}/" aria-label="トップページへ戻る">
+            <i class="fa fa-home" aria-hidden="true"></i>
+          </a>
+        </header>
+        {% assign posts = site.posts | sort: 'sort_key' | reverse %}
+        <div class="post-list">
+          <ul>
+            {% for post in posts %}
+              {% unless post.hide_from_post %}{% include post-summary.html post=post compact=true %}{% endunless %}
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
   {% include scripts.html %}
 </body>
 </html>

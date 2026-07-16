@@ -5,7 +5,7 @@ date: "2022-05-17"
 excerpt: "pythonでのtqdmの扱い方"
 project: false
 config: true
-tag: ["python", "tqdm"]
+tag: ["Python", "tqdm"]
 comments: false
 sort_key: "2022-05-17"
 update_dates: ["2022-05-17"]

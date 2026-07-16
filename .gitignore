@@ -1,9 +1,13 @@
-# jekyll temp files
+# Jekyll temporary files
+.bundle/
+.jekyll-cache/
+.jekyll-metadata
 .sass-cache/
-Gemfile.lock
 _site/
+vendor/bundle/
+
+# Local tool files
 package.json
 package-lock.json
 node_modules/
 .python-version
-.jekyll-metadata

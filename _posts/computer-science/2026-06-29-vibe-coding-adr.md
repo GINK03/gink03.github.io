@@ -4,7 +4,7 @@ title: "バイブコーディングとADR"
 date: 2026-06-29
 excerpt: "バイブコーディング(vibe coding)においてADRが重要になる理由と運用について"
 computer_science: true
-tag: ["adr", "vibe-coding", "ai", "設計", "ドキュメント"]
+tag: ["adr", "vibe-coding", "AI", "設計", "ドキュメント"]
 sort_key: "2026-06-29"
 update_dates: ["2026-06-29"]
 comments: false

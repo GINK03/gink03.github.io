@@ -6,8 +6,8 @@ excerpt: "Claude Code の使い方メモ"
 config: true
 tag: ["claude code"]
 comments: false
-sort_key: "2025-07-05"
-update_dates: ["2025-07-05", "2026-06-22"]
+sort_key: "2026-06-22"
+update_dates: ["2026-06-22","2025-07-05"]
 ---
 
 ## 概要

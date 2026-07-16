@@ -4,7 +4,7 @@ title: "anthropic python"
 date: 2025-09-14
 excerpt: "anthropicでpythonの使い方"
 kaggle: true
-tag: ["AI","LLM","API","Python","Anthropic"]
+tag: ["AI", "LLM", "API", "Python", "Anthropic"]
 comments: false
 sort_key: "2025-09-14"
 update_dates: ["2025-09-14"]

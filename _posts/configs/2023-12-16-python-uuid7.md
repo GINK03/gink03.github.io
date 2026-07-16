@@ -4,7 +4,7 @@ title: "python uuid7"
 date: 2023-12-16
 excerpt: "pythonのuuid7の概要と使い方"
 config: true
-tag: ["python", "kvs", "uuid7"]
+tag: ["Python", "kvs", "UUID7"]
 comments: false
 sort_key: "2023-12-16"
 update_dates: ["2023-12-16"]

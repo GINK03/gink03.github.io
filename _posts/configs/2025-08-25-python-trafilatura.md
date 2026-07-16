@@ -4,7 +4,7 @@ title: "python trafilatura"
 date: 2025-08-25
 excerpt: "python trafilaturaの使い方"
 config: true
-tag: ["python", "trafilatura"]
+tag: ["Python", "trafilatura"]
 comments: false
 sort_key: "2025-08-25"
 update_dates: ["2025-08-25"]

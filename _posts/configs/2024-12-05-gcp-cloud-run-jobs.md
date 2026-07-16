@@ -3,7 +3,7 @@ layout: post
 title: "cloud run jobs"
 date: 2024-12-05
 excerpt: "cloud run jobsついて"
-tags: ["gcp", "cloud run", "cloud run jobs"]
+tags: ["GCP", "cloud run", "cloud run jobs"]
 config: true
 comments: false
 sort_key: "2024-12-05"

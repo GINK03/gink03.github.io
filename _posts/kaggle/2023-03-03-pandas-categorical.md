@@ -4,7 +4,7 @@ title: "pandas categorical"
 date: 2023-03-03
 excerpt: "pandasのcategoricalな変数の扱い方"
 kaggle: true
-tag: ["python", "pandas", "categorical", "one-hot encoding", "チートシート"]
+tag: ["Python", "pandas", "categorical", "one-hot encoding", "チートシート"]
 comments: false
 sort_key: "2023-03-03"
 update_dates: ["2023-03-03"]

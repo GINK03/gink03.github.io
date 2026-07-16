@@ -4,7 +4,7 @@ title: "python streamlit webrtc"
 date: 2023-09-09
 excerpt: "streamlitのwebrtcの概要と使い方"
 config: true
-tag: ["streamlit", "python", "webrtc"]
+tag: ["streamlit", "Python", "webrtc"]
 comments: false
 sort_key: "2023-09-09"
 update_dates: ["2023-09-09"]

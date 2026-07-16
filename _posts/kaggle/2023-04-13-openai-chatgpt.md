@@ -4,7 +4,7 @@ title: "openai chatgpt"
 date: 2023-04-13
 excerpt: "openai chatgptの使い方"
 kaggle: true
-tag: ["openai", "chatgpt"]
+tag: ["openai", "ChatGPT"]
 comments: false
 sort_key: "2023-04-13"
 update_dates: ["2023-04-13"]

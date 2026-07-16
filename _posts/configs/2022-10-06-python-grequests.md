@@ -4,7 +4,7 @@ title: "python grequests"
 date: 2022-10-05
 excerpt: "python grequestsの使い方"
 config: true
-tag: ["python", "grequests"]
+tag: ["Python", "grequests"]
 comments: false
 sort_key: "2022-10-05"
 update_dates: ["2022-10-05"]

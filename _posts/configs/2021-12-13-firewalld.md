@@ -5,8 +5,9 @@ date: "2021-12-13"
 excerpt: "firewalldの設定と使い方"
 project: false
 config: true
-tag: ["linux", "firewalld", "firewall-cmd"]
+tag: ["Linux", "firewalld", "firewall-cmd"]
 comments: false
+sort_key: "2021-12-13"
 ---
 
 ## 概要

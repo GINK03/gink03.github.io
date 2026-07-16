@@ -21,4 +21,4 @@ update_dates: ["2023-08-13"]
  - 公式サイトからUSBフラッシュメモリにmemtest86+をインストールするツールを公開している
 
 ## 参考
- - [www.memtest.org](www.memtest.org)
+ - [Memtest86+公式サイト](https://www.memtest.org/)

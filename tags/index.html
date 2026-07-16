@@ -1,28 +1,36 @@
 ---
 layout: page
-title: Tag Archive
-description: "An archive of posts sorted by tag."
+title: タグ一覧
+description: "3記事以上で使われているタグと関連記事の一覧"
 comments: false
 ---
 
-{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-{% assign tags_list = site_tags | split:',' | sort %}
+{% assign minimum_tag_posts = 3 %}
+{% assign sorted_tags = site.tags | sort %}
 
 <ul class="entry-meta inline-list">
-  {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-    {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
-  	<li><a href="#{{ this_word }}" class="tag"><span class="term">{{ this_word }}</span> <span class="count">{{ site.tags[this_word].size }}</span></a></li>
-  {% endunless %}{% endfor %}
+  {% for tag_item in sorted_tags %}
+    {% assign tag_name = tag_item[0] %}
+    {% assign tag_posts = tag_item[1] %}
+    {% if tag_posts.size >= minimum_tag_posts %}
+      {% assign tag_id = tag_name | downcase | slugify: 'raw' %}
+      <li><a href="#{{ tag_id | escape }}" class="tag"><span class="term">{{ tag_name | escape }}</span> <span class="count">{{ tag_posts.size }}</span></a></li>
+    {% endif %}
+  {% endfor %}
 </ul>
 
-{% for item in (0..site.tags.size) %}{% unless forloop.last %}
-  {% capture this_word %}{{ tags_list[item] | strip_newlines }}{% endcapture %}
-	<article>
-	<h2 id="{{ this_word }}" class="tag-heading">{{ this_word }}</h2>
-		<ul>
-    {% for post in site.tags[this_word] %}{% if post.title != null %}
-      <li class="entry-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-    {% endif %}{% endfor %}
-		</ul>
-	</article><!-- /.hentry -->
-{% endunless %}{% endfor %}
+{% for tag_item in sorted_tags %}
+  {% assign tag_name = tag_item[0] %}
+  {% assign tag_posts = tag_item[1] %}
+  {% if tag_posts.size >= minimum_tag_posts %}
+    {% assign tag_id = tag_name | downcase | slugify: 'raw' %}
+    <section aria-labelledby="{{ tag_id | escape }}">
+      <h2 id="{{ tag_id | escape }}" class="tag-heading">{{ tag_name | escape }}</h2>
+      <ul>
+        {% for post in tag_posts %}{% if post.title %}
+          <li class="entry-title"><a href="{{ site.url }}{{ post.url }}">{{ post.title | escape }}</a></li>
+        {% endif %}{% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+{% endfor %}

@@ -4,7 +4,7 @@ title: "openai agent workflow"
 date: 2025-05-14
 excerpt: "openai agent workflow"
 kaggle: true
-tag: ["openai", "agent", "workflow", "python"]
+tag: ["openai", "agent", "workflow", "Python"]
 comments: false
 sort_key: "2025-05-14"
 update_dates: ["2025-05-14"]

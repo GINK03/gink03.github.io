@@ -3,7 +3,7 @@ layout: post
 title: "debianのapt sources"
 date: 2024-02-07
 excerpt: "debianのapt sourcesについて"
-tags: ["debian", "linux", "apt"]
+tags: ["debian", "Linux", "apt"]
 config: true
 comments: false
 sort_key: "2024-02-07"

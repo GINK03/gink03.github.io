@@ -3,7 +3,7 @@ layout: post
 title: "terminal上でjupyter + jq"
 date: 2024-08-11
 excerpt: "terminal上でjupyter + jqの使い方"
-tag: ["jupyter", "kaggle", "python"]
+tag: ["jupyter", "Kaggle", "Python"]
 comments: false
 sort_key: "2024-08-11"
 update_dates: ["2024-08-11"]

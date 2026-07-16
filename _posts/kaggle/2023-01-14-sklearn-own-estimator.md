@@ -6,7 +6,7 @@ excerpt: "sklearn own estimatorの設計と開発"
 tags: ["python3", "sklearn", "pipeline", "estimator"]
 kaggle: true
 comments: false
-sort_key: "2023-01-12"
+sort_key: "2023-01-14"
 update_dates: ["2023-01-12"]
 ---
 

@@ -5,7 +5,7 @@ date: 2024-05-04
 excerpt: "apple iphoneのトラブルシューティング"
 project: false
 config: true
-tag: ["apple", "iphone", "ios"]
+tag: ["apple", "iphone", "iOS"]
 comments: false
 sort_key: "2024-05-04"
 update_dates: ["2024-05-04"]

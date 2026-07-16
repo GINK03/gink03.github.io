@@ -4,7 +4,7 @@ title: "pandas style"
 date: 2022-09-25
 excerpt: "pandas styleのチートシート"
 kaggle: true
-tag: ["python", "pandas", "チートシート"]
+tag: ["Python", "pandas", "チートシート"]
 sort_key: "2022-09-25"
 update_dates: ["2022-09-25"]
 comments: false

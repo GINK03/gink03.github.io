@@ -5,7 +5,7 @@ date: 2022-02-17
 excerpt: "iPhoneのディスプレイに関するまとめ"
 project: false
 config: true
-tag: ["apple", "iphone", "ios", "display"]
+tag: ["apple", "iphone", "iOS", "display"]
 comments: false
 sort_key: "2022-02-17"
 update_dates: ["2022-02-17"]

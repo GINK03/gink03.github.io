@@ -5,8 +5,9 @@ date: 2024-07-11
 excerpt: "japan fiscal year(日本の会計年度)について"
 project: false
 learning: true
-tag: ["日本の会計年度", "fiscal year", "pandas", "python", "Google Play Store"]
+tag: ["日本の会計年度", "fiscal year", "pandas", "Python", "Google Play Store"]
 comments: false
+sort_key: "2024-07-11"
 ---
 
 ## 会計年度

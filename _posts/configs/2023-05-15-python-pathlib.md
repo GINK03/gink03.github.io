@@ -4,7 +4,7 @@ title: "python pathlib"
 date: 2023-05-15
 excerpt: "pythonのpathlibの使い方"
 config: true
-tag: ["python", "pathlib"]
+tag: ["Python", "pathlib"]
 comments: false
 sort_key: "2023-05-15"
 update_dates: ["2023-05-15"]

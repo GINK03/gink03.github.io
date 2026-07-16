@@ -4,7 +4,7 @@ title: "pandas pivot"
 date: 2022-09-09
 excerpt: "pandas pivotのチートシート"
 kaggle: true
-tag: ["python", "pandas", "pivot", "pivot_table", "チートシート"]
+tag: ["Python", "pandas", "pivot", "pivot_table", "チートシート"]
 sort_key: "2022-09-09"
 update_dates: ["2022-09-09"]
 comments: false

@@ -5,7 +5,7 @@ date:  2022-10-12
 excerpt: "lightgbm callbacksのチートシート"
 kaggle: true
 project: false
-tag: ["python", "lightgbm"]
+tag: ["Python", "lightgbm"]
 comments: false
 sort_key: "2022-10-12"
 update_dates: ["2022-10-12"]

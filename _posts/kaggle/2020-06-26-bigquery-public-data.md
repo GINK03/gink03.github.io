@@ -3,7 +3,7 @@ layout: post
 title: "bigquery public data"
 date: 2020-06-26
 excerpt: "bigquery public dataについて"
-tags: ["bq", "bigquery", "gcp", "dataset", "データセット"]
+tags: ["bq", "BigQuery", "GCP", "dataset", "データセット"]
 kaggle: true
 comments: false
 sort_key: "2022-04-13"

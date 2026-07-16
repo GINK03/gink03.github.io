@@ -3,7 +3,7 @@ layout: post
 title: "BigQuery の SELECT * EXCEPT / REPLACE"
 date: 2026-02-21
 excerpt: "BigQuery の SELECT * EXCEPT と REPLACE の使い方メモ"
-tag: ["bigquery", "sql"]
+tag: ["BigQuery", "SQL"]
 kaggle: true
 comments: false
 sort_key: "2026-02-21"

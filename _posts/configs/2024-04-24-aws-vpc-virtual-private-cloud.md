@@ -5,7 +5,7 @@ date: 2024-04-24
 excerpt: "aws vpcの概要と使い方"
 project: false
 config: true
-tag: ["aws", "vpc", "virtual private cloud"]
+tag: ["AWS", "vpc", "virtual private cloud"]
 comments: false
 sort_key: "2024-04-24"
 update_dates: ["2024-04-24"]

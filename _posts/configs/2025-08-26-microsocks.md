@@ -6,7 +6,7 @@ excerpt: "microsocksの使い方"
 config: true
 tag: ["microsocks", "proxy", "socks5"]
 comments: false
-sort_key: "2025-08-26-microsocks"
+sort_key: "2025-08-26"
 update_dates: ["2025-08-26"]
 ---
 

@@ -4,7 +4,7 @@ title: "gcp cloud billing"
 date: "2023-01-06"
 excerpt: "gcpのコスト・支払いについて"
 config: true
-tag: ["gcp", "gcloud", "cost", "cloud billing"]
+tag: ["GCP", "gcloud", "cost", "cloud billing"]
 comments: false
 sort_key: "2023-01-06"
 update_dates: ["2023-01-06"]

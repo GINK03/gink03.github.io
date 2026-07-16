@@ -3,7 +3,7 @@ layout: post
 title: "bigquery authorized view"
 date: 2022-11-28
 excerpt: "bigquery authorized viewの概要と使い方"
-tags: ["bq", "bigquery", "gcp", "authorized view", "認証済みビュー"]
+tags: ["bq", "BigQuery", "GCP", "authorized view", "認証済みビュー"]
 kaggle: true
 comments: false
 sort_key: "2022-11-28"

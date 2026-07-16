@@ -4,7 +4,7 @@ title: "python data model"
 date: "2022-09-29"
 excerpt: "python data modelの使い方"
 config: true
-tag: ["platform", "python"]
+tag: ["platform", "Python"]
 comments: false
 sort_key: "2022-09-29"
 update_dates: ["2022-09-29"]

@@ -3,11 +3,10 @@ layout: post
 title: "bigquery random sample"
 date: 2020-06-26
 excerpt: "bigquery random sampleの方法"
-tags: ["bq", "bigquery", "gcp", "SQL"]
+tags: ["bq", "BigQuery", "GCP", "SQL"]
 kaggle: true
 comments: false
-sort_key: "2022-03-01"
-update_dates: []
+sort_key: "2020-06-26"
 ---
 
 ## 指定行数をランダムサンプルする

@@ -3,9 +3,9 @@ layout: post
 title: "jupyter jupytext"
 date: 2025-09-15
 excerpt: "jupyter jupytextの概要と使い方"
-tag: ["jupyter", "kaggle", "python"]
+tag: ["jupyter", "Kaggle", "Python"]
 comments: false
-sort_key: "2025-09-15-jupyter-jupytext"
+sort_key: "2025-09-15"
 update_dates: ["2025-09-15"]
 ---
 

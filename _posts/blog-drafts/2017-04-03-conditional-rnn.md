@@ -8,8 +8,9 @@ tag:
 - MachineLearning
 - RecurrentNeuralNetwork
 - Conditioning
-- Emoji
+- emoji
 comments: false
+sort_key: "2017-04-03"
 ---
 
 ## RNNのアテンション以外でのアプローチでの条件指定

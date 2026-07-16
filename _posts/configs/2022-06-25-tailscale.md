@@ -3,11 +3,11 @@ layout: post
 title: "tailscale"
 date: 2022-06-25
 excerpt: "tailscaleの使い方"
-tag: ["tailscale", "vpn", "wireguard"]
+tag: ["tailscale", "VPN", "wireguard"]
 config: true
 comments: false
-sort_key: "2022-06-25"
-update_dates: ["2022-06-25", "2026-04-17"]
+sort_key: "2026-04-17"
+update_dates: ["2026-04-17","2022-06-25"]
 ---
 
 ## 概要

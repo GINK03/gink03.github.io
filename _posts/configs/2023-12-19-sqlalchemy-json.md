@@ -4,7 +4,7 @@ title: "sqlalchemy+json"
 date: "2023-12-19"
 excerpt: "sqlalchemy+jsonの使い方"
 config: true
-tag: ["sqlalchemy", "orm", "python", "json", "sqlite"]
+tag: ["sqlalchemy", "orm", "Python", "json", "sqlite"]
 comments: false
 sort_key: "2023-12-19"
 update_dates: ["2023-12-19"]

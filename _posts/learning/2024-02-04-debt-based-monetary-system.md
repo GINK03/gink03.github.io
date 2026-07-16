@@ -7,6 +7,7 @@ project: false
 learning: true
 tag: ["投資", "貨幣経済", "Debt-Based Monetary System"]
 comments: false
+sort_key: "2024-02-04"
 ---
 
 ## 概要

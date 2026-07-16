@@ -4,7 +4,7 @@ title: "python tavily"
 date: 2025-02-17
 excerpt: "python tavilyの使い方"
 config: true
-tag: ["python", "tavily"]
+tag: ["Python", "tavily"]
 comments: false
 sort_key: "2025-02-17"
 update_dates: ["2025-02-17"]

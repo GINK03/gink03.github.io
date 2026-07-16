@@ -5,7 +5,7 @@ date: 2024-05-02
 excerpt: "boto3 dynamodbの使い方"
 project: false
 config: true
-tag: ["aws", "aws dynamodb", "dynamodb", "boto3"]
+tag: ["AWS", "aws dynamodb", "dynamodb", "boto3"]
 comments: false
 sort_key: "2024-05-02"
 update_dates: ["2024-05-02"]

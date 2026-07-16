@@ -4,7 +4,7 @@ title: "pandas idxmax"
 date: 2024-08-11
 excerpt: "pandasのidxmaxの使い方"
 kaggle: true
-tag: ["python", "pandas", "idxmax", "チートシート"]
+tag: ["Python", "pandas", "idxmax", "チートシート"]
 comments: false
 sort_key: "2024-08-11"
 update_dates: ["2024-08-11"]

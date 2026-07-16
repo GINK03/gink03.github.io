@@ -4,7 +4,7 @@ title: "pandas plot"
 date: 2023-03-06
 excerpt: "pandasのplotの使い方"
 kaggle: true
-tag: ["python", "pandas", "plot"]
+tag: ["Python", "pandas", "plot"]
 comments: false
 sort_key: "2023-03-06"
 update_dates: ["2023-03-06"]

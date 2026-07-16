@@ -3,7 +3,7 @@ layout: post
 title: "jupyter nbconvert"
 date: 2023-07-26
 excerpt: "jupyterでのnbconvertによるドキュメント共有方法"
-tag: ["jupyter", "kaggle", "python", "pdf", "html"]
+tag: ["jupyter", "Kaggle", "Python", "PDF", "html"]
 comments: false
 sort_key: "2023-07-26"
 update_dates: ["2023-07-26"]

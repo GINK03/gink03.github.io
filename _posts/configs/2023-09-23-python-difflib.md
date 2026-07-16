@@ -4,7 +4,7 @@ title: "python difflib"
 date: 2023-09-23
 excerpt: "pythonのdifflibの概要と使い方"
 config: true
-tag: ["difflib", "python"]
+tag: ["difflib", "Python"]
 comments: false
 sort_key: "2023-09-23"
 update_dates: ["2023-09-23"]

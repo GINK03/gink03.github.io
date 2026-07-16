@@ -3,11 +3,11 @@ layout: post
 title: "zed editor"
 date: 2025-09-13
 excerpt: "zed editorの紹介と使い方について"
-tag: ["zed editor","エディタ","コードエディタ","テキストエディタ"]
+tag: ["zed editor", "エディタ", "コードエディタ", "テキストエディタ"]
 config: true
 comments: false
-sort_key: "2025-09-13-zed-editor"
-update_dates: ["2025-08-23", "2025-08-24"]
+sort_key: "2025-09-13"
+update_dates: ["2025-08-24","2025-08-23"]
 ---
 
 ## 概要

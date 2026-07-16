@@ -6,6 +6,7 @@ excerpt: "gcp"
 project: true
 tag: ["心理応急処置", "Psychological First Aid"]
 comments: false
+sort_key: "2020-11-23"
 ---
 
 ## 日本語によるドキュメント

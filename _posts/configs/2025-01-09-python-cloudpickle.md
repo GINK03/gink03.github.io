@@ -4,7 +4,7 @@ title: "python cloudpickle"
 date: 2025-01-09
 excerpt: "python cloudpickleの使い方"
 config: true
-tag: ["python", "cloudpickle"]
+tag: ["Python", "cloudpickle"]
 comments: false
 sort_key: "2025-01-09"
 update_dates: ["2025-01-09"]

@@ -3,7 +3,7 @@ layout: post
 title: "nix flake develop"
 date: 2024-01-15
 excerpt: "nix flake developついて"
-tags: ["nix", "nixpkgs", "macos", "linux", "nix", "package manager"]
+tags: ["nix", "nixpkgs", "macOS", "Linux", "package manager"]
 config: true
 comments: false
 sort_key: "2024-01-15"

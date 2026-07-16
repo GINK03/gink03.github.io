@@ -3,7 +3,7 @@ layout: post
 title: "python dict"
 date: 2022-08-01
 excerpt: "python dictの使い方"
-tags: ["python", "dict", "defaultdict"]
+tags: ["Python", "dict", "defaultdict"]
 config: true
 comments: false
 sort_key: "2022-08-01"

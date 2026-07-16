@@ -5,7 +5,7 @@ date: 2022-10-13
 excerpt: "lightgbm importanceのチートシート"
 kaggle: true
 project: false
-tag: ["python", "lightgbm", "importance", "重要度"]
+tag: ["Python", "lightgbm", "importance", "重要度"]
 comments: false
 sort_key: "2022-10-13"
 update_dates: ["2022-10-13"]

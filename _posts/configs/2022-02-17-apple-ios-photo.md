@@ -5,7 +5,7 @@ date: 2022-02-17
 excerpt: "iPhoneカメラの使い方と撮影テクニック"
 project: false
 config: true
-tag: ["apple", "iphone", "ios", "photo", "camera"]
+tag: ["apple", "iphone", "iOS", "photo", "camera"]
 comments: false
 sort_key: "2022-02-17"
 update_dates: ["2022-02-17"]

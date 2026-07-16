@@ -4,7 +4,7 @@ title: "Apple Mobile Device Types"
 date: "2022-12-17"
 excerpt: "Apple Mobile Device Typesの概要と使い方"
 config: true
-tag: ["python", "pickle", "apple mobile device types"]
+tag: ["Python", "pickle", "apple mobile device types"]
 comments: false
 sort_key: "2022-12-17"
 update_dates: ["2022-12-17"]

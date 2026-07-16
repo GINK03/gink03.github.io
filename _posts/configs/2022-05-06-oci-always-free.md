@@ -7,8 +7,8 @@ project: false
 config: true
 tag: ["oci", "oracle", "oracle cloud infrastructure", "cloud"]
 comments: false
-sort_key: "2022-05-07"
-update_dates: ["2022-05-07", "2026-06-16"]
+sort_key: "2026-06-16"
+update_dates: ["2026-06-16","2022-05-07"]
 ---
 
 ## 概要

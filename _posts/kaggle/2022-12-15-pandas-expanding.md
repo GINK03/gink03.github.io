@@ -4,7 +4,7 @@ title: "pandas expanding"
 date: 2022-12-15
 excerpt: "pandasのexpanding(accumulate operation)について"
 kaggle: true
-tag: ["python", "pandas", "expanding", "accumulate sum", "チートシート"]
+tag: ["Python", "pandas", "expanding", "accumulate sum", "チートシート"]
 comments: false
 sort_key: "2022-12-15"
 update_dates: ["2022-12-15"]

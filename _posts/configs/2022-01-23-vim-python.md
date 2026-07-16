@@ -5,7 +5,7 @@ date: 2022-01-23
 excerpt: "vimのpythonバインディングについて"
 project: false
 config: true
-tag: ["python", "vim", "neovim"]
+tag: ["Python", "vim", "neovim"]
 comments: false
 sort_key: "2022-01-23"
 update_dates: ["2022-01-23"]

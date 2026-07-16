@@ -3,7 +3,7 @@ layout: post
 title: "okta-awscli"
 date: 2021-08-17
 excerpt: "okta-awscliの概要と使い方"
-tags: ["aws", "okta"]
+tags: ["AWS", "okta"]
 config: true
 comments: false
 sort_key: "2022-04-16"

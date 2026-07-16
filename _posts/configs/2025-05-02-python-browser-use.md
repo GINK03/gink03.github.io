@@ -4,7 +4,7 @@ title: "python browser use"
 date: 2025-05-02
 excerpt: "python browser useの使い方"
 config: true
-tag: ["python", "browser use", "playwright"]
+tag: ["Python", "browser use", "playwright"]
 comments: false
 sort_key: "2025-05-02"
 update_dates: ["2025-05-02"]

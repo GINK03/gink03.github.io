@@ -5,7 +5,7 @@ date: 2021-01-30
 excerpt: "feature combiningとその方法"
 kaggle: true
 hide_from_post: true
-tag: ["feature", "feature combining", "python"]
+tag: ["feature", "feature combining", "Python"]
 comments: false
 sort_key: "2021-08-29"
 update_dates: ["2021-08-29"]

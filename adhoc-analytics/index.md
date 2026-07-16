@@ -1,6 +1,7 @@
 ---
-layout: adhoc-analytics
-title: アドホック分析関連
-excerpt: "ad hocとはルーチンの逆。ショットでの分析"
+layout: category
+filter_key: adhoc_analytics
+title: アドホック分析
+excerpt: "個別テーマを調査、分析した記事一覧"
 comments: false
 ---

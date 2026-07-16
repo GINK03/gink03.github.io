@@ -4,7 +4,7 @@ title: "apple universal control"
 date: 2022-03-24
 excerpt: "appleのuniversal control(ユニバーサルコントロール)の使い方"
 config: true
-tag: ["apple", "ios", "macos", "osx", "universal control"]
+tag: ["apple", "iOS", "macOS", "osx", "universal control"]
 comments: false
 sort_key: "2022-05-02"
 update_dates: ["2022-05-02","2022-03-28","2022-03-26","2022-03-25","2022-03-24"]

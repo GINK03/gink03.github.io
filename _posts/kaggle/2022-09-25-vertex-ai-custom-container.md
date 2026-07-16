@@ -4,7 +4,7 @@ title: "gcp vertex ai custom container"
 date: 2022-09-25
 excerpt: "gcp vertex ai custom containerの使い方"
 kaggle: true
-tag: ["gcp", "vertex ai"]
+tag: ["GCP", "vertex ai"]
 sort_key: "2022-09-25"
 update_dates: ["2022-09-25"]
 comments: false

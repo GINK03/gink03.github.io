@@ -1,0 +1,41 @@
+name: content quality
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  content:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.4"
+          bundler-cache: true
+      - name: Validate content
+        run: bundle exec ruby scripts/validate_content.rb
+      - name: Check content audit
+        run: bundle exec ruby scripts/generate_content_audit.rb --check
+      - name: Build site
+        run: bundle exec jekyll build --strict_front_matter
+      - name: Verify generated site
+        run: bundle exec ruby scripts/verify_generated_site.rb _site
+      - name: Check internal links
+        run: bundle exec ruby scripts/check_internal_links.rb _site
+
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_ENABLE_COMMENTS: false

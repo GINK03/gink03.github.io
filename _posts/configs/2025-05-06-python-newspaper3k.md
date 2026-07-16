@@ -4,7 +4,7 @@ title: "python newspaper3kの使い方"
 date: 2025-05-06
 excerpt: "python newspaper3kの使い方"
 config: true
-tag: ["python", "newspaper3k"]
+tag: ["Python", "newspaper3k"]
 comments: false
 sort_key: "2025-05-06"
 update_dates: ["2025-05-06"]

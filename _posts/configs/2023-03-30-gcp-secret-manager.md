@@ -3,7 +3,7 @@ layout: post
 title: "gcp secret manager"
 date: 2023-03-30
 excerpt: "gcp secret managerの使い方"
-tags: ["secret manager", "gcp", "api"]
+tags: ["secret manager", "GCP", "API"]
 config: true
 comments: false
 sort_key: "2023-03-30"
@@ -27,7 +27,7 @@ $ python3 -m pip install google-cloud-secret-manager
 ### シークレットを作成する
 
 ```console
-$ gcloud secrets create <secret-id> --replication-policy="automatic"
+$ gcloud secrets create <secret-id> --replication-policy=automatic
 ```
 
 ### シークレットにバージョンを追加する

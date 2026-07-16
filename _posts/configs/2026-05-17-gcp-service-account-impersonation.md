@@ -4,7 +4,7 @@ title: "gcp service account impersonation"
 date: 2026-05-17
 excerpt: "gcpでservice account impersonationを使う方法"
 config: true
-tag: ["gcp", "iam", "service account", "impersonation", "gcloud"]
+tag: ["GCP", "iam", "service account", "impersonation", "gcloud"]
 comments: false
 sort_key: "2026-05-17"
 update_dates: ["2026-05-17"]

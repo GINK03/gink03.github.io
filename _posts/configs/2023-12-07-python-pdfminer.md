@@ -4,7 +4,7 @@ title: "python pdfminer"
 date: 2023-12-07
 excerpt: "pythonのpdfminderの概要と使い方"
 config: true
-tag: ["python", "pdfminer"]
+tag: ["Python", "pdfminer"]
 comments: false
 sort_key: "2023-12-07"
 update_dates: ["2023-12-07"]

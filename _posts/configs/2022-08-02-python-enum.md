@@ -3,7 +3,7 @@ layout: post
 title: "python enum"
 date: 2022-08-02
 excerpt: "python enumの使い方"
-tags: ["python", "enum"]
+tags: ["Python", "enum"]
 config: true
 comments: false
 sort_key: "2022-08-02"

@@ -3,7 +3,7 @@ layout: post
 title: "Jupyter vibe analytics"
 date: 2026-02-22
 excerpt: "Jupyterでvibe analyticsを進める手順"
-tag: ["jupyter", "kaggle", "python"]
+tag: ["jupyter", "Kaggle", "Python"]
 comments: false
 sort_key: "2026-02-22"
 update_dates: ["2026-02-22"]

@@ -3,7 +3,7 @@ layout: post
 title: "cppのassert"
 date: 2022-06-30
 excerpt: "cppのassertの使い方"
-tags: ["c++", "cpp", "assert"]
+tags: ["C++", "cpp", "assert"]
 config: true
 comments: false
 sort_key: "2022-06-30"

@@ -5,7 +5,7 @@ date: 2024-03-30
 excerpt: "python chromadbの使い方"
 project: false
 config: true
-tag: ["python", "chromadb"]
+tag: ["Python", "chromadb"]
 comments: false
 sort_key: "2024-03-30"
 update_dates: ["2024-03-30"]

@@ -5,7 +5,7 @@ date: 2017-04-02
 excerpt: "各種OSのインターフェースのIPアドレスを固定する方法"
 config: true
 tag: ["ubuntu", "debian", "windows"]
-sort_key: "2018-01-19"
+sort_key: "2022-06-15"
 update_dates: ["2022-06-15", "2018-01-19"]
 comments: false
 ---

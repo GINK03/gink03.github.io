@@ -3,7 +3,7 @@ layout: post
 title: "gcp workload identity federation" 
 date: 2025-06-03
 excerpt: "gcp workload identity federation"
-tags: ["gcp", "workload identity federation", "gcp workload identity federation"]
+tags: ["GCP", "workload identity federation", "gcp workload identity federation"]
 config: true
 comments: false
 sort_key: "2025-06-03"

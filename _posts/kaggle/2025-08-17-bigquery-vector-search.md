@@ -3,7 +3,7 @@ layout: post
 title: "bigquery vector search"
 date: 2025-08-17
 excerpt: "bigquery vector search"
-tags: ["bq", "bigquery", "gcp", "vector_search", "cosine"]
+tags: ["bq", "BigQuery", "GCP", "vector_search", "cosine"]
 kaggle: true
 comments: false
 sort_key: "2025-08-17"

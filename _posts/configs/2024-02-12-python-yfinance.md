@@ -5,7 +5,7 @@ date: 2024-02-12
 excerpt: "python yfinanceの使い方"
 project: false
 config: true
-tag: ["python", "yfinance"]
+tag: ["Python", "yfinance"]
 comments: false
 sort_key: "2024-02-12"
 update_dates: ["2024-02-12"]

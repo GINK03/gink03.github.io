@@ -3,7 +3,7 @@ layout: post
 title: "cppのternary(三項演算子)"
 date: 2022-06-30
 excerpt: "cppのternary(三項演算子)の使い方"
-tags: ["c++", "cpp", "ternary", "三項演算子"]
+tags: ["C++", "cpp", "ternary", "三項演算子"]
 config: true
 comments: false
 sort_key: "2022-06-30"

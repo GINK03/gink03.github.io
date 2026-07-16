@@ -5,7 +5,7 @@ date: 2024-04-30
 excerpt: "aws dynamodbの概要と使い方"
 project: false
 config: true
-tag: ["aws", "aws dynamodb", "dynamodb"]
+tag: ["AWS", "aws dynamodb", "dynamodb"]
 comments: false
 sort_key: "2024-04-30"
 update_dates: ["2024-04-30"]

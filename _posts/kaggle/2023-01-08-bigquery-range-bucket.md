@@ -3,7 +3,7 @@ layout: post
 title: "bigquery range bucket"
 date: 2023-01-08
 excerpt: "bigquery range bucketの概要と使い方"
-tags: ["bq", "bigquery", "gcp", "range_bucket", "range bucket"]
+tags: ["bq", "BigQuery", "GCP", "range_bucket", "range bucket"]
 kaggle: true
 comments: false
 sort_key: "2023-01-08"

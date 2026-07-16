@@ -4,7 +4,7 @@ title: "gcp iam-admin"
 date: "2022-10-27"
 excerpt: "gcpのIAMとsecurityで気をつけるポイント"
 config: true
-tag: ["gcp", "gcloud", "security", "iam"]
+tag: ["GCP", "gcloud", "security", "iam"]
 comments: false
 sort_key: "2022-10-27"
 update_dates: ["2022-10-27"]

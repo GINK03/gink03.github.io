@@ -3,7 +3,7 @@ layout: post
 title: "bigqueryb basics"
 date: 2020-06-26
 excerpt: "bigqueryの基本"
-tags: ["bq", "bigquery", "gcp"]
+tags: ["bq", "BigQuery", "GCP"]
 kaggle: true
 comments: false
 sort_key: "2022-03-01"

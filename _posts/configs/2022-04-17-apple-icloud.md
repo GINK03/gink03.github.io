@@ -3,7 +3,7 @@ layout: post
 title: "apple iCloud"
 date: 2021-04-17
 excerpt: "apple iCloudについて"
-tags: ["apple", "ios", "macOS", "support", "icloud"]
+tags: ["apple", "iOS", "macOS", "support", "icloud"]
 config: true
 comments: false
 sort_key: "2022-05-10"

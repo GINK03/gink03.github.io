@@ -5,7 +5,7 @@ date: 2024-06-30
 excerpt: "aws transcribeの概要と使い方"
 project: false
 config: true
-tag: ["aws", "aws transcribe", "stt"]
+tag: ["AWS", "aws transcribe", "stt"]
 comments: false
 sort_key: "2024-06-30"
 update_dates: ["2024-06-30"]

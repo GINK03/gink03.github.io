@@ -6,8 +6,8 @@ excerpt: "Cloudflare Mail Routingの設定方法と使い方"
 tag: ["Cloudflare", "Mail Routing", "設定方法", "使い方"]
 config: true
 comments: false
-sort_key: "2025-08-23-cloudflare-mail-routing.md"
-update_dates: ["2025-08-23", "2025-08-24"]
+sort_key: "2025-08-24"
+update_dates: ["2025-08-24","2025-08-23"]
 ---
 
 ## 概要

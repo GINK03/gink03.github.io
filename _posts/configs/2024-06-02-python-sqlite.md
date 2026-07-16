@@ -5,7 +5,7 @@ date: 2024-06-02
 excerpt: "python sqliteの使い方"
 project: false
 config: true
-tag: ["python", "sqlite", "sqlite3"]
+tag: ["Python", "sqlite", "sqlite3"]
 comments: false
 sort_key: "2024-06-02"
 update_dates: ["2024-06-02"]

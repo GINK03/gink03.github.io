@@ -6,7 +6,7 @@ excerpt: "coc-pyrightの使い方"
 config: true
 tag: ["coc.nvim", "nvim", "vim", "vscode", "pyright"]
 comments: false
-sort_key: "2022-05-19"
+sort_key: "2022-07-24"
 update_dates: ["2022-05-19","2022-02-02","2022-01-25","2022-01-20"]
 ---
 

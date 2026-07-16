@@ -3,7 +3,7 @@ layout: post
 title: "hoppscotch"
 date: 2021-04-17
 excerpt: "hoppscotchについて"
-tags: ["hoppscotch", "api"]
+tags: ["hoppscotch", "API"]
 config: true
 comments: false
 sort_key: "2021-04-17"

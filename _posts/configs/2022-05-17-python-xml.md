@@ -5,7 +5,7 @@ date: "2022-05-17"
 excerpt: "pythonでのxmlの扱い方"
 project: false
 config: true
-tag: ["python", "xml"]
+tag: ["Python", "xml"]
 comments: false
 sort_key: "2022-05-17"
 update_dates: ["2022-05-17"]

@@ -6,6 +6,7 @@ excerpt: "davinci resolve"
 project: true
 tag: ["davinci resolve"]
 comments: false
+sort_key: "2020-11-18"
 ---
 
 ## platforms

@@ -5,7 +5,7 @@ date: 2022-02-26
 excerpt: "gunicronの使い方"
 project: false
 config: true
-tag: ["gunicorn", "flask", "api", "python"]
+tag: ["gunicorn", "flask", "API", "Python"]
 comments: false
 sort_key: "2022-05-11"
 update_dates: ["2022-05-11","2022-02-26"]

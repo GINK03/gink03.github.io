@@ -2,9 +2,10 @@
 layout: post
 title: "tfidf (sklearn)"
 date: 2018-07-30
-excerpt: ""
-tags: [tfidf, sklearn]
+excerpt: "scikit-learnのTfidfVectorizerで本文とタイトルをベクトル化する方法"
+tags: ["tfidf", "sklearn"]
 comments: false
+sort_key: "2018-07-30"
 ---
 
 手で計算しなくても便利なライブラリがある。

@@ -3,7 +3,7 @@ layout: post
 title: "apple airpods"
 date: 2022-05-09
 excerpt: "apple airpodsについて"
-tags: ["apple", "ios", "macOS", "support", "air pods", "air pods max"]
+tags: ["apple", "iOS", "macOS", "support", "air pods", "air pods max"]
 config: true
 comments: false
 sort_key: "2022-05-09"

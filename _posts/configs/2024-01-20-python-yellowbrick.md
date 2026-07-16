@@ -5,7 +5,7 @@ date: 2024-01-20
 excerpt: "python yellowbrickの使い方"
 project: false
 config: true
-tag: ["python", "yellowbrick"]
+tag: ["Python", "yellowbrick"]
 comments: false
 sort_key: "2024-01-20"
 update_dates: ["2024-01-20"]

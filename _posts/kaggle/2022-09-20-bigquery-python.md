@@ -3,7 +3,7 @@ layout: post
 title: "bigquery python"
 date: 2022-09-20
 excerpt: "bigquery pythonのチートシート"
-tags: ["bq", "bigquery", "gcp"]
+tags: ["bq", "BigQuery", "GCP"]
 kaggle: true
 comments: false
 sort_key: "2022-09-20"

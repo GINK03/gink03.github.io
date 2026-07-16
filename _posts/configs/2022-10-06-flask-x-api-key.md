@@ -5,7 +5,7 @@ date: 2022-10-06
 excerpt: "flaskでのx-api-keyの取り扱い"
 project: false
 config: true
-tag: ["flask", "api", "セキュリティ"]
+tag: ["flask", "API", "セキュリティ"]
 comments: false
 sort_key: "2022-10-06"
 update_dates: ["2022-10-06"]

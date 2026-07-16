@@ -1,0 +1,5 @@
+{% for tag in page.tags %}
+  {% assign tag_posts = site.tags[tag] %}
+  {% assign tag_id = tag | downcase | slugify: 'raw' %}
+  {% if tag_posts.size >= 3 %}<a href="{{ site.url }}/tags/#{{ tag_id | escape }}" title="{{ tag | escape }}の記事一覧" class="tag" rel="tag">{{ tag | escape }}</a>{% else %}<span class="tag">{{ tag | escape }}</span>{% endif %}{% unless forloop.last %} {% endunless %}
+{% endfor %}

@@ -5,7 +5,7 @@ date: 2022-02-17
 excerpt: "iPhoneのテザリングに関するまとめ"
 project: false
 config: true
-tag: ["apple", "iphone", "ios", "tethering"]
+tag: ["apple", "iphone", "iOS", "tethering"]
 comments: false
 sort_key: "2022-02-17"
 update_dates: ["2022-02-17"]

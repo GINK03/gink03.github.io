@@ -4,7 +4,7 @@ title: "python heapq"
 date: "2022-12-11"
 excerpt: "python heapqの使い方"
 config: true
-tag: ["python", "heapq"]
+tag: ["Python", "heapq"]
 comments: false
 sort_key: "2022-12-11"
 update_dates: ["2022-12-11"]

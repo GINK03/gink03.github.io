@@ -5,7 +5,7 @@ date: "2022-05-20"
 excerpt: "python timeitの使い方"
 project: false
 config: true
-tag: ["python", "timeit"]
+tag: ["Python", "timeit"]
 comments: false
 sort_key: "2022-05-20"
 update_dates: ["2022-05-20"]

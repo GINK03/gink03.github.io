@@ -3,9 +3,9 @@ layout: post
 title: "instagram api"
 date: 2017-09-04
 excerpt: "Instagram Api"
-tag: ["instagram"]
+tag: ["Instagram"]
 config: true
-sort_key: "2017-09-04"
+sort_key: "2022-08-05"
 comments: false
 update_dates: ["2022-08-05", "2017-09-04"]
 ---

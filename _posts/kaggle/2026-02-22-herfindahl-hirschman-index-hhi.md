@@ -5,7 +5,7 @@ date: 2026-02-22
 excerpt: "市場集中度の指標であるHHIの定義と実装"
 project: false
 kaggle: true
-tag: ["statistics", "economics", "kaggle"]
+tag: ["statistics", "economics", "Kaggle"]
 comments: false
 sort_key: "2026-02-22"
 update_dates: ["2026-02-22"]

@@ -3,7 +3,7 @@ layout: post
 title: "bigquery pivot"
 date: 2023-06-14
 excerpt: "bigqueryのpivotの使い方"
-tags: ["bq", "bigquery", "gcp", "bigquery", "pivot"]
+tags: ["bq", "BigQuery", "GCP", "pivot"]
 kaggle: true
 comments: false
 sort_key: "2023-06-14"

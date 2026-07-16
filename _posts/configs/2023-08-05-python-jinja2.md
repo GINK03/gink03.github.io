@@ -5,7 +5,7 @@ date: "2023-08-05"
 excerpt: "pythonのjinja2の使い方"
 project: false
 config: true
-tag: ["python", "jinja2", "template"]
+tag: ["Python", "jinja2", "template"]
 comments: false
 sort_key: "2023-08-05"
 update_dates: ["2023-08-05"]

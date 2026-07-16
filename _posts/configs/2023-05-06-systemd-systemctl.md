@@ -3,7 +3,7 @@ layout: post
 title: "systemctl"
 date: 2023-05-06
 excerpt: "systemctlの使い方"
-tags: ["systemctl", "linux", "systemd"]
+tags: ["systemctl", "Linux", "systemd"]
 config: true
 comments: false
 sort_key: "2023-05-06"

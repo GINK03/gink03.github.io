@@ -4,7 +4,7 @@ title: "python divmod"
 date: "2022-07-11"
 excerpt: "python divmodの使い方"
 config: true
-tag: ["python", "divmod"]
+tag: ["Python", "divmod"]
 comments: false
 sort_key: "2022-07-11"
 update_dates: ["2022-07-11"]

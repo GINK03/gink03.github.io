@@ -4,7 +4,7 @@ title: "pandas isin"
 date: 2023-12-30
 excerpt: "pandasのisinの使い方"
 kaggle: true
-tag: ["python", "pandas", "isin", "except"]
+tag: ["Python", "pandas", "isin", "except"]
 comments: false
 sort_key: "2023-12-30"
 update_dates: ["2023-12-30"]

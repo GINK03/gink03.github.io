@@ -5,7 +5,7 @@ date: 2026-01-18
 excerpt: "requests_cacheでHTTPキャッシュを永続化する"
 project: false
 config: true
-tag: ["python", "requests", "requests_cache"]
+tag: ["Python", "requests", "requests_cache"]
 comments: false
 sort_key: "2026-01-18"
 update_dates: ["2026-01-18"]

@@ -3,7 +3,7 @@ layout: post
 title: "gcp translation api"
 date: 2022-04-08
 excerpt: "gcp translation apiについて"
-tags: ["nlp", "google cloud platform", "gcp", "translation", "api"]
+tags: ["NLP", "google cloud platform", "GCP", "translation", "API"]
 config: true
 comments: false
 sort_key: "2022-04-08"

@@ -2,9 +2,10 @@
 layout: post
 title: "transport a lot of files"
 date: 2020-12-29
-excerpt: ""
+excerpt: "tarとSSHを組み合わせて大量のファイルを転送する方法"
 tags: ["ssh"]
 comments: false
+sort_key: "2020-12-29"
 ---
 
 **NOTE**  

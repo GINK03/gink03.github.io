@@ -4,7 +4,7 @@ title: "gemini image analytics"
 date: 2025-03-14
 excerpt: "gemini image analytics"
 kaggle: true
-tag: ["gemini", "gpt", "LLM", "python"]
+tag: ["gemini", "GPT", "LLM", "Python"]
 comments: false
 sort_key: "2025-03-14"
 update_dates: ["2025-03-14"]

@@ -8,7 +8,7 @@ hide_from_post: true
 tag: ["edit distancce", "編集距離", "レーベンシュタイン距離", "algorithm", "dynamic programming"]
 comments: false
 sort_key: "2021-03-26"
-update_dates: ["2021-03-26","2021-03-26"]
+update_dates: ["2021-03-26"]
 ---
 
 ## 概要

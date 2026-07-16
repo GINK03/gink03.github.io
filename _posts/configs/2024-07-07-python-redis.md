@@ -3,7 +3,7 @@ layout: post
 title: "python redis"
 date: 2024-07-07
 excerpt: "python redisの使い方"
-tags: ["redis", "elastic-cache", "docker", "python", "valkey"]
+tags: ["redis", "elastic-cache", "docker", "Python", "valkey"]
 config: true
 comments: false
 sort_key: "2024-07-07"

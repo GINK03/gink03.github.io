@@ -4,7 +4,7 @@ title: "python invoke"
 date: 2023-05-04
 excerpt: "pythonのinvokeの使い方"
 config: true
-tag: ["python", "invoke"]
+tag: ["Python", "invoke"]
 comments: false
 sort_key: "2023-05-04"
 update_dates: ["2023-05-04"]

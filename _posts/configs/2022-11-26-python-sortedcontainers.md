@@ -4,7 +4,7 @@ title: "python sortedcontainers"
 date: "2022-11-26"
 excerpt: "pythonのsortedcontainersの使い方"
 config: true
-tag: ["python", "sortedcontainers", "b-tree"]
+tag: ["Python", "sortedcontainers", "b-tree"]
 comments: false
 sort_key: "2022-11-26"
 update_dates: ["2022-11-26"]

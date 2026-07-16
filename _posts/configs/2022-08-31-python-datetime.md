@@ -4,7 +4,7 @@ title: "python datetime"
 date: "2022-08-31"
 excerpt: "python datetimeの使い方"
 config: true
-tag: ["datetime", "python"]
+tag: ["datetime", "Python"]
 comments: false
 sort_key: "2022-08-31"
 update_dates: ["2022-08-31"]

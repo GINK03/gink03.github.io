@@ -5,7 +5,7 @@ date: 2021-01-30
 excerpt: "分析&モデリングで利用できるaggregationと種類"
 kaggle: true
 hide_from_post: true
-tag: ["feature", "aggregation", "python"]
+tag: ["feature", "aggregation", "Python"]
 comments: false
 sort_key: "2021-02-01"
 update_dates: ["2021-02-01"]

@@ -3,7 +3,7 @@ layout: post
 title: "mullvad vpn"
 date: 2024-01-20
 excerpt: "mullvad vpnの使い方"
-tags: ["vpn", "mullvad", "wireguard"]
+tags: ["VPN", "mullvad", "wireguard"]
 config: true
 comments: false
 sort_key: "2024-01-20"

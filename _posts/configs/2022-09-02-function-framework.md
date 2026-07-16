@@ -4,9 +4,9 @@ title: "function framework"
 date: "2022-09-02"
 excerpt: "function frameworkの使い方"
 config: true
-tag: ["gcp", "gcloud", "cloud functions", "function-framework", "function_framework"]
+tag: ["GCP", "gcloud", "cloud functions", "function-framework", "function_framework"]
 comments: false
-sort_key: "2022-08-12"
+sort_key: "2022-09-02"
 update_dates: ["2022-08-12"]
 ---
 

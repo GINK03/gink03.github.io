@@ -4,7 +4,7 @@ title: "python packages"
 date: 2024-11-14
 excerpt: "pythonのパッケージ作成"
 config: true
-tag: ["python", "uv", "rye", "poetry"]
+tag: ["Python", "uv", "rye", "poetry"]
 comments: false
 sort_key: "2024-11-14"
 update_dates: ["2024-11-14"]

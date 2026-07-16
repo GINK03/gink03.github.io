@@ -4,7 +4,7 @@ title: "python hash"
 date: 2023-06-03
 excerpt: "pythonのhash関数の使い方"
 config: true
-tag: ["python", "hash"]
+tag: ["Python", "hash"]
 comments: false
 sort_key: "2023-06-03"
 update_dates: ["2023-06-03"]

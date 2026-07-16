@@ -3,7 +3,7 @@ layout: post
 title: "gcp artifact registry"
 date: 2023-11-23
 excerpt: "gcp artifact registry"
-tags: ["gcp", "artifact registry", "gar"]
+tags: ["GCP", "artifact registry", "gar"]
 config: true
 comments: false
 sort_key: "2023-11-23"

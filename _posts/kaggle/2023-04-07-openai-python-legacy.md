@@ -4,7 +4,7 @@ title: "openai python"
 date: 2023-04-07
 excerpt: "openaiでpythonの使い方"
 kaggle: true
-tag: ["openai", "gpt", "python"]
+tag: ["openai", "GPT", "Python"]
 comments: false
 sort_key: "2023-04-07"
 update_dates: ["2023-04-07"]

@@ -1,0 +1,27 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="ja" class="no-js">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include nav.html %}
+  <main class="header">
+    <div class="wrapper">
+      <div class="content">
+        <header class="post-title">
+          <h1>{{ page.title | escape }}</h1>
+          {% if page.excerpt %}<p>{{ page.excerpt | escape }}</p>{% endif %}
+          <a class="btn zoombtn" href="{{ site.url }}/" aria-label="トップページへ戻る">
+            <i class="fa fa-home" aria-hidden="true"></i>
+          </a>
+        </header>
+        {% include category-post-list.html filter_key=page.filter_key exclude_key=page.exclude_key %}
+      </div>
+    </div>
+  </main>
+  {% include scripts.html %}
+</body>
+</html>

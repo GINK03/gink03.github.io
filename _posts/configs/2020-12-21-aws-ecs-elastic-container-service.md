@@ -5,10 +5,10 @@ date: 2020-12-21
 excerpt: "aws ecsの使い方"
 project: false
 config: true
-tag: ["ecs", "fargate", "aws"]
+tag: ["ecs", "fargate", "AWS"]
 comments: false
 sort_key: "2020-12-28"
-update_dates: ["2020-12-28","2020-12-25","2020-12-25","2020-12-24"]
+update_dates: ["2020-12-28","2020-12-25","2020-12-24"]
 ---
 
 ## 概要

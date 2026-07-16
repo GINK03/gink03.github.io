@@ -4,7 +4,7 @@ title: "gemini chat python"
 date: 2025-01-16
 excerpt: "gemini chat python"
 kaggle: true
-tag: ["gemini", "gpt", "LLM", "python"]
+tag: ["gemini", "GPT", "LLM", "Python"]
 comments: false
 sort_key: "2025-01-16"
 update_dates: ["2025-01-16"]

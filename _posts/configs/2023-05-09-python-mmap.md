@@ -4,7 +4,7 @@ title: "python mmap"
 date: 2023-05-09
 excerpt: "pythonのmmapの使い方"
 config: true
-tag: ["python", "mmap"]
+tag: ["Python", "mmap"]
 comments: false
 sort_key: "2023-05-09"
 update_dates: ["2023-05-09"]

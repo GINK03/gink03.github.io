@@ -3,7 +3,7 @@ layout: post
 title: "macOSのスクリーンショット"
 date: 2023-02-15
 excerpt: "macOSのスクリーンショットの方法とオプション"
-tags: ["apple", "macos", "osx", "screenshots"]
+tags: ["apple", "macOS", "osx", "screenshots"]
 config: true
 comments: false
 sort_key: "2023-02-15"

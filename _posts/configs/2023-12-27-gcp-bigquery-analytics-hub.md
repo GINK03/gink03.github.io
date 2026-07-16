@@ -3,7 +3,7 @@ layout: post
 title: "gcp bigquery analytics hub"
 date: 2023-12-27
 excerpt: "gcp bigquery analytics hubの概要"
-tag: ["gcp", "bigquery", "analytics hub", "terraform"]
+tag: ["GCP", "BigQuery", "analytics hub", "terraform"]
 config: true
 comments: false
 sort_key: "2023-12-27"

@@ -6,7 +6,7 @@ excerpt: "google slidesの使い方"
 config: true
 tag: ["google slides"]
 comments: false
-sort_key: "2021-07-29"
+sort_key: "2022-06-08"
 update_dates: ["2022-06-08", "2021-07-29"]
 ---
 

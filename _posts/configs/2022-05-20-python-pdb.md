@@ -5,7 +5,7 @@ date: "2022-05-20"
 excerpt: "python pdbの使い方"
 project: false
 config: true
-tag: ["python", "pdb"]
+tag: ["Python", "pdb"]
 comments: false
 sort_key: "2022-05-20"
 update_dates: ["2022-05-20"]

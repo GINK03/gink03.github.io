@@ -5,7 +5,7 @@ date: 2021-02-28
 excerpt: "説明可能なAIについて"
 kaggle: true
 hide_from_post: true
-tag: ["deep-learning", "ai explanations", "gcp"]
+tag: ["deep-learning", "ai explanations", "GCP"]
 comments: false
 sort_key: "2021-03-21"
 update_dates: ["2021-03-21"]

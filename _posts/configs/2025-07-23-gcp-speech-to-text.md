@@ -3,10 +3,10 @@ layout: post
 title: "gcp speech-to-text" 
 date: 2025-07-23
 excerpt: "gcp speech-to-text の使い方"
-tags: ["gcp", "speech-to-text", "音声認識"]
+tags: ["GCP", "speech-to-text", "音声認識"]
 config: true
 comments: false
-sort_key: "2025-07-23-gcp-speech-to-text"
+sort_key: "2025-07-23"
 update_dates: ["2025-07-23"]
 ---
 

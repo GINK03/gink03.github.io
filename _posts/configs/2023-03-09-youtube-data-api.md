@@ -4,7 +4,7 @@ title: "youtube data api"
 date: 2023-03-08
 excerpt: "youtube data apiの使い方"
 config: true
-tag: ["gcp", "youtube api", "youtube data api"]
+tag: ["GCP", "youtube api", "youtube data api"]
 comments: false
 sort_key: "2023-03-08"
 update_dates: ["2023-03-08"]

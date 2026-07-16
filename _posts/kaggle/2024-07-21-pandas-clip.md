@@ -6,7 +6,7 @@ excerpt: "pandas clip"
 project: false
 kaggle: true
 hide_from_post: true
-tag: ["python", "pandas", "チートシート"]
+tag: ["Python", "pandas", "チートシート"]
 comments: false
 sort_key: "2024-07-21"
 update_dates: ["2024-07-21"]

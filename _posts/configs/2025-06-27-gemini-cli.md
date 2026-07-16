@@ -4,7 +4,7 @@ title: "gemini cli"
 date: 2025-06-27
 excerpt: "gemini cliの使い方"
 config: true
-tag: ["google", "gemini", "cli", "terminal", "coding"]
+tag: ["google", "gemini", "CLI", "terminal", "coding"]
 comments: false
 sort_key: "2025-06-27"
 update_dates: ["2025-06-27"]

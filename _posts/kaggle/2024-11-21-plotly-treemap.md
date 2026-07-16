@@ -5,7 +5,7 @@ date: 2024-11-21
 excerpt: "plotly treemap"
 kaggle: true
 hide_from_post: true
-tag: ["可視化", "visualizations", "python", "plotly"]
+tag: ["可視化", "visualizations", "Python", "Plotly"]
 comments: false
 sort_key: "2024-11-21"
 update_dates: ["2024-11-21"]

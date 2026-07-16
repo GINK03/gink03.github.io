@@ -3,8 +3,9 @@ layout: post
 title: "TensorFlow Inceptionまとめ"
 date: 2017-01-12
 excerpt: "TensorFlow inception v3転移学習まとめ"
-tags: [inception]
+tags: ["inception"]
 comments: false
+sort_key: "2017-01-12"
 ---
 
 ## ボトルネックを利用した転移学習

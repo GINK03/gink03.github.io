@@ -3,7 +3,7 @@ layout: post
 title: "gcp firestore"
 date: 2023-06-13
 excerpt: "gcp firestoreの使い方"
-tags: ["firestore", "gcp", "api", "nosql"]
+tags: ["firestore", "GCP", "API", "nosql"]
 config: true
 comments: false
 sort_key: "2023-06-13"

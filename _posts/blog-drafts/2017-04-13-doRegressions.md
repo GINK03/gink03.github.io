@@ -6,8 +6,9 @@ excerpt: "回帰をやっていく"
 project: true
 tag:
 - MachineLearning
-- Regression
+- regression
 comments: false
+sort_key: "2017-04-10"
 ---
 
 ## 回帰ですよ

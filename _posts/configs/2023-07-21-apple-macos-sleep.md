@@ -3,7 +3,7 @@ layout: post
 title: "macOS sleep" 
 date: 2023-07-21
 excerpt: "macOSのsleepの方法"
-tags: ["apple", "macos", "osx", "settings", "sleep"]
+tags: ["apple", "macOS", "osx", "settings", "sleep"]
 config: true
 comments: false
 sort_key: "2023-07-21"

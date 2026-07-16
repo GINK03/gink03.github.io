@@ -4,7 +4,7 @@ title: "python fastapi"
 date: 2023-11-17
 excerpt: "pythonのfastapiの概要と使い方"
 config: true
-tag: ["python", "fastapi"]
+tag: ["Python", "fastapi"]
 comments: false
 sort_key: "2023-11-17"
 update_dates: ["2023-11-17"]

@@ -3,7 +3,7 @@ layout: post
 title: "python pgeocode"
 date: 2024-07-29
 excerpt: "python pgeocodeの使い方"
-tags: ["python", "pgeocode", "geocode"]
+tags: ["Python", "pgeocode", "geocode"]
 config: true
 comments: false
 sort_key: "2024-07-29"

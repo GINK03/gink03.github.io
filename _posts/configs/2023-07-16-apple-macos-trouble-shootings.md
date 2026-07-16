@@ -3,7 +3,7 @@ layout: post
 title: "macOSのトラブルシューティング"
 date: 2023-07-16
 excerpt: "macOSのトラブルシューティング"
-tags: ["apple", "macos", "トラブルシューティング", "trouble shottings"]
+tags: ["apple", "macOS", "トラブルシューティング", "trouble shottings"]
 config: true
 comments: false
 sort_key: "2023-07-16"

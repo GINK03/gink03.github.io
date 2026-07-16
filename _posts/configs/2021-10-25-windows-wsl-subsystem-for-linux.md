@@ -5,7 +5,7 @@ date: "2021-10-25"
 excerpt: "WSL(Windows Subsystem for Linux)の使い方"
 project: false
 config: true
-tag: ["windows", "linux", "wsl", "Windows Subsystem for Linux"]
+tag: ["windows", "Linux", "wsl", "Windows Subsystem for Linux"]
 comments: false
 sort_key: "2022-05-22"
 update_dates: ["2022-05-22"]

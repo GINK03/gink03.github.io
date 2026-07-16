@@ -3,9 +3,9 @@ layout: post
 title: "jupyter magic commands"
 date: 2023-12-16
 excerpt: "jupyter magic commandsの使い方"
-tag: ["jupyter", "kaggle", "python"]
+tag: ["jupyter", "Kaggle", "Python"]
 comments: false
-sort_key: "2023-11-18"
+sort_key: "2023-12-16"
 update_dates: ["2023-11-18"]
 ---
 

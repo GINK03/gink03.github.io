@@ -4,7 +4,7 @@ title: "python streamlit"
 date: 2023-09-03
 excerpt: "streamlitの概要と使い方"
 config: true
-tag: ["streamlit", "python"]
+tag: ["streamlit", "Python"]
 comments: false
 sort_key: "2023-09-03"
 update_dates: ["2023-09-03"]

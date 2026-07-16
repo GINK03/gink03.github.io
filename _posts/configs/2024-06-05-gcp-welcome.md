@@ -3,7 +3,7 @@ layout: post
 title: "gcp welcomeページ"
 date: 2024-06-05
 excerpt: "gcp welcomeページ"
-tags: ["gcp"]
+tags: ["GCP"]
 config: true
 comments: false
 sort_key: "2024-06-05"

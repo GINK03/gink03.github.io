@@ -4,7 +4,7 @@ title: "pipenv"
 date: 2023-03-28
 excerpt: "pythonのpipenvの使い方"
 config: true
-tag: ["python", "library", "pipenv", "pip"]
+tag: ["Python", "library", "pipenv", "pip"]
 comments: false
 sort_key: "2023-03-28"
 update_dates: ["2023-03-28"]

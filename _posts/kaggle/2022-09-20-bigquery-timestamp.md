@@ -3,7 +3,7 @@ layout: post
 title: "bigquery timestamp"
 date: 2022-09-20
 excerpt: "bigquery timestampのチートシート"
-tags: ["bq", "bigquery", "gcp", "timestamp"]
+tags: ["bq", "BigQuery", "GCP", "timestamp"]
 kaggle: true
 comments: false
 sort_key: "2022-09-20"

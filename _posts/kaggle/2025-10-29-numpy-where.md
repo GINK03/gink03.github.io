@@ -5,7 +5,7 @@ date: 2025-10-29
 excerpt: "NumPy の where 関数の使い方について解説"
 project: false
 kaggle: true
-tag: ["numpy", "python"]
+tag: ["numpy", "Python"]
 comments: false
 sort_key: "2025-10-29"
 update_dates: ["2025-10-29"]

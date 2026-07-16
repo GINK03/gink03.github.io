@@ -3,7 +3,7 @@ layout: post
 title: "seaborn palette"
 date: 2022-12-17
 excerpt: "seaborn palettの使い方"
-tags: ["seaborn", "python", "matplotlib", "可視化"]
+tags: ["seaborn", "Python", "matplotlib", "可視化"]
 kaggle: true
 comments: false
 sort_key: "2022-12-17"

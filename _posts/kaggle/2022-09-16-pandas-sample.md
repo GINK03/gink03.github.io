@@ -4,7 +4,7 @@ title: "pandas sample"
 date: 2022-09-16
 excerpt: "pandas sampleのチートシート"
 kaggle: true
-tag: ["python", "pandas", "sample", "チートシート"]
+tag: ["Python", "pandas", "sample", "チートシート"]
 sort_key: "2022-09-16"
 update_dates: ["2022-09-16"]
 comments: false

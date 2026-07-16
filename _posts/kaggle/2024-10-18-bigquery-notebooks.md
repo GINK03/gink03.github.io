@@ -3,7 +3,7 @@ layout: post
 title: "bigquery notebooks"
 date: 2024-10-18
 excerpt: "bigquery notebooksの使い方"
-tags: ["bigquery", "notebooks"]
+tags: ["BigQuery", "notebooks"]
 kaggle: true
 comments: false
 sort_key: "2024-10-18"

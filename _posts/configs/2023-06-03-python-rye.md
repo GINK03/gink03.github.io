@@ -4,7 +4,7 @@ title: "python rye"
 date: 2023-06-03
 excerpt: "pythonのryeの使い方"
 config: true
-tag: ["python", "rye"]
+tag: ["Python", "rye"]
 comments: false
 sort_key: "2023-06-03"
 update_dates: ["2023-06-03"]

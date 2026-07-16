@@ -3,9 +3,10 @@ layout: post
 title: "snowflake"
 date: 2020-06-04
 excerpt: "snowflake構造について"
-tags: ["twitter", "アルゴリズムとデータ構造"]
+tags: ["Twitter", "アルゴリズムとデータ構造"]
 computer_science: true
 comments: false
+sort_key: "2020-06-04"
 ---
 
  - twitterIDのユニーク化をするアルゴリズム

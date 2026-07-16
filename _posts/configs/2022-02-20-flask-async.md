@@ -5,7 +5,7 @@ date: 2022-02-20
 excerpt: "flaskでのasyncのやり方"
 project: false
 config: true
-tag: ["flask", "celery", "api"]
+tag: ["flask", "celery", "API"]
 comments: false
 sort_key: "2022-05-13"
 update_dates: ["2022-05-13"]

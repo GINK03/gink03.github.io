@@ -3,7 +3,7 @@ layout: post
 title: "bigquery remote functions"
 date: 2022-11-07
 excerpt: "bigquery remote functionsのチートシート"
-tags: ["bq", "bigquery", "gcp", "remote functions"]
+tags: ["bq", "BigQuery", "GCP", "remote functions"]
 kaggle: true
 comments: false
 sort_key: "2022-11-07"

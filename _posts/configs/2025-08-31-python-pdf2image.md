@@ -4,7 +4,7 @@ title: "python pdf2image"
 date: 2025-08-31
 excerpt: "python pdf2imageの使い方"
 config: true
-tag: ["python", "pdf2image", "pdf"]
+tag: ["Python", "pdf2image", "PDF"]
 comments: false
 sort_key: "2025-08-31"
 update_dates: ["2025-08-31"]

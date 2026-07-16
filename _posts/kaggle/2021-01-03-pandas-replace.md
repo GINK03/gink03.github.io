@@ -3,7 +3,7 @@ layout: post
 title: "pandas replace"
 date: 2021-01-03
 excerpt: "pandas replaceのチートシート"
-tag: ["python", "pandas", "pd.Series", "チートシート"]
+tag: ["Python", "pandas", "pd.Series", "チートシート"]
 kaggle: true
 sort_key: "2022-05-30"
 update_dates: ["2022-05-30"]

@@ -3,7 +3,7 @@ layout: post
 title: "python shelve"
 date: 2022-12-28
 excerpt: "pythonのshelveの使い方"
-tags: ["python", "python3", "shelve", "permanent", "dbm"]
+tags: ["Python", "python3", "shelve", "permanent", "dbm"]
 config: true
 comments: false
 sort_key: "2022-12-28"

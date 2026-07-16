@@ -5,7 +5,7 @@ date: 2021-01-31
 excerpt: "vegaと呼ばれるopen datasetについて"
 kaggle: true
 hide_from_post: true
-tag: ["vega", "dataset", "python"]
+tag: ["vega", "dataset", "Python"]
 comments: false
 sort_key: "2021-08-29"
 update_dates: ["2021-08-29"]

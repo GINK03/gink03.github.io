@@ -5,7 +5,7 @@ date: 2025-01-05
 excerpt: "plotly sankey diagram(サンキー図)のサンプルコード"
 kaggle: true
 hide_from_post: true
-tag: ["plotly", "sankey diagram", "サンキー図"]
+tag: ["Plotly", "sankey diagram", "サンキー図"]
 comments: false
 sort_key: "2025-01-05"
 update_dates: ["2025-01-05"]

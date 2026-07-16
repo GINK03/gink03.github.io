@@ -5,7 +5,7 @@ date: "2021-12-03"
 excerpt: "userとgroupについて"
 project: false
 config: true
-tag: ["linux", "user", "group"]
+tag: ["Linux", "user", "group"]
 comments: false
 sort_key: "2021-12-03"
 update_dates: ["2021-12-03"]

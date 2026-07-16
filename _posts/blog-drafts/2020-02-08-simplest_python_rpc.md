@@ -2,9 +2,10 @@
 layout: post
 title: "Simplest Python RPC"
 date: 2020-02-06
-excerpt: ""
-tags: [python, rpc]
+excerpt: "Python標準ライブラリのmultiprocessing.managersでRPCを実装する方法"
+tags: ["Python", "rpc"]
 comments: false
+sort_key: "2020-02-06"
 ---
 
 ## 目次

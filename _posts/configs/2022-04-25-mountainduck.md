@@ -5,7 +5,7 @@ date: 2022-04-25
 excerpt: "Mountain Duckの使い方"
 project: false
 config: true
-tag: ["s3", "mountainduck", "windows", "macos"]
+tag: ["s3", "mountainduck", "windows", "macOS"]
 comments: false
 sort_key: "2022-04-25"
 update_dates: ["2022-04-25"]

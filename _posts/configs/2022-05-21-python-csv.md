@@ -5,7 +5,7 @@ date: "2022-05-21"
 excerpt: "python csvの使い方"
 project: false
 config: true
-tag: ["python", "csv"]
+tag: ["Python", "csv"]
 comments: false
 sort_key: "2022-05-21"
 update_dates: ["2022-05-21"]

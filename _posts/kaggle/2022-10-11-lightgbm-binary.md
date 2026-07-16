@@ -5,7 +5,7 @@ date: 2022-10-11
 excerpt: "lightgbm binaryのチートシート"
 kaggle: true
 project: false
-tag: ["python", "lightgbm"]
+tag: ["Python", "lightgbm"]
 comments: false
 sort_key: "2022-10-11"
 update_dates: ["2022-10-11"]

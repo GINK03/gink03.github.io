@@ -4,7 +4,7 @@ title: "python pyenv"
 date: 2023-04-15
 excerpt: "pythonのpyenvの使い方"
 config: true
-tag: ["python", "pyenv"]
+tag: ["Python", "pyenv"]
 comments: false
 sort_key: "2023-04-15"
 update_dates: ["2023-04-15"]

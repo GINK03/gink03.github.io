@@ -3,7 +3,7 @@ layout: post
 title: "gcp rag engine" 
 date: 2025-01-05
 excerpt: "gcp rag engine"
-tags: ["gcp", "rag", "vertex ai"]
+tags: ["GCP", "rag", "vertex ai"]
 config: true
 comments: false
 sort_key: "2025-01-05"

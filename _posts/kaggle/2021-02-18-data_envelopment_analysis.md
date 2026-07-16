@@ -8,7 +8,7 @@ hide_from_post: true
 tag: ["optimization"]
 comments: false
 sort_key: "2021-02-18"
-update_dates: ["2021-02-18","2021-02-18"]
+update_dates: ["2021-02-18"]
 ---
 
 ## 概要

@@ -4,10 +4,10 @@ title: "google cloud professional cloud architect"
 date: 2021-03-30
 excerpt: "google cloud professional cloud architect認定"
 learning: true
-tag: ["cloud", "gcp", "certification"]
+tag: ["cloud", "GCP", "certification"]
 comments: false
 sort_key: "2021-03-31"
-update_dates: ["2021-03-31","2021-03-31"]
+update_dates: ["2021-03-31"]
 ---
 
  - 模擬試験を解いてみて

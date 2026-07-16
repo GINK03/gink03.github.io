@@ -3,7 +3,7 @@ layout: post
 title: "AWS Data Wrangler"
 date: 2026-02-15
 excerpt: "AWS Data Wrangler（awswrangler）の使用方法"
-tag: ["aws", "wrangler"]
+tag: ["AWS", "wrangler"]
 config: true
 comments: false
 sort_key: "2026-02-15"

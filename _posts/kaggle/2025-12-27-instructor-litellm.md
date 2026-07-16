@@ -4,7 +4,7 @@ title: "instructor litellm"
 date: 2025-12-27
 excerpt: "instructor litellmの使い方"
 kaggle: true
-tag: ["instructor", "openai", "nlp", "gemini", "llm"]
+tag: ["instructor", "openai", "NLP", "gemini", "LLM"]
 comments: false
 sort_key: "2025-12-27"
 update_dates: ["2025-12-27"]

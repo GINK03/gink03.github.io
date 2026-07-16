@@ -5,7 +5,7 @@ date: 2024-01-27
 excerpt: "python linguaの使い方"
 project: false
 config: true
-tag: ["python", "lingua", "lingua-py", "NLP", "自然言語処理"]
+tag: ["Python", "lingua", "lingua-py", "NLP", "自然言語処理"]
 comments: false
 sort_key: "2024-01-27"
 update_dates: ["2024-01-27"]

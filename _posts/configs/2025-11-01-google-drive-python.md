@@ -4,7 +4,7 @@ title: "Google Drive Python"
 date: 2025-11-01
 excerpt: "Google Drive API を Python で使う例"
 config: true
-tag: ["google", "python", "google drive", "api"]
+tag: ["google", "Python", "google drive", "API"]
 comments: false
 sort_key: "2025-11-01"
 update_dates: ["2025-11-01"]

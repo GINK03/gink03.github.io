@@ -5,7 +5,7 @@ date: "2021-10-31"
 excerpt: "docker-desktopの使い方"
 project: false
 config: true
-tag: ["docker", "windows", "macos", "osx", "docker-desktop"]
+tag: ["docker", "windows", "macOS", "osx", "docker-desktop"]
 comments: false
 sort_key: "2022-02-08"
 update_dates: ["2022-02-08","2021-10-31"]

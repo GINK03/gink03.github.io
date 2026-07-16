@@ -2,9 +2,10 @@
 layout: post
 title: "rounding error"
 date: 2020-05-16
-excerpt: ""
+excerpt: "浮動小数点の丸め誤差で競技プログラミングがWAになる場合の対処"
 tags: ["rounding error", "競プロ"]
 comments: false
+sort_key: "2020-05-16"
 ---
 
 気づかないとなんで `WA` したかわからない

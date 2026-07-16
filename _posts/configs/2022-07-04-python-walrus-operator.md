@@ -5,7 +5,7 @@ date: "2022-07-04"
 excerpt: "python walrus operator(assignment expressions)の使い方"
 project: false
 config: true
-tag: ["python", "assignment expressions", "walrus operator", "ウォルラス演算子"]
+tag: ["Python", "assignment expressions", "walrus operator", "ウォルラス演算子"]
 comments: false
 sort_key: "2022-07-04"
 update_dates: ["2022-07-04"]

@@ -4,7 +4,7 @@ title: "python annoy"
 date: 2023-05-09
 excerpt: "pythonのannoyの使い方"
 config: true
-tag: ["python", "annoy"]
+tag: ["Python", "annoy"]
 comments: false
 sort_key: "2023-05-09"
 update_dates: ["2023-05-09"]

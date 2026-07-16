@@ -4,7 +4,7 @@ title: "gemini tts"
 date: 2025-05-27
 excerpt: "gemini tts"
 kaggle: true
-tag: ["gemini", "gpt", "tts", "python"]
+tag: ["gemini", "GPT", "tts", "Python"]
 comments: false
 sort_key: "2025-05-27"
 update_dates: ["2025-05-27"]

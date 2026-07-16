@@ -17,8 +17,9 @@ update_dates: ["2022-01-18"]
    - 実際のカメラの内容をフィルタを掛け、仮想のカメラの内容として他のアプリに渡せる
      - e.g. Face Camera -> Snap Camera -> Zoomなど
 
-## インストール
- - [https://snapcamera.snapchat.com/download/](Download)
+## 提供状況
+ - Snap Cameraのスタンドアロン版は提供終了
+ - [Snapchat公式サポート](https://help.snapchat.com/hc/en-gb/articles/7012304217876-Snap-Camera?lang=en-US)ではChrome拡張またはSnapchat for Webを案内
 
 ## 使い方
  - 起動順序がある

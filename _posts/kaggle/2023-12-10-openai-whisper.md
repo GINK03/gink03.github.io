@@ -4,7 +4,7 @@ title: "openai whisper"
 date: 2023-12-10
 excerpt: "openaiでwhisperの使い方"
 kaggle: true
-tag: ["openai", "python", "whisper"]
+tag: ["openai", "Python", "whisper"]
 comments: false
 sort_key: "2023-12-10"
 update_dates: ["2023-12-10"]

@@ -3,11 +3,11 @@ layout: post
 title: "gcp cloud compute"
 date: 2021-06-19
 excerpt: "gcp cloud computeについて"
-tags: ["cloud compute", "gcp"]
+tags: ["cloud compute", "GCP"]
 config: true
 comments: false
 sort_key: "2021-06-19"
-update_dates: ["2021-06-19","2021-06-19"]
+update_dates: ["2021-06-19"]
 ---
 
 ## cloud computeについて

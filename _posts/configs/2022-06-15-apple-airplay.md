@@ -3,7 +3,7 @@ layout: post
 title: "Apple AirPlay"
 date: 2022-06-15
 excerpt: "Apple AirPlayについて"
-tags: ["apple", "ios", "osx", "support", "airplay"]
+tags: ["apple", "iOS", "osx", "support", "airplay"]
 config: true
 comments: false
 sort_key: "2022-06-15"

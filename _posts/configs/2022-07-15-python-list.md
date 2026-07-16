@@ -4,7 +4,7 @@ title: "python list"
 date: "2022-07-15"
 excerpt: "python listの使い方"
 config: true
-tag: ["python", "list"]
+tag: ["Python", "list"]
 comments: false
 sort_key: "2022-07-15"
 update_dates: ["2022-07-15"]

@@ -5,7 +5,7 @@ date: 2024-05-17
 excerpt: "python mysql connectorの使い方"
 project: false
 config: true
-tag: ["python", "mysql"]
+tag: ["Python", "mysql"]
 comments: false
 sort_key: "2024-05-17"
 update_dates: ["2024-05-17"]

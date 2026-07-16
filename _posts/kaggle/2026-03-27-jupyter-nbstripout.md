@@ -3,7 +3,7 @@ layout: post
 title: "Jupyter nbstripout"
 date: 2026-03-27
 excerpt: "Jupyterでnbstripoutを使用"
-tag: ["jupyter", "kaggle", "python"]
+tag: ["jupyter", "Kaggle", "Python"]
 comments: false
 sort_key: "2026-03-27"
 update_dates: ["2026-03-27"]

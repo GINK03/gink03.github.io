@@ -4,7 +4,7 @@ title: "Python nonlocal"
 date: "2022-07-24"
 excerpt: "Python nonlocalの使い方"
 config: true
-tag: ["python", "nonlocal"]
+tag: ["Python", "nonlocal"]
 comments: false
 sort_key: "2022-07-24"
 update_dates: ["2022-07-24"]

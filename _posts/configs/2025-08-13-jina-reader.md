@@ -4,7 +4,7 @@ title: "jina reader"
 date: "2025-08-13"
 excerpt: "jina readerの使い方"
 config: true
-tags: ["jina-reader", "jina", "reader", "python"]
+tags: ["jina-reader", "jina", "reader", "Python"]
 comments: false
 sort_key: "2025-08-13"
 update_dates: ["2025-08-13"]

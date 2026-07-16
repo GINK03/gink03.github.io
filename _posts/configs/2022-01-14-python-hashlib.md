@@ -5,7 +5,7 @@ date: "2022-01-14"
 excerpt: "pythonのhashlibの使い方"
 project: false
 config: true
-tag: ["python", "hashlib"]
+tag: ["Python", "hashlib"]
 comments: false
 sort_key: "2022-01-14"
 update_dates: ["2022-01-14"]

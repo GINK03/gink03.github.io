@@ -4,7 +4,7 @@ title: "gemini how it works"
 date: 2025-04-02
 excerpt: "gemini how it works"
 kaggle: true
-tag: ["gemini", "gpt", "LLM", "python"]
+tag: ["gemini", "GPT", "LLM", "Python"]
 comments: false
 sort_key: "2025-04-02"
 update_dates: ["2025-04-02"]

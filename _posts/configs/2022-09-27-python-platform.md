@@ -4,7 +4,7 @@ title: "python platform"
 date: "2022-09-27"
 excerpt: "python platformの使い方"
 config: true
-tag: ["platform", "python"]
+tag: ["platform", "Python"]
 comments: false
 sort_key: "2022-09-27"
 update_dates: ["2022-09-27"]

@@ -3,10 +3,10 @@ layout: post
 title: "bigquery permissions"
 date: 2023-08-20
 excerpt: "bigqueryの権限関連について"
-tags: ["bq", "bigquery", "gcp", "bigquery", "permissions"]
+tags: ["bq", "BigQuery", "GCP", "permissions"]
 kaggle: true
 comments: false
-sort_key: "2023-07-20"
+sort_key: "2023-08-20"
 update_dates: ["2023-07-20"]
 ---
 

@@ -5,7 +5,7 @@ date: 2023-08-21
 excerpt: "numpy polyfitの概要と使い方"
 project: false
 kaggle: true
-tag: ["numpy", "python", "polyfit"]
+tag: ["numpy", "Python", "polyfit"]
 comments: false
 sort_key: "2023-08-21"
 update_dates: ["2023-08-21"]

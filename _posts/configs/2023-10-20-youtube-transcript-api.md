@@ -4,7 +4,7 @@ title: "youtube-transcript-api"
 date: 2023-10-20
 excerpt: "youtube-transcript-apiの使い方と概要"
 config: true
-tag: ["youtube", "python", "api"]
+tag: ["YouTube", "Python", "API"]
 comments: false
 sort_key: "2023-10-20"
 update_dates: ["2023-10-20"]

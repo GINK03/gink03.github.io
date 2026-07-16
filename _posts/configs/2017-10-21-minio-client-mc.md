@@ -4,8 +4,8 @@ title: "minio client mc"
 date: 2017-10-21
 excerpt: "MinIOクライアント mc の使い方"
 tag: ["minio", "mc", "s3"]
-sort_key: "2018-01-19"
-update_dates: ["2022-05-30", "2018-01-19", "2026-05-02"]
+sort_key: "2026-05-02"
+update_dates: ["2026-05-02","2022-05-30","2018-01-19"]
 config: true
 comments: false
 ---

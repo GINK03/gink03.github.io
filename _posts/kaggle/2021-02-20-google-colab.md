@@ -7,7 +7,7 @@ tags: ["jupyter", "google colab", "colab"]
 kaggle: true
 comments: false
 sort_key: "2022-04-05"
-update_dates: ["2022-04-05","2022-04-05","2021-05-30","2021-05-30"]
+update_dates: ["2022-04-05","2021-05-30"]
 ---
 
 ## 概要

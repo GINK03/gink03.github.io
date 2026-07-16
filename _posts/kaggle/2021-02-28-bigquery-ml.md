@@ -5,7 +5,7 @@ date: 2021-02-28
 excerpt: "bigquery mlについて"
 kaggle: true
 hide_from_post: true
-tag: ["bigquery", "ml"]
+tag: ["BigQuery", "ml"]
 comments: false
 sort_key: "2021-02-28"
 update_dates: ["2021-02-28"]

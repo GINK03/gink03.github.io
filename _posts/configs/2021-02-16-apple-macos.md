@@ -3,11 +3,11 @@ layout: post
 title: "macOS"
 date: 2021-02-16
 excerpt: "macOSで設定しておくべき項目とインストールするべきソフトウェアとトラブルシューティング"
-tags: ["apple", "macos", "osx", "settings"]
+tags: ["apple", "macOS", "osx", "settings"]
 config: true
 comments: false
 sort_key: "2022-05-23"
-update_dates: ["2022-05-23","2022-05-02","2022-04-29","2022-04-28","2022-04-28"]
+update_dates: ["2022-05-23","2022-05-02","2022-04-29","2022-04-28"]
 ---
 
 ## 名称の変更

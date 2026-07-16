@@ -3,7 +3,7 @@ layout: post
 title: "nix home-manager"
 date: 2024-01-09
 excerpt: "nix home-managerの使い方"
-tags: ["nix", "nixpkgs", "macos", "linux", "nix", "package manager"]
+tags: ["nix", "nixpkgs", "macOS", "Linux", "package manager"]
 config: true
 comments: false
 sort_key: "2024-01-09"

@@ -4,7 +4,7 @@ title: "gemini python genai"
 date: 2025-03-15
 excerpt: "pythonでgenaiの使い方"
 kaggle: true
-tag: ["gemini", "gpt", "LLM", "python"]
+tag: ["gemini", "GPT", "LLM", "Python"]
 comments: false
 sort_key: "2025-03-15"
 update_dates: ["2025-03-15"]

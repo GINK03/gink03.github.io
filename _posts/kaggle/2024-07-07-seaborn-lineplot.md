@@ -3,7 +3,7 @@ layout: post
 title: "seaborn lineplot"
 date: 2024-07-07
 excerpt: "seaborn"
-tags: ["seaborn", "python", "matplotlib", "可視化"]
+tags: ["seaborn", "Python", "matplotlib", "可視化"]
 kaggle: true
 comments: false
 sort_key: "2024-07-07"

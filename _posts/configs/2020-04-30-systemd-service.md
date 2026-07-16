@@ -3,11 +3,11 @@ layout: post
 title: "systemd service"
 date: 2020-04-30
 excerpt: "systemd serviceの使い方"
-tags: ["linux", "systemd", "systemctl"]
+tags: ["Linux", "systemd", "systemctl"]
 config: true
 comments: false
 sort_key: "2021-12-23"
-update_dates: ["2021-12-23","2021-11-28","2021-09-16","2021-09-07","2021-09-07","2021-09-07","2021-07-09","2020-05-01","2020-04-30"]
+update_dates: ["2021-12-23","2021-11-28","2021-09-16","2021-09-07","2021-07-09","2020-05-01","2020-04-30"]
 ---
 
 ## 概要

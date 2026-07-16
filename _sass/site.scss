@@ -178,6 +178,15 @@ header .entry-meta {
 .entry-title a {
     text-decoration: none;
 }
+.related-posts {
+    margin-top: 3rem;
+    text-align: left;
+
+    time {
+        color: lighten($color_tuatara, 35%);
+        font-size: .8rem;
+    }
+}
 .entry-tags {
 	display: block;
     margin-top: 1rem;

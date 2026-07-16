@@ -4,7 +4,7 @@ title: "catboost uncertainty"
 date: 2022-09-05
 excerpt: "catboost uncertaintyの仕組みとチートシート"
 kaggle: true
-tag: ["python", "catboost", "uncertainty", "不確実性", "分散"]
+tag: ["Python", "catboost", "uncertainty", "不確実性", "分散"]
 comments: false
 sort_key: "2022-09-05"
 update_dates: ["2022-09-05"]

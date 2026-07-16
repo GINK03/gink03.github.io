@@ -4,7 +4,7 @@ title: "gemini python"
 date: 2024-07-13
 excerpt: "pythonでgeminiの使い方"
 kaggle: true
-tag: ["gemini", "gpt", "LLM", "python"]
+tag: ["gemini", "GPT", "LLM", "Python"]
 comments: false
 sort_key: "2024-07-13"
 update_dates: ["2024-07-13"]

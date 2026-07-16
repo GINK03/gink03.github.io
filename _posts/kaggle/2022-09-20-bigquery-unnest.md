@@ -3,7 +3,7 @@ layout: post
 title: "bigquery unnest"
 date: 2022-09-20
 excerpt: "bigquery unnestのチートシート"
-tags: ["bq", "bigquery", "gcp"]
+tags: ["bq", "BigQuery", "GCP"]
 kaggle: true
 comments: false
 sort_key: "2022-09-20"

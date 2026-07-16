@@ -5,7 +5,7 @@ date: 2026-03-27
 excerpt: "GitHub Copilotの使い方"
 project: false
 config: true
-tag: ["github", "copilot", "ai"]
+tag: ["github", "copilot", "AI"]
 comments: false
 sort_key: "2026-03-27"
 update_dates: ["2026-03-27"]

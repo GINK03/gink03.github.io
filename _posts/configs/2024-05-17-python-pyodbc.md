@@ -5,7 +5,7 @@ date: 2024-05-17
 excerpt: "python pyodbcの使い方"
 project: false
 config: true
-tag: ["python", "pyodbc", "sql server"]
+tag: ["Python", "pyodbc", "sql server"]
 comments: false
 sort_key: "2024-05-17"
 update_dates: ["2024-05-17"]

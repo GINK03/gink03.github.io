@@ -4,7 +4,7 @@ title: "pandas memory"
 date: 2022-10-18
 excerpt: "pandasのmemoryについて"
 kaggle: true
-tag: ["python", "pandas", "memory", "チートシート"]
+tag: ["Python", "pandas", "memory", "チートシート"]
 comments: false
 sort_key: "2022-10-18"
 update_dates: ["2022-10-18"]

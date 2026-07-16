@@ -3,7 +3,7 @@ layout: post
 title: "seaborn 箱ひげ図(boxplot)"
 date: 2023-02-06
 excerpt: "seabornの箱ひげ図(boxplot)"
-tags: ["seaborn", "python", "matplotlib", "可視化", "boxplot", "箱ひげ図"]
+tags: ["seaborn", "Python", "matplotlib", "可視化", "boxplot", "箱ひげ図"]
 kaggle: true
 comments: false
 sort_key: "2023-02-06"

@@ -3,7 +3,7 @@ layout: post
 title: "gcp vpc firewall"
 date: 2024-01-17
 excerpt: "gcp vpc firewallの概要"
-tags: ["gcp", "vpc firewall", "firewall"]
+tags: ["GCP", "vpc firewall", "firewall"]
 config: true
 comments: false
 sort_key: "2024-01-17"

@@ -3,7 +3,7 @@ layout: post
 title: "systemd-journald"
 date: 2024-10-26
 excerpt: "systemd-journaldの使い方"
-tags: ["linux", "systemd", "systemctl", "journalctl"]
+tags: ["Linux", "systemd", "systemctl", "journalctl"]
 config: true
 comments: false
 sort_key: "2024-10-26"

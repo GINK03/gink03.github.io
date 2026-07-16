@@ -4,7 +4,7 @@ title: "aws assume role"
 date: 2024-12-07
 excerpt: "aws assume roleの使い方"
 config: true
-tag: ["aws", "s3"]
+tag: ["AWS", "s3"]
 sort_key: "2024-12-07"
 update_dates: ["2024-12-07"]
 comments: false

@@ -3,7 +3,7 @@ layout: post
 title: "macOS storage"
 date: 2023-07-03
 excerpt: "macOSの(外付け)ストレージの管理"
-tags: ["apple", "macos", "osx", "settings"]
+tags: ["apple", "macOS", "osx", "settings"]
 config: true
 comments: false
 sort_key: "2023-07-03"

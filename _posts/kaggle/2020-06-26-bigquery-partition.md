@@ -3,9 +3,10 @@ layout: post
 title: "bigqueryのpartition"
 date: 2020-06-26
 excerpt: "BigQueryのpartitionについて"
-tags: ["bq", "bigquery", "gcp"]
+tags: ["bq", "BigQuery", "GCP"]
 kaggle: true
 comments: false
+sort_key: "2020-06-26"
 ---
 
 ## BigQueryのpatitionについて

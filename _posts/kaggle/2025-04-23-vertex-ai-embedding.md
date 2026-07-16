@@ -4,7 +4,7 @@ title: "gcp vertex ai embedding"
 date: 2025-04-23
 excerpt: "gcp vertex ai embeddingの使い方"
 kaggle: true
-tag: ["gcp", "vertex ai"]
+tag: ["GCP", "vertex ai"]
 sort_key: "2025-04-23"
 update_dates: ["2025-04-23"]
 comments: false

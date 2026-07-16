@@ -4,7 +4,7 @@ title: "pandas explode"
 date: 2023-03-13
 excerpt: "pandasのexplodeの使い方"
 kaggle: true
-tag: ["python", "pandas", "explode", "expand"]
+tag: ["Python", "pandas", "explode", "expand"]
 comments: false
 sort_key: "2023-03-13"
 update_dates: ["2023-03-13"]

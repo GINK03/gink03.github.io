@@ -3,7 +3,7 @@ layout: post
 title: "python abc"
 date: 2023-01-14
 excerpt: "pythonのabc(Abstract Base Classes)の使い方"
-tags: ["python", "python3", "abc", "abstract base classes"]
+tags: ["Python", "python3", "abc", "abstract base classes"]
 config: true
 comments: false
 sort_key: "2023-01-14"

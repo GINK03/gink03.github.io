@@ -3,7 +3,7 @@ layout: post
 title: "bigquery inline table"
 date: 2022-11-19
 excerpt: "bigqueryインラインテーブルの使い方"
-tags: ["bq", "bigquery", "gcp", "inline table"]
+tags: ["bq", "BigQuery", "GCP", "inline table"]
 kaggle: true
 comments: false
 sort_key: "2022-11-19"

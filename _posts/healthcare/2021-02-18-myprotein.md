@@ -7,7 +7,7 @@ tag: ["healthcare", "マイプロテイン"]
 healthcare: true
 comments: false
 sort_key: "2021-02-18"
-update_dates: ["2021-02-18","2021-02-18"]
+update_dates: ["2021-02-18"]
 ---
 
  - イギリスのマイプロテイン社が製造販売しているプロテインと各種健康食品  

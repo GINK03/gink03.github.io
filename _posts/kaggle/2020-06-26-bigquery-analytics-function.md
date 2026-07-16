@@ -3,7 +3,7 @@ layout: post
 title: "bigquery analytics function(分析関数)"
 date: 2020-06-26
 excerpt: "bigquery analytics function(分析関数)について"
-tags: ["bq", "bigquery", "gcp", "analytics function", "window function", "分析関数"]
+tags: ["bq", "BigQuery", "GCP", "analytics function", "window function", "分析関数"]
 kaggle: true
 comments: false
 sort_key: "2022-03-29"

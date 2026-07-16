@@ -4,7 +4,7 @@ title: "Claude Agent SDK"
 date: 2025-10-04
 excerpt: "Claude Agent SDK の使い方"
 config: true
-tag: ["claude code", "claude", "anthropic", "AI", "AIツール"]
+tag: ["claude code", "claude", "Anthropic", "AI", "AIツール"]
 comments: false
 sort_key: "2025-10-04"
 update_dates: ["2025-10-04"]

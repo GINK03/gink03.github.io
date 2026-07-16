@@ -5,7 +5,7 @@ date: 2023-04-05
 excerpt: "yahoo japan apiの使い方"
 project: false
 config: true
-tag: ["api"]
+tag: ["API"]
 comments: false
 sort_key: "2023-04-05"
 update_dates: ["2023-04-05"]

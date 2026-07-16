@@ -5,10 +5,10 @@ date: 2020-10-25
 excerpt: "fire"
 project: false
 config: true
-tag: ["python3", "cli", "args"]
+tag: ["python3", "CLI", "args"]
 comments: false
 sort_key: "2021-08-05"
-update_dates: ["2021-08-05","2021-08-04","2020-10-25","2020-10-25"]
+update_dates: ["2021-08-05","2021-08-04","2020-10-25"]
 ---
 
 ## 概要

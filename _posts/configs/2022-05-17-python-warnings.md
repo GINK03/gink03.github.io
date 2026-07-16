@@ -5,7 +5,7 @@ date: "2022-05-17"
 excerpt: "pythonでのwarningsの扱い方"
 project: false
 config: true
-tag: ["python", "warnings"]
+tag: ["Python", "warnings"]
 comments: false
 sort_key: "2022-05-17"
 update_dates: ["2022-05-17"]

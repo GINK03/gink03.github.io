@@ -4,7 +4,7 @@ title: "Google Sheets Data Validation"
 date: 2023-08-29
 excerpt: "Google Sheets Data Validation(データの入力規則)の使い方"
 config: true
-tag: ["google sheets", "gss", "spreadsheets", "google spreadsheets", "data validation", "データの入力規則"]
+tag: ["Google Sheets", "gss", "spreadsheets", "google spreadsheets", "data validation", "データの入力規則"]
 comments: false
 sort_key: "2023-08-29"
 update_dates: ["2023-08-29"]

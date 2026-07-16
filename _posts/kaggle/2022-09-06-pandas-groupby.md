@@ -4,7 +4,7 @@ title: "pandas groupby"
 date: 2022-09-06
 excerpt: "pandas groupbyのチートシート"
 kaggle: true
-tag: ["python", "pandas", "groupby", "チートシート"]
+tag: ["Python", "pandas", "groupby", "チートシート"]
 sort_key: "2022-09-06"
 update_dates: ["2022-09-06"]
 comments: false

@@ -4,7 +4,7 @@ title: "linux virtual console(仮想コンソール)"
 date: 2023-12-24
 excerpt: "linuxのvirtual console(仮想コンソール)について"
 config: true
-tag: ["linux", "virtual console", "仮想コンソール"]
+tag: ["Linux", "virtual console", "仮想コンソール"]
 comments: false
 sort_key: "2023-12-24"
 update_dates: ["2023-12-24"]

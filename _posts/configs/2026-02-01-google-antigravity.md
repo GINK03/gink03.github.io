@@ -4,10 +4,10 @@ title: "Google Antigravity"
 date: 2026-02-01
 excerpt: "GoogleがリリースしたAIエージェント型IDE「Antigravity」について"
 config: true
-tag: ["google", "ai", "ide", "agent", "gemini", "cli", "agy"]
+tag: ["google", "AI", "ide", "agent", "gemini", "CLI", "agy"]
 comments: false
-sort_key: "2026-02-01"
-update_dates: ["2026-02-01", "2026-06-26"]
+sort_key: "2026-06-26"
+update_dates: ["2026-06-26","2026-02-01"]
 ---
 
 ## 概要

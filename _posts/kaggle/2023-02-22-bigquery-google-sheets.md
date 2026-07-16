@@ -3,7 +3,7 @@ layout: post
 title: "bigqueryでgoogle sheetsのデータを参照"
 date: 2023-02-22
 excerpt: "bigqueryでgoogle sheetsのデータを参照する方法"
-tags: ["bq", "bigquery", "gcp", "google sheets"]
+tags: ["bq", "BigQuery", "GCP", "Google Sheets"]
 kaggle: true
 comments: false
 sort_key: "2023-02-22"

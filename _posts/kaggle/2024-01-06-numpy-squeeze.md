@@ -5,7 +5,7 @@ date: 2024-01-06
 excerpt: "numpy squeezeの使い方"
 project: false
 kaggle: true
-tag: ["numpy", "python"]
+tag: ["numpy", "Python"]
 comments: false
 sort_key: "2024-01-06"
 update_dates: ["2024-01-06"]

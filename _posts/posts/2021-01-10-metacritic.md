@@ -5,6 +5,7 @@ date: 2021-01-10
 excerpt: "metacriticの妥当性の検討を行った論文のサーベイ"
 tags: ["metacritic", "サーベイランス", "statistics"]
 comments: false
+sort_key: "2021-01-10"
 ---
 
 ## メタスコア

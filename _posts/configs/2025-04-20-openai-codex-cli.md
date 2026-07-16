@@ -4,10 +4,10 @@ title: "openai codex cli"
 date: 2025-04-20
 excerpt: "openai codex cliの使い方"
 config: true
-tag: ["openai", "codex", "cli"]
+tag: ["openai", "codex", "CLI"]
 comments: false
-sort_key: "2025-04-20"
-update_dates: ["2025-04-20", "2026-07-16"]
+sort_key: "2026-07-16"
+update_dates: ["2026-07-16","2025-04-20"]
 ---
 
 ## 概要

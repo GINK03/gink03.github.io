@@ -4,7 +4,7 @@ title: "python ruamel.yaml"
 date: 2025-08-17
 excerpt: "python ruamel.yamlの使い方"
 config: true
-tag: ["python", "ruamel.yaml"]
+tag: ["Python", "ruamel.yaml"]
 comments: false
 sort_key: "2025-08-17"
 update_dates: ["2025-08-17"]

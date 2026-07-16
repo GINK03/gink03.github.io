@@ -3,7 +3,7 @@ layout: post
 title: "seaborn subplots"
 date: 2024-01-13
 excerpt: "seaborn subplots"
-tags: ["seaborn", "python", "matplotlib", "可視化"]
+tags: ["seaborn", "Python", "matplotlib", "可視化"]
 kaggle: true
 comments: false
 sort_key: "2024-01-13"

@@ -4,7 +4,7 @@ title: "gcp cloud memorystore"
 date: "2022-08-11"
 excerpt: "gcp cloud memorystoreの使い方"
 config: true
-tag: ["gcp", "gcloud", "redis", "memcached"]
+tag: ["GCP", "gcloud", "redis", "memcached"]
 comments: false
 sort_key: "2022-08-11"
 update_dates: ["2022-08-11"]

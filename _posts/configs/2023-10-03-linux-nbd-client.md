@@ -4,7 +4,7 @@ title: "linux nbd-client"
 date: 2023-10-03
 excerpt: "linuxのnbd-clientについて"
 config: true
-tag: ["network block device", "nbd", "nbd-client", "linux"]
+tag: ["network block device", "nbd", "nbd-client", "Linux"]
 comments: false
 sort_key: "2023-10-03"
 update_dates: ["2023-10-03"]

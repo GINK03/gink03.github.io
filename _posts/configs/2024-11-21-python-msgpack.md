@@ -4,7 +4,7 @@ title: "python msgpack"
 date: 2024-11-21
 excerpt: "pythonでmsgpackを使う"
 config: true
-tag: ["python", "msgpack"]
+tag: ["Python", "msgpack"]
 comments: false
 sort_key: "2024-11-21"
 update_dates: ["2024-11-21"]

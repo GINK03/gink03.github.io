@@ -5,7 +5,7 @@ date: 2024-08-22
 excerpt: "aws redshift serverlessの概要と使い方"
 project: false
 config: true
-tag: ["aws", "aws redshift serverless", "redshift serverless"]
+tag: ["AWS", "aws redshift serverless", "redshift serverless"]
 comments: false
 sort_key: "2024-08-22"
 update_dates: ["2024-08-22"]

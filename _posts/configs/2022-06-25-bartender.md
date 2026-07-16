@@ -3,7 +3,7 @@ layout: post
 title: "bartender"
 date: 2022-06-25
 excerpt: "bartenderの使い方"
-tags: ["bartender", "macos", "shareware"]
+tags: ["bartender", "macOS", "shareware"]
 config: true
 comments: false
 sort_key: "2022-06-25"

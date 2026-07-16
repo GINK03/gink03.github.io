@@ -5,7 +5,7 @@ date: "2022-05-12"
 excerpt: "pydanticの使い方"
 project: false
 config: true
-tag: ["python", "pydantic", "type safe"]
+tag: ["Python", "pydantic", "type safe"]
 comments: false
 sort_key: "2022-05-12"
 update_dates: ["2022-05-12"]

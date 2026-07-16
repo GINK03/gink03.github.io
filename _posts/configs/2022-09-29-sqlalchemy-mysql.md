@@ -4,7 +4,7 @@ title: "sqlalchemy+mysql"
 date: "2022-09-29"
 excerpt: "sqlalchemy+mysqlの使い方"
 config: true
-tag: ["sqlalchemy", "orm", "python", "mysql"]
+tag: ["sqlalchemy", "orm", "Python", "mysql"]
 comments: false
 sort_key: "2022-09-29"
 update_dates: ["2022-09-29"]

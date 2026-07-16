@@ -5,10 +5,10 @@ date: 2022-04-07
 excerpt: "GCP Application Default Credentials ADC の使い方メモ"
 project: false
 config: true
-tag: ["gcp", "google auth", "ADC"]
+tag: ["GCP", "google auth", "ADC"]
 comments: false
 sort_key: "2022-04-11"
-update_dates: ["2022-04-07", "2022-04-11"]
+update_dates: ["2022-04-11","2022-04-07"]
 ---
 
 ## 概要

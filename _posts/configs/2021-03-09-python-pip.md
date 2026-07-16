@@ -3,7 +3,7 @@ layout: post
 title: "pip"
 date: 2021-03-09
 excerpt: "pythonのpipついて"
-tags: ["pip", "python"]
+tags: ["pip", "Python"]
 config: true
 comments: false
 sort_key: "2022-04-15"

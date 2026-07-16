@@ -4,7 +4,7 @@ title: "linux ifupdown"
 date: 2023-08-15
 excerpt: "linuxのifupdownについて"
 config: true
-tag: ["linux", "ifupdown", "networking.service"]
+tag: ["Linux", "ifupdown", "networking.service"]
 comments: false
 sort_key: "2023-08-15"
 update_dates: ["2023-08-15"]

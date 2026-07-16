@@ -4,7 +4,7 @@ title: "pandas qcut"
 date: 2024-08-01
 excerpt: "pandasのqcutの使い方"
 kaggle: true
-tag: ["python", "pandas", "qcut", "チートシート"]
+tag: ["Python", "pandas", "qcut", "チートシート"]
 comments: false
 sort_key: "2024-08-01"
 update_dates: ["2024-08-01"]

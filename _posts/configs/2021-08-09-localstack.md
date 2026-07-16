@@ -4,7 +4,7 @@ title: "localstack"
 date: 2021-08-09
 excerpt: "localstackの使い方"
 config: true
-tag: ["aws", "localstack"]
+tag: ["AWS", "localstack"]
 comments: false
 sort_key: "2021-08-11"
 update_dates: ["2021-08-11","2021-08-10"]

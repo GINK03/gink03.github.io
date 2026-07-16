@@ -3,7 +3,7 @@ layout: post
 title: "ubuntu repositories"
 date: 2023-06-03
 excerpt: "ubuntuのレポジトリについて"
-tags: ["ubuntu", "linux", "repositories"]
+tags: ["ubuntu", "Linux", "repositories"]
 config: true
 comments: false
 sort_key: "2023-06-03"

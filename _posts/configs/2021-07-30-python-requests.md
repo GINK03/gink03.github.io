@@ -5,7 +5,7 @@ date: 2021-07-30
 excerpt: "requestsの使い方"
 project: false
 config: true
-tag: ["python", "requests"]
+tag: ["Python", "requests"]
 comments: false
 sort_key: "2022-05-19"
 update_dates: ["2022-05-19","2021-10-19","2021-08-02","2021-07-30"]

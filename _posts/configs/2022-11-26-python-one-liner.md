@@ -4,7 +4,7 @@ title: "python one-liner"
 date: "2022-11-26"
 excerpt: "python one-linerの使い方"
 config: true
-tag: ["python", "one-liner"]
+tag: ["Python", "one-liner"]
 comments: false
 sort_key: "2022-11-26"
 update_dates: ["2022-11-26"]

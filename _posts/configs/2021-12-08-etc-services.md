@@ -5,7 +5,7 @@ date: "2021-12-08"
 excerpt: "/etc/servicesについて"
 project: false
 config: true
-tag: ["linux", "/etc/services", "netstat"]
+tag: ["Linux", "/etc/services", "netstat"]
 comments: false
 sort_key: "2021-12-08"
 update_dates: ["2021-12-08"]

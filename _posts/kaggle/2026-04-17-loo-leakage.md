@@ -5,7 +5,7 @@ date: 2026-04-17
 excerpt: "LOO CV・LOO Target Encodingで発生するデータリークの構造と対策"
 project: false
 kaggle: true
-tag: ["python", "kaggle", "leakage", "cross validation", "target encoding"]
+tag: ["Python", "Kaggle", "leakage", "cross validation", "target encoding"]
 comments: false
 sort_key: "2026-04-17"
 update_dates: ["2026-04-17"]

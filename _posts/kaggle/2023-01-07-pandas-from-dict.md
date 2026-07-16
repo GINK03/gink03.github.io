@@ -4,7 +4,7 @@ title: "pandas from_dict"
 date: 2023-01-07
 excerpt: "pandasのdictからdataframeの変換について"
 kaggle: true
-tag: ["python", "pandas", "dict", "orient", "チートシート"]
+tag: ["Python", "pandas", "dict", "orient", "チートシート"]
 comments: false
 sort_key: "2023-01-07"
 update_dates: ["2023-01-07"]

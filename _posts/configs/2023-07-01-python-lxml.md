@@ -5,7 +5,7 @@ date: 2023-07-01
 excerpt: "Pythonのlxmlの使い方"
 project: false
 config: true
-tag: ["python", "xml", "lxml"]
+tag: ["Python", "xml", "lxml"]
 comments: false
 sort_key: "2023-07-01"
 update_dates: ["2023-07-01"]

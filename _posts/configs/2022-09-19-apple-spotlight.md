@@ -3,7 +3,7 @@ layout: post
 title: "apple spotlight"
 date: 2022-09-19
 excerpt: "apple spotlight(スポットライト検索)の使い方"
-tags: ["apple", "spotlight", "スポットライト", "ios", "macOS"]
+tags: ["apple", "spotlight", "スポットライト", "iOS", "macOS"]
 config: true
 comments: false
 sort_key: "2022-09-19"

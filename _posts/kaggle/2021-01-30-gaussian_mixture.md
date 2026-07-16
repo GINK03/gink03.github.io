@@ -5,7 +5,7 @@ date: 2021-01-30
 excerpt: "gaussian mixtureモデルの特性とその使い方"
 kaggle: true
 hide_from_post: true
-tag: ["feature", "gaussian mixture", "python"]
+tag: ["feature", "gaussian mixture", "Python"]
 comments: false
 sort_key: "2021-02-01"
 update_dates: ["2021-02-01"]

@@ -4,7 +4,7 @@ title: "standard scale(標準化, スタンダライゼーション)"
 date: 2022-09-16
 excerpt: "standard scale(標準化, スタンダライゼーション)の計算"
 kaggle: true
-tag: ["python", "標準化", "standard scale"]
+tag: ["Python", "標準化", "standard scale"]
 sort_key: "2022-09-17"
 update_dates: ["2022-09-17"]
 comments: false

@@ -4,7 +4,7 @@ title: "playwright mcp"
 date: 2025-07-15
 excerpt: "playwright mcpの使い方"
 config: true
-tag: ["playwright", "mcp", "python", "screenshot", "html-to-png", "asyncio", "sync"]
+tag: ["playwright", "mcp", "Python", "screenshot", "html-to-png", "asyncio", "sync"]
 comments: false
 sort_key: "2025-07-15"
 update_dates: ["2025-07-15"]

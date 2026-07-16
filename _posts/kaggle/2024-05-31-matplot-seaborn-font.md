@@ -3,7 +3,7 @@ layout: post
 title: "matplotlib/seaborn font"
 date: 2024-05-31
 excerpt: "matplotlib/seaborn のフォント設定メモ"
-tag: ["seaborn", "python", "matplotlib", "可視化"]
+tag: ["seaborn", "Python", "matplotlib", "可視化"]
 kaggle: true
 comments: false
 sort_key: "2024-05-31"

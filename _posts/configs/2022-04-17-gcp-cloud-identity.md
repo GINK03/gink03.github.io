@@ -5,7 +5,7 @@ date: 2022-04-17
 excerpt: "gcp cloud identityの使い方"
 project: false
 config: true
-tag: ["gcp", "cloud identity"]
+tag: ["GCP", "cloud identity"]
 comments: false
 sort_key: "2022-04-17"
 update_dates: ["2022-04-17"]

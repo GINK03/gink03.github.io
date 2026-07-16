@@ -5,7 +5,7 @@ date: 2021-03-22
 excerpt: "kubeflow pipelinesについて"
 kaggle: true
 hide_from_post: true
-tag: ["deep-learning", "piplines", "gcp"]
+tag: ["deep-learning", "piplines", "GCP"]
 comments: false
 sort_key: "2021-03-22"
 update_dates: ["2021-03-22"]

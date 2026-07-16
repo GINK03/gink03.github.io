@@ -5,10 +5,10 @@ date: 2020-12-31
 excerpt: "aws cognitoの使い方"
 project: false
 config: true
-tag: ["aws", "cognito"]
+tag: ["AWS", "cognito"]
 comments: false
 sort_key: "2021-01-27"
-update_dates: ["2021-01-27","2021-01-01","2021-01-01"]
+update_dates: ["2021-01-27","2021-01-01"]
 ---
 
 ## 概要

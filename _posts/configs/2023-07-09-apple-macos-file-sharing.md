@@ -3,7 +3,7 @@ layout: post
 title: "macOS file sharing"
 date: 2023-07-09
 excerpt: "macOSのfile sharing(共有ファイル・フォルダ)の設定"
-tags: ["apple", "macos", "osx", "settings", "samba"]
+tags: ["apple", "macOS", "osx", "settings", "samba"]
 config: true
 comments: false
 sort_key: "2023-07-09"

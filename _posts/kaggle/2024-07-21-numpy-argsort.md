@@ -5,7 +5,7 @@ date: 2024-07-21
 excerpt: "numpy argsort"
 project: false
 kaggle: true
-tag: ["numpy", "python"]
+tag: ["numpy", "Python"]
 comments: false
 sort_key: "2024-07-21"
 update_dates: ["2024-07-21"]

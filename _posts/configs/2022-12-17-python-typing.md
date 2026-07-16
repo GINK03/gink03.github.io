@@ -3,7 +3,7 @@ layout: post
 title: "python typing"
 date: 2022-12-17
 excerpt: "pythonのtyping"
-tags: ["python", "python3", "typing"]
+tags: ["Python", "python3", "typing"]
 config: true
 comments: false
 sort_key: "2022-12-17"

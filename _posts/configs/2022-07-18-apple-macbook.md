@@ -3,7 +3,7 @@ layout: post
 title: "Apple MacBook"
 date: 2022-07-18
 excerpt: "Apple MacBookについて"
-tag: ["apple", "macos", "osx"]
+tag: ["apple", "macOS", "osx"]
 config: true
 comments: false
 sort_key: "2022-07-18"

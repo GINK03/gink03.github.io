@@ -6,6 +6,7 @@ excerpt: "novel recommend"
 project: true
 tag: ["novel", "recommend"]
 comments: false
+sort_key: "2020-10-28"
 ---
 
 ## Tweetの #名刺代わりの小説10選 から機械学習を使わずレコメンド

@@ -3,7 +3,7 @@ layout: post
 title: "bigquery json"
 date: 2023-08-26
 excerpt: "bigqueryのjsonのパースとエンコード"
-tags: ["bq", "bigquery", "gcp", "bigquery", "json"]
+tags: ["bq", "BigQuery", "GCP", "json"]
 kaggle: true
 comments: false
 sort_key: "2023-08-26"

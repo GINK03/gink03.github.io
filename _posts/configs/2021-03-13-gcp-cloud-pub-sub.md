@@ -3,7 +3,7 @@ layout: post
 title: "gcp cloud pub/sub"
 date: 2021-03-13
 excerpt: "gcp cloud pub/subについて"
-tags: ["cloud pub/sub", "gcp"]
+tags: ["cloud pub/sub", "GCP"]
 config: true
 comments: false
 sort_key: "2021-06-19"

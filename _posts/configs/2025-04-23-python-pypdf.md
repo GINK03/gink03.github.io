@@ -4,7 +4,7 @@ title: "python pypdf"
 date: 2025-04-23
 excerpt: "python pypdfの使い方"
 config: true
-tag: ["python", "pypdf"]
+tag: ["Python", "pypdf"]
 comments: false
 sort_key: "2025-04-23"
 update_dates: ["2025-04-23"]

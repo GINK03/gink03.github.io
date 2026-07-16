@@ -4,7 +4,7 @@ title: "openai organizations"
 date: 2023-07-09
 excerpt: "openai organizationsの概念"
 kaggle: true
-tag: ["openai", "chatgpt"]
+tag: ["openai", "ChatGPT"]
 comments: false
 sort_key: "2023-07-09"
 update_dates: ["2023-07-09"]

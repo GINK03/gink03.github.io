@@ -3,7 +3,7 @@ layout: post
 title: "jupyter display videos"
 date: 2025-06-17
 excerpt: "jupyter display videos"
-tag: ["jupyter", "kaggle", "python"]
+tag: ["jupyter", "Kaggle", "Python"]
 comments: false
 sort_key: "2025-06-17"
 update_dates: ["2025-06-17"]

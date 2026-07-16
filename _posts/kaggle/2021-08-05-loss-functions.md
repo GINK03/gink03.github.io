@@ -5,7 +5,7 @@ date: 2021-08-05
 excerpt: "損失関数各種"
 kaggle: true
 hide_from_post: true
-tag: ["sklearn", "python", "loss function", "損失関数"]
+tag: ["sklearn", "Python", "loss function", "損失関数"]
 comments: false
 sort_key: "2021-08-06"
 update_dates: ["2021-08-06"]

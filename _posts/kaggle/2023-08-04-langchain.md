@@ -4,7 +4,7 @@ title: "langchain"
 date: 2023-08-04
 excerpt: "langchainの概要と使い方"
 kaggle: true
-tag: ["langchain", "LLM", "python"]
+tag: ["langchain", "LLM", "Python"]
 comments: false
 sort_key: "2023-08-04"
 update_dates: ["2023-08-04"]

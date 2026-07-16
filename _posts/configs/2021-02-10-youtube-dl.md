@@ -3,7 +3,7 @@ layout: post
 title: "youtube-dl"
 date: 2021-02-10
 excerpt: "youtube-dlの使い方"
-tags: ["youtube", "python", "youtube-dl", "yt-dlp"]
+tags: ["YouTube", "Python", "youtube-dl", "yt-dlp"]
 config: true
 comments: false
 sort_key: "2022-05-12"

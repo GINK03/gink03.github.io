@@ -4,7 +4,7 @@ title: "pandas cut"
 date: 2023-02-13
 excerpt: "pandasのcutの使い方"
 kaggle: true
-tag: ["python", "pandas", "cut", "チートシート"]
+tag: ["Python", "pandas", "cut", "チートシート"]
 comments: false
 sort_key: "2023-02-13"
 update_dates: ["2023-02-13"]

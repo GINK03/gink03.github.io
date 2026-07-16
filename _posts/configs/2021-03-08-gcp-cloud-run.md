@@ -3,11 +3,11 @@ layout: post
 title: "cloud run"
 date: 2021-03-08
 excerpt: "cloud runついて"
-tags: ["gcp", "cloud run"]
+tags: ["GCP", "cloud run"]
 config: true
 comments: false
 sort_key: "2022-04-22"
-update_dates: ["2022-04-22","2022-04-22","2022-04-22"]
+update_dates: ["2022-04-22"]
 ---
 
 ## 概要

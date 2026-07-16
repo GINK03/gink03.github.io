@@ -3,7 +3,7 @@ layout: post
 title: "gcp cloud scheduler"
 date: 2023-12-30
 excerpt: "gcp cloud schedulerの概要"
-tags: ["gcp", "cloud scheduler"]
+tags: ["GCP", "cloud scheduler"]
 config: true
 comments: false
 sort_key: "2023-12-30"

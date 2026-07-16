@@ -4,7 +4,7 @@ title: "linux cfdsik"
 date: 2023-05-16
 excerpt: "linuxのcfdiskについて"
 config: true
-tag: ["linux", "cfdisk"]
+tag: ["Linux", "cfdisk"]
 comments: false
 sort_key: "2023-05-16"
 update_dates: ["2023-05-16"]

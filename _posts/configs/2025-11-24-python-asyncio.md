@@ -3,7 +3,7 @@ layout: post
 title: "python asyncio"
 date: 2025-11-24
 excerpt: "asyncioの基本とTaskGroupやSemaphoreまで"
-tag: ["python", "asyncio"]
+tag: ["Python", "asyncio"]
 config: true
 comments: false
 sort_key: "2025-11-24"

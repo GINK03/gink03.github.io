@@ -39,6 +39,25 @@ jekyll-mentions:
     base_url: https://github.com
 
 # Exclude list
-exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]
+exclude:
+  - .bundle
+  - .github
+  - .pre-commit-config.yaml
+  - AGENTS.md
+  - CLAUDE.md
+  - CNAME
+  - docs
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.js
+  - LICENSE
+  - node_modules
+  - package.json
+  - Rakefile
+  - README.md
+  - scripts
+  - src
+  - vendor
+  - _site
 
 theme: jekyll-theme-cayman

@@ -6,7 +6,7 @@ excerpt: "huber lossについて"
 tags: ["python3", "sklearn", "huber loss", "huber regression"]
 kaggle: true
 comments: false
-sort_key: "2023-01-12"
+sort_key: "2023-01-19"
 update_dates: ["2023-01-12"]
 ---
 

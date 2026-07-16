@@ -4,7 +4,7 @@ title: "openai gpt-image-1"
 date: 2025-11-02
 excerpt: "openai gpt-image-1の使い方"
 kaggle: true
-tag: ["openai", "gpt", "LLM", "python"]
+tag: ["openai", "GPT", "LLM", "Python"]
 comments: false
 sort_key: "2025-11-02"
 update_dates: ["2025-11-02"]

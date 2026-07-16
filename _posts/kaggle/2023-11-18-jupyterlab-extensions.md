@@ -3,7 +3,7 @@ layout: post
 title: "jupyterlab extensions"
 date: 2023-11-18
 excerpt: "jupyterlab extensions"
-tag: ["jupyter", "kaggle", "python"]
+tag: ["jupyter", "Kaggle", "Python"]
 comments: false
 sort_key: "2023-11-18"
 update_dates: ["2023-11-18"]

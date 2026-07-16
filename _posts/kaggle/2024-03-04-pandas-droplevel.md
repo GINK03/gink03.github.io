@@ -4,7 +4,7 @@ title: "pandas droplevel"
 date: 2024-03-04
 excerpt: "pandasのdroplevelの使い方"
 kaggle: true
-tag: ["python", "pandas", "droplevel"]
+tag: ["Python", "pandas", "droplevel"]
 comments: false
 sort_key: "2024-03-04"
 update_dates: ["2024-03-04"]

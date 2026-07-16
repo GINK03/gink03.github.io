@@ -4,7 +4,7 @@ title: "linux sudo"
 date: 2023-12-16
 excerpt: "linuxのsudoについて"
 config: true
-tag: ["linux", "sudo"]
+tag: ["Linux", "sudo"]
 comments: false
 sort_key: "2023-12-16"
 update_dates: ["2023-12-16"]

@@ -8,7 +8,7 @@ config: true
 tag: ["elasticsearch"]
 comments: false
 sort_key: "2021-02-17"
-update_dates: ["2021-02-17","2021-02-05","2021-02-03","2021-02-03"]
+update_dates: ["2021-02-17","2021-02-05","2021-02-03"]
 ---
 
 ## インストールと開始

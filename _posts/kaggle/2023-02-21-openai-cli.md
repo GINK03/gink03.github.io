@@ -4,7 +4,7 @@ title: "openai cli"
 date: 2023-02-21
 excerpt: "openaiのcliの使い方"
 kaggle: true
-tag: ["openai", "gpt"]
+tag: ["openai", "GPT"]
 comments: false
 sort_key: "2023-02-21"
 update_dates: ["2023-02-21"]

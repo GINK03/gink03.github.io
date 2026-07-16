@@ -5,7 +5,7 @@ date: 2024-06-09
 excerpt: "python pytestの使い方"
 project: false
 config: true
-tag: ["python", "pytest"]
+tag: ["Python", "pytest"]
 comments: false
 sort_key: "2024-06-09"
 update_dates: ["2024-06-09"]

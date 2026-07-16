@@ -3,7 +3,7 @@ layout: post
 title: "bigquery load"
 date: 2020-09-03
 excerpt: "bigquery load(bqへのデータのアップロード)のチートシート"
-tags: ["bq", "bigquery", "gcp", "load"]
+tags: ["bq", "BigQuery", "GCP", "load"]
 kaggle: true
 comments: false
 sort_key: "2022-09-03"

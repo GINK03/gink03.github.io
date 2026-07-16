@@ -3,7 +3,7 @@ layout: post
 title: "apple parental control" 
 date: 2024-01-04
 excerpt: "parental controlの設定方法"
-tags: ["apple", "ios", "parental control"]
+tags: ["apple", "iOS", "parental control"]
 config: true
 comments: false
 sort_key: "2024-01-04"

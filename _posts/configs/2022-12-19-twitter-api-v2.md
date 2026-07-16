@@ -3,7 +3,7 @@ layout: post
 title: "twitter API v2"
 date: 2022-12-19
 excerpt: "twitter API v2の概要と使い方"
-tags: ["api", "twitter api"]
+tags: ["API", "twitter api"]
 config: true
 comments: false
 sort_key: "2022-12-19"

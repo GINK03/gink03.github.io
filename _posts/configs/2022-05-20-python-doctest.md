@@ -5,7 +5,7 @@ date: "2022-05-20"
 excerpt: "python doctestの使い方"
 project: false
 config: true
-tag: ["python", "doctest"]
+tag: ["Python", "doctest"]
 comments: false
 sort_key: "2022-05-20"
 update_dates: ["2022-05-20"]

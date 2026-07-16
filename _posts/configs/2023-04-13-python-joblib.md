@@ -4,7 +4,7 @@ title: "python joblib"
 date: 2023-04-13
 excerpt: "pythonのjoblibの使い方"
 config: true
-tag: ["python", "joblib"]
+tag: ["Python", "joblib"]
 comments: false
 sort_key: "2023-04-14"
 update_dates: ["2023-04-14"]

@@ -4,7 +4,7 @@ title: "pytorch basic"
 date: 2021-01-05
 excerpt: "pytorchの基本的な使い方"
 project: false
-tag: ["python", "pytorch"]
+tag: ["Python", "pytorch"]
 comments: false
 sort_key: "2022-03-22"
 update_dates: ["2022-03-22"]

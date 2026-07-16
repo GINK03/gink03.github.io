@@ -3,7 +3,7 @@ layout: post
 title: "nix install"
 date: 2024-05-24
 excerpt: "nixコマンドのインストールについて"
-tags: ["nix", "nixpkgs", "macos", "linux", "nix", "package manager"]
+tags: ["nix", "nixpkgs", "macOS", "Linux", "package manager"]
 config: true
 comments: false
 sort_key: "2024-05-24"

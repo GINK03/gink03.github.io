@@ -4,7 +4,7 @@ title: "pytorch train"
 date: 2021-01-05
 excerpt: "pytorchのtrain, validationの使い方"
 project: false
-tag: ["python", "pytorch", "train", "validation"]
+tag: ["Python", "pytorch", "train", "validation"]
 comments: false
 sort_key: "2022-03-22"
 update_dates: ["2022-03-22"]

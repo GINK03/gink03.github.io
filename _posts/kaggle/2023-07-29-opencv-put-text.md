@@ -4,7 +4,7 @@ title: "opencvのテキスト書き込み"
 date: 2023-07-29
 excerpt: "opencvのテキストの書き込み方法"
 kaggle: true
-tag: ["opencv", "PIL", "cv2", "python"]
+tag: ["opencv", "PIL", "cv2", "Python"]
 comments: false
 sort_key: "2023-07-29"
 update_dates: ["2023-07-29"]

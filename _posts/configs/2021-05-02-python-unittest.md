@@ -3,7 +3,7 @@ layout: post
 title: "pythonのunittest"
 date: 2021-05-02
 excerpt: "pythonのunittestについて"
-tags: ["unittest", "python"]
+tags: ["unittest", "Python"]
 config: true
 comments: false
 sort_key: "2022-05-20"

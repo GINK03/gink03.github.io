@@ -1,0 +1,11 @@
+{% assign posts = site.posts | sort: 'sort_key' | reverse %}
+<div class="post-list">
+  <ul>
+    {% for post in posts %}
+      {% assign matches_filter = post[include.filter_key] %}
+      {% assign excluded = false %}
+      {% if include.exclude_key and post[include.exclude_key] %}{% assign excluded = true %}{% endif %}
+      {% if matches_filter and excluded == false %}{% include post-summary.html post=post %}{% endif %}
+    {% endfor %}
+  </ul>
+</div>

@@ -3,7 +3,7 @@ layout: post
 title: "python markdownify"
 date: 2024-08-09
 excerpt: "python markdownifyの使い方"
-tags: ["python", "markdown", "markdownify"]
+tags: ["Python", "markdown", "markdownify"]
 config: true
 comments: false
 sort_key: "2024-08-09"

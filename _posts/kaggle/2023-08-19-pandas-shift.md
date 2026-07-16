@@ -4,7 +4,7 @@ title: "pandas shift"
 date: 2023-08-19
 excerpt: "pandasのshift関数の使い方"
 kaggle: true
-tag: ["python", "pandas", "shift"]
+tag: ["Python", "pandas", "shift"]
 comments: false
 sort_key: "2023-08-19"
 update_dates: ["2023-08-19"]

@@ -4,7 +4,7 @@ title: "python dataclass"
 date: "2022-08-10"
 excerpt: "python dataclassの使い方"
 config: true
-tag: ["dataclass", "python"]
+tag: ["dataclass", "Python"]
 comments: false
 sort_key: "2022-08-10"
 update_dates: ["2022-08-10"]

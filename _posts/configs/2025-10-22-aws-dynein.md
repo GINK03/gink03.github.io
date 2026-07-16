@@ -3,7 +3,7 @@ layout: post
 title: "AWS Dynein"
 date: 2025-10-22
 excerpt: "AWS Dyneinの使用方法"
-tag: ["aws", "dynein"]
+tag: ["AWS", "dynein"]
 config: true
 comments: false
 sort_key: "2025-10-22"

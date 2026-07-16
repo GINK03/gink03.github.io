@@ -5,7 +5,7 @@ date: 2017-04-10
 excerpt: "treasure dataの使い方"
 tag: ["tresuredata"]
 config: true
-sort_key: "2018-01-19"
+sort_key: "2022-05-31"
 update_dates: ["2022-05-31", "2018-01-19"]
 comments: false
 ---

@@ -4,7 +4,7 @@ title: "gcp cloud functions routing"
 date: "2022-11-12"
 excerpt: "gcp cloud functionsのroutingの仕方"
 config: true
-tag: ["gcp", "gcloud", "cloud functions", "routing", "flask"]
+tag: ["GCP", "gcloud", "cloud functions", "routing", "flask"]
 comments: false
 sort_key: "2022-11-12"
 update_dates: ["2022-11-12"]

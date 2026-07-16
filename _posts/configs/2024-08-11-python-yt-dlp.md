@@ -3,7 +3,7 @@ layout: post
 title: "python yt-dlp"
 date: 2024-08-11
 excerpt: "python yt-dlpの使い方"
-tags: ["python", "yt-dlp"]
+tags: ["Python", "yt-dlp"]
 config: true
 comments: false
 sort_key: "2024-08-11"

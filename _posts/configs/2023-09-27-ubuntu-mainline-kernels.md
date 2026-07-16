@@ -3,7 +3,7 @@ layout: post
 title: "ubuntu mainline kernels"
 date: 2023-09-27
 excerpt: "ubuntuのmainline kernelsの使い方"
-tags: ["ubuntu", "linux", "mainline kernels", "software"]
+tags: ["ubuntu", "Linux", "mainline kernels", "software"]
 config: true
 comments: false
 sort_key: "2023-09-27"

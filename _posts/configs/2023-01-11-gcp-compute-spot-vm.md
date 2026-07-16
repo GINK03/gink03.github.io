@@ -3,7 +3,7 @@ layout: post
 title: "gcp cloud compute spot vm"
 date: 2023-01-11
 excerpt: "gcp cloud compute spot vmについて"
-tags: ["cloud compute engine", "gcp", "spot vm", "preemptible"]
+tags: ["cloud compute engine", "GCP", "spot vm", "preemptible"]
 config: true
 comments: false
 sort_key: "2023-01-11"

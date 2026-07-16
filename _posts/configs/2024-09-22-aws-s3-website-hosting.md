@@ -4,7 +4,7 @@ title: "aws s3 website hosting"
 date: 2024-09-22
 excerpt: "amazon s3でwebsiteのhostingの使い方"
 config: true
-tag: ["aws", "s3"]
+tag: ["AWS", "s3"]
 sort_key: "2024-09-22"
 update_dates: ["2024-09-22"]
 comments: false

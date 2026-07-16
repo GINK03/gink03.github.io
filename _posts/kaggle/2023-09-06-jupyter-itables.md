@@ -3,7 +3,7 @@ layout: post
 title: "jupyter itables"
 date: 2023-09-06
 excerpt: "jupyter itablesの使い方"
-tag: ["jupyter", "kaggle", "python"]
+tag: ["jupyter", "Kaggle", "Python"]
 comments: false
 sort_key: "2023-09-06"
 update_dates: ["2023-09-06"]

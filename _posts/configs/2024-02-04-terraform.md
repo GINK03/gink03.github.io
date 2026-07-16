@@ -5,10 +5,10 @@ date: 2024-02-04
 excerpt: "terraformの基本的な使い方"
 project: false
 config: true
-tag: ["terraform", "gcp", "google cloud platform", "aws"]
+tag: ["terraform", "GCP", "google cloud platform", "AWS"]
 comments: false
-sort_key: "2024-02-04"
-update_dates: ["2024-02-04", "2025-08-27"]
+sort_key: "2025-08-27"
+update_dates: ["2025-08-27","2024-02-04"]
 ---
 
 ## 概要

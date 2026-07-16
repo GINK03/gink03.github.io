@@ -4,7 +4,7 @@ title: "openrouter"
 date: 2025-05-08
 excerpt: "openrouterの使い方"
 kaggle: true
-tag: ["openrouter", "llm"]
+tag: ["openrouter", "LLM"]
 sort_key: "2025-05-08"
 update_dates: ["2025-05-08"]
 comments: false

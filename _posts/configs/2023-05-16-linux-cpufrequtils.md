@@ -4,7 +4,7 @@ title: "linux cpufrequtils"
 date: 2023-05-16
 excerpt: "linuxのcpufrequtilsについて"
 config: true
-tag: ["linux", "cpufrequtils"]
+tag: ["Linux", "cpufrequtils"]
 comments: false
 sort_key: "2023-05-16"
 update_dates: ["2023-05-16"]

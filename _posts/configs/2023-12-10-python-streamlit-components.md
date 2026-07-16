@@ -4,7 +4,7 @@ title: "python streamlit components"
 date: 2023-12-10
 excerpt: "streamlitのcomponentsの概要と使い方"
 config: true
-tag: ["streamlit", "python", "components"]
+tag: ["streamlit", "Python", "components"]
 comments: false
 sort_key: "2023-12-10"
 update_dates: ["2023-12-10"]

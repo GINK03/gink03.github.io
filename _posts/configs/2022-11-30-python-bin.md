@@ -4,7 +4,7 @@ title: "python bin"
 date: "2022-11-30"
 excerpt: "pythonの2進数表記"
 config: true
-tag: ["python", "format", "bin"]
+tag: ["Python", "format", "bin"]
 comments: false
 sort_key: "2022-11-30"
 update_dates: ["2022-11-30"]

@@ -5,7 +5,7 @@ date: 2026-03-27
 excerpt: "apple ios focus modeについてのまとめ"
 project: false
 config: true
-tag: ["apple", "iphone", "ios", "focus-mode"]
+tag: ["apple", "iphone", "iOS", "focus-mode"]
 comments: false
 sort_key: "2026-03-27"
 update_dates: ["2026-03-27"]

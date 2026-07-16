@@ -5,7 +5,7 @@ date: 2023-12-30
 excerpt: "python retryの使い方"
 project: false
 config: true
-tag: ["python", "retry"]
+tag: ["Python", "retry"]
 comments: false
 sort_key: "2023-12-30"
 update_dates: ["2023-12-30"]

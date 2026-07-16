@@ -5,7 +5,7 @@ date: 2023-12-28
 excerpt: "python peeweeの使い方"
 project: false
 config: true
-tag: ["database", "orm", "python", "peewee"]
+tag: ["database", "orm", "Python", "peewee"]
 comments: false
 sort_key: "2023-12-28"
 update_dates: ["2023-12-28"]

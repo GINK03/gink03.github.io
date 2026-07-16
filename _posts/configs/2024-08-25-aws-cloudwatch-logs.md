@@ -5,7 +5,7 @@ date: 2024-08-25
 excerpt: "aws cloudwatch logsの概要と使い方"
 project: false
 config: true
-tag: ["aws", "cloudwatch", "logs"]
+tag: ["AWS", "cloudwatch", "logs"]
 comments: false
 sort_key: "2024-08-25"
 update_dates: ["2024-08-25"]

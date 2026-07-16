@@ -4,7 +4,7 @@ title: "PLAYBOARD"
 date: 2022-10-31
 excerpt: "PLAYBOARD(youtuberのKPI確認ツール)の使い方"
 learning: true
-tag: ["youtube", "playboard"]
+tag: ["YouTube", "playboard"]
 comments: false
 sort_key: "2022-10-31"
 update_dates: ["2022-10-31"]

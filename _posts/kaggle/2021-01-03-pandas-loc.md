@@ -6,7 +6,7 @@ excerpt: "pandas locのチートシート"
 project: false
 kaggle: true
 hide_from_post: true
-tag: ["python", "pandas", "チートシート"]
+tag: ["Python", "pandas", "チートシート"]
 comments: false
 sort_key: "2022-05-24"
 update_dates: ["2022-05-24", "2022-04-14"]

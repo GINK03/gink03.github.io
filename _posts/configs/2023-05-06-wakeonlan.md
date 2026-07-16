@@ -4,7 +4,7 @@ title: "wakeonlan"
 date: 2023-05-06
 excerpt: "wakeonlanの使い方"
 config: true
-tag: ["linux", "windows", "wakeonlan"]
+tag: ["Linux", "windows", "wakeonlan"]
 comments: false
 sort_key: "2023-05-06"
 update_dates: ["2023-05-06"]

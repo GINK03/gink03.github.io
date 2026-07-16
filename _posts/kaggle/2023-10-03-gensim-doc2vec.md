@@ -5,7 +5,7 @@ date: 2023-10-03
 excerpt: "gensimのdoc2vecについて"
 project: false
 kaggle: true
-tag: ["nlp", "gensim", "doc2vec"]
+tag: ["NLP", "gensim", "doc2vec"]
 comments: false
 sort_key: "2023-10-03"
 update_dates: ["2023-10-03"]

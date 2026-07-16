@@ -5,7 +5,7 @@ date: 2022-02-18
 excerpt: "terraformの基本的な使い方"
 project: false
 config: true
-tag: ["terraform", "gcp"]
+tag: ["terraform", "GCP"]
 comments: false
 sort_key: "2022-02-18"
 update_dates: ["2022-02-18"]

@@ -4,7 +4,7 @@ title: "openai agent mcp stdio"
 date: 2025-05-26
 excerpt: "openai agent mcp stdio"
 kaggle: true
-tag: ["openai", "agent", "workflow", "python"]
+tag: ["openai", "agent", "workflow", "Python"]
 comments: false
 sort_key: "2025-05-26"
 update_dates: ["2025-05-26"]

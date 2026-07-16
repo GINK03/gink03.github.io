@@ -3,7 +3,7 @@ layout: post
 title: "cloudflare wrangler"
 date: 2022-10-04
 excerpt: "cloudflare wranglerの使い方"
-tag: ["cloudflare", "wrangler"]
+tag: ["Cloudflare", "wrangler"]
 config: true
 comments: false
 sort_key: "2022-10-04"

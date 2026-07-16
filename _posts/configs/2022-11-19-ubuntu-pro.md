@@ -3,7 +3,7 @@ layout: post
 title: "ubuntu pro"
 date: 2022-11-19"
 excerpt: "ubuntu proの概要と使い方"
-tags: ["ubuntu", "linux"]
+tags: ["ubuntu", "Linux"]
 config: true
 comments: false
 sort_key: "2022-11-19"

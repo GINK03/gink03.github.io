@@ -4,7 +4,7 @@ title: "instructor gemini"
 date: 2024-11-26
 excerpt: "instructor geiminiの使い方"
 kaggle: true
-tag: ["instructor", "openai", "nlp", "gemini", "llm"]
+tag: ["instructor", "openai", "NLP", "gemini", "LLM"]
 comments: false
 sort_key: "2024-11-26"
 update_dates: ["2024-11-26"]

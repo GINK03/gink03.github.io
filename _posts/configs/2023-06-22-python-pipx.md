@@ -4,7 +4,7 @@ title: "python pipx"
 date: 2023-06-22
 excerpt: "pythonのpipxの使い方"
 config: true
-tag: ["python", "pip", "pipx"]
+tag: ["Python", "pip", "pipx"]
 comments: false
 sort_key: "2023-06-22"
 update_dates: ["2023-06-22"]

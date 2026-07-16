@@ -4,9 +4,9 @@ title: "sshのport forwarding"
 date: 2020-11-01
 excerpt: "sshのport forwardingの使い方"
 config: true
-tag: ["ssh", "sshd", "security", "linux", "windows"]
+tag: ["ssh", "sshd", "security", "Linux", "windows"]
 comments: false
-sort_key: "2022-05-20"
+sort_key: "2022-07-16"
 update_dates: ["2022-07-16"]
 ---
 

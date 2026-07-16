@@ -4,7 +4,7 @@ title: "aws ip address"
 date: 2024-09-22
 excerpt: "amazon ip addressの確認"
 config: true
-tag: ["aws", "ip address"]
+tag: ["AWS", "ip address"]
 sort_key: "2024-09-22"
 update_dates: ["2024-09-22"]
 comments: false

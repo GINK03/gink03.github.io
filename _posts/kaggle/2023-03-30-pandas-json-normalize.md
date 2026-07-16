@@ -4,7 +4,7 @@ title: "pandas json normalize"
 date: 2023-03-30
 excerpt: "pandasのjson normalizeの使い方"
 kaggle: true
-tag: ["python", "pandas", "json", "json normalize"]
+tag: ["Python", "pandas", "json", "json normalize"]
 comments: false
 sort_key: "2023-03-30"
 update_dates: ["2023-03-30"]

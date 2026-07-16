@@ -4,7 +4,7 @@ title: "linux polkit"
 date: 2023-12-01
 excerpt: "linuxのpolkitについて"
 config: true
-tag: ["linux", "polkit"]
+tag: ["Linux", "polkit"]
 comments: false
 sort_key: "2023-12-01"
 update_dates: ["2023-12-01"]

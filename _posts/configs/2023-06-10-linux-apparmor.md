@@ -4,7 +4,7 @@ title: "linux apparmor"
 date: 2023-06-10
 excerpt: "linuxのAppArmorについて"
 config: true
-tag: ["linux", "apparmor", "selinux"]
+tag: ["Linux", "apparmor", "selinux"]
 comments: false
 sort_key: "2023-06-10"
 update_dates: ["2023-06-10"]

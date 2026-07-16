@@ -5,7 +5,7 @@ date: 2020-11-21
 excerpt: "gcp service accountについて"
 project: false
 config: true
-tag: ["GOOGLE_APPLICATION_CREDENTIALS", "gcp", "service account"]
+tag: ["GOOGLE_APPLICATION_CREDENTIALS", "GCP", "service account"]
 comments: false
 sort_key: "2021-09-08"
 update_dates: ["2021-09-08"]

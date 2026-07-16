@@ -4,7 +4,7 @@ title: "Spec Driven Development SDD"
 date: 2026-02-26
 excerpt: "仕様を中心に据えて AI エージェント開発を進める SDD の要点"
 computer_science: true
-tag: ["spec driven development", "sdd"]
+tag: ["spec driven development", "SDD"]
 comments: false
 sort_key: "2026-02-26"
 update_dates: ["2026-02-26"]

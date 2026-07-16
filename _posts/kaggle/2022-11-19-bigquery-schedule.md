@@ -3,7 +3,7 @@ layout: post
 title: "bigquery schedule"
 date: 2022-11-17
 excerpt: "bigquery scheduleの使い方"
-tags: ["bq", "bigquery", "gcp", "schedule"]
+tags: ["bq", "BigQuery", "GCP", "schedule"]
 kaggle: true
 comments: false
 sort_key: "2022-11-17"

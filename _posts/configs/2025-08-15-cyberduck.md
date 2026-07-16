@@ -5,7 +5,7 @@ date: 2025-08-15
 excerpt: "Cyberduckの使い方"
 project: false
 config: true
-tag: ["s3", "cyberduck", "windows", "macos"]
+tag: ["s3", "cyberduck", "windows", "macOS"]
 comments: false
 sort_key: "2025-08-15"
 update_dates: ["2025-08-15"]

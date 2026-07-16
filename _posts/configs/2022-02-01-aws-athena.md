@@ -5,7 +5,7 @@ date: 2022-02-01
 excerpt: "aws athenaの使い方"
 project: false
 config: true
-tag: ["olap", "aws", "aws athena", "athena"]
+tag: ["olap", "AWS", "aws athena", "athena"]
 comments: false
 sort_key: "2022-02-01"
 update_dates: ["2022-02-01"]

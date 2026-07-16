@@ -4,7 +4,7 @@ title: "pandas setting with copy warning"
 date: 2023-05-25
 excerpt: "pandasのsetting with copy warning"
 kaggle: true
-tag: ["python", "pandas", "warning", "setting with copy warning"]
+tag: ["Python", "pandas", "warning", "setting with copy warning"]
 comments: false
 sort_key: "2023-05-25"
 update_dates: ["2023-05-25"]

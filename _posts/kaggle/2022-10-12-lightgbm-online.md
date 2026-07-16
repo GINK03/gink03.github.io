@@ -5,7 +5,7 @@ date:  2022-10-12
 excerpt: "lightgbm online(オンライン学習)のチートシート"
 kaggle: true
 project: false
-tag: ["python", "lightgbm", "オンライン学習"]
+tag: ["Python", "lightgbm", "オンライン学習"]
 comments: false
 sort_key: "2022-10-12"
 update_dates: ["2022-10-12"]

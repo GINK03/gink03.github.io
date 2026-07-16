@@ -3,7 +3,7 @@ layout: post
 title: "debian"
 date: 2024-01-09
 excerpt: "debianのインストール"
-tags: ["debian", "linux"]
+tags: ["debian", "Linux"]
 config: true
 comments: false
 sort_key: "2024-01-09"

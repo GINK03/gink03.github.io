@@ -3,7 +3,7 @@ layout: post
 title: "python pyathena"
 date: 2024-08-25
 excerpt: "python pyathenaの使い方"
-tags: ["python", "pyathena"]
+tags: ["Python", "pyathena"]
 config: true
 comments: false
 sort_key: "2024-08-25"

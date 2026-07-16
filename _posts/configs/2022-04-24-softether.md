@@ -5,7 +5,7 @@ date: 2022-04-24
 excerpt: "SoftEtherとそのエコシステムについて"
 project: false
 config: true
-tag: ["softether", "packetix", "vpn", "ssl-vpn"]
+tag: ["softether", "packetix", "VPN", "ssl-vpn"]
 comments: false
 sort_key: "2022-05-02"
 update_dates: ["2022-05-02","2022-04-30","2022-04-29","2022-04-24"]

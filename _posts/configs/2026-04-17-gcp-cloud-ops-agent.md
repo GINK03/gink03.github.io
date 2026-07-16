@@ -3,7 +3,7 @@ layout: post
 title: "GCP Cloud Ops Agent"
 date: 2026-04-17
 excerpt: "GCEへのCloud Ops Agentのインストールとモニタリングメトリクスの収集"
-tag: ["gcp", "gce", "monitoring", "cloud ops agent"]
+tag: ["GCP", "gce", "monitoring", "cloud ops agent"]
 config: true
 comments: false
 sort_key: "2026-04-17"

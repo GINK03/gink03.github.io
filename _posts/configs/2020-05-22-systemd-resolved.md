@@ -3,7 +3,7 @@ layout: post
 title: "systemd-resolved"
 date: 2020-05-22
 excerpt: "systemd-resolved"
-tags: ["systemd-resolved", "linux", "ubuntu"]
+tags: ["systemd-resolved", "Linux", "ubuntu"]
 config: true
 comments: false
 sort_key: "2021-11-25"

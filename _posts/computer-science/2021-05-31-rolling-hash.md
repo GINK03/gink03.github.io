@@ -7,7 +7,7 @@ computer_science: true
 tag: ["algorithm", "math", "rolling hash"]
 comments: false
 sort_key: "2021-05-31"
-update_dates: ["2021-05-31","2021-05-31"]
+update_dates: ["2021-05-31"]
 ---
 
 ## rolling hashについて

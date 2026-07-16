@@ -4,7 +4,7 @@ title: "pandas date_range"
 date: 2023-06-24
 excerpt: "pandasのdate_rangeの変換"
 kaggle: true
-tag: ["python", "pandas", "datetime", "date range", "date_range"]
+tag: ["Python", "pandas", "datetime", "date range", "date_range"]
 comments: false
 sort_key: "2023-06-24"
 update_dates: ["2023-06-24"]

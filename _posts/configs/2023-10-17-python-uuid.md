@@ -4,7 +4,7 @@ title: "python uuid"
 date: 2023-10-17
 excerpt: "pythonのuuidライブラリの概要と使い方"
 config: true
-tag: ["python", "uuid"]
+tag: ["Python", "UUID"]
 comments: false
 sort_key: "2023-10-17"
 update_dates: ["2023-10-17"]

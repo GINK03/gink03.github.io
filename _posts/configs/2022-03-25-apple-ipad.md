@@ -26,6 +26,6 @@ update_dates: ["2022-04-09"]
  - 参考
    - [iPad でフローティングキーボードを使う](https://support.apple.com/ja-jp/HT210758)
 
-### [ユニバーサルコントロール](universal-control)
+### [ユニバーサルコントロール](/apple-universal-control/)
  - MacBookとiPadを連携させる
 

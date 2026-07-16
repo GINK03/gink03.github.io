@@ -3,7 +3,7 @@ layout: post
 title: "python pyvis"
 date: 2024-08-14
 excerpt: "python pyvisの使い方"
-tags: ["python", "pyvis"]
+tags: ["Python", "pyvis"]
 config: true
 comments: false
 sort_key: "2024-08-14"

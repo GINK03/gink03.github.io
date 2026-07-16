@@ -3,7 +3,7 @@ layout: post
 title: "gcp cloud tasks"
 date: 2024-02-07
 excerpt: "gcp cloud tasksの概要と使い方"
-tags: ["gcp", "cloud tasks", "api"]
+tags: ["GCP", "cloud tasks", "API"]
 config: true
 comments: false
 sort_key: "2024-02-07"

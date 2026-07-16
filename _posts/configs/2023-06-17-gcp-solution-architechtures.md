@@ -3,7 +3,7 @@ layout: post
 title: "gcp solution architechtures"
 date: 2023-06-17
 excerpt: "gcp solution architechtures"
-tags: ["gcp", "architechtures"]
+tags: ["GCP", "architechtures"]
 config: true
 comments: false
 sort_key: "2023-06-17"

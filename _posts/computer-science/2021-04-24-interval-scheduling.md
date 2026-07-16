@@ -17,7 +17,7 @@ update_dates: ["2021-04-24"]
 
 ## 具体例
 
-[典型アルゴリズム問題集; B - 区間スケジューリング問題](B - 区間スケジューリング問題)  
+[典型アルゴリズム問題集; B - 区間スケジューリング問題](https://atcoder.jp/contests/typical-algorithm/tasks/typical_algorithm_b)
 
 ```python
 N = int(input())

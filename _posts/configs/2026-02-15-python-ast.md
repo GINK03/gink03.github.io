@@ -5,7 +5,7 @@ date: 2026-02-15
 excerpt: "Python AST"
 project: false
 config: true
-tag: ["python", "ast"]
+tag: ["Python", "ast"]
 comments: false
 sort_key: "2026-02-15"
 update_dates: ["2026-02-15"]

@@ -4,7 +4,7 @@ title: "python venv"
 date: 2023-12-25
 excerpt: "pythonのvenvの使い方"
 config: true
-tag: ["python", "venv"]
+tag: ["Python", "venv"]
 comments: false
 sort_key: "2023-12-25"
 update_dates: ["2023-12-25"]

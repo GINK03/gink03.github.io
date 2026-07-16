@@ -42,7 +42,7 @@
 
 ### ADR の運用（前提）
  - 「後から『なぜこうした？』となる決定」をしたら `docs/adr/` に1ファイル起こす。対象は方針・トレードオフ・代替案の取捨など（例: 大規模な構造変更、ツール選定、やらない判断）。単なる実装詳細やバグ修正は対象外
- - 採番は既存の最大番号+1（ゼロ詰め4桁、`NNNN-kebab-title.md`）。現状は `0001`(SEOテクニカル方針) `0002`(見出し正規化) まで存在
+ - 採番は既存の最大番号+1（ゼロ詰め4桁、`NNNN-kebab-title.md`）。現状は `0001`(SEOテクニカル方針) `0002`(見出し正規化) `0003`(関連記事と品質検査) まで存在
  - 既存 ADR は書き換えず、覆す時は新しい ADR を作り、旧側の Status を `Superseded by NNNN` に更新する
  - 関連する決定は本文中で `[[0001-...]]` のように相互リンクする
  - `docs/draft/` 等で大きな方針を実行したら、その要点を ADR として確定させ、ドラフトは経緯ログとして残すか archive へ移す
@@ -62,13 +62,29 @@
  - H1重複の解消＋見出しレベル正規化（本文h1を1745→1、レベル飛び0）。規約は「基本的に守ってほしいこと」参照
  - 画像LCP（ロゴ737K→41K、背景をWebP化451K→216K）
  - トップから `/posts/`(全記事一覧)・`/projects/`・`/bookmarks/`・`/tags/` への導線追加（`_layouts/home.html`）
+ - 記事ページをsemantic HTMLへ整理し、公開日と最新更新日を表示
+ - 共有タグから関連記事を最大5件自動表示し、トピック間の導線を追加（`_includes/related-posts.html`）
+ - 公開タグを3記事以上で使われるものに絞り、タグ表記とアンカー衝突を正規化
+ - 全記事一覧とカテゴリ一覧を軽量な共通テンプレートへ統合
+ - GitHub Pagesと同じ`github-pages` gemへ依存関係を揃え、`Gemfile.lock`を管理
+ - 記事メタデータ、見出し、タグ、ビルド、生成後の内部リンクをGitHub Actionsで検査
+ - MathJaxを数式を含むページだけで読み込むよう変更
+ - `docs` `scripts` `AGENTS.md`などの運用ファイルをJekyllの公開対象から除外
  - Search Console に `gink03.github.io` をプロパティ登録済み（所有者: angeldust03@gmail.com）
  - 2026-07-04 に Search Console API で `https://gink03.github.io/sitemap.xml` を送信済み、送信結果は `204`、`lastSubmitted: 2026-07-04T01:08:18.179Z`、`isPending: true`、warnings/errors は 0
 
 **やるべきこと / 未了**
  - 送信済みの `sitemap.xml` について、数日〜数週でインデックス状況を再確認する
- - トピッククラスタ化（関連記事の相互リンク自動付与）は未着手。内部で効くのでテクニカル施策として有力
+ - `docs/active/content-consolidation.md`の短文記事584件、概要がタイトルと同一147件、公開中blog-drafts 15件は編集判断で統合または改稿する
  - 権威向上（被リンク・Zenn/Qiitaクロスポスト）は非テクニカルで保留。当面はテクニカルに対応できる範囲で進める方針
+
+**品質チェック（2026-07-16追加）**
+ - `bundle exec ruby scripts/validate_content.rb`で全記事のfrontmatter、日付、見出し、パーマリンク、タグを検査
+ - `bundle exec ruby scripts/generate_content_audit.rb --check`で統合候補レポートの鮮度を検査
+ - `bundle exec jekyll build --strict_front_matter`でGitHub Pages互換ビルドを検査
+ - `bundle exec ruby scripts/verify_generated_site.rb _site`で構造化データ、関連記事、MathJax、一覧サイズ、公開除外を検査
+ - `bundle exec ruby scripts/check_internal_links.rb _site`で生成HTML内のローカルリンクと見出しアンカーを検査
+ - 詳細な決定は`docs/adr/0003-content-quality-and-topic-navigation.md`を参照
 
 **インデックス状況の確認方法（エージェント向け）**
  - ADC（`gcloud auth application-default`、readonlyスコープ `auth/webmasters.readonly`）で Search Console API を叩ける。quota project は個人GCP `starry-lattice-256603`、`X-Goog-User-Project` ヘッダ必須
@@ -83,6 +99,7 @@
  - Search Console の「見つかりませんでした（404）」の対象URL一覧は API から直接取得できないため、ローカルソース由来の内部リンクをHTTPチェックしてこちら起因の404を探す
  - 内部リンク検査は `_posts/**/*.md`、`_layouts/**/*.html`、`_includes/**/*.html`、root `*.html` から `[](...)` と `href="..."` を抽出し、`https://gink03.github.io` または `/` 始まりのHTMLリンクだけを対象にする、画像、CSS、JS、XML、PDFなどは除外する
  - 抽出したURLを公開サイトに対して `HEAD` し、2xx/3xx以外を修正対象にする、2026-07-04 は 199 件中 5 件の404を修正し、再検査で 198 件中 0 件になった
+ - 現在はJekyllビルド後に`scripts/check_internal_links.rb _site`を実行し、生成HTMLのリンク先ファイルと見出しアンカーを継続検査する
  - 修正した404は `/apple-iphone/` → `/apple-ios/`、`/apple-iphone-display/` → `/apple-ios-display/`、`/apple-iphone-tethering/` → `/apple-ios-tethering/`、`/different_strokes` → `/different-strokes/`、`/dynamic_programming` → `/動的計画法/`
  - sitemap送信は `PUT https://www.googleapis.com/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}` を使う、`siteUrl` は `https://gink03.github.io/`、`feedpath` は `https://gink03.github.io/sitemap.xml` を URL エンコードする
  - 送信時は `https://www.googleapis.com/auth/webmasters` スコープが必要、readonly ADC では `403 ACCESS_TOKEN_SCOPE_INSUFFICIENT` になる

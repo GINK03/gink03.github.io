@@ -2,7 +2,7 @@
 layout: page
 title: About 
 tags: [about, datascience, ai, programming, machine-learning]
-date: 2017-04-2
+date: 2017-04-02
 comments: false
 ---
     

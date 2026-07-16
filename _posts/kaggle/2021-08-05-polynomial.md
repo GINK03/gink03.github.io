@@ -5,7 +5,7 @@ date: 2021-08-05
 excerpt: "ポリノミアルで特徴量作成"
 kaggle: true
 hide_from_post: true
-tag: ["sklearn", "python", "polynomial", "feature"]
+tag: ["sklearn", "Python", "polynomial", "feature"]
 comments: false
 sort_key: "2021-08-05"
 update_dates: ["2021-08-05"]

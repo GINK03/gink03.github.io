@@ -2,34 +2,31 @@
 layout: compress
 ---
 <!DOCTYPE html>
-<!--[if lt IE 7]><html lang="ja" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html lang="ja" class="no-js lt-ie9 lt-ie8"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html lang="ja" class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--> <html lang="ja" class="no-js"><!--<![endif]-->
+<html lang="ja" class="no-js">
 <head>
-    {% include head.html %}
+  {% include head.html %}
 </head>
 <body>
-    {% include nav.html %}
-    <!-- Header -->
-    <header class="header" role="banner">
-        <div class="wrapper animated fadeIn">
-            <div class="content">
-                <div class="post-title {% if page.feature %} feature {% endif %}">
-                    <h1>{{ page.title }}</h1>
-                    <a class="btn zoombtn" href="{{site.url}}">
-                        <i class="fa fa-chevron-left"></i>
-                    </a>
-                </div>
-                {{ content }}
-            </div>
-        </div>
-        {% if page.comments and site.disqus_shortname %}<section id="disqus_thread" class="animated fadeInUp"></section><!-- /#disqus_thread -->{% endif %}
-    </header>
-    {% include scripts.html %}
-    {% if site.mathjax == true %}
-    <!-- MathJax -->
-    <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-    {% endif %}
+  {% include nav.html %}
+  <main class="header">
+    <div class="wrapper animated fadeIn">
+      <article class="content">
+        <header class="post-title {% if page.feature %}feature{% endif %}">
+          <h1>{{ page.title | escape }}</h1>
+          <a class="btn zoombtn" href="{{ site.url }}/" aria-label="トップページへ戻る">
+            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+          </a>
+        </header>
+        {{ content }}
+      </article>
+    </div>
+    {% if page.comments and site.disqus_shortname %}<section id="disqus_thread" class="animated fadeInUp"></section>{% endif %}
+  </main>
+  {% include scripts.html %}
+  {% assign render_mathjax = page.mathjax %}
+  {% if content contains 'type="math/tex' %}{% assign render_mathjax = true %}{% endif %}
+  {% if content contains '\(' %}{% assign render_mathjax = true %}{% endif %}
+  {% if content contains '\[' %}{% assign render_mathjax = true %}{% endif %}
+  {% if site.mathjax == true and render_mathjax == true %}{% include mathjax.html %}{% endif %}
 </body>
 </html>

@@ -4,7 +4,7 @@ title: "pandas unstack"
 date: 2023-02-06
 excerpt: "pandasのunstackの使い方"
 kaggle: true
-tag: ["python", "pandas", "unstack", "チートシート"]
+tag: ["Python", "pandas", "unstack", "チートシート"]
 comments: false
 sort_key: "2023-02-06"
 update_dates: ["2023-02-06"]

@@ -4,10 +4,10 @@ title: "pandas transform"
 date: 2023-10-28
 excerpt: "pandasのtransform関数の使い方とapplyとの使い分け"
 kaggle: true
-tag: ["python", "pandas", "transform"]
+tag: ["Python", "pandas", "transform"]
 comments: false
-sort_key: "2023-10-28"
-update_dates: ["2023-10-28", "2026-04-06"]
+sort_key: "2026-04-06"
+update_dates: ["2026-04-06","2023-10-28"]
 ---
 
 ## pandasのtransform関数の使い方

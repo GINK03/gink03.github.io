@@ -4,7 +4,7 @@ title: "python dotenv"
 date: 2023-12-01
 excerpt: "pythonのdotenvの概要と使い方"
 config: true
-tag: ["python", "dotenv"]
+tag: ["Python", "dotenv"]
 comments: false
 sort_key: "2023-12-01"
 update_dates: ["2023-12-01"]

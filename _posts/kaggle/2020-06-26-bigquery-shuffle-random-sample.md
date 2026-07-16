@@ -3,7 +3,7 @@ layout: post
 title: "bigquery shuffle, random sample"
 date: 2020-06-26
 excerpt: "bigquery shuffle, random sampleの方法"
-tags: ["bq", "bigquery", "gcp", "SQL"]
+tags: ["bq", "BigQuery", "GCP", "SQL"]
 kaggle: true
 comments: false
 sort_key: "2022-03-01"

@@ -4,9 +4,9 @@ title: "gcp datastore"
 date: "2022-09-23"
 excerpt: "gcp datastoreの使い方"
 config: true
-tag: ["gcp", "gcloud", "datastore", "nosql"]
+tag: ["GCP", "gcloud", "datastore", "nosql"]
 comments: false
-sort_key: "2022-08-12"
+sort_key: "2022-09-23"
 update_dates: ["2022-08-12"]
 ---
 

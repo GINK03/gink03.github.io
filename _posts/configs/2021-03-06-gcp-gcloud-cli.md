@@ -3,7 +3,7 @@ layout: post
 title: "gcloud cli(cloud sdk)"
 date: 2021-03-06
 excerpt: "gcloud cli(cloud sdk)について"
-tags: ["gcp", "gcloud", "cli", "gcloud cli", "cloud sdk"]
+tags: ["GCP", "gcloud", "CLI", "gcloud cli", "cloud sdk"]
 config: true
 comments: false
 sort_key: "2022-05-25"

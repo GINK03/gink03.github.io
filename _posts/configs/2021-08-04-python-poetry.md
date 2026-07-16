@@ -4,10 +4,10 @@ title: "poetry"
 date: 2021-08-04
 excerpt: "poetryの使い方"
 config: true
-tag: ["poetry", "package manager", "python"]
+tag: ["poetry", "package manager", "Python"]
 comments: false
 sort_key: "2021-10-26"
-update_dates: ["2021-10-26","2021-10-18","2021-10-18","2021-08-12","2021-08-04"]
+update_dates: ["2021-10-26","2021-10-18","2021-08-12","2021-08-04"]
 ---
 
 ## 概要

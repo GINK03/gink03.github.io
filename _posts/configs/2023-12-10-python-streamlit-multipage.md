@@ -4,10 +4,10 @@ title: "python streamlit multipage"
 date: 2023-12-10
 excerpt: "streamlitのmultipageの概要と使い方"
 config: true
-tag: ["streamlit", "python", "multipage"]
+tag: ["streamlit", "Python", "multipage"]
 comments: false
-sort_key: "2023-12-10"
-update_dates: ["2023-12-10", "2026-04-26"]
+sort_key: "2026-04-26"
+update_dates: ["2026-04-26","2023-12-10"]
 ---
 
 ## streamlitのmultipageの概要と使い方

@@ -6,7 +6,7 @@ excerpt: "windowsでゲームを行う際のあれこれ"
 tags: ["windows", "microsoft", "windows 11", "game", "steam"]
 config: true
 comments: false
-sort_key: "2022-10-20"
+sort_key: "2022-10-25"
 update_dates: ["2022-10-20"]
 ---
 

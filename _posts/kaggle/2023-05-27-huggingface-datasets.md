@@ -5,7 +5,7 @@ date: 2023-05-27
 excerpt: "huggingface datasetsの使い方"
 kaggle: true
 hide_from_post: true
-tag: ["huggingface", "datasets", "python"]
+tag: ["huggingface", "datasets", "Python"]
 comments: false
 sort_key: "2023-05-27"
 update_dates: ["2022-05-27"]

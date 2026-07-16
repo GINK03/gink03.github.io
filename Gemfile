@@ -1,9 +1,8 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.3"
-gem "jekyll-sitemap"
-gem "jekyll-gist"
-gem 'jekyll-mentions'
-gem 'jekyll-feed'
-gem "jekyll-theme-cayman"
-gem "kramdown-parser-gfm"
+gem "github-pages", group: :jekyll_plugins
+
+group :development do
+  gem "nokogiri", "~> 1.18"
+  gem "webrick", "~> 1.9"
+end

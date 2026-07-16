@@ -4,8 +4,9 @@ title:  "pytorch model"
 date:   2021-01-05
 excerpt: "pytorchのmodelの使い方"
 project: false
-tag: ["python", "pytorch"]
+tag: ["Python", "pytorch"]
 comments: false
+sort_key: "2021-01-05"
 ---
 
 ## pytorchのmodelの使い方

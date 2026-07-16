@@ -11,6 +11,7 @@ tag:
 - Kotlin
 - Scala
 comments: false
+sort_key: "2017-04-02"
 ---
 ## 目次
 - データ(直列)操作  

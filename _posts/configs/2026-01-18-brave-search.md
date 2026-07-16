@@ -4,7 +4,7 @@ title: "brave search"
 date: 2026-01-18
 excerpt: "Brave Search APIの使い方"
 config: true
-tag: ["brave search", "api", "python", "requests"]
+tag: ["brave search", "API", "Python", "requests"]
 comments: false
 sort_key: "2026-01-18"
 update_dates: ["2026-01-18"]

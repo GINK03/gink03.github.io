@@ -4,7 +4,7 @@ title: "python geoip2"
 date: 2025-01-05
 excerpt: "python geoip2"
 config: true
-tag: ["python", "geoip2"]
+tag: ["Python", "geoip2"]
 comments: false
 sort_key: "2025-01-05"
 update_dates: ["2025-01-05"]

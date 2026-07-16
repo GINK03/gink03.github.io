@@ -3,7 +3,7 @@ layout: post
 title: "cppのrandom"
 date: 2022-07-01
 excerpt: "cppのrandomの使い方"
-tags: ["c++", "cpp", "random"]
+tags: ["C++", "cpp", "random"]
 config: true
 comments: false
 sort_key: "2022-07-01"

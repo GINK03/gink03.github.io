@@ -4,7 +4,7 @@ title: "python pprint"
 date: "2022-11-16"
 excerpt: "python pprintの使い方"
 config: true
-tag: ["python", "pprint"]
+tag: ["Python", "pprint"]
 comments: false
 sort_key: "2022-11-16"
 update_dates: ["2022-11-16"]

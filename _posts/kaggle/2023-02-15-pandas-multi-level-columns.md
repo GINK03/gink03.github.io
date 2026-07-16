@@ -4,7 +4,7 @@ title: "pandas multi level columns"
 date: 2023-02-16
 excerpt: "pandasのmulti level columnsの使い方"
 kaggle: true
-tag: ["python", "pandas", "multi level columns", "チートシート"]
+tag: ["Python", "pandas", "multi level columns", "チートシート"]
 comments: false
 sort_key: "2023-02-16"
 update_dates: ["2023-02-16"]

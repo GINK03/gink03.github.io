@@ -5,7 +5,7 @@ date: 2021-01-31
 excerpt: "ieee-fraud-detectionのsolution"
 kaggle: true
 hide_from_post: true
-tag: ["ieee-fraud-detection", "kaggle", "solution", "python"]
+tag: ["ieee-fraud-detection", "Kaggle", "solution", "Python"]
 comments: false
 sort_key: "2021-02-01"
 update_dates: ["2021-02-01"]

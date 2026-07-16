@@ -3,7 +3,7 @@ layout: post
 title: "jupyter papermill"
 date: 2024-08-11
 excerpt: "jupyter papermillの使い方"
-tag: ["jupyter", "kaggle", "python"]
+tag: ["jupyter", "Kaggle", "Python"]
 comments: false
 sort_key: "2024-08-11"
 update_dates: ["2024-08-11"]

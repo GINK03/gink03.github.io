@@ -5,7 +5,7 @@ date: 2021-02-28
 excerpt: "ai platform deep learning vmについて"
 kaggle: true
 hide_from_post: true
-tag: ["deep-learning", "gcp"]
+tag: ["deep-learning", "GCP"]
 comments: false
 sort_key: "2021-03-21"
 update_dates: ["2021-03-21"]

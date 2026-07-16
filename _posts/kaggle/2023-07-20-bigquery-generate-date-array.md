@@ -3,7 +3,7 @@ layout: post
 title: "bigquery generate date array(日付の生成)"
 date: 2023-07-20
 excerpt: "bigqueryのgenerate date array(日付の生成)の使い方"
-tags: ["bq", "bigquery", "gcp", "bigquery", "generate date array"]
+tags: ["bq", "BigQuery", "GCP", "generate date array"]
 kaggle: true
 comments: false
 sort_key: "2023-07-20"
