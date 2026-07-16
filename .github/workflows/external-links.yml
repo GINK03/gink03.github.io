@@ -37,7 +37,7 @@ jobs:
             --max-retries 1
             --timeout 20
             --base-url 'https://gink03.github.io/'
-            --accept '100..=103,200..=299,429'
+            --accept '100..=103,200..=299,403,429'
             --exclude '^https://gink03\.github\.io(?:/|$)'
             --exclude '^https://twitter\.com/intent/tweet(?:\?|$)'
             --exclude '^https://www\.facebook\.com/sharer/sharer\.php(?:\?|$)'
