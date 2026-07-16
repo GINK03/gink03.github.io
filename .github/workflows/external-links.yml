@@ -34,12 +34,24 @@ jobs:
           args: >-
             --no-progress
             --max-concurrency 16
-            --max-retries 2
+            --max-retries 1
             --timeout 20
+            --base-url 'https://gink03.github.io/'
+            --accept '100..=103,200..=299,429'
             --exclude '^https://gink03\.github\.io(?:/|$)'
+            --exclude '^https://twitter\.com/intent/tweet(?:\?|$)'
+            --exclude '^https://www\.facebook\.com/sharer/sharer\.php(?:\?|$)'
             --exclude '^http://(?:localhost|127\.0\.0\.1)(?::[0-9]+)?(?:/|$)'
             '_site/**/*.html'
           fail: false
           format: markdown
           jobSummary: true
           output: lychee-report.md
+      - name: Upload external link report
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: external-links-report
+          path: lychee-report.md
+          if-no-files-found: error
+          retention-days: 14
