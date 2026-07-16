@@ -63,9 +63,10 @@
  - 画像LCP（ロゴ737K→41K、背景をWebP化451K→216K）
  - トップから `/posts/`(全記事一覧)・`/projects/`・`/bookmarks/`・`/tags/` への導線追加（`_layouts/home.html`）
  - Search Console に `gink03.github.io` をプロパティ登録済み（所有者: angeldust03@gmail.com）
+ - 2026-07-04 に Search Console API で `https://gink03.github.io/sitemap.xml` を送信済み、送信結果は `204`、`lastSubmitted: 2026-07-04T01:08:18.179Z`、`isPending: true`、warnings/errors は 0
 
 **やるべきこと / 未了**
- - Search Console で `sitemap.xml` を送信（ユーザ対応中）。送信後、数日〜数週でインデックス状況を再確認する
+ - 送信済みの `sitemap.xml` について、数日〜数週でインデックス状況を再確認する
  - トピッククラスタ化（関連記事の相互リンク自動付与）は未着手。内部で効くのでテクニカル施策として有力
  - 権威向上（被リンク・Zenn/Qiitaクロスポスト）は非テクニカルで保留。当面はテクニカルに対応できる範囲で進める方針
 
@@ -74,6 +75,21 @@
  - URL Inspection: `POST https://searchconsole.googleapis.com/v1/urlInspection/index:inspect`（body: `inspectionUrl`, `siteUrl`）で任意URLの index 状況を即時照会
  - sitemap送信や登録系は書き込みスコープ `auth/webmasters` が必要（readonlyでは403）
  - PageSpeed/Lighthouse は dots の `bin/seocheck <url>`（ADC利用・キー不要）でSEO/性能スコアを取得できる
+
+**Search Console 404通知対応の再現手順（2026-07-04 実施）**
+ - Search Console API の `sites.list` で `https://gink03.github.io/` が `siteOwner` として見えることを確認する
+ - `sitemaps.list` が `{}` の場合でも、公開 `https://gink03.github.io/sitemap.xml` が 200 で取得できるかを確認する、2026-07-04 時点では sitemap は 1776 URL
+ - URL Inspection API で代表URLを確認する、2026-07-04 時点では `/` は `PASS` かつ「送信して登録されました」、`/posts/` `/git/` `/markdown/` `/sops/` `/dijkstra/` は「URL が Google に認識されていません」
+ - Search Console の「見つかりませんでした（404）」の対象URL一覧は API から直接取得できないため、ローカルソース由来の内部リンクをHTTPチェックしてこちら起因の404を探す
+ - 内部リンク検査は `_posts/**/*.md`、`_layouts/**/*.html`、`_includes/**/*.html`、root `*.html` から `[](...)` と `href="..."` を抽出し、`https://gink03.github.io` または `/` 始まりのHTMLリンクだけを対象にする、画像、CSS、JS、XML、PDFなどは除外する
+ - 抽出したURLを公開サイトに対して `HEAD` し、2xx/3xx以外を修正対象にする、2026-07-04 は 199 件中 5 件の404を修正し、再検査で 198 件中 0 件になった
+ - 修正した404は `/apple-iphone/` → `/apple-ios/`、`/apple-iphone-display/` → `/apple-ios-display/`、`/apple-iphone-tethering/` → `/apple-ios-tethering/`、`/different_strokes` → `/different-strokes/`、`/dynamic_programming` → `/動的計画法/`
+ - sitemap送信は `PUT https://www.googleapis.com/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}` を使う、`siteUrl` は `https://gink03.github.io/`、`feedpath` は `https://gink03.github.io/sitemap.xml` を URL エンコードする
+ - 送信時は `https://www.googleapis.com/auth/webmasters` スコープが必要、readonly ADC では `403 ACCESS_TOKEN_SCOPE_INSUFFICIENT` になる
+ - 再認証が必要な場合は `gcloud auth application-default login --scopes=https://www.googleapis.com/auth/webmasters,https://www.googleapis.com/auth/cloud-platform --no-launch-browser` を使う、gcloud の仕様で `cloud-platform` も併記する必要がある
+ - gcloud SDK のパスは更新で変わるため、Pythonから同梱 `google-auth` を使う場合は `gcloud info --format='value(installation.sdk_root)'` で現在のSDK rootを確認し、`$SDK_ROOT/lib/third_party` を `sys.path` に追加する
+ - API呼び出しでは quota project `starry-lattice-256603` を使い、ヘッダ `X-Goog-User-Project: starry-lattice-256603` を付与する
+ - 2026-07-04 の送信結果は `submit_status 204`、`sitemaps.list` で `path: https://gink03.github.io/sitemap.xml`、`lastSubmitted: 2026-07-04T01:08:18.179Z`、`isPending: true`、`warnings: 0`、`errors: 0`
 
 ## 遵守事項
  - `git restore .` を絶対行わない

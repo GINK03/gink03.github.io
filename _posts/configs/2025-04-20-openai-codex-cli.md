@@ -7,7 +7,7 @@ config: true
 tag: ["openai", "codex", "cli"]
 comments: false
 sort_key: "2025-04-20"
-update_dates: ["2025-04-20"]
+update_dates: ["2025-04-20", "2026-07-16"]
 ---
 
 ## 概要
@@ -40,6 +40,19 @@ $ bun install -g @openai/codex
 ```console
 $ export OPENAI_API_KEY=sk-...
 ```
+
+## 認証方式を確認する
+
+`codex login status` で、現在の実行がOpenAI API経由かChatGPTサブスクリプション経由かを確認できる
+
+```console
+$ codex login status
+Logged in using ChatGPT
+```
+
+ - `Logged in using ChatGPT` と表示される場合はChatGPTサブスクリプション経由
+ - APIキーでログインしている旨が表示される場合はOpenAI API経由
+ - API経由ではAPIの従量課金、ChatGPTサブスクリプション経由ではChatGPTプランの利用枠が適用される
 
 ## 実行
 
