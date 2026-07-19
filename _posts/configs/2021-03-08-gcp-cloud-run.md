@@ -6,8 +6,8 @@ excerpt: "cloud runついて"
 tags: ["GCP", "cloud run"]
 config: true
 comments: false
-sort_key: "2022-04-22"
-update_dates: ["2022-04-22"]
+sort_key: "2026-07-19"
+update_dates: ["2026-07-19","2022-04-22"]
 ---
 
 ## 概要
@@ -63,7 +63,7 @@ $ gcloud run deploy <my-api> --image=gcr.io/<my-project>/name \
    - 特定のgithub等のレポジトリの特定のブランチが更新されたらDockerfileを用いてbuild & pushするということができる
 
 ## カスタムドメインのマッピング
- - `cloud run` -> `カスタムドメインを管理`
+ - 詳細は[Cloud Run custom domain mapping記事](/gcp-cloud-run-custom-domain-mapping/)を参照
 
 ## アクセス制限
  - IAMでアクセスを限定することができる

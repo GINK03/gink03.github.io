@@ -4148,6 +4148,10 @@
       "title": "sops",
       "date": "2026-06-26"
     },
+    "/gcp-cloud-run-custom-domain-mapping/": {
+      "title": "GCP Cloud Run custom domain mapping",
+      "date": "2026-07-19"
+    },
     "/apple-watch/": {
       "title": "apple watch",
       "date": "2020-11-10"
@@ -8484,6 +8488,7 @@
     ],
     "/unbound/": [
       "/bind/",
+      "/gcp-cloud-run-custom-domain-mapping/",
       "/adblock/",
       "/dns/"
     ],
@@ -8950,10 +8955,10 @@
     "/smartmontools/": [],
     "/gcp-cloud-run/": [
       "/gcp-cloud-run-jobs/",
+      "/gcp-cloud-run-custom-domain-mapping/",
       "/gcp-cloud-logging/",
       "/gcp-gcloud-cli/",
-      "/cloud-dataflow/",
-      "/gcp-cloud-pub-sub/"
+      "/cloud-dataflow/"
     ],
     "/nicehash/": [],
     "/gcp-cloud-logging/": [
@@ -10347,6 +10352,7 @@
     "/dns/": [
       "/bind/",
       "/unbound/",
+      "/gcp-cloud-run-custom-domain-mapping/",
       "/adblock/"
     ],
     "/gcp-cloud-identity/": [
@@ -12634,11 +12640,11 @@
     ],
     "/plantuml/": [],
     "/gcp-cloud-run-jobs/": [
+      "/gcp-cloud-run-custom-domain-mapping/",
       "/gcp-cloud-run/",
       "/gcp-rag-engine/",
       "/looker-studio/",
-      "/gcp-workload-identity-federation/",
-      "/gcp-speech-to-text/"
+      "/gcp-workload-identity-federation/"
     ],
     "/aws-assume-role/": [
       "/aws-s3-website-hosting/",
@@ -13143,10 +13149,10 @@
     ],
     "/gcp-cloud-ops-agent/": [
       "/gcp-service-account-impersonation/",
+      "/gcp-cloud-run-custom-domain-mapping/",
       "/gcp-speech-to-text/",
       "/gcp-workload-identity-federation/",
-      "/looker-studio/",
-      "/gcp-rag-engine/"
+      "/looker-studio/"
     ],
     "/gcp-service-account-impersonation/": [
       "/gcp-iam-admin/",
@@ -13161,6 +13167,13 @@
       "/git-pre-commit/",
       "/git-merge/",
       "/gcp-bearer-token-authentication/"
+    ],
+    "/gcp-cloud-run-custom-domain-mapping/": [
+      "/gcp-cloud-run-jobs/",
+      "/gcp-cloud-run/",
+      "/gcp-service-account-impersonation/",
+      "/gcp-cloud-ops-agent/",
+      "/gcp-speech-to-text/"
     ],
     "/apple-watch/": [
       "/myprotein/",
