@@ -6,8 +6,8 @@ excerpt: "Claude Code の使い方メモ"
 config: true
 tag: ["claude code"]
 comments: false
-sort_key: "2026-07-18"
-update_dates: ["2026-07-18","2026-06-22","2025-07-05"]
+sort_key: "2026-07-30"
+update_dates: ["2026-07-30","2026-07-18","2026-06-22","2025-07-05"]
 ---
 
 ## 概要
@@ -28,6 +28,44 @@ $ npm install -g @anthropic-ai/claude-code
 ```console
 $ bun add -g @anthropic-ai/claude-code
 $ bun pm -g trust @anthropic-ai/claude-code
+```
+
+## アップデート
+
+### `claude update`で手動更新
+
+自動更新を待たずに現在の更新チャネルの最新版を適用する
+
+```console
+$ claude --version
+$ claude update
+$ claude --version
+```
+
+ - ネイティブインストール版は起動時と実行中に更新を確認し、バックグラウンドで自動更新する
+ - `claude update`で更新したバージョンは次回起動時から利用される
+ - すでに最新版の場合は`Claude Code is up to date`と表示される
+ - `claude doctor`でインストール方式と直近の更新結果を確認できる
+
+### 更新チャネル
+
+`claude update`は`autoUpdatesChannel`の設定に従う
+
+ - `latest`はデフォルトで、新しいリリースをすぐに受け取る
+ - `stable`は重大な問題があるリリースを避け、通常は約1週間遅れて更新される
+ - Claude Code内の`/config`からAuto-update channelを変更できる
+
+### パッケージマネージャー経由の場合
+
+Homebrew、apt、dnf、apkでインストールした場合は、通常は各パッケージマネージャーで更新する
+
+```console
+$ brew upgrade claude-code
+```
+
+```console
+$ sudo apt update
+$ sudo apt upgrade claude-code
 ```
 
 ## 実行
@@ -209,4 +247,6 @@ export ANTHROPIC_MODEL=claude-3-7-sonnet@20250219 # デプロイしたモデル�
 ## 参考
 
  - [Fullscreen rendering - Claude Code Docs](https://code.claude.com/docs/en/fullscreen)
+ - [Advanced setup - Claude Code Docs](https://code.claude.com/docs/en/installation)
+ - [CLI reference - Claude Code Docs](https://code.claude.com/docs/en/cli-usage)
  - [Tmux scrollback broken after May 26 update](https://github.com/anthropics/claude-code/issues/62890)
