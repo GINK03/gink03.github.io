@@ -12841,7 +12841,8 @@
       "/github-cli-gh/"
     ],
     "/claude-code/": [
-      "/claude-agent-sdk/"
+      "/claude-agent-sdk/",
+      "/dbt-semantic-layer/"
     ],
     "/aws-mfa/": [
       "/aws-sso/",
@@ -13003,7 +13004,9 @@
       "/aws-sso/",
       "/aws-assume-role/"
     ],
-    "/claude-agent-skills/": [],
+    "/claude-agent-skills/": [
+      "/dbt-semantic-layer/"
+    ],
     "/google-drive-python/": [
       "/brave-search/",
       "/python-gunicorn/",
