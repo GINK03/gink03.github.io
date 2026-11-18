@@ -23,6 +23,7 @@ comments: false
 
  - [LinkedIn](https://www.linkedin.com/in/gimpei-kobayashi-208bba2a/)
  - [Twitter](https://twitter.com/nardtree)
+ - Mail: gimpei.kobayashi@hut42.tech
 
 人柄は、Twitterやはてなブログをみていただけると、どんなひとかわかりやすいかもしれません
 

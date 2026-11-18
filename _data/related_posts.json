@@ -8796,10 +8796,10 @@
     ],
     "/git/": [
       "/git-merge/",
+      "/git-config/",
       "/git-clean/",
       "/gist/",
-      "/git-lfs/",
-      "/git-config/"
+      "/git-lfs/"
     ],
     "/ml_kfold/": [
       "/anaconda/",
@@ -9525,9 +9525,9 @@
     "/gist/": [
       "/git/",
       "/git-merge/",
+      "/git-config/",
       "/git-clean/",
-      "/git-lfs/",
-      "/git-config/"
+      "/git-lfs/"
     ],
     "/pkill/": [
       "/kill/",
@@ -10074,9 +10074,9 @@
     "/bfg/": [
       "/git-merge/",
       "/git/",
+      "/git-config/",
       "/git-pre-commit/",
-      "/github-keys/",
-      "/git-clean/"
+      "/github-keys/"
     ],
     "/duckdb/": [
       "/duckdb-minio/",
@@ -11274,11 +11274,11 @@
       "/gcp-cloud-memorystore/"
     ],
     "/git-merge/": [
+      "/git-config/",
       "/git/",
       "/git-clean/",
       "/git-lfs/",
-      "/gist/",
-      "/git-config/"
+      "/gist/"
     ],
     "/python-pprint/": [
       "/python-exception/",
@@ -11632,9 +11632,9 @@
     ],
     "/git-lfs/": [
       "/git-merge/",
+      "/git-config/",
       "/git-clean/",
       "/git/",
-      "/git-config/",
       "/git-init/"
     ],
     "/python-hash/": [
@@ -12017,10 +12017,10 @@
       "/git-lfs/"
     ],
     "/git-init/": [
+      "/git-config/",
       "/git-merge/",
       "/git-clean/",
       "/git/",
-      "/git-config/",
       "/git-lfs/"
     ],
     "/linux-sudo/": [
@@ -12059,18 +12059,18 @@
       "/pandas-json-normalize/"
     ],
     "/git-pre-commit/": [
+      "/git-config/",
       "/git-merge/",
       "/git-clean/",
       "/bfg/",
-      "/sops/",
-      "/git/"
+      "/sops/"
     ],
     "/github-actions-workflows/": [
       "/github-cli-gh/",
       "/github-actions/",
+      "/git-config/",
       "/github-keys/",
-      "/neovim-github-copilot/",
-      "/git-merge/"
+      "/neovim-github-copilot/"
     ],
     "/python-ruff/": [
       "/sqlalchemy-json/",
@@ -12237,8 +12237,8 @@
       "/github-actions-workflows/",
       "/github-copilot-cli/",
       "/github-keys/",
-      "/jq/",
-      "/neovim-github-copilot/"
+      "/git-config/",
+      "/jq/"
     ],
     "/gcp-vpc-firewall/": [
       "/terraform-gcp/",
@@ -12264,9 +12264,9 @@
     "/github-keys/": [
       "/github-cli-gh/",
       "/github-actions-workflows/",
+      "/git-config/",
       "/neovim-github-copilot/",
-      "/git-merge/",
-      "/git-clean/"
+      "/git-merge/"
     ],
     "/python-lingua/": [
       "/python-sudachi/",
@@ -12901,9 +12901,9 @@
       "/apple-macos-launchctl/"
     ],
     "/git-clean/": [
+      "/git-config/",
       "/git-merge/",
       "/git/",
-      "/git-config/",
       "/git-init/",
       "/git-lfs/"
     ],
@@ -13168,8 +13168,8 @@
       "/git-clean/",
       "/sshd-security/",
       "/git-pre-commit/",
-      "/git-merge/",
-      "/gcp-bearer-token-authentication/"
+      "/git-config/",
+      "/git-merge/"
     ],
     "/gcp-cloud-run-custom-domain-mapping/": [
       "/gcp-cloud-run-jobs/",

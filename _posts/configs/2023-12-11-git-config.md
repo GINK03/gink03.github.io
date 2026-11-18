@@ -20,7 +20,7 @@ update_dates: ["2023-12-11"]
 
 ```conf
 [user]
-    email = gimpeik@icloud.com
+    email = gimpei.kobayashi@hut42.tech
     name = Gimpei Kobayashi
 [core]
     quotepath = false
@@ -33,7 +33,7 @@ update_dates: ["2023-12-11"]
  - ユーザ名の設定
    - `git config --global user.name "Gimpei Kobayashi"`
  - メールアドレスの設定
-   - `git config --global user.email "gimpeik@icloud.com"`
+   - `git config --global user.email "gimpei.kobayashi@hut42.tech"`
  - デフォルトブランチの設定
    - `git config --global init.defaultBranch main`
  - デフォルトエディタの設定
